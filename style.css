@@ -33,16 +33,19 @@ nav {
 
 nav div.logo{
     float: right;
-    background-color: red;
-    width: 5vw; 
-    padding: 0 0;
     height: 65px; 
+} 
+
+nav img{
+    padding: 15px 2.25vw;
+    width: 2.5vw; 
+    height: 35px; 
 } 
 
 nav ul{
     float: left;
     list-style: none;
-    max-width: 95vw;
+    max-width: 94vw;
     background-color: #35312f;
     height: 65px;
 } 
@@ -224,3 +227,59 @@ footer{
     background-color: #35312f;
     height: 120px;
 }
+
+@media (max-width: 1200px){
+    nav {
+        height: 50px;
+        overflow: hidden;
+    } 
+    
+    nav img{
+        display: none; 
+    } 
+    
+    nav ul{
+        height: 50px;
+    } 
+
+    nav ul li{
+        height: 50px;
+    }
+    
+    nav ul li a{
+        padding: 15px 17px;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        
+    }
+}
+
+/* coś ten flex nie działa jak powinien */
+@media (max-width:810px){
+    nav{
+        overflow: visible;
+        min-height: 350px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+        float: none;
+        max-width: 100vw;
+        /* height: 350px; */
+        /* height: auto; */
+
+    }
+
+    /* nav ul li{
+        display: block;
+    } */
+
+    nav ul li a{
+        display: block;
+        text-align: center;
+    }
+}
+
