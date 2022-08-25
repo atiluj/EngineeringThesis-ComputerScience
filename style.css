@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.red{
+    color: #a4413a;
+}
+
+.yellow{
+    color: #c48538;
+}
+
+.blue{
+    color: #2F4858;
+}
+
+.green{
+    color: #4A6B17;
+}
+
+div .wrapper{
+    min-width: 1920px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: #35312f;
+    font-size: 0; /* to likiwduje wbudowany margines w menu*/
+}
+
+/* nav div.logo{
+    height: 65px;
+    width: 7vw;
+    padding-left: 20vw;
+    float: right;
+}
+
+nav ul{
+    height: 65px;
+    width: 73vw;
+    float: left;
+    list-style: none;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f4e8db;
+    transition: 0.5s;
+}
+
+nav ul li{
+    float: left;
+    padding: 23px 30px;
+} */
+
+nav a {
+    display: inline-block;
+    box-sizing: border-box;
+    /* padding: 25px 25px; */
+    padding: 21px 25px;
+    font-family: 'Chakra Petch', sans-serif;
+    /* font-size: 23px; */
+    font-size: 22px;
+    font-weight: 900;
+    /* letter-spacing: 2px; */
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4e8db;
+    transition: 0.5s;
+}
+
+#home:hover{
+    /* background-color: #58524e; */
+    background-color: #c48538;
+    color: #FFEBCD;
+}
+
+#teoria:hover{
+    background-color: #E9E2CF;
+    color: #c48538;
+}
+
+#excel:hover{
+    background-color: #4A6B17;
+    color: #D3EDAB;
+}
+
+#access:hover{
+    background-color: #a4413a;
+    color: #EFD4D2;
+
+}
+
+#python:hover{
+    background-color: #496998;
+    color: #E9E193;
+}
+
+
+#cpp:hover{
+    background-color: #6F8DBE;
+    color: white;
+}
+
+#kompilator:hover{
+    background-color: #ccdbf6;
+    color:#35312f;
+}
+
+/* M ma być po prawej stronie menu */
+/* nav #logo{
+
+}
+
+nav a img{
+    width: auto;
+    height: 30px; 
+} */
+
+main {
+    /* background-image: linear-gradient(#ffffff, #e2d3c4); */
+    background-image: linear-gradient(#f4e8db, #e2d3c4);
+    /* background-color: #e2d3c4; */
+    min-height: 80vh;
+    /* padding: 4.5vw 6vw; */
+    padding: 4vw 6.5vw;
+    text-align: center;
+}
+
+
+main .naglowek{
+    /* !!!!!!!!!!!!jak wycentrować h1 względem div (to chyba juz jest wycentrowane) */
+    padding-top: 60px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 75px;
+    letter-spacing: 70px;
+    text-transform: uppercase;
+    line-height: 0px;
+    color: #c48538;
+    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black */
+}
+
+main .naglowek h1{
+    text-align: center;
+}
+main article{
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: white;
+    padding: 20px 30px;
+    margin-bottom: 2vw;
+}
+
+main article h1{
+    font-family: 'Chakra Petch', sans-serif;
+    text-transform: uppercase;
+    color: #a4413a;
+    padding-bottom: 6px;
+}
+
+main .first{
+    padding-top: 70px;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.2px;
+}
+
+main .second{
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 2vw 2vw; 
+    border: 3.5px solid #a4413a;
+    background-color: #f8dad8;
+}
+
+main .third{
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 2vw 2vw; 
+    border: 3.5px solid #c48538;
+    background-color: #ffead0;
+}
+
+main .fourth{
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 2vw 2vw; 
+    border: 3.5px solid #2F4858;
+}
+
+main .fifth{
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 2vw 2vw; 
+    border: 3.5px solid #4A6B17;
+}
+
+.color1{
+    background-color: #2F4858;
+    height: 15px;
+}
+
+.color2{
+    background-color: #a4413a;
+    height: 15px;
+}
+
+.color3{
+    background-color: #c48538;
+    height: 15px;
+}
+
+.color4{
+    background-color: #4A6B17;
+    height: 15px;
+}
+
+footer{
+    background-color: #35312f;
+    height: 120px;
+}
