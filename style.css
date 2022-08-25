@@ -38,7 +38,6 @@ nav div.logo{
 
 nav img{
     padding: 15px 2.25vw;
-    width: 2.5vw; 
     height: 35px; 
 } 
 
@@ -125,14 +124,34 @@ nav ul li a{
 }
 
 main {
-    /* background-image: linear-gradient(#ffffff, #e2d3c4); */
     /* background-image: linear-gradient(#f4e8db, #e2d3c4); */
     /* background-color: #e2d3c4; */
     background-color: #f4e8db;
     min-height: 80vh;
-    padding: 4vw 6.5vw;
+    padding: 4vw 5vw;
     text-align: center;
+    display: grid;
+    grid-template-columns: 15vw 1fr;
+    gap: 5vw;
 }
+
+main .contents{
+    margin-top: 60px;
+}
+
+main .contents .cont{
+    display: flex;
+    flex-direction: column;
+    background-color: #35312f;
+}
+
+main .contents div{
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+
 
 main .naglowek{
     /* !!!!!!!!!!!!jak wycentrować h1 względem div (to chyba juz jest wycentrowane) */
@@ -143,6 +162,11 @@ main .naglowek{
     text-transform: uppercase;
     line-height: 0px;
     color: #c48538;
+    text-align: center;
+
+    /* letter-spacing robi spacje za ostatnim znakiem - rozwiązanie problemu */
+    display: block;
+    margin-right:-70px;
     /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black */
 }
 
@@ -258,7 +282,7 @@ footer{
 @media (max-width:810px){
     nav{
         overflow: visible;
-        min-height: 350px;
+        min-height: 357px;
     }
 
     nav ul{
@@ -268,14 +292,11 @@ footer{
         width: 100vw;
         float: none;
         max-width: 100vw;
-        /* height: 350px; */
-        /* height: auto; */
-
     }
 
-    /* nav ul li{
-        display: block;
-    } */
+    nav ul li{
+        border-top: 1.5px solid #EFD4D2;
+    }
 
     nav ul li a{
         display: block;
