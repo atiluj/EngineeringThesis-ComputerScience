@@ -34,79 +34,83 @@ nav {
     width: 7vw;
     padding-left: 20vw;
     float: right;
-}
-
-nav ul{
-    height: 65px;
-    width: 73vw;
-    float: left;
-    list-style: none;
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #f4e8db;
-    transition: 0.5s;
-}
-
-nav ul li{
-    float: left;
-    padding: 23px 30px;
 } */
 
-nav a {
+nav ul{
+    list-style: none;
+    } 
+
+nav ul li{
     display: inline-block;
-    box-sizing: border-box;
-    /* padding: 25px 25px; */
-    padding: 21px 25px;
-    font-family: 'Chakra Petch', sans-serif;
-    /* font-size: 23px; */
-    font-size: 22px;
-    font-weight: 900;
-    /* letter-spacing: 2px; */
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #f4e8db;
     transition: 0.5s;
+} 
+
+nav ul li a{
+    display: block;
+    padding: 23px 30px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 900;
+    color: #f4e8db;    
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+
 }
 
-#home:hover{
-    /* background-color: #58524e; */
+.home:hover{
     background-color: #c48538;
+}
+
+.home:hover a {
     color: #FFEBCD;
 }
 
-#teoria:hover{
+.teoria:hover{
     background-color: #E9E2CF;
+}
+
+.teoria:hover a{
     color: #c48538;
 }
 
-#excel:hover{
+.excel:hover{
     background-color: #4A6B17;
+}
+
+.excel:hover a{
     color: #D3EDAB;
 }
 
-#access:hover{
+.access:hover{
     background-color: #a4413a;
-    color: #EFD4D2;
-
 }
 
-#python:hover{
+.access:hover a{
+    color: #EFD4D2;
+}
+
+.python:hover{
     background-color: #496998;
+}
+
+.python:hover a{
     color: #E9E193;
 }
 
-
-#cpp:hover{
+.cpp:hover{
     background-color: #6F8DBE;
+}
+
+.cpp:hover a{
     color: white;
 }
 
-#kompilator:hover{
+.kompilator:hover{
     background-color: #ccdbf6;
+}
+
+.kompilator:hover a{
     color:#35312f;
 }
 
@@ -122,10 +126,10 @@ nav a img{
 
 main {
     /* background-image: linear-gradient(#ffffff, #e2d3c4); */
-    background-image: linear-gradient(#f4e8db, #e2d3c4);
+    /* background-image: linear-gradient(#f4e8db, #e2d3c4); */
     /* background-color: #e2d3c4; */
+    background-color: #f4e8db;
     min-height: 80vh;
-    /* padding: 4.5vw 6vw; */
     padding: 4vw 6.5vw;
     text-align: center;
 }
