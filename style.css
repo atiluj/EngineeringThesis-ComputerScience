@@ -28,6 +28,7 @@ nav {
     background-color: #35312f;
     font-size: 0; /* to likiwduje wbudowany margines w menu*/
     height: 65px;
+    overflow: hidden;
 }
 
 nav div.logo{
@@ -41,7 +42,7 @@ nav div.logo{
 nav ul{
     float: left;
     list-style: none;
-    width: 94vw;
+    max-width: 95vw;
     background-color: #35312f;
     height: 65px;
 } 
@@ -132,7 +133,7 @@ main {
 
 main .naglowek{
     /* !!!!!!!!!!!!jak wycentrować h1 względem div (to chyba juz jest wycentrowane) */
-    padding-top: 110px;
+    padding-top: 60px;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 75px;
     letter-spacing: 70px;
