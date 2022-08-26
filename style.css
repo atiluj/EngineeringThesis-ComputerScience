@@ -52,6 +52,7 @@ nav ul{
 nav ul li{
     display: inline-block;
     transition: 0.5s;
+    height: 65px;
 } 
 
 nav ul li a{
@@ -135,6 +136,9 @@ main {
     gap: 5vw;
 }
 
+
+/* SIDEBAR */
+
 main .contents{
     margin-top: 60px;
 }
@@ -145,13 +149,18 @@ main .contents .cont{
     background-color: #35312f;
 }
 
-main .contents div{
-    padding: 10px;
+main .contents .cont div{
+    padding: 15px;
     font-size: 20px;
-    font-family: 'IBM Plex Serif', serif;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 900;
+    color: #f4e8db;
+    border: 1px solid #f4e8db;
+    letter-spacing: 2px;
 }
 
 
+/* NAGŁÓWEK - CZEŚĆ */
 
 main .naglowek{
     /* !!!!!!!!!!!!jak wycentrować h1 względem div (to chyba juz jest wycentrowane) */
