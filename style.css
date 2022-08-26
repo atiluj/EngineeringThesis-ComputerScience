@@ -130,7 +130,6 @@ nav ul li a{
 }
 
 .section .naglowek{
-    /* !!!!!!!!!!!!jak wycentrować h1 względem div (to chyba juz jest wycentrowane) */
     padding-top: 60px;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 75px;
@@ -142,7 +141,6 @@ nav ul li a{
 
     /* letter-spacing robi spacje za ostatnim znakiem - rozwiązanie problemu */
     text-indent: 70px;
-    
     /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black */
 }
 
@@ -152,12 +150,14 @@ nav ul li a{
 
 .section article{
     font-family: 'IBM Plex Serif', serif;
-    font-size: 17px;
+    font-size: 18px;
+    line-height: 20px;
     font-weight: 400;
     background-color: white;
     padding: 70px 30px 20px;
     margin: 0 5vw;
     text-align: center;    
+    letter-spacing: 0.1px;
 }
 
 main {
@@ -230,6 +230,9 @@ main article{
     background-color: white;
     padding: 20px 30px;
     margin-bottom: 2vw;
+    border-width: 3.5px;
+    border-style: solid;
+    text-align: justify;
 }
 
 main article h1{
@@ -239,42 +242,30 @@ main article h1{
     padding-bottom: 6px;
 }
 
-main .first{
-    padding-top: 70px;
-    font-size: 18px;
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: 0.2px;
-}
-
 main .second{
-    text-align: justify;
     text-justify: inter-word;
     margin: 2vw 0; 
-    border: 3.5px solid #a4413a;
+    border-color: #a4413a;
     background-color: #f8dad8;
 }
 
 main .third{
-    text-align: justify;
     text-justify: inter-word;
     margin: 2vw 0; 
-    border: 3.5px solid #c48538;
+    border-color: #c48538;
     background-color: #ffead0;
 }
 
 main .fourth{
-    text-align: justify;
     text-justify: inter-word;
     margin: 2vw 0; 
-    border: 3.5px solid #2F4858;
+    border-color: #2F4858;
 }
 
 main .fifth{
-    text-align: justify;
     text-justify: inter-word;
     margin: 2vw 0; 
-    border: 3.5px solid #4A6B17;
+    border-color: #4A6B17;
 }
 
 .color1{
@@ -326,9 +317,54 @@ footer{
         letter-spacing: 1.5px;
         
     }
+
+    .section .naglowek{
+        padding-top: 30px;
+        font-size: 60px;
+        letter-spacing: 45px;
+        text-indent: 45px;
+    }
+    
+    .section article{
+        font-size: 15px;
+        padding: 50px 30px 20px;
+        margin: 0 4vw;
+        line-height: 17px;
+    }
+
+    main {
+        padding: 1vw 4vw;
+        grid-template-columns: 18vw 1fr;
+        gap: 3vw;
+    }
+
+    main .contents .cont a{
+        font-size: 15px;
+    }
+
+    main article{
+        font-size: 15px;
+        padding: 15px 25px;
+        margin-bottom: 2vw;
+    }
+    
+    main article h1{
+        font-family: 'Chakra Petch', sans-serif;
+        text-transform: uppercase;
+        color: #a4413a;
+        padding-bottom: 6px;
+    }
 }
 
-/* coś ten flex nie działa jak powinien */
+@media(max-width:1000px){
+    main{
+        display: block;
+    }
+    main .contents{
+        display: none;
+    }
+}
+
 @media (max-width:810px){
     nav{
         overflow: visible;
@@ -341,7 +377,8 @@ footer{
         text-align: center;
         width: 100vw;
         float: none;
-        max-width: 100vw;
+        max-width: 100%;
+
     }
 
     nav ul li{
@@ -349,8 +386,85 @@ footer{
     }
 
     nav ul li a{
+        padding: 15px 0;
         display: block;
+        text-align: center;
+    }
+
+    .section .naglowek{
+        padding-top: 15px;
+        font-size: 50px;
+        letter-spacing: 25px;
+        text-indent: 25px;
+    }
+    
+    .section article{
+        font-size: 15px;
+        padding: 50px 30px 20px;
+        margin: 0 4vw;
+        line-height: 17px;
+    }
+}
+
+@media (max-width: 600px){
+    .section{
+        padding-top: 50px;
+    }
+
+    .section .naglowek{
+        padding-top: 0px;
+        font-size: 25px;
+        letter-spacing: 5px;
+        text-indent: 5px;
+    }
+    
+    .section article{
+        font-size: 14px;
+        padding: 25px 20px 15px;
+        margin: 0 4vw;
+        line-height: 17px;
+        text-align: justify;
+    }
+
+    main article{
+        font-size: 14px;
+        padding: 10px 15px;
+        border-width: 2.5px;
+
+    }
+
+    main article h1{
         text-align: center;
     }
 }
 
+@media(max-width:400px){
+
+    .section{
+        padding-top: 40px;
+    }
+
+    .section .naglowek{
+        font-size: 18px;
+        /* letter-spacing: 5px;
+        text-indent: 5px; */
+    }
+    
+    .section article{
+        font-size: 11px;
+        line-height: 14px;
+        padding: 20px 20px 15px;
+    }
+
+    main article{
+        font-size: 11px;
+        line-height: 14px;
+        padding: 8px 10px;
+        border-width: 2px;
+        text-align: left;
+    }
+
+    main article h1{
+        font-size: 16px;
+    }
+}
