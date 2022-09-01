@@ -29,9 +29,15 @@ nav {
     font-size: 0; /* to likiwduje wbudowany margines w menu*/
     height: 65px;
     overflow: hidden;
+
+    /* navbar moving while scrolling */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
 }
 
-nav div.logo{
+nav div#logo{
     float: right;
     height: 65px; 
 } 
@@ -126,7 +132,7 @@ nav ul li a{
 
 .section{
     background-color: #f4e8db;
-    padding-top: 60px;
+    padding-top: 125px;
 }
 
 .section .naglowek{
@@ -297,6 +303,7 @@ footer{
     nav {
         height: 50px;
         overflow: hidden;
+        position: static; 
     } 
     
     nav img{
@@ -317,6 +324,11 @@ footer{
         letter-spacing: 1.5px;
         
     }
+
+    .section{
+        padding-top: 65px;
+    }
+
 
     .section .naglowek{
         padding-top: 30px;
@@ -360,9 +372,13 @@ footer{
     main{
         display: block;
     }
+
     main .contents{
         display: none;
     }
+
+
+
 }
 
 @media (max-width:810px){

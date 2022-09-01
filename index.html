@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Darmowy kurs do matury z informatyki">
     <meta name="author" content="Julita Osman, Aleksandra Stępniewska, Nikola Wrona">
-    <meta name="keywords" content="matura, matura z informatyki, rozszerzona matura, informatyka, liceum, kurs, darmowy kurs, darmowe materiały, teoria, excel, access, pyhon, c++, cpp, komiplator, komiplator python">
+    <meta name="keywords" content="matura, matura z informatyki, rozszerzona matura, informatyka, liceum, kurs, darmowy kurs, darmowe materiały, teoria, excel, access, pyhon, c++, cpp, interpreter, interpreter python">
     <title>Maturacz</title>
     <!-- do chakra petch -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,17 +31,17 @@
 </head>
 <body>
     <div class="wrapper">
-        <nav>
+        <nav id="navbar">
             <ul>
-                <li class="home"><a href="#">Cześć!</a></li>
-                <li class="teoria"><a href="teoria.html">Teoria</a></li>
-                <li class="excel"><a href="excel.html">Excel</a></li>
-                <li class="access"><a href="access.html">Access</a></li>
-                <li class="python"><a href="python.html">Python</a></li>
-                <li class="cpp"><a href="cpp.html">C++</a></li>
-                <li class="kompilator"><a href="komiplator.html">Kompilator Python</a></li>
+                <li class="home"><a href="#" class="a">Cześć!</a></li>
+                <li class="teoria"><a href="teoria.html" class="a">Teoria</a></li>
+                <li class="excel"><a href="excel.html" class="a">Excel</a></li>
+                <li class="access"><a href="access.html" class="a">Access</a></li>
+                <li class="python"><a href="python.html" class="a">Python</a></li>
+                <li class="cpp"><a href="cpp.html" class="a">C++</a></li>
+                <li class="kompilator"><a href="interpreter.html" class="a">Interpreter Python</a></li>
             </ul>
-            <div class="logo">
+            <div id="logo">
                 <img src="img/favicon.png">
             </div>
         </nav>
@@ -125,5 +125,7 @@
         <footer>
         </footer>
     </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="home.js"></script>
 </body>
 </html>
