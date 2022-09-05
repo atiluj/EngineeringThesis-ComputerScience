@@ -37,16 +37,6 @@ nav {
     z-index: 99;
 }
 
-/* nav div#logo{
-    float: right;
-    height: 60px; 
-} 
-
-nav img{
-    padding: 15px 2.25vw;
-    height: 35px; 
-}  */
-
 .ul2{
     float: right;
     padding-right: 30px;
@@ -160,21 +150,21 @@ nav ul li a{
 
 .section{
     background-color: #f0e9e0; /*#f4e8db;*/
-    padding-top: 125px;
+    padding-top: 100px;
 }
 
 .section .naglowek{
-    padding-top: 60px;
+    padding-top: 50px;
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 75px;
-    letter-spacing: 70px;
+    font-size: 55px;
+    letter-spacing: 50px;
     text-transform: uppercase;
     line-height: 0px;
     color: #c48538;
     text-align: center;
 
     /* letter-spacing robi spacje za ostatnim znakiem - rozwiązanie problemu */
-    text-indent: 70px;
+    text-indent: 50px;
     /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black */
 }
 
@@ -188,7 +178,7 @@ nav ul li a{
     line-height: 20px;
     font-weight: 400;
     background-color: white;
-    padding: 70px 30px 20px;
+    padding: 60px 30px 20px;
     margin: 0 5vw;
     text-align: center;    
     letter-spacing: 0.1px;
@@ -307,7 +297,7 @@ main .fifth{
 
 main article{
     border-color: #322e2b;
-    border-radius: 5px;
+    border-radius: 1px;
 }
 
 .color1{
@@ -360,8 +350,8 @@ footer{
 
 
     .section .naglowek{
-        padding-top: 30px;
-        font-size: 60px;
+        padding-top: 15px;
+        font-size: 50px;
         letter-spacing: 45px;
         text-indent: 45px;
     }
@@ -409,6 +399,13 @@ footer{
     nav ul li a{
         padding: 15px 10px;
         font-size: 14px;
+    }
+
+    .section .naglowek{
+        padding-top: 5px;
+        font-size: 45px;
+        letter-spacing: 40px;
+        text-indent: 40px;
     }
 
     main{
@@ -464,12 +461,11 @@ footer{
     }
 
     .section{
-        padding-top: 75px;
+        padding-top: 55px;
     }
 
     .section .naglowek{
-        padding-top: 15px;
-        font-size: 50px;
+        font-size: 40px;
         letter-spacing: 25px;
         text-indent: 25px;
     }
