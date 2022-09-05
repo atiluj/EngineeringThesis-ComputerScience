@@ -9,49 +9,74 @@ window.onscroll = function() {scrollFunction()};
 // jak juz się otworzy i wtedy zmiejszymy okienko to i tak działa scrypt na dole
 //2
 // zobacz np. uruchom na więcej niż 1200 px i zmniejsz do mniej niż 1000px
+//3 
+//zobacz np urcuhco na mniej niż 800 i zwięsz o ponad 1200 i przesuń w dół
 
 
 var pageWidth = $(window).width();
-// console.log(pageWidth)
+console.log(pageWidth)
 
 function scrollFunction() {
 
     if(pageWidth > 1200){
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("navbar").style.height = "45px";
-            document.getElementById("logo").style.display = "none";
-            // nie działa
-            document.querySelector("nav ul").style.height = "45px";
-
-            var liElems = document.querySelectorAll("ul li");
-            var index = 0, length = liElems.length;
-            for ( ; index < length; index++) {
-                liElems[index].style.height = "45px";
-            }
 
             var aElems = document.querySelectorAll("ul li a");
             var index = 0, length = aElems.length;
             for ( ; index < length; index++) {
                 aElems[index].style.padding = "9px 17px";
+                aElems[index].style.fontSize = "14px";
             }
-            
-            
-        } else {
-            document.getElementById("navbar").style.height = "65px";
-            document.getElementById("logo").style.display = "block";
-            document.querySelector("nav ul").style.height = "65px";
 
-            var liElems = document.querySelectorAll("ul li");
-            var index = 0, length = liElems.length;
+        } else {
+            var aElems = document.querySelectorAll("ul li a");
+            var index = 0, length = aElems.length;
             for ( ; index < length; index++) {
-                liElems[index].style.height = "65px";
+                aElems[index].style.padding = "19px 23px";
+                aElems[index].style.fontSize = "16px";
             }
+        }
+    }
+
+    if(pageWidth > 1000 && pageWidth < 1200 ){
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 
             var aElems = document.querySelectorAll("ul li a");
             var index = 0, length = aElems.length;
             for ( ; index < length; index++) {
-                aElems[index].style.padding = "19px 17px";
+                aElems[index].style.padding = "9px 17px";
+                aElems[index].style.fontSize = "14px";
+            }
+
+        } else {
+            var aElems = document.querySelectorAll("ul li a");
+            var index = 0, length = aElems.length;
+            for ( ; index < length; index++) {
+                aElems[index].style.padding = "15px 17px";
+                aElems[index].style.fontSize = "16px";
             }
         }
     }
+
+    if(pageWidth > 810 && pageWidth < 1000){
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+
+            var aElems = document.querySelectorAll("ul li a");
+            var index = 0, length = aElems.length;
+            for ( ; index < length; index++) {
+                aElems[index].style.padding = "12px 10px";
+                aElems[index].style.fontSize = "12px";
+            }
+
+        } else {
+            var aElems = document.querySelectorAll("ul li a");
+            var index = 0, length = aElems.length;
+            for ( ; index < length; index++) {
+                aElems[index].style.padding = "15px 10px";
+                aElems[index].style.fontSize = "14px";
+            }
+        }
+    }
+    
+
 }
