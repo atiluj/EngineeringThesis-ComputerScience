@@ -3,23 +3,6 @@
     padding: 0;
 }
 
-.red{
-    /* color: #a4413a; */
-    color: #322e2b;
-}
-
-.yellow{
-    color: #c48538;
-}
-
-.blue{
-    color: #2F4858;
-}
-
-.green{
-    color: #4A6B17;
-}
-
 div .wrapper{
     min-width: 1920px;
     margin: 0 auto;
@@ -148,53 +131,43 @@ nav ul li a{
     color: #ccdbf6;
 }
 
-.section{
-    background-color: #f0e9e0; /*#f4e8db;*/
-    padding-top: 100px;
-}
-
-.section .naglowek{
-    padding-top: 50px;
+.title{
+    border-radius: 50px;
+    background-color: #c1a26d6e;
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 30px;
+    text-indent: 30px; /*?jakoś dziwnie*/
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 55px;
-    letter-spacing: 50px;
-    text-transform: uppercase;
-    line-height: 0px;
-    color: #c48538;
-    text-align: center;
-
-    /* letter-spacing robi spacje za ostatnim znakiem - rozwiązanie problemu */
-    text-indent: 50px;
-    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black */
+    font-weight: 900;
+    color: #322e2b;
+    margin-top: 10px;
 }
 
-.section .naglowek h1{
+.cont-title{
+    padding-top: 10px;
+    /* border-radius: 50px; */
+    /* background-color: #49581cbd; */
     text-align: center;
-}
-
-.section article{
-    font-family: 'IBM Plex Serif', serif;
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 400;
-    background-color: white;
-    padding: 60px 30px 20px;
-    margin: 0 5vw;
-    text-align: center;    
-    letter-spacing: 0.1px;
-    border-radius: 25px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    line-height: 25px;
+    text-indent: 5px; /*?jakoś dziwnie*/
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 900;
+    /* background-color: #f0e9e0;  */
+    color: #322e2b;
 }
 
 main {
-    /* background-image: linear-gradient(#f4e8db, #e2d3c4); */
-    /* background-color: #e2d3c4; */
     background-color: #f0e9e0; /*#f4e8db;*/
     min-height: 80vh;
+    /* padding: 2vw 0; */
     text-align: center;
     display: grid;
-    grid-template-columns: 16vw 1fr;
-    gap: 4vw;
-    padding: 2vw 5vw;
+    grid-template-columns: 20vw 1fr;
+    gap: 3vw;
+    padding: 80px 3vw;
 }
 
 
@@ -202,50 +175,59 @@ main {
 /* SIDEBAR */
 
 main .contents{
-    margin-top: calc(2vw - 1px);
+    margin-top: 40px;
 }
 
 main .contents .cont{
     display: flex;
     flex-direction: column;
     /* background-color: #35312f; B1 */
-    background-color: #322e2b;
+    background-color: #f4e8db;
+    margin: 1vw 0;
 }
 
 main .contents .cont a{
     display: block;
     padding: 12px;
-    font-size: 17px;
+    font-size: 14px;
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 900;
     color: #f4e8db;
+    text-transform: uppercase;
     border: 1px solid #f4e8db;
+    border-left-width: 0px;
+    border-right-width: 0px;
     letter-spacing: 1px;
     text-decoration: none;
     transition: .7s;
+    background-color: #f4e8db
 }
 
-main .contents .cont a:hover{
+main .contents .cont .subtopic{
+    margin: 1px 0;
+    color: #322e2b;
+    text-transform: uppercase;
+    border: 3px solid #322e2b;
     background-color: #f4e8db;
 }
 
-main .contents .cont .a1:hover{
-    color:#a4413a;
+main .contents .cont .topic{
+    color: #f4e8db;
+    text-transform: uppercase;
+    background-color: #322e2b
 }
 
-main .contents .cont .a2:hover{
-    color:#c48538;
+main .contents .cont .subtopic:hover{
+    background-color: #c48538;
+    letter-spacing: 3px;
 }
 
-main .contents .cont .a3:hover{
-    color:#2F4858;
-}
-
-main .contents .cont .a4:hover{
-    color:#4A6B17;
-}
 
 /* NAGŁÓWEK - CZEŚĆ */
+
+main .main{
+    margin-top: 5px;
+}
 
 
 main article{
@@ -263,35 +245,16 @@ main article{
 main article h1{
     font-family: 'Chakra Petch', sans-serif;
     text-transform: uppercase;
-    color: #a4413a;
+    color: #322e2b;
     padding-bottom: 6px;
 }
 
 main .second{
     text-justify: inter-word;
-    margin: 2vw 0; 
+    margin: 15px 0; 
     /* border-color: #a4413a; */
     border-color: #322e2b;
     /* background-color: #f8dad8; */
-}
-
-main .third{
-    text-justify: inter-word;
-    margin: 2vw 0; 
-    /* border-color: #c48538; */
-    /* background-color: #ffead0; */
-}
-
-main .fourth{
-    text-justify: inter-word;
-    margin: 2vw 0; 
-    /* border-color: #2F4858; */
-}
-
-main .fifth{
-    text-justify: inter-word;
-    margin: 2vw 0; 
-    /* border-color: #4A6B17; */
 }
 
 main article{
@@ -299,25 +262,6 @@ main article{
     border-radius: 1px;
 }
 
-.color1{
-    background-color: #2F4858;
-    height: 15px;
-}
-
-.color2{
-    background-color: #a4413a;
-    height: 15px;
-}
-
-.color3{
-    background-color: #c48538;
-    height: 15px;
-}
-
-.color4{
-    background-color: #4A6B17;
-    height: 15px;
-}
 
 footer{
     background-color: #35312f;
@@ -328,7 +272,6 @@ footer{
     nav {
         overflow: hidden;
     } 
-
     
     nav ul li a{
         padding: 15px 17px;
@@ -340,34 +283,21 @@ footer{
         padding: 15px 17px;
     }
 
-    .section{
-        padding-top: 110px;
-    }
-
-
-    .section .naglowek{
-        padding-top: 15px;
-        font-size: 50px;
-        letter-spacing: 45px;
-        text-indent: 45px;
-    }
-    
-    .section article{
-        font-size: 15px;
-        padding: 50px 30px 20px;
-        margin: 0 4vw;
-        line-height: 17px;
-    }
-
     main {
-        padding: 1vw 4vw;
-        grid-template-columns: 18vw 1fr;
+        /* padding: 1vw 4vw; */
+        grid-template-columns: 21vw 1fr;
         gap: 3vw;
     }
 
-    main .contents .cont a{
-        font-size: 15px;
+    .cont-title{
+        font-size: 18px;
     }
+
+    main .contents .cont a{
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+
 
     main article{
         font-size: 15px;
@@ -375,12 +305,6 @@ footer{
         margin-bottom: 2vw;
     }
     
-    main article h1{
-        font-family: 'Chakra Petch', sans-serif;
-        text-transform: uppercase;
-        color: #a4413a;
-        padding-bottom: 6px;
-    }
 }
 
 @media(max-width:1000px){
@@ -397,19 +321,8 @@ footer{
         font-size: 14px;
     }
 
-    .section .naglowek{
-        padding-top: 5px;
-        font-size: 45px;
-        letter-spacing: 40px;
-        text-indent: 40px;
-    }
-
-    main{
-        display: block;
-    }
-
-    main .contents{
-        display: none;
+    .cont-title{
+        letter-spacing: 2px;
     }
 
 }
@@ -418,7 +331,6 @@ footer{
     nav{
         position: static; 
         overflow: visible;
-        /* min-height: 357px; */
     }
 
     nav ul{
@@ -456,44 +368,26 @@ footer{
         text-align: center;
     }
 
-    .section{
-        padding-top: 55px;
+    main{
+        padding: 30px 1vw;
+        grid-template-columns: 22vw 1fr;
+        gap: 1vw;
     }
 
-    .section .naglowek{
-        font-size: 40px;
-        letter-spacing: 25px;
-        text-indent: 25px;
+    main .contents .cont a{
+        font-size: 13px;
     }
     
-    .section article{
-        font-size: 15px;
-        padding: 50px 30px 20px;
-        margin: 0 4vw;
-        line-height: 17px;
+    main .contents .cont .subtopic{
+        margin: .5px 0;
+    }
+
+    .title{
+        font-size: 32px;
     }
 }
 
 @media (max-width: 600px){
-    .section{
-        padding-top: 50px;
-    }
-
-    .section .naglowek{
-        padding-top: 0px;
-        font-size: 25px;
-        letter-spacing: 5px;
-        text-indent: 5px;
-    }
-    
-    .section article{
-        font-size: 14px;
-        padding: 25px 20px 15px;
-        margin: 0 4vw;
-        line-height: 17px;
-        text-align: justify;
-    }
-
     main article{
         font-size: 14px;
         padding: 10px 15px;
