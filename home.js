@@ -11,6 +11,8 @@ window.onscroll = function() {scrollFunction()};
 // zobacz np. uruchom na więcej niż 1200 px i zmniejsz do mniej niż 1000px
 //3 
 //zobacz np urcuhco na mniej niż 800 i zwięsz o ponad 1200 i przesuń w dół
+//4
+//do naprawienia teoria.html żey spis treści i teroia była równo zawsze
 
 
 var pageWidth = $(window).width();
