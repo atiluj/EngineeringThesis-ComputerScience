@@ -1,0 +1,18 @@
+{
+  "name": "maturacz",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.html teoria.html",
+    "build": "parcel build index.html teoria.html"
+  },
+  "dependencies": {
+    "@fontsource/chakra-petch": "^4.5.8",
+    "@fontsource/ibm-plex-serif": "^4.5.11",
+    "parcel": "^2.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}

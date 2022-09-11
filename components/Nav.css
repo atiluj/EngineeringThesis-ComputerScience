@@ -1,0 +1,201 @@
+nav {
+    background-color: #322e2b;
+    font-size: 0;
+    /* to likiwduje wbudowany margines w menu*/
+    overflow: hidden;
+    list-style: none;
+    /* navbar moving while scrolling */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+.ul2 {
+    float: right;
+    padding-right: 30px;
+}
+
+.ul2 a {
+    display: block;
+    padding: 19px 23px;
+    transition: .5s;
+    text-transform: uppercase;
+}
+
+.ul2 a:hover {
+    color: yellow;
+}
+
+nav ul {
+    max-width: 94vw;
+    float: left;
+    /* background-color: #35312f; B1*/
+    padding-left: 30px;
+}
+
+.ul2 {
+    float: right;
+    padding-left: 0px;
+}
+
+nav ul li {
+    display: inline-block;
+    transition: 0.7s;
+    /* height: 65px; */
+}
+
+nav ul li a {
+    display: block;
+    box-sizing: border-box;
+    /*może być potrzben przy tworzeniu nav dla telefonów*/
+    padding: 19px 23px;
+    /* padding: 0 30px ; */
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 900;
+    color: #f4e8db;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+.home:hover {
+    background-color: #c48538;
+}
+
+.home:hover a {
+    /* color: #c48538;  */
+    color: #FFEBCD;
+}
+
+.teoria:hover {
+    background-color: #E9E2CF;
+}
+
+.teoria:hover a {
+    color: #c48538;
+}
+
+.excel:hover {
+    background-color: #4A6B17;
+}
+
+.excel:hover a {
+    color: #D3EDAB;
+    /* color: #4A6B17; */
+}
+
+.access:hover {
+    background-color: #a4413a;
+}
+
+.access:hover a {
+    color: #EFD4D2;
+    /* color: #a4413a; */
+}
+
+.python:hover {
+    background-color: #496998;
+}
+
+.python:hover a {
+    color: #E9E193;
+    /* color: #496998; */
+}
+
+.cpp:hover {
+    background-color: #6F8DBE;
+}
+
+.cpp:hover a {
+    /* color: white; */
+    color: #6F8DBE;
+}
+
+.kompilator:hover {
+    background-color: #ccdbf6;
+}
+
+.kompilator:hover a {
+    color: #35312f;
+    /* color: #ccdbf6; */
+}
+
+
+@media (max-width: 1200px) {
+    nav {
+        overflow: hidden;
+    }
+
+
+    nav ul li a {
+        padding: 15px 17px;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+    }
+
+    .ul2 a {
+        padding: 15px 17px;
+    }
+}
+
+@media(max-width:1000px) {
+    nav ul {
+        padding-left: 10px;
+    }
+
+    .ul2 {
+        padding-right: 10px;
+    }
+
+    nav ul li a {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:810px) {
+    nav {
+        position: static;
+        overflow: visible;
+        /* min-height: 357px; */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+        float: none;
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .ul2 {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+        float: none;
+
+    }
+
+    .ul2 li {
+        border-bottom: 2px solid #EFD4D2;
+    }
+
+    nav ul li {
+        border-top: 2px solid #EFD4D2;
+    }
+
+    nav ul li a {
+        padding: 15px 0;
+        letter-spacing: 3px;
+        display: block;
+        text-align: center;
+    }
+}
