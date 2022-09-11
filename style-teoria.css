@@ -33,7 +33,7 @@ nav {
 }
 
 .ul2 a:hover{
-    color: yellow;
+    letter-spacing: 4px;
 }
 
 nav ul{
@@ -70,65 +70,66 @@ nav ul li a{
 }
 
 
-/* .home:hover{
+.home:hover{
     background-color: #c48538;
-} */
-
-.home:hover a {
-    color: #c48538; /*#FFEBCD; */
 }
 
-/* .teoria:hover{
+.home:hover a {
+    /* color: #c48538;  */
+    color: #FFEBCD;
+}
+
+.teoria:hover{
     background-color: #E9E2CF;
-} */
+}
 
 .teoria:hover a{
     color: #c48538;
 }
 
-/* .excel:hover{
+.excel:hover{
     background-color: #4A6B17;
-} */
+}
 
 .excel:hover a{
-    /* color: #D3EDAB; */
-    color: #4A6B17;
+    color: #D3EDAB;
+    /* color: #4A6B17; */
 }
 
-/* .access:hover{
+.access:hover{
     background-color: #a4413a;
-} */
+}
 
 .access:hover a{
-    /* color: #EFD4D2; */
-    color: #a4413a;
+    color: #EFD4D2;
+    /* color: #a4413a; */
 }
 
-/* .python:hover{
+.python:hover{
     background-color: #496998;
-} */
+}
 
 .python:hover a{
-    /* color: #E9E193; */
-    color: #496998;
+    color: #E9E193;
+    /* color: #496998; */
 }
 
-/* .cpp:hover{
+.cpp:hover{
     background-color: #6F8DBE;
-} */
+}
 
 .cpp:hover a{
     /* color: white; */
     color: #6F8DBE;
 }
 
-/* .kompilator:hover{
+.kompilator:hover{
     background-color: #ccdbf6;
-} */
+}
 
 .kompilator:hover a{
-    /* color:#35312f; */
-    color: #ccdbf6;
+    color:#35312f;
+    /* color: #ccdbf6; */
 }
 
 .title{
@@ -215,7 +216,7 @@ main .contents .cont .topic{
 }
 
 main .contents .cont .subtopic:hover{
-    background-color: #c48538;
+    /* background-color: #c48538; */
     letter-spacing: 3px;
 }
 

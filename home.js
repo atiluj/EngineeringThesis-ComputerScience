@@ -4,18 +4,9 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 window.onscroll = function() {scrollFunction()};
 
-//1
-// jak refresha robić
-// jak juz się otworzy i wtedy zmiejszymy okienko to i tak działa scrypt na dole
-//2
-// zobacz np. uruchom na więcej niż 1200 px i zmniejsz do mniej niż 1000px
-//3 
-//zobacz np urcuhco na mniej niż 800 i zwięsz o ponad 1200 i przesuń w dół
-
-
 
 var pageWidth = $(window).width();
-console.log(pageWidth)
+// console.log(pageWidth)
 
 function scrollFunction() {
 
