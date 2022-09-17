@@ -1,23 +1,46 @@
 import './Teoria.css';
+import * as React from 'react';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
 
-export default function() {
+import Collapse from '@mui/material/Collapse';
+
+function Chapter(props) {
+    const [show, setShow] = React.useState(false); //domyślnie schowane
+    return <>
+        <div class="topic" onClick={() => setShow(show => !show)}>
+            <a>{props.title}</a>
+            {show ? <ExpandLess /> : <ExpandMore />}
+        </div>
+        <Collapse in={show}>
+            {props.children}
+        </Collapse>
+    </>;
+}
+
+export default function () {
+    const [show, setShow] = React.useState(false); //domyślnie schowane
+
     return <main>
         <div class="contents">
             <div class="cont-title">
                 <a>SPIS TREŚCI</a>
             </div>
+
             <div class="cont">
-                <a class="topic">1. Komputer</a>
-                <a href="" class="subtopic">Komputer i jego części</a>
-                <a href="" class="subtopic">System operacyjny</a>
+                <div class="topic" onClick={() => setShow(show => !show)}><a>1. Komputer</a>{show ? <ExpandLess /> : <ExpandMore />}</div>
+                <Collapse in={show}>
+                    <a href="" class="subtopic">Komputer i jego części</a>
+                    <a href="" class="subtopic">System operacyjny</a>
+                </Collapse>
 
-                <a class="topic">2. Systemy liczbowe</a>
-                <a href="" class="subtopic">System dójkowy</a>
-                <a href="" class="subtopic">System ósemkowy</a>
-                <a href="" class="subtopic">System szesnastkowy</a>
-                <a href="" class="subtopic">Konwersja liczb pomiędzy systemami</a>
-                <a href="" class="subtopic">Schemat Hornera</a>
-
+                <Chapter title="2. Systemy liczbowe">
+                    <a href="" class="subtopic">System dwójkowy</a>
+                    <a href="" class="subtopic">System ósemkowy</a>
+                    <a href="" class="subtopic">System szesnastkowy</a>
+                    <a href="" class="subtopic">Konwersja liczb pomiędzy systemami</a>
+                    <a href="" class="subtopic">Schemat Hornera</a>
+                </Chapter>
 
                 <a class="topic">3. Sieci komputerowe</a>
                 <a href="" class="subtopic">Terminologia</a>

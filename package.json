@@ -6,8 +6,12 @@
     "build": "parcel build index.html teoria.html"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@fontsource/chakra-petch": "^4.5.8",
     "@fontsource/ibm-plex-serif": "^4.5.11",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.4",
     "parcel": "^2.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
