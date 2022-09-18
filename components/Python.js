@@ -29,68 +29,73 @@ export default function () {
 
             <div class="cont">
 
-                <Chapter title="1. Komputer">
-                    <a href="" class="subtopic">Komputer i jego części</a>
-                    <a href="" class="subtopic">System operacyjny</a>
+                <Chapter title="1. Podstawowe konstrukcje">
+                    <a href="" class="subtopic">Pętle</a>
+                    <a href="" class="subtopic">Warunki</a>
+                    <a href="" class="subtopic">Funkcje</a>
+                    <a href="" class="subtopic">Tablice</a>
+                    <a href="" class="subtopic">Instrukcje wejścia i wyjścia</a>
+                    <a href="" class="subtopic">Operacje na plikach</a>
                 </Chapter>
 
-                <Chapter title="2. Systemy liczbowe">
-                    <a href="" class="subtopic">System dwójkowy</a>
-                    <a href="" class="subtopic">System ósemkowy</a>
-                    <a href="" class="subtopic">System szesnastkowy</a>
-                    <a href="" class="subtopic">Konwersja liczb pomiędzy systemami</a>
-                    <a href="" class="subtopic">Schemat Hornera</a>
+                <Chapter title="2. Struktury danych">
+                    <a href="" class="subtopic">-</a>
+                    <a href="" class="subtopic">-</a>
+                    <a href="" class="subtopic">-</a>
                 </Chapter>
 
-                <Chapter title="3. Sieci komputerowe">
-                    <a href="" class="subtopic">Terminologia</a>
-                    <a href="" class="subtopic">Topologia sieci</a>
-                    <a href="" class="subtopic">Protokół IP</a>
-                    <a href="" class="subtopic">Adresy IP</a>
-                    <a href="" class="subtopic">Maski podsieci</a>
-                    <a href="" class="subtopic">Adresy sieci</a>
+                <Chapter title="3. Rekurencja">
+                    <a href="" class="subtopic">Podejście zachłanne</a>
+                    <a href="" class="subtopic">Metoda "dziel i zwyciężaj</a>
                 </Chapter>
 
-                <Chapter title="4. Grafika komputerowa">
-                    <a href="" class="subtopic">Podstawowe modele barw</a>
-                    <a href="" class="subtopic">Własnośći grafiki rastrowej i wektorowej</a>
-                    <a href="" class="subtopic">Podstawowe formaty plików graficznych</a>
+                <Chapter title="4.Systemy liczbowe">
+                    <a href="" class="subtopic">Teora</a>
+                    <a href="" class="subtopic">Schemat Horenera</a>
                 </Chapter>
 
-                <Chapter title="5. Bezpieczeństwo">
-                    <a href="" class="subtopic">Zagadnienia przestępczości komputerowej</a>
-                    <a href="" class="subtopic">Licencje</a>
-                    <a href="" class="subtopic">Normy prawe</a>
+                <Chapter title="5. Liczby">
+                    <a href="" class="subtopic">Liczby pierwsze i doskonałe</a>
+                    <a href="" class="subtopic">Rozkładanie liczby na czynniki pierwsze</a>
+                    <a href="" class="subtopic">NWD i NWW</a>
+                    <a href="" class="subtopic">Liczby Fibonacciego</a>
                 </Chapter>
 
-                <Chapter title="6. Złożoność">
-                    <a href="" class="subtopic">Złożoność obliczeniowa</a>
-                    <a href="" class="subtopic">Złożoność pamięciowa</a>
-                    <a href="" class="subtopic">Własnośći algorytmów</a>
+                <Chapter title="6. Algorytmy sortowania">
+                    <a href="" class="subtopic">Bąbelkowy</a>
+                    <a href="" class="subtopic">Po przez wybór</a>
+                    <a href="" class="subtopic">Przez wstawianie</a>
+                    <a href="" class="subtopic">Przez scalanie</a>
+                    <a href="" class="subtopic">Szybkie</a>
+                    <a href="" class="subtopic">Kubełkowe</a>
                 </Chapter>
 
-                <Chapter title="7. Pseudokod">
-                    <a href="" class="subtopic">Lista kroków</a>
-                    <a href="" class="subtopic">Za pomocą C++</a>
+                <Chapter title="7. Algorytmy numeryczne">
+                    <a href="" class="subtopic">obliczanie wartości pierwiastka kwadratowego</a>
+                    <a href="" class="subtopic">wyznaczanie miejsc zerowych funkcji</a>
+                    <a href="" class="subtopic">obliczanie pola obszarów zamkniętych</a>
                 </Chapter>
 
-                <Chapter title="8. Błędy">
-                    <a href="" class="subtopic">Błędy numeryczne obliczeń</a>
-                    <a href="" class="subtopic">Błąd względny i bezwzględny</a>
+                <Chapter title="8. Algorytmy">
+                    <a href="" class="subtopic">Tekstowe</a>
+                    <a href="" class="subtopic">Palindromy</a>
+                    <a href="" class="subtopic">Wyszukiwanie wzorca w tekście</a>                    
                 </Chapter>
 
-                <Chapter title="9. ONP">
-                    <a href="" class="subtopic">Odwrotna notacja polska</a>
-
+                <Chapter title="8. Algorytmy szyfrowania">
+                    <a href="" class="subtopic">Szyfr Cezara</a>
+                    <a href="" class="subtopic">Przestawieniowy</a>
                 </Chapter>
+
+
 
             </div>
             {/* <!-- REKLAMA --> */}
         </div>
 
         <div class="main">
-            <div class="title">
-                <a>TEORIA</a>
+            <div class="title" style={{ backgroundColor: '#002cb352' }}>
+                <a>PYTHON</a>
             </div>
             <article class="second">
                 <h1>WSKAZÓWKI</h1>

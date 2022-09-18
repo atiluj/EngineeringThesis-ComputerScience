@@ -15,7 +15,7 @@
 .cont-title {
     padding: 10px 0;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     line-height: 25px;
     text-indent: 5px;
     /*?jakoś dziwnie*/
@@ -33,8 +33,8 @@ main {
     text-align: center;
     display: grid;
     grid-template-columns: 20vw 1fr;
-    gap: 3vw;
-    padding: 80px 3vw;
+    gap: 2.5vw;
+    padding: 80px 2.5vw;
 }
 
 
@@ -42,7 +42,7 @@ main {
 /* SIDEBAR */
 
 main .contents {
-    margin-top: 10px;
+    margin-top: 33px;
 }
 
 main .contents .cont {
@@ -50,16 +50,16 @@ main .contents .cont {
     flex-direction: column;
     background-color: #f4e8db;
     padding: 0;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Chakra Petch', sans-serif;
-    font-weight: 900;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1px;
     text-decoration: none;
 }
 
 
 main .contents .cont .topic {
+    font-weight: 900;
     display: flex;
     padding: 12px;
     transition: .7s;
@@ -69,6 +69,7 @@ main .contents .cont .topic {
     background-color: #322e2b;
     color: #f4e8db;
     align-items: center;
+    letter-spacing: 2px;
     justify-content: space-between;
 }
 
@@ -77,6 +78,7 @@ main .contents .cont .subtopic {
     display: block;
     padding: 12px;
     transition: .7s;
+    letter-spacing: 1px;
     border: 1px solid #f4e8db;
     border-left-width: 0px;
     border-right-width: 0px;
@@ -104,7 +106,7 @@ main .contents .cont .subtopic {
 
 main .contents .cont .subtopic:hover {
     /* background-color: #c48538; */
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 
@@ -152,11 +154,11 @@ main article {
     main {
         /* padding: 1vw 4vw; */
         grid-template-columns: 21vw 1fr;
-        gap: 3vw;
+        gap: 2vw;
     }
 
     .cont-title {
-        font-size: 18px;
+        font-size: 23px;
     }
 
     main .contents .cont a {
@@ -173,12 +175,12 @@ main article {
 
 }
 
-@media(max-width:1000px) {
+/* @media(max-width:1000px) {
     .cont-title {
         letter-spacing: 2px;
     }
 
-}
+} */
 
 @media (max-width:810px) {
     main {

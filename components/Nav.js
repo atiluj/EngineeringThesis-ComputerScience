@@ -66,9 +66,9 @@ export default function() {
         <ul>
             <li className="home"><a href="index.html" style={aStyle}>Cześć!</a></li>
             <li className="teoria"><a href="teoria.html" style={aStyle}>Teoria</a></li>
-            {/* <li className="excel"><a href="excel.html" style={aStyle}>Excel</a></li>
+            <li className="excel"><a href="excel.html" style={aStyle}>Excel</a></li>
             <li className="access"><a href="access.html" style={aStyle}>Access</a></li>
-            <li className="python"><a href="python.html" style={aStyle}>Python</a></li> */}
+            <li className="python"><a href="python.html" style={aStyle}>Python</a></li>
             {/* <li className="kompilator"><a href="interpreter.html" style={aStyle}>Interpreter Python</a></li> */}
         </ul>
         <ul className="ul2">

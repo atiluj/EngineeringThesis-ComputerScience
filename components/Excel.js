@@ -29,68 +29,34 @@ export default function () {
 
             <div class="cont">
 
-                <Chapter title="1. Komputer">
-                    <a href="" class="subtopic">Komputer i jego części</a>
-                    <a href="" class="subtopic">System operacyjny</a>
+                <Chapter title="1. Dane">
+                    <a href="" class="subtopic">Importowanie danych</a>
                 </Chapter>
 
-                <Chapter title="2. Systemy liczbowe">
-                    <a href="" class="subtopic">System dwójkowy</a>
-                    <a href="" class="subtopic">System ósemkowy</a>
-                    <a href="" class="subtopic">System szesnastkowy</a>
-                    <a href="" class="subtopic">Konwersja liczb pomiędzy systemami</a>
-                    <a href="" class="subtopic">Schemat Hornera</a>
+                <Chapter title="2. Formuły">
+                    <a href="" class="subtopic">Formuły wbudowane</a>
+                    <a href="" class="subtopic">Budowa złożonych formuł</a>
+                    <a href="" class="subtopic">Wykorzystywanie formuł warunkowych</a>
                 </Chapter>
 
-                <Chapter title="3. Sieci komputerowe">
-                    <a href="" class="subtopic">Terminologia</a>
-                    <a href="" class="subtopic">Topologia sieci</a>
-                    <a href="" class="subtopic">Protokół IP</a>
-                    <a href="" class="subtopic">Adresy IP</a>
-                    <a href="" class="subtopic">Maski podsieci</a>
-                    <a href="" class="subtopic">Adresy sieci</a>
+                <Chapter title="3. -">
+                    <a href="" class="subtopic">Przetwarzanie i analiza danych</a>
+                    <a href="" class="subtopic">Odpowiadanie na zapytania</a>
+                    <a href="" class="subtopic">Tworzenie symulacji</a>
+                    <a href="" class="subtopic">Zapisywanie alagorytmów</a>
+                    <a href="" class="subtopic">Tworzenie wykresów</a>
+                    <a href="" class="subtopic">Obrazowanie zależności funkcyjnych</a>
+                    <a href="" class="subtopic">Funkcje bazodanowe</a>                
                 </Chapter>
 
-                <Chapter title="4. Grafika komputerowa">
-                    <a href="" class="subtopic">Podstawowe modele barw</a>
-                    <a href="" class="subtopic">Własnośći grafiki rastrowej i wektorowej</a>
-                    <a href="" class="subtopic">Podstawowe formaty plików graficznych</a>
-                </Chapter>
-
-                <Chapter title="5. Bezpieczeństwo">
-                    <a href="" class="subtopic">Zagadnienia przestępczości komputerowej</a>
-                    <a href="" class="subtopic">Licencje</a>
-                    <a href="" class="subtopic">Normy prawe</a>
-                </Chapter>
-
-                <Chapter title="6. Złożoność">
-                    <a href="" class="subtopic">Złożoność obliczeniowa</a>
-                    <a href="" class="subtopic">Złożoność pamięciowa</a>
-                    <a href="" class="subtopic">Własnośći algorytmów</a>
-                </Chapter>
-
-                <Chapter title="7. Pseudokod">
-                    <a href="" class="subtopic">Lista kroków</a>
-                    <a href="" class="subtopic">Za pomocą C++</a>
-                </Chapter>
-
-                <Chapter title="8. Błędy">
-                    <a href="" class="subtopic">Błędy numeryczne obliczeń</a>
-                    <a href="" class="subtopic">Błąd względny i bezwzględny</a>
-                </Chapter>
-
-                <Chapter title="9. ONP">
-                    <a href="" class="subtopic">Odwrotna notacja polska</a>
-
-                </Chapter>
 
             </div>
             {/* <!-- REKLAMA --> */}
         </div>
 
         <div class="main">
-            <div class="title">
-                <a>TEORIA</a>
+            <div class="title" style={{backgroundColor: '#86c16d78'}}>
+                <a>EXCEL</a>
             </div>
             <article class="second">
                 <h1>WSKAZÓWKI</h1>
