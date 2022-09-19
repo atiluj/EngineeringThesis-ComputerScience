@@ -46,8 +46,8 @@ main .contents {
 }
 
 main .contents .cont {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; to nie potrzebne
+    flex-direction: column; */
     background-color: #f4e8db;
     padding: 0;
     font-size: 14px;
@@ -69,6 +69,7 @@ main .contents .cont .topic {
     color: #f4e8db;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .topic a{
@@ -80,6 +81,7 @@ main .contents .cont .topic {
 
 main .contents .cont .subtopic {
     display: block;
+    cursor: pointer;
     padding: 10px;
     transition: .7s;
     /* letter-spacing: 1px; */
@@ -111,6 +113,10 @@ main .contents .cont .subtopic {
 main .contents .cont .subtopic:hover {
     letter-spacing: 1px;
 }
+
+/* main .contents .cont .subtopic:visited{
+    background-color: #7ca57c33;
+} */
 
 main .contents .cont .topic:hover{
     background-color: #322e2ba1;
@@ -204,9 +210,15 @@ main article {
 
 @media (max-width:810px) {
     main {
-        padding: 30px 1vw;
-        grid-template-columns: 22vw 1fr;
-        gap: 1vw;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0;
+    }
+
+    main .contents .cont {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-flow: row;
     }
 
     main .contents .cont a {
@@ -222,18 +234,12 @@ main article {
     }
 }
 
-/* @media (max-width: 600px){
-    main article{
-        font-size: 14px;
-        padding: 10px 15px;
-        border-width: 2.5px;
+@media (max-width: 600px){
+    main {
 
     }
 
-    main article h1{
-        text-align: center;
-    }
-} */
+}
 
 /* 
 @media(max-width:400px){

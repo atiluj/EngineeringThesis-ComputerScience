@@ -7,15 +7,15 @@ import Collapse from '@mui/material/Collapse';
 
 function Chapter(props) {
     const [show, setShow] = React.useState(false); //domyślnie schowane
-    return <>
+    return <div>
         <div class="topic" onClick={() => setShow(show => !show)}>
             <a>{props.title}</a>
-            {show ? <ExpandLess /> : <ExpandMore />}
+            <div style={{visibility: props.children ? "visible" : "hidden"}}>{show ? <ExpandLess /> : <ExpandMore />}</div>
         </div>
         <Collapse in={show}>
             {props.children}
         </Collapse>
-    </>;
+    </div>;
 }
 
 export default function () {
@@ -29,59 +29,59 @@ export default function () {
 
             <div class="cont">
 
-                <div class="topic"><a href="">0. Wskazówki</a></div>
+                <Chapter title="0. Wskazówki"></Chapter>
                 <Chapter title="1. Komputer">
-                    <a href="" class="subtopic">Komputer i jego części</a>
-                    <a href="" class="subtopic">System operacyjny</a>
+                    <a href="#" class="subtopic">Komputer i jego części</a>
+                    <a href="#" class="subtopic">System operacyjny</a>
                 </Chapter>
 
                 <Chapter title="2. Systemy liczbowe">
-                    <a href="" class="subtopic">System dwójkowy</a>
-                    <a href="" class="subtopic">System ósemkowy</a>
-                    <a href="" class="subtopic">System szesnastkowy</a>
-                    <a href="" class="subtopic">Konwersja liczb pomiędzy systemami</a>
-                    <a href="" class="subtopic">Schemat Hornera</a>
+                    <a href="#" class="subtopic">System dwójkowy</a>
+                    <a href="#" class="subtopic">System ósemkowy</a>
+                    <a href="#" class="subtopic">System szesnastkowy</a>
+                    <a href="#" class="subtopic">Konwersja liczb pomiędzy systemami</a>
+                    <a href="#" class="subtopic">Schemat Hornera</a>
                 </Chapter>
 
                 <Chapter title="3. Sieci komputerowe">
-                    <a href="" class="subtopic">Terminologia</a>
-                    <a href="" class="subtopic">Topologia sieci</a>
-                    <a href="" class="subtopic">Protokół IP</a>
-                    <a href="" class="subtopic">Adresy IP</a>
-                    <a href="" class="subtopic">Maski podsieci</a>
-                    <a href="" class="subtopic">Adresy sieci</a>
+                    <a href="#" class="subtopic">Terminologia</a>
+                    <a href="#" class="subtopic">Topologia sieci</a>
+                    <a href="#" class="subtopic">Protokół IP</a>
+                    <a href="#" class="subtopic">Adresy IP</a>
+                    <a href="#" class="subtopic">Maski podsieci</a>
+                    <a href="#" class="subtopic">Adresy sieci</a>
                 </Chapter>
 
                 <Chapter title="4. Grafika komputerowa">
-                    <a href="" class="subtopic">Podstawowe modele barw</a>
-                    <a href="" class="subtopic">Własnośći grafiki rastrowej i wektorowej</a>
-                    <a href="" class="subtopic">Podstawowe formaty plików graficznych</a>
+                    <a href="#" class="subtopic">Podstawowe modele barw</a>
+                    <a href="#" class="subtopic">Własnośći grafiki rastrowej i wektorowej</a>
+                    <a href="#" class="subtopic">Podstawowe formaty plików graficznych</a>
                 </Chapter>
 
                 <Chapter title="5. Bezpieczeństwo">
-                    <a href="" class="subtopic">Zagadnienia przestępczości komputerowej</a>
-                    <a href="" class="subtopic">Licencje</a>
-                    <a href="" class="subtopic">Normy prawe</a>
+                    <a href="#" class="subtopic">Zagadnienia przestępczości komputerowej</a>
+                    <a href="#" class="subtopic">Licencje</a>
+                    <a href="#" class="subtopic">Normy prawe</a>
                 </Chapter>
 
                 <Chapter title="6. Złożoność">
-                    <a href="" class="subtopic">Złożoność obliczeniowa</a>
-                    <a href="" class="subtopic">Złożoność pamięciowa</a>
-                    <a href="" class="subtopic">Własnośći algorytmów</a>
+                    <a href="#" class="subtopic">Złożoność obliczeniowa</a>
+                    <a href="#" class="subtopic">Złożoność pamięciowa</a>
+                    <a href="#" class="subtopic">Własnośći algorytmów</a>
                 </Chapter>
 
                 <Chapter title="7. Pseudokod">
-                    <a href="" class="subtopic">Lista kroków</a>
-                    <a href="" class="subtopic">Za pomocą C++</a>
+                    <a href="#" class="subtopic">Lista kroków</a>
+                    <a href="#" class="subtopic">Za pomocą C++</a>
                 </Chapter>
 
                 <Chapter title="8. Błędy">
-                    <a href="" class="subtopic">Błędy numeryczne obliczeń</a>
-                    <a href="" class="subtopic">Błąd względny i bezwzględny</a>
+                    <a href="#" class="subtopic">Błędy numeryczne obliczeń</a>
+                    <a href="#" class="subtopic">Błąd względny i bezwzględny</a>
                 </Chapter>
 
                 <Chapter title="9. ONP">
-                    <a href="" class="subtopic">Odwrotna notacja polska</a>
+                    <a href="#" class="subtopic">Odwrotna notacja polska</a>
 
                 </Chapter>
 
