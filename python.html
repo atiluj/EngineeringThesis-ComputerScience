@@ -17,7 +17,7 @@
     <div id="root" class="wrapper"></div>
     <script type="module">
         import {lazy, Suspense} from 'react';
-        import * as ReactDOM from 'react-dom';
+        import * as ReactDOM from 'react-dom/client';
         import './style.css';
         const Nav = lazy(() => import('./components/Nav.js'));
         const Python = lazy(() => import('./components/Python.js'));

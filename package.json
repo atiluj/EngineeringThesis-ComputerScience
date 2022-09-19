@@ -10,13 +10,16 @@
     "@emotion/styled": "^11.10.4",
     "@fontsource/chakra-petch": "^4.5.8",
     "@fontsource/ibm-plex-serif": "^4.5.11",
+    "@mdx-js/react": "^1.6.22",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.4",
+    "highlight.js": "^11.6.0",
     "parcel": "^2.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@parcel/transformer-mdx": "^2.7.0",
     "process": "^0.11.10"
   }
 }
