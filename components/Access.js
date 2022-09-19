@@ -29,6 +29,8 @@ export default function () {
 
             <div class="cont">
 
+                <div class="topic"><a>0. Wskazówki</a></div>
+
                 <Chapter title="1. Dane">
                     <a href="" class="subtopic">Importowanie danych</a>
                 </Chapter>
@@ -55,7 +57,7 @@ export default function () {
         </div>
 
         <div class="main">
-            <div class="title" style={{backgroundColor: '#b3000052'}}>
+            <div class="title" style={{ backgroundColor: '#b3000052' }}>
                 <a>ACCESS</a>
             </div>
             <article class="second">

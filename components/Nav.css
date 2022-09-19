@@ -9,6 +9,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 99;
+    border-bottom: 2px solid #f4e8db;
 }
 
 .ul2 {
@@ -161,7 +162,7 @@ nav ul li a {
     nav {
         position: static;
         overflow: visible;
-        /* min-height: 357px; */
+        border-bottom: 0px;
     }
 
     nav ul {

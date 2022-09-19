@@ -29,6 +29,7 @@ export default function () {
 
             <div class="cont">
 
+                <div class="topic"><a href="">0. Wskazówki</a></div>
                 <Chapter title="1. Komputer">
                     <a href="" class="subtopic">Komputer i jego części</a>
                     <a href="" class="subtopic">System operacyjny</a>

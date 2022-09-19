@@ -29,6 +29,8 @@ export default function () {
 
             <div class="cont">
 
+                <div class="topic"><a>0. Wskazówki</a></div>
+
                 <Chapter title="1. Dane">
                     <a href="" class="subtopic">Importowanie danych</a>
                 </Chapter>
@@ -46,7 +48,7 @@ export default function () {
                     <a href="" class="subtopic">Zapisywanie alagorytmów</a>
                     <a href="" class="subtopic">Tworzenie wykresów</a>
                     <a href="" class="subtopic">Obrazowanie zależności funkcyjnych</a>
-                    <a href="" class="subtopic">Funkcje bazodanowe</a>                
+                    <a href="" class="subtopic">Funkcje bazodanowe</a>
                 </Chapter>
 
 
@@ -55,7 +57,7 @@ export default function () {
         </div>
 
         <div class="main">
-            <div class="title" style={{backgroundColor: '#86c16d78'}}>
+            <div class="title" style={{ backgroundColor: '#86c16d78' }}>
                 <a>EXCEL</a>
             </div>
             <article class="second">

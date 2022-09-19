@@ -29,6 +29,8 @@ export default function () {
 
             <div class="cont">
 
+                <div class="topic"><a>0. Wskazówki</a></div>
+                
                 <Chapter title="1. Podstawowe konstrukcje">
                     <a href="" class="subtopic">Pętle</a>
                     <a href="" class="subtopic">Warunki</a>
@@ -79,7 +81,7 @@ export default function () {
                 <Chapter title="8. Algorytmy">
                     <a href="" class="subtopic">Tekstowe</a>
                     <a href="" class="subtopic">Palindromy</a>
-                    <a href="" class="subtopic">Wyszukiwanie wzorca w tekście</a>                    
+                    <a href="" class="subtopic">Wyszukiwanie wzorca w tekście</a>
                 </Chapter>
 
                 <Chapter title="8. Algorytmy szyfrowania">
