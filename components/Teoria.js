@@ -3,7 +3,7 @@ import * as React from 'react';
 import hljs from 'highlight.js';
 import '../node_modules/highlight.js/styles/dark.css';
 
-import {Chapter} from "./functions.js";
+import { Chapter } from "./functions.js";
 
 import Ch00s00 from '../lessons/teoria/wskazowki.mdx';
 import Ch01s01 from '../lessons/teoria/komputer-i-jego-czesci.mdx';
@@ -17,7 +17,7 @@ function Contents(props) {
     const contents = contentsFor[[props.chapter, props.subchapter]];
     React.useEffect(() => { hljs.highlightAll(); }, [contents]); //śmieszna funkcja do skanownaia stronki i kolorowania kodu
     return <article className="second">{contents}</article>;
-}    
+}
 
 export default function () {
     const [chapter, setChapter] = React.useState(0);
@@ -32,6 +32,9 @@ export default function () {
 
     return <main>
         <div className="contents">
+            <div className="title ft">
+                <a>TEORIA</a>
+            </div>
             <div className="cont-title">
                 <a>SPIS TREŚCI</a>
             </div>
