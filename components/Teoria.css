@@ -1,3 +1,5 @@
+
+
 .title {
     border-radius: 50px;
     background-color: #c1a26d6e;
@@ -132,9 +134,10 @@ main .main {
 
 
 main article {
-    font-family: 'IBM Plex Serif', serif;
-    font-size: 16px;
-    font-weight: 400;
+    /* font-family: 'IBM Plex Serif', serif; */
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
     background-color: #f4e8db;
     padding: 20px 30px;
     margin-bottom: 2vw;
@@ -181,12 +184,12 @@ article .info{
 
 main article pre {
     margin: 10px 0;
+    white-space: pre-line;
 }
 
 .ft{
     display: none;
 }
-
 
 @media(max-width: 1400px) {
     main {

@@ -51,11 +51,15 @@ export default function () {
                     <a href="#" className="subtopic" onClick={onclick(2, 1)}>System dwójkowy</a>
                     <a href="#" className="subtopic">System ósemkowy</a>
                     <a href="#" className="subtopic">System szesnastkowy</a>
-                    <a href="#" className="subtopic">Konwersja liczb pomiędzy systemami</a>
-                    <a href="#" className="subtopic">Schemat Hornera</a>
                 </Chapter>
 
-                <Chapter title="3. Sieci komputerowe">
+                <Chapter title="3. Konwersja liczb">
+                    <a href="#" className="subtopic">Dwójkowy - Ósemkowy</a>
+                    <a href="#" className="subtopic">Dwójkowy - Szesnastkowy</a>
+                    <a href="#" className="subtopic">Ósemkowy - Szesnastkowy</a>
+                </Chapter>
+
+                <Chapter title="4. Sieci komputerowe">
                     <a href="#" className="subtopic">Terminologia</a>
                     <a href="#" className="subtopic">Topologia sieci</a>
                     <a href="#" className="subtopic">Protokół IP</a>
@@ -70,21 +74,22 @@ export default function () {
                     <a href="#" className="subtopic">Podstawowe formaty plików graficznych</a>
                 </Chapter>
 
-                <Chapter title="5. Bezpieczeństwo">
+                <Chapter title="5. Zagadnienia prawne">
                     <a href="#" className="subtopic">Zagadnienia przestępczości komputerowej</a>
                     <a href="#" className="subtopic">Licencje</a>
                     <a href="#" className="subtopic">Normy prawe</a>
                 </Chapter>
 
-                <Chapter title="6. Złożoność">
+                <Chapter title="6. Pseudokod">
+                <a href="#" className="subtopic">Schematy blokowe</a>
+                <a href="#" className="subtopic">Lista kroków</a>
+                    <a href="#" className="subtopic">Za pomocą Python</a>
+                </Chapter>
+
+                <Chapter title="7. Złożoność">
                     <a href="#" className="subtopic">Złożoność obliczeniowa</a>
                     <a href="#" className="subtopic">Złożoność pamięciowa</a>
                     <a href="#" className="subtopic">Własnośći algorytmów</a>
-                </Chapter>
-
-                <Chapter title="7. Pseudokod">
-                    <a href="#" className="subtopic">Lista kroków</a>
-                    <a href="#" className="subtopic">Za pomocą C++</a>
                 </Chapter>
 
                 <Chapter title="8. Błędy">
@@ -92,8 +97,8 @@ export default function () {
                     <a href="#" className="subtopic">Błąd względny i bezwzględny</a>
                 </Chapter>
 
-                <Chapter title="9. ONP">
-                    <a href="#" className="subtopic">Odwrotna notacja polska</a>
+                <Chapter title="9. Algorytmy">
+                <a href="#" className="subtopic">Odwrotna notacja polska</a>
 
                 </Chapter>
 

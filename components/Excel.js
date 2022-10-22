@@ -37,11 +37,13 @@ export default function () {
 
                 <Chapter title="2. Formuły">
                     <a href="" class="subtopic">Formuły wbudowane</a>
-                    <a href="" class="subtopic">Budowa złożonych formuł</a>
-                    <a href="" class="subtopic">Wykorzystywanie formuł warunkowych</a>
+                    <a href="" class="subtopic">Formuły warunkowych</a>
+                    <a href="" class="subtopic">Formuły zaawansowane</a>
+                    <a href="" class="subtopic">Tabel i wykresy przestawne</a>
+                    <a href="" class="subtopic">Wszykuja pionowo/poziomo</a>
                 </Chapter>
 
-                <Chapter title="3. -">
+                <Chapter title="3. Zadania ">
                     <a href="" class="subtopic">Przetwarzanie i analiza danych</a>
                     <a href="" class="subtopic">Odpowiadanie na zapytania</a>
                     <a href="" class="subtopic">Tworzenie symulacji</a>
