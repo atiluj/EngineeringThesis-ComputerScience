@@ -166,37 +166,29 @@ main article {
     padding-bottom: 30px;
 }
 
-.odd{
-    margin: 3vw 0 40px 10vw;
+.author{
     background-color: #c48538;
-    height: 12vw;
     border-radius: 45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
 }
 
-img{
-    width: 18vw;
-    height: 18vw;
+.author:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.photo img{
+    width: 10vw;
+    height: 10vw;
     border-radius: 90%;
+    transform: scale(1.25);
 }
 
-.photoOdd {
-    float: left;
-    margin-top: -3vw;
-    margin-left: -10vw;
-    width: 18vw;
-    height: 18vw;
-    background-color: #2F4858;
-    border-radius: 90%;
-}
-
-.introductionOdd {
-    margin: 0;
-    float: right;
-    padding: 20px 20px 20px 5px;
-    /* background-color: #fff; */
-    width: 62vw;
+.introduction{
+    padding: 0 2.5vw;
     text-align: justify;
-
 }
 
 @media (max-width: 1200px) {

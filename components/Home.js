@@ -75,30 +75,19 @@ export default function () {
 
         <div className="authors">
             <div className="authorsTitle"><p>AUTORZY STRONY</p></div>
-            <div className="odd">
-                <div className="photoOdd"><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita"/></div>
-                <p className="introductionOdd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
+            <div className="author">
+                <div className="photo"><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita"/></div>
+                <p className="introduction">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
                 </p>
             </div>
-            {/* <img src="img/julita.jpg"/>
-            <div className="even">
-                <div className="introductionEven"></div>
-                <div className="photoOdd"></div>
 
+            <div className="author">
+            <div className="photo"><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita"/></div>
+                <p className="introduction">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
+                </p>
             </div>
-            <div className="odd">
-                <div className="photoOdd"></div>
-                <div className="introductionOdd"></div>
-            </div>
-            <div className="even">
-                <div className="introductionEven"></div>
-                <div className="photoOdd"></div>
-            </div>
-            <div className="odd">
-                <div className="photoOdd"></div>
-                <div className="introductionOdd"></div>
-            </div>  */}
         </div>
     </>;
 }
