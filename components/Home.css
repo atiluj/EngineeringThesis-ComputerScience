@@ -164,6 +164,7 @@ main article {
     color: #c48538;
     text-align: center;
     padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .author{
@@ -172,7 +173,7 @@ main article {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .author:nth-child(odd) {
@@ -180,14 +181,14 @@ main article {
 }
 
 .photo img{
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
     border-radius: 90%;
     transform: scale(1.25);
 }
 
 .introduction{
-    padding: 0 2.5vw;
+    padding: 0 2.5vw 0 3vw;
     text-align: justify;
 }
 
