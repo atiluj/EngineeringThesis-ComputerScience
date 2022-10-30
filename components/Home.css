@@ -175,6 +175,20 @@ main article {
     justify-content: center;
     margin-bottom: 80px;
 }
+.author div:nth-child(2){
+    padding: 0 2.5vw 0 3vw;
+}
+
+.authorName{
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: right;
+}
+
+.author:nth-child(odd) .authorName{
+    text-align: left;
+}
 
 .author:nth-child(odd) {
     flex-direction: row-reverse;
@@ -188,7 +202,6 @@ main article {
 }
 
 .introduction{
-    padding: 0 2.5vw 0 3vw;
     text-align: justify;
 }
 

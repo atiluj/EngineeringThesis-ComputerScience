@@ -2,21 +2,37 @@ import './Teoria.css';
 import * as React from 'react';
 import hljs from 'highlight.js';
 import '../node_modules/highlight.js/styles/dark.css';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import Collapse from '@mui/material/Collapse';
 
-import { Chapter } from "./functions.js";
+import Lessons from '../lessons/teoria/config.jsx';
 
-import Ch00s00 from '../lessons/teoria/wskazowki.mdx';
-import Ch01s01 from '../lessons/teoria/komputer-i-jego-czesci.mdx';
-
-let contentsFor = {};
-contentsFor[[0, 0]] = <Ch00s00 />;
-contentsFor[[1, 1]] = <Ch01s01 />;
-contentsFor[[1, 2]] = null;
+export function Chapter(props) {
+    const [show, setShow] = React.useState(false); //domyślnie schowane
+    return <div>
+        <div className="topic" onClick={() => setShow(show => !show)}>
+            <a>{props.title}</a>
+            <div style={{ visibility: props.children ? "visible" : "hidden" }}>
+                {show ? <ExpandLess /> : <ExpandMore />}
+            </div>
+        </div>
+        <Collapse in={show}>
+            {props.children}
+        </Collapse>
+    </div>;
+}
 
 function Contents(props) {
-    const contents = contentsFor[[props.chapter, props.subchapter]];
-    React.useEffect(() => { hljs.highlightAll(); }, [contents]); //śmieszna funkcja do skanownaia stronki i kolorowania kodu
-    return <article className="second">{contents}</article>;
+    const chapter = Lessons[props.chapter];
+    const subchapter = chapter.subchapters ? chapter.subchapters[props.subchapter] : chapter;
+    React.useEffect(() => { hljs.highlightAll(); }, [subchapter.content]); //śmieszna funkcja do skanownaia stronki i kolorowania kodu
+    return <article className="second">
+        <h1>{subchapter.name}</h1>
+        {subchapter.content}
+    </article>;
 }
 
 export default function () {
@@ -30,6 +46,30 @@ export default function () {
         };
     }
 
+    const maxChapter = Lessons.length - 1;
+    const maxSubchapter = chapter => Lessons[chapter].subchapters ? Lessons[chapter].subchapters.length - 1 : 0;
+    const prevLessonExists = chapter > 0 || subchapter > 0;
+    const nextLessonExists = chapter != maxChapter || subchapter != maxSubchapter(chapter);
+
+    function prevLesson() {
+        if (subchapter == 0) {
+            const prevChapter = chapter - 1;
+            setChapter(prevChapter);
+            setSubchapter(Lessons[prevChapter].subchapters ? Lessons[prevChapter].subchapters.length - 1 : 0);
+        } else {
+            setSubchapter(subchapter - 1);
+        }
+    }
+
+    function nextLesson() {
+        if (!Lessons[chapter].subchapters || subchapter == Lessons[chapter].subchapters.length - 1) {
+            setChapter(chapter + 1);
+            setSubchapter(0);
+        } else {
+            setSubchapter(subchapter + 1);
+        }
+    }
+
     return <main>
         <div className="contents">
             <div className="title ft">
@@ -40,68 +80,17 @@ export default function () {
             </div>
 
             <div className="cont">
-                <Chapter title="0. Wskazówki" onClick={onclick(0, 0)}></Chapter>
-
-                <Chapter title="1. Komputer">
-                    <a href="#" className="subtopic" onClick={onclick(1, 1)}>Komputer i jego części</a>
-                    <a href="#" className="subtopic" onClick={onclick(1, 2)}>System operacyjny</a>
-                </Chapter>
-
-                <Chapter title="2. Systemy liczbowe">
-                    <a href="#" className="subtopic" onClick={onclick(2, 1)}>System dwójkowy</a>
-                    <a href="#" className="subtopic">System ósemkowy</a>
-                    <a href="#" className="subtopic">System szesnastkowy</a>
-                </Chapter>
-
-                <Chapter title="3. Konwersja liczb">
-                    <a href="#" className="subtopic">Dwójkowy - Ósemkowy</a>
-                    <a href="#" className="subtopic">Dwójkowy - Szesnastkowy</a>
-                    <a href="#" className="subtopic">Ósemkowy - Szesnastkowy</a>
-                </Chapter>
-
-                <Chapter title="4. Sieci komputerowe">
-                    <a href="#" className="subtopic">Terminologia</a>
-                    <a href="#" className="subtopic">Topologia sieci</a>
-                    <a href="#" className="subtopic">Protokół IP</a>
-                    <a href="#" className="subtopic">Adresy IP</a>
-                    <a href="#" className="subtopic">Maski podsieci</a>
-                    <a href="#" className="subtopic">Adresy sieci</a>
-                </Chapter>
-
-                <Chapter title="4. Grafika komputerowa">
-                    <a href="#" className="subtopic">Podstawowe modele barw</a>
-                    <a href="#" className="subtopic">Własnośći grafiki rastrowej i wektorowej</a>
-                    <a href="#" className="subtopic">Podstawowe formaty plików graficznych</a>
-                </Chapter>
-
-                <Chapter title="5. Zagadnienia prawne">
-                    <a href="#" className="subtopic">Zagadnienia przestępczości komputerowej</a>
-                    <a href="#" className="subtopic">Licencje</a>
-                    <a href="#" className="subtopic">Normy prawe</a>
-                </Chapter>
-
-                <Chapter title="6. Pseudokod">
-                <a href="#" className="subtopic">Schematy blokowe</a>
-                <a href="#" className="subtopic">Lista kroków</a>
-                    <a href="#" className="subtopic">Za pomocą Python</a>
-                </Chapter>
-
-                <Chapter title="7. Złożoność">
-                    <a href="#" className="subtopic">Złożoność obliczeniowa</a>
-                    <a href="#" className="subtopic">Złożoność pamięciowa</a>
-                    <a href="#" className="subtopic">Własnośći algorytmów</a>
-                </Chapter>
-
-                <Chapter title="8. Błędy">
-                    <a href="#" className="subtopic">Błędy numeryczne obliczeń</a>
-                    <a href="#" className="subtopic">Błąd względny i bezwzględny</a>
-                </Chapter>
-
-                <Chapter title="9. Algorytmy">
-                <a href="#" className="subtopic">Odwrotna notacja polska</a>
-
-                </Chapter>
-
+                {Lessons.map((chapter, chapterId) =>
+                    <Chapter key={chapterId}
+                        title={`${chapterId}. ${chapter.name}`}
+                        onClick={chapter.subchapters ? null : onclick(chapterId, 0)}>
+                        {chapter.subchapters ? chapter.subchapters.map((subchapter, subchapterId) =>
+                            <a key={`${chapterId}${subchapterId}`}
+                                href="#" className="subtopic"
+                                onClick={onclick(chapterId, subchapterId)}>{subchapter.name}</a>
+                        ) : null}
+                    </Chapter>
+                )}
             </div>
             {/* <!-- REKLAMA --> */}
         </div>
@@ -111,6 +100,13 @@ export default function () {
                 <a>TEORIA</a>
             </div>
             <Contents chapter={chapter} subchapter={subchapter} />
+            <div className='controls'>
+                <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div>
+                <div>
+                    <button onClick={prevLesson} style={{visibility: prevLessonExists ? "visible" : "hidden"}}><ArrowBackIosNewIcon /></button>
+                    <button onClick={nextLesson} style={{visibility: nextLessonExists ? "visible" : "hidden"}}><ArrowForwardIosIcon /></button>
+                </div>
+            </div>
         </div>
     </main>;
 }
