@@ -8,8 +8,6 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
 
-import Lessons from '../lessons/teoria/config.jsx';
-
 const NavContext = React.createContext({
     curChapter: 0,
     curSubchapter: 0,
@@ -63,9 +61,9 @@ function Chapter({ chapter, chapterId }) {
     );
 }
 
-function Contents() {
+function Contents({lessons}) {
     const { curChapter, curSubchapter } = React.useContext(NavContext);
-    const chapter = Lessons[curChapter];
+    const chapter = lessons[curChapter];
     const subchapter = chapter.subchapters ? chapter.subchapters[curSubchapter] : chapter;
     let title = `${curChapter}.`;
     if (chapter.subchapters)
@@ -78,7 +76,7 @@ function Contents() {
     </article>;
 }
 
-export default function () {
+export default function ({lessons}) {
     const [curChapter, setCurChapter] = React.useState(0);
     const [curSubchapter, setCurSubchapter] = React.useState(0);
     function changeChapter(ch, subch) {
@@ -87,8 +85,8 @@ export default function () {
         window.location.hash = `${ch}.${subch + 1}`;
     }
 
-    const maxChapter = Lessons.length - 1;
-    const maxSubchapter = chapter => Lessons[chapter].subchapters ? Lessons[chapter].subchapters.length - 1 : 0;
+    const maxChapter = lessons.length - 1;
+    const maxSubchapter = chapter => lessons[chapter].subchapters ? lessons[chapter].subchapters.length - 1 : 0;
     const prevLessonExists = curChapter > 0 || curSubchapter > 0;
     const nextLessonExists = curChapter != maxChapter || curSubchapter != maxSubchapter(curChapter);
 
@@ -135,7 +133,7 @@ export default function () {
                 </div>
 
                 <div className="cont">
-                    {Lessons.map((chapter, chapterId) =>
+                    {lessons.map((chapter, chapterId) =>
                         <Chapter key={chapterId}
                             chapter={chapter}
                             chapterId={chapterId} />
@@ -147,7 +145,7 @@ export default function () {
                 <div className="title">
                     <a>TEORIA</a>
                 </div>
-                <Contents />
+                <Contents lessons={lessons} />
                 <div className='controls'>
                     <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div>
                     <div>
