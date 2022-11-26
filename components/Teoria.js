@@ -10,19 +10,38 @@ import Collapse from '@mui/material/Collapse';
 
 import Lessons from '../lessons/teoria/config.jsx';
 
-export function Chapter(props) {
+function ChapterWithSubchapters({ chapter, chapterId, changeChapter }) {
     const [show, setShow] = React.useState(false); //domyślnie schowane
     return <div>
         <div className="topic" onClick={() => setShow(show => !show)}>
-            <a>{props.title}</a>
-            <div style={{ visibility: props.children ? "visible" : "hidden" }}>
-                {show ? <ExpandLess /> : <ExpandMore />}
-            </div>
+            <a>{chapterId}. {chapter.name}</a>
+            <div>{show ? <ExpandLess /> : <ExpandMore />}</div>
         </div>
         <Collapse in={show}>
-            {props.children}
+            {chapter.subchapters.map((subchapter, subchapterId) =>
+                <a key={subchapterId}
+                    href="#" className="subtopic"
+                    onClick={changeChapter(chapterId, subchapterId)}>{subchapter.name}</a>
+            )}
         </Collapse>
     </div>;
+}
+
+function ChapterStandalone({ chapter, chapterId, changeChapter }) {
+    return <div onClick={changeChapter(chapterId, 0)}>
+        <div className="topic">
+            <a>{chapterId}. {chapter.name}</a>
+            <div style={{ visibility: "hidden" }}><ExpandMore /></div>
+        </div>
+    </div>;
+}
+
+function Chapter({ chapter, chapterId, changeChapter }) {
+    return (
+        chapter.subchapters ?
+            <ChapterWithSubchapters chapter={chapter} chapterId={chapterId} changeChapter={changeChapter} /> :
+            <ChapterStandalone chapter={chapter} chapterId={chapterId} changeChapter={changeChapter} />
+    );
 }
 
 function Contents(props) {
@@ -30,7 +49,10 @@ function Contents(props) {
     const subchapter = chapter.subchapters ? chapter.subchapters[props.subchapter] : chapter;
     React.useEffect(() => { hljs.highlightAll(); }, [subchapter.content]); //śmieszna funkcja do skanownaia stronki i kolorowania kodu
     return <article className="second">
-        <h1>{subchapter.name}</h1>
+        <h1>
+            {props.chapter}.{chapter.subchapters ? `${props.subchapter + 1}.` : null}
+            {subchapter.name}
+        </h1>
         {subchapter.content}
     </article>;
 }
@@ -39,7 +61,7 @@ export default function () {
     const [chapter, setChapter] = React.useState(0);
     const [subchapter, setSubchapter] = React.useState(0);
 
-    function onclick(ch, subch) {
+    function changeChapter(ch, subch) {
         return () => {
             setChapter(ch);
             setSubchapter(subch);
@@ -82,14 +104,9 @@ export default function () {
             <div className="cont">
                 {Lessons.map((chapter, chapterId) =>
                     <Chapter key={chapterId}
-                        title={`${chapterId}. ${chapter.name}`}
-                        onClick={chapter.subchapters ? null : onclick(chapterId, 0)}>
-                        {chapter.subchapters ? chapter.subchapters.map((subchapter, subchapterId) =>
-                            <a key={`${chapterId}${subchapterId}`}
-                                href="#" className="subtopic"
-                                onClick={onclick(chapterId, subchapterId)}>{subchapter.name}</a>
-                        ) : null}
-                    </Chapter>
+                        chapter={chapter}
+                        chapterId={chapterId}
+                        changeChapter={changeChapter} />
                 )}
             </div>
             {/* <!-- REKLAMA --> */}
@@ -103,8 +120,8 @@ export default function () {
             <div className='controls'>
                 <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div>
                 <div>
-                    <button onClick={prevLesson} style={{visibility: prevLessonExists ? "visible" : "hidden"}}><ArrowBackIosNewIcon /></button>
-                    <button onClick={nextLesson} style={{visibility: nextLessonExists ? "visible" : "hidden"}}><ArrowForwardIosIcon /></button>
+                    <button onClick={prevLesson} style={{ visibility: prevLessonExists ? "visible" : "hidden" }}><ArrowBackIosNewIcon /></button>
+                    <button onClick={nextLesson} style={{ visibility: nextLessonExists ? "visible" : "hidden" }}><ArrowForwardIosIcon /></button>
                 </div>
             </div>
         </div>
