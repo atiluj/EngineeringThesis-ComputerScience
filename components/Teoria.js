@@ -10,8 +10,15 @@ import Collapse from '@mui/material/Collapse';
 
 import Lessons from '../lessons/teoria/config.jsx';
 
-function ChapterWithSubchapters({ chapter, chapterId, changeChapter }) {
+const NavContext = React.createContext({
+    curChapter: 0,
+    curSubchapter: 0,
+    changeChapter: (chapter, subchapter) => () => {},
+});
+
+function ChapterWithSubchapters({ chapter, chapterId }) {
     const [show, setShow] = React.useState(false); //domyślnie schowane
+    const {changeChapter} = React.useContext(NavContext);
     return <div>
         <div className="topic" onClick={() => setShow(show => !show)}>
             <a>{chapterId}. {chapter.name}</a>
@@ -27,7 +34,8 @@ function ChapterWithSubchapters({ chapter, chapterId, changeChapter }) {
     </div>;
 }
 
-function ChapterStandalone({ chapter, chapterId, changeChapter }) {
+function ChapterStandalone({ chapter, chapterId }) {
+    const {changeChapter} = React.useContext(NavContext);
     return <div onClick={changeChapter(chapterId, 0)}>
         <div className="topic">
             <a>{chapterId}. {chapter.name}</a>
@@ -36,63 +44,65 @@ function ChapterStandalone({ chapter, chapterId, changeChapter }) {
     </div>;
 }
 
-function Chapter({ chapter, chapterId, changeChapter }) {
+function Chapter({ chapter, chapterId }) {
     return (
         chapter.subchapters ?
-            <ChapterWithSubchapters chapter={chapter} chapterId={chapterId} changeChapter={changeChapter} /> :
-            <ChapterStandalone chapter={chapter} chapterId={chapterId} changeChapter={changeChapter} />
+            <ChapterWithSubchapters chapter={chapter} chapterId={chapterId} /> :
+            <ChapterStandalone chapter={chapter} chapterId={chapterId} />
     );
 }
 
-function Contents(props) {
-    const chapter = Lessons[props.chapter];
-    const subchapter = chapter.subchapters ? chapter.subchapters[props.subchapter] : chapter;
+function Contents() {
+    const {curChapter, curSubchapter} = React.useContext(NavContext);
+    const chapter = Lessons[curChapter];
+    const subchapter = chapter.subchapters ? chapter.subchapters[curSubchapter] : chapter;
+    let title = `${curChapter}.`;
+    if (chapter.subchapters)
+        title += `${curSubchapter + 1}.`;
+    title += ` ${subchapter.name}`;
     React.useEffect(() => { hljs.highlightAll(); }, [subchapter.content]); //śmieszna funkcja do skanownaia stronki i kolorowania kodu
     return <article className="second">
-        <h1>
-            {props.chapter}.{chapter.subchapters ? `${props.subchapter + 1}.` : null}
-            {subchapter.name}
-        </h1>
+        <h1>{title}</h1>
         {subchapter.content}
     </article>;
 }
 
 export default function () {
-    const [chapter, setChapter] = React.useState(0);
-    const [subchapter, setSubchapter] = React.useState(0);
-
+    const [curChapter, setCurChapter] = React.useState(0);
+    const [curSubchapter, setCurSubchapter] = React.useState(0);
     function changeChapter(ch, subch) {
         return () => {
-            setChapter(ch);
-            setSubchapter(subch);
+            setCurChapter(ch);
+            setCurSubchapter(subch);
         };
     }
 
     const maxChapter = Lessons.length - 1;
     const maxSubchapter = chapter => Lessons[chapter].subchapters ? Lessons[chapter].subchapters.length - 1 : 0;
-    const prevLessonExists = chapter > 0 || subchapter > 0;
-    const nextLessonExists = chapter != maxChapter || subchapter != maxSubchapter(chapter);
+    const prevLessonExists = curChapter > 0 || curSubchapter > 0;
+    const nextLessonExists = curChapter != maxChapter || curSubchapter != maxSubchapter(curChapter);
 
     function prevLesson() {
-        if (subchapter == 0) {
-            const prevChapter = chapter - 1;
-            setChapter(prevChapter);
-            setSubchapter(Lessons[prevChapter].subchapters ? Lessons[prevChapter].subchapters.length - 1 : 0);
+        if (curSubchapter == 0) {
+            const prevChapter = curChapter - 1;
+            setCurChapter(prevChapter);
+            setCurSubchapter(Lessons[prevChapter].subchapters ? Lessons[prevChapter].subchapters.length - 1 : 0);
         } else {
-            setSubchapter(subchapter - 1);
+            setCurSubchapter(curSubchapter - 1);
         }
     }
 
     function nextLesson() {
-        if (!Lessons[chapter].subchapters || subchapter == Lessons[chapter].subchapters.length - 1) {
-            setChapter(chapter + 1);
-            setSubchapter(0);
+        if (!Lessons[curChapter].subchapters || curSubchapter == Lessons[curChapter].subchapters.length - 1) {
+            setCurChapter(curChapter + 1);
+            setCurSubchapter(0);
         } else {
-            setSubchapter(subchapter + 1);
+            setCurSubchapter(curSubchapter + 1);
         }
     }
 
-    return <main>
+    return <NavContext.Provider value={{curChapter, curSubchapter, changeChapter}}>
+        <main>
         <div className="contents">
             <div className="title ft">
                 <a>TEORIA</a>
@@ -105,18 +115,16 @@ export default function () {
                 {Lessons.map((chapter, chapterId) =>
                     <Chapter key={chapterId}
                         chapter={chapter}
-                        chapterId={chapterId}
-                        changeChapter={changeChapter} />
+                        chapterId={chapterId} />
                 )}
             </div>
-            {/* <!-- REKLAMA --> */}
         </div>
 
         <div className="main">
             <div className="title">
                 <a>TEORIA</a>
             </div>
-            <Contents chapter={chapter} subchapter={subchapter} />
+            <Contents />
             <div className='controls'>
                 <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div>
                 <div>
@@ -125,5 +133,6 @@ export default function () {
                 </div>
             </div>
         </div>
-    </main>;
+    </main>
+    </NavContext.Provider>;
 }
