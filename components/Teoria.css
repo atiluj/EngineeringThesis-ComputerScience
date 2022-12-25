@@ -12,6 +12,7 @@
     font-weight: 900;
     color: #322e2b;
     /* margin-top: 10px; */
+    text-transform: uppercase;
 }
 
 .cont-title {
@@ -98,7 +99,8 @@ main .contents .cont .subtopic {
 }
 
 main .contents .cont .subtopic-current {
-    background-color: #c1a26d6e;
+    /* background-color: #c1a26d6e; */
+    background-color: #174f3063;
 }
 
 main .contents .cont .subtopic:hover {

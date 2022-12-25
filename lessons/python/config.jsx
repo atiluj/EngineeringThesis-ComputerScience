@@ -1,63 +1,61 @@
+import Wskazowki from './wskazowki.mdx';
+
 export default [
-    {name: "Wskazówki", content: null},
+    {name: "Wskazówki", content: <Wskazowki />},
+
+    {name: "Podstawowe konstrukcje", subchapters: [
+        {name: "Instrukcje wejścia i wyjścia", content: null},
+        {name: "Warunki", content: null},
+        {name: "Pętle", content: null},
+        {name: "Operacje na plikach", content: null},
+        {name: "Funkcje", content: null},
+    ]},
+
+    {name: "Struktury danych", subchapters: [
+        {name: "Lista", content: null},
+        {name: "Lista dwuwymiarowa", content: null},
+    ]},
+
+    {name: "Rekurencja", subchapters: [
+        {name: "Podejście zachłanne", content: null},
+        {name: `Metoda "dziel i zwyciężaj"`, content: null},
+    ]},
+
+    {name: "Liczby", subchapters: [
+        {name: "Liczby pierwsze i doskonałe", content: null},
+        {name: "Rozkładanie liczby na czynniki pierwsze", content: null},
+        {name: "NWD i NWW", content: null},
+        {name: "Liczby Fibonacciego", content: null},
+    ]},
+
+    {name: "Proste algorytmy", subchapters: [
+
+    ]},
+
+    {name: "Algorytmy sortowania", subchapters: [
+        {name: "Bąbelkowy", content: null},
+        {name: "Po przez wybór", content: null},
+        {name: "Przez wstawianie", content: null},
+        {name: "Przez scalanie", content: null},
+        {name: "Szybkie", content: null},
+        {name: "Kubełkowe", content: null},
+    ]},
+
+    {name: "Algorytmy numeryczne", subchapters: [
+        {name: "Obliczanie wartości pierwiastka kwadratowego", content: null},
+        {name: "Wyznaczanie miejsc zerowych funkcji", content: null},
+        {name: "Obliczanie pola obszarów zamkniętych", content: null},
+    ]},
+
+    {name: "Inne algorytmy", subchapters: [
+        {name: "Tekstowe", content: null},
+        {name: "Palindromy", content: null},
+        {name: "Wyszukiwanie wzorca w tekście", content: null},
+        {name: "Schemat Horenera", content: null},
+    ]},
+
+    {name: "Algorytmy szyfrowania", subchapters: [
+        {name: "Szyfr Cezara", content: null},
+        {name: "Przestawieniowy", content: null},
+    ]},
 ];
-
-// {/* <div class="topic"><a>0. Wskazówki</a></div>
-
-//                 <Chapter title="1. Podstawowe konstrukcje">
-//                     <a href="" class="subtopic">Instrukcje wejścia i wyjścia</a>
-//                     <a href="" class="subtopic">Warunki</a>
-//                     <a href="" class="subtopic">Pętle</a>
-//                     <a href="" class="subtopic">Operacje na plikach</a>
-
-//                     <a href="" class="subtopic">Funkcje</a>
-//                 </Chapter>
-
-//                 <Chapter title="2. Struktury danych">
-//                 <a href="" class="subtopic">Lista</a>
-//                 <a href="" class="subtopic">Lista dwuwymiarowa</a>
-
-//                 </Chapter>
-
-//                 <Chapter title="3. Rekurencja">
-//                     <a href="" class="subtopic">Podejście zachłanne</a>
-//                     <a href="" class="subtopic">Metoda "dziel i zwyciężaj</a>
-//                 </Chapter>
-
-//                 <Chapter title="4. Liczby">
-//                     <a href="" class="subtopic">Liczby pierwsze i doskonałe</a>
-//                     <a href="" class="subtopic">Rozkładanie liczby na czynniki pierwsze</a>
-//                     <a href="" class="subtopic">NWD i NWW</a>
-//                     <a href="" class="subtopic">Liczby Fibonacciego</a>
-//                 </Chapter>
-
-//                 <Chapter title="4. Proste algorytmy">
-
-//                 </Chapter>
-
-//                 <Chapter title="5. Algorytmy sortowania">
-//                     <a href="" class="subtopic">Bąbelkowy</a>
-//                     <a href="" class="subtopic">Po przez wybór</a>
-//                     <a href="" class="subtopic">Przez wstawianie</a>
-//                     <a href="" class="subtopic">Przez scalanie</a>
-//                     <a href="" class="subtopic">Szybkie</a>
-//                     <a href="" class="subtopic">Kubełkowe</a>
-//                 </Chapter>
-
-//                 <Chapter title="6. Algorytmy numeryczne">
-//                     <a href="" class="subtopic">obliczanie wartości pierwiastka kwadratowego</a>
-//                     <a href="" class="subtopic">wyznaczanie miejsc zerowych funkcji</a>
-//                     <a href="" class="subtopic">obliczanie pola obszarów zamkniętych</a>
-//                 </Chapter>
-
-//                 <Chapter title="7. Inne algorytmy">
-//                     <a href="" class="subtopic">Tekstowe</a>
-//                     <a href="" class="subtopic">Palindromy</a>
-//                     <a href="" class="subtopic">Wyszukiwanie wzorca w tekście</a>
-//                     <a href="" class="subtopic">Schemat Horenera</a>
-//                 </Chapter>
-
-//                 <Chapter title="8. Algorytmy szyfrowania">
-//                     <a href="" class="subtopic">Szyfr Cezara</a>
-//                     <a href="" class="subtopic">Przestawieniowy</a>
-//                 </Chapter> */}

@@ -1,11 +1,11 @@
-import Ch00s00 from './wskazowki.mdx';
-import Ch01s01 from './komputer-i-jego-czesci.mdx';
+import Wskazowki from './wskazowki.mdx';
+import KomputerIJegoCzesci from './komputer-i-jego-czesci.mdx';
 
 export default [
-    {name: "Wskazówki", content: <Ch00s00 />},
+    {name: "Wskazówki", content: <Wskazowki />},
 
     {name: "Komputer", subchapters: [
-        {name: "Komputer i jego części", content: <Ch01s01 />},
+        {name: "Komputer i jego części", content: <KomputerIJegoCzesci />},
         {name: "System operacyjny", content: null},
     ]},
 

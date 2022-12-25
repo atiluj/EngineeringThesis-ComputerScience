@@ -76,7 +76,7 @@ function Contents({lessons}) {
     </article>;
 }
 
-export default function ({lessons}) {
+export default function ({lessons, title}) {
     const [curChapter, setCurChapter] = React.useState(0);
     const [curSubchapter, setCurSubchapter] = React.useState(0);
     function changeChapter(ch, subch) {
@@ -126,7 +126,7 @@ export default function ({lessons}) {
         <main>
             <div className="contents">
                 <div className="title ft">
-                    <a>TEORIA</a>
+                    <a>{title}</a>
                 </div>
                 <div className="cont-title">
                     <a>SPIS TREŚCI</a>
@@ -143,7 +143,7 @@ export default function ({lessons}) {
 
             <div className="main">
                 <div className="title">
-                    <a>TEORIA</a>
+                    <a>{title}</a>
                 </div>
                 <Contents lessons={lessons} />
                 <div className='controls'>
