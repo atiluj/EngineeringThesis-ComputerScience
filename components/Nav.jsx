@@ -73,7 +73,7 @@ export default function() {
         </ul>
         <ul className="ul2">
             <li>
-                <a href="#" style={aStyle}>LOGOWANIE</a>
+                <a href="#" style={aStyle}>Interpreter python</a>
             </li>
         </ul>
     </nav>;
