@@ -1,0 +1,28 @@
+# Tworzenie kwerend wykorzystujących kilka tabel
+Dalej będziemy bazować na naszym przykładzie, tym razem rozwiążemy podpunkt 2. 
+:::info
+![](https://i.imgur.com/5LHeQWa.png)
+:::
+Potzrbyjemy więc informacji o sekcji, w jakiej znajduje się komputer oraz o ilości napraw polegających na wymianie jakiegoś podzespołu.
+Zajrzyjmy więc ponownie do treści zadania, widzimy, że informacja o `Sekcji` znajduje się w tabeli `Komputery`.
+:::info
+![](https://i.imgur.com/qSbCtJf.png)
+:::
+Natomiast informację o tym, czy wymagana była naprawa jakiegoś podzespołu możemy wyczytać z kolumny `Rodzaj` w tabeli `Naprawy`
+:::info
+![](https://i.imgur.com/3ip6hpW.png)
+:::
+Tworzymy więc nowy projekt kwerendy i wybieramy table `Komputery` oraz `Naprawy`.
+![](https://i.imgur.com/bPKlIiJ.png)
+Zauważmy jednak, że teraz nasze tabele nie są w żaden sposób połączone. Powinien to być dla nas sygnał, że potzrebujemy jeszcze jakiejś tabeli, która pozwoloi nam na zidentyfikwoanie, który z komputerów wymagał danej naprawy. Jest to tabela `Awarie`. Dodajmy ją więc do naszego projektu.
+![](https://i.imgur.com/cWPtOV7.png)
+Mamy już wszystkie potrzebne nam dane. Czas zastanowić się, których pól będziemy potzrebować oraz w jaki sposób chcemy skonstruować nasze zapytanie.
+![](https://i.imgur.com/GvD4VNL.png)
+Mamy już wszystkie naprawy komputerów z sekcji "A", które polegały na wymianie podzespołów.
+![](https://i.imgur.com/kkGJC99.png)
+Wynik jednak nie jest jeszcze do końca odpowiedzią na pytanie z zadania. Chcemy mieć bowiem tylko te komputery, które wymagały conajmniej 10 takich napraw. Przydatna okaże się znów funkcjia "Sumy". Potrzebna nam będzie kolumna, na podstawie której będziemy mogli policzyć liczbę napraw. Idealna jest do tego celu kolumna `Identyfikator` będąca kluczem głównym tabeli `Nsprawy`.
+![](https://i.imgur.com/q90aBSj.png)
+W funkcji sumy dla `Numer_komputera` wybieramy opcję "Grupuj według", ponieważ chcemy policzyć ile napraw było dla danego komputera, a więc zgrupować naprawy według dla danego komputera. `Sekcja` oraz `Rodzaj` są nam tutaj potrzebne jedynie dla przefiltrowania danych, tak aby brać pod uwagę jedynie te rekordy, które spełniają kryteria zadania. W ziązku z tym wybieramy opcę sumy "Gdzie". Tak jak mówiliśmy zliczać naprawy będziemy, za pomoca liczenia `Identyfikatorów` napraw, stąd funkcja sumy dla tej kolumny to oczywiście "Policz". Dodajemy dodatkowe kryterium >=10, ponieważ z treści zadania interesują nas jedynie te komputery, które wymagały conajmniej 10 wymian podzespołów.
+Uwaga, to bardzo istotne, aby dokładnie stawiać znaki nierówności. Tutaj chcemy mieć conajmniej 10, a więc >=10.
+
+
