@@ -1,0 +1,30 @@
+When trying to use the module with Parcel, the compilation fails:
+
+```
+@parcel/transformer-js: Web workers cannot have imports or exports without the `type: "module"` option.
+
+  proj/node_modules/react-py/dist/hooks/usePython.js:80:41
+    79 |     var createWorker = function () {
+  > 80 |         var worker = new Worker(new URL('../workers/python-worker', import.meta.url));
+  >    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^ The environment was originally created here
+    81 |         workerRef.current = worker;
+    82 |     };
+
+  💡 Add {type: 'module'} as a second argument to the Worker constructor.
+  📝 Learn more: https://parceljs.org/languages/javascript/#classic-scripts
+```
+
+This is triggered by this import in `worker.js`:
+
+```
+import { expose } from 'comlink';
+``
+
+Replacing this line with these 2 makes the error go away:
+
+```
+importScripts('https://cdn.jsdelivr.net/npm/comlink@4.3.1/dist/umd/comlink.min.js');
+const expose = Comlink.expose;
+```
+
+According to [this StackOverflow answer](https://stackoverflow.com/a/45578811), the `{type: 'module'}` will soon be accepted by all modern browsers as the second parameter to `new Worker()`. A (better?) alternative is to configure the builder to inline the `comlink` dependency.
