@@ -1,4 +1,5 @@
 import './Home.css';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function () {
     return <>
@@ -30,10 +31,11 @@ export default function () {
         <main>
             <div className="contents">
                 <div className="cont">
-                    <a className="a1" href="#first">DLA KOGO?</a>
-                    <a className="a2" href="#second">STATYSTYKI</a>
-                    <a className="a3" href="#third">CO ZAWIER KURS</a>
-                    <a className="a4" href="#fourth">INSTRUKCJA</a>
+                    <a href="#first">DLA KOGO?</a>
+                    <a href="#second">STATYSTYKI</a>
+                    <a href="#third">CO ZAWIER KURS</a>
+                    <a href="#fourth">INSTRUKCJA</a>
+                    <a href="#fifth">AUTORZY</a>
                 </div>
                 {/* TODO: REKLAMA */}
             </div>
@@ -109,13 +111,13 @@ export default function () {
 
         <div className = "separator"></div>
 
-        <div className="authors">
+        <div className="authors" id="fifth">
             <div className="authorsTitle"><p>AUTORZY STRONY</p></div>
 
             <div className="author">
                 <div className="photo"><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita" /></div>
                 <div>
-                    <p className="authorName">JULITA OSMAN</p>
+                    <p className="authorName">JULITA OSMAN<a href="https://www.linkedin.com/in/julita-osman-167530225/" target="_blank"><LinkedInIcon/></a></p>
                     <p className="introduction">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
                     </p>

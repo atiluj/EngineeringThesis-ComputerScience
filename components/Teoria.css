@@ -163,7 +163,7 @@ main article img {
     display: block;
     margin: 0 auto;
     padding: 10px 0;
-    max-width: 600px;
+    max-width: 90%;
     width: 100%;
 }
 
@@ -181,21 +181,23 @@ main article pre {
 
 .main .controls{
     display: flex;
-    justify-content: space-between;
+    justify-content: end; /*space-between*/
     margin: 0 30px;
 }
 
-.controls div:nth-child(1){
+/*to jest do OZNACZ JAKO PRZERIOBIENE*/
+/* .controls div:nth-child(1){
     font-family: 'Chakra Petch', sans-serif;
-}
+} */
 
-.controls div:nth-child(1) label{
+/* .controls div:nth-child(1) label{
     display: flex;
     align-items: self-start;
     cursor: pointer;
-}
+    display: none;
+} */
 
-.controls div:nth-child(1) input{
+/* .controls div:nth-child(1) input{
     height: 20px;
     width: 20px;
     border-radius: 90%;
@@ -205,8 +207,9 @@ main article pre {
     margin-right: 5px;
     transition: transform;
     transition-duration: 1s;
-}
+} */
 
+/* 
 .controls div:nth-child(1):hover input{
     background: yellow;
     cursor: pointer;
@@ -215,7 +218,7 @@ main article pre {
 .controls div:nth-child(1) input:checked{
     background: rgb(12, 242, 104);
 
-}
+} */
 
 .controls button{
     width: 30px;

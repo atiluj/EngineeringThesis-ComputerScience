@@ -2,8 +2,8 @@
   "name": "maturacz",
   "private": true,
   "scripts": {
-    "start": "parcel index.html teoria.html excel.html access.html python.html",
-    "build": "parcel build index.html teoria.html excel.html access.html python.html"
+    "start": "parcel *.html",
+    "build": "parcel build *.html"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",

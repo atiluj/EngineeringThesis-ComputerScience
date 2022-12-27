@@ -83,6 +83,7 @@ export default function ({lessons, title}) {
         setCurChapter(ch);
         setCurSubchapter(subch);
         window.location.hash = `${ch}.${subch + 1}`;
+        window.scrollTo({top:0, behavior:"smooth"});
     }
 
     const maxChapter = lessons.length - 1;
@@ -147,7 +148,7 @@ export default function ({lessons, title}) {
                 </div>
                 <Contents lessons={lessons} />
                 <div className='controls'>
-                    <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div>
+                    {/* <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div> */}
                     <div>
                         <button onClick={prevLesson} style={{ visibility: prevLessonExists ? "visible" : "hidden" }}><ArrowBackIosNewIcon /></button>
                         <button onClick={nextLesson} style={{ visibility: nextLessonExists ? "visible" : "hidden" }}><ArrowForwardIosIcon /></button>
