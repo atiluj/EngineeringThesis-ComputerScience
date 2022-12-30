@@ -1,0 +1,52 @@
+main {
+    background-color: #f0e9e0;
+    min-height: 100vh;
+    text-align: center;
+    padding: 60px 2.5vw;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+main .introduction{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: white;
+    border: solid #322e2b 2px;
+    border-radius: 10px;
+}
+
+main .exercises-title{
+    margin: 10px 0;
+    background-color: #322e2b55;
+    border: solid #322e2b 2px;
+    border-radius: 10px;
+}
+
+main .exercises-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+main .list-element{
+    padding: 7px;
+    margin: 2px;
+    background-color: #c7c3bfb7;
+    border: solid #322e2b 2px;
+    border-radius: 1px;
+    min-width: calc(11*1rem);
+}
+
+main .category{
+    padding: 7px;
+    margin: 0 40px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-top: solid #322e2b 3px ;
+}
+
+@media (max-width:810px) {
+    main {
+        padding: 0;
+    }
+}
