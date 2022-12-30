@@ -9,9 +9,11 @@ import ProsteKwerendy from './prosteKwerendy.mdx';
 import ZlozoneKwerendy from './zlozoneKwerendy.mdx';
 import Wyrazenia from './wyrazenia.mdx';
 import KwerendyPomocnicze from './kwerendyPomocnicze.mdx';
+import Dodatek from './dodatek.mdx';
 
 import Niedopasowane from './niedopasowane.mdx';
-import Duplikaty from './duplikaty.mdx'
+import Duplikaty from './duplikaty.mdx';
+import Krzyzowe from './krzyzowe.mdx';
 
 import Teoria from './teoria.mdx';
 import Sql from './sql.mdx';
@@ -35,11 +37,13 @@ export default [
         {name: "Konstruuowanie wyrażeń", content: <Wyrazenia/>},
         {name: "Kwerendy pomocnicze", content: <KwerendyPomocnicze/>},
         {name: "Tworzenie raportów", content: null},
+        {name: "Warto wiedzieć - przydatne funkcje", content: <Dodatek/>},
     ]},
 
     {name: "Zaawansowane funkcje", subchapters: [
         {name: "Wyszukiwanie danych po przez odwórcenie problemów + wyjątki", content: <Niedopasowane/>},
         {name: "Wyszukiwanie duplikatów", content: <Duplikaty/>},
+        {name: "Zestawienia - kwerendy krzyżowe", content: <Krzyzowe/>},
         {name: "Agregowanie danych", content: null},
         {name: "Kwerendy krzyżowe", content: null},
     ]},

@@ -1,138 +1,197 @@
-# SQL
+# SQL 
 
-## useful links
-* https://www.w3schools.com/sql/
+## Definicja SQL
+Zacznijmy od formalnego zdefiniowania czym jest język SQL? Czy jest to język programowania? 
+**Język SQL (structured query language)** to język zapytań. Umożliwia on dokonywanie operacji na bazach danych - pozwala na pobieranie i zapisywanie informacji oraz zarządzanie nimi. 
 
-
-## Basic knowledge about SQL
-SQL language (structured query language) allows you to perform operations on databases (DB).
-It allows us to get and put some information into DB and manage them.
-Clause in SQL is a command syntax element that modifies its operation.
-
-### 1. SQL division
+## Podział SQL (dodatkowe)
 * DML (data manipulation language)
-    * DELETE
-    * INSERT
-    * UPDATE
+    * DELETE (usuń)
+    * INSERT (wstaw)
+    * UPDATE (aktualizuj/zmień)
 * DDL (data definition language)
     * CREATE 
     * DROP
     * ALTER
 
-### 2. Syntax of SQL queries
 
-# UZUPEŁNIC
-    
-${}$
-**what** ---> table_name **.** column_name
-    
-### 3. AGGREGATE FUNCTIONS
-* COUNT (...)
-* SUM (...)
-* AVGC (...)
-* MIN (...)
-* MAX (...)
-    
-in brackets we write name of column from wich we want to count or sum or ... v
-w nawiasie podajemy nazwę kolumny
-    
-(uwaga: zapis * oznacza wszystko - wszystkie kolumny)
+## Dlaczego warto nauczyć się SQL-a?
+1. Na części teoretycznej matury z informatyki mogą pojawić się pytania wymagające jego znajomości i są to bardzo łatwe do zdobycia punkty (W dalszej części tej lekcji omówimy przykładowe zadania tego typu ***link***).
 
-### 4. DODATKOWE KLAUZULE 
-* ORDER BY ... DESC/ASC - results sorting:
-    * ASC - ascending (in fact >=)
-    * DESC - descending (in fact <=)
-* GROUP BY ... - it group values based on column that we choose.  It make one record, which represent all group for the records that have exactly the same values in some column (or colums) 
-    
-* DISTINCT - display/return each record only onece even of normaly it will apear few times
-                                    
-(note: we use GROUP BY and DISTINCT when we are using aggregation functions)
+2. Zrozumienie SQL pomoże Ci w udoskonaleniu twojej pracy z MS Access a także umożliwi poprawienie zapytań, które nie działają zgodnie z twoimi oczekiwaniami.
 
-Example: 
-We have a database "shopping" table (we assume that in that example client_name is the identificator - each client_name is uniqe)
+3. Relacyjne bazy danych są niezwykle popularne i wykorzystwane w wielu miejscach. Wszystkie bazuja na języku SQL (MS Access, MySQL, PostgreSQL, T-SQL).
 
-| client_name   | date       | value  |
-| ------------- | ---------- | ------ |
-| Ewa Brown     | 18/07/2022 | 20.67  |
-| Julia Roberts | 19/07/2022 | 17.90  |
-| Ewa Brown     | 18/07/2022 | 100.99 |
-                                    
-We write:
-**SELECT shopping.client_name
-FROM shopping**
-                                    
-to get the the information abuot our clients. What will be the answer to that query?
-| client_name | 
-| ----------- |
-| Ewa Brown |
-| Julia Roberts |
-| Ewa Brown |
-Is it ok?
-It depends. Probably we want that list without repet of any clients. We know that Ewa Brown is our client from first recort and it`s enough. So let`s eliminate repetitions.
-                                    
-We write:
-**SELECT <span style="color:red">DISTINCT </span> shopping.client_name
-FROM shopping**
-                 
-And now our answer is:
-| client_name | 
-| ----------- |
-| Ewa Brown |
-| Julia Roberts |
-    
-We can also write:
-**SELECT shopping.client_name
-FROM shopping
-<span style="color:red">GROUP BY </span> shopping.client_name**
-    
-And now our answer is 
-| client_name | 
-| ----------- |
-| Ewa Brown |
-| Julia Roberts |
+4. Jeśli idziesz na studia informatyczne to z pewnością czeka Cię przedmiot obejmujący tematykę baz danych i najzwyczajmniej będzie Ci łatwiej, jeśli będziesz zaznajomiony choć z podstawami tego jezyka.
 
-We can observe that the answer is exactly the same when we use DISTINCT and GROPU BY, but not always they can be used interchangeably.
-
-First issue is that when we use GROUP BY we have to add to it all columns that we want to have in our SELECT (it`s a shorthand I will add here more specific description how does it works with examples)
-    
-### 5. JOIN
-    
-![](https://i.imgur.com/oPJipOJ.png)
-(źródło: https://oracledev.pl/oracle-left-join/)
-    
-### Example:
-![](https://i.imgur.com/qYwLDrV.png)
-
-We want to JOIN tables T1 and T2. 
-id_t1 is a **private key** in table T1 and **foregin key** in T2. 
-id_t2 is the **private key** in T2.
-* Way 1:
-    **SELECT T1.xyz, T2.abc FROM T1,T2
-    WHERE(T1.id_t1=T2.id_t2)**
-    
-* Way 2:
-    **SELECT T1.xyz, T2.abc FROM T1 INNER JOIN T2
-    ON(T1.id_t1=T2.id_t2)**
-    
-(if the name of column based on which we will join oit tables like in example above we can also write USING <column_name> instead of ON <table_1_name>.<column_name> = <table_2_name>.<column_name>, but it1s risky because USING doesn`t work in some types of SQL - for postgreSQL it won`t work (if I remember correctly ;))
-    
-    
-    
-### 6. HAVING 
-We use having to select some elements/records but only if they meet the condition. We use having when group by and aggregation funcrions are needed
-Example:
-    https://www.w3schools.com/sql/sql_having.asp):
-    ![](https://i.imgur.com/fZQGV1H.png)
-
-    
-
-    
-
-    
-    
-
-    
-    
-    
+## SQL a Access
+Wszystkie **kwerendy**, **relacje** czy nowe **tabele** jakie towrzymy w Access są tłumaczone na język SQL i wykonywane. W łatwy sposób możemy sprawdzić jak nasze zapytanie będzie tłumaczone przez Access.
 
 
+<div style="font-variant: small-caps">
+widok projektu kwerendy w Access
+</div>
+![](https://i.imgur.com/76eSnOY.png)
+
+<div style="font-variant: small-caps">
+widok SQL
+</div>
+![](https://i.imgur.com/eZSxoEp.png)
+
+## Składnia SQL 
+Zaletą języka SQL jest łatwość jego zrozumienia. Zadania w SQL możemy czytać niemalże jak zwykłe pytania w naturalnym języku angielskim. W tej sekcji zdefinujemy i pokażemy przykłady wykorzystania podstawowych funkcji i selektorów w SQL-u.
+
+### Zadawanie zapytań (potocznie: kwerendy)   
+
+#### Szablon składni
+<div style={{color:'rgb(124,252,0)'}}>
+SELECT 
+</div>
+co 
+<div style={{color:'rgb(124,252,0)'}}>
+[F.AGREGUJĄCE] 
+FROM 
+</div> 
+tabele
+<div style={{color:'rgb(124,252,0)'}}>
+WHERE 
+</div>
+ warunki 
+<div style={{color:'rgb(124,252,0)'}}>
+[DODATKOWE KLAUZULE]
+</div>
+    
+### Przykłady
+https://hackmd.io/5HtM-CM4T-G69Rdg6v7Wmw
+(rozpisane tabelki z przykładowej bazy danych)
+
+#### **Chcemy zapytać o:**
+#### 0. Całą zawartość tabeli Soki.
+```sql=
+SELECT *
+FROM Soki;
+```
+| Smak | Pojemność [ml] | Cena [zł] |
+| -------- | -------- | -------- |
+| Jabłkowy     | 330     | 5,00     |
+| Pomarańczowy     | 250     |   5,00   |
+| Porzeczkowy     | 250     | 4,50     |
+| Grejfrutowy     | 330     | 6,00     |
+| Kaktusowy     | 125     | 4,50     |
+
+ ##### Wytłumaczenie: operator "*" oznacza "weź wszystko". W tym przypadku weź wszystko z tabeli Soki.
+    
+#### 1. Smaki soków, które są pojemności 330ml.    
+```sql=
+SELECT Smak
+FROM Soki
+WHERE Pojemnosc = 330; 
+```
+| Smak |
+| -------- |
+| Jablkowy |
+| Grejfrutowy |
+
+    
+#### 2. Soki które są tańsze niż 5,80zł.
+```sql=
+SELECT Smak
+FROM Soki
+WHERE Cena < 5,80; 
+```
+| Smak |
+| -------- |
+| Jablkowy |
+| Pomarańczowy |
+| Porzeczkowy |
+| Kaktusowy |
+                  
+
+#### 3. Soki, które są tańsze niż 2 zł za 100ml 
+```sql=
+SELECT Smaki
+FROM Soki
+WHERE ((Cena/Pojemnosc)*100) < 2; 
+```
+| Smak |
+| -------- |
+| Jablkowy |
+| Porzeczkowy |
+| Grejfrutowy |
+    
+#### 4. Cenę za 100ml dla każdego z soków w kolejności niemalejącej
+```sql=
+SELECT Smak, ((Cena/Pojemnosc)*100) AS Cena_za_100_ml
+FROM Soki
+ORDER BY Cena_za_100_ml ASC;
+```
+| Smak | Cena_za_100_ml |
+| --- | --- |
+| Jablkowy | 1,51515151515152 |
+| Porzeczkowy	| 1,8 |
+| Grejfrutowy	| 1,81818181818182 |
+| Pomarańczowy | 2 |
+| Kaktusowy | 3,6 |
+    
+#### 5. Jak w punkcie 4. ale zawsze chcemy widzieć kwote zaokragloną w gorę do pełnych złotówek.
+ ```sql=
+SELECT Smak, CEILING((Cena/Pojemnosc)*100) AS Cena_za_100_ml
+FROM Soki
+ORDER BY Cena_za_100_ml ASC;
+```  
+| Smak | Cena_za_100_ml |
+| --- | --- |
+| Jablkowy | 2 |
+| Porzeczkowy	| 2 |
+| Grejfrutowy	| 2 |
+| Pomaranczowy | 2 |
+| Kaktusowy | 4 |
+  
+##### 6. Zestawienie wszytskich soków lubianych przez studentów.
+```sql=
+SELECT Studenci.Imie, Studenci.Nazwisko, LubianeSoki.Sok
+FROM Studenci
+JOIN LubianeSoki ON Studenci.Indeks = LubianeSoki.Indeks;
+```   
+| Imie	| Nazwisko	| Sok |
+| ----- | --------  | --- |
+| Amelia |	Celujaca | 	Pomaranczowy |
+| Amelia |	Celujaca |	Kaktusowy |
+| Amelia |	Celujaca |	Grejfrutowy |
+| Kazimierz |	Dostateczny	| Jablkowy |
+| Jan | Pilny | Jablkowy |
+| Jan	| Pilny	| Porzeczkowy |
+    
+
+##### 7. Wszystkich studentów, którzy lubią sok jablkowy.
+```sql=
+SELECT Studenci.Imie, Studenci.Nazwisko, LubianeSoki.Sok
+FROM Studenci
+JOIN LubianeSoki ON Studenci.Indeks = LubianeSoki.Indeks
+WHERE LubianeSoki.Sok="Jablkowy";
+```
+| Imie	| Nazwisko	| Sok |
+| ----- | --------  | --- |
+| Kazimierz |	Dostateczny	| Jablkowy |
+| Jan | Pilny | Jablkowy |
+
+##### 8. Wszystkie bary, w których podają jakiś sok, który lubi Jan Pilny (zadanie ponadprogramowe).
+```sql=
+SELECT PodawaneSoki.Bar
+FROM Studenci 
+JOIN PodawaneSoki ON Studenci.Indeks = LubianeSoki.Indeks
+JOIN Soki ON PodawaneSoki.Sok = Soki.Smak
+JOIN LubianeSoki ON Soki.Smak = LubianeSoki.Sok 
+WHERE (Studenci.Imie="Jan") AND (Studenci.Nazwisko="Pilny")
+GROUP BY PodawaneSoki.Bar;
+```  
+| Bar |
+| --- |
+| Piątak |
+| Przekręt |
+| Witaminka |
+    
+## PS - gdzie szukać przykładów
+Po więcej przykładów zerknijcie do zakąłdki "Bazy danych - Access" - większość zadań, które będę rozwiązywane w accessie będzie dostępnych bowiem również w SQL.
+Niezmienne rónież zachęcamy do korzystania ze zbioru maturlanego udostępnianego przez CKE.
+    

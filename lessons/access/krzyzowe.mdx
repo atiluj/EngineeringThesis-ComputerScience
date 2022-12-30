@@ -1,0 +1,41 @@
+Przydatną i popularną funkcją w bazach danych jest tworzenie zestawień. Do tego celu służą nam kwerendy krzyżowe. 
+Tutaj znów będziemy bazować na przykładzie wymyślonym na potzreby tego zagadnienia, w oparciu o dane z matury z maja 2018 roku. 
+
+**Zadanie:** Stwórz zestawienie zawierające liczbę komputerów, które uległy awarii w danym miesiącu z podziałem na sekcje.
+
+Mamy 12 miesiecy, moglibyśmy więc stowrzyć 12 kwerend i w każdej z nich pogrupować komputery według sekcji i zliczyć te, które uległy awarii. To podejście jest jednak nie tylko nie nieoptymalne lecz także mało skalowalne - nie da się go zastosować w przypadku dużej ilości danych. Wyobraźmy sobie, że interesuje nas zestawienie pdobne do tego z treści zadania ale z podziałem na tygodnie. Tworzenie 52 kwerend byłoby skrajnie nieoptymalne. Zastosujemy więc kwerendę krzyżową.
+
+### 0. Przygtowujemy kwerendę pomocniczą, na bazie której stworzymy zestawienie (kwerendę krzyżową).
+
+W zestawieniu potrzebujemy informacji o `Numerze_komputera`, `Sekcji` oraz miesiącu. Wszytskie dane w tabeli `Awarie` pochodzą z tego samego roku, wystraczy więć skonstruowac wyrażenie, w którym wyłuskamy miesiąc z daty. 
+Tutaj mogą nasuwać się dwa pytania: 
+1. Czy będziemy zliczać `Numer_komputera` czy `Numer_awarii`?
+Tutaj odpowiedź jest łatwa, gdyż wynika z treści zadania. NAszym celem jest odpowiedzenie na pyatnie "ile komputerów uległo awarii", zatem nawet jeśli jakiś komputer w danym miesiącu był zepsuty więcej niż raz to wciąż liczymy to jako jeden. Stąd interesuje nas jedynie `Numer_komputera`.
+(`Numer_awarii` wybralibyśmy, gdyby pytano nas o liczbę incydentów/ liczbę awarii.)
+2. Czy chcemy użyć funkcji sumy w kwerendzie pomocniczej,a jeśli tak to jaką opcję wybrać?
+Funkcji sumy musimy użyć, ponieważ jeden komputer danego dnia mógł ulec awarii kilkukrotnie i wówczas pojawi się on róznież więcej niż raz w wyniku działania kwerendy. Chcemy tego uniknąć z tego samego powodu, z którego wybraliśmy `Numer_komputera`, a nie `Numer_awarii` - interesuje nas ile komputerów ulego awarii w danym miesiącu zatem kilka awarii jednego egzemplarza wciąż traktujemy jako jeden incydent. Wybieramy więc opcję "Grupuj według".
+![](https://i.imgur.com/1HpsoAv.png)
+(Jeśli to, w jaki sposób stworzyliśmy powyższą kwerende nie jest niejasne, warto wrócić do poprzednich tematów.)
+
+### 1. Wybieramy "Tworzenie" -> "Kreator kwerend" -> "Kreator kwerend krzyżowych"
+![](https://i.imgur.com/dwppfeo.png)
+
+### 2.Wybieramy "Kwerendy", a następnie naszą kwerendę pomocniczą, którą stworzyliśmy w punkcie 0.
+![](https://i.imgur.com/5rcLiT6.png)
+
+### 3. Wybieramy nagłowki wierszy.
+W zestawieniu chcemy mieć informację o ilości komputerów, któe uległy awarii w zależności od sekcji i miesiąca. Zatem to właśnie pola `Sekcja` i `Miesiac` będą naszymi nagłowkami. W zasadzie nie ma róznicy, które z nich ustawimy jako nagłowek wierszy, a który kolumn. Weżmy więc `Sekcję` jako nagłowek wierszy.
+(Tutaj analogicznie do innych kreowanych kwerend możemy wybierać pole poprzez podwójne kliknięcie lub zaznaczenie i użycie ">". Cofać wybór pola możemy poprzez zaznaczenie i użycie "<".)
+![](https://i.imgur.com/TXYEANU.png)
+
+### 4. Wybieramy nagłowki kolumn.
+![](https://i.imgur.com/K4sOiss.png)
+
+### 5. Ustalamy co chcemy obliczyć - wartości pól.
+Naszym celem jest podanie liczby komputerów, zatem wybieramy pole `Numer_komputera` oraz opcję "Zlicz".
+![](https://i.imgur.com/IBIzvXF.png)
+Warto zwrócić uwagę na pytanie "Czy chcesz sumować każdy wiersz". Co prawda nam ta informacja nie jest potrzebna, jednak często może ona okazać się przydatna. Jeśli zaznaczylibyśmy, że chcemy dołączyć sumy wierszy, to nasze zestawienie było uzupełnione o dane o tym ile sumarycznie komputerów uległo awarii z podziałem na miesiące. 
+(Uwaga - jeśli jakiś komputer uległby awarii na przykład trzykrotnie: w styczniu. marcu i wrześniu, to byłoby to policzone jako trzy incydenty.)
+
+### 6. Gotowe!
+![](https://i.imgur.com/RQk98v6.png)
