@@ -69,9 +69,10 @@ export default function() {
             <li className="excel"><a href="excel.html" style={aStyle}>Excel</a></li>
             <li className="access"><a href="access.html" style={aStyle}>Access</a></li>
             <li className="python"><a href="python.html" style={aStyle}>Python</a></li>
+            <li className="exercise"><a href="exercise.html" style={aStyle}>Zadania</a></li>
         </ul>
         <ul className="ul2">
-            <li>
+            <li className="interpreter">
                 <a href="interpreter.html" style={aStyle}>Interpreter python</a>
             </li>
         </ul>

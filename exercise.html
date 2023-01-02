@@ -20,13 +20,12 @@
         import * as ReactDOM from 'react-dom/client';
         import './style.css';
         const Nav = lazy(() => import('./components/Nav.jsx'));
-        const Teoria = lazy(() => import('./components/Teoria.jsx'));
-        import Lessons from './lessons/python/config.jsx';
+        const Exercise = lazy(() => import('./components/Exercise.jsx'));
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<Suspense>
             <Nav />
-            <Teoria lessons={Lessons} title="python"/>
+            <Exercise />
         </Suspense>);
     </script>
 </body>

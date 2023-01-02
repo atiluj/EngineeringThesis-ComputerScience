@@ -116,14 +116,21 @@ nav ul li a {
     color: #6F8DBE;
 }
 
-.kompilator:hover {
-    background-color: #ccdbf6;
+.exercise:hover {
+    background-color: #f0e9e0;
 }
 
-.kompilator:hover a {
-    color: #35312f;
-    /* color: #ccdbf6; */
+.exercise:hover a {
+    color: #322e2ba6;
 }
+
+/* .interpreter:hover {
+    background-color: #f0e9e0;
+}
+
+.interpreter:hover a {
+    color: #322e2b;
+} */
 
 
 @media (max-width: 1200px) {
