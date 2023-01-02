@@ -45,7 +45,6 @@ export default [
         {name: "Wyszukiwanie duplikatów", content: <Duplikaty/>},
         {name: "Zestawienia - kwerendy krzyżowe", content: <Krzyzowe/>},
         {name: "Agregowanie danych", content: null},
-        {name: "Kwerendy krzyżowe", content: null},
     ]},
 
     {name: "SQL", subchapters: [

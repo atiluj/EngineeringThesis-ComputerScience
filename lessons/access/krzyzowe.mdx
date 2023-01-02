@@ -1,9 +1,9 @@
 Przydatną i popularną funkcją w bazach danych jest tworzenie zestawień. Do tego celu służą nam kwerendy krzyżowe. 
-Tutaj znów będziemy bazować na przykładzie wymyślonym na potzreby tego zagadnienia, w oparciu o dane z matury z maja 2018 roku. 
+Tutaj znów będziemy bazować na przykładzie wymyślonym na potzreby tego zagadnienia, w oparciu o dane z matury z maja 2018 roku.<br/><br/>
 
 **Zadanie:** Stwórz zestawienie zawierające liczbę komputerów, które uległy awarii w danym miesiącu z podziałem na sekcje.
 
-Mamy 12 miesiecy, moglibyśmy więc stowrzyć 12 kwerend i w każdej z nich pogrupować komputery według sekcji i zliczyć te, które uległy awarii. To podejście jest jednak nie tylko nie nieoptymalne lecz także mało skalowalne - nie da się go zastosować w przypadku dużej ilości danych. Wyobraźmy sobie, że interesuje nas zestawienie pdobne do tego z treści zadania ale z podziałem na tygodnie. Tworzenie 52 kwerend byłoby skrajnie nieoptymalne. Zastosujemy więc kwerendę krzyżową.
+<br/>Mamy 12 miesiecy, moglibyśmy więc stowrzyć 12 kwerend i w każdej z nich pogrupować komputery według sekcji i zliczyć te, które uległy awarii. To podejście jest jednak nie tylko nie nieoptymalne lecz także mało skalowalne - nie da się go zastosować w przypadku dużej ilości danych. Wyobraźmy sobie, że interesuje nas zestawienie pdobne do tego z treści zadania ale z podziałem na tygodnie. Tworzenie 52 kwerend byłoby skrajnie nieoptymalne. Zastosujemy więc kwerendę krzyżową.
 
 ### 0. Przygtowujemy kwerendę pomocniczą, na bazie której stworzymy zestawienie (kwerendę krzyżową).
 
@@ -14,7 +14,7 @@ Tutaj odpowiedź jest łatwa, gdyż wynika z treści zadania. NAszym celem jest 
 (`Numer_awarii` wybralibyśmy, gdyby pytano nas o liczbę incydentów/ liczbę awarii.)
 2. Czy chcemy użyć funkcji sumy w kwerendzie pomocniczej,a jeśli tak to jaką opcję wybrać?
 Funkcji sumy musimy użyć, ponieważ jeden komputer danego dnia mógł ulec awarii kilkukrotnie i wówczas pojawi się on róznież więcej niż raz w wyniku działania kwerendy. Chcemy tego uniknąć z tego samego powodu, z którego wybraliśmy `Numer_komputera`, a nie `Numer_awarii` - interesuje nas ile komputerów ulego awarii w danym miesiącu zatem kilka awarii jednego egzemplarza wciąż traktujemy jako jeden incydent. Wybieramy więc opcję "Grupuj według".
-![](https://i.imgur.com/1HpsoAv.png)
+<img src={new URL('https://i.imgur.com/1HpsoAv.png', import.meta.url)} alt="xyz" className="small-screen" />
 (Jeśli to, w jaki sposób stworzyliśmy powyższą kwerende nie jest niejasne, warto wrócić do poprzednich tematów.)
 
 ### 1. Wybieramy "Tworzenie" -> "Kreator kwerend" -> "Kreator kwerend krzyżowych"

@@ -1,18 +1,19 @@
-# Ustalanie związków między tabelami
-### 1. Wybieramy zakładkę "Narzedzia baz danych", a następnie klikamy opcję "Relacje".
-Tutaj chciałabym wyjaśnić kilka nieścisłości jeśli chodzi o terminolologię. W relacyjnych bazach danych pojęcie "Relacja" oznacza w zasadzie "Tabelę", jednak w Accessie oznacza to związki między tabelami, a więc sposób w jaki sa one ze sobą połączone - co jest kluczem obcym dla której tabeli i jaki jest rodzaj tejże relacji $1:1, 1:\infty, \infty:\infty$
+### 1. Wybieramy zakładkę "Narzędzia baz danych", a następnie klikamy opcję "Relacje".
+Tutaj chciałabym wyjaśnić kilka nieścisłości, jeśli chodzi o terminologię. W relacyjnych bazach danych pojęcie "Relacja" oznacza w zasadzie "Tabelę", jednak w Accessie oznacza to związki między tabelami, a więc sposób, w jaki są one ze sobą połączone — co jest kluczem obcym, dla której tabeli i jaki jest rodzaj tejże relacji 1:1, 1:∞, ∞:∞
 ![](https://i.imgur.com/vXGH86n.png)
 
 ### 2. Przeciągamy wszystkie nasze tabele do pola z relacjami (1.) lub zaznaczamy je w okienku po prawej (2.) i klikamy "Dodaj zaznaczone tabele".
 ![](https://i.imgur.com/wAPv8V0.png)
 
-### 3. Zaznaczamy i przeciągamy klucz głowny jednej tabeli dopasowując go do kluczaobcego drugiej.
-:::danger
-tu powinno być video "więzy"
-:::
-Tutaj musimy zastanowić się, które tabele będą ze sobą bezpośrednio połączone oraz co jest kluczem głównym, a co obcym w danej tabeli. Klucz głowny mam już wybrany, a rozpoznać możemy go łatwo dzięki ikonce kluczyka, która wyświetla się przy odpowiedniej kolumnie. Jak natomiast zidentyfikować klucz obcy? Musimy zastanowić się nad sensem naszej bazy danych, tutaj znów pomocne może być odpowiednie nazewnictwo oraz przeczytanie ze zrozumieniem polecenia. 
-**W naszym przykładzie** Tabela `Komputery` oraz `Awarie` powinny być ze sobą połączone. `Numer_komputera` jest kluczem głowym w tabeli `Komputery`, możemy zauważyć, że w tabeli `Awarie` również występuje analogiczne pole - będzie to klucz obcy w tej tabeli.
+### 3. Zaznaczamy i przeciągamy klucz główny jednej tabeli, dopasowując go do klucza obcego drugiej.
+Tutaj musimy zastanowić się, które tabele będą ze sobą bezpośrednio połączone oraz co jest kluczem głównym,
+a co obcym w danej tabeli. Klucz główny mam już wybrany, a rozpoznać możemy go łatwo dzięki ikonce kluczyka,
+która wyświetla się przy odpowiedniej kolumnie. Jak natomiast zidentyfikować klucz obcy? Musimy zastanowić się
+nad sensem naszej bazy danych, tutaj znów pomocne może być odpowiednie nazewnictwo oraz przeczytanie ze zrozumieniem polecenia.
+**W naszym przykładzie** Tabela 'Komputery' oraz 'Awarie' powinny być ze sobą połączone. 'Numer_komputera' jest kluczem głównym
+w tabeli 'Komputery', możemy zauważyć, że w tabeli 'Awarie' również występuje analogiczne pole — będzie to klucz obcy w tej tabeli.
 ![](https://i.imgur.com/TRZDyID.png)
-Widzimy, że Access pokazuje nam, że mamy tu dwie relacje typu $1:inf$. Zauważmy, że zgadza się to z treścia naszego polecenia. Po pierwsze jeden komputer mógł ulec różnym awariom, oraz jedna awaria mogła wymagać wielu napraw.
+Widzimy, że Access pokazuje nam, że mamy tu dwie relacje typu 1:∞. Zauważmy, że zgadza się to z treścią naszego polecenia.
+Po pierwsze jeden komputer mógł ulec różnym awariom oraz jedna awaria mogła wymagać wielu napraw.
 ### 4. Klikamy "Zamknij" i zapisujemy zmiany (klikamy "Tak").
 ![](https://i.imgur.com/ReqeQCU.png)

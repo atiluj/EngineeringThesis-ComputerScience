@@ -163,8 +163,13 @@ main article img {
     display: block;
     margin: 0 auto;
     padding: 10px 0;
+    
     max-width: 90%;
     width: 100%;
+    /* changing images size - Ola*/
+    /* max-width: 70%;
+    width: 60%; */
+    /* end of changes */
 }
 
 article .info{
@@ -240,6 +245,12 @@ main article pre {
 .ft{
     display: none;
 }
+
+/* adding styles for Access section - Ola */
+main article img.small-screen{
+    max-width: 30%;
+}
+/* end of changes */
 
 @media(max-width: 1400px) {
     main {
