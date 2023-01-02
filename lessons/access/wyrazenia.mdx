@@ -1,20 +1,18 @@
-# Wyrażenia
 Zajmijmy się teraz podpunktem 3.
-:::info
 ![](https://i.imgur.com/C8p3UYH.png)
-:::
-Jego rozwiązywanie podzielimy na trzy części. W pierwszej chcemy się dowiedzieć ile komputerów z danej sekcji uległo awarii którego dnia. 
-Znów zagłębiamy się w treść zadania i dowiadujemy się, że będziemy potzrebować wszytskich tabel, a konkretnie kolumny `Sekcja` z tabeli `Komputery`, kolumny `Czas_awarii` z tabeli `Awarie`, według których będziemy grupować wyniki oraz kolumny `Identyfikator` z tabeli `Naprawy` przy pomocy której będziemy je zliczać.
+
+Jego rozwiązywanie podzielimy na trzy części. W pierwszej chcemy się dowiedzieć, ile komputerów z danej sekcji uległo awarii którego dnia.
+Znów zagłębiamy się w treść zadania i dowiadujemy się, że będziemy potrzebować wszystkich tabel, a konkretnie kolumny `Sekcja` z tabeli `Komputery`, kolumny `Czas_awarii` z tabeli `Awarie`, według których będziemy grupować wyniki oraz kolumny `Identyfikator` z tabeli `Naprawy` przy pomocy której będziemy je zliczać.
 ![](https://i.imgur.com/UKzsny1.png)
 Zauważmy jednak, że znów wynik nie jest tym czego oczekujemy. Dlaczego?
 ![](https://i.imgur.com/eZIDhTV.png)
-`Czas_awarii` to dokładny czas, włącznie z godziną i minutą, nas natomiast interesuje jedynie data. 
-Skonstruuujemy więc wyrażenie, które pozwoloi nam wyłuskać datę z naszego `Czasu_awarii`.
+`Czas_awarii` to dokładny czas, włącznie z godziną i minutą. Nas interesuje jedynie data. 
+Skonstruujemy więc wyrażenie, które pozwoli nam wyłuskać datę z naszego `Czasu_awarii`.
 
-### 1. Kliknij prawym klawiszem myszy w puste pole i wybierz opcję "Koonstruuj".
+### 1. Klikamy prawym klawiszem myszy w puste pole i wybieramy opcję "Koonstruuj".
 ![](https://i.imgur.com/RQ1mE9I.png)
 
-### 2. Najłatwiej jest po prostu rozwijać opcje i wyszukiwać "Funkcji wbudowanych" i odpowiednich kolumn w tabelach czy kwerendach w nmaszej bazie danych.
+### 2. Najłatwiej jest po prostu rozwijać opcje i wyszukiwać  odpowiednią z "Funkcji wbudowanych" oraz kolumny w tabelach czy kwerendach z naszej bazy danych.
 ![](https://i.imgur.com/jyUQodq.png)
 
 ### 3. Wybieramy "Funkcję wbudowane" -> "Data/godzina" i klikamy dwukrotnie na "Day"
@@ -22,7 +20,7 @@ Skonstruuujemy więc wyrażenie, które pozwoloi nam wyłuskać datę z naszego 
 Widzimy, że w białym polu na górze pojawił nam się szablon użycia funkcji, która wyłuskuje dzień z daty. 
 
 ### 4. Uzupełniamy argument funkcji
-Teraz chcemy w  miejsce data wstawić datę awarii. W tym celu zaznaczamy data, kilakmy tabele `Naprawy` i wybieramy kolumnę `Czas awarii`.
+Teraz chcemy w  miejsce data wstawić datę awarii. W tym celu zaznaczamy data, kilakmy tabele `Naprawy` i wybieramy kolumnę `Czas_awarii`.
 ![](https://i.imgur.com/75qMXAv.png)
     
 ### 5. Wciskamy "OK" i ustawiamy odpowiednią opcję funkcji sumy. 
@@ -32,19 +30,19 @@ W naszym przykładzie chcemy grupować wyniki według dnia, więc domyślna opcj
     
 Z treści zadania wiemy, że baza danych obejmuje tylko jeden rok, więc nie musimy wyłuskiwać roku.
     
-Zauważmy, że wyniki wciąż nie są takie jak byśmy oczekiwali. Dlaczego? Bo wciąż mamy grupowanie według pełnych dat z kolumny `Czas_awarii`. Wystarczy więc usuną tę kolumnę  
+Zauważmy, że wyniki wciąż nie są takie jak byśmy oczekiwali. Dlaczego? Bo wciąż mamy grupowanie według pełnych dat z kolumny `Czas_awarii`. Wystarczy więc usuną tę kolumnę. 
     
 ### 7. Usuwanie niepotrzebnej części zapytania.
-Możemy zrobić to na dwa sposoby, albo zaznaczyć daną kolumnę w zapytaniu i nacisnąc kalwisz "Delete",
+Możemy zrobić to na dwa sposoby, albo zaznaczyć daną kolumnę w zapytaniu i nacisnąc kalawisz "Delete",
 ![](https://i.imgur.com/J8kiDHs.png)
-albo usunąc nazwę kolumny i kliknąc eneter
+albo usunąć nazwę kolumny i kliknąć eneter.
 ![](https://i.imgur.com/qUacLpj.png)
-Efekt będzie taki sam - usunięmy niepotrzebną część zapytania.
+Efekt będzie taki sam - usuniemy niepotrzebną część zapytania.
 ![](https://i.imgur.com/PAyKaoL.png)
-Możemy jednak zauważyć, że wynik jest mało czytelny, ze względu na to, że dni i miesiące reprezentowane są poprzez liczby a nazwy kolumn nie odzwierciedlają ich zawartości.
+Możemy jednak zauważyć, że wynik jest mało czytelny, ze względu na to, że dni i miesiące reprezentowane są poprzez liczby, a nazwy kolumn nie odzwierciedlają ich zawartości.
     
-### 8. Nazewnictwo wyrażeń
-Aby nadać wyrażeniu nazwę wystarczy zamienić autormatycznie wstawianą nazwę "Wyr1" na naszą nazwę. Możemy to zrobić w widoku projektu, po proostu poprzez usunięcie starego tekstu i wpisanie nowego.
+### 8. Nazewnictwo wyrażeń.
+Aby nadać wyrażeniu nazwę wystarczy, że zamienimy autormatycznie wstawianą nazwę "Wyr1" na naszą nazwę. Możemy to zrobić w widoku projektu, poprzez usunięcie starego tekstu i wpisanie nowego.
 ![](https://i.imgur.com/pN81glB.png)
 
-Teraz mamy już dobrze wyglądające zestawienie sekcji danego dnia. Naszym zadaniej jest jednak wstakazanie sekcji i dnia w którym w tejże sekcji awarii uległy wszytskie komputery. Jak to zrobić? Tu przejdziemy do drugiej części rozwiązaywania tego zadania.
+Teraz mamy już dobrze wyglądające zestawienie sekcji danego dnia. Naszym zadaniej jest jednak wskazanie sekcji i dnia w którym w tejże sekcji awarii uległy wszytskie komputery. Jak to zrobić? Tu przejdziemy do drugiej części rozwiązaywania tego zadania.
