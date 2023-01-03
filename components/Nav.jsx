@@ -64,16 +64,28 @@ export default function() {
 
     return <nav id="navbar">
         <ul>
-            <li className="home"><a href="index.html" style={aStyle}>Cześć!</a></li>
-            <li className="teoria"><a href="teoria.html" style={aStyle}>Teoria</a></li>
-            <li className="excel"><a href="excel.html" style={aStyle}>Excel</a></li>
-            <li className="access"><a href="access.html" style={aStyle}>Access</a></li>
-            <li className="python"><a href="python.html" style={aStyle}>Python</a></li>
-            <li className="exercise"><a href="exercise.html" style={aStyle}>Zadania</a></li>
+            <li className="home">
+                <a href="index.html" style={aStyle} className="menu-button">Cześć!</a>
+            </li>
+            <li className="teoria">
+                <a href="teoria.html" style={aStyle} className="menu-button">Teoria</a>
+            </li>
+            <li className="excel">
+                <a href="excel.html" style={aStyle} className="menu-button">Excel</a>
+            </li>
+            <li className="access">
+                <a href="access.html" style={aStyle} className="menu-button">Access</a>
+            </li>
+            <li className="python">
+                <a href="python.html" style={aStyle} className="menu-button">Python</a>
+            </li>
+            <li className="exercise">
+                <a href="exercise.html" style={aStyle} className="menu-button">Zadania</a>
+            </li>
         </ul>
         <ul className="ul2">
             <li className="interpreter">
-                <a href="interpreter.html" style={aStyle}>Interpreter python</a>
+                <a href="interpreter.html" style={aStyle} className="menu-button">Interpreter python</a>
             </li>
         </ul>
     </nav>;

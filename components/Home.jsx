@@ -5,7 +5,7 @@ import CoffeeIcon from '@mui/icons-material/Coffee';
 export default function () {
     return <>
         <div className="section">
-            <div className="naglowek">
+            <div className="header">
                 <h1>Cześć!</h1>
             </div>
             <article className="first">
@@ -32,12 +32,12 @@ export default function () {
         <main>
             <div className="contents">
                 <div className="cont">
-                    <a href="#first">DLA KOGO?</a>
-                    <a href="#second">STATYSTYKI</a>
-                    <a href="#third">CO ZAWIER KURS</a>
-                    <a href="#fourth">INSTRUKCJA</a>
-                    <a href="#fifth">WSKAZÓWKI</a>
-                    <a href="#sixth">AUTORZY</a>
+                    <a href="#first" className="menu-button">DLA KOGO?</a>
+                    <a href="#second" className="menu-button">STATYSTYKI</a>
+                    <a href="#third" className="menu-button">CO ZAWIER KURS</a>
+                    <a href="#fourth" className="menu-button">INSTRUKCJA</a>
+                    <a href="#fifth" className="menu-button">WSKAZÓWKI</a>
+                    <a href="#sixth" className="menu-button">AUTORZY</a>
                 </div>
                 {/* TODO: REKLAMA */}
             </div>

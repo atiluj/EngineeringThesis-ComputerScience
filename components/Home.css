@@ -1,10 +1,10 @@
 .section {
-    background-color: #f0e9e0;
+    /* background-color: #f0e9e0; */
     /*#f4e8db;*/
     padding-top: 100px;
 }
 
-.section .naglowek {
+.section .header {
     padding-top: 50px;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 55px;
@@ -19,7 +19,7 @@
     /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black */
 }
 
-.section .naglowek h1 {
+.section .header h1 {
     text-align: center;
 }
 
@@ -39,7 +39,7 @@
 main {
     /* background-image: linear-gradient(#f4e8db, #e2d3c4); */
     /* background-color: #e2d3c4; */
-    background-color: #f0e9e0;
+    /* background-color: #f0e9e0; */
     /*#f4e8db;*/
     min-height: 80vh;
     text-align: center;
@@ -63,9 +63,10 @@ main .contents .cont {
     top: 60px;
     flex-direction: column;
     /* background-color: #35312f; B1 */
-    background-color: #322e2b;
+    /* background-color: #322e2b; */
 }
 
+/*
 main .contents .cont a {
     display: block;
     padding: 12px;
@@ -79,12 +80,13 @@ main .contents .cont a {
     text-decoration: none;
     transition: .7s;
 }
-
+*/
+/*
 main .contents .cont a:hover {
     background-color: #f4e8db;
     border: solid 2px #322e2b;
     color: #322e2b;
-}
+}*/
 
 
 /* NAGŁÓWEK - CZEŚĆ */
@@ -248,7 +250,7 @@ footer a:hover{
     }
 
 
-    .section .naglowek {
+    .section .header {
         padding-top: 15px;
         font-size: 50px;
         letter-spacing: 45px;
@@ -290,7 +292,7 @@ footer a:hover{
 }
 
 @media(max-width:1000px) {
-    .section .naglowek {
+    .section .header {
         padding-top: 5px;
         font-size: 45px;
         letter-spacing: 40px;
@@ -330,7 +332,7 @@ footer a:hover{
         padding-top: 55px;
     }
 
-    .section .naglowek {
+    .section .header {
         font-size: 40px;
         letter-spacing: 25px;
         text-indent: 25px;
@@ -359,7 +361,7 @@ footer a:hover{
         padding-top: 50px;
     }
 
-    .section .naglowek {
+    .section .header {
         padding-top: 0px;
         font-size: 25px;
         letter-spacing: 5px;
@@ -402,7 +404,7 @@ footer a:hover{
         padding-top: 40px;
     }
 
-    .section .naglowek {
+    .section .header {
         font-size: 18px;
         /* letter-spacing: 5px;
         text-indent: 5px; */

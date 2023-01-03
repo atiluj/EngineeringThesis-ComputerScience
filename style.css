@@ -8,6 +8,13 @@
 @import "node_modules/@fontsource/ibm-plex-serif/400.css";
 @import "node_modules/@fontsource/ibm-plex-serif/500.css";
 
+:root {
+    --primary: #FAF8F1;
+    --primary2: #f3ead1;
+    --secondary: #FAC213;
+    --secondary2: #cea324;
+    --accent: #EB6440;
+}
 
 * {
     margin: 0;
@@ -15,6 +22,35 @@
     box-sizing: border-box; /*jeśli coś sie pierdoli to może by to to*/
 }
 
-div .wrapper{
+html {
+    background-color: var(--primary);
+}
+
+div .wrapper {
     margin: 0 auto;
+}
+
+.menu-button {
+    display: block;
+    padding: 12px;
+    font-size: 17px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    color: var(--primary);
+    /* border-bottom: 1px solid #f4e8db; */
+    /* border-top: 1px solid #f4e8db; */
+    
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: .7s;
+    background-color: var(--secondary);
+    text-align: left;
+}
+
+.menu-button:hover {
+    background-color: var(--secondary2);
+    /* background-color: #f4e8db;
+    border: solid 2px #322e2b;
+    color: #322e2b; */
 }

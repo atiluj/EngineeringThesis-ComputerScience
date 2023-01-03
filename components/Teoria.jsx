@@ -17,7 +17,7 @@ const NavContext = React.createContext({
 function Subchapter({ chapterId, subchapterId, subchapter }) {
     const { changeChapter, curChapter, curSubchapter } = React.useContext(NavContext);
     const isCurrent = chapterId == curChapter && subchapterId == curSubchapter;
-    return <a href="#" className={"subtopic" + (isCurrent ? " subtopic-current" : "")}
+    return <a href="#" className={"subtopic menu-button" + (isCurrent ? " subtopic-current" : "")}
         onClick={() => changeChapter(chapterId, subchapterId)}>
         {chapterId}.{subchapterId + 1}. {subchapter.name}
     </a>;
@@ -30,7 +30,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
         if (curChapter == chapterId) setShow(true);
     }, [curChapter]);
     return <div>
-        <div className="topic" onClick={() => setShow(show => !show)}>
+        <div className="topic menu-button" onClick={() => setShow(show => !show)}>
             <a>{chapterId}. {chapter.name}</a>
             <div>{show ? <ExpandLess /> : <ExpandMore />}</div>
         </div>
@@ -46,7 +46,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
 function ChapterStandalone({ chapter, chapterId }) {
     const { changeChapter } = React.useContext(NavContext);
     return <div onClick={() => changeChapter(chapterId, 0)}>
-        <div className="topic">
+        <div className="topic menu-button">
             <a>{chapterId}. {chapter.name}</a>
             <div style={{ visibility: "hidden" }}><ExpandMore /></div>
         </div>

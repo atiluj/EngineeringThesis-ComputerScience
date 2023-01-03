@@ -1,5 +1,5 @@
 nav {
-    background-color: #322e2b;
+    background-color: var(--secondary);
     font-size: 0;
     /* to likiwduje wbudowany margines w menu*/
     overflow: hidden;
@@ -46,12 +46,17 @@ nav ul li {
     /* height: 65px; */
 }
 
-nav ul li a {
+nav ul li a.menu-button {
+    margin-bottom: 0;
+}
+
+
+/* nav ul li a {
     display: block;
     box-sizing: border-box;
-    /*może być potrzben przy tworzeniu nav dla telefonów*/
+    // może być potrzben przy tworzeniu nav dla telefonów
     padding: 19px 23px;
-    /* padding: 0 30px ; */
+    // padding: 0 30px ; 
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 900;
     color: #f4e8db;
@@ -60,15 +65,15 @@ nav ul li a {
     text-transform: uppercase;
     text-decoration: none;
     transition: .5s;
-}
+} */
 
-
+/* 
 .home:hover {
     background-color: #c48538;
 }
 
 .home:hover a {
-    /* color: #c48538;  */
+    // color: #c48538;  
     color: #FFEBCD;
 }
 
@@ -86,7 +91,7 @@ nav ul li a {
 
 .excel:hover a {
     color: #D3EDAB;
-    /* color: #4A6B17; */
+    // color: #4A6B17;
 }
 
 .access:hover {
@@ -95,7 +100,7 @@ nav ul li a {
 
 .access:hover a {
     color: #EFD4D2;
-    /* color: #a4413a; */
+    // color: #a4413a;
 }
 
 .python:hover {
@@ -104,7 +109,7 @@ nav ul li a {
 
 .python:hover a {
     color: #E9E193;
-    /* color: #496998; */
+    // color: #496998;
 }
 
 .cpp:hover {
@@ -112,7 +117,7 @@ nav ul li a {
 }
 
 .cpp:hover a {
-    /* color: white; */
+    // color: white;
     color: #6F8DBE;
 }
 
@@ -122,7 +127,7 @@ nav ul li a {
 
 .exercise:hover a {
     color: #322e2ba6;
-}
+} */
 
 /* .interpreter:hover {
     background-color: #f0e9e0;

@@ -29,7 +29,7 @@
 }
 
 main {
-    background-color: #f0e9e0;
+    /* background-color: #f0e9e0; */
     /*#f4e8db;*/
     min-height: 80vh;
     /* padding: 2vw 0; */
@@ -51,72 +51,85 @@ main .contents {
 main .contents .cont {
     /* display: flex; to nie potrzebne
     flex-direction: column; */
-    background-color: #f4e8db;
+    /* background-color: #f4e8db; */
     padding: 0;
     font-size: 14px;
     font-family: 'Chakra Petch', sans-serif;
-    font-weight: 500;
+    font-weight: lighter;
     text-transform: uppercase;
 }
 
 
-main .contents .cont .topic {
-    font-weight: 900;
+main .contents .cont .topic.menu-button{
+    /* font-weight: 900; */
     display: flex;
-    padding: 10px;
-    transition: 1s;
-    border: 1px solid #f4e8db;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    background-color: #322e2b;
-    color: #f4e8db;
+    /* padding: 10px; */
+    /* transition: 1s; */
+    /* border: 1px solid #f4e8db; */
+    /* border-left-width: 0px; */
+    /* border-right-width: 0px; */
+    /* background-color: #322e2b; */
+    /* color: #f4e8db; */
     align-items: center;
     justify-content: space-between;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .topic a {
     text-transform: uppercase;
     text-decoration: none;
-    color: #f4e8db;
+    /* color: #f4e8db; */
 }
 
 
 main .contents .cont .subtopic {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-    transition: .7s;
+    /* display: block; */
+    /* cursor: pointer; */
+    /* padding: 10px; */
+    /* transition: .7s; */
     /* letter-spacing: 1px; */
-    border-left-width: 0px;
-    border-right-width: 0px;
-    text-decoration: none;
-    margin: 1px 0;
-    color: #322e2b;
-    border: 3px solid #322e2b;
-    background-color: #f4e8db;
-    text-align: center;
+    /* border-left-width: 0px; */
+    /* border-right-width: 0px; */
+    /* text-decoration: none; */
+    margin: 0;
+    /* color: #322e2b; */
+    /* border: 3px solid #322e2b; */
+    /* background-color: #f4e8db; */
+    text-align: left;
+    background-color: var(--primary);
+    color: var(--secondary2);
+    border-bottom: 1px var(--secondary) solid;
+    /* border-style: solid;
+    border-color: var(--secondary); */
+    padding-left: 25px;
 }
 
 main .contents .cont .subtopic-current {
     /* background-color: #c1a26d6e; */
-    background-color: #174f3063;
+    /* background-color: #174f3063; */
+    color: var(--secondary);
+    background-color: var(--primary2);
+    border-left: 5px var(--secondary) solid;
 }
+
 
 main .contents .cont .subtopic:hover {
-    letter-spacing: 1px;
-    text-indent: 1px;
-}
+    color: var(--secondary);
+} 
 
+main .contents .cont .subtopic-current:hover {
+    /* background-color: #c1a26d6e; */
+    /* background-color: #174f3063; */
+    color: var(--secondary);
+    background-color: var(--primary2);
+}
 /* main .contents .cont .subtopic:visited{
     background-color: #7ca57c33;
 } */
-
+/* 
 main .contents .cont .topic:hover {
     background-color: #322e2ba1;
-    /* background-color: #322e2b6e; */
-    /* background-color: #c1a26d6e; */
-}
+} */
 
 /* NAGŁÓWEK - CZEŚĆ */
 
@@ -313,11 +326,11 @@ main article img.small-screen{
         font-size: 13px;
     }
 
-    main .contents .cont .topic{
+    /* main .contents .cont .topic{
         padding: 10 6px;
         border-left: 1px solid #f0e9e0;
         border-right: 1px solid #f0e9e0;
-    }
+    } */
 
     main .contents .cont .subtopic {
         margin: .5px 0;
