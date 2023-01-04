@@ -5,7 +5,7 @@ Skąd w ogóle wiemy, że przydatna będzie kwerenda wyszukująca niedopasowane 
 Zastanówmy się, jak moglibyśmy podejść do tego problemu. Możemy próbować wyszukać komputery, które uległy tylko awarii o priorytecie niższym niż 8. W zadaniu mamy jednak podpowiedź "wliczamy też komputery, które NIE uległy żadnej awarii". W tabelach mamy natomiast informację o awariach. Możemy więc przypuszczać, że naszym celem będzie odnalezienie danych, które NIE występują w jakiejś tabeli. W tym konkretnym przypadku będą nas interesować komputery (dane o nich weźmiemy z tabeli `Komputery`), które NIE występują w tabeli `Awarie`.
 
 Jak zatem podejść do tego zadania. Wykorzystamy tu sporo wiedzy zdobytej wcześniej. Najpierw stworzymy kwerendę pomocniczą, zawierającą dane o wszystkich komputerach, które uległy awarii o priorytecie >= 8.
-Następnie skorzystamy z kwerendy wyszukującej niedopasowane dane, aby zidentyfikować te komputery z tabeli `Komputery`, które nie występują w wyniku naszej kwerendy pomocniczej. W ten sposób otrzymamy zestawienie zawierające te komputery, które uległy awarii o priorytecie <8 lub nie uleły jej wcale.
+Następnie skorzystamy z kwerendy wyszukującej niedopasowane dane, aby zidentyfikować te komputery z tabeli `Komputery`, które nie występują w wyniku naszej kwerendy pomocniczej. W ten sposób otrzymamy zestawienie zawierające te komputery, które uległy awarii o priorytecie <8 lub nie uległy jej wcale.
 Zastosujemy więc tzw. odwrócenie problemu.
 
 ### 0. Przygotowujemy kwerendę pomocniczą.
@@ -14,7 +14,7 @@ Zapiszmy ją jako "zad 5 pom".
 
 ### 1. Wybieramy "Tworzenie" -> "Kreator kwerend".
 ![](https://i.imgur.com/FzGDbQe.png)
-Uwaga: Wcześniej korzystaliśmy z opcji "Projekt kwerendy", tym razem interesuje nas :Kreator kwerend".
+Uwaga: Wcześniej korzystaliśmy z opcji "Projekt kwerendy", tym razem interesuje nas "Kreator kwerend".
 
 ### 2. Wybieramy "Kwerenda wyszukująca niedopasowane dane".
 ![](https://i.imgur.com/xYq62LD.png)
@@ -25,19 +25,19 @@ Dalsze kroki bardzo ułatwia nam instrukcja użycia tego rodzaju kwerendy.
 ![](https://i.imgur.com/oVFqAQg.png)
 W naszym przykładzie będzie to tabela `Komputery`.
 
-### 4. Wybieramy tabelę lub kwerendę, której dane chcemy wykluczyć w wyniku.
+### 4. Wybieramy tabelę lub kwerendę, której dane chcemy wykluczyć z wyniku.
 ![](https://i.imgur.com/08oK5b9.png)
-W naszym przykładzie jest to kwerenda pomocnicza, którą stworzyliśmy specjalnie do tego celu. Musimy więc zaznaczyć, że chcemy wybrać jedną z kwerend a następnie zaznaczyć "zad 5 pom".
+W naszym przykładzie jest to kwerenda pomocnicza, którą stworzyliśmy specjalnie do tego celu. Musimy więc zaznaczyć, że chcemy wybrać jedną z kwerend, a następnie zaznaczyć "zad 5 pom".
 
 ### 5. Jak łączą się wybrane tabele (i/lub kwerendy)?
 ![](https://i.imgur.com/WO1AvD6.png)
-Na tym etapie musimy zdefiniować co będzie elementem wspólny, a więc wartość którego pola występującego w pierwszej tabeli chcemy pominąć w wyniku, jeśli występuje w tabeli drugiej. Innymi słowy, które pole chcemy znaleźć jako jako wartość niedopasowaną.
+Na tym etapie musimy zdefiniować co będzie elementem wspólny. Interesuje nas więc pole, którego wartość występuje w pierwszej tabeli, a którą chcemy pominąć w wyniku, jeśli występuje również w tabeli drugiej. Innymi słowy, które pole chcemy znaleźć jako wartość niedopasowaną.
 W naszym przykładzie jest to pole `Numer_komputera`.
 
 ### 6. Wybieramy pola, które chcemy zobaczyć w wyniku. 
 Aby wybrać dane pole klikamy na nie dwukrotnie lub zaznaczamy poprzez jednokrotne kliknięcie i korzystamy ze strzałki ">". Analogicznie, cofnąć wybór jakiegoś pola możemy poprzez zaznaczenie go i kliknięcie "<".
 ![](https://i.imgur.com/6RAyu7X.png)
-W zadaniu pytają nas jedynie o liczbę komputerów, wystarczy nam zatem `Numer_komputera`.
+W zadaniu pytają nas jedynie o liczbę komputerów. Wystarczy nam zatem `Numer_komputera`.
 
 ### 7. Zapisujemy kwerendę.
 ![](https://i.imgur.com/OnK8tsO.png)
@@ -45,7 +45,7 @@ Możemy zmienić jej automatyczną nazwę na bardziej przystępną. W tym przyk�
 
 ### 8. Zliczanie ilości rekordów w wyniku.
 Mamy conajmniej dwa sposoby na policzenie rekordów. 
-Możemy odczytać ją bezpośrednio z widoku wyniku.
+Liczbę rekordów możemy odczytać bezpośrednio z widoku wyniku.
 ![](https://i.imgur.com/n1PUos9.png)
 Lub stworzyć nową kwerendę, która policzy ilość rekordów w poprzedniej. (Wtedy warto zmienić nazwę "zad 5" na "zad 5 pom2", a dopiero ostateczny wynik nazwać "zad 5". Oczywiście możemy też przyjąć inną konwencję nazweniczą. Tak długo jak jest ona czytelna i przejrzysta, wszystko powinno być w porządku.)
 ![](https://i.imgur.com/3ZfhSEG.png)

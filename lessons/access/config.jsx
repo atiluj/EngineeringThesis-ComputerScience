@@ -1,5 +1,5 @@
 import Wskazowki from './wskazowki.mdx';
-import Wstep from './wstep.mdx';
+import Materialy from './wstep.mdx';
 
 import Wlaczanie from './wlaczanie.mdx';
 import Importowanie from './importowanie.mdx';
@@ -21,9 +21,13 @@ import Sql from './sql.mdx';
 
 export default [
     {name: "Wskazówki", content: <Wskazowki />},
-    {name: "Wstęp", content: <Wstep />},
 
-        {name: "Modelowanie", subchapters: [
+    {name: "Wstęp", subchapters: [
+        {name: "Materiały", content: <Materialy/>},
+        {name: "Teoria baz danych", content: <Teoria/>},
+    ]},
+
+    {name: "Modelowanie", subchapters: [
         {name: "Włącznie programu MS Access", content: <Wlaczanie/>},
         {name: "Importowanie danych", content: <Importowanie/>},
         {name: "Relacje między tabelami", content: <Relacje/>},
@@ -34,7 +38,7 @@ export default [
     {name: "Tworzenie zapytań", subchapters: [
         {name: "Tworzenie prostych kwerend", content: <ProsteKwerendy/>},
         {name: "Tworzenie kwerend wykorzystujących kilka tabel", content: <ZlozoneKwerendy/>},
-        {name: "Konstruuowanie wyrażeń", content: <Wyrazenia/>},
+        {name: "Konstruowanie wyrażeń", content: <Wyrazenia/>},
         {name: "Kwerendy pomocnicze", content: <KwerendyPomocnicze/>},
         {name: "Tworzenie raportów", content: null},
         {name: "Warto wiedzieć - przydatne funkcje", content: <Dodatek/>},
@@ -51,6 +55,5 @@ export default [
         {name: "Składnia", content: <Sql/>},
         {name: "Tworzenie zapytań", content: null},
         {name: "Tworzenie raportów", content: null},
-        {name: "Teoria baz danych*", content: <Teoria/>},
     ]},
 ];
