@@ -145,8 +145,8 @@ export default function () {
                 <div className="photo"><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita" /></div>
                 <div>
                     <p className="authorName">JULITA OSMAN<a href="https://www.linkedin.com/in/julita-osman-167530225/" target="_blank"><LinkedInIcon /></a></p>
-                    <p className="introduction">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
+                    <p className="introduction">W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej. Przez wiele lat udzielałam korepetycji z 
+                    informatyki i matematyki. Studiuję informatykę i filologię chińską. Mam nadzieję, że uda mi się połączyć te twa kierunki w mojej przysżłej pracy zawodowej. 
                     </p>
                 </div>
 
@@ -156,9 +156,8 @@ export default function () {
                 <div className="photo"><img src={new URL('../img/ola.jpeg', import.meta.url)} alt="Aleksandra" /></div>
                 <div>
                     <p className="authorName">ALEKSANDRA STĘPNIEWSKA<a href="https://www.linkedin.com/in/aleksandrast%C4%99pniewska/" target="_blank"><LinkedInIcon /></a></p>
-                    <p className="introduction">Loremzxcjjjaf
-                        ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
+                    <p className="introduction">Interesuję się bazami danych i za to właśnie za nie oraz materiały z Excela byłam odpowiedzialna podczas tworzenia naszej platformy. 
+                    Przez wiele lat udzielałam korepetycji z informatyki, matematyki i fizyki. Zawodowo swoją przyszłość wiążę z zarządzaniem w firmach IT.
                     </p>
                 </div>
             </div>
@@ -167,9 +166,8 @@ export default function () {
                 <div className="photo"><img src={new URL('../img/nikola.jpg', import.meta.url)} alt="Nikola" /></div>
                 <div>
                     <p className="authorName">NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola-wrona-429a75211/" target="_blank"><LinkedInIcon /></a></p>
-                    <p className="introduction">Loremzxcjjaf
-                        ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus omnis reprehenderit assumenda nihil sit suscipit eum odio nisi, ipsum, deleniti, et pariatur tempora odit facilis ratione? Quia, itaque accusamus!
+                    <p className="introduction">Od czasów liceum programowanie było dla mnie najbardziej fascynującą dziedziną informatyki. Przy tworzeniu tej platformy 
+                    zajęłam się teoretyczną częścią oraz kursem programowania w Pythonie. Obecnie studiuję informatykę i pracuję jako software developer.
                     </p>
                 </div>
             </div>
