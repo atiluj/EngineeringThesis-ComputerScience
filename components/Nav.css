@@ -172,7 +172,7 @@ nav a.menu-button.nav-button {
   }
   
   input:checked + .slider {
-    background-color: var(--accent);
+    background-color: var(--slider);
   }
 
   input:checked + .slider:before {
