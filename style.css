@@ -9,12 +9,22 @@
 @import "node_modules/@fontsource/ibm-plex-serif/500.css";
 
 :root {
-    --primary: #FAF8F1;
+    /* --primary: #FAF8F1;
     --primary2: #f3ead1;
     --secondary: #FAC213;
     --secondary2: #cea324;
+    --accent: #EB6440; */
+
+    --primary: #f6f8fb;
+    --primary2: #cedff6;
+    --secondary: #b7cce9;
+    --secondary2: #a6bcdb;
     --accent: #EB6440;
 }
+
+.gradient {
+    background-image: linear-gradient(to right, #c0e9ef, #c4d8f3, #c8c7f7, #ccb5fb, #d0a4ff);
+  }
 
 * {
     margin: 0;

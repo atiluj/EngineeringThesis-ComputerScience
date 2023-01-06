@@ -46,9 +46,15 @@ nav ul li {
     /* height: 65px; */
 }
 
-nav ul li a.menu-button {
+/* nav ul li a.menu-button {
     margin-bottom: 0;
+} */
+
+nav ul li a.menu-button.nav-button {
+    margin-bottom: 0;
+    background-color: transparent;
 }
+
 
 
 /* nav ul li a {

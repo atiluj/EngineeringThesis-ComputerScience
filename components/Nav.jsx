@@ -62,30 +62,30 @@ export default function() {
 
     const aStyle = {padding, fontSize};
 
-    return <nav id="navbar">
+    return <nav id="navbar" className="gradient">
         <ul>
             <li className="home">
-                <a href="index.html" style={aStyle} className="menu-button">Cześć!</a>
+                <a href="index.html" style={aStyle} className="menu-button nav-button">Cześć!</a>
             </li>
             <li className="teoria">
-                <a href="teoria.html" style={aStyle} className="menu-button">Teoria</a>
+                <a href="teoria.html" style={aStyle} className="menu-button nav-button">Teoria</a>
             </li>
             <li className="excel">
-                <a href="excel.html" style={aStyle} className="menu-button">Excel</a>
+                <a href="excel.html" style={aStyle} className="menu-button nav-button">Excel</a>
             </li>
             <li className="access">
-                <a href="access.html" style={aStyle} className="menu-button">Access</a>
+                <a href="access.html" style={aStyle} className="menu-button nav-button">Access</a>
             </li>
             <li className="python">
-                <a href="python.html" style={aStyle} className="menu-button">Python</a>
+                <a href="python.html" style={aStyle} className="menu-button nav-button">Python</a>
             </li>
             <li className="exercise">
-                <a href="exercise.html" style={aStyle} className="menu-button">Zadania</a>
+                <a href="exercise.html" style={aStyle} className="menu-button nav-button">Zadania</a>
             </li>
         </ul>
         <ul className="ul2">
             <li className="interpreter">
-                <a href="interpreter.html" style={aStyle} className="menu-button">Interpreter python</a>
+                <a href="interpreter.html" style={aStyle} className="menu-button nav-button">Interpreter python</a>
             </li>
         </ul>
     </nav>;
