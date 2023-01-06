@@ -158,8 +158,8 @@ nav a.menu-button.nav-button {
   
   .slider::before {
     position: absolute;
-    content: "<LightModeIcon/>";
-    background: white url('../img/moon-icon.png');
+    content: "";
+    background: white url('../img/sun-icon.png');
     background-position: center;
     transform: scale(1);
     height: 20px;
@@ -179,6 +179,9 @@ nav a.menu-button.nav-button {
     -webkit-transform: translateX(20px);
     -ms-transform: translateX(20px);
     transform: translateX(20px);
+    background: white url('../img/moon-icon.png');
+    background-position: center;
+    transform: scale(1);
   }
   
   /* Rounded sliders */
