@@ -84,9 +84,20 @@ export default function() {
             </li>
         </ul>
         <ul className="ul2">
+            <li>
+                <label class="switch">
+                    <a>
+                        <input type="checkbox"/>
+                        <span class="slider round"></span>
+                    </a>
+                </label>
+            </li>
+        </ul>
+        <ul className="ul2">
             <li className="interpreter">
                 <a href="interpreter.html" style={aStyle} className="menu-button nav-button">Interpreter python</a>
             </li>
         </ul>
+        
     </nav>;
 }
