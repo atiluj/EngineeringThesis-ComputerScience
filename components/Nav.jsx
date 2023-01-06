@@ -63,41 +63,31 @@ export default function() {
     const aStyle = {padding, fontSize};
 
     return <nav id="navbar" className="gradient">
-        <ul>
-            <li className="home">
+            <div id="nav-wrapper-left">
+               
                 <a href="index.html" style={aStyle} className="menu-button nav-button">Cześć!</a>
-            </li>
-            <li className="teoria">
+            
                 <a href="teoria.html" style={aStyle} className="menu-button nav-button">Teoria</a>
-            </li>
-            <li className="excel">
+        
                 <a href="excel.html" style={aStyle} className="menu-button nav-button">Excel</a>
-            </li>
-            <li className="access">
+            
                 <a href="access.html" style={aStyle} className="menu-button nav-button">Access</a>
-            </li>
-            <li className="python">
+            
                 <a href="python.html" style={aStyle} className="menu-button nav-button">Python</a>
-            </li>
-            <li className="exercise">
+            
                 <a href="exercise.html" style={aStyle} className="menu-button nav-button">Zadania</a>
-            </li>
-        </ul>
-        <ul className="ul2">
-            <li>
-                <label class="switch">
-                    <a>
-                        <input type="checkbox"/>
-                        <span class="slider round"></span>
-                    </a>
-                </label>
-            </li>
-        </ul>
-        <ul className="ul2">
-            <li className="interpreter">
+            </div>
+            <div id="nav-wrapper-right">
                 <a href="interpreter.html" style={aStyle} className="menu-button nav-button">Interpreter python</a>
-            </li>
-        </ul>
+
+                
+                <label style={aStyle} className="switch" >
+                        <input type="checkbox"/>
+                        <span className="slider round"></span>
+                </label>
+        
+                    
+            </div>
         
     </nav>;
 }
