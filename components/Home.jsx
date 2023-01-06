@@ -146,7 +146,7 @@ export default function () {
                     <div>
                         <p className="authorName">JULITA OSMAN<a href="https://www.linkedin.com/in/julita-osman-167530225/" target="_blank"><LinkedInIcon /></a></p>
                         <p className="introduction">W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej. Przez wiele lat udzielałam korepetycji z 
-                        informatyki i matematyki. Studiuję informatykę i filologię chińską. Mam nadzieję, że uda mi się połączyć te twa kierunki w mojej przysżłej pracy zawodowej. 
+                        informatyki i matematyki. Studiuję informatykę i filologię chińską. Mam nadzieję, że uda mi się połączyć te twa kierunki w mojej przyszłej pracy zawodowej. 
                         </p>
                     </div>
 
@@ -166,7 +166,7 @@ export default function () {
                     <div className="photo"><img src={new URL('../img/nikola.jpg', import.meta.url)} alt="Nikola" /></div>
                     <div>
                         <p className="authorName">NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola-wrona-429a75211/" target="_blank"><LinkedInIcon /></a></p>
-                        <p className="introduction">Od czasów liceum programowanie było dla mnie najbardziej fascynującą dziedziną informatyki. Przy tworzeniu tej platformy 
+                        <p className="introduction">Od czasów liceum programowanie było dla mnie najbardziej interesującą dziedziną informatyki. Przy tworzeniu tej platformy 
                         zajęłam się teoretyczną częścią oraz kursem programowania w Pythonie. Obecnie studiuję informatykę i pracuję jako software developer.
                         </p>
                     </div>

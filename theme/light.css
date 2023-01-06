@@ -14,6 +14,9 @@
     --nav-button-hover: #94949539;
     --exercise-secondary: #b9d2f3;
     --exercise-secondary2: #94aecf;
+    --card-background: #dee2e71c;
+    --card-shadow: rgba(99, 99, 99, 0.2);
+    --article-border: var(--main-accent);
 }
 
 .gradient {
