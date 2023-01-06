@@ -9,17 +9,7 @@
 @import "node_modules/@fontsource/ibm-plex-serif/500.css";
 
 :root {
-<<<<<<< HEAD
-    --font: #a6bcdb;
-=======
-    /* --primary: #FAF8F1;
-    --primary2: #f3ead1;
-    --secondary: #FAC213;
-    --secondary2: #cea324;
-    --accent: #EB6440; */
-
     --font: #7e8fa8;
->>>>>>> df4fb16 (Changes colors in authors section and footer (dark mode))
     --font-accent: #a6bcdb;
     --primary: #0e033e;
     --primary2: #190a5ac7;
@@ -30,15 +20,12 @@
     --main-accent: #692e8a;
     --accent: #A230ED;
     --slider: black;
-<<<<<<< HEAD
     --nav-button-hover: #1616172b;;
     --exercise-secondary: #231366;
     --exercise-secondary2: #140452;
-=======
     --card-background: #dee2e71c;
     --card-shadow: #4b4951c7;
     --article-border: #602c7d59;
->>>>>>> df4fb16 (Changes colors in authors section and footer (dark mode))
     /* --line: #a6bcdb; */
 }
 
