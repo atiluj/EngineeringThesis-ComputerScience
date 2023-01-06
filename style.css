@@ -8,6 +8,26 @@
 @import "node_modules/@fontsource/ibm-plex-serif/400.css";
 @import "node_modules/@fontsource/ibm-plex-serif/500.css";
 
+:root {
+    /* --primary: #FAF8F1;
+    --primary2: #f3ead1;
+    --secondary: #FAC213;
+    --secondary2: #cea324;
+    --accent: #EB6440; */
+
+    --primary: #f6f8fb;
+    --primary2: #cedff69c;
+    --secondary: #adc5e7;
+    --secondary2: #a6bcdb;
+    --title: #6991c8;
+    --main-accent: #322e2b;
+    --accent: #8c26d0c9;
+}
+
+.gradient {
+    background-image: linear-gradient(to right, #abdee6, #b9d2f3, #bcbbf1, #c6adf9, #c898fb);
+  }
+
 
 * {
     margin: 0;
@@ -15,6 +35,34 @@
     box-sizing: border-box; /*jeśli coś sie pierdoli to może by to to*/
 }
 
-div .wrapper{
+html {
+    background-color: var(--primary);
+}
+
+div .wrapper {
     margin: 0 auto;
+}
+
+.menu-button {
+    display: block;
+    padding: 12px;
+    font-size: 17px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    color: var(--primary);
+    
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: .7s;
+    background-color: var(--secondary);
+    text-align: left;
+}
+
+.menu-button:hover {
+    background-color: var(--secondary2);
+}
+
+.menu-button.nav-button:hover {
+    background-color: rgba(148, 148, 149, 0.223);
 }

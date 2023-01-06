@@ -20,13 +20,13 @@
         import * as ReactDOM from 'react-dom/client';
         import './style.css';
         const Nav = lazy(() => import('./components/Nav.jsx'));
-        const Teoria = lazy(() => import('./components/Teoria.jsx'));
+        const Section = lazy(() => import('./components/Section.jsx'));
         import Lessons from './lessons/teoria/config.jsx';
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<Suspense>
             <Nav />
-            <Teoria lessons={Lessons} title="teoria"/>
+            <Section lessons={Lessons} title="teoria"/>
         </Suspense>);
     </script>
 </body>

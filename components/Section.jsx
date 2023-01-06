@@ -1,4 +1,4 @@
-import './Teoria.css';
+import './Section.css';
 import * as React from 'react';
 import hljs from 'highlight.js';
 import '../node_modules/highlight.js/styles/dark.css';
@@ -17,7 +17,7 @@ const NavContext = React.createContext({
 function Subchapter({ chapterId, subchapterId, subchapter }) {
     const { changeChapter, curChapter, curSubchapter } = React.useContext(NavContext);
     const isCurrent = chapterId == curChapter && subchapterId == curSubchapter;
-    return <a href="#" className={"subtopic" + (isCurrent ? " subtopic-current" : "")}
+    return <a href="#" className={"subtopic menu-button" + (isCurrent ? " subtopic-current" : "")}
         onClick={() => changeChapter(chapterId, subchapterId)}>
         {chapterId}.{subchapterId + 1}. {subchapter.name}
     </a>;
@@ -30,7 +30,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
         if (curChapter == chapterId) setShow(true);
     }, [curChapter]);
     return <div>
-        <div className="topic" onClick={() => setShow(show => !show)}>
+        <div className="topic menu-button" onClick={() => setShow(show => !show)}>
             <a>{chapterId}. {chapter.name}</a>
             <div>{show ? <ExpandLess /> : <ExpandMore />}</div>
         </div>
@@ -46,7 +46,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
 function ChapterStandalone({ chapter, chapterId }) {
     const { changeChapter } = React.useContext(NavContext);
     return <div onClick={() => changeChapter(chapterId, 0)}>
-        <div className="topic">
+        <div className="topic menu-button">
             <a>{chapterId}. {chapter.name}</a>
             <div style={{ visibility: "hidden" }}><ExpandMore /></div>
         </div>
@@ -129,8 +129,8 @@ export default function ({lessons, title}) {
                 <div className="title ft">
                     <a>{title}</a>
                 </div>
-                <div className="cont-title">
-                    <a>SPIS TREŚCI</a>
+                <div className="cont-title title">
+                    <a>{title}</a>
                 </div>
 
                 <div className="cont">
@@ -143,9 +143,9 @@ export default function ({lessons, title}) {
             </div>
 
             <div className="main">
-                <div className="title">
+                {/* <div className="title">
                     <a>{title}</a>
-                </div>
+                </div> */}
                 <Contents lessons={lessons} />
                 <div className='controls'>
                     {/* <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div> */}

@@ -1,25 +1,22 @@
 .section {
-    background-color: #f0e9e0;
-    /*#f4e8db;*/
     padding-top: 100px;
 }
 
-.section .naglowek {
+.section .header {
     padding-top: 50px;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 55px;
     letter-spacing: 50px;
     text-transform: uppercase;
     line-height: 0px;
-    color: #c48538;
+    color: var(--main-accent);
     text-align: center;
 
     /* letter-spacing robi spacje za ostatnim znakiem - rozwiązanie problemu */
     text-indent: 50px;
-    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black */
 }
 
-.section .naglowek h1 {
+.section .header h1 {
     text-align: center;
 }
 
@@ -37,10 +34,6 @@
 }
 
 main {
-    /* background-image: linear-gradient(#f4e8db, #e2d3c4); */
-    /* background-color: #e2d3c4; */
-    background-color: #f0e9e0;
-    /*#f4e8db;*/
     min-height: 80vh;
     text-align: center;
     display: grid;
@@ -62,33 +55,7 @@ main .contents .cont {
     position: sticky;
     top: 60px;
     flex-direction: column;
-    /* background-color: #35312f; B1 */
-    background-color: #322e2b;
 }
-
-main .contents .cont a {
-    display: block;
-    padding: 12px;
-    font-size: 17px;
-    font-family: 'Chakra Petch', sans-serif;
-    font-weight: 900;
-    color: #f4e8db;
-    border-bottom: 1px solid #f4e8db;
-    border-top: 1px solid #f4e8db;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: .7s;
-}
-
-main .contents .cont a:hover {
-    background-color: #f4e8db;
-    border: solid 2px #322e2b;
-    color: #322e2b;
-}
-
-
-/* NAGŁÓWEK - CZEŚĆ */
-
 
 main article {
     font-family: 'IBM Plex Serif', serif;
@@ -97,7 +64,7 @@ main article {
     background-color: white;
     padding: 20px 30px;
     margin-bottom: 2vw;
-    border-width: 3.5px;
+    border-width: 2px;
     border-style: solid;
     text-align: justify;
 }
@@ -109,39 +76,20 @@ main article:last-child{
 main article h1 {
     font-family: 'Chakra Petch', sans-serif;
     text-transform: uppercase;
-    color: #322e2b;
+    color: var(--main-accent);
     padding-bottom: 6px;
 }
 
 .main article {
     text-justify: inter-word;
     margin: 2vw 0;
-    border-color: #322e2b;
+    border-color: var(--main-accent);
+    border-width: 2px;
 }
 
 main article {
-    border-color: #322e2b;
+    border-color: var(--main-accent);
     border-radius: 1px;
-}
-
-.color1 {
-    background-color: #2F4858;
-    height: 15px;
-}
-
-.color2 {
-    background-color: #a4413a;
-    height: 15px;
-}
-
-.color3 {
-    background-color: #c48538;
-    height: 15px;
-}
-
-.color4 {
-    background-color: #4A6B17;
-    height: 15px;
 }
 
 .separator {
@@ -152,7 +100,6 @@ main article {
 
 .authors {
     padding: 30px 8vw 40px;
-    /* background-color: #f0e9e0; */
 }
 
 .authorsTitle {
@@ -215,9 +162,7 @@ main article {
 footer{
     font-family: 'Chakra Petch', sans-serif;
     width: 100%;
-    /* background-color: #7C8977; */
     background-color: #4E4941;
-    /* background-color: #322e2b; */
     padding: 30px 0;
     color: #f4e8db;
     text-align: center;
@@ -249,7 +194,7 @@ footer a:hover{
     }
 
 
-    .section .naglowek {
+    .section .header {
         padding-top: 15px;
         font-size: 50px;
         letter-spacing: 45px;
@@ -291,7 +236,7 @@ footer a:hover{
 }
 
 @media(max-width:1000px) {
-    .section .naglowek {
+    .section .header {
         padding-top: 5px;
         font-size: 45px;
         letter-spacing: 40px;
@@ -331,7 +276,7 @@ footer a:hover{
         padding-top: 55px;
     }
 
-    .section .naglowek {
+    .section .header {
         font-size: 40px;
         letter-spacing: 25px;
         text-indent: 25px;
@@ -360,7 +305,7 @@ footer a:hover{
         padding-top: 50px;
     }
 
-    .section .naglowek {
+    .section .header {
         padding-top: 0px;
         font-size: 25px;
         letter-spacing: 5px;
@@ -403,10 +348,8 @@ footer a:hover{
         padding-top: 40px;
     }
 
-    .section .naglowek {
+    .section .header {
         font-size: 18px;
-        /* letter-spacing: 5px;
-        text-indent: 5px; */
     }
 
     .section article {

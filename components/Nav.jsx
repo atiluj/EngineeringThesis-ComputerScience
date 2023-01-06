@@ -36,19 +36,19 @@ export default function() {
     let padding, fontSize;
     if (windowWidth > 1200) {
         if (scrollY > 80) {
-            padding = "9px 17px";
-            fontSize = "14px";
+            padding = "7px 17px";
+            fontSize = "20px";
         } else {
-            padding = "19px 23px";
-            fontSize = "16px";
+            padding = "16px 23px";
+            fontSize = "18px";
         }
     } else if (windowWidth > 1000) {
         if (scrollY > 80) {
             padding = "9px 17px";
             fontSize = "14px";
         } else {
-            padding = "15px 17px";
-            fontSize = "16px";
+            padding = "13px 17px";
+            fontSize = "18px";
         }
     } else if (windowWidth > 810) {
         if (scrollY > 80) {
@@ -62,18 +62,30 @@ export default function() {
 
     const aStyle = {padding, fontSize};
 
-    return <nav id="navbar">
+    return <nav id="navbar" className="gradient">
         <ul>
-            <li className="home"><a href="index.html" style={aStyle}>Cześć!</a></li>
-            <li className="teoria"><a href="teoria.html" style={aStyle}>Teoria</a></li>
-            <li className="excel"><a href="excel.html" style={aStyle}>Excel</a></li>
-            <li className="access"><a href="access.html" style={aStyle}>Access</a></li>
-            <li className="python"><a href="python.html" style={aStyle}>Python</a></li>
-            <li className="exercise"><a href="exercise.html" style={aStyle}>Zadania</a></li>
+            <li className="home">
+                <a href="index.html" style={aStyle} className="menu-button nav-button">Cześć!</a>
+            </li>
+            <li className="teoria">
+                <a href="teoria.html" style={aStyle} className="menu-button nav-button">Teoria</a>
+            </li>
+            <li className="excel">
+                <a href="excel.html" style={aStyle} className="menu-button nav-button">Excel</a>
+            </li>
+            <li className="access">
+                <a href="access.html" style={aStyle} className="menu-button nav-button">Access</a>
+            </li>
+            <li className="python">
+                <a href="python.html" style={aStyle} className="menu-button nav-button">Python</a>
+            </li>
+            <li className="exercise">
+                <a href="exercise.html" style={aStyle} className="menu-button nav-button">Zadania</a>
+            </li>
         </ul>
         <ul className="ul2">
             <li className="interpreter">
-                <a href="interpreter.html" style={aStyle}>Interpreter python</a>
+                <a href="interpreter.html" style={aStyle} className="menu-button nav-button">Interpreter python</a>
             </li>
         </ul>
     </nav>;

@@ -3,39 +3,38 @@ import './Exercise.css';
 export default function () {
     return <>
         <main>
-            <div className="introduction"><p>W tej podstronie znajdziesz bezpośrednie przekierowania do zadań programistycznych oraz sprawdzaczki,
-                czyli maszynki, która przemieli twoje rozwiązanie i zwróci informację o tym czy przechodzi on testy. rozwiązanie
-                to ma na celu ułatwić Ci naukę blah blah blah</p></div>
             <div className="exercises-title">
                 <h1>ZADANIA Z KURSU PYTHON</h1>
                 <p>W tym dziale są zdania, które znajdziesz również w kursie. Posiadają one rozwiązania wzrocowe, które mają
                     za zadanie wprowadzić Cię w programowanie.</p>
             </div>
 
-            <div className="exercises-list">
-                <div className="list-element">1</div>
-                <div className="list-element">2</div>
-                <div className="list-element">3</div>
-                <div className="list-element">4</div>
-                <div className="list-element">5</div>
-                <div className="list-element">6</div>
-                <div className="list-element">7</div>
-                <div className="list-element">8</div>
-                <div className="list-element">9</div>
-                <div className="list-element">10</div>
-                <div className="list-element">11</div>
-                <div className="list-element">12</div>
-                <div className="list-element">13</div>
-                <div className="list-element">14</div>
-                <div className="list-element">15</div>
-                <div className="list-element">16</div>
-                <div className="list-element">17</div>
-                <div className="list-element">18</div>
-                <div className="list-element">19</div>
-                <div className="list-element">20</div>
-
+            <div className="exercises-list python-list">
+                <div className="list-element-wrapper">
+                    <div className="subject">Zmienne</div>
+                    <div className="list-element number-element">1</div>
+                    <div className="list-element number-element">2</div>
+                    <div className="list-element number-element">3</div>
+                </div>
+                <div className="list-element-wrapper">
+                    <div className="subject">Struktury danych</div>
+                    <div className="list-element number-element">1</div>
+                    <div className="list-element number-element">2</div>
+                    <div className="list-element number-element">3</div>
+                    <div className="list-element number-element">4</div>
+                </div>
+                <div className="list-element-wrapper">
+                    <div className="subject">Napisy</div>
+                    <div className="list-element number-element">1</div>
+                    <div className="list-element number-element">2</div>
+                    <div className="list-element number-element">3</div>
+                </div>
+                <div className="list-element-wrapper">
+                    <div className="subject">Instrukcje warunkowe</div>
+                    <div className="list-element number-element">1</div>
+                    <div className="list-element number-element">2</div>
+                </div>
             </div>
-
             <div className="exercises-title">
                 <h1>POZSOTAŁE ZADANIA</h1>
                 <p>Przerobienie ponizszych zadań jest gwarantem opanowania Pythona oraz uzyskania dobrego wyniku na maturze.

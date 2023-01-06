@@ -1,9 +1,9 @@
 main {
-    background-color: #f0e9e0;
     min-height: 100vh;
     text-align: center;
     padding: 60px 2.5vw;
     font-family: 'Chakra Petch', sans-serif;
+    margin: 0 10% 0 10%;
 }
 
 main .introduction{
@@ -15,26 +15,48 @@ main .introduction{
 }
 
 main .exercises-title{
-    margin: 10px 0;
-    background-color: #322e2b55;
-    border: solid #322e2b 2px;
-    border-radius: 10px;
+    margin-top: 50px;
 }
 
 main .exercises-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+main .exercises-list.python-list {
+    flex-direction: column;
+}
+
+main .list-element-wrapper {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.subject {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    width: 12rem;
 }
 
 main .list-element{
-    padding: 7px;
+    display: flex;
     margin: 2px;
     background-color: #c7c3bfb7;
     border: solid #322e2b 2px;
-    border-radius: 1px;
+    border-radius: 15px;
+    height: 2rem;;
     min-width: calc(11*1rem);
+    justify-content: center;
+    align-items: center;
+}
+
+
+main .list-element.number-element{
+    min-width: calc(3*1rem);
 }
 
 main .category{
