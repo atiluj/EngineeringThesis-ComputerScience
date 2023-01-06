@@ -36,19 +36,19 @@ export default function() {
     let padding, fontSize;
     if (windowWidth > 1200) {
         if (scrollY > 80) {
-            padding = "9px 17px";
-            fontSize = "14px";
+            padding = "7px 17px";
+            fontSize = "20px";
         } else {
-            padding = "19px 23px";
-            fontSize = "16px";
+            padding = "16px 23px";
+            fontSize = "18px";
         }
     } else if (windowWidth > 1000) {
         if (scrollY > 80) {
             padding = "9px 17px";
             fontSize = "14px";
         } else {
-            padding = "15px 17px";
-            fontSize = "16px";
+            padding = "13px 17px";
+            fontSize = "18px";
         }
     } else if (windowWidth > 810) {
         if (scrollY > 80) {
