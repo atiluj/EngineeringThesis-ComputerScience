@@ -1,6 +1,6 @@
 main {
     min-height: 100vh;
-    text-align: center;
+    text-align: left;
     padding: 60px 2.5vw;
     font-family: 'Chakra Petch', sans-serif;
     margin: 0 10% 0 10%;
@@ -16,6 +16,7 @@ main .introduction{
 
 main .exercises-title{
     margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 main .exercises-list{
@@ -39,19 +40,26 @@ main .list-element-wrapper {
     display: flex;
     text-align: left;
     align-items: center;
-    width: 12rem;
+    text-transform: uppercase;
+    width: 15rem;
+    border-left: 5px var(--exercise-secondary2) solid;
+    padding-left: 10px;
 }
 
 main .list-element{
     display: flex;
-    margin: 2px;
-    background-color: #c7c3bfb7;
-    border: solid #322e2b 2px;
+    margin-bottom: 10px;
+    margin-right: 7px;
+    background-color: var(--exercise-secondary);
     border-radius: 15px;
     height: 2rem;;
     min-width: calc(11*1rem);
     justify-content: center;
     align-items: center;
+}
+
+main .list-element:hover{
+    background-color: var(--exercise-secondary2);
 }
 
 
@@ -61,10 +69,10 @@ main .list-element.number-element{
 
 main .category{
     padding: 7px;
-    margin: 0 40px;
+    /* margin: 0 40px; */
     letter-spacing: 2px;
     font-weight: bold;
-    border-top: solid #322e2b 3px ;
+    border-top: solid var(--exercise-secondary) 3px ;
 }
 
 @media (max-width:810px) {

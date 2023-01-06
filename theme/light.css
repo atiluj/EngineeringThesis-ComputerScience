@@ -1,5 +1,5 @@
 :root {
-    --font: white;
+    --font: black;
     --font-accent: #322e2b;
     --primary: #f6f8fb;
     --primary2: #cedff69c;
@@ -10,7 +10,10 @@
     --main-accent: #322e2b;
     --accent: #8c26d0c9;
     --line: black;
-    --slider: 8c26d0c9;
+    --slider: #8c26d0c9;
+    --nav-button-hover: #94949539;
+    --exercise-secondary: #b9d2f3;
+    --exercise-secondary2: #94aecf;
 }
 
 .gradient {

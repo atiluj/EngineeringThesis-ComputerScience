@@ -5,8 +5,8 @@ export default function () {
         <main>
             <div className="exercises-title">
                 <h1>ZADANIA Z KURSU PYTHON</h1>
-                <p>W tym dziale są zdania, które znajdziesz również w kursie. Posiadają one rozwiązania wzrocowe, które mają
-                    za zadanie wprowadzić Cię w programowanie.</p>
+                {/* <p>W tym dziale są zdania, które znajdziesz również w kursie. Posiadają one rozwiązania wzrocowe, które mają
+                    za zadanie wprowadzić Cię w programowanie.</p> */}
             </div>
 
             <div className="exercises-list python-list">
@@ -37,9 +37,9 @@ export default function () {
             </div>
             <div className="exercises-title">
                 <h1>POZSOTAŁE ZADANIA</h1>
-                <p>Przerobienie ponizszych zadań jest gwarantem opanowania Pythona oraz uzyskania dobrego wyniku na maturze.
+                {/* <p>Przerobienie ponizszych zadań jest gwarantem opanowania Pythona oraz uzyskania dobrego wyniku na maturze.
                     na podstawie matur coś tam blabla bla.
-                </p>
+                </p> */}
             </div>
 
             <div className="exercises-list">

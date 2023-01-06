@@ -9,12 +9,6 @@
 @import "node_modules/@fontsource/ibm-plex-serif/500.css";
 
 :root {
-    /* --primary: #FAF8F1;
-    --primary2: #f3ead1;
-    --secondary: #FAC213;
-    --secondary2: #cea324;
-    --accent: #EB6440; */
-
     --font: #a6bcdb;
     --font-accent: #a6bcdb;
     --primary: #0e033e;
@@ -26,6 +20,9 @@
     --main-accent: #692e8a;
     --accent: #A230ED;
     --slider: black;
+    --nav-button-hover: #1616172b;;
+    --exercise-secondary: #231366;
+    --exercise-secondary2: #140452;
     /* --line: #a6bcdb; */
 }
 
@@ -70,5 +67,5 @@ div .wrapper {
 }
 
 .menu-button.nav-button:hover {
-    background-color: rgba(148, 148, 149, 0.223);
+    background-color: var(--nav-button-hover);
 }
