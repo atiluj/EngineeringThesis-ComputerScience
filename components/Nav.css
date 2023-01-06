@@ -2,12 +2,13 @@ nav {
     background-color: var(--secondary);
     font-size: 0;
     /* to likiwduje wbudowany margines w menu*/
-    /* overflow: hidden; */
+    overflow: hidden;
     /* navbar moving while scrolling */
     position: fixed;
     width: 100%;
     top: 0;
-    /* z-index: 99; */
+    z-index: 99;
+    position:fixed;
     border-bottom: 2px solid var(--primary);
 }
 
