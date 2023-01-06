@@ -19,6 +19,8 @@
     --primary2: #cedff69c;
     --secondary: #adc5e7;
     --secondary2: #a6bcdb;
+    --title: #6991c8;
+    --main-accent: #322e2b;
     --accent: #8c26d0c9;
 }
 
@@ -48,8 +50,6 @@ div .wrapper {
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
     color: var(--primary);
-    /* border-bottom: 1px solid #f4e8db; */
-    /* border-top: 1px solid #f4e8db; */
     
     margin-bottom: 3px;
     letter-spacing: 1px;
@@ -61,14 +61,8 @@ div .wrapper {
 
 .menu-button:hover {
     background-color: var(--secondary2);
-    /* background-color: #f4e8db;
-    border: solid 2px #322e2b;
-    color: #322e2b; */
 }
 
 .menu-button.nav-button:hover {
     background-color: rgba(148, 148, 149, 0.223);
-    /* background-color: #f4e8db;
-    border: solid 2px #322e2b;
-    color: #322e2b; */
 }

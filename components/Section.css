@@ -1,27 +1,27 @@
-
-
 .title {
-    border-radius: 50px;
-    background-color: #c1a26d6e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--primary2);
     text-align: center;
     font-size: 35px;
-    letter-spacing: 30px;
+    letter-spacing: 10px;
     text-indent: 30px;
-    /*?jakoś dziwnie*/
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 900;
-    color: #322e2b;
-    /* margin-top: 10px; */
+    color: var(--title);
+    margin-bottom: 20px;
     text-transform: uppercase;
+    height: 80px;
 }
 
 .cont-title {
     padding: 10px 0;
     text-align: center;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; TU MOGŁAM COS ZEPSUC */
     line-height: 25px;
     text-indent: 5px;
-    /*?jakoś dziwnie*/
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 900;
     font-size: 25px;
@@ -29,10 +29,7 @@
 }
 
 main {
-    /* background-color: #f0e9e0; */
-    /*#f4e8db;*/
     min-height: 80vh;
-    /* padding: 2vw 0; */
     text-align: center;
     display: grid;
     grid-template-columns: 20vw 1fr;
@@ -49,9 +46,6 @@ main .contents {
 }
 
 main .contents .cont {
-    /* display: flex; to nie potrzebne
-    flex-direction: column; */
-    /* background-color: #f4e8db; */
     padding: 0;
     font-size: 14px;
     font-family: 'Chakra Petch', sans-serif;
@@ -61,52 +55,27 @@ main .contents .cont {
 
 
 main .contents .cont .topic.menu-button{
-    /* font-weight: 900; */
     display: flex;
-    /* padding: 10px; */
-    /* transition: 1s; */
-    /* border: 1px solid #f4e8db; */
-    /* border-left-width: 0px; */
-    /* border-right-width: 0px; */
-    /* background-color: #322e2b; */
-    /* color: #f4e8db; */
     align-items: center;
     justify-content: space-between;
-    /* cursor: pointer; */
 }
 
 .topic a {
     text-transform: uppercase;
     text-decoration: none;
-    /* color: #f4e8db; */
 }
 
 
 main .contents .cont .subtopic {
-    /* display: block; */
-    /* cursor: pointer; */
-    /* padding: 10px; */
-    /* transition: .7s; */
-    /* letter-spacing: 1px; */
-    /* border-left-width: 0px; */
-    /* border-right-width: 0px; */
-    /* text-decoration: none; */
     margin: 0;
-    /* color: #322e2b; */
-    /* border: 3px solid #322e2b; */
-    /* background-color: #f4e8db; */
     text-align: left;
     background-color: var(--primary);
     color: var(--secondary2);
     border-bottom: 1px var(--secondary) solid;
-    /* border-style: solid;
-    border-color: var(--secondary); */
     padding-left: 25px;
 }
 
 main .contents .cont .subtopic-current {
-    /* background-color: #c1a26d6e; */
-    /* background-color: #174f3063; */
     color: var(--secondary);
     background-color: var(--primary2);
     border-left: 5px var(--secondary) solid;
@@ -118,44 +87,31 @@ main .contents .cont .subtopic:hover {
 } 
 
 main .contents .cont .subtopic-current:hover {
-    /* background-color: #c1a26d6e; */
-    /* background-color: #174f3063; */
     color: var(--secondary);
     background-color: var(--primary2);
 }
-/* main .contents .cont .subtopic:visited{
-    background-color: #7ca57c33;
-} */
-/* 
-main .contents .cont .topic:hover {
-    background-color: #322e2ba1;
-} */
 
 /* NAGŁÓWEK - CZEŚĆ */
 
-main .main {
-    margin-top: 5px;
-}
-
-
 main article {
-    /* font-family: 'IBM Plex Serif', serif; */
     font-family: Roboto, sans-serif;
     font-size: 14px;
     font-weight: 300;
-    background-color: #f4e8db;
     padding: 20px 30px;
     margin-bottom: 2vw;
-    border-width: 3.5px;
-    border-style: solid;
     text-align: justify;
-    border-color: #322e2b;
     border-radius: 1px;
     text-justify: inter-word;
-    margin: 15px 0;
 }
 
-main article h1,
+main article h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    text-transform: uppercase;
+    color: #322e2b;
+    font-size: 25px;
+    border-bottom: 3px black solid;
+}
+
 main article h2,
 main article h3,
 main article h4,
@@ -165,27 +121,13 @@ main article h6 {
     margin-top: 20px;
 }
 
-main article h1 {
-    text-transform: uppercase;
-    color: #322e2b;
-    font-size: 25px;
-    /* text-align: center; */
-}
-
 main article img {
     display: block;
     margin: 0 auto;
     padding: 10px 0;
-    
     max-width: 90%;
     width: 100%;
-    /* changing images size - Ola*/
-    /* max-width: 70%;
-    width: 60%; */
-    /* end of changes */
 }
-
-
 
 main article pre {
     margin: 10px 0;
@@ -194,50 +136,14 @@ main article pre {
 
 .main .controls{
     display: flex;
-    justify-content: end; /*space-between*/
+    justify-content: end;
     margin: 0 30px;
 }
-
-/*to jest do OZNACZ JAKO PRZERIOBIENE*/
-/* .controls div:nth-child(1){
-    font-family: 'Chakra Petch', sans-serif;
-} */
-
-/* .controls div:nth-child(1) label{
-    display: flex;
-    align-items: self-start;
-    cursor: pointer;
-    display: none;
-} */
-
-/* .controls div:nth-child(1) input{
-    height: 20px;
-    width: 20px;
-    border-radius: 90%;
-    appearance: none;
-    background: red;
-    border: solid 2px black;
-    margin-right: 5px;
-    transition: transform;
-    transition-duration: 1s;
-} */
-
-/* 
-.controls div:nth-child(1):hover input{
-    background: yellow;
-    cursor: pointer;
-}
-
-.controls div:nth-child(1) input:checked{
-    background: rgb(12, 242, 104);
-
-} */
 
 .controls button{
     width: 30px;
     height: 30px;
     border-radius: 90%;
-    /* font-size: 30px; */
     margin-left: 10px;
     border: solid 1px transparent;
     background-color: transparent;
@@ -254,18 +160,9 @@ main article pre {
     display: none;
 }
 
-article .info{
-    background-color: rgba(35, 94, 94, 0.619);
-    padding: 20px 15px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
-
-/* adding styles for Access section - Ola */
 main article img.small-screen{
     max-width: 30%;
 }
-/* end of changes */
 
 @media(max-width: 1400px) {
     main {
@@ -280,7 +177,6 @@ main article img.small-screen{
 @media (max-width: 1200px) {
     main {
         grid-template-columns: 23vw 1fr;
-        /* gap: 2vw; */
     }
 
     .cont-title {
@@ -326,12 +222,6 @@ main article img.small-screen{
         font-size: 13px;
     }
 
-    /* main .contents .cont .topic{
-        padding: 10 6px;
-        border-left: 1px solid #f0e9e0;
-        border-right: 1px solid #f0e9e0;
-    } */
-
     main .contents .cont .subtopic {
         margin: .5px 0;
     }
@@ -339,7 +229,6 @@ main article img.small-screen{
     main .contents .cont .subtopic {
         margin: 1px;
         border-width: 2px;
-        /* border-left: 0; */
     }
 
     .title {

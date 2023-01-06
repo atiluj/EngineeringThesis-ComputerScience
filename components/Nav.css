@@ -9,7 +9,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 99;
-    border-bottom: 2px solid #f4e8db;
+    border-bottom: 2px solid var(--primary);
 }
 
 .ul2 {
@@ -31,7 +31,6 @@ nav {
 nav ul {
     max-width: 94vw;
     float: left;
-    /* background-color: #35312f; B1*/
     padding-left: 30px;
 }
 
@@ -43,106 +42,12 @@ nav ul {
 nav ul li {
     display: inline-block;
     transition: 0.7s;
-    /* height: 65px; */
 }
-
-/* nav ul li a.menu-button {
-    margin-bottom: 0;
-} */
 
 nav ul li a.menu-button.nav-button {
     margin-bottom: 0;
     background-color: transparent;
 }
-
-
-
-/* nav ul li a {
-    display: block;
-    box-sizing: border-box;
-    // może być potrzben przy tworzeniu nav dla telefonów
-    padding: 19px 23px;
-    // padding: 0 30px ; 
-    font-family: 'Chakra Petch', sans-serif;
-    font-weight: 900;
-    color: #f4e8db;
-    font-size: 16px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: .5s;
-} */
-
-/* 
-.home:hover {
-    background-color: #c48538;
-}
-
-.home:hover a {
-    // color: #c48538;  
-    color: #FFEBCD;
-}
-
-.teoria:hover {
-    background-color: #E9E2CF;
-}
-
-.teoria:hover a {
-    color: #c48538;
-}
-
-.excel:hover {
-    background-color: #4A6B17;
-}
-
-.excel:hover a {
-    color: #D3EDAB;
-    // color: #4A6B17;
-}
-
-.access:hover {
-    background-color: #a4413a;
-}
-
-.access:hover a {
-    color: #EFD4D2;
-    // color: #a4413a;
-}
-
-.python:hover {
-    background-color: #496998;
-}
-
-.python:hover a {
-    color: #E9E193;
-    // color: #496998;
-}
-
-.cpp:hover {
-    background-color: #6F8DBE;
-}
-
-.cpp:hover a {
-    // color: white;
-    color: #6F8DBE;
-}
-
-.exercise:hover {
-    background-color: #f0e9e0;
-}
-
-.exercise:hover a {
-    color: #322e2ba6;
-} */
-
-/* .interpreter:hover {
-    background-color: #f0e9e0;
-}
-
-.interpreter:hover a {
-    color: #322e2b;
-} */
-
 
 @media (max-width: 1200px) {
     nav {

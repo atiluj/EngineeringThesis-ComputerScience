@@ -1,4 +1,4 @@
-import './Teoria.css';
+import './Section.css';
 import * as React from 'react';
 import hljs from 'highlight.js';
 import '../node_modules/highlight.js/styles/dark.css';
@@ -129,8 +129,8 @@ export default function ({lessons, title}) {
                 <div className="title ft">
                     <a>{title}</a>
                 </div>
-                <div className="cont-title">
-                    <a>SPIS TREŚCI</a>
+                <div className="cont-title title">
+                    <a>{title}</a>
                 </div>
 
                 <div className="cont">
@@ -143,9 +143,9 @@ export default function ({lessons, title}) {
             </div>
 
             <div className="main">
-                <div className="title">
+                {/* <div className="title">
                     <a>{title}</a>
-                </div>
+                </div> */}
                 <Contents lessons={lessons} />
                 <div className='controls'>
                     {/* <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div> */}
