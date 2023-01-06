@@ -1,5 +1,6 @@
 import './Nav.css';
 import * as React from 'react';
+import LightModeIcon from '@mui/icons-material/LightMode';
 
 function useWindowWidth() {
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
@@ -80,8 +81,7 @@ export default function() {
             <div id="nav-wrapper-right">
                 <a href="interpreter.html" style={aStyle} className="menu-button nav-button">Interpreter python</a>
 
-                
-                <label style={aStyle} className="switch" >
+                <label className="switch" >
                         <input type="checkbox"/>
                         <span className="slider round"></span>
                 </label>

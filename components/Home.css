@@ -25,7 +25,8 @@
     font-size: 18px;
     line-height: 20px;
     font-weight: 400;
-    background-color: white;
+    background-color: var(--primary3);
+    color: var(--font);
     padding: 60px 30px 20px;
     margin: 0 5vw;
     text-align: center;
@@ -59,7 +60,8 @@ main article {
     font-family: 'IBM Plex Serif', serif;
     font-size: 17px;
     font-weight: 400;
-    background-color: white;
+    background-color: var(--primary3);
+    color: var(--font);
     padding: 20px 30px;
     margin-bottom: 2vw;
     border-width: 2px;

@@ -15,17 +15,21 @@
     --secondary2: #cea324;
     --accent: #EB6440; */
 
-    --primary: #f6f8fb;
-    --primary2: #cedff69c;
-    --secondary: #adc5e7;
-    --secondary2: #a6bcdb;
+    --font: #a6bcdb;
+    --font-accent: #a6bcdb;
+    --primary: #0e033e;
+    --primary2: #190a5ac7;
+    --primary3: #11034d9e;
+    --secondary: #360691;
+    --secondary2: #3e15b8;
     --title: #6991c8;
-    --main-accent: #322e2b;
-    --accent: #8c26d0c9;
+    --main-accent: #692e8a;
+    --accent: #A230ED;
+    /* --line: #a6bcdb; */
 }
 
 .gradient {
-    background-image: linear-gradient(to right, #abdee6, #b9d2f3, #bcbbf1, #c6adf9, #c898fb);
+    background-image: linear-gradient(to left, #9d3dd4, #6d13a8, #6609c4, #4609b9);
   }
 
 
@@ -37,6 +41,7 @@
 
 html {
     background-color: var(--primary);
+    color: var(--font);
 }
 
 div .wrapper {
