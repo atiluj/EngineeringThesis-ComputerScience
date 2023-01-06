@@ -99,7 +99,7 @@ main article {
 }
 
 .authors {
-    padding: 30px 8vw 40px;
+    padding: 30px 0 40px;
 }
 
 .authorsTitle {
@@ -114,34 +114,39 @@ main article {
     margin-bottom: 30px;
 }
 
-.author {
-    background-color: #dee2e760;
-    border-bottom: 0.5px black solid;
-    color: var(--main-accent);
-    border-radius: 45;
+.authors-details-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 80px;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.author div:nth-child(2) {
-    padding: 0 2.5vw 0 3vw;
+.author {
+    width: 25%;
+    flex-direction: column;
+    background-color: #dee2e760;
+    /* border-bottom: 0.5px black solid; */
+    color: var(--main-accent);
+    /* border-radius: 45; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 80px; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+/* .author div:nth-child(2) {
+    padding: 0 2.5vw 0 3vw;
+} */
 
 .authorName {
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     font-size: 30px;
     font-family: 'Chakra Petch', sans-serif;
-    text-align: right;
+    text-align: center;
 }
 
-.author:nth-child(odd) .authorName {
-    text-align: left;
-}
-
-.author:nth-child(odd) {
-    flex-direction: row-reverse;
+.photo {
+    padding: 10%;
 }
 
 .photo img {
@@ -154,11 +159,12 @@ main article {
 .introduction {
     text-align: justify;
     font-size: 20px;
+    padding: 10%;
 }
 
 .authorName a{
     color: black;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 
 footer{
@@ -168,12 +174,11 @@ footer{
     padding: 30px 0;
     color: var(--primary2);
     text-align: center;
-    
 }
 
 footer a{
     text-decoration: none;
-    color: var(--primary2)
+    color: var(--primary2);
     transition: .7s;
 }
 
