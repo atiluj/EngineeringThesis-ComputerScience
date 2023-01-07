@@ -1,21 +1,21 @@
 Dalej będziemy bazować na naszym przykładzie, tym razem rozwiążemy podpunkt 2. 
-![](https://i.imgur.com/5LHeQWa.png)
+<img src={new URL('https://i.imgur.com/5LHeQWa.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 Potrzebujemy więc informacji o sekcji, w jakiej znajduje się komputer oraz o ilości napraw polegających na wymianie jakiegoś podzespołu.
 Zajrzyjmy zatem ponownie do treści zadania, widzimy, że informacja o `Sekcji` znajduje się w tabeli `Komputery`.
-![](https://i.imgur.com/qSbCtJf.png)
+<img src={new URL('https://i.imgur.com/qSbCtJf.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 Natomiast informację o tym, czy wymagana była naprawa jakiegoś podzespołu możemy wyczytać z kolumny `Rodzaj` w tabeli `Naprawy`
-![](https://i.imgur.com/3ip6hpW.png)
+<img src={new URL('https://i.imgur.com/3ip6hpW.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 Tworzymy nowy projekt kwerendy i wybieramy table `Komputery` oraz `Naprawy`.
 ![](https://i.imgur.com/bPKlIiJ.png)
 Zauważmy jednak, że teraz nasze tabele nie są w żaden sposób połączone. Powinien to być dla nas sygnał, że potrzebujemy jeszcze jakiejś tabeli, która pozwoli nam na zidentyfikowanie, który z komputerów wymagał danej naprawy. Jest to tabela 'Awarie'. Dodajmy ją więc do naszego projektu.
 ![](https://i.imgur.com/cWPtOV7.png)
 Mamy już wszystkie potrzebne nam dane. Czas zastanowić się, których pól będziemy potrzebować oraz w jaki sposób chcemy skonstruować nasze zapytanie.
-![](https://i.imgur.com/GvD4VNL.png)
+<img src={new URL('https://i.imgur.com/GvD4VNL.png', import.meta.url)} alt="xyz" className="medium-img" />
 Mamy już wszystkie naprawy komputerów z sekcji "A", które polegały na wymianie podzespołów.
-![](https://i.imgur.com/kkGJC99.png)
+<img src={new URL('https://i.imgur.com/kkGJC99.png', import.meta.url)} alt="xyz" className="medium-img" />
 Wynik jednak nie jest jeszcze do końca odpowiedzią na pytanie z zadania. Chcemy mieć bowiem tylko te komputery, które wymagały conajmniej 10 takich napraw. Przydatna okaże się znów funkcjia "Sumy". Potrzebna nam będzie również kolumna, na podstawie której będziemy mogli policzyć liczbę napraw. Idealna jest do tego celu kolumna `Identyfikator` będąca kluczem głównym tabeli `Naprawy`.
 ![](https://i.imgur.com/q90aBSj.png)
 W funkcji sumy dla pola `Numer_komputera` wybieramy opcję "Grupuj według", ponieważ chcemy policzyć ile napraw przeprowadzono dla danego komputera, a więc zgrupować naprawy według identyfikatora danego komputera. `Sekcja` oraz `Rodzaj` są nam tutaj potrzebne jedynie dla przefiltrowania danych, tak aby brać pod uwagę jedynie te rekordy, które spełniają kryteria zadania. W związku z tym wybieramy opcę sumy "Gdzie". Tak jak mówiliśmy zliczać naprawy będziemy, za pomoca liczenia `Identyfikatorów` napraw, stąd funkcja sumy dla tej kolumny to oczywiście "Policz". Dodajemy dodatkowe kryterium >=10, ponieważ z treści zadania wiemy, że interesują nas jedynie te komputery, które wymagały conajmniej 10 wymian podzespołów.

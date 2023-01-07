@@ -1,5 +1,6 @@
 import './Nav.css';
 import * as React from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function useWindowWidth() {
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
@@ -29,20 +30,21 @@ function useScrollY() {
     return scrollY;
 }
 
-export default function() {
-    const windowWidth = useWindowWidth();
-    const scrollY = useScrollY();
-
-    //TODO: drop-down menu
-    function myFunction() {
-    var x = document.getElementById("navbar");
-    if (x.className === "topnav") {
+//TODO: drop-down menu
+function navBurger() {
+    const x = document.getElementById("top-navbar");
+    if (x.className === "navbar") {
+        console.log("elo elo");
         x.className += " responsive";
     } else {
-        x.className = "topnav";
-    }
-    }
-    //
+        console.log("zenujace"); 
+        x.className = "navbar";
+    }//
+}
+
+export default function() {
+    const windowWidth = useWindowWidth();
+    const scrollY = useScrollY();    
 
     let padding, fontSize;
     // if (windowWidth > 1200) {
@@ -73,7 +75,7 @@ export default function() {
 
     const aStyle = {padding, fontSize};
 
-    return <nav id="navbar" className="gradient">
+    return <nav id="top-navbar" className="navbar">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
@@ -99,9 +101,10 @@ export default function() {
                         <span className="slider round"></span>
                 </label>
 
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
+
+                <button className="icon" onClick={navBurger}>
+                    <MenuIcon className="nav-burger"/>
+                </button>
         
                     
             </div>

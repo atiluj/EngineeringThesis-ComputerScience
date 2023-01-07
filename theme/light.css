@@ -19,6 +19,6 @@
     --article-border: var(--main-accent);
 }
 
-.gradient {
+.navbar {
     background-image: linear-gradient(to right, #abdee6, #b9d2f3, #bcbbf1, #c6adf9, #c898fb);
   }

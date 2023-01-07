@@ -126,9 +126,6 @@ export default function ({lessons, title}) {
     return <NavContext.Provider value={{ curChapter, curSubchapter, changeChapter }}>
         <main>
             <div className="contents">
-                <div className="title ft">
-                    <a>{title}</a>
-                </div>
                 <div className="cont-title title">
                     <a>{title}</a>
                 </div>
@@ -143,9 +140,6 @@ export default function ({lessons, title}) {
             </div>
 
             <div className="main">
-                {/* <div className="title">
-                    <a>{title}</a>
-                </div> */}
                 <Contents lessons={lessons} />
                 <div className='controls'>
                     {/* <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div> */}

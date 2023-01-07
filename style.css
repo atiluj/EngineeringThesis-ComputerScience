@@ -26,18 +26,36 @@
     --card-background: #dee2e71c;
     --card-shadow: #4b4951c7;
     --article-border: #602c7d59;
+    --tools: #cccc;
+    --tools2: #fcf8f8cc;
     /* --line: #a6bcdb; */
 }
 
-.gradient {
+.navbar {
     background-image: linear-gradient(to left, #9d3dd4, #6d13a8, #6609c4, #4609b9);
   }
+
+/* for dark mode */
+.main .second p img{
+    filter: brightness(0.7);
+}
+
+.main .second img.super-small-img,
+.main .second img.small-img,
+.main .second img.medium-img,
+.main .second img.big-img {
+    filter: brightness(0.7);
+}
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /*jeśli coś sie pierdoli to może by to to*/
+}
+
+body{
+    overflow: overlay;
 }
 
 html {
@@ -71,4 +89,26 @@ div .wrapper {
 
 .menu-button.nav-button:hover {
     background-color: var(--nav-button-hover);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: var(--tools);
+    border-radius: 5px;    
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--tools2);
 }

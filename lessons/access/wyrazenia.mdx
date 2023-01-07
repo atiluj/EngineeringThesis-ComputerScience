@@ -1,9 +1,9 @@
 Zajmijmy się teraz podpunktem 3.
-![](https://i.imgur.com/C8p3UYH.png)
+<img src={new URL('https://i.imgur.com/C8p3UYH.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 Jego rozwiązywanie podzielimy na trzy części. W pierwszej chcemy się dowiedzieć, ile komputerów z danej sekcji uległo awarii którego dnia.
 Znów zagłębiamy się w treść zadania i dowiadujemy się, że będziemy potrzebować wszystkich tabel, a konkretnie kolumny `Sekcja` z tabeli `Komputery`, kolumny `Czas_awarii` z tabeli `Awarie`, według których będziemy grupować wyniki oraz kolumny `Identyfikator` z tabeli `Naprawy`, przy pomocy której będziemy je zliczać.
-![](https://i.imgur.com/UKzsny1.png)
+<img src={new URL('https://i.imgur.com/UKzsny1.png', import.meta.url)} alt="xyz" className="medium-img" />
 Zauważmy jednak, że znów wynik nie jest tym czego oczekujemy. Dlaczego?
 ![](https://i.imgur.com/eZIDhTV.png)
 `Czas_awarii` to dokładny czas, włącznie z godziną i minutą. Nas interesuje jedynie data. 
@@ -13,15 +13,15 @@ Skonstruujemy więc wyrażenie, które pozwoli nam wyłuskać datę z naszego `C
 ![](https://i.imgur.com/RQ1mE9I.png)
 
 ### 2. Najłatwiej jest po prostu rozwijać opcje i wyszukać  odpowiednią z "Funkcji wbudowanych" oraz kolumny w tabelach czy kwerendach z naszej bazy danych.
-![](https://i.imgur.com/jyUQodq.png)
+<img src={new URL('https://i.imgur.com/jyUQodq.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 ### 3. Wybieramy "Funkcje wbudowane" -> "Data/godzina" i klikamy dwukrotnie na "Day"
-![](https://i.imgur.com/RGmeeb1.png)
+<img src={new URL('https://i.imgur.com/RGmeeb1.png', import.meta.url)} alt="xyz" className="medium-img" />
 Widzimy, że w białym polu na górze pojawił nam się szablon użycia funkcji, która wyłuskuje dzień z daty. 
 
 ### 4. Uzupełniamy argument funkcji
 Teraz chcemy w  miejsce data wstawić datę awarii. W tym celu zaznaczamy #&60#&60data#&62#&62, kilakmy tabele `Naprawy` i wybieramy kolumnę `Czas_awarii`.
-![](https://i.imgur.com/75qMXAv.png)
+<img src={new URL('https://i.imgur.com/75qMXAv.png', import.meta.url)} alt="xyz" className="small-img" />
     
 ### 5. Wciskamy "OK" i ustawiamy odpowiednią opcję funkcji sumy. 
 W naszym przykładzie chcemy grupować wyniki według dnia, więc domyślna opcja "Grupuj według" będzie odpowiednia.
@@ -34,15 +34,15 @@ Zauważmy, że wyniki wciąż nie są takie jak byśmy oczekiwali. Dlaczego? Bo 
     
 ### 7. Usuwanie niepotrzebnej części zapytania.
 Możemy zrobić to na dwa sposoby, albo zaznaczyć daną kolumnę w zapytaniu i nacisnąc kalawisz "Delete",
-![](https://i.imgur.com/J8kiDHs.png)
+<img src={new URL('https://i.imgur.com/J8kiDHs.png', import.meta.url)} alt="xyz" className="medium-img" />
 albo usunąć nazwę kolumny i kliknąć enter.
-![](https://i.imgur.com/qUacLpj.png)
+<img src={new URL('https://i.imgur.com/qUacLpj.png', import.meta.url)} alt="xyz" className="medium-img" />
 Efekt będzie taki sam - usuniemy niepotrzebną część zapytania.
 ![](https://i.imgur.com/PAyKaoL.png)
 Możemy jednak zauważyć, że wynik jest mało czytelny, ze względu na to, że dni i miesiące reprezentowane są poprzez liczby, a nazwy kolumn nie odzwierciedlają ich zawartości.
     
 ### 8. Nazewnictwo wyrażeń.
 Aby nadać wyrażeniu nazwę wystarczy, że zamienimy automatycznie wstawianą nazwę "Wyr1" na naszą nazwę. Możemy to zrobić w widoku projektu, poprzez usunięcie starego tekstu i wpisanie nowego.
-![](https://i.imgur.com/pN81glB.png)
+<img src={new URL('https://i.imgur.com/pN81glB.png', import.meta.url)} alt="xyz" className="super-small-img" />
 
 Teraz mamy już dobrze wyglądające zestawienie sekcji danego dnia. Naszym zadaniej jest jednak wskazanie sekcji i dnia w którym w tejże sekcji awarii uległy wszystkie komputery. Jak to zrobić? Tu przejdziemy do drugiej części rozwiązaywania tego zadania.

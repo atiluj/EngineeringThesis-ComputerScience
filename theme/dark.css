@@ -16,6 +16,12 @@
     /* --line: #a6bcdb; */
 }
 
-.gradient {
+.navbar {
     background-image: linear-gradient(to left, #9d3dd4, #6d13a8, #6609c4, #4609b9);
-  }
+}
+
+
+/* for dark mode */
+.main .second p img{
+    filter: brightness(0.7);
+}

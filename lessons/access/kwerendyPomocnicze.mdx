@@ -1,7 +1,7 @@
 ### 1. Tworzymy jeszcze jedną kwerendę pomocniczą, zawierającą liczbę komputerów w każdej sekcji.
 Wiemy już jak konstruować proste kwerendy, ale dla przypomnienia przejdźmy przez ten proces jeszcze raz, krok po kroku.
 Z treści zadania wiemy, że każdy komputer z tabeli `Komputery` ma swój unikatowy `Numer_komputera`. Informacja o tym w jakiej sekcji znajduje się nasz sprzęt możemy odczytać z kolumny `Sekcja` w tabeli `Komputery`. Zatem pogrupujmy dane według `Sekcji` i policzmy ich `Numer_komputera`.
-![](https://i.imgur.com/tglKpg1.png)
+<img src={new URL('https://i.imgur.com/tglKpg1.png', import.meta.url)} alt="xyz" className="small-img" />
 Wynik zapiszemy jako "zad 3 pom2".
 ![](https://i.imgur.com/pdCNVFj.png)
 
@@ -22,9 +22,9 @@ Jeśli zdecydujemy się na ten sposób powinniśmy zrobić to przed tworzeniem k
 
 ### 5. Kwerenda korzystająca z dwóch kwerend pomocniczych i wyrażenia.
 Nie pozostaje nam nic więcej jak zaprojektować naszą ostateczną kwerendę. Zastanówmy się, jakich informacji potrzebujemy. Z pewnością jest to `Sekcja` oraz `Dzien` i `Miesiac`. Ponadto musimy skonstruować wyrażenie, które będzie obliczało różnicę pomiędzy liczbą komputerów w danej sekcji, a liczbą komputerów, które uległy w niej awarii. Jeśli różnica ta wyniesie zero, to znaczy, że wszystkie komputery z tej sekcji uległy awarii tego dnia. Uzyskamy więc odpowiedź na pytanie z zadania.
-![](https://i.imgur.com/wWXIJuE.png)
+<img src={new URL('https://i.imgur.com/wWXIJuE.png', import.meta.url)} alt="xyz" className="medium-img" />
 (Operator odejmowania (minus) najłatwiej jest wpisać ręcznie, choć możemy też znależć odpowiednią funkcję wbudowaną.)
-![](https://i.imgur.com/PjwttNm.png)
+<img src={new URL('https://i.imgur.com/PjwttNm.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 ### 6. Gotowe!
 ![](https://i.imgur.com/FCInL5V.png)
