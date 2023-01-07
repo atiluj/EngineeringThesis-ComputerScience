@@ -35,12 +35,15 @@ nav {
 #nav-wrapper-left a,
 #nav-wrapper-right a,
 #nav-wrapper-right .switch {
-    /* padding: 19px 23px; */
     transition: .5s;
 }
 
 #nav-wrapper-right .switch {
     padding: 0px;
+}
+
+#nav-wrapper-right a.icon {
+    display: none;
 }
 
 nav #nav-wrapper-right,
@@ -58,77 +61,68 @@ nav a.menu-button.nav-button {
         overflow: hidden;
     }
 
-
-    nav ul li a {
-        padding: 15px 17px;
-        font-size: 15px;
-        letter-spacing: 1.5px;
+    nav #nav-wrapper-left {
+        padding-left: 20px;
     }
 
-    .ul2 a {
-        padding: 15px 17px;
+    nav #nav-wrapper-right {
+        padding-right: 20px;
+    }
+
+    nav #nav-wrapper-left a,
+    nav #nav-wrapper-right a {
+        font-size: 15px;
+    }
+
+    .header h1{
+        margin-top: 40px;
+        font-size: 60px;
+        letter-spacing: 40px;
     }
 }
 
 @media(max-width:1000px) {
-    nav ul {
-        padding-left: 10px;
+    nav #nav-wrapper-left {
+        padding-left: 5px;
     }
 
-    .ul2 {
-        padding-right: 10px;
+    nav #nav-wrapper-right {
+        padding-right: 5px;
     }
 
-    nav ul li a {
-        padding: 15px 10px;
-        font-size: 14px;
+    nav a {
+        font-size: 10px;
     }
 }
 
-@media (max-width:810px) {
-    nav {
-        position: static;
-        overflow: visible;
-        border-bottom: 0px;
+/* bylo 810 */
+@media (max-width:790px) {
+    .header h1{
+        margin-top: 30px;
+        font-size: 50px;
+        letter-spacing: 30px;
+    }
+    
+    #navbar #nav-wrapper-left a:not(:first-child) {
+        display: none;
+    }
+    
+    #navbar #nav-wrapper-right a:first-child{
+        display: none;    
     }
 
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 100vw;
-        float: none;
-        max-width: 100%;
-        padding-left: 0;
+    #navbar #nav-wrapper-right .slider{
+        display: none;    
     }
 
-    .ul2 {
-        padding-right: 0;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 100vw;
-        float: none;
-
-    }
-
-    .ul2 li {
-        border-bottom: 2px solid #EFD4D2;
-    }
-
-    nav ul li {
-        border-top: 2px solid #EFD4D2;
-    }
-
-    nav ul li a {
-        padding: 15px 0;
-        letter-spacing: 3px;
+    #navbar #nav-wrapper-right a.icon{
+        color: var(--main-accent);
+        transform: scale(1.2);
+        float: right;
         display: block;
-        text-align: center;
     }
 }
 
-/* mode button */
 /* The switch - the box around the slider */
 .switch {
     position: relative;
