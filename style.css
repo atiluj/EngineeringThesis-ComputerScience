@@ -28,14 +28,13 @@
     --article-border: #602c7d59;
     --tools: #cccc;
     --tools2: #fcf8f8cc;
-    /* --line: #a6bcdb; */
 }
 
 .navbar {
     background-image: linear-gradient(to left, #9d3dd4, #6d13a8, #6609c4, #4609b9);
   }
 
-/* for dark mode */
+
 .main .second p img{
     filter: brightness(0.7);
 }
@@ -46,7 +45,6 @@
 .main .second img.big-img {
     filter: brightness(0.7);
 }
-
 
 * {
     margin: 0;

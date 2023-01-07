@@ -1,5 +1,5 @@
 :root {
-    --font: #a6bcdb;
+    --font: #7e8fa8;
     --font-accent: #a6bcdb;
     --primary: #0e033e;
     --primary2: #190a5ac7;
@@ -13,15 +13,25 @@
     --nav-button-hover: #1616172b;;
     --exercise-secondary: #231366;
     --exercise-secondary2: #140452;
-    /* --line: #a6bcdb; */
+    --card-background: #dee2e71c;
+    --card-shadow: transparent;
+    --article-border: #602c7d59;
+    --tools: #cccc;
+    --tools2: #fcf8f8cc;
 }
 
 .navbar {
     background-image: linear-gradient(to left, #9d3dd4, #6d13a8, #6609c4, #4609b9);
+  }
+
+
+.main .second p img{
+    filter: brightness(0.7);
 }
 
-
-/* for dark mode */
-.main .second p img{
+.main .second img.super-small-img,
+.main .second img.small-img,
+.main .second img.medium-img,
+.main .second img.big-img {
     filter: brightness(0.7);
 }
