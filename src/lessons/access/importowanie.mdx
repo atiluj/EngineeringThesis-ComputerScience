@@ -3,51 +3,61 @@ W tym punkcie omówimy import danych od strony technicznej, warto przeczytać te
 
 ### 1. Wybieramy zakładkę "Dane zewnętrzne".
 ![](https://i.imgur.com/NYdFPM0.png)
+
 ### 2. Następnie wybieramy "Nowe źródło danych" -> "Z pliku" -> "Plik tekstowy".
 ![](https://i.imgur.com/WFxNCQz.png)
+
 ### 3.Wybieramy plik, który chcemy zaimportować.
 (W naszym zadaniu, potrzebne będa pliki o nazwach "komputery.txt", "awarie.txt" oraz "naprawy.txt". 
 Dalsze kroki pokażemy na przykładnie pliku "awarie.txt".)
 ![](https://i.imgur.com/yrJ5iI1.png)
+
 ### 4. Gdy wybraliśmy już odpowiedni plik, wybieramy pierwszą opcję importu tj."Importuj dane źródłowe do nowej tabeli w bieżacej bazie danych" i klikamy "OK".
-![](https://i.imgur.com/rgnX4S6.png)
+<img src={new URL('https://i.imgur.com/rgnX4S6.png', import.meta.url)} alt="xyz" className="medium-img" />
+
 ### 5. Wybieramy domyślną opcję "Ograniczony - znaki takie jak przecinek lub tabulator rodzielają pola" i klikamy "Dalej".
-![](https://i.imgur.com/tVLwYtU.png)
+<img src={new URL('https://i.imgur.com/tVLwYtU.png', import.meta.url)} alt="xyz" className="medium-img" />
+
 ### 6.Jako ogranicznik rodzielający pola wybieramy "Tabulator" oraz zaznaczamy opcję "Pierwszy wiersz zawiera nazwy pól" i klikamy "Dalej".
 Pamiętajmy jednak, że w zależności od zadania ogranicznikiem może być też średnik lub inny znak. Pola mogą również nie mieć odgórnie zapisanej w pliku nazwy. Przede wszystkim należy więc uważnie przeanalizować treść zadania.
-![](https://i.imgur.com/opThVuv.png)
-### 7.Sprawdzamy czy typy danych w kolumnach zdefiniowane są poprawnie.
+<img src={new URL('https://i.imgur.com/opThVuv.png', import.meta.url)} alt="xyz" className="medium-img" />
+
+### 7. Sprawdzamy czy typy danych w kolumnach zdefiniowane są poprawnie.
 Klikając na każdą z kolumn, sprawdzamy, czy typ danych jest taki, jakiego oczekujemy. Tutaj warto zwrócić uwagę na to, że wartości takie jak PESEL zazwyczaj wolimy przechowywać jako napisy, a nie liczby (zob. Jak czytać i analizować treść zadania — Access).
 Problematyczne mogą okazać się również daty, zawsze, gdy mamy z nimi do czynienia wchodzimy w opcje zaawansowane i upewniamy się, że wszystkie opcje formatowania ustawione są poprawnie lub w razie potrzeby je edytujemy.
-![](https://i.imgur.com/Zp50yNG.png)
+<img src={new URL('https://i.imgur.com/Zp50yNG.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 
 **W naszym przykładzie** z treści zadania wiemy, że data zapisana jest w kolejności rok miesiąc dzień, a rok powinien być czterocyfrowy. Ogranicznikiem daty jest znak `-` natomiast godziny `:`. Należy sprawdzić, czy wszystkie dane ustawione są poprawnie. 
-![](https://i.imgur.com/ZnQ638b.png)
+<img src={new URL('https://i.imgur.com/ZnQ638b.png', import.meta.url)} alt="xyz" className="medium-img" />
 
-![](https://i.imgur.com/wDwQZ5n.png)
+<img src={new URL('https://i.imgur.com/wDwQZ5n.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 ### 8. W kolejnym kroku wybieramy klucz podstawowy naszej tabeli. 
 Może być to jedna z kolumn w tabeli. Czasami jendnak żadna z kolumn nie spełnia własności klucza podstawowego, wówczas możemy pozwolić Accessowi na dodanie klucza podstawowego.
 Dla przypomnienia - klucz podstawowy (inaczej klucz główny) to kolumna lub grupa kolumn, której wartość jest unikatowa, czyli dla każdego wiersza inna. Pozwala nam on na jednoznaczne zidentyfikwoanie danego wiersza (rekordu) w tablicy. (zob. "Teroia baz danych")
 
 **W naszym przykładzie** kluczem podstawowym jest kolumna `Numer_zgłoszenia`. Wiemy to z treści zadania. 
-![](https://i.imgur.com/QOs0H6a.png)
+<img src={new URL('https://i.imgur.com/QOs0H6a.png', import.meta.url)} alt="xyz" className="medium-img" />
 
-![](https://i.imgur.com/Lb3qtks.png)
+<img src={new URL('https://i.imgur.com/Lb3qtks.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 **Uwaga:** Przy importowaniu pliku `Naprawy`, musimy pozwolić Accessowi na dodanie klucza podstawowego, ponieważ z treści zadania wiemy, że żadna z kolum nie zawiera wartości unikatowych.
-![](https://i.imgur.com/ISCIHtP.png)
+<img src={new URL('https://i.imgur.com/ISCIHtP.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 
 ### 9. W ostatnim kroku ustalamy tylko nazwę tabeli, którą właśnie tworzymy. 
 Zazwyczaj na maturze, nie chemy wprowadzać tu żadnych zmian. Klikamy więc po prostu "Zakończ".
-![](https://i.imgur.com/KrQCZOz.png)
+<img src={new URL('https://i.imgur.com/KrQCZOz.png', import.meta.url)} alt="xyz" className="medium-img" />
+
 ### 10. Klikamy "Zamknij".
 Access zapyta nas, czy chcemy zapamiętać kroki importowania. NIE chcemy, więc nie zaznaczamy tutaj nic i klikamy po prostu "Zamknij".
 (Nie chcemy zapisywać kroków importowania, ponieważ dane w każdej tabeli mogą być sformatowane w inny sposób i musimy za każdym razem przejść wszystkie kroki i upewnić się, że wszystko jest ustawione poprawnie.)
-![](https://i.imgur.com/33mDdVv.png)
+<img src={new URL('https://i.imgur.com/33mDdVv.png', import.meta.url)} alt="xyz" className="medium-img" />
+
 ### 11. Gotowe!
-Nasz plik został zaimpotowany jako nowa tabela do naszej bazy danych. Możemy podjerzeć jej zawartość klikając na nią. ![](https://i.imgur.com/s2UyBDO.png)
+Nasz plik został zaimpotowany jako nowa tabela do naszej bazy danych. Możemy podjerzeć jej zawartość klikając na nią. 
+![](https://i.imgur.com/s2UyBDO.png)
 Jeśli w którymś miejscu wyświetlają się "########" zamiast treści, nie martwcie się, wszystko jest w porządku. Po prostu szerokość kolumny jest mniejsza niż długość zawartości. Wystarczy rozszerzyć szerokość kolumny. Wpływa to tylko na sposób wyświetlania jej w edytorze, w szczególności nie wpływa to na zawartość tabeli.
-![](https://i.imgur.com/6OLPPrF.png)
+<img src={new URL('https://i.imgur.com/6OLPPrF.png', import.meta.url)} alt="xyz" className="small-img" />
+

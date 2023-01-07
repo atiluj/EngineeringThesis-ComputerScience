@@ -3,6 +3,7 @@ import '../style.css';
 
 import * as React from 'react';
 import { Outlet, Link } from "react-router-dom";
+import MenuIcon from '@mui/icons-material/Menu';
 
 function useWindowWidth() {
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
@@ -33,18 +34,20 @@ function useScrollY() {
 }
 
 function Nav() {
-    const windowWidth = useWindowWidth();
-    const scrollY = useScrollY();
-
-    //TODO: drop_down menu
-    function myFunction() {
-    var x = document.getElementById("navbar");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+    function navBurger() {
+        const x = document.getElementById("top-navbar");
+        if (x.className === "navbar") {
+            console.log("elo elo");
+            x.className += " responsive";
+        } else {
+            console.log("zenujace"); 
+            x.className = "navbar";
+        }//
     }
-    }
+    
+    export default function() {
+        const windowWidth = useWindowWidth();
+        const scrollY = useScrollY();    
     
     function switchTheme() {
         var checkbox = document.getElementById("checkbox");
@@ -60,7 +63,7 @@ function Nav() {
     const aStyle = {padding, fontSize};
 
     return <>
-        <nav id="navbar" className={`gradient ${styles.navbar}`}>
+        <nav id="top_navbar" className={`gradient ${styles.navbar}`}>
 
                 <div id="nav_wrapper_left" className={styles.nav_wrapper_left}>
                 
@@ -84,9 +87,9 @@ function Nav() {
                             <span className={`${styles.slider} ${styles.round}`}></span>
                     </label>
 
-                    <a className={styles.icon} onClick={myFunction}>
-                        <i className={`${styles.fa} ${styles.fa_bars}`}></i>
-                    </a>    
+                    <button className="icon" onClick={navBurger}>
+                        <MenuIcon className="nav-burger"/>
+                    </button> 
                 </div>
             
         </nav>

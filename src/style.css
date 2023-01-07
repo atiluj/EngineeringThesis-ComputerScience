@@ -17,6 +17,9 @@
     --card-background: #dee2e71c;
     --card-shadow: rgba(99, 99, 99, 0.2);
     --gradient: linear-gradient(to right, #abdee6, #b9d2f3, #bcbbf1, #c6adf9, #c898fb);
+    --tools: #cccc;
+    --tools2: #fcf8f8cc;
+    --filter: brightness(1);
 }
 
 [data-theme="dark"] {
@@ -35,16 +38,39 @@
     --exercise-secondary: #231366;
     --exercise-secondary2: #140452;
     --gradient: linear-gradient(to left, #9d3dd4, #6d13a8, #6609c4, #4609b9);
+    --card-background: #dee2e71c;
+    --card-shadow: #4b4951c7;
+    --article-border: #602c7d59;
+    --tools: #cccc;
+    --tools2: #fcf8f8cc;
+    --filter: brightness(0.7);
 }
 
 .gradient {
     background-image: var(--gradient);
 }
 
+/* for dark mode */
+.main_content .second p img{
+    filter: var(--filter);
+}
+
+.main_content .second img.super-small-img,
+.main_content .second img.small-img,
+.main_content .second img.medium-img,
+.main_content .second img.big-img {
+    filter: var(--filter);
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /*jeśli coś sie pierdoli to może by to to*/
+}
+
+body{
+    overflow: overlay;
 }
 
 html {
@@ -78,4 +104,26 @@ div .wrapper {
 
 .menu_button.nav_button:hover {
     background-color: var(--nav-button-hover);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: var(--tools);
+    border-radius: 5px;    
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--tools2);
 }

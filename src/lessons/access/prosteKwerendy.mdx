@@ -3,15 +3,18 @@
 
 ### 2. Wybieramy tabelę (lub kilka tabel), których potrzebujemy. Przeciągamy je, a następnie wybieramy potrzebne nam pola, aby dodać je do zapytania. 
 Łatwiej jest to zarówno wytłumaczyć jak i zrozumieć na konkretnych danych. Weźmy więc pod lupę nasz **przykład**.
-![](https://i.imgur.com/JMcc5YL.png)
+
+<img src={new URL('https://i.imgur.com/JMcc5YL.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 Będziemy potrzebować pola `Pojemnosc_dysku`, które znajduje się w tabeli `Komputery`.
 ![](https://i.imgur.com/rZPiz77.png)
 Zobaczmy, co zwróci powyższa kwerenda.
+
 ### 3. Jak uruchomić kwerendę?
 Po prostu klikamy "Uruchom".
 ![](https://i.imgur.com/hVU6Q9P.png)
 Widzimy, że nie jest to odpowiedź jakiej oczekujemy, mamy bowiem po prostu spis pojemności dysków wszystkich komputerów. 
+
 ### 4. Jak edytować uruchomioną kwerendę?
 Możemy kliknąć opcję "Widok", a następnie wybrać "Widok projektu" (1.) lub przełączyć widok za pomocą skrótu (2.)
 ![](https://i.imgur.com/9McFZlf.png)
@@ -26,7 +29,7 @@ Widzimy, że pojawiło się nowe pole, którego domyślna wartość to "Grupuj w
 ![](https://i.imgur.com/nm6QFxh.png)
 
 ### 6. Opcje "Sumy".
-![](https://i.imgur.com/DeehW9R.png)
+<img src={new URL('https://i.imgur.com/DeehW9R.png', import.meta.url)} alt="xyz" className="super-small-img" />
 Większość opcji jest na tyle prostych, że tłumaczy się poprzez nazwę, na przykład "Suma" sumuje wartości z danej kolumny dla wszystkich rekordów będacych w danej grupe. 
 Ważne, a być może nie tak intuicyjne są następujące opcje:
 * Wyrażenie - wybieramy je, gdy w wierszu "Pole" zamiast standardowej nazyw jednej kolumny używamy całego wyrażenia. Co to dokładnie oznacza opiszę w dziale "3.3. Konstruuowanie wyrażeń".
@@ -36,16 +39,16 @@ Jeśli użycie powyższych opcji wciąż nie jest jasne, nie martw się. Najlepi
 **W naszym przykładzie**, tak jak już powiedzieliśmy, potrzebujemy informacji o 10 najczęściej występujących pojemnościach dysku. 
 Chcemy zatem pogrupować komputery według kolumny `Pojemność_dysku`, a następnie policzyć ile komputerów mamy w każdej z tych grup. Jednak w jaki sposób mamy to zrobić? Przydatne okaże się pole `Numer_komputera`. Wiemy, że jest to klucz głowny w tabeli `Komputery`, a więc każdy z numerów będzie występował w niej co najwyżej jeden raz. 
 Podsumowując chcemy pogrupować komputery według kolumny `Pojemność_dysku`, a następnie policzyć `Numer_komputera`.
-![](https://i.imgur.com/yLI2O7M.png)
+<img src={new URL('https://i.imgur.com/yLI2O7M.png', import.meta.url)} alt="xyz" className="small-img" />
 Teraz mamy już informację o liczbie komputerów z daną pojemnością dysku. 
+
 ![](https://i.imgur.com/Lg73rRv.png)
 Nas interesuje jednak 10 najczęsciej występujących pojemności. Możemy wyszukać je ręcznie, 
 ale oczywiście nie jest to dobre rozwiązanie, szczególnie przy dużej ilości danych. 
 Co zatem zrobimy? Wystarczy posortować wyniki malejąco.
 
 #### 7. Sortowanie.
-![](https://i.imgur.com/0gkcX7I.png)
-Wynik: ![](https://i.imgur.com/YhyoW73.png)
+![](https://i.imgur.com/YhyoW73.png)
 Na tym moglibyśmy poprzestać i skopiować do pliku z odpowiedziami pierwsze 10 rekordów. 
 Jest jednak lepsze rozwiązanie. Możemy ograniczyć liczbę rekordów w wyniku jeszcze na poziomie kwerendy. 
 
@@ -60,9 +63,9 @@ Możemy to zrobić za pomocą skrótu klawiszowego "Ctrl+S". Warto pamiętać o 
 Teoretycznie nie jest to wymóg formalny, ale nie chcemy przecież denerwować egzaminatora sprawdzającego naszą pracę. 
 
 ### 10. Zapisz odpowiedź w pliku tekstowym!!!
-![](https://i.imgur.com/vbmsmge.png)
+<img src={new URL('https://i.imgur.com/vbmsmge.png', import.meta.url)} alt="xyz" className="medium-img" />
 
 Jeśli rozwiązanie będzie w pełni poprawne, ale nie zapiszesz odpowiedzi w pliku (w naszym przykładzie "wyniki6.txt") to nie dostaniesz za nie punktów. 
-![](https://i.imgur.com/rlR2EcS.png)
+<img src={new URL('https://i.imgur.com/rlR2EcS.png', import.meta.url)} alt="xyz" className="small-img" />
 **Cała instrukcja jest bardzo ważna**, ale w tym miejscu zwróćmy szczególną uwagę na zaznaczony fragment.
 

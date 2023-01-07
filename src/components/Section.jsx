@@ -128,9 +128,9 @@ function Section({lessons, title}) {
     return <NavContext.Provider value={{ curChapter, curSubchapter, changeChapter }}>
         <main className={styles.main}>
             <div className={styles.contents}>
-                <div className={`${styles.title} ${styles.ft}`}>
+                {/* <div className={`${styles.title} ${styles.ft}`}>
                     <a>{title}</a>
-                </div>
+                </div> */}
                 <div className={`${styles.cont_title} ${styles.title}`}>
                     <a>{title}</a>
                 </div>
@@ -145,9 +145,6 @@ function Section({lessons, title}) {
             </div>
 
             <div className={styles.main_content}>
-                {/* <div className={styles.title">
-                    <a>{title}</a>
-                </div> */}
                 <Contents lessons={lessons} />
                 <div className={styles.controls}>
                     {/* <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div> */}
