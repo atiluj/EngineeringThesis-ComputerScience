@@ -24,7 +24,7 @@
     --exercise-secondary: #231366;
     --exercise-secondary2: #140452;
     --card-background: #dee2e71c;
-    --card-shadow: #4b4951c7;
+    --card-shadow: transparent;
     --article-border: #602c7d59;
     /* --line: #a6bcdb; */
 }

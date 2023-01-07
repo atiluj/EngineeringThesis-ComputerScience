@@ -112,13 +112,18 @@ main article {
 }
 
 .authors-details-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    grid-gap: 10px;
+    justify-content: space-between;
+    justify-items: center;
+    align-content: center;
+    margin: 3%;
 }
 
 .author {
-    width: 25%;
+    min-width: 25vw;
+    max-width: 30vw;
     flex-direction: column;
     background-color: var(--card-background);
     color: var(--font);
@@ -126,41 +131,43 @@ main article {
     justify-content: center;
     align-items: center;
     box-shadow: var(--card-shadow) 0px 2px 8px 0px;
+    padding: 10%
 }
 
 .authorName {
     letter-spacing: 3px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
 }
 
-.photo {
-    padding: 10%;
-}
-
 .photo img {
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
     border-radius: 90%;
-    transform: scale(1.3);
 }
 
 .introduction {
     text-align: justify;
     font-size: 20px;
-    padding: 10%;
+    height: 50%;
 }
 
-.authorName a{
-    color: black;
-    /* vertical-align: middle; */
+.authorName {
+    padding: 5% 0 5% 0;
+    display: table;
 }
+
+.authorName a {
+    color: var(--font);
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+} 
 
 footer{
     font-family: 'Chakra Petch', sans-serif;
     width: 100%;
-    /* background-color: var(--main-accent); */
     padding: 30px 0;
     color: var(--font);
     text-align: center;
@@ -189,7 +196,6 @@ footer a:hover{
     .section {
         padding-top: 110px;
     }
-
 
     .section .header {
         padding-top: 15px;
@@ -221,14 +227,8 @@ footer a:hover{
         margin-bottom: 2vw;
     }
 
-    .authorsTitle {
-        letter-spacing: 25px;
-        font-size: 50px;
-        margin-bottom: 10px;
-    }
-
-    .author {
-        margin-bottom: 60px;
+    .introduction {
+        text-align: center;
     }
 }
 
@@ -248,24 +248,31 @@ footer a:hover{
         display: none;
     }
 
+    .authors-details-wrapper {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        grid-gap: 3%;
+    }
+
+    .author {
+        min-width: 60vw;
+        padding: 7% 10% 7% 10%;
+    }
+
     .authorsTitle {
         letter-spacing: 20px;
         font-size: 30px;
-        margin-bottom: 0px;
     }
 
     .authorName {
         font-size: 19px;
+        padding: 2% 0;
     }
 
     .introduction {
-        font-size: 13px;
+        font-size: 15px;
     }
-
-    .author {
-        margin-bottom: 50px;
-    }
-
 }
 
 @media (max-width:810px) {
@@ -286,14 +293,12 @@ footer a:hover{
         line-height: 17px;
     }
 
-    .photo img {
-        display: none;
+    .authors-details-wrapper {
+        grid-gap: 5%;
     }
 
     .author {
-        padding: 15px 5px;
-        border-radius: 0px;
-        margin-bottom: 20px;
+        box-sizing: content-box;
     }
 }
 
@@ -331,11 +336,6 @@ footer a:hover{
     .authorsTitle {
         letter-spacing: 8px;
         font-size: 25px;
-        padding-bottom: 10px;
-    }
-
-    .authors {
-        padding: 10px 8vw 20px;
     }
 }
 
@@ -380,6 +380,4 @@ footer a:hover{
         letter-spacing: 6px;
         font-size: 20px;
     }
-
-
 }
