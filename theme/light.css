@@ -1,0 +1,24 @@
+:root {
+    --font: black;
+    --font-accent: #322e2b;
+    --primary: #f6f8fb;
+    --primary2: #cedff69c;
+    --primary3: white;
+    --secondary: #adc5e7;
+    --secondary2: #a6bcdb;
+    --title: #6991c8;
+    --main-accent: #322e2b;
+    --accent: #8c26d0c9;
+    --line: black;
+    --slider: #8c26d0c9;
+    --nav-button-hover: #94949539;
+    --exercise-secondary: #b9d2f3;
+    --exercise-secondary2: #94aecf;
+    --card-background: #dee2e71c;
+    --card-shadow: rgba(99, 99, 99, 0.2);
+    --article-border: var(--main-accent);
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #abdee6, #b9d2f3, #bcbbf1, #c6adf9, #c898fb);
+  }

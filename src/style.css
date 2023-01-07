@@ -43,16 +43,25 @@
     --article-border: #602c7d59;
     --tools: #cccc;
     --tools2: #fcf8f8cc;
+<<<<<<< HEAD:src/style.css
     --filter: brightness(0.7);
+=======
+>>>>>>> 454b27b (Fixed light.css):style.css
 }
 
 .gradient {
     background-image: var(--gradient);
 }
 
+<<<<<<< HEAD:src/style.css
 /* for dark mode */
 .main_content .second p img{
     filter: var(--filter);
+=======
+
+.main .second p img{
+    filter: brightness(0.7);
+>>>>>>> 454b27b (Fixed light.css):style.css
 }
 
 .main_content .second img.super-small-img,
@@ -61,7 +70,6 @@
 .main_content .second img.big-img {
     filter: var(--filter);
 }
-
 
 * {
     margin: 0;
