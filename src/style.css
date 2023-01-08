@@ -16,6 +16,7 @@
     --exercise-secondary2: #94aecf;
     --card-background: #dee2e71c;
     --card-shadow: rgba(99, 99, 99, 0.2);
+    --article-border: var(--main-accent);
     --gradient: linear-gradient(to right, #abdee6, #b9d2f3, #bcbbf1, #c6adf9, #c898fb);
     --tools: #cccc;
     --tools2: #fcf8f8cc;

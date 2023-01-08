@@ -1,66 +1,50 @@
 import styles from './Nav.module.css';
 import '../style.css'; 
 
-import * as React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Outlet, Link } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
+import { style } from '@mui/system';
 
-function useWindowWidth() {
-    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
-    React.useEffect(() => { //aktualizacja pobranej szerokości strony
-        // to sie odpali przy starcie
-        const handle = () => setWindowWidth(window.innerWidth); //ona aktualizuje nasza zmienną
-        window.addEventListener('resize', handle); // nie wywołujmey jej od razu tylko podczepiamy pod resize, czyli ona będzie wywoływana przy resizie na szerkości okna
-        return () => {
-            // to sie odpali na koncu
-            window.removeEventListener('resize', handle);
-        };
-    }, [
-        // kiedy sie uruchomic ponownie
-    ]);
-    return windowWidth;
+const DARK_MODE_KEY = 'dark-mode';
+
+const useDarkMode = () => {
+    const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        const darkMode = localStorage.getItem(DARK_MODE_KEY) === 'true';
+        setDarkMode(darkMode);
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem(DARK_MODE_KEY, darkMode);
+        document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    }, [darkMode])
+
+    return [darkMode, setDarkMode]
 }
-
-function useScrollY() {
-    const [scrollY, setScrollY] = React.useState(window.scrollY);
-    React.useEffect(() => {
-        const handle = () => setScrollY(window.scrollY);
-        window.addEventListener('scroll', handle);
-        return () => {
-            window.removeEventListener('scroll', handle);
-        };
-    }, []);
-    return scrollY;
-}
-
-function navBurger() {
-    // TODO: refactor
-    const x = document.getElementById("top_navbar");
-    if (x.className === `gradient ${styles.navbar}`) {
-        console.log("elo elo");
-        x.className += ` ${styles.responsive}`;
-    } else {
-        console.log("zenujace"); 
-        x.className = `gradient ${styles.navbar}`;
-    }
-}
-
-function switchTheme() {
-    var checkbox = document.getElementById("checkbox");
-    if (checkbox.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }    
-}    
 
 function Nav() {
-    const windowWidth = useWindowWidth();
-    const scrollY = useScrollY();    
-
     let padding, fontSize;
     const aStyle = {padding, fontSize};
+
+    const [darkMode, setDarkMode] = useDarkMode();
+
+    function navBurger() {
+        // TODO: refactor
+        const x = document.getElementById("top_navbar");
+        if (x.className === `gradient ${styles.navbar}`) {
+            console.log("elo elo");
+            x.className += ` ${styles.responsive}`;
+        } else {
+            console.log("zenujace"); 
+            x.className = `gradient ${styles.navbar}`;
+        }
+    }
+
+    const toggleMode = () => {
+        setDarkMode((prev) => !prev);
+    }
 
     return <>
         <nav id="top_navbar" className={`gradient ${styles.navbar}`}>
@@ -84,7 +68,7 @@ function Nav() {
                     <Link to="/interpreter" style={aStyle} className={`menu_button ${styles.nav_button}`}>Interpreter python</Link>
 
                     <label className={styles.switch} >
-                            <input id="checkbox" type="checkbox" className={styles.checkbox} onClick={switchTheme}/>
+                            <input id="checkbox" type="checkbox" checked={darkMode} className={styles.checkbox} onChange={toggleMode}/>
                             <span className={`${styles.slider} ${styles.round}`}></span>
                     </label>
 
