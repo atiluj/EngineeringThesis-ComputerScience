@@ -52,20 +52,20 @@ function Nav() {
 
                 <div id="nav_wrapper_left" className={styles.nav_wrapper_left}>
                 
-                    <Link to="/" style={aStyle} className={`menu_button ${styles.nav_button}`}>Cześć!</Link>
+                    <Link to="/" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Cześć!</Link>
                 
-                    <Link to="/teoria" style={aStyle} className={`menu_button ${styles.nav_button}`}>Teoria</Link>
+                    <Link to="/teoria" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Teoria</Link>
             
-                    <Link to="/excel" style={aStyle} className={`menu_button ${styles.nav_button}`}>Excel</Link>
+                    <Link to="/excel" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Excel</Link>
                 
-                    <Link to="/access" style={aStyle} className={`menu_button ${styles.nav_button}`}>Access</Link>
+                    <Link to="/access" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Access</Link>
                 
-                    <Link to="/python" style={aStyle} className={`menu_button ${styles.nav_button}`}>Python</Link>
+                    <Link to="/python" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Python</Link>
                 
-                    <Link to="/exercise" style={aStyle} className={`menu_button ${styles.nav_button}`}>Zadania</Link>
+                    <Link to="/exercise" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Zadania</Link>
                 </div>
                 <div id="nav_wrapper_right" className={styles.nav_wrapper_right}>
-                    <Link to="/interpreter" style={aStyle} className={`menu_button ${styles.nav_button}`}>Interpreter python</Link>
+                    <Link to="/interpreter" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Interpreter python</Link>
 
                     <label className={styles.switch} >
                             <input id="checkbox" type="checkbox" checked={darkMode} className={styles.checkbox} onChange={toggleMode}/>
