@@ -1,4 +1,5 @@
 import styles from './Section.module.css';
+import '../style.css'; 
 import * as React from 'react';
 import hljs from 'highlight.js';
 // import 'node_modules/highlight.js/styles/dark.css';
@@ -7,6 +8,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
+import { style } from '@mui/system';
 
 const NavContext = React.createContext({
     curChapter: 0,
@@ -17,7 +19,7 @@ const NavContext = React.createContext({
 function Subchapter({ chapterId, subchapterId, subchapter }) {
     const { changeChapter, curChapter, curSubchapter } = React.useContext(NavContext);
     const isCurrent = chapterId == curChapter && subchapterId == curSubchapter;
-    return <a href="#" className={`${styles.subtopic} ${styles.menu_button}` + (isCurrent ? ` ${subtopic_current}` : ``)}
+    return <a href="#" className={`${styles.subtopic} menu_button` + (isCurrent ? ` ${styles.subtopic_current}` : ``)}
         onClick={() => changeChapter(chapterId, subchapterId)}>
         {chapterId}.{subchapterId + 1}. {subchapter.name}
     </a>;
@@ -30,7 +32,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
         if (curChapter == chapterId) setShow(true);
     }, [curChapter]);
     return <div>
-        <div className={`${styles.topic} ${styles.menu_button}`} onClick={() => setShow(show => !show)}>
+        <div className={`${styles.topic} menu_button`} onClick={() => setShow(show => !show)}>
             <a>{chapterId}. {chapter.name}</a>
             <div>{show ? <ExpandLess /> : <ExpandMore />}</div>
         </div>
@@ -46,7 +48,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
 function ChapterStandalone({ chapter, chapterId }) {
     const { changeChapter } = React.useContext(NavContext);
     return <div onClick={() => changeChapter(chapterId, 0)}>
-        <div className={`${styles.topic} ${styles.menu_button}`}>
+        <div className={`${styles.topic} menu_button`}>
             <a>{chapterId}. {chapter.name}</a>
             <div style={{ visibility: "hidden" }}><ExpandMore /></div>
         </div>
@@ -124,12 +126,12 @@ function Section({lessons, title}) {
     }
 
     return <NavContext.Provider value={{ curChapter, curSubchapter, changeChapter }}>
-        <main>
+        <main className={styles.main}>
             <div className={styles.contents}>
                 <div className={`${styles.title} ${styles.ft}`}>
                     <a>{title}</a>
                 </div>
-                <div className={`${styles.cont_title} ${title}`}>
+                <div className={`${styles.cont_title} ${styles.title}`}>
                     <a>{title}</a>
                 </div>
 
@@ -142,7 +144,7 @@ function Section({lessons, title}) {
                 </div>
             </div>
 
-            <div className={styles.main}>
+            <div className={styles.main_content}>
                 {/* <div className={styles.title">
                     <a>{title}</a>
                 </div> */}

@@ -1,4 +1,6 @@
 import styles from './Nav.module.css';
+import '../style.css'; 
+
 import * as React from 'react';
 import { Outlet, Link } from "react-router-dom";
 
@@ -75,27 +77,27 @@ function Nav() {
     const aStyle = {padding, fontSize};
 
     return <>
-        <nav id="navbar" className={`${styles.gradient} ${styles.navbar}`}>
+        <nav id="navbar" className={`gradient ${styles.navbar}`}>
 
                 <div id="nav_wrapper_left" className={styles.nav_wrapper_left}>
                 
-                    <Link to="/" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Cześć!</Link>
+                    <Link to="/" style={aStyle} className={`menu_button ${styles.nav_button}`}>Cześć!</Link>
                 
-                    <Link to="/teoria" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Teoria</Link>
+                    <Link to="/teoria" style={aStyle} className={`menu_button ${styles.nav_button}`}>Teoria</Link>
             
-                    <Link to="/excel" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Excel</Link>
+                    <Link to="/excel" style={aStyle} className={`menu_button ${styles.nav_button}`}>Excel</Link>
                 
-                    <Link to="/access" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Access</Link>
+                    <Link to="/access" style={aStyle} className={`menu_button ${styles.nav_button}`}>Access</Link>
                 
-                    <Link to="/python" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Python</Link>
+                    <Link to="/python" style={aStyle} className={`menu_button ${styles.nav_button}`}>Python</Link>
                 
-                    <Link to="/exercise" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Zadania</Link>
+                    <Link to="/exercise" style={aStyle} className={`menu_button ${styles.nav_button}`}>Zadania</Link>
                 </div>
                 <div id="nav_wrapper_right" className={styles.nav_wrapper_right}>
-                    <Link to="/interpreter" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Interpreter python</Link>
+                    <Link to="/interpreter" style={aStyle} className={`menu_button ${styles.nav_button}`}>Interpreter python</Link>
 
                     <label className={styles.switch} >
-                            <input type="checkbox"/>
+                            <input type="checkbox" className={styles.checkbox}/>
                             <span className={`${styles.slider} ${styles.round}`}></span>
                     </label>
 

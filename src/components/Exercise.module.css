@@ -1,4 +1,4 @@
-main {
+.main {
     min-height: 100vh;
     text-align: left;
     padding: 60px 2.5vw;
@@ -6,7 +6,7 @@ main {
     margin: 0 10% 0 10%;
 }
 
-main .introduction{
+.main .introduction{
     margin-top: 10px;
     padding: 5px;
     background-color: white;
@@ -14,12 +14,12 @@ main .introduction{
     border-radius: 10px;
 }
 
-main .exercises_title{
+.main .exercises_title{
     margin-top: 50px;
     margin-bottom: 10px;
 }
 
-main .exercises_list{
+.main .exercises_list{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -27,11 +27,11 @@ main .exercises_list{
     margin-bottom: 25px;
 }
 
-main .exercises_list.python_list {
+.main .exercises_list.python_list {
     flex-direction: column;
 }
 
-main .list_element_wrapper {
+.main .list_element_wrapper {
     display: flex;
     margin-top: 1rem;
 }
@@ -46,7 +46,7 @@ main .list_element_wrapper {
     padding-left: 10px;
 }
 
-main .list_element{
+.main .list_element{
     display: flex;
     margin-bottom: 10px;
     margin-right: 7px;
@@ -58,16 +58,16 @@ main .list_element{
     align-items: center;
 }
 
-main .list_element:hover{
+.main .list_element:hover{
     background-color: var(--exercise-secondary2);
 }
 
 
-main .list_element.number_element{
+.main .list_element.number_element{
     min-width: calc(3*1rem);
 }
 
-main .category{
+.main .category{
     padding: 7px;
     /* margin: 0 40px; */
     letter-spacing: 2px;
@@ -76,7 +76,7 @@ main .category{
 }
 
 @media (max-width:810px) {
-    main {
+    .main {
         padding: 0;
     }
 }

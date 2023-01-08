@@ -1,4 +1,4 @@
-nav {
+.navbar{
     background-color: var(--secondary);
     font-size: 0;
     /* to likiwduje wbudowany margines w menu*/
@@ -10,9 +10,6 @@ nav {
     z-index: 99;
     position:fixed;
     border-bottom: 2px solid var(--primary);
-}
-
-.navbar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -32,8 +29,8 @@ nav {
     margin-right: 20px;
 }
 
-.nav_wrapper_left .menu_button,
-.nav_wrapper_right .menu_button,
+.nav_wrapper_left a,
+.nav_wrapper_right a,
 .nav_wrapper_right .switch {
     transition: .5s;
 }
@@ -42,35 +39,35 @@ nav {
     padding: 0px;
 }
 
-.nav_wrapper_right .menu_button.icon {
+.nav_wrapper_right a.icon {
     display: none;
 }
 
-nav .nav_wrapper_right,
-nav .nav_wrapper_left {
+.navbar .nav_wrapper_right,
+.navbar .nav_wrapper_left {
     transition: 0.7s;
 }
 
-nav .menu_button.nav_button {
+.navbar .nav_button {
     margin-bottom: 0;
     background-color: transparent;
 }
 
 @media (max-width: 1200px) {
-    nav {
+    .navbar {
         overflow: hidden;
     }
 
-    nav .nav_wrapper_left {
+    .navbar .nav_wrapper_left {
         padding-left: 20px;
     }
 
-    nav .nav_wrapper_right {
+    .navbar .nav_wrapper_right {
         padding-right: 20px;
     }
 
-    nav .nav_wrapper_left .menu_button,
-    nav .nav_wrapper_right .menu_button {
+    .navbar .nav_wrapper_left a,
+    .navbar .nav_wrapper_right a {
         font-size: 15px;
     }
 
@@ -82,15 +79,15 @@ nav .menu_button.nav_button {
 }
 
 @media(max-width:1000px) {
-    nav .nav-wrapper-left {
+    .navbar .nav_wrapper_left {
         padding-left: 5px;
     }
 
-    nav .nav_wrapper_right {
+    .navbar .nav_wrapper_right {
         padding-right: 5px;
     }
 
-    nav .menu_button {
+    .navbar a {
         font-size: 10px;
     }
 }
@@ -103,11 +100,11 @@ nav .menu_button.nav_button {
         letter-spacing: 30px;
     }
     
-    .navbar .nav_wrapper_left .menu_button:not(:first-child) {
+    .navbar .nav_wrapper_left a:not(:first-child) {
         display: none;
     }
     
-    .navbar .nav_wrapper_right .menu_button:first-child{
+    .navbar .nav_wrapper_right a:first-child{
         display: none;    
     }
 
@@ -115,7 +112,7 @@ nav .menu_button.nav_button {
         display: none;    
     }
 
-    .navbar .nav_wrapper_right .menu_button.icon{
+    .navbar .nav_wrapper_right a.icon{
         color: var(--main-accent);
         transform: scale(1.2);
         float: right;
@@ -133,7 +130,7 @@ nav .menu_button.nav_button {
   }
   
   /* Hide default HTML checkbox */
-  .switch input {
+  .switch .checkbox {
     opacity: 0;
     width: 0;
     height: 0;
@@ -167,11 +164,11 @@ nav .menu_button.nav_button {
     transition: .4s;
   }
   
-  input:checked + .slider {
+  .checkbox:checked + .slider {
     background-color: var(--slider);
   }
 
-  input:checked + .slider:before {
+  .checkbox:checked + .slider:before {
     -webkit-transform: translateX(20px);
     -ms-transform: translateX(20px);
     transform: translateX(20px);
@@ -189,3 +186,4 @@ nav .menu_button.nav_button {
     border-radius: 50%;
   }
   
+

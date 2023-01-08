@@ -39,7 +39,7 @@ div .wrapper {
     margin: 0 auto;
 }
 
-.menu-button {
+.menu_button {
     display: block;
     padding: 12px;
     font-size: 17px;
@@ -55,10 +55,10 @@ div .wrapper {
     text-align: left;
 }
 
-.menu-button:hover {
+.menu_button:hover {
     background-color: var(--secondary2);
 }
 
-.menu-button.nav-button:hover {
+.menu_button.nav_button:hover {
     background-color: var(--nav-button-hover);
 }

@@ -1,8 +1,9 @@
 import styles from './Exercise.module.css';
+import '../style.css'; 
 
 function Exercise() {
     return <>
-        <main>
+        <main className={styles.main}>
             <div className={styles.exercises_title}>
                 <h1>ZADANIA Z KURSU PYTHON</h1>
                 {/* <p>W tym dziale są zdania, które znajdziesz również w kursie. Posiadają one rozwiązania wzrocowe, które mają
@@ -13,26 +14,26 @@ function Exercise() {
                 <div className={styles.list_element_wrapper}>
                     <div className={styles.subject}>Zmienne</div>
                     <div className={`${styles.list_element} ${styles.number_element}`}>1</div>
-                    <div className={`${styles.list_element} ${number_element}`}>2</div>
-                    <div className={`${styles.list_element} ${number_element}`}>3</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>2</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>3</div>
                 </div>
                 <div className={styles.list_element_wrapper}>
                     <div className={styles.subject}>Struktury danych</div>
-                    <div className={`${styles.list_element} ${number_element}`}>1</div>
-                    <div className={`${styles.list_element} ${number_element}`}>2</div>
-                    <div className={`${styles.list_element} ${number_element}`}>3</div>
-                    <div className={`${styles.list_element} ${number_element}`}>4</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>1</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>2</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>3</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>4</div>
                 </div>
                 <div className={styles.list_element_wrapper}>
                     <div className={styles.subject}>Napisy</div>
-                    <div className={`${styles.list_element} ${number_element}`}>1</div>
-                    <div className={`${styles.list_element} ${number_element}`}>2</div>
-                    <div className={`${styles.list_element} ${number_element}`}>3</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>1</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>2</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>3</div>
                 </div>
                 <div className={styles.list_element_wrapper}>
                     <div className={styles.subject}>Instrukcje warunkowe</div>
-                    <div className={`${styles.list_element} ${number_element}`}>1</div>
-                    <div className={`${styles.list_element} ${number_element}`}>2</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>1</div>
+                    <div className={`${styles.list_element} ${styles.number_element}`}>2</div>
                 </div>
             </div>
             <div className={styles.exercises_title}>

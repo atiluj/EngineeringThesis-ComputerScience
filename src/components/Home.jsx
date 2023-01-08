@@ -1,4 +1,5 @@
 import styles from './Home.module.css';
+import '../style.css'; 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import CoffeeIcon from '@mui/icons-material/Coffee';
 
@@ -29,20 +30,20 @@ function Home() {
             </article>
         </div>
 
-        <main>
+        <main className={styles.main}>
             <div className={styles.contents}>
                 <div className={styles.cont}>
-                    <a href="#first" className={styles.menu_button}>DLA KOGO?</a>
-                    <a href="#second" className={styles.menu_button}>STATYSTYKI</a>
-                    <a href="#third" className={styles.menu_button}>CO ZAWIER KURS</a>
-                    <a href="#fourth" className={styles.menu_button}>INSTRUKCJA</a>
-                    <a href="#fifth" className={styles.menu_button}>WSKAZÓWKI</a>
-                    <a href="#sixth" className={styles.menu_button}>AUTORZY</a>
+                    <a href="#first" className="menu_button">DLA KOGO?</a>
+                    <a href="#second" className="menu_button">STATYSTYKI</a>
+                    <a href="#third" className="menu_button">CO ZAWIER KURS</a>
+                    <a href="#fourth" className="menu_button">INSTRUKCJA</a>
+                    <a href="#fifth" className="menu_button">WSKAZÓWKI</a>
+                    <a href="#sixth" className="menu_button">AUTORZY</a>
                 </div>
                 {/* TODO: REKLAMA */}
             </div>
 
-            <div className={styles.main}>
+            <div className={styles.main_content}>
                 <article id="first">
                     <h1>DLA KOGO?</h1>
                     <p>
@@ -169,7 +170,7 @@ function Home() {
 
         <div className={styles.separator}></div>
 
-        <footer>
+        <footer className={styles.footer}>
             <div>
                 <p>Hej! <br /> Kontakt do twórców tej strony znajdziesz na stronie głównej w zakładce AUTORZY STRONY.</p>
                 <p>Jeśli uważasz, że nasza praca Ci pomogła możesz nas wesprzeć kupując nam kawkę. Bardzo to docenimy!</p>
