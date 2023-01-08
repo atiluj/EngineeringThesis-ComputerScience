@@ -45,35 +45,18 @@ function Nav() {
         x.className = "topnav";
     }
     }
-    //
+    
+    function switchTheme() {
+        var checkbox = document.getElementById("checkbox");
+        if (checkbox.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }    
+    }    
 
     let padding, fontSize;
-    // if (windowWidth > 1200) {
-    //     if (scrollY > 80) {
-    //         padding = "7px 17px";
-    //         fontSize = "20px";
-    //     } else {
-    //         padding = "16px 23px";
-    //         fontSize = "18px";
-    //     }
-    // } else if (windowWidth > 1000) {
-    //     if (scrollY > 80) {
-    //         padding = "9px 17px";
-    //         fontSize = "14px";
-    //     } else {
-    //         padding = "13px 17px";
-    //         fontSize = "18px";
-    //     }
-    // } else if (windowWidth > 810) {
-    //     if (scrollY > 80) {
-    //         padding = "12px 10px";
-    //         fontSize = "12px";
-    //     } else {
-    //         padding = "15px 10px";
-    //         fontSize = "14px";
-    //     }
-    // }
-
     const aStyle = {padding, fontSize};
 
     return <>
@@ -97,7 +80,7 @@ function Nav() {
                     <Link to="/interpreter" style={aStyle} className={`menu_button ${styles.nav_button}`}>Interpreter python</Link>
 
                     <label className={styles.switch} >
-                            <input type="checkbox" className={styles.checkbox}/>
+                            <input id="checkbox" type="checkbox" className={styles.checkbox} onClick={switchTheme}/>
                             <span className={`${styles.slider} ${styles.round}`}></span>
                     </label>
 
