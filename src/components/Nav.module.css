@@ -53,7 +53,7 @@
     background-color: transparent;
 }
 
-nav #nav-wrapper-right .icon{
+nav .nav-wrapper-right .icon{
     background-color: var(--transparent);
     color: var(--primary);
     border: 0px;
@@ -127,41 +127,41 @@ nav #nav-wrapper-right .icon{
 }
 
 @media (max-width: 790px) {
-    #top-navbar.responsive {
+    .navbar.responsive {
         position: relative;
         flex-direction: column;
         text-align: left;
         margin-bottom: 0px;
     }
     
-    #top-navbar.responsive #nav-wrapper-right .icon {
+    .navbar.responsive .nav-wrapper-right .icon {
       display: block;
       position: absolute;
       right: 25;
       top: 8;
     }
 
-    #top-navbar.responsive #nav-wrapper-left{
+    .navbar.responsive .nav-wrapper-left{
         /* display: flex; */
         flex-direction: column;
         padding-left: 20px;
         margin-left: 5px;
     }
 
-    #top-navbar.responsive #nav-wrapper-right{
+    .navbar.responsive .nav-wrapper-right{
         padding-left: 20px;
         margin-left: 5px;
     }
 
-    #top-navbar.responsive #nav-wrapper-left a,
-    #top-navbar.responsive #nav-wrapper-right a{
+    .navbar.responsive .nav-wrapper-left a,
+    .navbar.responsive .nav-wrapper-right a{
       float: none;
       display: block;
       align-self: start;
     }
 
-    #top-navbar.responsive #nav-wrapper-left a:hover,
-    #top-navbar.responsive #nav-wrapper-right a:hover{
+    .navbar.responsive .nav-wrapper-left a:hover,
+    .navbar.responsive .nav-wrapper-right a:hover{
         background-color: transparent;
     }
 }

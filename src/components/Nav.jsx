@@ -35,19 +35,15 @@ function useScrollY() {
 
 function Nav() {
     function navBurger() {
-        const x = document.getElementById("top-navbar");
-        if (x.className === "navbar") {
+        const x = document.getElementById("top_navbar");
+        if (x.className === styles.navbar) {
             console.log("elo elo");
-            x.className += " responsive";
+            x.className += ` ${styles.responsive}`;
         } else {
             console.log("zenujace"); 
-            x.className = "navbar";
-        }//
+            x.className = styles.navbar;
+        }
     }
-    
-    export default function() {
-        const windowWidth = useWindowWidth();
-        const scrollY = useScrollY();    
     
     function switchTheme() {
         var checkbox = document.getElementById("checkbox");
@@ -96,6 +92,6 @@ function Nav() {
 
         <Outlet />
     </>;
-}}
+}
 
 export default Nav;
