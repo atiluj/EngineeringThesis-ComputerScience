@@ -33,33 +33,38 @@ function useScrollY() {
     return scrollY;
 }
 
-function Nav() {
-    function navBurger() {
-        const x = document.getElementById("top_navbar");
-        if (x.className === styles.navbar) {
-            console.log("elo elo");
-            x.className += ` ${styles.responsive}`;
-        } else {
-            console.log("zenujace"); 
-            x.className = styles.navbar;
-        }
+function navBurger() {
+    // TODO: refactor
+    const x = document.getElementById("top_navbar");
+    if (x.className === `gradient ${styles.navbar}`) {
+        console.log("elo elo");
+        x.className += ` ${styles.responsive}`;
+    } else {
+        console.log("zenujace"); 
+        x.className = `gradient ${styles.navbar}`;
     }
-    
-    function switchTheme() {
-        var checkbox = document.getElementById("checkbox");
-        if (checkbox.checked) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-        else {
-            document.documentElement.setAttribute('data-theme', 'light');
-        }    
+}
+
+function switchTheme() {
+    var checkbox = document.getElementById("checkbox");
+    if (checkbox.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
     }    
+}    
+
+function Nav() {
+    const windowWidth = useWindowWidth();
+    const scrollY = useScrollY();    
 
     let padding, fontSize;
     const aStyle = {padding, fontSize};
 
     return <>
         <nav id="top_navbar" className={`gradient ${styles.navbar}`}>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
                 <div id="nav_wrapper_left" className={styles.nav_wrapper_left}>
                 
@@ -83,8 +88,8 @@ function Nav() {
                             <span className={`${styles.slider} ${styles.round}`}></span>
                     </label>
 
-                    <button className="icon" onClick={navBurger}>
-                        <MenuIcon className="nav-burger"/>
+                    <button className={styles.icon} onClick={navBurger}>
+                        <MenuIcon className={styles.nav_burger}/>
                     </button> 
                 </div>
             

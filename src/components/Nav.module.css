@@ -39,7 +39,7 @@
     padding: 0px;
 }
 
-.nav_wrapper_right a.icon {
+.nav_wrapper_right .icon {
     display: none;
 }
 
@@ -53,7 +53,7 @@
     background-color: transparent;
 }
 
-nav .nav-wrapper-right .icon{
+.navbar .nav_wrapper_right .icon{
     background-color: var(--transparent);
     color: var(--primary);
     border: 0px;
@@ -118,7 +118,7 @@ nav .nav-wrapper-right .icon{
         display: none;    
     }
 
-    .navbar .nav_wrapper_right a.icon{
+    .navbar .nav_wrapper_right button.icon{
         color: var(--primary);
         transform: scale(1.2);
         float: right;
@@ -134,34 +134,34 @@ nav .nav-wrapper-right .icon{
         margin-bottom: 0px;
     }
     
-    .navbar.responsive .nav-wrapper-right .icon {
+    .navbar.responsive .nav_wrapper_right .icon {
       display: block;
       position: absolute;
       right: 25;
       top: 8;
     }
 
-    .navbar.responsive .nav-wrapper-left{
+    .navbar.responsive .nav_wrapper_left{
         /* display: flex; */
         flex-direction: column;
         padding-left: 20px;
         margin-left: 5px;
     }
 
-    .navbar.responsive .nav-wrapper-right{
+    .navbar.responsive .nav_wrapper_right{
         padding-left: 20px;
         margin-left: 5px;
     }
 
-    .navbar.responsive .nav-wrapper-left a,
-    .navbar.responsive .nav-wrapper-right a{
+    .navbar.responsive .nav_wrapper_left a,
+    .navbar.responsive .nav_wrapper_right a{
       float: none;
       display: block;
       align-self: start;
     }
 
-    .navbar.responsive .nav-wrapper-left a:hover,
-    .navbar.responsive .nav-wrapper-right a:hover{
+    .navbar.responsive .nav_wrapper_left a:hover,
+    .navbar.responsive .nav_wrapper_right a:hover{
         background-color: transparent;
     }
 }

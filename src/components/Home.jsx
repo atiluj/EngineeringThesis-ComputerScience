@@ -21,7 +21,7 @@ function Home() {
                     Na szczęście, każdego roku w internecie powstaje coraz więcej blogów czy filmów, które są
                     bardzo pomocne. Wciąż jednak istnieje mało kompleksowych kursów, które zbierają całą
                     potrzebną wiedzę w jednym miejscu i co najważniejsze są w 100% darmowe. Tworząc tę stronę
-                    kierowałyśmy własnymi doświadczeniami _ same kilka lat temu przygotowywałyśmy się do tej
+                    kierowałyśmy własnymi doświadczeniami - same kilka lat temu przygotowywałyśmy się do tej
                     matury i wiemy, czego nam wtedy brakowały. Chcemy oddać w Twoje ręce gotowe narzędzie, dzięki
                     któremu oszczedzisz mnóstwo czasu i pieniędzy, a nauka będzie sprawna, przyjemna oraz
                     przyniesie oczekiwane rezultaty. Przekazujemy Ci też mnóstwo wskazówek, które ułatwią Ci pracę
@@ -47,7 +47,7 @@ function Home() {
                 <article id="first">
                     <h1>DLA KOGO?</h1>
                     <p>
-                        Jeśli nie miałeś wcześniej styczności z informatyką _ nie przejmuj się _ nasz kurs
+                        Jeśli nie miałeś wcześniej styczności z informatyką - nie przejmuj się - nasz kurs
                         nie wymaga żadnej wcześniejszej wiedzy i powoli wprowadzi Cię w każdy temat. Poziom
                         trudności wykładów i zadań stopniowo wzrasta, a więc osoby bardziej zaawansowane na pewno
                         znajdą tutaj coś dla siebie. Mamy nadzieję, że ta strona pomoże Ci w nauce i uporządkowaniu
@@ -66,7 +66,7 @@ function Home() {
 
                         Co najbardziej szokujące jedynie 115 uczniów spośród ponad 268 tys. maturzystów to osoby ze szkół na wsi, które decydują się podejść do egzaminu z informatyki. W przeliczeniu jest to tylko 0.00043% czyli ok. 4 na 10 tys. To tak jakby wziąć 10 małych miast w Polsce i wybrać jedynie 4 spośród wszystkich ich mieszkańców.<br /><br />
 
-                        Warto zauważyć, że operujemy paroma przybliżeniami i opieramy się tutaj jedynie na danych z 2022 roku. Niestety wyniki z innych lat nie różnią się od nich znacząco. Wszystkie dane są dostępne w raportach CKE, na oficjalnej stronie internetowej: https://cke.gov.pl/egzamin_maturalny/egzamin_maturalny_w_formule_2015/wyniki/
+                        Warto zauważyć, że operujemy paroma przybliżeniami i opieramy się tutaj jedynie na danych z 2022 roku. Niestety wyniki z innych lat nie różnią się od nich znacząco. Wszystkie dane są dostępne w raportach CKE, na oficjalnej stronie internetowej: https://cke.gov.pl/egzamin-maturalny/egzamin-maturalny-w-formule-2015/wyniki/
                         <br /><br />
                         [tu obrazek z 10 000 osób i zakolorowany 4 uczniów]</p>
                 </article>
@@ -144,7 +144,7 @@ function Home() {
             <div className={styles.authors_details_wrapper}>
                 <div className={styles.author}>
                     <div className={styles.photo}><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita" /></div>
-                    <p className={styles.authorName}>JULITA OSMAN<a href="https://www.linkedin.com/in/julita_osman_167530225/" target="_blank"><LinkedInIcon /></a></p>
+                    <p className={styles.authorName}>JULITA OSMAN<a href="https://www.linkedin.com/in/julita-osman-167530225/" target="_blank"><LinkedInIcon /></a></p>
                     <p className={styles.introduction}>W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej. Przez wiele lat udzielałam korepetycji z 
                     informatyki i matematyki. Studiuję informatykę i filologię chińską. Mam nadzieję, że uda mi się połączyć te twa kierunki w mojej przyszłej pracy zawodowej. 
                     </p>
@@ -160,7 +160,7 @@ function Home() {
 
                 <div className={styles.author}>
                     <div className={styles.photo}><img src={new URL('../img/nikola.jpg', import.meta.url)} alt="Nikola" /></div>
-                    <p className={styles.authorName}>NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola_wrona_429a75211/" target="_blank"><LinkedInIcon /></a></p>
+                    <p className={styles.authorName}>NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola-wrona-429a75211/" target="_blank"><LinkedInIcon /></a></p>
                     <p className={styles.introduction}>Od czasów liceum programowanie było dla mnie najbardziej interesującą dziedziną informatyki. Przy tworzeniu tej platformy 
                     zajęłam się teoretyczną częścią oraz kursem programowania w Pythonie. Obecnie studiuję informatykę i pracuję jako software developer.
                     </p>
