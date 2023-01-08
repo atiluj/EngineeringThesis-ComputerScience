@@ -2,8 +2,8 @@
   "name": "maturacz",
   "private": true,
   "scripts": {
-    "start": "parcel *.html",
-    "build": "parcel build *.html"
+    "start": "parcel public/*.html",
+    "build": "parcel build public/*.html"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -16,10 +16,24 @@
     "highlight.js": "^11.6.0",
     "parcel": "^2.8.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-router-dom": "^6.6.1",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@parcel/transformer-mdx": "^2.8.2",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -12,46 +12,46 @@ nav {
     border-bottom: 2px solid var(--primary);
 }
 
-#navbar{
+.navbar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#nav-wrapper-left{
+.nav_wrapper_left{
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 20px;
 }
 
-#nav-wrapper-right{
+.nav_wrapper_right{
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-right: 20px;
 }
 
-#nav-wrapper-left a,
-#nav-wrapper-right a,
-#nav-wrapper-right .switch {
+.nav_wrapper_left .menu_button,
+.nav_wrapper_right .menu_button,
+.nav_wrapper_right .switch {
     transition: .5s;
 }
 
-#nav-wrapper-right .switch {
+.nav_wrapper_right .switch {
     padding: 0px;
 }
 
-#nav-wrapper-right a.icon {
+.nav_wrapper_right .menu_button.icon {
     display: none;
 }
 
-nav #nav-wrapper-right,
-nav #nav-wrapper-left {
+nav .nav_wrapper_right,
+nav .nav_wrapper_left {
     transition: 0.7s;
 }
 
-nav a.menu-button.nav-button {
+nav .menu_button.nav_button {
     margin-bottom: 0;
     background-color: transparent;
 }
@@ -61,16 +61,16 @@ nav a.menu-button.nav-button {
         overflow: hidden;
     }
 
-    nav #nav-wrapper-left {
+    nav .nav_wrapper_left {
         padding-left: 20px;
     }
 
-    nav #nav-wrapper-right {
+    nav .nav_wrapper_right {
         padding-right: 20px;
     }
 
-    nav #nav-wrapper-left a,
-    nav #nav-wrapper-right a {
+    nav .nav_wrapper_left .menu_button,
+    nav .nav_wrapper_right .menu_button {
         font-size: 15px;
     }
 
@@ -82,15 +82,15 @@ nav a.menu-button.nav-button {
 }
 
 @media(max-width:1000px) {
-    nav #nav-wrapper-left {
+    nav .nav-wrapper-left {
         padding-left: 5px;
     }
 
-    nav #nav-wrapper-right {
+    nav .nav_wrapper_right {
         padding-right: 5px;
     }
 
-    nav a {
+    nav .menu_button {
         font-size: 10px;
     }
 }
@@ -103,19 +103,19 @@ nav a.menu-button.nav-button {
         letter-spacing: 30px;
     }
     
-    #navbar #nav-wrapper-left a:not(:first-child) {
+    .navbar .nav_wrapper_left .menu_button:not(:first-child) {
         display: none;
     }
     
-    #navbar #nav-wrapper-right a:first-child{
+    .navbar .nav_wrapper_right .menu_button:first-child{
         display: none;    
     }
 
-    #navbar #nav-wrapper-right .slider{
+    .navbar .nav_wrapper_right .slider{
         display: none;    
     }
 
-    #navbar #nav-wrapper-right a.icon{
+    .navbar .nav_wrapper_right .menu_button.icon{
         color: var(--main-accent);
         transform: scale(1.2);
         float: right;

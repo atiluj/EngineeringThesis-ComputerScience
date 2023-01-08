@@ -1,14 +1,14 @@
-import './Home.css';
+import styles from './Home.module.css';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import CoffeeIcon from '@mui/icons-material/Coffee';
 
-export default function () {
+function Home() {
     return <>
-        <div className="section">
-            <div className="header">
+        <div className={styles.section}>
+            <div className={styles.header}>
                 <h1>Cześć!</h1>
             </div>
-            <article className="first">
+            <article className={styles.first}>
                 <p>Nasza strona powstała z myślą o wszystkich ludziach, którzy chcą podejść do matury z
                     informatyki, bezwzględu na to, czy uczyli się jej w szkole czy nie. Znajdujące sie na
                     niej materiały pomogą w osiągniećiu wyniku, który pozwoli Ci dostać się na dobre studia
@@ -20,7 +20,7 @@ export default function () {
                     Na szczęście, każdego roku w internecie powstaje coraz więcej blogów czy filmów, które są
                     bardzo pomocne. Wciąż jednak istnieje mało kompleksowych kursów, które zbierają całą
                     potrzebną wiedzę w jednym miejscu i co najważniejsze są w 100% darmowe. Tworząc tę stronę
-                    kierowałyśmy własnymi doświadczeniami - same kilka lat temu przygotowywałyśmy się do tej
+                    kierowałyśmy własnymi doświadczeniami _ same kilka lat temu przygotowywałyśmy się do tej
                     matury i wiemy, czego nam wtedy brakowały. Chcemy oddać w Twoje ręce gotowe narzędzie, dzięki
                     któremu oszczedzisz mnóstwo czasu i pieniędzy, a nauka będzie sprawna, przyjemna oraz
                     przyniesie oczekiwane rezultaty. Przekazujemy Ci też mnóstwo wskazówek, które ułatwią Ci pracę
@@ -30,23 +30,23 @@ export default function () {
         </div>
 
         <main>
-            <div className="contents">
-                <div className="cont">
-                    <a href="#first" className="menu-button">DLA KOGO?</a>
-                    <a href="#second" className="menu-button">STATYSTYKI</a>
-                    <a href="#third" className="menu-button">CO ZAWIER KURS</a>
-                    <a href="#fourth" className="menu-button">INSTRUKCJA</a>
-                    <a href="#fifth" className="menu-button">WSKAZÓWKI</a>
-                    <a href="#sixth" className="menu-button">AUTORZY</a>
+            <div className={styles.contents}>
+                <div className={styles.cont}>
+                    <a href="#first" className={styles.menu_button}>DLA KOGO?</a>
+                    <a href="#second" className={styles.menu_button}>STATYSTYKI</a>
+                    <a href="#third" className={styles.menu_button}>CO ZAWIER KURS</a>
+                    <a href="#fourth" className={styles.menu_button}>INSTRUKCJA</a>
+                    <a href="#fifth" className={styles.menu_button}>WSKAZÓWKI</a>
+                    <a href="#sixth" className={styles.menu_button}>AUTORZY</a>
                 </div>
                 {/* TODO: REKLAMA */}
             </div>
 
-            <div className="main">
+            <div className={styles.main}>
                 <article id="first">
                     <h1>DLA KOGO?</h1>
                     <p>
-                        Jeśli nie miałeś wcześniej styczności z informatyką - nie przejmuj się - nasz kurs
+                        Jeśli nie miałeś wcześniej styczności z informatyką _ nie przejmuj się _ nasz kurs
                         nie wymaga żadnej wcześniejszej wiedzy i powoli wprowadzi Cię w każdy temat. Poziom
                         trudności wykładów i zadań stopniowo wzrasta, a więc osoby bardziej zaawansowane na pewno
                         znajdą tutaj coś dla siebie. Mamy nadzieję, że ta strona pomoże Ci w nauce i uporządkowaniu
@@ -65,7 +65,7 @@ export default function () {
 
                         Co najbardziej szokujące jedynie 115 uczniów spośród ponad 268 tys. maturzystów to osoby ze szkół na wsi, które decydują się podejść do egzaminu z informatyki. W przeliczeniu jest to tylko 0.00043% czyli ok. 4 na 10 tys. To tak jakby wziąć 10 małych miast w Polsce i wybrać jedynie 4 spośród wszystkich ich mieszkańców.<br /><br />
 
-                        Warto zauważyć, że operujemy paroma przybliżeniami i opieramy się tutaj jedynie na danych z 2022 roku. Niestety wyniki z innych lat nie różnią się od nich znacząco. Wszystkie dane są dostępne w raportach CKE, na oficjalnej stronie internetowej: https://cke.gov.pl/egzamin-maturalny/egzamin-maturalny-w-formule-2015/wyniki/
+                        Warto zauważyć, że operujemy paroma przybliżeniami i opieramy się tutaj jedynie na danych z 2022 roku. Niestety wyniki z innych lat nie różnią się od nich znacząco. Wszystkie dane są dostępne w raportach CKE, na oficjalnej stronie internetowej: https://cke.gov.pl/egzamin_maturalny/egzamin_maturalny_w_formule_2015/wyniki/
                         <br /><br />
                         [tu obrazek z 10 000 osób i zakolorowany 4 uczniów]</p>
                 </article>
@@ -91,13 +91,13 @@ export default function () {
                         WYBIERZ SWÓJ POZIOM:<br /><br />
 
                         <b>JESZCZE NIE WIEM, ALE ZA MIESIĄC MUSZĘ TO ZDAĆ (niepolecany)</b><br />
-                        Został Ci miesiąc - nie ucz się teorii, nie warto!
+                        Został Ci miesiąc _ nie ucz się teorii, nie warto!
                         Jeśli masz już podstawy wiedzy programistycznej to szlifuj tę umiejśtność najbardziej jak to możliwe. Przerób wszystkie zadania programistyczne i algorytmiczne z poprzednich matur i przeczytaj materiały dostępne na strone. W wolnych chwilach dołącz do tego naukę Excela (i Accessa, jeśli podstawy Excela nie są Ci już obce).
                         Jeśli natomiast zaczynasz od podstaw skup się na zadaniach z Excela i Accessa. Zadania programistycznie nie są tak łatwe, a nauka myślenia algorytmicznego wymaga czasu. Jeśli masz dużą motywację spróbuj opanować podstawy kodowania, ale nie trać czasu na wgłębianie się w trudneijsze podpunkty zadań czy zaawansowane funkcje Pythona.
                         <br /><br />
                         <b>JESTEM ZIELONY</b><br />
                         Jeśli zaczynasz od podstaw, to masz dwie możliwości. Jedna z nich to rozpoczęcie nauki od prostych algorytmów i przejście do nauki programowania krok po kroku. Druga to droga od zera do mistrza pakietu office, czyli dużo ćwiczeń z Excela i Accessa.
-                        Oczywiście najepiej nauczyć się obu tych części i zdobyć kompelksową wiedzę. Z doświadczenia wiemy, że opanowanie umiejętności programistycznych nie jest łatwe i wymaga więcej czasu. Muisz bowiem przyzwyczaić się do algorytmicznego sposobu myślenia i rozwiązywania zadań poprzez analizowanie coraz mniejszych jego podproblemów. Dobrym pomysłem jest więc nauka algorytmów równolegle do zdobywania umiejętności związanych z Excelem czy Accessem. Różnorodna sepcyfika tych zadań pozwoli Ci nie wpaść w monotonnie i zwiększy wydajność procesu nauki. Oczywiście ważnym aspektem jest dostępność pakietów Microsoft, wskazówki na ten temat znajdziesz w zakładkach "Excel - wskazówki" oraz "Access - wskazówki".
+                        Oczywiście najepiej nauczyć się obu tych części i zdobyć kompelksową wiedzę. Z doświadczenia wiemy, że opanowanie umiejętności programistycznych nie jest łatwe i wymaga więcej czasu. Muisz bowiem przyzwyczaić się do algorytmicznego sposobu myślenia i rozwiązywania zadań poprzez analizowanie coraz mniejszych jego podproblemów. Dobrym pomysłem jest więc nauka algorytmów równolegle do zdobywania umiejętności związanych z Excelem czy Accessem. Różnorodna sepcyfika tych zadań pozwoli Ci nie wpaść w monotonnie i zwiększy wydajność procesu nauki. Oczywiście ważnym aspektem jest dostępność pakietów Microsoft, wskazówki na ten temat znajdziesz w zakładkach "Excel _ wskazówki" oraz "Access _ wskazówki".
                         <br /><br />
                         <b>NIBY MAM INFORMATYKĘ W SZKOLE, ALE TA SZKOŁA JEST W POLSCE</b><br />
                         Jeśli potrzebujesz nauczyć się danego zagadnienia od podstaw lub chcesz solidnie utrwalić wiedzę, to możesz przerabiać tematy po kolei. Jeśli jednak czujesz, że dany temat nie sprawia Ci trudności śmiało pomiń niektóre fragmenty lub podtematy.
@@ -126,7 +126,7 @@ export default function () {
                     programu na komputerze domowym, to ze statystyk wynika, że jest to jedna z najwyżej ocenianych części egzaminu.<br /><br />
                     
                     Jeśli chodzi o język programowania wybierany w części praktycznej, to sugerujemy wybór Pythona. Jest on najprostszy w obsłudze i najłatwiejszy do 
-                    nauczenia się spośród języków dopuszczalnych przez CKE na maturze. W porównaniu z np. C++ zadanie w Pythonie jesteśmy w stanie wykonać szybciej - 
+                    nauczenia się spośród języków dopuszczalnych przez CKE na maturze. W porównaniu z np. C++ zadanie w Pythonie jesteśmy w stanie wykonać szybciej _ 
                     nie musimy się martwić typami czy skomplikowanymi operacjami na napisach. Więcej na ten temat dowiesz się w temacie 0, w zakładce Python.<br /><br />
                     
                     Każdy z działów ma sekcję "Wskazówki", w której znajdziesz więcej przydatnych rad oraz bardziej szczegółowe instrukcje.
@@ -136,45 +136,45 @@ export default function () {
             </div>
         </main>
 
-        <div className="separator"></div>
+        <div className={styles.separator}></div>
 
-        <div className="authors" id="sixth">
-            <div className="authorsTitle"><p>AUTORZY STRONY</p></div>
-            <div className="authors-details-wrapper">
-                <div className="author">
-                    <div className="photo"><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita" /></div>
-                    <p className="authorName">JULITA OSMAN<a href="https://www.linkedin.com/in/julita-osman-167530225/" target="_blank"><LinkedInIcon /></a></p>
-                    <p className="introduction">W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej. Przez wiele lat udzielałam korepetycji z 
+        <div className={styles.authors} id="sixth">
+            <div className={styles.authorsTitle}><p>AUTORZY STRONY</p></div>
+            <div className={styles.authors_details_wrapper}>
+                <div className={styles.author}>
+                    <div className={styles.photo}><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita" /></div>
+                    <p className={styles.authorName}>JULITA OSMAN<a href="https://www.linkedin.com/in/julita_osman_167530225/" target="_blank"><LinkedInIcon /></a></p>
+                    <p className={styles.introduction}>W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej. Przez wiele lat udzielałam korepetycji z 
                     informatyki i matematyki. Studiuję informatykę i filologię chińską. Mam nadzieję, że uda mi się połączyć te twa kierunki w mojej przyszłej pracy zawodowej. 
                     </p>
                 </div>
 
-                <div className="author">
-                    <div className="photo"><img src={new URL('../img/ola.jpeg', import.meta.url)} alt="Aleksandra" /></div>
-                    <p className="authorName">OLA STĘPNIEWSKA<a href="https://www.linkedin.com/in/aleksandrast%C4%99pniewska/" target="_blank"><LinkedInIcon /></a></p>
-                    <p className="introduction">Interesuję się bazami danych i za to właśnie za nie oraz materiały z Excela byłam odpowiedzialna podczas tworzenia naszej platformy. 
+                <div className={styles.author}>
+                    <div className={styles.photo}><img src={new URL('../img/ola.jpeg', import.meta.url)} alt="Aleksandra" /></div>
+                    <p className={styles.authorName}>OLA STĘPNIEWSKA<a href="https://www.linkedin.com/in/aleksandrast%C4%99pniewska/" target="_blank"><LinkedInIcon /></a></p>
+                    <p className={styles.introduction}>Interesuję się bazami danych i za to właśnie za nie oraz materiały z Excela byłam odpowiedzialna podczas tworzenia naszej platformy. 
                     Przez wiele lat udzielałam korepetycji z informatyki, matematyki i fizyki. Zawodowo swoją przyszłość wiążę z zarządzaniem w firmach IT.
                     </p>
                 </div>
 
-                <div className="author">
-                    <div className="photo"><img src={new URL('../img/nikola.jpg', import.meta.url)} alt="Nikola" /></div>
-                    <p className="authorName">NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola-wrona-429a75211/" target="_blank"><LinkedInIcon /></a></p>
-                    <p className="introduction">Od czasów liceum programowanie było dla mnie najbardziej interesującą dziedziną informatyki. Przy tworzeniu tej platformy 
+                <div className={styles.author}>
+                    <div className={styles.photo}><img src={new URL('../img/nikola.jpg', import.meta.url)} alt="Nikola" /></div>
+                    <p className={styles.authorName}>NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola_wrona_429a75211/" target="_blank"><LinkedInIcon /></a></p>
+                    <p className={styles.introduction}>Od czasów liceum programowanie było dla mnie najbardziej interesującą dziedziną informatyki. Przy tworzeniu tej platformy 
                     zajęłam się teoretyczną częścią oraz kursem programowania w Pythonie. Obecnie studiuję informatykę i pracuję jako software developer.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div className="separator"></div>
+        <div className={styles.separator}></div>
 
         <footer>
             <div>
                 <p>Hej! <br /> Kontakt do twórców tej strony znajdziesz na stronie głównej w zakładce AUTORZY STRONY.</p>
                 <p>Jeśli uważasz, że nasza praca Ci pomogła możesz nas wesprzeć kupując nam kawkę. Bardzo to docenimy!</p>
             </div>
-            <div className="coffee-link">
+            <div className={styles.coffee_link}>
                 <a href="">TUTAJ ZNAJDZIESZ LINK DO PROFILU <CoffeeIcon /></a>
             </div>
 
@@ -182,3 +182,5 @@ export default function () {
 
     </>;
 }
+
+export default Home;

@@ -1,5 +1,6 @@
-import './Nav.css';
+import styles from './Nav.module.css';
 import * as React from 'react';
+import { Outlet, Link } from "react-router-dom";
 
 function useWindowWidth() {
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
@@ -29,11 +30,11 @@ function useScrollY() {
     return scrollY;
 }
 
-export default function() {
+function Nav() {
     const windowWidth = useWindowWidth();
     const scrollY = useScrollY();
 
-    //TODO: drop-down menu
+    //TODO: drop_down menu
     function myFunction() {
     var x = document.getElementById("navbar");
     if (x.className === "topnav") {
@@ -73,38 +74,40 @@ export default function() {
 
     const aStyle = {padding, fontSize};
 
-    return <nav id="navbar" className="gradient">
+    return <>
+        <nav id="navbar" className={`${styles.gradient} ${styles.navbar}`}>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+                <div id="nav_wrapper_left" className={styles.nav_wrapper_left}>
+                
+                    <Link to="/" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Cześć!</Link>
+                
+                    <Link to="/teoria" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Teoria</Link>
+            
+                    <Link to="/excel" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Excel</Link>
+                
+                    <Link to="/access" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Access</Link>
+                
+                    <Link to="/python" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Python</Link>
+                
+                    <Link to="/exercise" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Zadania</Link>
+                </div>
+                <div id="nav_wrapper_right" className={styles.nav_wrapper_right}>
+                    <Link to="/interpreter" style={aStyle} className={`${styles.menu_button} ${styles.nav_button}`}>Interpreter python</Link>
 
-            <div id="nav-wrapper-left">
-               
-                <a href="index.html" style={aStyle} className="menu-button nav-button">Cześć!</a>
-            
-                <a href="teoria.html" style={aStyle} className="menu-button nav-button">Teoria</a>
-        
-                <a href="excel.html" style={aStyle} className="menu-button nav-button">Excel</a>
-            
-                <a href="access.html" style={aStyle} className="menu-button nav-button">Access</a>
-            
-                <a href="python.html" style={aStyle} className="menu-button nav-button">Python</a>
-            
-                <a href="exercise.html" style={aStyle} className="menu-button nav-button">Zadania</a>
-            </div>
-            <div id="nav-wrapper-right">
-                <a href="interpreter.html" style={aStyle} className="menu-button nav-button">Interpreter python</a>
+                    <label className={styles.switch} >
+                            <input type="checkbox"/>
+                            <span className={`${styles.slider} ${styles.round}`}></span>
+                    </label>
 
-                <label className="switch" >
-                        <input type="checkbox"/>
-                        <span className="slider round"></span>
-                </label>
+                    <a className={styles.icon} onClick={myFunction}>
+                        <i className={`${styles.fa} ${styles.fa_bars}`}></i>
+                    </a>    
+                </div>
+            
+        </nav>
 
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-        
-                    
-            </div>
-        
-    </nav>;
+        <Outlet />
+    </>;
 }
+
+export default Nav;

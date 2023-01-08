@@ -1,6 +1,6 @@
 import Wskazowki from './wskazowki.mdx';
 
-export default [
+const ExcelLessons = [
     {name: "Wskazówki", content: <Wskazowki />},
 
     {name: "Dane", subchapters: [
@@ -25,3 +25,5 @@ export default [
         {name: "Funkcje bazodanowe", content: null},
     ]},
 ];
+
+export default ExcelLessons;

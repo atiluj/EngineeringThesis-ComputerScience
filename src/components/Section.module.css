@@ -16,7 +16,7 @@
     height: 80px;
 }
 
-.cont-title {
+.cont_title {
     padding: 10px 0;
     text-align: center;
     /* letter-spacing: 1px; TU MOGŁAM COS ZEPSUC */
@@ -54,7 +54,7 @@ main .contents .cont {
 }
 
 
-main .contents .cont .topic.menu-button{
+main .contents .cont .topic.menu_button{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,7 +75,7 @@ main .contents .cont .subtopic {
     padding-left: 25px;
 }
 
-main .contents .cont .subtopic-current {
+main .contents .cont .subtopic_current {
     color: var(--secondary);
     background-color: var(--primary2);
     border-left: 5px var(--secondary) solid;
@@ -86,7 +86,7 @@ main .contents .cont .subtopic:hover {
     color: var(--secondary);
 } 
 
-main .contents .cont .subtopic-current:hover {
+main .contents .cont .subtopic_current:hover {
     color: var(--secondary);
     background-color: var(--primary2);
 }
@@ -160,7 +160,7 @@ main article pre {
     display: none;
 }
 
-main article img.small-screen{
+main article img.small_screen{
     max-width: 30%;
 }
 
@@ -179,7 +179,7 @@ main article img.small-screen{
         grid-template-columns: 23vw 1fr;
     }
 
-    .cont-title {
+    .cont_title {
         font-size: 23px;
     }
 

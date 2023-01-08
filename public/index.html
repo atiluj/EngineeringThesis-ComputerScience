@@ -10,25 +10,13 @@
     <meta name="keywords"
         content="matura, matura z informatyki, rozszerzona matura, informatyka, liceum, kurs, darmowy kurs, darmowe materiały, teoria, excel, access, pyhon, c++, cpp, interpreter, interpreter python">
     <title>Nuwis</title>
-    <link rel="icon" href="img/favicon-N.png">
+    <link rel="icon" href="../src/img/favicon-N.png">
 </head>
 
 <body>
     <div id="root" class="wrapper"></div>
-    <script type="module">
-        import { lazy, Suspense } from 'react';
-        import * as ReactDOM from 'react-dom/client';
-        import './style.css';
-        const Nav = lazy(() => import('./components/Nav.jsx'));
-        const Section = lazy(() => import('./components/Section.jsx'));
-        import Lessons from './lessons/access/config.jsx';
-
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<Suspense>
-            <Nav />
-            <Section lessons={Lessons} title="access"/>
-        </Suspense>);
+    <script src="../src/index.jsx" type="module">
+        
     </script>
 </body>
-
 </html>

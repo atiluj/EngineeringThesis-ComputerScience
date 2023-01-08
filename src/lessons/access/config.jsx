@@ -19,7 +19,7 @@ import Teoria from './teoria.mdx';
 import Sql from './sql.mdx';
 
 
-export default [
+const AccessLessons = [
     {name: "Wskazówki", content: <Wskazowki />},
 
     {name: "Wstęp", subchapters: [
@@ -57,3 +57,5 @@ export default [
         {name: "Tworzenie raportów", content: null},
     ]},
 ];
+
+export default AccessLessons;

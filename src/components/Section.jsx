@@ -1,7 +1,7 @@
-import './Section.css';
+import styles from './Section.module.css';
 import * as React from 'react';
 import hljs from 'highlight.js';
-import '../node_modules/highlight.js/styles/dark.css';
+// import 'node_modules/highlight.js/styles/dark.css';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -17,7 +17,7 @@ const NavContext = React.createContext({
 function Subchapter({ chapterId, subchapterId, subchapter }) {
     const { changeChapter, curChapter, curSubchapter } = React.useContext(NavContext);
     const isCurrent = chapterId == curChapter && subchapterId == curSubchapter;
-    return <a href="#" className={"subtopic menu-button" + (isCurrent ? " subtopic-current" : "")}
+    return <a href="#" className={`${styles.subtopic} ${styles.menu_button}` + (isCurrent ? ` ${subtopic_current}` : ``)}
         onClick={() => changeChapter(chapterId, subchapterId)}>
         {chapterId}.{subchapterId + 1}. {subchapter.name}
     </a>;
@@ -30,7 +30,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
         if (curChapter == chapterId) setShow(true);
     }, [curChapter]);
     return <div>
-        <div className="topic menu-button" onClick={() => setShow(show => !show)}>
+        <div className={`${styles.topic} ${styles.menu_button}`} onClick={() => setShow(show => !show)}>
             <a>{chapterId}. {chapter.name}</a>
             <div>{show ? <ExpandLess /> : <ExpandMore />}</div>
         </div>
@@ -46,7 +46,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
 function ChapterStandalone({ chapter, chapterId }) {
     const { changeChapter } = React.useContext(NavContext);
     return <div onClick={() => changeChapter(chapterId, 0)}>
-        <div className="topic menu-button">
+        <div className={`${styles.topic} ${styles.menu_button}`}>
             <a>{chapterId}. {chapter.name}</a>
             <div style={{ visibility: "hidden" }}><ExpandMore /></div>
         </div>
@@ -70,13 +70,13 @@ function Contents({lessons}) {
         title += `${curSubchapter + 1}.`;
     title += ` ${subchapter.name}`;
     React.useEffect(() => { hljs.highlightAll(); }, [subchapter.content]); //śmieszna funkcja do skanownaia stronki i kolorowania kodu
-    return <article className="second">
+    return <article className={styles.second}>
         <h1>{title}</h1>
         {subchapter.content}
     </article>;
 }
 
-export default function ({lessons, title}) {
+function Section({lessons, title}) {
     const [curChapter, setCurChapter] = React.useState(0);
     const [curSubchapter, setCurSubchapter] = React.useState(0);
     function changeChapter(ch, subch) {
@@ -125,15 +125,15 @@ export default function ({lessons, title}) {
 
     return <NavContext.Provider value={{ curChapter, curSubchapter, changeChapter }}>
         <main>
-            <div className="contents">
-                <div className="title ft">
+            <div className={styles.contents}>
+                <div className={`${styles.title} ${styles.ft}`}>
                     <a>{title}</a>
                 </div>
-                <div className="cont-title title">
+                <div className={`${styles.cont_title} ${title}`}>
                     <a>{title}</a>
                 </div>
 
-                <div className="cont">
+                <div className={styles.cont}>
                     {lessons.map((chapter, chapterId) =>
                         <Chapter key={chapterId}
                             chapter={chapter}
@@ -142,12 +142,12 @@ export default function ({lessons, title}) {
                 </div>
             </div>
 
-            <div className="main">
-                {/* <div className="title">
+            <div className={styles.main}>
+                {/* <div className={styles.title">
                     <a>{title}</a>
                 </div> */}
                 <Contents lessons={lessons} />
-                <div className='controls'>
+                <div className={styles.controls}>
                     {/* <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div> */}
                     <div>
                         <button onClick={prevLesson} style={{ visibility: prevLessonExists ? "visible" : "hidden" }}><ArrowBackIosNewIcon /></button>
@@ -158,3 +158,5 @@ export default function ({lessons, title}) {
         </main>
     </NavContext.Provider>;
 }
+
+export default Section;

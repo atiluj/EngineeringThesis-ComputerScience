@@ -1,7 +1,7 @@
 import Wskazowki from './wskazowki.mdx';
 import KomputerIJegoCzesci from './komputer-i-jego-czesci.mdx';
 
-export default [
+const TeoriaLessons = [
     {name: "Wskazówki", content: <Wskazowki />},
 
     {name: "Komputer", subchapters: [
@@ -63,3 +63,5 @@ export default [
         {name: "Odwrotna notacja polska", content: null},
     ]},
 ];
+
+export default TeoriaLessons;

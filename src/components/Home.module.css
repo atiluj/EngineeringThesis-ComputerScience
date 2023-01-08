@@ -111,7 +111,7 @@ main article {
     margin-bottom: 30px;
 }
 
-.authors-details-wrapper {
+.authors_details_wrapper {
     display: grid;
     grid-template-columns: repeat(3, minmax(auto, 1fr));
     grid-gap: 10px;
@@ -179,7 +179,7 @@ footer a{
     transition: .7s;
 }
 
-footer .coffee-link{
+footer .coffee_link{
     padding-top: 30px;
 }
 
@@ -293,7 +293,7 @@ footer a:hover{
         line-height: 17px;
     }
 
-    .authors-details-wrapper {
+    .authors_details_wrapper {
         grid-gap: 5%;
     }
 

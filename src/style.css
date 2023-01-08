@@ -1,13 +1,3 @@
-@import "node_modules/@fontsource/chakra-petch/300.css";
-@import "node_modules/@fontsource/chakra-petch/400.css";
-@import "node_modules/@fontsource/chakra-petch/500.css";
-@import "node_modules/@fontsource/chakra-petch/700.css";
-@import "node_modules/@fontsource/ibm-plex-serif/100.css";
-@import "node_modules/@fontsource/ibm-plex-serif/200.css";
-@import "node_modules/@fontsource/ibm-plex-serif/300.css";
-@import "node_modules/@fontsource/ibm-plex-serif/400.css";
-@import "node_modules/@fontsource/ibm-plex-serif/500.css";
-
 :root {
     --font: #7e8fa8;
     --font-accent: #a6bcdb;
