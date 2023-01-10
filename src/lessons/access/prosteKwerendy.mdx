@@ -4,7 +4,7 @@
 ### 2. Wybieramy tabelę (lub kilka tabel), których potrzebujemy. Przeciągamy je, a następnie wybieramy potrzebne nam pola, aby dodać je do zapytania. 
 Łatwiej jest to zarówno wytłumaczyć jak i zrozumieć na konkretnych danych. Weźmy więc pod lupę nasz **przykład**.
 
-<img src={new URL('https://i.imgur.com/JMcc5YL.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/JMcc5YL.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 
 Będziemy potrzebować pola `Pojemnosc_dysku`, które znajduje się w tabeli `Komputery`.
 ![](https://i.imgur.com/rZPiz77.png)
@@ -29,7 +29,7 @@ Widzimy, że pojawiło się nowe pole, którego domyślna wartość to "Grupuj w
 ![](https://i.imgur.com/nm6QFxh.png)
 
 ### 6. Opcje "Sumy".
-<img src={new URL('https://i.imgur.com/DeehW9R.png', import.meta.url)} alt="xyz" className="super-small-img" />
+<img src={new URL('https://i.imgur.com/DeehW9R.png', import.meta.url)} alt="xyz" className={`super_small_img`} />
 Większość opcji jest na tyle prostych, że tłumaczy się poprzez nazwę, na przykład "Suma" sumuje wartości z danej kolumny dla wszystkich rekordów będacych w danej grupe. 
 Ważne, a być może nie tak intuicyjne są następujące opcje:
 * Wyrażenie - wybieramy je, gdy w wierszu "Pole" zamiast standardowej nazyw jednej kolumny używamy całego wyrażenia. Co to dokładnie oznacza opiszę w dziale "3.3. Konstruuowanie wyrażeń".
@@ -39,7 +39,7 @@ Jeśli użycie powyższych opcji wciąż nie jest jasne, nie martw się. Najlepi
 **W naszym przykładzie**, tak jak już powiedzieliśmy, potrzebujemy informacji o 10 najczęściej występujących pojemnościach dysku. 
 Chcemy zatem pogrupować komputery według kolumny `Pojemność_dysku`, a następnie policzyć ile komputerów mamy w każdej z tych grup. Jednak w jaki sposób mamy to zrobić? Przydatne okaże się pole `Numer_komputera`. Wiemy, że jest to klucz głowny w tabeli `Komputery`, a więc każdy z numerów będzie występował w niej co najwyżej jeden raz. 
 Podsumowując chcemy pogrupować komputery według kolumny `Pojemność_dysku`, a następnie policzyć `Numer_komputera`.
-<img src={new URL('https://i.imgur.com/yLI2O7M.png', import.meta.url)} alt="xyz" className="small-img" />
+<img src={new URL('https://i.imgur.com/yLI2O7M.png', import.meta.url)} alt="xyz" className={`small_img`} />
 Teraz mamy już informację o liczbie komputerów z daną pojemnością dysku. 
 
 ![](https://i.imgur.com/Lg73rRv.png)
@@ -63,9 +63,9 @@ Możemy to zrobić za pomocą skrótu klawiszowego "Ctrl+S". Warto pamiętać o 
 Teoretycznie nie jest to wymóg formalny, ale nie chcemy przecież denerwować egzaminatora sprawdzającego naszą pracę. 
 
 ### 10. Zapisz odpowiedź w pliku tekstowym!!!
-<img src={new URL('https://i.imgur.com/vbmsmge.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/vbmsmge.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 
 Jeśli rozwiązanie będzie w pełni poprawne, ale nie zapiszesz odpowiedzi w pliku (w naszym przykładzie "wyniki6.txt") to nie dostaniesz za nie punktów. 
-<img src={new URL('https://i.imgur.com/rlR2EcS.png', import.meta.url)} alt="xyz" className="small-img" />
+<img src={new URL('https://i.imgur.com/rlR2EcS.png', import.meta.url)} alt="xyz" className={`small_img`} />
 **Cała instrukcja jest bardzo ważna**, ale w tym miejscu zwróćmy szczególną uwagę na zaznaczony fragment.
 

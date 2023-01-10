@@ -14,26 +14,26 @@ Odpowiedź jest łatwa, gdyż wynika z treści zadania. Naszym celem jest odpowi
 (`Numer_awarii` wybralibyśmy, gdyby pytano nas o liczbę incydentów/ liczbę awarii.)
 2. Czy chcemy użyć funkcji sumy w kwerendzie pomocniczej, a jeśli tak to jaką opcję wybrać?
 Funkcji sumy musimy użyć, ponieważ jeden komputer danego dnia mógł ulec awarii kilkukrotnie i wówczas pojawi się on również więcej niż raz w wyniku działania kwerendy. Chcemy tego uniknąć z tego samego powodu, z którego wybraliśmy `Numer_komputera`, a nie `Numer_awarii` - interesuje nas ile komputerów uległo awarii w danym miesiącu. Zatem kilka awarii jednego egzemplarza wciąż traktujemy jako jeden incydent. Wybieramy więc opcję "Grupuj według".
-<img src={new URL('https://i.imgur.com/1HpsoAv.png', import.meta.url)} alt="xyz" className="small-img" />
+<img src={new URL('https://i.imgur.com/1HpsoAv.png', import.meta.url)} alt="xyz" className={`small_img`} />
 (Jeśli to, w jaki sposób stworzyliśmy powyższą kwerendę jest niejasne, warto wrócić do poprzednich tematów.)
 
 ### 1. Wybieramy "Tworzenie" -> "Kreator kwerend" -> "Kreator kwerend krzyżowych".
 ![](https://i.imgur.com/dwppfeo.png)
 
 ### 2.Wybieramy "Kwerendy", a następnie naszą kwerendę pomocniczą, którą stworzyliśmy w punkcie 0.
-<img src={new URL('https://i.imgur.com/5rcLiT6.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/5rcLiT6.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 
 ### 3. Wybieramy nagłowki wierszy.
 W zestawieniu chcemy mieć informację o ilości komputerów, które uległy awarii, w zależności od sekcji i miesiąca. Zatem to właśnie pola `Sekcja` i `Miesiac` będą naszymi nagłówkami. W zasadzie nie ma różnicy, które z nich ustawimy jako nagłowek wierszy, a który kolumn. Weźmy więc `Sekcję` jako nagłówek wierszy.
 (Tutaj, analogicznie do innych kreowanych kwerend, możemy wybierać pole poprzez podwójne kliknięcie lub zaznaczenie i użycie ">". Cofać wybór pola możemy poprzez zaznaczenie i użycie "<".)
-<img src={new URL('https://i.imgur.com/TXYEANU.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/TXYEANU.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 
 ### 4. Wybieramy nagłowki kolumn.
-<img src={new URL('https://i.imgur.com/K4sOiss.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/K4sOiss.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 
 ### 5. Ustalamy co chcemy obliczyć - wartości pól.
 Naszym celem jest podanie liczby komputerów, zatem wybieramy pole `Numer_komputera` oraz opcję "Zlicz".
-<img src={new URL('https://i.imgur.com/IBIzvXF.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/IBIzvXF.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 Warto zwrócić uwagę na pytanie "Czy chcesz sumować każdy wiersz?". Co prawda ta informacja nie jest nam potrzebna, jednak często może okazać się przydatna. Jeśli zaznaczylibyśmy, że chcemy dołączyć sumy wierszy, to nasze zestawienie byłoby uzupełnione o dane mówiące o tym, ile sumarycznie komputerów uległo awarii z podziałem na miesiące. 
 (Uwaga - jeśli jakiś komputer uległby awarii na przykład trzykrotnie: w styczniu, marcu i wrześniu, to byłoby to policzone jako trzy incydenty.)
 

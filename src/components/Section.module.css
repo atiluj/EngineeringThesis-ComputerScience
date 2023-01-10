@@ -160,23 +160,6 @@
     display: none;
 }
 
-.main article img.super-small-img{
-    max-width: 30%;
-}
-
-.main article img.small-img{
-    max-width: 50%;
-}
-
-.main article img.medium-img{
-    max-width: 60%;
-}
-
-.main article img.big-img{
-    max-width: 70%;
-}
-
-
 
 @media(max-width: 1400px) {
     .main {

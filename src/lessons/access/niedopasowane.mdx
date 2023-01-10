@@ -1,6 +1,6 @@
 Bardzo często, aby rozwiązać zadanie będziemy musieli odwrócić problem. Świetnym narzędziem są tu kwerendy wyszukujące niedopasowane dane. Oczywiście, tak jak inne zagadnienia i to najłatwiej będzie zrozumieć na przykładzie. Weźmy więc na tapet podpunkt 5.
 
-<img src={new URL('https://i.imgur.com/lAxbWoy.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/lAxbWoy.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 Skąd w ogóle wiemy, że przydatna będzie kwerenda wyszukująca niedopasowane dane?
 Zastanówmy się, jak moglibyśmy podejść do tego problemu. Możemy próbować wyszukać komputery, które uległy tylko awarii o priorytecie niższym niż 8. W zadaniu mamy jednak podpowiedź "wliczamy też komputery, które NIE uległy żadnej awarii". W tabelach mamy natomiast informację o awariach. Możemy więc przypuszczać, że naszym celem będzie odnalezienie danych, które NIE występują w jakiejś tabeli. W tym konkretnym przypadku będą nas interesować komputery (dane o nich weźmiemy z tabeli `Komputery`), które NIE występują w tabeli `Awarie`.
 
@@ -9,7 +9,7 @@ Następnie skorzystamy z kwerendy wyszukującej niedopasowane dane, aby zidentyf
 Zastosujemy więc tzw. odwrócenie problemu.
 
 ### 0. Przygotowujemy kwerendę pomocniczą.
-<img src={new URL('https://i.imgur.com/XHXfdm0.png', import.meta.url)} alt="xyz" className="small-img" />
+<img src={new URL('https://i.imgur.com/XHXfdm0.png', import.meta.url)} alt="xyz" className={`small_img`} />
 Zapiszmy ją jako "zad 5 pom".
 
 ### 1. Wybieramy "Tworzenie" -> "Kreator kwerend".
@@ -17,30 +17,30 @@ Zapiszmy ją jako "zad 5 pom".
 Uwaga: Wcześniej korzystaliśmy z opcji "Projekt kwerendy", tym razem interesuje nas "Kreator kwerend".
 
 ### 2. Wybieramy "Kwerenda wyszukująca niedopasowane dane".
-<img src={new URL('https://i.imgur.com/xYq62LD.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/xYq62LD.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 
 Dalsze kroki bardzo ułatwia nam instrukcja użycia tego rodzaju kwerendy. 
 
 ### 3. Wybieramy tabelę lub kwerendę, w której będziemy wyszukiwać niedopasowane dane.
-<img src={new URL('https://i.imgur.com/oVFqAQg.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/oVFqAQg.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 W naszym przykładzie będzie to tabela `Komputery`.
 
 ### 4. Wybieramy tabelę lub kwerendę, której dane chcemy wykluczyć z wyniku.
-<img src={new URL('https://i.imgur.com/08oK5b9.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/08oK5b9.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 W naszym przykładzie jest to kwerenda pomocnicza, którą stworzyliśmy specjalnie do tego celu. Musimy więc zaznaczyć, że chcemy wybrać jedną z kwerend, a następnie zaznaczyć "zad 5 pom".
 
 ### 5. Jak łączą się wybrane tabele (i/lub kwerendy)?
-<img src={new URL('https://i.imgur.com/WO1AvD6.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/WO1AvD6.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 Na tym etapie musimy zdefiniować co będzie elementem wspólny. Interesuje nas więc pole, którego wartość występuje w pierwszej tabeli, a którą chcemy pominąć w wyniku, jeśli występuje również w tabeli drugiej. Innymi słowy, które pole chcemy znaleźć jako wartość niedopasowaną.
 W naszym przykładzie jest to pole `Numer_komputera`.
 
 ### 6. Wybieramy pola, które chcemy zobaczyć w wyniku. 
 Aby wybrać dane pole klikamy na nie dwukrotnie lub zaznaczamy poprzez jednokrotne kliknięcie i korzystamy ze strzałki ">". Analogicznie, cofnąć wybór jakiegoś pola możemy poprzez zaznaczenie go i kliknięcie "<".
-<img src={new URL('https://i.imgur.com/6RAyu7X.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/6RAyu7X.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 W zadaniu pytają nas jedynie o liczbę komputerów. Wystarczy nam zatem `Numer_komputera`.
 
 ### 7. Zapisujemy kwerendę.
-<img src={new URL('https://i.imgur.com/OnK8tsO.png', import.meta.url)} alt="xyz" className="medium-img" />
+<img src={new URL('https://i.imgur.com/OnK8tsO.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 Możemy zmienić jej automatyczną nazwę na bardziej przystępną. W tym przykładzie nazwiemy ją po prostu "zad 5".
 
 ### 8. Zliczanie ilości rekordów w wyniku.

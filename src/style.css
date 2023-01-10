@@ -56,11 +56,27 @@
     filter: var(--filter);
 }
 
-.main_content .second img.super-small-img,
-.main_content .second img.small-img,
-.main_content .second img.medium-img,
-.main_content .second img.big-img {
+.main_content .second img.super_small_img,
+.main_content .second img.small_img,
+.main_content .second img.medium_img,
+.main_content .second img.big_img {
     filter: var(--filter);
+}
+
+.main_content .second img.super_small_img{
+    max-width: 30%;
+}
+
+.main_content .second img.small_img{
+    max-width: 50%;
+}
+
+.main_content .second img.medium_img{
+    max-width: 60%;
+}
+
+.main_content .second img.big_img{
+    max-width: 70%;
 }
 
 * {

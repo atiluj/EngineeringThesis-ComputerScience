@@ -72,7 +72,7 @@ function Contents({lessons}) {
         title += `${curSubchapter + 1}.`;
     title += ` ${subchapter.name}`;
     React.useEffect(() => { hljs.highlightAll(); }, [subchapter.content]); //śmieszna funkcja do skanownaia stronki i kolorowania kodu
-    return <article className={styles.second}>
+    return <article className={`second`}>
         <h1>{title}</h1>
         {subchapter.content}
     </article>;
@@ -144,7 +144,7 @@ function Section({lessons, title}) {
                 </div>
             </div>
 
-            <div className={styles.main_content}>
+            <div className={`${styles.main_content} main_content`}>
                 <Contents lessons={lessons} />
                 <div className={styles.controls}>
                     {/* <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div> */}
