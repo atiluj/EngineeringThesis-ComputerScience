@@ -24,20 +24,74 @@ const useDarkMode = () => {
     return [darkMode, setDarkMode]
 }
 
+function useWindowWidth() {
+    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+    React.useEffect(() => { //aktualizacja pobranej szerokości strony
+        // to sie odpali przy starcie
+        const handle = () => setWindowWidth(window.innerWidth); //ona aktualizuje nasza zmienną
+        window.addEventListener('resize', handle); // nie wywołujmey jej od razu tylko podczepiamy pod resize, czyli ona będzie wywoływana przy resizie na szerkości okna
+        return () => {
+            // to sie odpali na koncu
+            window.removeEventListener('resize', handle);
+        };
+    }, [
+        // kiedy sie uruchomic ponownie
+    ]);
+    return windowWidth;
+}
+
+function useScrollY() {
+    const [scrollY, setScrollY] = React.useState(window.scrollY);
+    React.useEffect(() => {
+        const handle = () => setScrollY(window.scrollY);
+        window.addEventListener('scroll', handle);
+        return () => {
+            window.removeEventListener('scroll', handle);
+        };
+    }, []);
+    return scrollY;
+}
+
 function Nav() {
     let padding, fontSize;
-    const aStyle = {padding, fontSize};
-
+    const windowWidth = useWindowWidth();
+    const scrollY = useScrollY();
     const [darkMode, setDarkMode] = useDarkMode();
+
+    if (windowWidth > 1200) {
+        if (scrollY > 80) {
+            padding = "7px 17px";
+            fontSize = "20px";
+        } else {
+            padding = "16px 23px";
+            fontSize = "18px";
+        }
+    } else if (windowWidth > 1000) {
+        if (scrollY > 80) {
+            padding = "9px 17px";
+            fontSize = "14px";
+        } else {
+            padding = "13px 17px";
+            fontSize = "16px";
+        }
+    } else if (windowWidth > 790) {
+        if (scrollY > 80) {
+            padding = "11px 10px";
+            fontSize = "14px";
+        } else {
+            padding = "14px 10px";
+            fontSize = "16px";
+        }
+    }
+
+    const aStyle = {padding, fontSize};
 
     function navBurger() {
         // TODO: refactor
         const x = document.getElementById("top_navbar");
         if (x.className === `gradient ${styles.navbar}`) {
-            console.log("elo elo");
             x.className += ` ${styles.responsive}`;
         } else {
-            console.log("zenujace"); 
             x.className = `gradient ${styles.navbar}`;
         }
     }
