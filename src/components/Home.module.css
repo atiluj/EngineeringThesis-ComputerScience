@@ -99,7 +99,7 @@
     padding: 30px 0 40px;
 }
 
-.authorsTitle {
+.authors_title {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 50px;
     letter-spacing: 30px;
@@ -134,7 +134,7 @@
     padding: 10%
 }
 
-.authorName {
+.author_name {
     letter-spacing: 3px;
     font-size: 25px;
     font-family: 'Chakra Petch', sans-serif;
@@ -153,12 +153,12 @@
     height: 50%;
 }
 
-.authorName {
+.author_name {
     padding: 5% 0 5% 0;
     display: table;
 }
 
-.authorName a {
+.author_name a {
     color: var(--font);
     display: table-cell;
     vertical-align: middle;
@@ -194,7 +194,7 @@
 
 @media (max-width: 1200px) {
     .section {
-        padding-top: 60px;
+        padding-top: 130px;
     }
 
     .section .header {
@@ -248,7 +248,7 @@
         display: none;
     }
 
-    .authors-details-wrapper {
+    .authors_details_wrapper {
         grid-template-columns: none;
         grid-template-rows: repeat(3, 1fr);
         justify-content: center;
@@ -260,12 +260,12 @@
         padding: 7% 10% 7% 10%;
     }
 
-    .authorsTitle {
+    .authors_title {
         letter-spacing: 20px;
         font-size: 30px;
     }
 
-    .authorName {
+    .author_name {
         font-size: 19px;
         padding: 2% 0;
     }
@@ -277,7 +277,7 @@
 
 @media (max-width:810px) {
     .section {
-        padding-top: 55px;
+        padding-top: 100px;
     }
 
     .section .header {
@@ -304,13 +304,13 @@
 
 @media (max-width: 600px) {
     .section {
-        padding-top: 50px;
+        padding-top: 90px;
     }
 
     .section .header {
         padding-top: 0px;
         font-size: 25px;
-        letter-spacing: 5px;
+        letter-spacing: 10px;
         text-indent: 5px;
     }
 
@@ -333,7 +333,7 @@
         text-align: center;
     }
 
-    .authorsTitle {
+    .authors_title {
         letter-spacing: 8px;
         font-size: 25px;
     }
@@ -342,7 +342,7 @@
 @media(max-width:400px) {
 
     .section {
-        padding-top: 40px;
+        padding-top: 80px;
     }
 
     .section .header {
@@ -367,7 +367,7 @@
         font-size: 16px;
     }
 
-    .authorName {
+    .author_name {
         font-size: 15px;
     }
 
@@ -376,7 +376,7 @@
         font-size: 11px;
     }
 
-    .authorsTitle {
+    .authors_title {
         letter-spacing: 6px;
         font-size: 20px;
     }

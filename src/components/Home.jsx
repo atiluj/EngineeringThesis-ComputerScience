@@ -140,11 +140,11 @@ function Home() {
         <div className={styles.separator}></div>
 
         <div className={styles.authors} id="sixth">
-            <div className={styles.authorsTitle}><p>AUTORZY STRONY</p></div>
+            <div className={styles.authors_title}><p>AUTORZY STRONY</p></div>
             <div className={styles.authors_details_wrapper}>
                 <div className={styles.author}>
                     <div className={styles.photo}><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita" /></div>
-                    <p className={styles.authorName}>JULITA OSMAN<a href="https://www.linkedin.com/in/julita-osman-167530225/" target="_blank"><LinkedInIcon /></a></p>
+                    <p className={styles.author_name}>JULITA OSMAN<a href="https://www.linkedin.com/in/julita-osman-167530225/" target="_blank"><LinkedInIcon /></a></p>
                     <p className={styles.introduction}>W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej. Przez wiele lat udzielałam korepetycji z 
                     informatyki i matematyki. Studiuję informatykę i filologię chińską. Mam nadzieję, że uda mi się połączyć te twa kierunki w mojej przyszłej pracy zawodowej. 
                     </p>
@@ -152,7 +152,7 @@ function Home() {
 
                 <div className={styles.author}>
                     <div className={styles.photo}><img src={new URL('../img/ola.jpeg', import.meta.url)} alt="Aleksandra" /></div>
-                    <p className={styles.authorName}>OLA STĘPNIEWSKA<a href="https://www.linkedin.com/in/aleksandrast%C4%99pniewska/" target="_blank"><LinkedInIcon /></a></p>
+                    <p className={styles.author_name}>OLA STĘPNIEWSKA<a href="https://www.linkedin.com/in/aleksandrast%C4%99pniewska/" target="_blank"><LinkedInIcon /></a></p>
                     <p className={styles.introduction}>Interesuję się bazami danych i za to właśnie za nie oraz materiały z Excela byłam odpowiedzialna podczas tworzenia naszej platformy. 
                     Przez wiele lat udzielałam korepetycji z informatyki, matematyki i fizyki. Zawodowo swoją przyszłość wiążę z zarządzaniem w firmach IT.
                     </p>
@@ -160,7 +160,7 @@ function Home() {
 
                 <div className={styles.author}>
                     <div className={styles.photo}><img src={new URL('../img/nikola.jpg', import.meta.url)} alt="Nikola" /></div>
-                    <p className={styles.authorName}>NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola-wrona-429a75211/" target="_blank"><LinkedInIcon /></a></p>
+                    <p className={styles.author_name}>NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola-wrona-429a75211/" target="_blank"><LinkedInIcon /></a></p>
                     <p className={styles.introduction}>Od czasów liceum programowanie było dla mnie najbardziej interesującą dziedziną informatyki. Przy tworzeniu tej platformy 
                     zajęłam się teoretyczną częścią oraz kursem programowania w Pythonie. Obecnie studiuję informatykę i pracuję jako software developer.
                     </p>

@@ -43,11 +43,6 @@
     display: none;
 }
 
-.navbar .nav_wrapper_right,
-.navbar .nav_wrapper_left {
-    transition: 0.7s;
-}
-
 .navbar .nav_button {
     margin-bottom: 0;
     background-color: transparent;
