@@ -15,7 +15,8 @@
     --primary2: #cedff69c;
     --primary3: white;
     --secondary: #adc5e7;
-    --secondary2: #a6bcdb;
+    --secondary2: #92aed4;
+    /* --secondary2: #a6bcdb; */
     --title: #6991c8;
     --main-accent: #322e2b;
     --accent: #8c26d0c9;
@@ -30,7 +31,8 @@
     --gradient: linear-gradient(to right, #abdee6, #b9d2f3, #bcbbf1, #c6adf9, #c898fb);
     --tools: #cccc;
     --tools2: #fcf8f8cc;
-    --filter: brightness(1);
+    --screen_filter: brightness(1);
+    --logo_filter: brightness(0.2);
 }
 
 [data-theme="dark"] {
@@ -54,7 +56,8 @@
     --article-border: #602c7d59;
     --tools: #cccc;
     --tools2: #fcf8f8cc;
-    --filter: brightness(0.7);
+    --screen_filter: brightness(0.7);
+    --logo_filter: brightness(1);
 }
 
 .gradient {
@@ -63,14 +66,18 @@
 
 /* for dark mode */
 .main_content .second p img{
-    filter: var(--filter);
+    filter: var(--screen_filter);
 }
 
 .main_content .second img.super_small_img,
 .main_content .second img.small_img,
 .main_content .second img.medium_img,
 .main_content .second img.big_img {
-    filter: var(--filter);
+    filter: var(--screen_filter);
+}
+
+.logo_img{
+    filter: var(--logo_filter);
 }
 
 .main_content .second img.super_small_img{
@@ -88,6 +95,7 @@
 .main_content .second img.big_img{
     max-width: 70%;
 }
+
 
 * {
     margin: 0;

@@ -1,5 +1,5 @@
 import styles from './Home.module.css';
-import '../style.css'; 
+import '../style.css';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import CoffeeIcon from '@mui/icons-material/Coffee';
 
@@ -35,7 +35,7 @@ function Home() {
                 <div className={styles.cont}>
                     <a href="#first" className="menu_button">DLA KOGO?</a>
                     <a href="#second" className="menu_button">STATYSTYKI</a>
-                    <a href="#third" className="menu_button">CO ZAWIER KURS</a>
+                    <a href="#third" className="menu_button">CO ZAWIERA KURS</a>
                     <a href="#fourth" className="menu_button">INSTRUKCJA</a>
                     <a href="#fifth" className="menu_button">WSKAZÓWKI</a>
                     <a href="#sixth" className="menu_button">AUTORZY</a>
@@ -74,17 +74,17 @@ function Home() {
                     <h1>CO ZAWIERA KURS</h1>
                     <p>
                         Kurs składa się z wykładów, w których omówione zostały najważniejsze zagadnienia z informatyki, takie jak:</p>
-                        <ul>
-                            <li>podstawy programowania w języku Python</li>
-                            <li>podstawy baz danych i obsługi programu MS Access</li>
-                            <li>podstawy algorytmów i struktur danych</li>
-                            <li>tworzenie symulacji i opracowywanie danych za pomocą MS Excel</li>
-                            <li>zagadnienia z zakresu teorii informatyki przydatne na maturze (np. prawo autorskie, cyberbezpieczeństwo, formaty plików)</li>
-                        </ul>
-                        <br />
-                        <p>Każda lekcja zawiera teoretyczne wprowadzenie do danego zagadnienia, a także przykłady i ćwiczenia, dzięki którym będziesz mógł/mogła sprawdzić swoją wiedzę i utrwalić nowo poznany temat.
+                    <ul>
+                        <li>podstawy programowania w języku Python</li>
+                        <li>podstawy baz danych i obsługi programu MS Access</li>
+                        <li>podstawy algorytmów i struktur danych</li>
+                        <li>tworzenie symulacji i opracowywanie danych za pomocą MS Excel</li>
+                        <li>zagadnienia z zakresu teorii informatyki przydatne na maturze (np. prawo autorskie, cyberbezpieczeństwo, formaty plików)</li>
+                    </ul>
+                    <br />
+                    <p>Każda lekcja zawiera teoretyczne wprowadzenie do danego zagadnienia, a także przykłady i ćwiczenia, dzięki którym będziesz mógł/mogła sprawdzić swoją wiedzę i utrwalić nowo poznany temat.
                         W sekcji komenatarzy możesz zadać nam pytanie, na które postaramy się odpowiedzieć.</p>
-                    
+
                 </article>
                 <article id="fourth">
                     <h1>INSTRUKCJA</h1>
@@ -92,13 +92,13 @@ function Home() {
                         WYBIERZ SWÓJ POZIOM:<br /><br />
 
                         <b>JESZCZE NIE WIEM, ALE ZA MIESIĄC MUSZĘ TO ZDAĆ (niepolecany)</b><br />
-                        Został Ci miesiąc _ nie ucz się teorii, nie warto!
+                        Został Ci miesiąc - nie ucz się teorii, nie warto!
                         Jeśli masz już podstawy wiedzy programistycznej to szlifuj tę umiejśtność najbardziej jak to możliwe. Przerób wszystkie zadania programistyczne i algorytmiczne z poprzednich matur i przeczytaj materiały dostępne na strone. W wolnych chwilach dołącz do tego naukę Excela (i Accessa, jeśli podstawy Excela nie są Ci już obce).
                         Jeśli natomiast zaczynasz od podstaw skup się na zadaniach z Excela i Accessa. Zadania programistycznie nie są tak łatwe, a nauka myślenia algorytmicznego wymaga czasu. Jeśli masz dużą motywację spróbuj opanować podstawy kodowania, ale nie trać czasu na wgłębianie się w trudneijsze podpunkty zadań czy zaawansowane funkcje Pythona.
                         <br /><br />
                         <b>JESTEM ZIELONY</b><br />
                         Jeśli zaczynasz od podstaw, to masz dwie możliwości. Jedna z nich to rozpoczęcie nauki od prostych algorytmów i przejście do nauki programowania krok po kroku. Druga to droga od zera do mistrza pakietu office, czyli dużo ćwiczeń z Excela i Accessa.
-                        Oczywiście najepiej nauczyć się obu tych części i zdobyć kompelksową wiedzę. Z doświadczenia wiemy, że opanowanie umiejętności programistycznych nie jest łatwe i wymaga więcej czasu. Muisz bowiem przyzwyczaić się do algorytmicznego sposobu myślenia i rozwiązywania zadań poprzez analizowanie coraz mniejszych jego podproblemów. Dobrym pomysłem jest więc nauka algorytmów równolegle do zdobywania umiejętności związanych z Excelem czy Accessem. Różnorodna sepcyfika tych zadań pozwoli Ci nie wpaść w monotonnie i zwiększy wydajność procesu nauki. Oczywiście ważnym aspektem jest dostępność pakietów Microsoft, wskazówki na ten temat znajdziesz w zakładkach "Excel _ wskazówki" oraz "Access _ wskazówki".
+                        Oczywiście najepiej nauczyć się obu tych części i zdobyć kompelksową wiedzę. Z doświadczenia wiemy, że opanowanie umiejętności programistycznych nie jest łatwe i wymaga więcej czasu. Muisz bowiem przyzwyczaić się do algorytmicznego sposobu myślenia i rozwiązywania zadań poprzez analizowanie coraz mniejszych jego podproblemów. Dobrym pomysłem jest więc nauka algorytmów równolegle do zdobywania umiejętności związanych z Excelem czy Accessem. Różnorodna sepcyfika tych zadań pozwoli Ci nie wpaść w monotonnie i zwiększy wydajność procesu nauki. Oczywiście ważnym aspektem jest dostępność pakietów Microsoft, wskazówki na ten temat znajdziesz w zakładkach "Excel - wskazówki" oraz "Access - wskazówki".
                         <br /><br />
                         <b>NIBY MAM INFORMATYKĘ W SZKOLE, ALE TA SZKOŁA JEST W POLSCE</b><br />
                         Jeśli potrzebujesz nauczyć się danego zagadnienia od podstaw lub chcesz solidnie utrwalić wiedzę, to możesz przerabiać tematy po kolei. Jeśli jednak czujesz, że dany temat nie sprawia Ci trudności śmiało pomiń niektóre fragmenty lub podtematy.
@@ -113,25 +113,25 @@ function Home() {
                 </article>
                 <article id="fifth">
                     <h1>WSKAZÓWKI</h1>
-                    Co roku wraz z opublikowaniem wyników matur, Centralna Komisja Egzaminacyjna tworzy raport zawierający statystyki oraz wnioski, jakie z nich płyną. 
+                    Co roku wraz z opublikowaniem wyników matur, Centralna Komisja Egzaminacyjna tworzy raport zawierający statystyki oraz wnioski, jakie z nich płyną.
                     Chcemy zwrócić Ci szczególną uwagę na (naszym zdaniem) najważniejsze punkty i dać Ci kilka rad z nimi związanych. <br /><br />
-                    Po pierwsze wciąż duża grupa maturzystów zapomina zapisać realizacje komputerowe swoich zadań (np. plik Excel). W szczególności brak zapisania 
-                    części obliczeń skutkuje uzyskaniem przez zdającego 0 punktów za dane zadanie. Na przykład jeśli uczeń podczas rozwiązywania podpunktu B nadpisze 
+                    Po pierwsze wciąż duża grupa maturzystów zapomina zapisać realizacje komputerowe swoich zadań (np. plik Excel). W szczególności brak zapisania
+                    części obliczeń skutkuje uzyskaniem przez zdającego 0 punktów za dane zadanie. Na przykład jeśli uczeń podczas rozwiązywania podpunktu B nadpisze
                     obliczenia potrzebne do podpunktu A, to otrzyma 0 punktów za podpunkt A nawet jeśli będzie miał poprawne odpowiedzi w pliku tekstowym. <br /><br />
-                    Bardzo istotne jest również uważne czytanie treści zadania, w szczególności jeśli w poleceniu mamy frazę "napisz program" to za rozwiązanie 
-                    takiego zadania za pomocą arkusza kalkulacyjnego otrzymamy 0 punktów. Co gorsza, część nauczycieli nie ma aktualnej wiedzy w tym zakresie i 
+                    Bardzo istotne jest również uważne czytanie treści zadania, w szczególności jeśli w poleceniu mamy frazę "napisz program" to za rozwiązanie
+                    takiego zadania za pomocą arkusza kalkulacyjnego otrzymamy 0 punktów. Co gorsza, część nauczycieli nie ma aktualnej wiedzy w tym zakresie i
                     wprowadza uczniów w błąd, twierdząc, że zabieg taki jest akceptowalny.<br /><br />
                     Co roku zdający mają największe trudności z rozwiązywaniem zadań algorytmicznych (na części pierwszej) i programistycznych (na części drugiej).
-                    Niskie wyniki odnotowywane są również w przypadku zadań wymagających wykonania symulacji w arkuszu kalkulacyjnym (Excel). 
-                    Wynika z tego, że choć często Access jest uważany za trudny, bo jego naukę zaczynamy stosunkowo późno, a w dodatku nie każdy ma dostęp do tego 
+                    Niskie wyniki odnotowywane są również w przypadku zadań wymagających wykonania symulacji w arkuszu kalkulacyjnym (Excel).
+                    Wynika z tego, że choć często Access jest uważany za trudny, bo jego naukę zaczynamy stosunkowo późno, a w dodatku nie każdy ma dostęp do tego
                     programu na komputerze domowym, to ze statystyk wynika, że jest to jedna z najwyżej ocenianych części egzaminu.<br /><br />
-                    
-                    Jeśli chodzi o język programowania wybierany w części praktycznej, to sugerujemy wybór Pythona. Jest on najprostszy w obsłudze i najłatwiejszy do 
-                    nauczenia się spośród języków dopuszczalnych przez CKE na maturze. W porównaniu z np. C++ zadanie w Pythonie jesteśmy w stanie wykonać szybciej _ 
+
+                    Jeśli chodzi o język programowania wybierany w części praktycznej, to sugerujemy wybór Pythona. Jest on najprostszy w obsłudze i najłatwiejszy do
+                    nauczenia się spośród języków dopuszczalnych przez CKE na maturze. W porównaniu z np. C++ zadanie w Pythonie jesteśmy w stanie wykonać szybciej -
                     nie musimy się martwić typami czy skomplikowanymi operacjami na napisach. Więcej na ten temat dowiesz się w temacie 0, w zakładce Python.<br /><br />
-                    
+
                     Każdy z działów ma sekcję "Wskazówki", w której znajdziesz więcej przydatnych rad oraz bardziej szczegółowe instrukcje.
-                    Pamiętaj, że ten kurs jest dla Ciebie i to Ty decydujesz jak z niego korzystasz. Dla nas ważne jest, aby pomóc Ci w wyzwaniu jakie przed Tobą stoi 
+                    Pamiętaj, że ten kurs jest dla Ciebie i to Ty decydujesz jak z niego korzystasz. Dla nas ważne jest, aby pomóc Ci w wyzwaniu jakie przed Tobą stoi
                     najlepiej jak to możliwe.
                 </article>
             </div>
@@ -145,24 +145,24 @@ function Home() {
                 <div className={styles.author}>
                     <div className={styles.photo}><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita" /></div>
                     <p className={styles.author_name}>JULITA OSMAN<a href="https://www.linkedin.com/in/julita-osman-167530225/" target="_blank"><LinkedInIcon /></a></p>
-                    <p className={styles.introduction}>W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej. Przez wiele lat udzielałam korepetycji z 
-                    informatyki i matematyki. Studiuję informatykę i filologię chińską. Mam nadzieję, że uda mi się połączyć te twa kierunki w mojej przyszłej pracy zawodowej. 
+                    <p className={styles.introduction}>W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej. Przez wiele lat udzielałam korepetycji z
+                        informatyki i matematyki. Studiuję informatykę i filologię chińską. Mam nadzieję, że uda mi się połączyć te twa kierunki w mojej przyszłej pracy zawodowej.
                     </p>
                 </div>
 
                 <div className={styles.author}>
                     <div className={styles.photo}><img src={new URL('../img/ola.jpeg', import.meta.url)} alt="Aleksandra" /></div>
                     <p className={styles.author_name}>OLA STĘPNIEWSKA<a href="https://www.linkedin.com/in/aleksandrast%C4%99pniewska/" target="_blank"><LinkedInIcon /></a></p>
-                    <p className={styles.introduction}>Interesuję się bazami danych i za to właśnie za nie oraz materiały z Excela byłam odpowiedzialna podczas tworzenia naszej platformy. 
-                    Przez wiele lat udzielałam korepetycji z informatyki, matematyki i fizyki. Zawodowo swoją przyszłość wiążę z zarządzaniem w firmach IT.
+                    <p className={styles.introduction}>Interesuję się bazami danych i za to właśnie za nie oraz materiały z Excela byłam odpowiedzialna podczas tworzenia naszej platformy.
+                        Przez wiele lat udzielałam korepetycji z informatyki, matematyki i fizyki. Zawodowo swoją przyszłość wiążę z zarządzaniem w firmach IT.
                     </p>
                 </div>
 
                 <div className={styles.author}>
                     <div className={styles.photo}><img src={new URL('../img/nikola.jpg', import.meta.url)} alt="Nikola" /></div>
                     <p className={styles.author_name}>NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola-wrona-429a75211/" target="_blank"><LinkedInIcon /></a></p>
-                    <p className={styles.introduction}>Od czasów liceum programowanie było dla mnie najbardziej interesującą dziedziną informatyki. Przy tworzeniu tej platformy 
-                    zajęłam się teoretyczną częścią oraz kursem programowania w Pythonie. Obecnie studiuję informatykę i pracuję jako software developer.
+                    <p className={styles.introduction}>Od czasów liceum programowanie było dla mnie najbardziej interesującą dziedziną informatyki. Przy tworzeniu tej platformy
+                        zajęłam się teoretyczną częścią oraz kursem programowania w Pythonie. Obecnie studiuję informatykę i pracuję jako software developer.
                     </p>
                 </div>
             </div>
@@ -171,13 +171,15 @@ function Home() {
         <div className={styles.separator}></div>
 
         <footer className={styles.footer}>
-            <div>
                 <p>Hej! <br /> Kontakt do twórców tej strony znajdziesz na stronie głównej w zakładce AUTORZY STRONY.</p>
                 <p>Jeśli uważasz, że nasza praca Ci pomogła możesz nas wesprzeć kupując nam kawkę. Bardzo to docenimy!</p>
-            </div>
             <div className={styles.coffee_link}>
                 <a href="">TUTAJ ZNAJDZIESZ LINK DO PROFILU <CoffeeIcon /></a>
             </div>
+            <div className={styles.logo_footer}>
+                <img src={new URL('../img/logo5.png', import.meta.url)} alt="logo" className={`logo_img`} />
+            </div>
+
 
         </footer>
 
