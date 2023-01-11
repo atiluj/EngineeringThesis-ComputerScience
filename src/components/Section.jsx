@@ -91,7 +91,7 @@ function Section({lessons, title}) {
     }
 
     React.useEffect(() => {
-        changeChapter(0, 0);
+        if (curChapter != 0 || curSubchapter != 0) changeChapter(0, 0);
     }, [lessons, title]);
 
     const maxChapter = lessons.length - 1;

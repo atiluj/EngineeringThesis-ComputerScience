@@ -1,0 +1,82 @@
+.main {
+    min-height: 100vh;
+    text-align: left;
+    padding: 60px 2.5vw;
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0 10%;
+}
+
+.main .introduction{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: white;
+    border: solid #322e2b 2px;
+    border-radius: 10px;
+}
+
+.main .exercises_title{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.main .exercises_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.main .exercises_list.python_list {
+    flex-direction: column;
+}
+
+.main .list_element_wrapper {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.subject {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    text-transform: uppercase;
+    width: 15rem;
+    border-left: 5px var(--exercise-secondary2) solid;
+    padding-left: 10px;
+}
+
+.main .list_element{
+    display: flex;
+    margin-bottom: 10px;
+    margin-right: 7px;
+    background-color: var(--exercise-secondary);
+    border-radius: 15px;
+    height: 2rem;;
+    min-width: calc(11*1rem);
+    justify-content: center;
+    align-items: center;
+}
+
+.main .list_element:hover{
+    background-color: var(--exercise-secondary2);
+}
+
+
+.main .list_element.number_element{
+    min-width: calc(3*1rem);
+}
+
+.main .category{
+    padding: 7px;
+    /* margin: 0 40px; */
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-top: solid var(--exercise-secondary) 3px ;
+}
+
+@media (max-width:810px) {
+    .main {
+        padding: 0;
+    }
+}
