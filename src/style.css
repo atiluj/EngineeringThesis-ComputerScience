@@ -112,6 +112,7 @@ body{
 html {
     background-color: var(--primary);
     color: var(--font);
+    line-height: 1.6;
 }
 
 div .wrapper {

@@ -61,9 +61,9 @@ function Nav() {
     if (windowWidth > 1200) {
         if (scrollY > 80) {
             padding = "7px 17px";
-            fontSize = "20px";
+            fontSize = "16px";
         } else {
-            padding = "16px 23px";
+            padding = "15px 23px";
             fontSize = "18px";
         }
     } else if (windowWidth > 1000) {
