@@ -9,6 +9,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
 import { style } from '@mui/system';
+import { useSearchParams } from 'react-router-dom';
 
 const NavContext = React.createContext({
     curChapter: 0,
@@ -81,29 +82,30 @@ function Contents({lessons}) {
 function Section({lessons, title}) {
     const [curChapter, setCurChapter] = React.useState(0);
     const [curSubchapter, setCurSubchapter] = React.useState(0);
+    const [searchParams, setSearchParams] = useSearchParams();
     function changeChapter(ch, subch) {
         setCurChapter(ch);
         setCurSubchapter(subch);
-        window.location.hash = `${ch}.${subch + 1}`;
+        setSearchParams({chapter: `${ch}`, subchapter: `${subch + 1}`});
         window.scrollTo({top:0, behavior:"smooth"});
     }
+
+    React.useEffect(() => {
+        changeChapter(0, 0);
+    }, [lessons, title]);
 
     const maxChapter = lessons.length - 1;
     const maxSubchapter = chapter => lessons[chapter].subchapters ? lessons[chapter].subchapters.length - 1 : 0;
     const prevLessonExists = curChapter > 0 || curSubchapter > 0;
     const nextLessonExists = curChapter != maxChapter || curSubchapter != maxSubchapter(curChapter);
+    const lessonExists = (chapter, subchapter) => chapter >= 0 && chapter <= maxChapter && subchapter >= 0 && subchapter <= maxSubchapter(chapter);
 
     React.useEffect(() => {
-        if (window.location.hash.length > 0) {
-            const parts = window.location.hash.replace('#', '').split('.');
-            if (parts.length == 2) {
-                const chapter = Number(parts[0]);
-                const subchapter = Number(parts[1]) - 1;
-                if (chapter >= 0 && chapter <= maxChapter
-                    && subchapter >= 0 && subchapter <= maxSubchapter(chapter)) {
-                    setCurChapter(chapter);
-                    setCurSubchapter(subchapter);
-                }
+        if (searchParams.get("chapter") && searchParams.get("subchapter")) {
+            const chapter = Number(searchParams.get("chapter"));
+            const subchapter = Number(searchParams.get("subchapter")) - 1;
+            if (lessonExists(chapter, subchapter)) {
+                changeChapter(chapter, subchapter);
             }
         }
     }, []);
@@ -124,6 +126,8 @@ function Section({lessons, title}) {
             changeChapter(curChapter, curSubchapter + 1);
         }
     }
+
+    if (!lessonExists(curChapter, curSubchapter)) return null;
 
     return <NavContext.Provider value={{ curChapter, curSubchapter, changeChapter }}>
         <main className={styles.main}>
