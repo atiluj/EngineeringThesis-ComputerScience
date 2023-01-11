@@ -28,14 +28,16 @@ Zacznijmy od formalnego zdefiniowania czym jest język SQL? Czy jest to język p
 Wszystkie **kwerendy**, **relacje** czy nowe **tabele** jakie towrzymy w Access są tłumaczone na język SQL i wykonywane. W łatwy sposób możemy sprawdzić jak nasze zapytanie będzie tłumaczone przez Access.
 
 
-<div style="font-variant: small-caps">
+<div style={{fontVariant: "small-caps"}}>
 widok projektu kwerendy w Access
 </div>
+
 ![](https://i.imgur.com/76eSnOY.png)
 
-<div style="font-variant: small-caps">
+<div style={{fontVariant: "small-caps"}}>
 widok SQL
 </div>
+
 ![](https://i.imgur.com/eZSxoEp.png)
 
 ## Składnia SQL 
@@ -60,14 +62,15 @@ WHERE
 <div style={{color:'rgb(124,252,0)'}}>
 [DODATKOWE KLAUZULE]
 </div>
-    
+
 ### Przykłady
+
 https://hackmd.io/5HtM-CM4T-G69Rdg6v7Wmw
 (rozpisane tabelki z przykładowej bazy danych)
 
 #### **Chcemy zapytać o:**
 #### 0. Całą zawartość tabeli Soki.
-```sql=
+```sql
 SELECT *
 FROM Soki;
 ```
@@ -82,7 +85,7 @@ FROM Soki;
  ##### Wytłumaczenie: operator "*" oznacza "weź wszystko". W tym przypadku weź wszystko z tabeli Soki.
     
 #### 1. Smaki soków, które są pojemności 330ml.    
-```sql=
+```sql
 SELECT Smak
 FROM Soki
 WHERE Pojemnosc = 330; 
@@ -94,7 +97,7 @@ WHERE Pojemnosc = 330;
 
     
 #### 2. Soki które są tańsze niż 5,80zł.
-```sql=
+```sql
 SELECT Smak
 FROM Soki
 WHERE Cena < 5,80; 
@@ -108,7 +111,7 @@ WHERE Cena < 5,80;
                   
 
 #### 3. Soki, które są tańsze niż 2 zł za 100ml 
-```sql=
+```sql
 SELECT Smaki
 FROM Soki
 WHERE ((Cena/Pojemnosc)*100) < 2; 
@@ -120,7 +123,7 @@ WHERE ((Cena/Pojemnosc)*100) < 2;
 | Grejfrutowy |
     
 #### 4. Cenę za 100ml dla każdego z soków w kolejności niemalejącej
-```sql=
+```sql
 SELECT Smak, ((Cena/Pojemnosc)*100) AS Cena_za_100_ml
 FROM Soki
 ORDER BY Cena_za_100_ml ASC;
@@ -134,7 +137,7 @@ ORDER BY Cena_za_100_ml ASC;
 | Kaktusowy | 3,6 |
     
 #### 5. Jak w punkcie 4. ale zawsze chcemy widzieć kwote zaokragloną w gorę do pełnych złotówek.
- ```sql=
+ ```sql
 SELECT Smak, CEILING((Cena/Pojemnosc)*100) AS Cena_za_100_ml
 FROM Soki
 ORDER BY Cena_za_100_ml ASC;
@@ -148,7 +151,7 @@ ORDER BY Cena_za_100_ml ASC;
 | Kaktusowy | 4 |
   
 ##### 6. Zestawienie wszytskich soków lubianych przez studentów.
-```sql=
+```sql
 SELECT Studenci.Imie, Studenci.Nazwisko, LubianeSoki.Sok
 FROM Studenci
 JOIN LubianeSoki ON Studenci.Indeks = LubianeSoki.Indeks;
@@ -164,7 +167,7 @@ JOIN LubianeSoki ON Studenci.Indeks = LubianeSoki.Indeks;
     
 
 ##### 7. Wszystkich studentów, którzy lubią sok jablkowy.
-```sql=
+```sql
 SELECT Studenci.Imie, Studenci.Nazwisko, LubianeSoki.Sok
 FROM Studenci
 JOIN LubianeSoki ON Studenci.Indeks = LubianeSoki.Indeks
@@ -176,7 +179,7 @@ WHERE LubianeSoki.Sok="Jablkowy";
 | Jan | Pilny | Jablkowy |
 
 ##### 8. Wszystkie bary, w których podają jakiś sok, który lubi Jan Pilny (zadanie ponadprogramowe).
-```sql=
+```sql
 SELECT PodawaneSoki.Bar
 FROM Studenci 
 JOIN PodawaneSoki ON Studenci.Indeks = LubianeSoki.Indeks

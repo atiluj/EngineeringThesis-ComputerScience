@@ -2,7 +2,7 @@ import styles from './Section.module.css';
 import '../style.css'; 
 import * as React from 'react';
 import hljs from 'highlight.js';
-// import 'node_modules/highlight.js/styles/dark.css';
+import 'highlight.js/styles/dark.css';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ExpandLess from '@mui/icons-material/ExpandLess';
