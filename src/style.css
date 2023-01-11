@@ -14,9 +14,9 @@
     --primary: #f6f8fb;
     --primary2: #cedff69c;
     --primary3: white;
-    --secondary: #adc5e7;
     --secondary2: #92aed4;
-    /* --secondary2: #a6bcdb; */
+    --secondary3: #adc5e7;
+    --secondary4: #8098c3;
     --title: #6991c8;
     --main-accent: #322e2b;
     --accent: #8c26d0c9;
@@ -41,8 +41,10 @@
     --primary: #0e033e;
     --primary2: #190a5ac7;
     --primary3: #11034d9e;
-    --secondary: #44159d;
-    --secondary2: #3d1688de;
+    /* --secondary: #44159d; */
+    --secondary2: #672ad7a9;
+    --secondary3: #6321de;
+    --secondary4: #9891ff;
     --title: #6991c8;
     --main-accent: #692e8a;
     --accent: #A230ED;
@@ -128,12 +130,13 @@ div .wrapper {
     letter-spacing: 1px;
     text-decoration: none;
     transition: .7s;
-    background-color: var(--secondary);
+    background-color: var(--secondary3);
     text-align: left;
 }
 
 .menu_button:hover {
     background-color: var(--secondary2);
+    cursor: pointer;
 }
 
 .menu_button.nav_button:hover {

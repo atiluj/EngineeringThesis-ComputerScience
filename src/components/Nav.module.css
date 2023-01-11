@@ -1,5 +1,4 @@
 .navbar {
-    background-color: var(--secondary);
     font-size: 0;
     /* to likiwduje wbudowany margines w menu*/
     overflow: hidden;
