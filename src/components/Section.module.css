@@ -58,6 +58,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--secondary3);
 }
 
 .topic a {
@@ -70,25 +71,30 @@
     margin: 0;
     text-align: left;
     background-color: var(--primary);
-    color: var(--secondary2);
-    border-bottom: 1px var(--secondary) solid;
-    padding-left: 25px;
+    color: var(--secondary3);
+    border-bottom: 1px var(--secondary3) solid;
+    padding-left: 30px;
 }
 
 .main .contents .cont .subtopic_current {
-    color: var(--secondary);
+    color: var(--secondary4);
     background-color: var(--primary2);
-    border-left: 5px var(--secondary) solid;
+    border-left: 5px var(--secondary3) solid;
+    padding-left: 25px;
 }
 
 
 .main .contents .cont .subtopic:hover {
-    color: var(--secondary);
+    color: var(--secondary4);
 } 
 
 .main .contents .cont .subtopic_current:hover {
-    color: var(--secondary);
+    color: var(--secondary4);
     background-color: var(--primary2);
+}
+
+.main .contents .cont .topic:hover{
+    background-color: var(--secondary2);
 }
 
 /* NAGŁÓWEK - CZEŚĆ */
@@ -147,7 +153,6 @@
     margin-left: 10px;
     border: solid 1px transparent;
     background-color: transparent;
-    cursor: pointer;
     transition: transform;
     transition-duration: .3s;
 } 

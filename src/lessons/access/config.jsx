@@ -30,7 +30,7 @@ const AccessLessons = [
     {name: "Modelowanie", subchapters: [
         {name: "Włącznie programu MS Access", content: <Wlaczanie/>},
         {name: "Importowanie danych", content: <Importowanie/>},
-        {name: "Relacje między tabelami", content: <Relacje/>},
+        {name: "Relacje", content: <Relacje/>},
         {name: "Projektowanie relacyjnych baz danych", content: null},
         {name: "Tworzenie tabel", content: null},
     ]},
