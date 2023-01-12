@@ -19,6 +19,7 @@ const useDarkMode = () => {
     useEffect(() => {
         localStorage.setItem(DARK_MODE_KEY, darkMode);
         document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+        window.postMessage({darkMode}, window.location.origin);
     }, [darkMode])
 
     return [darkMode, setDarkMode]

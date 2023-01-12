@@ -157,7 +157,7 @@ function Section({lessons, title}) {
                         <button onClick={nextLesson} style={{ visibility: nextLessonExists ? "visible" : "hidden" }}><ArrowForwardIosIcon /></button>
                     </div>
                 </div>
-                <Comments issue={[`${title} ${curChapter}.${curSubchapter+1}`]} />
+                <Comments issue={`${title} ${curChapter}.${curSubchapter+1}`} />
             </div>
         </main>
     </NavContext.Provider>;

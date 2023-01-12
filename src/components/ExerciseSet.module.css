@@ -56,6 +56,7 @@
     min-width: calc(11*1rem);
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .main .list_element:hover{
