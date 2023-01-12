@@ -13,7 +13,7 @@ function ExerciseSet() {
             <div className={`${styles.exercises_list} ${styles.python_list}`}>
                 <div className={styles.list_element_wrapper}>
                     <div className={styles.subject}>Zmienne</div>
-                    <div className={`${styles.list_element} ${styles.number_element}`}><Link to="/exercise/0">1</Link></div>
+                    <Link to="/exercise/0" className={`${styles.list_element} ${styles.number_element}`} >1</Link>
                     <div className={`${styles.list_element} ${styles.number_element}`}>2</div>
                     <div className={`${styles.list_element} ${styles.number_element}`}>3</div>
                 </div>

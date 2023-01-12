@@ -58,7 +58,9 @@
     align-items: center;
     cursor: pointer;
     text-decoration: none;
+    color: var(--font); 
 }
+
 
 .main .list_element:hover{
     background-color: var(--exercise-secondary2);
