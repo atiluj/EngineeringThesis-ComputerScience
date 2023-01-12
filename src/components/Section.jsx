@@ -1,5 +1,4 @@
 import styles from './Section.module.css';
-import '../style.css'; 
 import * as React from 'react';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/dark.css';
@@ -8,8 +7,9 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
-import { style } from '@mui/system';
 import { useSearchParams } from 'react-router-dom';
+
+import Comments from './Comments';
 
 const NavContext = React.createContext({
     curChapter: 0,
@@ -157,6 +157,7 @@ function Section({lessons, title}) {
                         <button onClick={nextLesson} style={{ visibility: nextLessonExists ? "visible" : "hidden" }}><ArrowForwardIosIcon /></button>
                     </div>
                 </div>
+                <Comments issue={[`${title} ${curChapter}.${curSubchapter+1}`]} />
             </div>
         </main>
     </NavContext.Provider>;
