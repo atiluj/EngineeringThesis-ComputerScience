@@ -88,13 +88,6 @@
     border-radius: 1px;
 }
 
-.separator {
-    width: 94%;
-    height: 2px;
-    background-color: var(--font);
-    margin-left: 3%;
-}
-
 .authors {
     padding: 30px 0 40px;
     line-height: normal;
@@ -165,40 +158,6 @@
     vertical-align: middle;
     text-align: center;
 }
-
-.footer {
-    font-family: 'Chakra Petch', sans-serif;
-    width: 100%;
-    color: var(--font);
-    text-align: center;
-    padding: 30px 0 0;
-}
-
-.footer .logo_footer img {
-    margin: 2vw;
-    width: 10vw;
-    height: auto;
-
-}
-
-.footer a {
-    text-decoration: none;
-    color: var(--font-accent);
-    transition: .7s;
-}
-
-.footer .coffee_link {
-    padding-top: 30px;
-}
-
-.footer a svg {
-    vertical-align: text-bottom;
-}
-
-.footer a:hover {
-    letter-spacing: 2px;
-}
-
 
 @media (max-width: 1200px) {
     .section {

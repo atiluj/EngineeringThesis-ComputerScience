@@ -10,6 +10,7 @@ import Exercise from './components/Exercise'
 import ExerciseSet from './components/ExerciseSet'
 import Section from './components/Section'
 import Home from './components/Home'
+import Footer from './components/Footer';
 
 import './style.css';
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/teoria' element={<Section lessons={TeoriaLessons} title="teoria"/>} />
             <Route path='/python' element={<Section lessons={PythonLessons} title="python"/>} />
         </Routes>
+        <Footer />
     </BrowserRouter>);
 }
 

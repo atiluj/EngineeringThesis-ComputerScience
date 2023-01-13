@@ -1,7 +1,6 @@
 import styles from './Home.module.css';
 import '../style.css';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import CoffeeIcon from '@mui/icons-material/Coffee';
 
 function Home() {
     return <>
@@ -137,7 +136,7 @@ function Home() {
             </div>
         </main>
 
-        <div className={styles.separator}></div>
+        <div className={`separator`}></div>
 
         <div className={styles.authors} id="sixth">
             <div className={styles.authors_title}><p>AUTORZY STRONY</p></div>
@@ -167,22 +166,6 @@ function Home() {
                 </div>
             </div>
         </div>
-
-        <div className={styles.separator}></div>
-
-        <footer className={styles.footer}>
-                <p>Hej! <br /> Kontakt do twórców tej strony znajdziesz na stronie głównej w zakładce AUTORZY STRONY.</p>
-                <p>Jeśli uważasz, że nasza praca Ci pomogła możesz nas wesprzeć kupując nam kawkę. Bardzo to docenimy!</p>
-            <div className={styles.coffee_link}>
-                <a href="">TUTAJ ZNAJDZIESZ LINK DO PROFILU <CoffeeIcon /></a>
-            </div>
-            <div className={styles.logo_footer}>
-                <img src={new URL('../img/logo5.png', import.meta.url)} alt="logo" className={`logo_img`} />
-            </div>
-
-
-        </footer>
-
     </>;
 }
 

@@ -186,3 +186,10 @@ div .wrapper {
     height: 100%;
     border: 0;
 }
+
+.separator {
+    width: 94%;
+    height: 2px;
+    background-color: var(--font);
+    margin-left: 3%;
+}
