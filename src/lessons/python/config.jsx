@@ -1,19 +1,25 @@
 import Wskazowki from './wskazowki.mdx';
+import PierwszeKroki from './pierwszeKroki.mdx';
+import TypyIZmienne from './typyIZmienne.mdx';
+import ListyIKrotki from './listyIKrotki.mdx';
+import SlownikiIZbiory from './slownikiIZbiory.mdx';
+import InstrukcjeWarunkowe from './instrukcjeWarunkowe.mdx';
 
 export default [
     {name: "Wskazówki", content: <Wskazowki />},
-
-    {name: "Podstawowe konstrukcje", subchapters: [
-        {name: "Instrukcje wejścia i wyjścia", content: null},
-        {name: "Warunki", content: null},
-        {name: "Pętle", content: null},
-        {name: "Operacje na plikach", content: null},
-        {name: "Funkcje", content: null},
-    ]},
+    
+    {name: "Pierwsze kroki", content: <PierwszeKroki />},
+    {name: "Typy i zmienne", content: <TypyIZmienne />},
 
     {name: "Struktury danych", subchapters: [
-        {name: "Lista", content: null},
-        {name: "Lista dwuwymiarowa", content: null},
+        {name: "Listy i krotki", content: <ListyIKrotki />},
+        {name: "Słowniki i zbiory*", content: <SlownikiIZbiory />},
+    ]},
+
+    {name: "Podstawowe konstrukcje", subchapters: [
+        {name: "Instrukcje warunkowe", content: <InstrukcjeWarunkowe />},
+        {name: "Pętle", content: null},
+        {name: "Funkcje", content: null},
     ]},
 
     {name: "Rekurencja", subchapters: [

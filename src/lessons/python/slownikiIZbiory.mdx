@@ -1,0 +1,52 @@
+## Słownik
+**Słownik (dictionary)** to taka struktura danych, która jest nieuporządkowana. Oznacza to, że nie w przeciwieństwie do list i krotek, nie możemy odwoływać się do jej elementów za pomocą indeksów. Przechowuje ona pary **klucz-wartość**.
+
+Słowniki definiujemy za pomocą nawiasów wąsatych w następujący sposób:
+```python
+>>> slownik = {'klucz' : 'wartosc', 'ala' : 'ma kota', 1 : True}
+>>> slownik['klucz']
+'wartosc'
+>>> slownik[1]
+True
+>>> type(slownik)
+<class 'dict'>
+```
+Aby dostać się do jakiegoś elementu (wartości), musimy użyć konkretnego klucza. Zarówno klucze, jak i wartości mogą być różnego rodzaju obiektami (np. liczbami, napisami czy nawet złożonymi typami). 
+
+Możemy w prosty sposób powiększyć nasz słownik dopisując do nieistniejącego klucza nową wartość. 
+
+```python
+>>> slownik = {0: 'zero', 1: 'jeden'}
+>>> slownik
+{0: 'zero', 1: 'jeden'}
+>>> slownik[3] = 'trzy'
+>>> slownik
+{0: 'dwa', 1: 'jeden', 3: 'trzy'}
+```
+
+**slownik.keys()** zwraca wszystkie klucze w słowniku
+
+```python
+>>> slownik = {'klucz' : 'wartosc', 'ala' : 'ma kota', 1 : True}
+>>> slownik.keys() 
+dict_keys(['klucz', 'ala', 1])
+```
+Zauważmy, że obiekt który jest zwracany przez tę funkcję jest typu **dict_keys**. Aby więc wygodnie operować na kluczach, należy przekształcić je w listę za pomocą list **list()**
+
+```python
+>>> slownik = {'klucz' : 'wartosc', 'ala' : 'ma kota', 1 : True}
+>>> klucze = list(slownik.keys()) 
+>>> klucze
+['klucz', 'ala', 1]
+>>> klucze[0]
+'klucz'
+```
+
+**slownik.values()** zwraca listę wszystkich wartości w slowniku
+```python
+>>> slownik = {'klucz' : 'wartosc', 'ala' : 'ma kota', 1 : True}
+>>> slownik.values()
+dict_values(['wartosc', 'ma kota', True])
+>>> list(slownik.values())
+['wartosc', 'ma kota', True]
+```

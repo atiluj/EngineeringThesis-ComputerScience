@@ -1,0 +1,342 @@
+## Struktura danych
+**Struktura danych** to taki pojemnik na dane, który sprawia, że są one przechowywane w uporządkowany sposób. Dzięki temu możemy bardzo łatwo je odnajdować i manipulować. Wybór odpowiedniej struktury zależy od rodzaju danych jake chcemy przechowywać oraz od tego, jakie operacje chcemy na nich wykonywać.
+
+W Pythonie istnieje kilka podstawowych struktur danych, z którymi zapoznamy się w tym temacie. 
+
+## Lista (list)
+Wcześniej zdefiniowaliśmy pojęcie zmiennej jako pudełka. W takim razie, **listę** możemy możemy sobie wyobrazić jako zestaw takich pudełek, ułożonych obok siebie w ustalonej kolejności. Pozwala nam ona przechowywać wiele obiektów w jednym miejscu.
+
+Listę tworzymy za pomocą nawiasów kwadratowych **[]**, w których umieszczamy kolejne elementy, poodzielane przecinkami. Co istotne, lista może przechowywać elementy o różnych typach. 
+
+```python
+>>> lista = ['Ala', 10, 'Ola', True, 10]
+>>> lista 
+['Ala', 10, 'Ola', True, 10]
+>>> type(lista)
+<class 'list'>
+```
+<br/>
+:::info 
+TU WSTAW OBRAZEK Z PUDEŁKAMI
+::: <br/><br/>
+
+Każdy element w liście jest numerowany kolejno od 0. Ten numer przy każdym pudełku nazywamy **indeksem** - wskazuje on pozycję elementu w liście. 
+
+Jeśli chcemy dostać się do wybranego elementu, odwołujemy się do jego indeksu, w następujący sposób  **nazwa_listy[indeks]**.
+
+```python
+>>> lista[0]
+1
+>>> lista[3]
+True
+```
+Możemy również zmodyfikować element listy:
+```python
+>>> lista[0] = 2023
+>>> lista
+[2023, 'Ala', 'Ola', True, 10]
+```
+
+Możemy również utworzyć pustą listę. W tym caly używamy pustych nawiasów kwadratowych **[]** lub funkcji **list()**.
+
+```python
+pusta_lista = []
+inna_lista = list()
+```
+Sama funkcja **list()** służy również do zmiany innej struktury danych, np. słownika czy krotki na listę. Działa więc w analogiczny sposób jak **int()** czy **str()**.
+
+### Więcej o indeksowaniu
+Elementy w liście nie są numerowane tylko od przodu (od 0), ale również od tyłu .
+
+:::info 
+TU WRZUĆ OBRAZEK Z INDEKSAMI
+:::
+
+```python
+>>> lista = ['Ala', 10, 'Ola', True, 10]
+>>> lista[-1]
+10
+>>> lista[-5]
+'Ala'
+```
+
+Musimy uważać na to, żeby przypadkiem nie odwołać się do nieistniejącego indeksu:
+
+```python!
+>>> lista[5]
+IndexError: list index out of range
+>>> lista[10]
+IndexError: list index out of range
+```
+
+### List slicing
+Poza tym, że za pomocą indeksów możemy dostać się do jednego wybranego elementu, to możemy również "wyciąć" jej kawałek, czyli wyciągnąć z niej dane z podanego zakresu:
+```python!
+>>> lista[0:2]
+['Ala', 10]
+```
+
+W powyższym przykładzie wycięliśmy fragment listy zaczynający się od indeksu 0 (włącznie), a kończący na indeksie 2 (z wyłączeniem tego indeksu). 
+
+Składnia takiego wycinania wygląda następująco:
+**lista[ indeks_poczatkowy : indeks_końcowy : krok ]**
+Jeżeli nie podamy indeksu początkowego, to domyślnie zakres będzie ustawiony na początek listy, a jeżeli końcowego, to na koniec listy. 
+Krok mówi nam o tym, co który element z listy wyciągamy.
+```python
+>>> lista = [1, 2, 3, 4, 5]
+>>> lista[:3]
+[1, 2, 3]
+>>> lista[2:]
+[3, 4, 5]
+>>> lista[:]
+[1, 2, 3, 4, 5]
+>>> lista[::2]
+[1, 3, 5]
+```
+
+Możemy zmodyfikować zakres elementów listy:
+```python
+>>> lista[0:2] = [100, 90]
+>>> lista
+[100, 90, 'Ola', True, 10]
+```
+
+
+## Operacje na listach
+### Dodawanie elementów
+Do już istniejącej listy możemy dodać nowe elementy: 
+* Za pomocą funkcji **append(wartość)**, aby dodać go na koniec listy
+```python!
+>>> owoce = ['jabłko', 'banan', 'kiwi']
+>>> owoce.append('ananas')
+>>> owoce
+['jabłko', 'banan', 'kiwi', 'ananas']
+```
+* Za pomocą funkcji **insert(indeks, wartość)**, aby dodać go w konkretne miejsce
+```python!
+>>> owoce.insert(2, 'gruszka')
+>>> owoce
+['jabłko', 'banan', 'gruszka', 'kiwi', 'ananas']
+```
+
+### Łączenie list
+
+Możemy połączyć kilka list w jedną za pomocą operatora **+**: 
+```python=
+>>> owoce = ['jabłko', 'banan', 'gruszka', 'kiwi', 'ananas']
+>>> warzywa = ['marchewka', 'brokuł']
+>>> fit_dieta = owoce + warzywa
+>>> fit_dieta
+['jabłko', 'banan', 'gruszka', 'kiwi', 'ananas', 'marchewka', 'brokuł']
+```
+
+### Usuwanie elementów z listy
+Używamy **pop()**, aby zwrócić ostatni element z listy, a następnie go usunąć
+```python
+>>> owoce = ['jabłko', 'banan', 'gruszka', 'kiwi', 'ananas']
+>>> owoce.pop()
+'ananas'
+>>> owoce
+['jabłko', 'banan', 'gruszka', 'kiwi']
+```
+Możemy również użyć **pop(indeks)**
+```python
+>>> owoce.pop(2)
+['jabłko', 'banan', 'kiwi']
+```
+Albo **del**
+
+```python
+>>> del owoce[1]
+['jabłko', 'kiwi']
+```
+Możemy też usunąć element za pomocą **remove**. Tym razem nie będziemy podawać indeksu, tylko jego wartość. 
+
+```python=
+>>> owoce = ['banan', 'kiwi', 'jabłko', 'kiwi']
+>>> owoce.remove('kiwi')
+>>> owoce
+['banan', 'jabłko', 'kiwi']
+```
+
+Zwróć uwagę na to, że **remove** usuwa tylko pierwsze wystąpienie podanej wartości!
+
+### Sortowanie listy
+Możemy posortować listę za pomocą funkcji **sort()**
+
+```python
+>>> liczby = [10, 2, 14, 5, 1]
+>>> liczby.sort()
+>>> liczby
+[1, 2, 5, 10, 14]
+```
+
+Jeżeli chcemy posortować listę malejąco dodajemy do funkcji sort argument **reverse=True**. 
+
+```python
+>>> liczby = [10, 2, 14, 5, 1]
+>>> liczby.sort(reverse=True)
+>>> liczby
+[14, 10, 5, 2, 1]
+```
+
+### Odwracanie listy
+
+Możemy odwrócić listę za pomocą **reverse()**
+
+```python 
+>>> liczby = [10, 2, 14, 5, 1]
+>>> liczby.reverse()
+>>> liczby
+[1, 5, 14, 2, 10]
+```
+
+Albo zamiast powyższej funkcji możemy użyć **slicing'u**:
+```python
+>>> liczby = [10, 2, 14, 5, 1]
+>>> liczby = liczby[::-1]
+>>> liczby
+[1, 5, 14, 2, 10]
+```
+
+### Wyszukiwanie elementu w liście
+Aby sprawdzić czy dany element występuje lekcji używamy operatora **in**.
+```python
+>>> liczby = [10, 2, 14, 5, 1]
+>>> 2 in liczby
+True
+>>> 3 in liczby
+False
+```
+Nie dostajemy jednak informacji o tym, w którym miejscu listy znajduje się ten element. Jeżeli nam na tym zależy, to zamiast *in* używamy **index()**.
+```python
+>>> liczby = [10, 2, 14, 5, 14]
+>>> liczby.index(14)
+2
+```
+Jeżeli w liście istnieje więcej niż jeden element, który wyszukujemy, to powyższa funkcja zawsze zwróci nam indeks jego pierwszego wystąpienia.
+
+### Zliczanie wystąpień elementu w liście
+Aby zliczyć ile razy jakiś element wystąpił w liście używamy **count()**:
+```python
+>>> liczby = [10, 1, 2, 10, 10]
+>>> liczby.count(10)
+3
+>>> liczby.count(5)
+0
+```
+
+## Krotka (Tuple)
+**Krotka** to lista, które są **niemutowalna**, czy inaczej niemodyfikowalna, niezmienna. Oznacza to, że nie możemy zmieniać jej elementów. 
+
+Krotki definiujemy je podobnie jak listy, z tą różnicą, że zamiast nawiasów kwadratowych używamy okrągłych **()** lub funkcji **tuple()**.
+
+```python
+>>> krotka = ()
+>>> type(krotka)
+<class 'tuple'>
+
+>>> inna_krotka = tuple()
+```
+
+
+Aby dostać się konkretnego elementu, używamy indeksów, identycznie jak w przypadku zwykłych list. 
+
+```python
+>>> krotka = (1, 'Ala', 'Ola', True, 10)
+>>> krotka[1]
+'Ala'
+```
+W taki sam sposób działa również **slicing**:
+
+```python
+>>> krotka[1:3]
+('Ala', 'Ola')
+```
+
+Krotki możemy tworzyć również bez użycia nawiasów!
+```python
+>>> krotka = 1, 'Ala', 'Ola', True, 10
+>>> krotka
+(1, 'Ala', 'Ola', True, 10)
+```
+
+
+Nie możemy jednak modyfikować krotki. Próba zmiany któregoś elementu zakończy się błędem *TypeError*!
+```python=
+>>> krotka[1] = 3
+TypeError: 'tuple' object does not support item assignment
+```
+
+### Operacje na krotkach
+Na krotkach możemy wykonywać takie operacje, które jej nie modyfikują. 
+Jest to m.in. wyszukiwanie:
+```python
+>>> cytrusy = ('pomarańcza', 'cytryna', 'limonka', 'limonka')
+>>> 'pomarancza' in cytrusy
+True
+>>> cytrusy.index('limonka')
+2
+```
+czy zliczanie:
+```python
+>>> cytrusy.count('limonka')
+2
+```
+
+Możemy również utworzyć nową krotkę, łącząc kilka krotek ze sobą:
+```python
+>>> owoce = cytrusy + ('jabłko', 'gruszka')
+>>> owoce
+('pomarańcza', 'cytryna', 'limonka', 'limonka', 'jabłko', 'gruszka')
+```
+
+Nie możemy dodawać nowych elementów do istniejącej krotki, ani usuwać żadnych z nich. 
+
+## Funkcje wbudowane!!!
+Teraz opowiemy o trzech przydatnych funkcjach wbudowanych, których można używać zarówno na listach, jak i na krotkach:
+
+Funkcja **len()** zwraca długość podanej struktury
+```python
+>>> liczby = [1, 2, 3, 4]
+>>> len(liczby)
+4
+
+>>> dni_wolne = ('sobota', 'niedziela')
+>>> len(dni_wolne)
+2
+```
+**min()** zwraca najmniejszy element w strukturze
+```python
+>>> liczby = [1, 2, 3, 4]
+>>> min(liczby)
+1
+```
+Z kolei funkcja **max()** zwraca największy element
+```python
+>>> liczby = (10, 2, 1, 15, 8)
+>>> max(liczby)
+15
+```
+## Listy dwuwymiarowe
+Powiedzieliśmy, że listy i krotki mogą zawierać dowolne obiekty. Skoro tak, to mogą zawierać także inne listy i krotki! 
+```python
+>>> lista = [1, [20, 30, 40], 5]
+>>> lista[1]
+[20, 30, 40]
+>>> krotka = ((1, 2), 7, 8, 9)
+>>> krotka[0]
+(1, 2)
+```
+
+W takim razie w prosty sposób możemy utworzyć listę dwuwymiarową!
+```python
+>>> lista = [[11, 21, 31], [12, 22, 32], [13, 23, 33]]
+>>> lista[1]
+[12, 22, 32]
+>>> lista[1][0]
+12
+```
+
+## Zadania
+TODO
