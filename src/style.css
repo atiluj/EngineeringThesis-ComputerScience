@@ -81,7 +81,7 @@
 }
 
 .logo_img{
-    filter: var(--logo_filter);
+    fill: var(--font);
 }
 
 .main_content .second img.super_small_img{

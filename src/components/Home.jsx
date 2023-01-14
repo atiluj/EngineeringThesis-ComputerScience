@@ -43,8 +43,8 @@ function Home() {
             </div>
 
             <div className={styles.main_content}>
-                <article id="first">
-                    <h1>DLA KOGO?</h1>
+                <article>
+                    <h1 id="first">DLA KOGO?</h1>
                     <p>
                         Jeśli nie miałeś wcześniej styczności z informatyką - nie przejmuj się - nasz kurs
                         nie wymaga żadnej wcześniejszej wiedzy i powoli wprowadzi Cię w każdy temat. Poziom
@@ -53,8 +53,8 @@ function Home() {
                         wiedzy.
                     </p>
                 </article>
-                <article id="second">
-                    <h1>STATYSTYKI</h1>
+                <article>
+                    <h1 id="second">STATYSTYKI</h1>
                     <p>Na podstawie danych opublikowanych przez Centralną Komisję Egzaminacyjną na rok 2022 wiemy, że do egzaminu maturalnego z informatyki podeszło 9 248 osób z 268 257 maturzystów. Łatwo więc obliczyć, że jest to jedynie ok. 0.03% spośród wszystkich uczniów przystępujących do matury!<br /><br />
 
                         [tu obrazek z 1000 osób i zakolorowany 30 ucznów ]<br /><br />
@@ -69,8 +69,8 @@ function Home() {
                         <br /><br />
                         [tu obrazek z 10 000 osób i zakolorowany 4 uczniów]</p>
                 </article>
-                <article id="third">
-                    <h1>CO ZAWIERA KURS</h1>
+                <article>
+                    <h1 id="third">CO ZAWIERA KURS</h1>
                     <p>
                         Kurs składa się z wykładów, w których omówione zostały najważniejsze zagadnienia z informatyki, takie jak:</p>
                     <ul>
@@ -85,8 +85,8 @@ function Home() {
                         W sekcji komenatarzy możesz zadać nam pytanie, na które postaramy się odpowiedzieć.</p>
 
                 </article>
-                <article id="fourth">
-                    <h1>INSTRUKCJA</h1>
+                <article>
+                    <h1 id="fourth">INSTRUKCJA</h1>
                     <p>
                         WYBIERZ SWÓJ POZIOM:<br /><br />
 
@@ -110,8 +110,8 @@ function Home() {
 
                         Pamiętaj, że ten kurs jest dla Ciebie i to Ty decydujesz jak z niego korzystasz. Dla nas ważne jest, aby pomóc Ci w wyzwaniu jakie przed Tobą stoi najlepiej jak to możliwe.</p>
                 </article>
-                <article id="fifth">
-                    <h1>WSKAZÓWKI</h1>
+                <article>
+                    <h1 id="fifth">WSKAZÓWKI</h1>
                     Co roku wraz z opublikowaniem wyników matur, Centralna Komisja Egzaminacyjna tworzy raport zawierający statystyki oraz wnioski, jakie z nich płyną.
                     Chcemy zwrócić Ci szczególną uwagę na (naszym zdaniem) najważniejsze punkty i dać Ci kilka rad z nimi związanych. <br /><br />
                     Po pierwsze wciąż duża grupa maturzystów zapomina zapisać realizacje komputerowe swoich zadań (np. plik Excel). W szczególności brak zapisania

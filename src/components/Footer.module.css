@@ -7,11 +7,10 @@
     padding: 30px 0 0;
 }
 
-.footer .logo_footer img {
+.footer .logo_footer svg {
     margin: 2vw;
     width: 8vw;
     height: auto;
-
 }
 
 .footer a {

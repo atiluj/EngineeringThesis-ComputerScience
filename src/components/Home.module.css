@@ -78,6 +78,8 @@
     text-transform: uppercase;
     color: var(--main-accent);
     padding-bottom: 6px;
+    padding-top: 76px;
+    margin-top: -76px;
 }
 
 .main article {
