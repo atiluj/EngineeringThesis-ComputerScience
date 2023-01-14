@@ -33,6 +33,7 @@
     --tools2: #fcf8f8cc;
     --screen_filter: brightness(1);
     --logo_filter: brightness(0.2);
+    --link-hover: #d08a9a;
 }
 
 [data-theme="dark"] {
@@ -60,6 +61,7 @@
     --tools2: #fcf8f8cc;
     --screen_filter: brightness(0.7);
     --logo_filter: brightness(1);
+    --link-hover: #7d217b;;
 }
 
 .gradient {
@@ -142,6 +144,26 @@ div .wrapper {
 
 .menu_button.nav_button:hover {
     background-color: var(--nav-button-hover);
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.box_link{
+    text-align: right;
+}
+
+.link{
+    color: var(--font);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition-duration: .5s;
+    letter-spacing: .5px;
+}
+
+.link:hover{
+    color: var(--link-hover);
 }
 
 /* width */

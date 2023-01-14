@@ -1,0 +1,85 @@
+<div className="box_link"><a className="link" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2022/Informatyka/poziom_rozszerzony/EINP-R2-100-2205.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2022/Informatyka/poziom_rozszerzony/Dane_2205.zip">pliki do zadania</a>
+<br/>
+</div>
+
+### TREŚĆ:
+W pliku liczby.txt danych jest 200 różnych liczb całkowitych z zakresu [10, 100000].
+Każda z tych liczb zapisana jest w osobnym wierszu.
+Napisz program (lub kilka programów), który(-e) znajdzie(-dą) odpowiedzi do poniższych
+zadań. Odpowiedzi zapisz w pliku wyniki4.txt. Każdą odpowiedź poprzedź numerem
+oznaczającym zadanie.
+Do dyspozycji masz plik przyklad.txt, który także zawiera 200 liczb – odpowiedzi dla
+tego pliku podano w treściach zadań. Możesz sprawdzać na nim działanie swojego
+programu.
+Uwaga: Pamiętaj, że Twój program musi ostatecznie działać dla pliku liczby.txt.
+
+<br/><br/>
+
+### Zadanie 1   (0-4pkt.)
+Podaj, ile jest w pliku liczby.txt takich liczb, których cyfry pierwsza i ostatnia są takie
+same. Zapisz tę z nich, która występuje w pliku liczby.txt jako pierwsza.
+W pliku z danymi jest co najmniej jedna taka liczba.
+Odpowiedź dla danych z pliku przyklad.txt: 26 626
+(26 takich liczb, które mają pierwszą i ostatnią cyfrę taką samą; pierwszą z nich w pliku
+przykładowym jest 626)
+
+<br/><br/>
+
+### Zadanie 2   (0-4pkt.)
+Znajdź w pliku liczby.txt :
+<li> liczbę, która ma w rozkładzie najwięcej czynników pierwszych (podaj tę liczbę oraz liczbę
+jej czynników pierwszych) </li>
+<li>liczbę, która ma w rozkładzie najwięcej różnych czynników pierwszych (podaj tę liczbę
+oraz liczbę jej różnych czynników pierwszych).</li>
+
+#### Przykład:
+Liczba 420=2·2·3·5·7 ma w rozkładzie 5 czynników pierwszych, w tym 4 różne
+czynniki pierwsze (2, 3, 5, 7).
+Odpowiedź dla danych z pliku przyklad.txt: 
+
+```
+144 6 210 4
+```
+(Liczba 144 ma najwięcej czynników pierwszych; liczba czynników pierwszych liczby 144
+wynosi 6. Liczba 210 ma najwięcej różnych czynników pierwszych; liczba różnych czynników
+pierwszych liczby 210 wynosi 4).
+
+<br/><br/>
+
+### Zadanie 3   (0-4pkt.)
+Trójka (x, y, z) jest dobra, jeśli y jest wielokrotnością x, natomiast z jest wielokrotnością y
+(czyli x dzieli y, a y dzieli z) oraz x, y, z są różne.
+#### Przykład: 
+Trójka (2, 6, 12) jest dobra, ponieważ 2 dzieli 6, a 6 dzieli 12. <br/>
+Trójka (2, 10, 12) nie jest dobra, ponieważ 10 nie dzieli 12. <br/>
+Analogicznie możemy zdefiniować dobrą piątkę liczb – piątka (u, w, x, y, z) jest dobra, jeśli
+każda z liczb, poza pierwszą, jest podzielna przez poprzednią liczbę z piątki (u dzieli w,
+w dzieli x, x dzieli y oraz y dzieli z) oraz wszystkie liczby z piątki są różne.<br/>
+<span className="bold">a)</span> Podaj, ile jest dobrych trójek wśród liczb występujących w pliku liczby.txt. Zapisz
+wszystkie dobre trójki do pliku trojki.txt, każdą w osobnym wierszu.
+Uwaga: Liczby z trójki nie muszą występować w pliku liczby.txt w kolejnych
+wierszach, a ich kolejność w tym pliku może być dowolna.<br/>
+<span className="bold">b)</span> Podaj, ile jest dobrych piątek wśród liczb występujących w pliku liczby.txt.
+Odpowiedzi dla danych z pliku przyklad.txt:<br/>
+<span className="bold">a)</span> 10<br/>
+<span className="bold">b)</span> 1<br/>
+(10 dobrych trójek i jedna dobra piątka)
+
+<br/><br/>
+
+### Zawartość pliku trojki.txt dla danych z pliku przyklad.txt:
+
+```
+13 104 208
+13 52 104
+13 52 208
+13 26 104
+13 26 52
+13 26 208
+52 104 208
+26 104 208
+26 52 104
+26 52 208
+```

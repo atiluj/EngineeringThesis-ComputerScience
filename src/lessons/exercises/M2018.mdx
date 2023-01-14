@@ -1,0 +1,69 @@
+<div className="box_link"><a className="link" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2018/formula_od_2015/informatyka/MIN-R2_1P-182.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2018/formula_od_2015/informatyka/Dane_PR2.zip">pliki do zadania</a>
+<br/>
+</div>
+
+### TREŚĆ:
+W ramach projektu WEGA naukowcom udało się odczytać sygnały radiowe pochodzące
+z przestrzeni kosmicznej. Po wstępnej obróbce zapisali je do pliku sygnaly.txt.<br/>
+W pliku sygnaly.txt znajduje się 1000 wierszy. Każdy wiersz zawiera jedno niepuste
+słowo złożone z wielkich liter alfabetu angielskiego. Długość jednego słowa nie przekracza 100
+znaków.<br/><br/>
+Napisz <span className="bold">program(y)</span>, który(e) da(dzą) odpowiedzi do poniższych zadań. Odpowiedzi zapisz
+w pliku wyniki4.txt, a każdą odpowiedź poprzedź numerem oznaczającym odpowiednie
+zadanie.<br/><br/>
+<span className="bold">Uwaga</span>: Plik przyklad.txt zawiera dane przykładowe spełniające warunki zadania.
+Odpowiedzi dla danych z pliku przyklad.txt są podane pod pytaniami. 
+
+<br/><br/>
+
+### Zadanie 1   (0-3pkt.)
+Naukowcy zauważyli, że po złączeniu dziesiątych liter co czterdziestego słowa (zaczynając od
+słowa czterdziestego) otrzymamy pewne przesłanie. Wypisz to przesłanie.<br/>
+<span className="bold">Uwaga</span>: Każde co czterdzieste słowo ma co najmniej 10 znaków.<br/><br/>
+Dla danych z pliku przyklad.txt wynikiem jest:
+
+```
+NIECHCIMATURAPROSTABEDZIE 
+```
+
+<br/><br/>
+
+### Zadanie 2   (0-4pkt.)
+Znajdź słowo, w którym występuje największa liczba <span className="bold">różnych</span> liter. Wypisz to słowo i liczbę
+występujących w nim różnych liter. Jeśli słów o największej liczbie różnych liter jest więcej
+niż jedno, wypisz pierwsze z nich pojawiające się w pliku z danymi.<br/><br/>
+Dla danych z pliku przyklad.txt wynikiem jest:
+
+```
+AKLMNOPRSTWZA 12
+```
+
+<br/><br/>
+
+### Zadanie 3   (0-4pkt.)
+W tym zadaniu rozważmy odległość liter w alfabecie – np. litery A i B są od siebie oddalone
+o 1, A i E o 4, F i D o 2, a każda litera od siebie samej jest oddalona o 0. Wypisz wszystkie
+słowa, w których każde dwie litery oddalone są od siebie w alfabecie co najwyżej o 10. Słowa
+wypisz w kolejności występowania w pliku sygnaly.txt, po jednym w wierszu.<br/><br/>
+Na przykład CGECF jest takim słowem, ale ABEZA nie jest (odległość A – Z wynosi 25). <br/><br/>
+Dla danych z pliku przyklad.txt wynikiem jest :<br/>
+
+```
+AAAAAAAAAI
+AAAAAAAAAE
+AAAAAAAAAC
+AAAAAAAAAH
+AAAAAAAAAC
+AAAAAAAAAI
+AAAAAAAAAA
+BB
+AAAAAAAAAA
+AAAAAAAAAA
+AAAAAAAAAB
+AAAAAAAAAE
+AAAAAAAAAD
+AAAAAAAAAI
+AAAAAAAAAE
+```

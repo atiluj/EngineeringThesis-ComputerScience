@@ -13,7 +13,8 @@ function ExerciseSet() {
             <div className={`${styles.exercises_list} ${styles.python_list}`}>
                 <div className={styles.list_element_wrapper}>
                     <div className={styles.subject}>Zmienne</div>
-                    <Link to="/exercise/0" className={`${styles.list_element} ${styles.number_element}`} >1</Link>
+                    {/* to nie będzie działać bo musisz dać poprawną ścieżek do pliku to="/exercise/0" */}
+                    {/* <Link to="/exercise/0" className={`${styles.list_element} ${styles.number_element}`} >1</Link> */}
                     <div className={`${styles.list_element} ${styles.number_element}`}>2</div>
                     <div className={`${styles.list_element} ${styles.number_element}`}>3</div>
                 </div>
@@ -43,25 +44,23 @@ function ExerciseSet() {
                 </p> */}
             </div>
 
-            <div className={styles.category}>SORTOWANIE</div>
+            <div className={styles.category}>DZIAŁANIA NA LICZBACH</div>
             <div className={styles.exercises_list}>
-                <div className={styles.list_element}><p>SORTOWANIE Z.1</p></div>
-                <div className={styles.list_element}><p>SORTOWANIE Z.2</p></div>
-                <div className={styles.list_element}><p>SORTOWANIE Z.3</p></div>
-                <div className={styles.list_element}><p>SORTOWANIE Z.4</p></div>
-                <div className={styles.list_element}><p>SORTOWANIE Z.5</p></div>
-                <div className={styles.list_element}><p>SORTOWANIE Z.6</p></div>
-                <div className={styles.list_element}><p>SORTOWANIE Z.7</p></div>
-                <div className={styles.list_element}><p>SORTOWANIE Z.8</p></div>
+                <Link to="/exercise/0" className={`${styles.list_element}`}>MATURA 2022</Link>
+                <Link to="/exercise/2" className={`${styles.list_element}`}>MATURA 2020</Link>
+                <Link to="/exercise/3" className={`${styles.list_element}`}>MATURA 2019</Link>
+                <Link to="/exercise/5" className={`${styles.list_element}`}>MATURA 2017</Link>
+                <Link to="/exercise/7" className={`${styles.list_element}`}>MATURA 2015</Link>
             </div>
 
+            <div className={styles.category}>DZIAŁANIA NA STRINGACH</div>
+            <div className={styles.exercises_list}>
+                <Link to="/exercise/1" className={`${styles.list_element}`}>MATURA 2021</Link>
+                <Link to="/exercise/4" className={`${styles.list_element}`}>MATURA 2018</Link>
+            </div>
             <div className={styles.category}>SZYFROWANIE</div>
             <div className={styles.exercises_list}>
-                <div className={styles.list_element}><p>SZYFROWANIE Z.1</p></div>
-                <div className={styles.list_element}><p>SZYFROWANIE Z.2</p></div>
-                <div className={styles.list_element}><p>SZYFROWANIE Z.3</p></div>
-                <div className={styles.list_element}><p>SZYFROWANIE Z.4</p></div>
-                <div className={styles.list_element}><p>SZYFROWANIE Z.5</p></div>
+                <Link to="/exercise/6" className={`${styles.list_element}`}>MATURA 2016</Link>
             </div>
 
         </main>

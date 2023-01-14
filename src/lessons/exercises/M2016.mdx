@@ -1,0 +1,84 @@
+<div className="box_link"><a className="link" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_od_2015/MIN-R2_1P-162.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_od_2015/Dane_PR2.zip" >pliki do zadania</a>
+<br/>
+</div>
+
+### TREŚĆ:
+Podstawieniowy szyfr Cezara z przesunięciem (kluczem) k polega na zastąpieniu każdego
+znaku jawnego znakiem leżącym w alfabecie o k pozycji w prawo od zastępowanego znaku.
+Przykład: znak ‘B’ po zakodowaniu kluczem k=3 zastąpiony zostanie znakiem ‘E’. <br/>
+![](https://i.imgur.com/ePB4F8g.png)<br/>
+Przy szyfrowaniu znaku należy postępować w sposób cykliczny, to znaczy, jeżeli znak nie
+posiada w alfabecie następnika przesuniętego o k pozycji, to alfabet „zawija się" i za literą Z
+następuje znów litera A.<br/>
+Przykład: jawny znak ‘X’ po zakodowaniu kluczem k=3 zastąpiony zostanie znakiem ‘A’,
+znak ‘Y’ – znakiem ‘B’, natomiast ‘Z’ – znakiem ‘C’. <br/>
+![](https://i.imgur.com/Ikakpev.png)<br/>
+W tym zadaniu rozpatrujemy tylko słowa zbudowane z wielkich liter alfabetu angielskiego
+(o kodach ASCII odpowiednio od 65 do 90), o długościach nie większych niż 30 znaków. 
+
+<br/><br/>
+
+### Zadanie 1   (0-3pkt.)
+W pliku dane_6_1.txt znajduje się 100 słów. Słowa umieszczono w osobnych wierszach.<br/>
+Fragment pliku dane_6_1.txt:<br/>
+
+```
+INTERPRETOWANIE
+ROZWESELANIE
+KONSERWOWANIE
+```
+<br/>
+<span className="bold">Napisz program</span>, który <span className="bold">zaszyfruje</span> słowa z pliku dane_6_1.txt z użyciem klucza
+k = 107. Wynik zapisz do pliku wyniki_6_1.txt, każde słowo w osobnym wierszu,
+w porządku odpowiadającym kolejności słów z pliku z danymi.<br/><br/>
+
+<span className="bold">Uwaga:</span> Dla pierwszego słowa z pliku dane_6_1.txt (INTERPRETOWANIE) wynikiem jest
+słowo LQWHUSUHWRZDQLH. 
+
+<br/><br/>
+
+### Zadanie 2   (0-4pkt.)
+W pliku dane_6_2.txt zapisano 3 000 szyfrogramów i odpowiadające im klucze
+szyfrujące. W każdym wierszu znajduje się jeden szyfrogram (zaszyfrowane słowo)
+i po pojedynczym znaku odstępu odpowiadający mu klucz (maksymalnie czterocyfrowa
+liczba).<br/><br/>
+Fragment pliku dane_6_2.txt:<br/>
+
+```
+BCYKUNCM 1718
+YFOGNSKGYW 7580
+WARDA 9334
+``` 
+<br/>
+<span className="bold">Napisz program</span>, który <span className="bold">odszyfruje</span> słowa zaszyfrowane podanymi kluczami. Wynik zapisz
+w pliku wyniki_6_2.txt: każde odszyfrowane słowo w osobnym wierszu, w porządku
+odpowiadającym kolejności szyfrogramów z pliku z danymi.<br/>
+<span className="bold">Uwaga</span>:<br/>
+Dla pierwszego szyfrogramu z pliku dane_6_2.txt (BCYKUNCM) wynikiem jest słowo
+ZAWISLAK. 
+
+<br/><br/>
+
+### Zadanie 3   (0-5pkt.)
+W pliku dane_6_3.txt zapisano 3 000 par słów, po jednej parze w wierszu, oddzielonych
+pojedynczym znakiem odstępu. Drugie słowo w każdej parze jest szyfrogramem pierwszego
+z nieznanym kluczem.<br/>
+Niektóre szyfrogramy są błędne, co oznacza, że niektóre litery w słowie zakodowano
+z różnymi przesunięciami. Słowo ma zawsze tę samą długość co odpowiadający
+mu szyfrogram.<br/><br/>
+Fragment pliku dane_6_3.txt:<br/>
+```
+ZAWISLAK EFBNXQFP
+KRASZEWSKI XENFMRJFXV
+```
+<br/>
+<span className="bold">Napisz program</span>, który wyszuka i wypisze te słowa z pliku dane_6_3.txt, które błędnie
+zaszyfrowano. Wynik zapisz w pliku wyniki_6_3.txt: każde słowo w osobnym wierszu,
+w porządku odpowiadającym kolejności tych słów z pliku z danymi.<br/><br/>
+<span className="bold">Uwaga</span>:<br/>
+Pierwsze słowo w pliku wynikowym to SMIGIELSKI. 
+
+<br/>
+<br/>

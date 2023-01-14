@@ -16,7 +16,7 @@ function Contents({chapter}) {
 function Exercise({lessons}) {
     let { id } = useParams();
     const chapter = lessons[id];
-    const title = `${id}. ${chapter.name}`;
+    const title = `${chapter.name}`;
     return <>
         <main className={styles.main}>
             <div className={styles.exercise_title}>
