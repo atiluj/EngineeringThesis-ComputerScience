@@ -14,8 +14,6 @@ function Footer() {
             </div>
             <div className={`${styles.logo_footer} ${styles.logo_img}`}>
                 <LogoFooter className={`logo_img`}/>
-                {/* <svg src={new URL('../img/logo_footer_black_01.svg', import.meta.url)} alt="logo" className={`logo_img`} /> */}
-                {/* <object data={new URL('../img/logo_footer_black_01.svg', import.meta.url)} alt="logo" className={`logo_img`}/> */}
             </div>
         </footer>
     </>;

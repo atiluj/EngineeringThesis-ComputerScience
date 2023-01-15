@@ -90,6 +90,23 @@
     border-radius: 1px;
 }
 
+.legenda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.legenda_img{
+    max-width: 80px;
+    filter: var(--screen_filter);
+}
+
+
+.statistic_img{
+    max-width: 1000px;
+    filter: var(--screen_filter);
+}
+
 .authors {
     padding: 30px 0 40px;
     line-height: normal;
