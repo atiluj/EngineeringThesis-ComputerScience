@@ -84,10 +84,6 @@
     fill: var(--font);
 }
 
-ol, ul{
-    margin-left: 1rem;
-}
-
 .main_content .second img.super_small_img{
     max-width: 30%;
 }
@@ -121,8 +117,18 @@ html {
     line-height: 1.6;
 }
 
+ol, ul{
+    margin-left: 1rem;
+}
+
 div .wrapper {
     margin: 0 auto;
+}
+
+img.section_logo {
+    max-width: 15%;
+    padding-left: 2%;
+    filter: var(--screen_filter);
 }
 
 .menu_button {

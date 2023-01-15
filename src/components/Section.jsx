@@ -137,6 +137,10 @@ function Section({lessons, title}) {
                 </div> */}
                 <div className={`${styles.cont_title} ${styles.title}`}>
                     <a>{title}</a>
+                    {title === 'access' ? <img src={new URL('../img/access_logo.png', import.meta.url)} alt="Logo access" className={`section_logo`}/> : null}
+                    {title === 'excel' ? <img src={new URL('../img/excel_logo.png', import.meta.url)} alt="Logo excel" className={`section_logo`}/> : null}
+                    {title === 'teoria' ? <img src={new URL('../img/teoria_logo.png', import.meta.url)} alt="Logo teoria" className={`section_logo`}/> : null}
+                
                 </div>
 
                 <div className={styles.cont}>
