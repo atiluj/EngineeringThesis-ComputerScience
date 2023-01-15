@@ -84,6 +84,16 @@
     fill: var(--font);
 }
 
+ol, ul{
+    margin-left: 1rem;
+}
+
+img.section_logo {
+    max-width: 15%;
+    padding-left: 2%;
+    filter: var(--screen_filter);
+}
+
 .main_content .second img.super_small_img{
     max-width: 30%;
 }
