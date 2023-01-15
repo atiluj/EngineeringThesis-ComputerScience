@@ -1,0 +1,530 @@
+<br/>
+
+<img src={new URL('../../img/soki_i_studenci.png', import.meta.url)} alt="studenci pijacy soki w barze" />
+
+<br/>
+
+W tej lekcji przejdziemy przez parę prostych zapytań napisanych w języku SQL. Zaczniemy od bardzo prostych zadań wykorzystujących tylko jedną tabelę, a potem przejdziemy do nieco trudniejszych aż to bardziej zaawansowanych.
+Pamiętajmy jednak, że pokrywamy tutaj tylko podstawy. Powinny one wsytaczyć na część pisemną matury z informatyki i zadania z SQL-a. które możemy na nich znaleźć. 
+Jak już podkreślaliśmy, jeśli chcemy dogłębniej zrozumieć ten język i nauczyć się więcej to warto poza rozwiązaniami w Access ćwiczyć dodatkowo pisanie zapytań SQL.
+
+
+## Dane do przykładowych zadań
+
+<br/>
+
+**Tabela: Soki**
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Smak</th>
+        <th>Pojemność [ml]</th>
+        <th>Cena [zł]</th>
+    </tr>
+    <tr>
+        <td>Jabłkowy</td>
+        <td>330</td>
+        <td>5,00</td>
+    </tr>
+    <tr>
+        <td>Pomaranczowy</td>
+        <td>250</td>
+        <td>5,00</td>
+    </tr>
+    <tr>
+        <td>Porzeczkowy</td>
+        <td>250</td>
+        <td>4,50</td>
+    </tr>
+    <tr>
+        <td>Grejfrutowy</td>
+        <td>330</td>
+        <td>6,00</td>
+    </tr>
+    <tr>
+        <td>Kaktusowy</td>
+        <td>125</td>
+        <td>4,50</td>
+    </tr>
+</table>
+
+<br/>
+
+**Tabela: Bary**
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Nazwa</th>
+        <th>Adres</th>
+        <th>Godzina zamknięcia</th>
+    </tr>
+    <tr>
+        <td>Przekręt</td>
+        <td>Grunwaldzka 15</td>
+        <td>1:30</td>
+    </tr>
+    <tr>
+        <td>Piatak</td>
+        <td>Kazimierza 35</td>
+        <td>2:00</td>
+    </tr>
+    <tr>
+        <td>Witaminka</td>
+        <td>Rynek 50</td>
+        <td>21:00</td>
+    </tr>
+    <tr>
+        <td>Literatka</td>
+        <td>Rynek 48</td>
+        <td>0:00</td>
+    </tr>
+</table>
+    
+<br/>
+
+**Tabela: Studenci**
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Indeks</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Rok studiów</th>
+    </tr>
+    <tr>
+        <td>342335</td>
+        <td>Jan</td>
+        <td>Pilny</td>
+        <td>I</td>
+    </tr>
+    <tr>
+        <td>328990</td>
+        <td>Kazimierz</td>
+        <td>Dosteteczny</td>
+        <td>III</td>
+    </tr>
+    <tr>
+        <td>315737</td>
+        <td>Amelia</td>
+        <td>Celująca</td>
+        <td>V</td>
+    </tr>
+    <tr>
+        <td>346902</td>
+        <td>Justyna</td>
+        <td>Spokojna</td>
+        <td>I</td>
+    </tr>
+</table>
+
+<br/>
+
+**Tabela: LubianeSoki**
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Indeks</th>
+        <th>Sok</th>
+    </tr>
+    <tr>
+        <td>342335</td>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>342335</td>
+        <td>Porzeczkowy</td>
+    </tr>
+    <tr>
+        <td>328990</td>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>315737</td>
+        <td>Pomaranczowy</td>
+    </tr>
+    <tr>
+        <td>315737</td>
+        <td>Kaktusowy</td>
+    </tr>
+    <tr>
+        <td>315737</td>
+        <td>Grejfrutowy</td>
+    </tr>
+</table>
+
+<br/>
+
+**Tabela: LubianeBary**
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Indeks</th>
+        <th>Bar</th>
+    </tr>
+    <tr>
+        <td>342335</td>
+        <td>Przekret</td>
+    </tr>
+    <tr>
+        <td>342335</td>
+        <td>Witaminka</td>
+    </tr>
+    <tr>
+        <td>328990</td>
+        <td>Przekret</td>
+    </tr>
+    <tr>
+        <td>315737</td>
+        <td>Przekret</td>
+    </tr>
+    <tr>
+        <td>315737</td>
+        <td>Piatak</td>
+    </tr>
+    <tr>
+        <td>346902</td>
+        <td>Literatka</td>
+    </tr>
+</table>
+
+<br/>
+
+**Tabela: PodawaneSoki**
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Bar</th>
+        <th>Sok</th>
+    </tr>
+    <tr>
+        <td>Przekręt</td>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>Przekręt</td>
+        <td>Pomaranczowy</td>
+    </tr>
+    <tr>
+        <td>Przekręt</td>
+        <td>Porzeczkowy</td>
+    </tr>
+    <tr>
+        <td>Przekręt</td>
+        <td>Grejfrutowy</td>
+    </tr>
+    <tr>
+        <td>Przekręt</td>
+        <td>Kaktusowy</td>
+    </tr>
+    <tr>
+        <td>Piątak</td>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>Piątak</td>
+        <td>Porzeczkowy</td>
+    </tr>
+    <tr>
+        <td>Witaminka</td>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>Witaminka</td>
+        <td>Pomaranczowy</td>
+    </tr>
+    <tr>
+        <td>Witaminka</td>
+        <td>Kaktusowy</td>
+    </tr>
+    <tr>
+        <td>Literatka</td>
+        <td>Grejfrutowy</td>
+    </tr>
+</table>
+    
+<img src={new URL('../../img/soki_bary_diagram.png', import.meta.url)} alt="studenci pijacy soki w barze" />
+
+<br/> <br/> <br/>
+
+
+## **Chcemy zapytać o:**
+
+### 0. Całą zawartość tabeli Soki.
+```sql
+SELECT *
+FROM Soki;
+```
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Smak</th>
+        <th>Pojemność [ml]</th>
+        <th>Cena [zł]</th>
+    </tr>
+    <tr>
+        <td>Jabłkowy</td>
+        <td>330</td>
+        <td>5,00</td>
+    </tr>
+    <tr>
+        <td>Pomarańczowy</td>
+        <td>250</td>
+        <td>5,00</td>
+    </tr>
+    <tr>
+        <td>Porzeczkowy</td>
+        <td>250</td>
+        <td>4,50</td>
+    </tr>
+    <tr>
+        <td>Grejfrutowy</td>
+        <td>330</td>
+        <td>6,00</td>
+    </tr>
+    <tr>
+        <td>Kaktusowy</td>
+        <td>125</td>
+        <td>4,50</td>
+    </tr>
+</table>
+
+**Wytłumaczenie**: operator "*" oznacza "weź wszystko". W tym przypadku weź wszystko z tabeli Soki.
+    
+### 1. Smaki soków, które są pojemności 330ml.  
+
+```sql
+SELECT Smak
+FROM Soki
+WHERE Pojemnosc = 330; 
+```
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Smak</th>
+    </tr>
+    <tr>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>Grejfrutowy</td>
+    </tr>
+</table>
+
+    
+### 2. Soki które są tańsze niż 5,80zł.
+
+```sql
+SELECT Smak
+FROM Soki
+WHERE Cena < 5,80; 
+```
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Smak</th>
+    </tr>
+    <tr>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>Pomarańczowy</td>
+    </tr>
+    <tr>
+        <td>Porzeczkowy</td>
+    </tr>
+    <tr>
+        <td>Kaktusowy</td>
+    </tr>
+</table>
+                  
+
+### 3. Soki, które są tańsze niż 2 zł za 100ml 
+
+```sql
+SELECT Smaki
+FROM Soki
+WHERE ((Cena/Pojemnosc)*100) < 2; 
+```
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Smak</th>
+    </tr>
+    <tr>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>Porzeczkowy</td>
+    </tr>
+    <tr>
+        <td>Grejfrutowy</td>
+    </tr>
+</table>
+    
+
+### 4. Cenę za 100ml dla każdego z soków w kolejności niemalejącej
+
+```sql
+SELECT Smak, ((Cena/Pojemnosc)*100) AS Cena_za_100_ml
+FROM Soki
+ORDER BY Cena_za_100_ml ASC;
+```
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Smak</th>
+        <th>Cena_za_100_ml</th>
+    </tr>
+    <tr>
+        <td>Jablkowy</td>
+        <td>1,51515151515152</td>
+    </tr>
+    <tr>
+        <td>Porzeczkowy</td>
+        <td>1,8</td>
+    </tr>
+    <tr>
+        <td>Grejfrutowy</td>
+        <td>1,81818181818182</td>
+    </tr>
+    <tr>
+        <td>Pomarańczowy</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Kaktusowy</td>
+        <td>3,6</td>
+    </tr>
+</table>
+
+
+### 5. Jak w punkcie 4. ale zawsze chcemy widzieć kwote zaokragloną w gorę do pełnych złotówek.
+
+ ```sql
+SELECT Smak, CEILING((Cena/Pojemnosc)*100) AS Cena_za_100_ml
+FROM Soki
+ORDER BY Cena_za_100_ml ASC;
+```  
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Smak</th>
+        <th>Cena_za_100_ml</th>
+    </tr>
+    <tr>
+        <td>Jablkowy</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Porzeczkowy</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Grejfrutowy</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Pomaranczowy</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Kaktusowy</td>
+        <td>4</td>
+    </tr>
+</table>
+  
+
+### 6. Zestawienie wszytskich soków lubianych przez studentów.
+
+```sql
+SELECT Studenci.Imie, Studenci.Nazwisko, LubianeSoki.Sok
+FROM Studenci
+JOIN LubianeSoki ON Studenci.Indeks = LubianeSoki.Indeks;
+```   
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+        <th>Sok</th>
+    </tr>
+    <tr>
+        <td>Amelia</td>
+        <td>Celujaca</td>
+        <td>Pomaranczowy</td>
+    </tr>
+    <tr>
+        <td>Amelia</td>
+        <td>Celujaca</td>
+        <td>Kaktusowy</td>
+    </tr>
+    <tr>
+        <td>Amelia</td>
+        <td>Celujaca</td>
+        <td>Grejfrutowy</td>
+    </tr>
+    <tr>
+        <td>Kazimierz</td>
+        <td>Dostateczny</td>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>Jan</td>
+        <td>Pilny</td>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>Jan</td>
+        <td>Pilny</td>
+        <td>Porzeczkowy</td>
+    </tr>
+</table>
+    
+
+### 7. Wszystkich studentów, którzy lubią sok jablkowy.
+
+```sql
+SELECT Studenci.Imie, Studenci.Nazwisko, LubianeSoki.Sok
+FROM Studenci
+JOIN LubianeSoki ON Studenci.Indeks = LubianeSoki.Indeks
+WHERE LubianeSoki.Sok="Jablkowy";
+```
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+        <th>Sok</th>
+    </tr>
+    <tr>
+        <td>Kazimierz</td>
+        <td>Dostateczny</td>
+        <td>Jablkowy</td>
+    </tr>
+    <tr>
+        <td>Jan</td>
+        <td>Pilny</td>
+        <td>Jablkowy</td>
+    </tr>
+</table>
+
+### 8. Wszystkie bary, w których podają jakiś sok, który lubi Jan Pilny (zadanie ponadprogramowe).
+
+```sql
+SELECT PodawaneSoki.Bar
+FROM Studenci 
+JOIN PodawaneSoki ON Studenci.Indeks = LubianeSoki.Indeks
+JOIN Soki ON PodawaneSoki.Sok = Soki.Smak
+JOIN LubianeSoki ON Soki.Smak = LubianeSoki.Sok 
+WHERE (Studenci.Imie="Jan") AND (Studenci.Nazwisko="Pilny")
+GROUP BY PodawaneSoki.Bar;
+```  
+<table className="sql_table" border rules="all" frame="box">
+    <tr>
+        <th>Bar</th>
+    </tr>
+    <tr>
+        <td>Piątak</td>
+    </tr>
+    <tr>
+        <td>Przekręt</td>
+    </tr>
+    <tr>
+        <td>Witaminka</td>
+    </tr>
+</table>
+
+
+<br/>
+
+## PS - gdzie szukać przykładów
+
+Po więcej przykładów zerknijcie do zakąłdki "Bazy danych - Access" - większość zadań, które będę rozwiązywane w accessie będzie dostępnych bowiem również w SQL.
+Niezmienne rónież zachęcamy do korzystania ze zbioru maturlanego udostępnianego przez CKE.
+    

@@ -84,6 +84,10 @@
     fill: var(--font);
 }
 
+ol, ul{
+    margin-left: 1rem;
+}
+
 .main_content .second img.super_small_img{
     max-width: 30%;
 }
@@ -214,4 +218,17 @@ div .wrapper {
     height: 2px;
     background-color: var(--font);
     margin-left: 3%;
+}
+
+
+/* ///////////////////////// */
+.color_marked_text{
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.sql_table tr td,
+.sql_table tr th {
+    padding: 5px;
+    padding-right: 10px;
 }

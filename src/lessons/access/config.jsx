@@ -9,6 +9,7 @@ import ProsteKwerendy from './prosteKwerendy.mdx';
 import ZlozoneKwerendy from './zlozoneKwerendy.mdx';
 import Wyrazenia from './wyrazenia.mdx';
 import KwerendyPomocnicze from './kwerendyPomocnicze.mdx';
+import Raporty from './raporty.mdx';
 import Dodatek from './dodatek.mdx';
 
 import Niedopasowane from './niedopasowane.mdx';
@@ -17,6 +18,7 @@ import Krzyzowe from './krzyzowe.mdx';
 
 import Teoria from './teoria.mdx';
 import Sql from './sql.mdx';
+import Zapytania from './zapytania.mdx';
 
 
 const AccessLessons = [
@@ -31,7 +33,6 @@ const AccessLessons = [
         {name: "Włącznie programu MS Access", content: <Wlaczanie/>},
         {name: "Importowanie danych", content: <Importowanie/>},
         {name: "Relacje", content: <Relacje/>},
-        {name: "Projektowanie relacyjnych baz danych", content: null},
         {name: "Tworzenie tabel", content: null},
     ]},
 
@@ -40,7 +41,7 @@ const AccessLessons = [
         {name: "Tworzenie kwerend wykorzystujących kilka tabel", content: <ZlozoneKwerendy/>},
         {name: "Konstruowanie wyrażeń", content: <Wyrazenia/>},
         {name: "Kwerendy pomocnicze", content: <KwerendyPomocnicze/>},
-        {name: "Tworzenie raportów", content: null},
+        {name: "Tworzenie raportów", content: <Raporty/>},
         {name: "Warto wiedzieć - przydatne funkcje", content: <Dodatek/>},
     ]},
 
@@ -53,8 +54,8 @@ const AccessLessons = [
 
     {name: "SQL", subchapters: [
         {name: "Składnia", content: <Sql/>},
-        {name: "Tworzenie zapytań", content: null},
-        {name: "Tworzenie raportów", content: null},
+        {name: "Tworzenie zapytań", content: <Zapytania/>},
+        // {name: "Projektowanie relacyjnych baz danych", content: null},
     ]},
 ];
 
