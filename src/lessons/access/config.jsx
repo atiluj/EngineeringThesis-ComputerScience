@@ -61,9 +61,12 @@ const AccessLessons = [
         // {name: "Projektowanie relacyjnych baz danych", content: null},
     ]},
 
-    {name: "Zadania", subchapters: [
+    {name: "Zadania Access", subchapters: [
         {name: "Zadania z nowej formuły (od 2023)", content: <ZadaniaNowe/>},
-        {name: "Teoria baz danych", content: <Teoria/>},
+    ]},
+
+    {name: "Zadania SQL", subchapters: [
+        {name: "Zadania z nowej formuły (od 2023)", content: <ZadaniaNowe/>},
     ]},
 ];
 

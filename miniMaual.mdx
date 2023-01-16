@@ -5,5 +5,16 @@
 </div>
 
 
+//adding dropdown with code -> add class hlsj
+<button type="button" className={`collapsible`}>Rozwiązanie</button>
+<div className={`dropdown_content hlsj`}>
+    <p>
+        SELECT klienci.imie, klienci.nazwisko, Count(samochody.id) AS ile
+        FROM klienci LEFT JOIN samochody ON klienci.Id = samochody.wlasciciel
+        GROUP BY klienci.imie, klienci.nazwisko
+        ORDER BY Count(samochody.id) DESC;
+    </p>
+</div>
+
 // adding image
 <img src={new URL('https://i.imgur.com/rgnX4S6.png', import.meta.url)} alt="xyz" className={`medium_img`} />

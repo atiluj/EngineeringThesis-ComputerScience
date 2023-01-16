@@ -1,0 +1,106 @@
+<br/>
+
+Wszystkie zadania w tym dziale pochodzą z Informatora maturlanego do informatyki <br/>
+link: https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/2023/Aneks_2023_2024_informatyka_EM_F23.pdf
+
+## Zadanie 1
+(zadanie 12 w informatorze)
+### Treść
+Dane są dwie tabele bazy danych: klienci i samochody połączone relacją jeden do wielu (patrz
+rysunek):
+
+<img src={new URL('https://i.imgur.com/MvGbFEE.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+W tabelach przechowywane są informacje zgodne z nazwami pól (np. „marka” – marka
+samochodu). Pole id w tabeli klienci oznacza identyfikator klienta i jest kluczem głównym w tej
+tabeli. Pole id w tabeli samochody oznacza identyfikator samochodu. Pole o nazwie wlasciciel
+w tabeli samochody jest kluczem obcym w tej tabeli i oznacza identyfikator klienta, który jest
+właścicielem samochodu. Na potrzeby zadania zakładamy, że każdy samochód ma tylko
+jednego właściciela, natomiast każda osoba może być właścicielem jednego lub więcej niż
+jednego samochodu.
+
+### Podpunkt 1 (0-1pkt.)
+Zapisz **w języku SQL** zapytanie, które da w wyniku listę klientów (z id, imionami i nazwiskami)
+uporządkowaną alfabetycznie według nazwiska.
+
+<button type="button" className={`collapsible`}>Rozwiązanie</button>
+<div className={`dropdown_content hlsj`}>
+    <p>
+        SELECT * <br/>
+        FROM klienci <br/>
+        ORDER BY klienci.nazwisko;
+    </p>
+</div>
+
+<button type="button" className={`collapsible`}>Zasady oceniania</button>
+<div className={`dropdown_content`}>
+  <p>
+    1 pkt – odpowiedź poprawna. <br/>
+    0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+  </p>
+</div>
+
+
+### Podpunkt 2 (0-2pkt.)
+Zapisz **w języku SQL** zapytanie, które da w wyniku listę marek i modeli samochodów, dla
+których rocznik zawiera się w przedziale [2010,2020] oraz moc jest większa niż 100 KM. Listę
+posortuj niemalejąco według nazwy marki i modelu. 
+
+<br/>
+
+**Uwaga:** Każda para model i marka w zestawieniu może pojawić się tylko raz (nawet jeśli jest
+kilka samochodów o tej samej marce i modelu spełniających warunki zadania).
+
+<button type="button" className={`collapsible`}>Rozwiązanie</button>
+<div className={`dropdown_content hlsj`}>
+    <p>
+        SELECT DISTINCT samochody.marka, samochody.model <br/>
+        FROM samochody <br/>
+        WHERE (samochody.moc>100) AND (samochody.rocznik Between 2010 And 2020) <br/>
+        ORDER BY samochody.marka, samochody.model;
+    </p>
+</div>
+
+<button type="button" className={`collapsible`}>Zasady oceniania</button>
+<div className={`dropdown_content`}>
+  <p>
+    2 pkt – odpowiedź poprawna. <br/>
+    1 pkt – odpowiedź, w której zdający nie uwzględnia, że każda para marka i model może
+    pojawić się w zestawieniu tylko raz (brak opcji DISTINCT). <br/>
+    0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+  </p>
+</div>
+
+### Podpunkt 3 (0-2pkt.)
+Zapisz **w języku SQL** zapytanie, które da w wyniku listę klientów z ich id, imionami,
+nazwiskami oraz liczbą samochodów, które mają. Lista musi być posortowana malejąco
+według liczby samochodów.
+
+<br/>
+
+**Uwaga:** pamiętaj, że część klientów może nie mieć żadnego samochodu (wtedy trzeba
+wypisać ich z liczbą samochodów zero)
+
+<button type="button" className={`collapsible`}>Rozwiązanie</button>
+<div className={`dropdown_content hlsj`}>
+    <p>
+        SELECT klienci.imie, klienci.nazwisko, Count(samochody.id) AS ile <br/>
+        FROM klienci LEFT JOIN samochody ON klienci.Id = samochody.wlasciciel <br/>
+        GROUP BY klienci.imie, klienci.nazwisko <br/>
+        ORDER BY Count(samochody.id) DESC;
+    </p>
+</div>
+
+<button type="button" className={`collapsible`}>Zasady oceniania</button>
+<div className={`dropdown_content`}>
+    <p>
+        2 pkt – odpowiedź poprawna. <br/>
+        1 pkt – odpowiedź, w której zdający nie bez uwzględnienia, że klient może nie posiadać
+        samochodu (INNER JOIN zamiast LEFT JOIN). <br/>
+        0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+    </p>
+</div>
+
+
+
+
