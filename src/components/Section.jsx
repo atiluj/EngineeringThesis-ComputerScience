@@ -73,6 +73,29 @@ function Contents({lessons}) {
         title += `${curSubchapter + 1}.`;
     title += ` ${subchapter.name}`;
     React.useEffect(() => { hljs.highlightAll(); }, [subchapter.content]); //śmieszna funkcja do skanownaia stronki i kolorowania kodu
+    React.useEffect(() => {
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+            var image = document.createElement("img");
+            image.src = '@mui/icons-material/ExpandLess';
+            coll[i].appendChild(image);
+
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            console.log(this);
+            var content = this.nextElementSibling;
+            var image = document.createElement("img");
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        //   coll[i].appendChild(<div>{show ? <ExpandLess /> : <ExpandMore />}</div>);
+        }
+    }, [subchapter.content]);
     return <article className={`second`}>
         <h1>{title}</h1>
         {subchapter.content}

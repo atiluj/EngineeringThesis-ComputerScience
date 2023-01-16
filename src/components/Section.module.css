@@ -188,7 +188,6 @@ img.section_logo {
 
 }
 
-
 @media (max-width: 1200px) {
     .main {
         grid-template-columns: 23vw 1fr;
