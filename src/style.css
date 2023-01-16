@@ -34,7 +34,7 @@
     --screen_filter: brightness(1);
     --logo_filter: brightness(0.2);
     --link-hover: #d08a9a;
-    --dropdown: #e6e4e4cc;
+    --dropdown: var(--card-background);
 }
 
 [data-theme="dark"] {
@@ -63,7 +63,7 @@
     --screen_filter: brightness(0.7);
     --logo_filter: brightness(1);
     --link-hover: #7d217b;
-    --dropdown: var(--exercise-secondary);
+    --dropdown: #241C50;
 }
 
 .gradient {
@@ -242,3 +242,7 @@ img.section_logo {
     padding: 5px;
     padding-right: 10px;
   }
+
+  .dropdown_text {
+    padding: 0.7rem 1rem;
+}

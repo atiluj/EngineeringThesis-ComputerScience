@@ -1,4 +1,6 @@
-.hljs {
+.code {
   color: #ddd;
   background: #303030;
+  width: 100%;
+  padding: 0.7rem 1rem;
 }

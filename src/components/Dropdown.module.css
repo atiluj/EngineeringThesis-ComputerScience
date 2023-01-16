@@ -8,16 +8,17 @@
   font-size: 1rem;
 }
 
-.hlsj {
-  color: #ddd;
-  background: #303030;
-}
-
 .dropdown_icon {
   color: var(--font);
 }
 
-.dropdown_content {
+.dropdown_title {
   color: var(--font);
   font-weight: bold;
 }
+
+.dropdown_content {
+  color: var(--font);
+  background-color: var(--dropdown);
+}
+
