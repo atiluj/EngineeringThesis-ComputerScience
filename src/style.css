@@ -34,6 +34,7 @@
     --screen_filter: brightness(1);
     --logo_filter: brightness(0.2);
     --link-hover: #d08a9a;
+    --dropdown: #e6e4e4cc;
 }
 
 [data-theme="dark"] {
@@ -61,7 +62,8 @@
     --tools2: #fcf8f8cc;
     --screen_filter: brightness(0.7);
     --logo_filter: brightness(1);
-    --link-hover: #7d217b;;
+    --link-hover: #7d217b;
+    --dropdown: #dee2e71c;
 }
 
 .gradient {
@@ -243,25 +245,39 @@ img.section_logo {
     padding-right: 10px;
 }
 
+/* collapsible */
+
 .collapsible {
-    background-color: #777;
-    color: white;
+    background-color: var(--dropdown);
+    color: var(--font);
     cursor: pointer;
     padding: 18px;
+    margin-top: 10px;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 .active, .collapsible:hover {
-    background-color: #555; 
+    background-color: car(--secondary2); 
 }
 
 .dropdown_content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
 }
+
+.collapsible:after {
+    content: '\002B';
+    color:  var(--font);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }

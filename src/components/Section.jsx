@@ -78,10 +78,6 @@ function Contents({lessons}) {
         var i;
         
         for (i = 0; i < coll.length; i++) {
-            var image = document.createElement("img");
-            image.src = '@mui/icons-material/ExpandLess';
-            coll[i].appendChild(image);
-
             coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
             console.log(this);

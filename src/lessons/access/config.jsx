@@ -4,6 +4,7 @@ import Materialy from './wstep.mdx';
 import Wlaczanie from './wlaczanie.mdx';
 import Importowanie from './importowanie.mdx';
 import Relacje from './relacje.mdx'; 
+import Tabele from './tabele.mdx';
 
 import ProsteKwerendy from './prosteKwerendy.mdx';
 import ZlozoneKwerendy from './zlozoneKwerendy.mdx';
@@ -20,6 +21,8 @@ import Teoria from './teoria.mdx';
 import Sql from './sql.mdx';
 import Zapytania from './zapytania.mdx';
 
+import ZadaniaNowe from './zadaniaNowe.mdx';
+
 
 const AccessLessons = [
     {name: "Wskazówki", content: <Wskazowki />},
@@ -33,7 +36,7 @@ const AccessLessons = [
         {name: "Włącznie programu MS Access", content: <Wlaczanie/>},
         {name: "Importowanie danych", content: <Importowanie/>},
         {name: "Relacje", content: <Relacje/>},
-        {name: "Tworzenie tabel", content: null},
+        {name: "Tworzenie tabel", content: <Tabele/>},
     ]},
 
     {name: "Tworzenie zapytań", subchapters: [
@@ -49,13 +52,18 @@ const AccessLessons = [
         {name: "Wyszukiwanie danych po przez odwórcenie problemów + wyjątki", content: <Niedopasowane/>},
         {name: "Wyszukiwanie duplikatów", content: <Duplikaty/>},
         {name: "Zestawienia - kwerendy krzyżowe", content: <Krzyzowe/>},
-        {name: "Agregowanie danych", content: null},
+        // {name: "Agregowanie danych", content: null},
     ]},
 
     {name: "SQL", subchapters: [
         {name: "Składnia", content: <Sql/>},
         {name: "Tworzenie zapytań", content: <Zapytania/>},
         // {name: "Projektowanie relacyjnych baz danych", content: null},
+    ]},
+
+    {name: "Zadania", subchapters: [
+        {name: "Zadania z nowej formuły (od 2023)", content: <ZadaniaNowe/>},
+        {name: "Teoria baz danych", content: <Teoria/>},
     ]},
 ];
 
