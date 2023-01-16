@@ -22,16 +22,15 @@ function App() {
         <ScrollToTop />
         <Nav />
         <Routes>
-            <Route path='/' element={<Home />}/>
+            <Route path='/' element={<><Home /><Footer /></>}/>
             <Route path='/interpreter' element={<Interpreter />} />
-            <Route path='/exercise' element={<ExerciseSet />} />
-            <Route path='/exercise/:id' element={<Exercise lessons={ExercisesPython} />}/>
-            <Route path='/access' element={<Section lessons={AccessLessons} title="access"/>} />
-            <Route path='/excel' element={<Section lessons={ExcelLessons} title="excel"/>} />
-            <Route path='/teoria' element={<Section lessons={TeoriaLessons} title="teoria"/>} />
-            <Route path='/python' element={<Section lessons={PythonLessons} title="python"/>} />
+            <Route path='/exercise' element={<><ExerciseSet /><Footer /></>} />
+            <Route path='/exercise/:id' element={<><Exercise lessons={ExercisesPython} /></>}/>
+            <Route path='/access' element={<><Section lessons={AccessLessons} title="access"/><Footer /></>} />
+            <Route path='/excel' element={<><Section lessons={ExcelLessons} title="excel"/><Footer /></>} />
+            <Route path='/teoria' element={<><Section lessons={TeoriaLessons} title="teoria"/><Footer /></>} />
+            <Route path='/python' element={<><Section lessons={PythonLessons} title="python"/><Footer /></>} />
         </Routes>
-        <Footer />
     </BrowserRouter>);
 }
 
