@@ -3,11 +3,10 @@
     /* to likiwduje wbudowany margines w menu*/
     overflow: hidden;
     /* navbar moving while scrolling */
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     z-index: 99;
-    position: fixed;
     border-bottom: 2px solid var(--primary);
     display: flex;
     flex-direction: row;

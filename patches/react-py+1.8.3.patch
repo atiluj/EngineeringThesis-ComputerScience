@@ -1,0 +1,15 @@
+diff --git a/node_modules/react-py/dist/workers/python-worker.js b/node_modules/react-py/dist/workers/python-worker.js
+index dd931d7..5a18c50 100644
+--- a/node_modules/react-py/dist/workers/python-worker.js
++++ b/node_modules/react-py/dist/workers/python-worker.js
+@@ -38,7 +38,9 @@ importScripts('https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js');
+ // Monkey patch console.log to prevent the script from outputting logs
+ // eslint-disable-next-line @typescript-eslint/no-empty-function
+ console.log = function () { };
+-import { expose } from 'comlink';
++// import { expose } from 'comlink';
++importScripts('https://cdn.jsdelivr.net/npm/comlink@4.3.1/dist/umd/comlink.min.js');
++const expose = Comlink.expose;
+ var python = {
+     init: function (stdout, onLoad, packages) {
+         return __awaiter(this, void 0, void 0, function () {
