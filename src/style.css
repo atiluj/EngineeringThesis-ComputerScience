@@ -63,7 +63,7 @@
     --screen_filter: brightness(0.7);
     --logo_filter: brightness(1);
     --link-hover: #7d217b;
-    --dropdown: #dee2e71c;
+    --dropdown: var(--exercise-secondary);
 }
 
 .gradient {
@@ -232,57 +232,13 @@ img.section_logo {
     margin-left: 3%;
 }
 
-
-/* ///////////////////////// */
-.color_marked_text{
+.color_marked_text {
     color: var(--accent);
     font-weight: bold;
-}
-
-.sql_table tr td,
-.sql_table tr th {
-    padding: 5px;
-    padding-right: 10px;
-}
-
-/* collapsible */
-
-.collapsible {
-    background-color: var(--dropdown);
-    color: var(--font);
-    cursor: pointer;
-    padding: 18px;
-    margin-top: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 1rem;
-}
-
-.active, .collapsible:hover {
-    background-color: car(--secondary2); 
-}
-
-.dropdown_content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-}
-
-.collapsible:after {
-    content: '\002B';
-    color:  var(--font);
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
   }
   
-  .active:after {
-    content: "\2212";
-  }
-
-  .hlsj{
-    color: #ddd;
-    background: #303030;
+  .sql_table tr td,
+  .sql_table tr th {
+    padding: 5px;
+    padding-right: 10px;
   }

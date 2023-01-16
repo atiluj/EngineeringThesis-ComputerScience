@@ -1,0 +1,23 @@
+.collapsible {
+  background-color: var(--dropdown);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1rem;
+}
+
+.hlsj {
+  color: #ddd;
+  background: #303030;
+}
+
+.dropdown_icon {
+  color: var(--font);
+}
+
+.dropdown_content {
+  color: var(--font);
+  font-weight: bold;
+}

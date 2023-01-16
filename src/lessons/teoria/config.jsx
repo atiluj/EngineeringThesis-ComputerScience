@@ -32,7 +32,7 @@ const TeoriaLessons = [
 
     {name: "Grafika komputerowa", subchapters: [
         {name: "Podstawowe modele barw", content: null},
-        {name: "Własnośći grafiki rastrowej i wektorowej", content: null},
+        {name: "Własnośći grafiki rastrowej i wektorowej", content: null}, 
         {name: "Podstawowe formaty plików graficznych", content: null},
     ]},
 

@@ -1,121 +1,116 @@
 .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    background-color: var(--primary2);
-    text-align: center;
-    font-size: 35px;
-    letter-spacing: 10px;
-    text-indent: 30px;
-    font-family: 'Chakra Petch', sans-serif;
-    font-weight: 900;
-    color: var(--title);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: var(--primary2);
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: 10px;
+  text-indent: 30px;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 900;
+  color: var(--title);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  height: 80px;
 }
 
 .cont_title {
-    padding: 10px 0;
-    text-align: center;
-    /* letter-spacing: 1px; TU MOGŁAM COS ZEPSUC */
-    line-height: 25px;
-    text-indent: 5px;
-    font-family: 'Chakra Petch', sans-serif;
-    font-weight: 900;
-    font-size: 25px;
-    color: var(--font-accent);
+  padding: 10px 0;
+  text-align: center;
+  /* letter-spacing: 1px; TU MOGŁAM COS ZEPSUC */
+  line-height: 25px;
+  text-indent: 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  color: var(--font-accent);
 }
 
 .main {
-    min-height: 80vh;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 20vw 1fr;
-    gap: 2.5vw;
-    padding: 80px 2.5vw;
+  min-height: 80vh;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  gap: 2.5vw;
+  padding: 80px 2.5vw;
 }
-
-
 
 /* SIDEBAR */
 
 .main .contents {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .main .contents .cont {
-    padding: 0;
-    font-size: 14px;
-    font-family: 'Chakra Petch', sans-serif;
-    font-weight: lighter;
-    text-transform: uppercase;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
-
 .main .contents .cont .topic {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--secondary3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary3);
 }
 
 .topic a {
-    text-transform: uppercase;
-    text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-
 .main .contents .cont .subtopic {
-    margin: 0;
-    text-align: left;
-    background-color: var(--primary);
-    color: var(--secondary3);
-    border-bottom: 1px var(--secondary3) solid;
-    padding-left: 30px;
+  margin: 0;
+  text-align: left;
+  background-color: var(--primary);
+  color: var(--secondary3);
+  border-bottom: 1px var(--secondary3) solid;
+  padding-left: 30px;
 }
 
 .main .contents .cont .subtopic_current {
-    color: var(--secondary4);
-    background-color: var(--primary2);
-    border-left: 5px var(--secondary3) solid;
-    padding-left: 25px;
+  color: var(--secondary4);
+  background-color: var(--primary2);
+  border-left: 5px var(--secondary3) solid;
+  padding-left: 25px;
 }
 
-
 .main .contents .cont .subtopic:hover {
-    color: var(--secondary4);
+  color: var(--secondary4);
 }
 
 .main .contents .cont .subtopic_current:hover {
-    color: var(--secondary4);
-    background-color: var(--primary2);
+  color: var(--secondary4);
+  background-color: var(--primary2);
 }
 
 .main .contents .cont .topic:hover {
-    background-color: var(--secondary2);
+  background-color: var(--secondary2);
 }
 
 /* NAGŁÓWEK - CZEŚĆ */
 
 .main article {
-    font-family: Roboto, sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 20px 30px;
-    margin-bottom: 2vw;
-    text-align: justify;
-    border-radius: 1px;
-    text-justify: inter-word;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 20px 30px;
+  margin-bottom: 2vw;
+  text-align: justify;
+  border-radius: 1px;
+  text-justify: inter-word;
 }
 
 .main article h1 {
-    font-family: 'Chakra Petch', sans-serif;
-    text-transform: uppercase;
-    color: var(--font-accent);
-    font-size: 25px;
-    border-bottom: 3px var(--font) solid;
+  font-family: "Chakra Petch", sans-serif;
+  text-transform: uppercase;
+  color: var(--font-accent);
+  font-size: 25px;
+  border-bottom: 3px var(--font) solid;
 }
 
 .main article h2,
@@ -123,167 +118,162 @@
 .main article h4,
 .main article h5,
 .main article h6 {
-    font-family: 'Chakra Petch', sans-serif;
-    margin-top: 20px;
+  font-family: "Chakra Petch", sans-serif;
+  margin-top: 20px;
 }
 
 .main article img {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 0;
-    max-width: 90%;
-    width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  max-width: 90%;
+  width: 100%;
 }
 
 .main article pre {
-    margin: 10px 0;
-    white-space: pre-line;
+  margin: 10px 0;
+  white-space: pre-line;
 }
 
 .main_content .controls {
-    display: flex;
-    justify-content: end;
-    margin: 0 30px;
+  display: flex;
+  justify-content: end;
+  margin: 0 30px;
 }
 
 .controls button {
-    color: var(--font);
+  color: var(--font);
 }
 
 .main_content article {
-    border-bottom: solid 3px var(--font);
+  border-bottom: solid 3px var(--font);
 }
 
 .controls button {
-    width: 30px;
-    height: 30px;
-    border-radius: 90%;
-    margin-left: 10px;
-    border: solid 1px transparent;
-    background-color: transparent;
-    transition: transform;
-    transition-duration: .3s;
+  width: 30px;
+  height: 30px;
+  border-radius: 90%;
+  margin-left: 10px;
+  border: solid 1px transparent;
+  background-color: transparent;
+  transition: transform;
+  transition-duration: 0.3s;
 }
 
 .controls button:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .ft {
-    display: none;
+  display: none;
 }
 
 img.section_logo {
-    max-width: 15%;
-    padding-left: 2%;
-    filter: var(--screen_filter);
+  max-width: 3rem;
+  max-height: 3rem;
+  padding-left: 2%;
+  filter: var(--screen_filter);
 }
 
-@media(max-width: 1400px) {
-    .main {
-        grid-template-columns: 22vw 1fr;
-        gap: 1.75vw;
-        padding: 80px 1.75vw;
-    }
-
+@media (max-width: 1400px) {
+  .main {
+    grid-template-columns: 22vw 1fr;
+    gap: 1.75vw;
+    padding: 80px 1.75vw;
+  }
 }
 
 @media (max-width: 1200px) {
-    .main {
-        grid-template-columns: 23vw 1fr;
-    }
+  .main {
+    grid-template-columns: 23vw 1fr;
+  }
 
-    .cont_title {
-        font-size: 23px;
-    }
+  .cont_title {
+    font-size: 23px;
+  }
 
-    .main .contents .cont a {
-        font-size: 13px;
-        letter-spacing: 0;
-    }
+  .main .contents .cont a {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
 
-
-    .main article {
-        font-size: 15px;
-        padding: 15px 25px;
-        margin-bottom: 2vw;
-    }
-
+  .main article {
+    font-size: 15px;
+    padding: 15px 25px;
+    margin-bottom: 2vw;
+  }
 }
 
-@media(max-width:1000px) {
-    .main {
-        grid-template-columns: 26vw 1fr;
-    }
+@media (max-width: 1000px) {
+  .main {
+    grid-template-columns: 26vw 1fr;
+  }
 
-    .main .contents .cont a {
-        font-size: 12px;
-    }
-
+  .main .contents .cont a {
+    font-size: 12px;
+  }
 }
 
-@media (max-width:810px) {
-    .main {
-        grid-template-columns: 1fr;
-        gap: 0;
-        padding: 0;
-    }
+@media (max-width: 810px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+  }
 
-    .main .contents .cont {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-auto-flow: row;
-        font-size: 13px;
-    }
+  .main .contents .cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    font-size: 13px;
+  }
 
-    .main .contents .cont .subtopic {
-        margin: .5px 0;
-    }
+  .main .contents .cont .subtopic {
+    margin: 0.5px 0;
+  }
 
-    .main .contents .cont .subtopic {
-        margin: 1px;
-        border-width: 2px;
-    }
+  .main .contents .cont .subtopic {
+    margin: 1px;
+    border-width: 2px;
+  }
 
-    .title {
-        font-size: 32px;
-        margin: 10px;
-        margin-top: 35px;
-    }
+  .title {
+    font-size: 32px;
+    margin: 10px;
+    margin-top: 35px;
+  }
 
-    .main_content>.title {
-        display: none;
-    }
+  .main_content > .title {
+    display: none;
+  }
 
-    img.section_logo {
-        max-width: 10%;
-    }
+  img.section_logo {
+    max-width: 10%;
+  }
 }
 
 @media (max-width: 600px) {
-    .main .contents .cont {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+  .main .contents .cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .main article {
-        padding: 5px 15px;
-        font-size: 10px;
-        border: 0px;
-    }
+  .main article {
+    padding: 5px 15px;
+    font-size: 10px;
+    border: 0px;
+  }
 }
 
+@media (max-width: 400px) {
+  .main .contents .cont {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-@media(max-width: 400px) {
-    .main .contents .cont {
-        display: grid;
-        grid-template-columns: 1fr;
-
-    }
-
-    .main article {
-        padding: 5px 5px;
-    }
+  .main article {
+    padding: 5px 5px;
+  }
 }
 
 /* nie da się zmniejszyć poniżej 336px przeszakadza kod (pre) */
