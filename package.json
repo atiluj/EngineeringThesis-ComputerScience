@@ -19,6 +19,7 @@
     "lmdb": "^2.7.3",
     "react": "^18.2.0",
     "react-router-dom": "^6.6.2",
+    "react-router-scroll-to-top": "^1.2.0",
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {

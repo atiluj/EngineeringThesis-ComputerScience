@@ -15,8 +15,8 @@ function ExerciseSet() {
                     <div className={styles.subject}>Zmienne</div>
                     {/* to nie będzie działać bo musisz dać poprawną ścieżek do pliku to="/exercise/0" */}
                     {/* <Link to="/exercise/0" className={`${styles.list_element} ${styles.number_element}`} >1</Link> */}
+                    <div className={`${styles.list_element} ${styles.number_element}`}>1</div>
                     <div className={`${styles.list_element} ${styles.number_element}`}>2</div>
-                    <div className={`${styles.list_element} ${styles.number_element}`}>3</div>
                 </div>
                 <div className={styles.list_element_wrapper}>
                     <div className={styles.subject}>Struktury danych</div>
@@ -46,21 +46,29 @@ function ExerciseSet() {
 
             <div className={styles.category}>DZIAŁANIA NA LICZBACH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/0" className={`${styles.list_element}`}>MATURA 2022</Link>
-                <Link to="/exercise/2" className={`${styles.list_element}`}>MATURA 2020</Link>
-                <Link to="/exercise/3" className={`${styles.list_element}`}>MATURA 2019</Link>
-                <Link to="/exercise/5" className={`${styles.list_element}`}>MATURA 2017</Link>
-                <Link to="/exercise/7" className={`${styles.list_element}`}>MATURA 2015</Link>
+                <Link to="/exercise/6" className={`${styles.list_element}`}>MATURA 2017 ZAD. 1</Link>
+                <Link to="/exercise/7" className={`${styles.list_element}`}>MATURA 2017 ZAD. 2</Link>
+                <Link to="/exercise/8" className={`${styles.list_element}`}>MATURA 2017 ZAD. 3</Link>
+                <Link to="/exercise/9" className={`${styles.list_element}`}>MATURA 2017 ZAD. 4</Link>
             </div>
 
             <div className={styles.category}>DZIAŁANIA NA STRINGACH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/1" className={`${styles.list_element}`}>MATURA 2021</Link>
-                <Link to="/exercise/4" className={`${styles.list_element}`}>MATURA 2018</Link>
+                <Link to="/exercise/10" className={`${styles.list_element}`}>MATURA 2018 zad. 1</Link>
+                <Link to="/exercise/11" className={`${styles.list_element}`}>MATURA 2018 zad. 2</Link>
+                <Link to="/exercise/12" className={`${styles.list_element}`}>MATURA 2018 zad. 3</Link>
+            </div>
+            <div className={styles.category}>DZIAŁANIA NA LICZBACH BINARNYCH</div>
+            <div className={styles.exercises_list}>
+                <Link to="/exercise/0" className={`${styles.list_element}`}>MATURA 2015 ZAD. 1</Link>
+                <Link to="/exercise/1" className={`${styles.list_element}`}>MATURA 2015 ZAD. 2</Link>
+                <Link to="/exercise/2" className={`${styles.list_element}`}>MATURA 2015 ZAD. 3</Link>
             </div>
             <div className={styles.category}>SZYFROWANIE</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/6" className={`${styles.list_element}`}>MATURA 2016</Link>
+                <Link to="/exercise/3" className={`${styles.list_element}`}>MATURA 2016 zad. 1</Link>
+                <Link to="/exercise/4" className={`${styles.list_element}`}>MATURA 2016 zad. 2</Link>
+                <Link to="/exercise/5" className={`${styles.list_element}`}>MATURA 2016 zad. 3</Link>
             </div>
 
         </main>

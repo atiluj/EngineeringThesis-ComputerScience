@@ -1,4 +1,7 @@
-<div className="box_link"><a className="link" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_od_2015/MIN-R2_1P-162.pdf">link do arkusza</a>
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+<div className="box_link"><a className="link" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_od_2015/MIN-R2_1P-162.pdf">link do arkusza</a>
 <br/>
 <a className="link" href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_od_2015/Dane_PR2.zip" >pliki do zadania</a>
 <br/>
@@ -20,46 +23,6 @@ W tym zadaniu rozpatrujemy tylko słowa zbudowane z wielkich liter alfabetu angi
 
 <br/><br/>
 
-### Zadanie 1   (0-3pkt.)
-W pliku dane_6_1.txt znajduje się 100 słów. Słowa umieszczono w osobnych wierszach.<br/>
-Fragment pliku dane_6_1.txt:<br/>
-
-```
-INTERPRETOWANIE
-ROZWESELANIE
-KONSERWOWANIE
-```
-<br/>
-<span className="bold">Napisz program</span>, który <span className="bold">zaszyfruje</span> słowa z pliku dane_6_1.txt z użyciem klucza
-k = 107. Wynik zapisz do pliku wyniki_6_1.txt, każde słowo w osobnym wierszu,
-w porządku odpowiadającym kolejności słów z pliku z danymi.<br/><br/>
-
-<span className="bold">Uwaga:</span> Dla pierwszego słowa z pliku dane_6_1.txt (INTERPRETOWANIE) wynikiem jest
-słowo LQWHUSUHWRZDQLH. 
-
-<br/><br/>
-
-### Zadanie 2   (0-4pkt.)
-W pliku dane_6_2.txt zapisano 3 000 szyfrogramów i odpowiadające im klucze
-szyfrujące. W każdym wierszu znajduje się jeden szyfrogram (zaszyfrowane słowo)
-i po pojedynczym znaku odstępu odpowiadający mu klucz (maksymalnie czterocyfrowa
-liczba).<br/><br/>
-Fragment pliku dane_6_2.txt:<br/>
-
-```
-BCYKUNCM 1718
-YFOGNSKGYW 7580
-WARDA 9334
-``` 
-<br/>
-<span className="bold">Napisz program</span>, który <span className="bold">odszyfruje</span> słowa zaszyfrowane podanymi kluczami. Wynik zapisz
-w pliku wyniki_6_2.txt: każde odszyfrowane słowo w osobnym wierszu, w porządku
-odpowiadającym kolejności szyfrogramów z pliku z danymi.<br/>
-<span className="bold">Uwaga</span>:<br/>
-Dla pierwszego szyfrogramu z pliku dane_6_2.txt (BCYKUNCM) wynikiem jest słowo
-ZAWISLAK. 
-
-<br/><br/>
 
 ### Zadanie 3   (0-5pkt.)
 W pliku dane_6_3.txt zapisano 3 000 par słów, po jednej parze w wierszu, oddzielonych
@@ -82,3 +45,15 @@ Pierwsze słowo w pliku wynikowym to SMIGIELSKI.
 
 <br/>
 <br/>
+
+<Dropdown title="WSKAZÓWKI">
+    <p>
+    BLA BLA WSKAZÓWKI
+    </p>
+</Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE">
+    <Code>
+    BLA BLA ROZWIĄZANIE
+    </Code>
+</Dropdown>
