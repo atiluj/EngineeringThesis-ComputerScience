@@ -56,7 +56,7 @@ function Editor() {
 }
 
 function Interpreter() {
-    return <main>
+    return <main className={styles.main}>
         <Editor />
     </main>;
 }
