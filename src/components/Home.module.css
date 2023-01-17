@@ -1,5 +1,5 @@
 .section {
-    padding-top: 100px;
+    padding-top: 40px;
 }
 
 .section .header {
@@ -180,7 +180,7 @@
 
 @media (max-width: 1200px) {
     .section {
-        padding-top: 130px;
+        padding-top: 60px;
     }
 
     .section .header {
@@ -219,6 +219,10 @@
 }
 
 @media(max-width:1000px) {
+    .section {
+        padding-top: 70px;
+    }
+
     .section .header {
         padding-top: 5px;
         font-size: 45px;
@@ -262,10 +266,6 @@
 }
 
 @media (max-width:810px) {
-    .section {
-        padding-top: 100px;
-    }
-
     .section .header {
         font-size: 40px;
         letter-spacing: 25px;
@@ -289,10 +289,6 @@
 }
 
 @media (max-width: 600px) {
-    .section {
-        padding-top: 90px;
-    }
-
     .section .header {
         padding-top: 0px;
         font-size: 25px;
@@ -326,11 +322,6 @@
 }
 
 @media(max-width:400px) {
-
-    .section {
-        padding-top: 80px;
-    }
-
     .section .header {
         font-size: 18px;
     }
