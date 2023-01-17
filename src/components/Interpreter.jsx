@@ -1,4 +1,5 @@
 import styles from './Interpreter.module.css';
+import "../style.css";
 import * as React from 'react';
 import MonacoEditor from "react-monaco-editor";
 import usePython from "react-py/dist/hooks/usePython.js";
@@ -46,10 +47,12 @@ function Editor() {
                     <p>Output</p>
                     <pre><code>{stdout}</code></pre>
                 </div>
-                <div className={styles.editor_stderr}>
-                    <p>Error</p>
-                    <pre><code>{stderr}</code></pre>
-                </div>
+                {stderr ?
+                    <div className={styles.editor_stderr}>
+                        {/* <p>Error</p> */}
+                        <pre><code>{stderr}</code></pre>
+                    </div>
+                    : null}
             </div>
         </div>
     );
