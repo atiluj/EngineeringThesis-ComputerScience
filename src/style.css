@@ -66,18 +66,6 @@
     --dropdown: #241C50;
 }
 
-html {
-    height: 100%;
-}
-
-body {
-    height: 100%;
-}
-
-.wrapper {
-    height: 100%;
-}
-
 .gradient {
     background-image: var(--gradient);
 }
