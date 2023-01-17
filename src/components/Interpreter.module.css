@@ -47,7 +47,7 @@
     overflow-y: auto;
     background-color: #1e1e1e;
     color: #d4d4d4;
-    height: 50vh;
+    min-height: 20vh;
 }
 
 .editor_stdout, .editor_stderr {
