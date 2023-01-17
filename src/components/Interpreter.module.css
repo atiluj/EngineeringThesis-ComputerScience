@@ -1,26 +1,40 @@
 .main {
-    background-color: #3c3c3c;
     height: 100%;
 }
 
 .editor {
     display: flex;
     flex-direction: column;
-    background-color: #3c3c3c;
+    margin: 1rem 3rem;
 }
 
 .editor_monaco {
     flex: 1;
 }
 
-.editor_button {
-    flex: 1;
-    border: 0;
+.editor_wrapper {
+    box-shadow: var(--card-shadow) 0px 2px 8px 0px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.title_wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+    padding: 0.5rem;
 }
 
 .editor_button {
+    border: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.17em;
+    color: #d4d4d4;
     background: green;
-    padding: 1rem;
+    padding: 0 2rem;
+    margin-right: 0.5rem;
 }
 
 .editor_button:disabled {
@@ -31,12 +45,14 @@
     display: block;
     flex-direction: row;
     overflow-y: auto;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    height: 50vh;
 }
 
 .editor_stdout, .editor_stderr {
     flex: 1;
     min-width: 0;
-    /* display: flex; */
     flex-direction: row;
 }
 
@@ -50,6 +66,14 @@
     padding: 1rem;
 }
 
+.title {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.17em;
+    text-decoration: underline;
+    color: #d4d4d4;
+    padding-left: 1rem;
+}
+
 .editor_stdout {
     background: transparent;
 }
@@ -59,12 +83,8 @@
 }
 
 .editor_stderr {
-    background: red;
+    color: red;
 }
-
-/* .editor_stderr p {
-    background: rgb(185, 15, 15);
-} */
 
 @media (max-width: 810px) {
     .editor_output {
