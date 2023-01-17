@@ -1,0 +1,23 @@
+## Modele barw:
+* **RGB** (**R**ed, **G**reen, **B**lue) - stosowany do określania barw wyświetlanych na komputerze.
+* **CMYK** (**C**yan, **M**agenta, **Y**ellow, Blac**k**) - stosowany do określania barw wydruków. Teoretycznie połączenie wszystkich trzech podstawowych kolorów druku (cyan, magnenta, yellow) powinno dać czarny, ale ze względu na to, że tusze nie są doskonałe i w praktyce połącznie to daje kolor raczej ciemnoszary do modelu CMYK dodano jeszcze kolor czarny.
+* **HSV** (**H**ue, **S**aturation, **V**alue) lub **HSB** (**H**ue, **S**aturation, **B**rightness) - najbardziej naturalny dla ludzi sposób określania kolorów. Ludziom znacznie łatwiej jest określić czy kolor jest nasycony czy pastelowy albo czy jest jasny czy ciemny niz określić go w modelu RGB lub CMYK.
+
+
+![](https://i.imgur.com/6bcpdcr.png)
+(źródłó obrazka: https://dribbble.com/stories/2021/09/22/cmyk-vs-rgb)
+
+
+## Kolor na wyświetlaczu a na wydruk
+W jaki sposób znajduje się odzwierciedlenie barw, jakie widzimy na wyświetlaczu, na barwę wydruku? Niestety nie istnieje idealne mapowanie i musimy być przygotowani na różnice w kolorystyce. Na poniższym obrazku pokazano poglądowo, jak wyglądają te różnice. 
+(To nieco kuriozalne, że chcemy pokazać różnice między korami wydruku a wyświetlacza  korzystając tylko z wyświetlacza, ale idea powinna być jasna.)
+
+![](https://i.imgur.com/C6VLNZC.png)
+
+(źródło obrazka: https://graphicimage.net/rgb-cmyk-color-modes/)
+
+## Głębokość barw
+* **biało-czarny (ang. lineart)** - do jego reprezentacji wystarczy 1 bit. Jeśli jest zapalony, to piksel ma kolor biały, a w przeciwnym przypadku czarny.
+* **skala szarości (ang. greyscale)** - do jego reprezentacji wykorzystuje się zazwyczaj 1 bajt (czyli 8 bitów), dzięki czemu uzyskujemy 256 stanów od bieli do czerni - odcieni szarości.
+* **kolor indeksowany (ang. indexed colour)** - opiera się na wykorzystaniu z óry określonej palety barw. Zazwyczaj liczba dostęonych barw jest potęgą dwójki. Do przechowywania informacji o kolorze wykorzystuje się 4 lub 8 bitów, co daje odpowiedni 16 lub 256 kolorów.
+* **prawdziwy/ pełen kolor (ang. true colour)** - do reprezentacji jednego piksela używamy tu aż 2^{34} czyli ponad 16 mln barw. Natężenie każdej z barw jest określone od 0 do 255, a każdy piksel jest opisany poprzez trzy kolory. W tym modelu kolory zazwyczaj opisujemy szesnastkowo, np. #ff0000 to czerwony, kolor tła naszej strony w tybie ciemnym to #0e033e.
