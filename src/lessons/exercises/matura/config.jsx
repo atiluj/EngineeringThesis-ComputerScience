@@ -19,6 +19,15 @@ import M2019Z1 from './M2019Z1.mdx';
 import M2019Z2 from './M2019Z2.mdx';
 import M2019Z3 from './M2019Z3.mdx';
 
+import M2020Z1 from './M2020Z1.mdx';
+import M2020Z2 from './M2020Z2.mdx';
+import M2020Z3 from './M2020Z3.mdx';
+
+import M2021Z1 from './M2021Z1.mdx';
+import M2021Z2 from './M2021Z2.mdx';
+import M2021Z3 from './M2021Z3.mdx';
+import M2021Z4 from './M2021Z4.mdx';
+
 
 // import M2022 from './M2022.mdx';
 // import M2021 from './M2021.mdx';
@@ -47,6 +56,15 @@ const ExercisesPython = [
     {name: "Matura 2019 zadanie 1- POTĘGI", content: <M2019Z1/>}, //13
     {name: "Matura 2019 zadanie 2- SILNIA", content: <M2019Z2/>}, //14
     {name: "Matura 2019 zadanie 3- DZIAŁANIA NA LICZBACH", content: <M2019Z3/>}, //15
+
+    {name: "Matura 2020 zadanie 1- DZIAŁANIA NA LICZBACH", content: <M2020Z1/>}, //16
+    {name: "Matura 2020 zadanie 2- DZIAŁANIA NA STRINGACH", content: <M2020Z2/>}, //17
+    {name: "Matura 2020 zadanie 3- DZIAŁANIA NA STRINGACH", content: <M2020Z3/>}, //18
+
+    {name: "Matura 2021 zadanie 1- DZIAŁANIA NA STRINGACH", content: <M2021Z1/>}, //19
+    {name: "Matura 2021 zadanie 2- DZIAŁANIA NA STRINGACH", content: <M2021Z2/>}, //20
+    {name: "Matura 2021 zadanie 3- DZIAŁANIA NA STRINGACH", content: <M2021Z3/>}, //21
+    {name: "Matura 2021 zadanie 4- DZIAŁANIA NA STRINGACH", content: <M2021Z4/>}, //22
 
     // {name: "Matura 2022 - LICZBY", content: <M2022 />},
     // {name: "Matura 2021 - NEON CYFROWY", content: <M2021/>},

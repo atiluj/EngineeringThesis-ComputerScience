@@ -46,29 +46,40 @@ function ExerciseSet() {
 
             <div className={styles.category}>DZIAŁANIA NA LICZBACH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/6" className={`${styles.list_element}`}>MATURA 2017 ZAD. 1</Link>
-                <Link to="/exercise/7" className={`${styles.list_element}`}>MATURA 2017 ZAD. 2</Link>
-                <Link to="/exercise/8" className={`${styles.list_element}`}>MATURA 2017 ZAD. 3</Link>
-                <Link to="/exercise/9" className={`${styles.list_element}`}>MATURA 2017 ZAD. 4</Link>
+                <Link to="/exercise/6" className={`${styles.list_element}`}><pre>MATURA <b>2017</b> ZAD. 1</pre></Link>
+                <Link to="/exercise/7" className={`${styles.list_element}`}><pre>MATURA <b>2017</b> ZAD. 2</pre></Link>
+                <Link to="/exercise/8" className={`${styles.list_element}`}><pre>MATURA <b>2017</b> ZAD. 3</pre></Link>
+                <Link to="/exercise/9" className={`${styles.list_element}`}><pre>MATURA <b>2017</b> ZAD. 4</pre></Link>
+                <Link to="/exercise/13" className={`${styles.list_element}`}><pre>MATURA <b>2019</b> ZAD. 1</pre></Link>
+                <Link to="/exercise/14" className={`${styles.list_element}`}><pre>MATURA <b>2019</b> ZAD. 2</pre></Link>
+                <Link to="/exercise/15" className={`${styles.list_element}`}><pre>MATURA <b>2019</b> ZAD. 3</pre></Link>
+                <Link to="/exercise/16" className={`${styles.list_element}`}><pre>MATURA <b>2020</b> ZAD. 1</pre></Link>
             </div>
 
             <div className={styles.category}>DZIAŁANIA NA STRINGACH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/10" className={`${styles.list_element}`}>MATURA 2018 zad. 1</Link>
-                <Link to="/exercise/11" className={`${styles.list_element}`}>MATURA 2018 zad. 2</Link>
-                <Link to="/exercise/12" className={`${styles.list_element}`}>MATURA 2018 zad. 3</Link>
+                <Link to="/exercise/10" className={`${styles.list_element}`}><pre>MATURA <b>2018</b> ZAD. 1</pre></Link>
+                <Link to="/exercise/11" className={`${styles.list_element}`}><pre>MATURA <b>2018</b> ZAD. 2</pre></Link>
+                <Link to="/exercise/12" className={`${styles.list_element}`}><pre>MATURA <b>2018</b> ZAD. 3</pre></Link>
+                <Link to="/exercise/17" className={`${styles.list_element}`}><pre>MATURA <b>2020</b> ZAD. 2</pre></Link>
+                <Link to="/exercise/18" className={`${styles.list_element}`}><pre>MATURA <b>2020</b> ZAD. 3</pre></Link>
+                <Link to="/exercise/19" className={`${styles.list_element}`}><pre>MATURA <b>2021</b> ZAD. 1</pre></Link>
+                <Link to="/exercise/20" className={`${styles.list_element}`}><pre>MATURA <b>2021</b> ZAD. 2</pre></Link>
+                <Link to="/exercise/21" className={`${styles.list_element}`}><pre>MATURA <b>2021</b> ZAD. 3</pre></Link>
+                <Link to="/exercise/22" className={`${styles.list_element}`}><pre>MATURA <b>2021</b> ZAD. 4</pre></Link>
+
             </div>
             <div className={styles.category}>DZIAŁANIA NA LICZBACH BINARNYCH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/0" className={`${styles.list_element}`}>MATURA 2015 ZAD. 1</Link>
-                <Link to="/exercise/1" className={`${styles.list_element}`}>MATURA 2015 ZAD. 2</Link>
-                <Link to="/exercise/2" className={`${styles.list_element}`}>MATURA 2015 ZAD. 3</Link>
+                <Link to="/exercise/0" className={`${styles.list_element}`}><pre>MATURA <b>2015</b> ZAD. 1</pre></Link>
+                <Link to="/exercise/1" className={`${styles.list_element}`}><pre>MATURA <b>2015</b> ZAD. 2</pre></Link>
+                <Link to="/exercise/2" className={`${styles.list_element}`}><pre>MATURA <b>2015</b> ZAD. 3</pre></Link>
             </div>
             <div className={styles.category}>SZYFROWANIE</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/3" className={`${styles.list_element}`}>MATURA 2016 zad. 1</Link>
-                <Link to="/exercise/4" className={`${styles.list_element}`}>MATURA 2016 zad. 2</Link>
-                <Link to="/exercise/5" className={`${styles.list_element}`}>MATURA 2016 zad. 3</Link>
+                <Link to="/exercise/3" className={`${styles.list_element}`}><pre>MATURA <b>2016</b> ZAD. 1</pre></Link>
+                <Link to="/exercise/4" className={`${styles.list_element}`}><pre>MATURA <b>2016</b> ZAD. 2</pre></Link>
+                <Link to="/exercise/5" className={`${styles.list_element}`}><pre>MATURA <b>2016</b> ZAD. 3</pre></Link>
             </div>
 
         </main>

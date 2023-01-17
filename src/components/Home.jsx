@@ -137,6 +137,22 @@ function Home() {
                     Każdy z działów ma sekcję "Wskazówki", w której znajdziesz więcej przydatnych rad oraz bardziej szczegółowe instrukcje.
                     Pamiętaj, że ten kurs jest dla Ciebie i to Ty decydujesz jak z niego korzystasz. Dla nas ważne jest, aby pomóc Ci w wyzwaniu jakie przed Tobą stoi
                     najlepiej jak to możliwe.
+
+                    Na dole każdej podstrony znajdziesz sekcję komentarzy, dzięki której możesz zadawać pytania. Aby skorzystać z tej funkcji, musisz zalogować się przez 
+                    platformę Githuba. Jeśli jeszcze nie masz tam konta, zachęcamy do jego założenia - na pewno przyda Ci się ono w przyszłości. GitHub to platforma 
+                    internetowa, która umożliwia zarządzanie projektami opartymi na systemie kontroli wersji Git. Pozwala ona na tworzenie i przechowywanie kopii kodu 
+                    źródłowego, a także śledzenie zmian i współpracę z innymi programistami. Jeśli już miałeś do czynienia z tą stroną, super! Jeśli nie, nie martw się - 
+                    na razie nie musisz rozumieć Github-a. Wystarczy, że założysz tam konto, aby móc zadać nam pytanie w momencie, gdy coś jest dla Ciebie niejasne. 
+                    <a href="https://github.com/" target="_blank">GitHub</a>
+
+                    <br /><br />
+                    <b>SZYBKA INSTRUKCJA PISANIA KOMENTARZY</b><br />
+                    Komentowanie za pośrdenictwem wspomnianej wyżej platformy umożliwia pisanie komentarzy w składni Markdown.
+                    Jeśli
+                    
+
+                    
+
                 </article>
             </div>
         </main>
