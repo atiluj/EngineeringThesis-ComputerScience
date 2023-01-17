@@ -1,6 +1,71 @@
+import Dropdown from "../../components/Dropdown.jsx";
+import Code from "../../components/Code.jsx";
+
 ## Grafika rastrowa vs wektorowa
 
 * **Grafika rastrowa (bitmapowa)** - obraz jest zapamiętywany jako zbiór pikseli. Im większą jakość obrazu chcemy uzyskać tym więcej pikseli musimy zapamiętać. Prowadzi to nieuchronnie do zwiększania ilość miejsca, jaką obraz zajmuje w pamięci komputera. Sposobem na radzenie sobie z tym problemem jest zastosowanie kompresji bezstratnej (GIF, TIFF) lub stratnej (JPEG). Niestety grafika rastrowa ma swoje ograniczenia. Powiększanie obrazu polega powiem na zwiększaniu wielkości pikseli, gdyż ich liczba jest skończona. W związku z tym powiększanie bitmapy skutkuje obniżeniem jej jakości.
 * **Grafika wektorowa** - w tym modelu elementy obrazów reprezentjemy jako zbiór obiektów geometrycznych (odcinek, okrąg, łuk, prostokąt). Obiekty geometryczne natomiast da się opisać wzorami matematycznymi. Dzięki temu grafika wektorowa jest dobrze skalowalna i nie traci na jakości przy powiększaniu obrazu. Doskonale nadaje się ona do czcionek, schematów, rysunków technicznych, niestety ze względu na złozoność i ilość detali trudnych do opisania językiem matematyki nie sprawdza się ona przy zdjęciach, obrazach malarskich itp.
 
 ![](https://i.imgur.com/OcmD5CV.png)
+
+
+
+## Zadanie
+(Zadanie 39. "Wiązka zadań Praktyka w teorii — Grafika" w  zbiorze zadań maturalnych CKE)
+
+### TREŚĆ:
+Na stronie internetowej aquaparku postanowiono umieścić zdjęcia zachęcające do odwiedzin
+tego miejsca. Zarządcy aquaparku zależy, aby ze strony internetowej mogły korzystać także
+osoby mające jedynie dostęp do łącza internetowego niskiej prędkości (np. 1 Mbit/s). Jedno
+ze zdjęć o nazwie aquapark1 zostało przekształcone za pomocą programu graficznego
+i zapisane jako aquapark2. W tabeli przedstawiono oba zdjęcia wraz z ich parametrami. 
+
+![](https://i.imgur.com/IxgEAVk.png)
+
+### Podpunkt 1.
+Który obraz powinien zostać dodany do galerii zdjęć na stronie aquaparku? Uzasadnij swój
+wybór. 
+
+<Dropdown title="Rozwiązanie">
+  <p className={`dropdown_text`}>
+    <b>aquapark2.jpg</b> <br/><br/>
+    Z treści zadania wiemy, że naszym celem jest wybranie zdjęcia, które będzie 
+    szybko ładowac się na stronę internetową, tak aby dało się je wyświetlić nawet przy 
+    słaby połączeniu internetowym. Oznacza to, że grafika musi być "lekka" to znaczy, 
+    że rozmiar pliku musi być mały.
+  </p>
+</Dropdown>
+
+### Podpunkt 2.
+Dział promocji aquaparku zamierza przygotować do druku folder, w którym umieści różne
+zdjęcia. Wybierz z poniższej listy format pliku graficznego, który zapewni najlepszą jakość
+druku. Uzasadnij swój wybór. 
+<img src={new URL('https://i.imgur.com/sKGEmI6.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+<Dropdown title="Rozwiązanie">
+  <p className={`dropdown_text`}>
+    <b>TIFF</b> <br/><br/>
+    <ul>
+        <li>TIFF - zapewnia zapis bezstratny i jest standardowo wykorzystywany przez firmy zajmujące się drukiem.</li>
+        <li>JPEG - kompresja zachodzi tu przy niewielkiej utracie jakośći, ale nie nadaje się do druku.</li>
+        <li>GIFF - format wykorzystujący kompresję stratną. Zupełnie nie nadaje się do zapisu plików do druku.</li>
+    </ul>   
+  </p>
+</Dropdown>
+
+
+#### Podpunkt 3.
+Ile pamięci zajmie bitmapa 1024 x 768 pikseli, jeśli zapisano ją w systemie RGB, przeznaczając na każdą składową 8 bitów? Wynik podaj w kilobajtach.
+
+<Dropdown title="Rozwiązanie">
+  <p className={`dropdown_text`}>
+    <b>2304 kB</b> <br/><br/>
+    Bitmapę zapisany w systemie RGB, a więc do przestawienia koloru danego piksela wykorzystujemy 3 barwy (Red, Green, Blue). <br/>
+    Do zapisu jednego koloru potzrebujemy 8 bitów. <br/>
+    Zatem do zapisu informacji o kolorze jednego piksela wykorzystujemy 3 * 8 bitów = 24 bity. <br/>
+    Bitmapa ma wymiary 1024 x 768 = 786432 pikseli. <br/>
+    Do zapisu całego obrazu potrzebujemy więc 786432 * 24 = 18874368 bitów =  2359296 bajtów. (1 bit to 8 bajtów)<br/>
+    Kilobajt to 1024 bajty. <br/>
+    Zatem potrzebujemy 2359296 / 1024 = 2304 kilobajty.
+  </p>
+</Dropdown>
