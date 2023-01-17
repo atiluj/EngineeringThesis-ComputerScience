@@ -1,6 +1,13 @@
 import Wskazowki from './wskazowki.mdx';
 import KomputerIJegoCzesci from './komputer-i-jego-czesci.mdx';
 
+import Warstwy from './sieciWarstwy.mdx';
+
+import Barwy from './barwy.mdx';
+import FormatyGrafiki from './formatyGrafiki.mdx';
+import ZadaniaGrafika from './zadaniaGrafika.mdx';
+
+
 const TeoriaLessons = [
     {name: "Wskazówki", content: <Wskazowki />},
 
@@ -23,7 +30,7 @@ const TeoriaLessons = [
 
     {name: "Sieci komputerowe", subchapters: [
         {name: "Terminologia", content: null},
-        {name: "Topologia sieci", content: null},
+        {name: "Topologia sieci", content: <Warstwy/>},
         {name: "Protokół IP", content: null},
         {name: "Adresy IP", content: null},
         {name: "Maski podsieci", content: null},
@@ -31,9 +38,9 @@ const TeoriaLessons = [
     ]},
 
     {name: "Grafika komputerowa", subchapters: [
-        {name: "Podstawowe modele barw", content: null},
-        {name: "Własnośći grafiki rastrowej i wektorowej", content: null}, 
-        {name: "Podstawowe formaty plików graficznych", content: null},
+        {name: "Podstawowe modele barw", content: <Barwy/>},
+        {name: "Grafika rastrowa vs wektorowa", content: <FormatyGrafiki/>}, 
+        {name: "Zadania maturalne", content: <ZadaniaGrafika/>},
     ]},
 
     {name: "Zagadnienia prawne", subchapters: [

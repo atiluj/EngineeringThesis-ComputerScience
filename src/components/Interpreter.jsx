@@ -1,4 +1,5 @@
 import styles from './Interpreter.module.css';
+import "../style.css";
 import * as React from 'react';
 import MonacoEditor from "react-monaco-editor";
 import usePython from "react-py/dist/hooks/usePython.js";
@@ -11,7 +12,7 @@ function Editor() {
 
     useEffect(() => {
         const listener = () => {
-            if (editor) {
+            if (editor && editor.layout) {
                 editor.layout({});
                 editor.layout();
             }
@@ -22,33 +23,43 @@ function Editor() {
 
     return (
         <div className={styles.editor}>
-            <MonacoEditor
-                editorWillMount={(editor) => setEditor(editor)}
-                language="python"
-                theme="vs-dark"
-                className={styles.editor_monaco}
-                height="65vh"
-                value={code}
-                onChange={changeCode}
-            />
-            <input
-                type="submit"
-                className={styles.editor_button}
-                value={isLoading ? "Loading..." : isRunning ? "Running..." : "Run!"}
-                disabled={isLoading || isRunning}
-                onClick={(e) => {
-                    e.preventDefault();
-                    runPython(code);
-                }}
-            />
-            <div className={styles.editor_output}>
-                <div className={styles.editor_stdout}>
-                    <p>Output</p>
-                    <pre><code>{stdout}</code></pre>
+            <div className={styles.editor_wrapper}>
+                <div className={styles.title_wrapper}>
+                    <div className={styles.title}>Input</div>
+                    <input
+                        type="submit"
+                        className={styles.editor_button}
+                        value={isLoading ? "Loading..." : isRunning ? "Running..." : "Run!"}
+                        disabled={isLoading || isRunning}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            runPython(code);
+                        }}
+                    />
                 </div>
-                <div className={styles.editor_stderr}>
-                    <p>Error</p>
-                    <pre><code>{stderr}</code></pre>
+                <MonacoEditor
+                    editorWillMount={(editor) => setEditor(editor)}
+                    language="python"
+                    theme="vs-dark"
+                    className={styles.editor_monaco}
+                    height="50vh"
+                    value={code}
+                    onChange={changeCode}
+                />
+            </div>
+            
+            <div className={styles.editor_wrapper}>
+                <div className={styles.editor_output}>
+                    <div className={styles.title}>Output</div>
+                    <div className={styles.editor_stdout}>
+                        <pre><code>{stdout}</code></pre>
+                    </div>
+                    {stderr ?
+                        <div className={styles.editor_stderr}>
+                            {/* <p>Error</p> */}
+                            <pre><code>{stderr}</code></pre>
+                        </div>
+                        : null}
                 </div>
             </div>
         </div>
@@ -56,7 +67,7 @@ function Editor() {
 }
 
 function Interpreter() {
-    return <main>
+    return <main className={styles.main}>
         <Editor />
     </main>;
 }
