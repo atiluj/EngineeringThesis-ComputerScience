@@ -1,19 +1,34 @@
 import Wskazowki from './wskazowki.mdx';
 import PierwszeKroki from './pierwszeKroki.mdx';
-import TypyIZmienne from './typyIZmienne.mdx';
-import ListyIKrotki from './listyIKrotki.mdx';
-import SlownikiIZbiory from './slownikiIZbiory.mdx';
+import Typy from './typy.mdx';
+import Zmienne from './zmienne.mdx';
+import WejscieWyjscie from './wejscieWyjscie.mdx';
+import Zadania1 from './zadania1.mdx';
+import Lista from './lista.mdx';
+import Krotka from './krotka.mdx';
+import Slownik from './slownik.mdx';
+import Zbior from './zbior.mdx';
+import Zadania2 from './zadania2.mdx';
 import InstrukcjeWarunkowe from './instrukcjeWarunkowe.mdx';
 
 export default [
     {name: "Wskazówki", content: <Wskazowki />},
-    
+
     {name: "Pierwsze kroki", content: <PierwszeKroki />},
-    {name: "Typy i zmienne", content: <TypyIZmienne />},
+
+    {name: "Wprowadzenie do programowania", subchapters: [
+        {name: "Typy", content: <Typy />},
+        {name: "Zmienne", content: <Zmienne />},
+        {name: "Operacje wejścia/wyjścia", content: <WejscieWyjscie />},
+        {name: "Zadania", content: <Zadania1 />}
+    ]},
 
     {name: "Struktury danych", subchapters: [
-        {name: "Listy i krotki", content: <ListyIKrotki />},
-        {name: "Słowniki i zbiory*", content: <SlownikiIZbiory />},
+        {name: "Lista", content: <Lista />},
+        {name: "Krotka", content: <Krotka />},
+        {name: "Słownik*", content: <Slownik />},
+        {name: "Zbiór*", content: <Zbior />},
+        {name: "Zadania", content: <Zadania2 />},
     ]},
 
     {name: "Podstawowe konstrukcje", subchapters: [
