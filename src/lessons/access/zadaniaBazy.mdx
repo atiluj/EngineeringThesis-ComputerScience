@@ -25,10 +25,10 @@ uporządkowane niemalejąco według pola nazwa.
 
 <TableQuiz 
     questions={
-      ["SELECT nazwa, wartosc FROM dane ORDER BY wartosc, nazwa ", 
-      "SELECT nazwa, wartosc FROM dane ORDER BY nazwa", 
-      "SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa", 
-      "SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa ORDER BY nazwa"]} 
+      [<pre> SELECT nazwa, wartosc FROM dane ORDER BY wartosc, nazwa </pre>, 
+      <pre> SELECT nazwa, wartosc FROM dane ORDER BY nazwa </pre>, 
+      <pre> SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa </pre>, 
+      <pre> SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa ORDER BY nazwa </pre>]} 
     answers={[0, 1, 0, 1]}
 />
 
@@ -36,24 +36,82 @@ uporządkowane niemalejąco według pola nazwa.
 (maj 2017 część 1 zadanie 3.2)
 
 ### TREŚĆ
-Rozważ następujące zapytanie SQL do pewnej bazy danych: <br/>
-SELECT pesel, COUNT(*) <br/>
-FROM samochody <br/>
-WHERE pesel NOT IN (SELECT pesel FROM dokumenty_zastrzezone) <br/>
-GROUP BY pesel HAVING COUNT(*) > 1 <br/><br/>
+Rozważ następujące zapytanie SQL do pewnej bazy danych:
+<pre>
+    SELECT pesel, COUNT(*) <br/>
+    FROM samochody <br/>
+    WHERE pesel NOT IN (SELECT pesel FROM dokumenty_zastrzezone) <br/>
+    GROUP BY pesel HAVING COUNT(*) > 1 <br/><br/>
+</pre>
 
 Po wykonaniu tego zapytania w odpowiedzi
 
 <TableQuiz 
     questions={
-      ["ten sam numer PESEL może pojawić więcej niż jeden raz.  ", 
+      ["ten sam numer PESEL może pojawić więcej niż jeden raz. ", 
       "nie pojawi się żaden numer PESEL, który jest zapisany w tabeli dokumenty_zastrzezone.", 
       "otrzymasz tabelę o 2 kolumnach. ", 
-      "przy odpowiednich danych może pojawić się wiersz „82122302134, 1”. "]} 
+      "przy odpowiednich danych może pojawić się wiersz 82122302134, 1. "]} 
     answers={[0, 1, 1, 0]}
 />
 
 **Uwaga:** kolumna pesel zawiera numery PESEL
+
+## Zadanie 4 (0-1pkt.)
+(maj 2018 część 1 zadanie 3.3)
+
+### TREŚĆ
+Wskaż zdania prawdziwe dla języka SQL
+
+<TableQuiz 
+    questions={
+      ["W wynikach zapytania postaci SELECT (...) ORDER BY (...) zawsze dostajemy rekordy uporządkowane ściśle rosnąco według wskazanego pola. ", 
+      "Zapytanie UPDATE może zmienić wartości pól w bazie danych.", 
+      "Zapytanie postaci SELECT * FROM tabela1 WHERE pole LIKE (...) może w pewnych warunkach dać wszystkie rekordy z tabeli tabela1.", 
+      "Wynik zapytania SELECT * FROM tabela1 JOIN tabela2 ON tabela1.pole = tabela2.pole może być pusty przy niepustych tabelach tabela1 oraz tabela2."]} 
+    answers={[0, 1, 1, 1]}
+/>
+
+
+## Zadanie 5 (0-1pkt.)
+(maj 2019 część 1 zadanie 3.1)
+
+### TREŚĆ
+Dana jest tabela PRACOWNICY.		
+<img src={new URL('https://i.imgur.com/NQ2kOAB.png', import.meta.url)} alt="xyz" className={`medium_img left_img`} />
+
+<TableQuiz 
+    questions={
+      [<img src={new URL('https://i.imgur.com/DPLaTa4.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
+      <img src={new URL('https://i.imgur.com/8XR746A.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
+      <img src={new URL('https://i.imgur.com/kjkxEsz.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
+      <img src={new URL('https://i.imgur.com/5CnnY4h.png', import.meta.url)} alt="xyz" className={`small_img`} />]} 
+    answers={[0, 1, 1, 0]}
+/>
+
+## Zadanie 6 (0-1pkt.)
+(maj 2020 część 1 zadanie 3.4)
+
+### TREŚĆ
+Dana jest tabela pracownicy 	
+<img src={new URL('https://i.imgur.com/QKo7ulX.png', import.meta.url)} alt="xyz" className={`medium_img left_img`} />
+oraz zapytanie SQL:
+<p>
+    SELECT * <br/>
+    FROM pracownicy <br/>
+    WHERE pensja  (mniejsze niż) 2000 <br/>
+    ORDER BY staz DESC; 
+</p>
+
+<TableQuiz 
+    questions={
+      [<p>Wynik powyższego zapytania to 3</p>, 
+      <img src={new URL('https://i.imgur.com/TDosuSg.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
+      <p>Wynikiem zapytania będą wiersze z tabeli ``pracownicy``, zawierające wszystkie dane z tej tabeli dotyczące pracowników, dla których wartość z kolumny ``pensja`` jest mniejsza niż 2000, posortowane nierosnąco według parametru ``staz``. </p>, 
+      <img src={new URL('https://i.imgur.com/Xf2xIf7.png', import.meta.url)} alt="xyz" className={`small_img`} />]} 
+    answers={[0, 1, 1, 0]}
+/>
+
 
 
 

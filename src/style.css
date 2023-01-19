@@ -257,3 +257,9 @@ img.section_logo {
 .incorrect:hover{
     background-color: red;;
 }
+
+
+ /* do obrazków w quizach, które trzeba wyrównać do lewej */
+.main_content .second img.medium_img.left_img{
+    margin-left: 20px;
+}
