@@ -1,0 +1,72 @@
+.input {
+    display: none;
+}
+
+.label {
+    display: inline-block;
+    /* padding: 5px 10px; */
+    cursor: pointer;
+    width: 3rem;
+    width: 100%;
+    height: 100%;
+}
+  
+.label span {
+    position: relative;
+    text-align: center;
+    
+    /* line-height: 22px; */
+    width: 3rem;
+    height: 100%;
+    /* height: 100%; */
+}
+  
+.label span:before,
+.label span:after {
+    content: '';
+}
+  
+.label span:before {
+    /* border: 1px solid #222021; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* margin-right: 10px; */
+    width: 3rem;
+    display: inline-block;
+    vertical-align: top;
+}
+  
+.label span:after {
+    background: #222021;
+    width: 3rem;
+    height: 100%;
+    /* height: 100%; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* top: 2px;
+    left: 4px; */
+    transition: 300ms;
+    opacity: 0;
+  }
+  
+  /*
+   * This is the most important part of this whole file, if you understand what's happening here
+   * you can really make this in so many different ways.
+   * 
+   * We start by selecting the input inside of the label, with "label input". From there we use the 
+   * ":checked" selector to *only* select the input when it is checked. We then use the immediate sibling 
+   * selector(+) to select the span, and then it's pseudo element :after(What we are using to mark the button)
+   * Because we already styled the :after, all we have to do is set the opacity to 1, making it fade in.
+   */
+  .label input:checked+span:after {
+    opacity: 1;
+  }
+
+  .filled .correct:after {
+    background-color: green;
+  }
+
+  .filled .incorrect:after {
+    background-color: red;
+  }
