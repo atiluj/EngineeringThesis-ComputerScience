@@ -1,0 +1,82 @@
+import Quiz from "../../components/Quiz.jsx";
+import Code from "../../components/Code.jsx";
+
+<Quiz 
+    question={
+        <>
+            <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
+            <Code>print(type(True))</Code>
+        </>
+    }
+    answers={[
+        "<class 'str'>",
+        "<class 'bool'>",
+        "<class 'float'>",
+        "<class 'int'>"]}
+    correct={"<class 'bool'>"}
+/>
+
+<Quiz 
+    question={
+        <>
+            <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
+            <Code>print(type(3))</Code>
+        </>
+    }
+    answers={[
+        "<class 'int'>",
+        "<class 'bool'>",
+        "<class 'str'>",
+        "<class 'float'>",
+        ]}
+    correct={"<class 'int'>"}
+/>
+
+<Quiz 
+    question={
+        <>
+            <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
+            <Code>print(type(7 / 2))</Code>
+        </>
+    }
+    answers={[
+        "<class 'bool'>",
+        "<class 'float'>",
+        "<class 'str'>",
+        "<class 'int'>",
+        ]}
+    correct={"<class 'float'>"}
+/>
+
+<Quiz 
+    question={
+        <>
+            <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
+            <Code>print(type("5"))</Code>
+        </>
+    }
+    answers={[
+        "<class 'float'>",
+        "<class 'bool'>",
+        "<class 'str'>",
+        "<class 'int'>",
+        ]}
+    correct={"<class 'str'>"}
+/>
+
+<Quiz 
+    question={
+        <>
+            <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
+            <Code>print(type(7 // 2))</Code>
+        </>
+    }
+    answers={[
+        "<class 'int'>",
+        "<class 'str'>",
+        "<class 'float'>",
+        "<class 'bool'>",
+        ]}
+    correct={"<class 'int'>"}
+/>
+
