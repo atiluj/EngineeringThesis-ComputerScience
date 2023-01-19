@@ -1,0 +1,40 @@
+import Dropdown from "../../components/Dropdown.jsx";
+import TableQuiz from "../../components/TableQuiz.jsx";
+
+## Zadanie 1 (0-1pkt.)
+(maj 2016 część 1 zadanie 3.2)
+
+### TREŚĆ
+Dana jest funkcja f określona wzorem rekurencyjnym
+<img src={new URL('https://i.imgur.com/aSqBx3L.png', import.meta.url)} alt="xyz" className={`small_img`} />
+<TableQuiz 
+    questions={
+      ["f(8) = 1/3", 
+      "f(9) = 3/4", 
+      "f(10) = 4",
+      "f(100) = -1/3"]} 
+    answers={[0, 1, 1, 0]}
+/>
+
+## Zadanie 2 (0-1pkt.)
+(maj 2020 część 1 zadanie 3.2)
+
+### TREŚĆ
+W poniższym algorytmie ``n`` jest nieujemną liczbą całkowitą, ``mod`` to operator reszty z dzielenia, ``div`` to operator dzielenia całkowitego. 
+<pre>
+    w ← 0 <br/>
+    dopóki n ≠ 0 wykonuj <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp; w ← w + (n mod 10) <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp; n ← n div 10  <br/>
+</pre>
+<TableQuiz 
+    questions={
+      ["Po wykonaniu algorytmu dla n = 45778 zmienna w przyjmuje wartość 30. ", 
+      "Po wykonaniu algorytmu dla liczby n wartością zmiennej w jest suma cyfr liczby n w zapisie dziesiętnym. ", 
+      "Podczas wykonywania algorytmu dla n = 1234 w kolejnych iteracjach pętli dopóki, zmienna w przyjmuje wartości 1, 3, 6, 10.",
+      "Po wykonaniu algorytmu dla n = 11111 zmienna w przyjmuje wartość 5. "]} 
+    answers={[0, 1, 0, 1]}
+/>
+
+
+

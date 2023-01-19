@@ -1,0 +1,97 @@
+## Zmienne
+Zmienna to taki obiekt, który przechowuje dane w programie. Możemy sobie wyobrazić, że jest to pudełko, któremu nadajemy nazwę i wkładamy do środka pewną wartość. 
+
+<img src={new URL('../../img/python_pudelko1.png', import.meta.url)} alt="zmienna jako pudełko" className={`small_img`}/>
+
+Zapisujemy to w następujący sposób: 
+Najpierw piszemy **nazwę** naszej zmiennej, następnie znak równości **=** (nazywany znakiem przypisania), a następnie **wartość**, którą chcemy przypisać do zmiennej. 
+```python
+nazwa = wartosc
+``` 
+
+Do środka "pudełka", czyli do naszej zmiennej możemy wstawić liczbę całkowitą, zmiennoprzecinkową, napis lub wartość prawda/fałsz - czyli każdy z typów, który już poznaliśmy.  
+
+```python
+>>> liczba = 1
+>>> pi = 3.14
+>>> prawda = True
+>>> powitanie = 'Hello world!'
+```
+
+<img src={new URL('../../img/python_pudelko2.png', import.meta.url)} alt="zmienna jako pudełko" className={`small_img`}/>
+
+Tak jak wskazuje ich nazwa zmiennej, możemy zmieniać wartość przypisaną do zmiennej.
+
+```python
+>>> x = 3 
+>>> x
+3
+>>> x = 'Ala ma kota'
+>>> x 
+'Ala ma kota'
+```
+
+Wartości zmiennych możemy przypisywać również w jednej linii: 
+
+```python
+>>> a, b, c = 1, True, 'Ala ma kota'
+>>> b
+True
+```
+
+
+Na zmiennych możemy wykonywać dowolne operacje:
+```python
+>>> x = 10
+>>> y = 12
+>>> z = x + y - 3
+>>> z
+19
+```
+W pythonie podczas tworzenia zmiennej należy od razu przypisać jej wartość. Zmienna nie może istnieć bez wartości! 
+
+```python
+>>> a
+Traceback (most recent call last):
+  File "<pyshell#8>", line 1, in <module>
+    a
+NameError: name 'a' is not defined
+
+```
+
+## Niepoprawne nazwy zmiennych
+Nazwa jaką nadajemy zmiennej, może być praktycznie dowolna - oprócz kilku wyjątków. 
+
+* Nazwa zmiennej musi być jednym ciągiem znaków (bez spacji)
+* W nazwie zmiennej nie mogą się znajdować znaki odpowiadające za operatory (+, -, *, itd.)
+Jedyne dozwolone znaki to litery alfabetu (a-z, A-Z), cyfry (0-9), lub podkreślenia (_)
+* Nazwa zmiennej nie możemy zaczynać się od cyfry
+* Nie używamy słów kluczowych w pythonie ani nazw funkcji pomocniczej. Jeśli przykładowo nadpiszemy wartość funkcji, to nie będziemy mogli jej potem używać.
+
+```python
+>>> max(3,4)
+4
+>>> max = 1
+>>> max(3,4)
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    max(3,4)
+TypeError: 'int' object is not callable
+```
+
+Nazwy zmiennych są **case sensitive**. Oznacza to, że wielkość liter użytych w nazwie ma znaczenie.
+
+``` python
+>>> A = 1
+>>> a = 2
+>>> A
+1
+>>> a 
+2
+```
+
+Istnieją dwa polecane sposoby zapisywania zmiennych:
+* z użyciem podkreślenia
+    **moja_zmienna**, **dane_osobowe**
+* tzw. camel case, czyli kolejne wyrazy piszemy łącznie, rozpoczynając każdy kolejny od wielkiej litery
+    **mojaZmienna**, **daneOsobowe**

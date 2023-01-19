@@ -1,0 +1,73 @@
+import Dropdown from "../../components/Dropdown.jsx";
+import TableQuiz from "../../components/TableQuiz.jsx";
+
+## Zadanie 1 (0-1pkt.)
+(maj 2016 część 1 zadanie 3.1)
+
+### TREŚĆ
+Po wpisaniu w pasku adresu przeglądarki http://81.219.47.83 otwiera się strona Centralnej
+Komisji Egzaminacyjnej, ale po wpisaniu http://cke.edu.pl pojawia się błąd „Nie można
+odnaleźć podanej strony”. Możliwe przyczyny tego stanu rzeczy to: 
+
+<TableQuiz 
+    questions={
+      ["awaria serwera SMTP Centralnej Komisji Egzaminacyjnej, ", 
+      "awaria serwera poczty użytkownika, ", 
+      "awaria serwera DNS,", 
+      "brak prawidłowego klucza szyfrującego w przeglądarce."]} 
+    answers={[0, 0, 1, 0]}
+/>
+
+
+## Zadanie 2 (0-1pkt.)
+(maj 2018 część 1 zadanie 3.1)
+
+### TREŚĆ
+Na pewnym serwerze WWW znajduje się strona napisana w języku PHP, a jej kod zawiera
+fragmenty w języku JavaScript. Pewien komputer-klient pobrał i wyświetlił tę stronę.
+Wiadomo, że:
+
+<TableQuiz 
+    questions={
+      ["kod PHP jest wykonywany przez komputer – serwer. ", 
+      "kod JavaScript jest wykonywany przez komputer – klient. ", 
+      "podczas wykonywania kodu PHP zawsze pobierane są dane od klienta.", 
+      "podczas wykonywania kodu JavaScript mogą być pobierane dodatkowe dane zarówno od klienta, jak i od serwera."]} 
+    answers={[1, 1, 0, 1]}
+/>
+
+## Zadanie 3 (0-1pkt.)
+(maj 2019 część 1 zadanie 3.3)
+
+### TREŚĆ
+<TableQuiz 
+    questions={
+      ["DNS to skrót od Domain Name System. ", 
+      "Do danego adresu IP może być przypisanych wiele różnych nazw. ", 
+      "Przy zmianie adresu IP komputera pełniącego funkcję serwera WWW jest konieczna zmiana nazwy domeny internetowej.", 
+      "System DNS ma jedną centralną bazę danych adresów IP i nazw."]} 
+    answers={[1, 1, 0, 0]}
+/>
+
+## Zadanie 4 (0-1pkt.)
+(maj 2020 część 1 zadanie 3.3)
+
+### TREŚĆ
+Dana jest konfiguracja interfejsu sieciowego komputerów A i B. <br/><br/>
+
+Dla komputera A:
+Adres IPv4: 192.168.10.65
+Maska sieci: 255.255.255.0 <br/><br/>
+
+Dla komputera B:
+Adres IPv4: 192.168.10.128
+Maska sieci: 255.255.255.0 <br/>
+
+<TableQuiz 
+    questions={
+      ["Komputer A i komputer B są w tej samej sieci. ", 
+      "Adresem sieci dla komputera A jest adres 192.168.10.0. ", 
+      "Dla maski 255.255.255.0 są dostępne 254 adresy hostów.", 
+      "Adres rozgłoszeniowy sieci, do której należy komputer B, to 192.168.255.255. "]} 
+    answers={[1, 1, 1, 0]}
+/>

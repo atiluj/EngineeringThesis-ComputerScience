@@ -1,0 +1,51 @@
+## Uruchomienie środowiska programistycznego
+Wszystkie poprzednie przykłady pokazywaliśmy w konsoli, ale służy ona raczej do sprawdzania poprawności działania pojedynczych wyrażeń niż do pisania programów. Utwórz plik z rozszerzeniem .py i uruchom środowisko programistyczne. 
+Jeśli nie wiesz jak to zrobić wróć do lekcji *1. Pierwsze kroki*.
+
+Teraz napiszemy proste programy pobierające dane z klawiatury i wypisywania tekst na ekran za pomocą instrukcji **input()** oraz **print()**.
+
+## Standardowe wejście / wyjście
+### Wyświetlanie napisu na ekranie
+Instrukcja **print()** w pythonie służy do wyświetlania tekstu lub innych wartości na ekranie. Używamy tej instrukcji po to, aby pokazać na ekranie dane lub wyświetlić pewne informacje na temat działania programu użytkownikowi.
+
+Aby użyć tej funkcji, podajemy wartość (lub kilka wartości), które chcemy wyświetlić jako argumenty tej funkcji.
+
+```python=
+print("Hello world!"); # Wyświetli "Hello world!" na ekranie
+
+a = 10
+b = 12
+
+print(a, b) # Wyświetli "10 12"
+print(a + b) # Wyświetli "22"
+```
+
+## Pobieranie wartości od użytkownika
+Do pobierania danych od użytkownika służy funkcja **input()**. Używamy jej, aby zapytać użytkownika o dane, aby następnie wykorzystać je w naszym programie. 
+
+Zapytajmy użytkownika o jego imię i przywitajmy się z nim:
+```python=
+imie = input("Podaj imię: ")
+print("Cześć ", imie) 
+```
+
+Następnie spytajmy o jego wiek i wyświetlmy informację o tym w jakim będzie wieku za 5 lat. 
+Musimy w tym momencie uważać, bo 
+każda wartość jaką pobierzemy od użytkownika jest zapisywana jako string!
+```python=
+imie = input("Podaj imię: ")
+print("Cześć ", imie) 
+
+wiek = input("Podaj swój wiek: ")
+wiek = int(wiek) # Zmieniamy typ zmiennej wiek ze stringa na inta
+print("Za 5 lat będziesz mieć ", wiek + 5, " lat")
+```
+Możemy też trochę skrócić nasz program, zmieniając typ zmiennej wiek od razu przy instrukcji **input()**
+
+```python=
+imie = input("Podaj imię: ")
+print("Cześć ", imie) 
+
+wiek = int(input("Podaj swój wiek: "))
+print("Za 5 lat będziesz mieć ", wiek + 5, " lat")
+```

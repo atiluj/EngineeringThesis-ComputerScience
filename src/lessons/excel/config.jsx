@@ -1,5 +1,7 @@
 import Wskazowki from './wskazowki.mdx';
 
+import ZadaniaTeoriaExcel from './zadaniaTeoriaExcel.mdx';
+
 const ExcelLessons = [
     {name: "Wskazówki", content: <Wskazowki />},
 
@@ -24,6 +26,10 @@ const ExcelLessons = [
         {name: "Obrazowanie zależności funkcyjnych", content: null},
         {name: "Funkcje bazodanowe", content: null},
     ]},
+
+    {name: "Zadania maturalne", subchapters: [
+        {name: "Część teoretyczna", content: <ZadaniaTeoriaExcel/>},
+    ]}
 ];
 
 export default ExcelLessons;

@@ -255,4 +255,19 @@ img.section_logo {
 
 .dropdown_text {
     padding: 0.7rem 1rem;
+
+/* do testów tabelki z quizem */
+
+.correct:hover{
+    background-color: green;
+}
+
+.incorrect:hover{
+    background-color: red;;
+}
+
+
+ /* do obrazków w quizach, które trzeba wyrównać do lewej */
+.main_content .second img.medium_img.left_img{
+    margin-left: 20px;
 }

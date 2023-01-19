@@ -1,4 +1,34 @@
 
-halo halo 
+## Model OSI 
+OSI (Open Systems Interconnection) - umożliwia współpracę wszystkich składowych sieci komputerowej (m. in. urządzeń takich jak serwery, routery, itp.). 
+Jest to teoretyczny model, składający się z 7 warstw, przez które przechodzą wszystkie dane przesyłane między systemami komputerowymi.
+Warstyw tego samego poziomu na różnych komuterach komunikują się ze sobą za pomocą protokołów komunikacyjnych.
 
-<img src={new URL('../../img/teoria/sieci_komputerowe_protokoly.png', import.meta.url)} alt="xyz" className={`big_img`} />
+Każda z warstw (oprócz fizycznej) komunikuje się wyłącznie z warstwami leżącymi powyżej lub poniżej, wykorzystując w tym celu interfejsy.
+Do danych otrzymanych z warstwy wyższej każda kolejna warstwa dodaje swoje własne, po czym koduje całość, dzieli ją na mniejsze części (segmenty, pakiety, ramki) i przekazuje do kolejnej warstwy.
+Warstwa fizyczna (sprzętowa) jak nazwa wskazuje fizycznie przesyła dane już bezpośrednio do systemu komputerowego.
+
+### Warstwy wyższe
+* **warstwa aplikacji** - pełni rolę interfejsu między aplikacją użytkownika a usługami sieciowymi. Umożliwia ona udostępnianie plików, stron WWW, przeglądarek internetowych itd.
+* **warstwa prezentacji** - standaryzuje format danych, odpowiada za kodowanie i kompresję danych. Obsługuje formaty takie jak MPEG, JPG, GIF itp. Gdy dane płyną w dół warstwa aplikacji je deszyfruje i dekompresuje, natomisat gdy płyną w górę szyfruje i kompresuje. Podsumowując, dane na różnych komputerach mogą być reprezentowane w różny sposób,  zadaniem tej warstwy jest sprowadzenie ich do postaci kanonicznej tak, aby niższe warstwy zawsze otrzymywały wiadomości w tym samym formatowaniu.
+* **warstwa sesji** - zapewnia synchronizację oraz prawidłowy przepływa danych, a w razie przerwania wznawia połączenie.
+
+### Warstwy niższe:
+* **warstwa transportowa** - odpowiada za prawidłowe połączenie między stacjami żródłową i docelową. Dzieli ona dane na mniejsze pakiety (segmentuje) i składa w tak zwany strumień. Warstwa transportowa może korzystać z jednego z dwóch protokołów TCP lub UDP (opisane są one w kolejnym temacie "Protokoły"). 
+* **warstwa sieciowa** - ustanawia połączenie między stacjami, a po zakończeniu sesji je dezaktywuje. Warstwa ta jako jedyna posiada wiedzę na temat fizycznej topologii sieci. Odpowiada za kierowanie ruchem w sieci - wyznacza trasy przebiegu pakietów (trasowanie) i decyduje ile danych należy przesłaćjednym z połączeń a ile innym. Warstwy sieci posiada protokoły takie jak: IPv4, IPv6, ICMP (opisane są one w kolejnym temacie "Protokoły").
+* **warstwa łącza danych** - zapewnia niezawodność połączenia. Rozpoznaje ona błędy i zajmuje się ich naprawą. Współpracuje ona i ma możliwość zmiany parametrów urządzeń sieciowych np. kart sieciowych.
+* **warstwa fizyczna** - odpowiada za transmisję danych. Do tej warstwy należą karty sieciowe, modemy, koncentratory  oraz kable i fale radiowe (tzw. media transmisyjne).
+
+
+## Model TCP/IP
+Na codzień korzystamy głównie z oprogramowań działających w architektórze klient - serwer. 
+Zazwyczaj jesteśmy klientem, a nasze żądania przetwarza serwer, który zajmuje się również obsługą innych klientów.
+Komunikacja między klientem a serwerem nigdy nie odbywa się bezpośrednio, gdyż obaj znajdują się w warstwie aplikacji.
+Klient, gdy chce przesłać żądanie do serwera przekazuje je do warstw niższych (w dół). Serwer natomiast otzrymane żądanie przesyła do warstw wyższych (w górę).
+<br/>
+Przepływ danych oraz proces konstrukcji i dekonstrukcji pakietu pokażemy na podstawie modelu TCP/IP.
+<br/>
+Modele TCP/IP i OSI są do siebie bardzo podobne. Różnicę można zauważyć w wyższych warstwach. Warstwa aplikacji z modelu TCP/IP  w modelu OSI została podzielona na trzy warstwy - aplikacji, prezentacji i sesji. 
+
+<img src={new URL('../../img/teoria/sieci_komputerowe_model_warstwowy.png', import.meta.url)} alt="xyz" className={`big_img`} />
+

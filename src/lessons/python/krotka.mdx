@@ -1,0 +1,101 @@
+## Krotka (Tuple)
+**Krotka** to lista, które są **niemutowalna**, czy inaczej niemodyfikowalna, niezmienna. Oznacza to, że nie możemy zmieniać jej elementów. <br/>
+**Jeśli nie wiesz czym jest lista w Pythonie - przed przerobieniem tego tematu zajrzyj do poprzedniej notatki!** <br/><br/>
+
+Krotki definiujemy je podobnie jak listy, z tą różnicą, że zamiast nawiasów kwadratowych używamy okrągłych **()** lub funkcji **tuple()**.
+
+```python
+>>> krotka = ()
+>>> type(krotka)
+<class 'tuple'>
+
+>>> inna_krotka = tuple()
+```
+
+Aby dostać się konkretnego elementu, używamy indeksów, identycznie jak w przypadku zwykłych list. 
+
+```python
+>>> krotka = (1, 'Ala', 'Ola', True, 10)
+>>> krotka[1]
+'Ala'
+```
+W taki sam sposób działa również **slicing**:
+
+```python
+>>> krotka[1:3]
+('Ala', 'Ola')
+```
+
+Krotki możemy tworzyć również bez użycia nawiasów!
+```python
+>>> krotka = 1, 'Ala', 'Ola', True, 10
+>>> krotka
+(1, 'Ala', 'Ola', True, 10)
+```
+
+
+Nie możemy jednak modyfikować krotki. Próba zmiany któregoś elementu zakończy się błędem *TypeError*!
+```python=
+>>> krotka[1] = 3
+TypeError: 'tuple' object does not support item assignment
+```
+
+### Operacje na krotkach
+Na krotkach możemy wykonywać takie operacje, które jej nie modyfikują. 
+Jest to m.in. wyszukiwanie:
+```python
+>>> cytrusy = ('pomarańcza', 'cytryna', 'limonka', 'limonka')
+>>> 'pomarancza' in cytrusy
+True
+>>> cytrusy.index('limonka')
+2
+```
+czy zliczanie:
+```python
+>>> cytrusy.count('limonka')
+2
+```
+
+Możemy również utworzyć nową krotkę, łącząc kilka krotek ze sobą:
+```python
+>>> owoce = cytrusy + ('jabłko', 'gruszka')
+>>> owoce
+('pomarańcza', 'cytryna', 'limonka', 'limonka', 'jabłko', 'gruszka')
+```
+
+Nie możemy dodawać nowych elementów do istniejącej krotki, ani usuwać żadnych z nich. 
+
+## Funkcje wbudowane
+Podobnie jak w przypadku list, przy krotkach również możemy skorzystać z funkcji wbudowanych **len()**, **min()** i **max()**.
+
+Funkcja **len()** zwraca długość podanej struktury
+```python
+>>> dni_wolne = ('sobota', 'niedziela')
+>>> len(dni_wolne)
+2
+```
+**min()** zwraca najmniejszy element w strukturze
+```python
+>>> liczby = (1, 2, 3, 4)
+>>> min(liczby)
+1
+```
+Z kolei funkcja **max()** zwraca największy element
+```python
+>>> liczby = (10, 2, 1, 15, 8)
+>>> max(liczby)
+15
+```
+
+## Wielowymiarowe krotki
+Powiedzieliśmy, że krotki mogą zawierać dowolne obiekty. Skoro tak, to mogą zawierać także inne krotki czy listy: 
+```python
+>>> krotka = ((1, (2, 3)), 7, 8, 9)
+>>> krotka[0]
+(1, (2, 3))
+>>> krotka[0][1]
+(2, 3)
+>>> krotka2 = (11, ["Ala ma kota", "Basia ma psa"])
+>>> krotka2[1]
+["Ala ma kota", "Basia ma psa"]
+```

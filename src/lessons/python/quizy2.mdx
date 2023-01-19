@@ -1,0 +1,32 @@
+import Quiz from "../../components/Quiz.jsx";
+import Code from "../../components/Code.jsx";
+
+<Quiz 
+    question={
+        <>
+            <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
+            <Code>print([1, 2, 3] + 4)</Code>
+        </>
+    }
+    answers={[
+        "[1, 2, 3, 4]",
+        "[[1, 2, 3], [4]]",
+        "Program zakończy się błędem",
+        "[1, 2, 3, [4]]"]}
+    correct={"Program zakończy się błędem"}
+/>
+
+<Quiz 
+    question={
+        <>
+            <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
+            <Code>print([1, 2, 3] + [4])</Code>
+        </>
+    }
+    answers={[
+        "[1, 2, 3, 4]",
+        "[[1, 2, 3], [4]]",
+        "Program zakończy się błędem",
+        "[1, 2, 3, [4]]"]}
+    correct={"[1, 2, 3, 4]"}
+/>
