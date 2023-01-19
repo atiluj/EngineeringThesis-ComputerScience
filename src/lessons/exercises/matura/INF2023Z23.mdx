@@ -1,0 +1,141 @@
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+<div className="box_link"><a className="link" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka_pliki.zip" >pliki do zadania</a>
+<br/>
+</div>
+
+### TREŚĆ:
+
+Wyrażeniem nawiasowym nazywamy dowolny skończony ciąg nawiasów: „[” i „]”.<br/>
+
+#### Przykładowo: 
+[ [ ] [ ] ]
+
+<br/>
+<b>Wyrażenie nawiasowe jest poprawne</b>, jeśli:
+– jest wyrażeniem pustym (nie zawiera żadnych nawiasów)
+– jest postaci AB, gdzie A i B są poprawnymi wyrażeniami nawiasowymi
+– jest postaci [ A ], gdzie A jest poprawnym wyrażeniem nawiasowym
+<br/><br/>
+
+#### Przykład: 
+wyrażenia [ [ ] ] oraz [ [ ] [ ] ] są poprawne. Niepoprawne jest za to wyrażenie
+[ ] ] [ ] ].
+
+<br/>
+Niech w<sub>1</sub>, w<sub>2</sub>, …, w<sub>n</sub> będą kolejnymi nawiasami w pewnym wyrażeniu nawiasowym W.
+Przyjmijmy teraz, że z każdym nawiasem otwierającym „[” wiążemy liczbę +1, a z każdym
+nawiasem zamykającym „]” – liczbę -1. Niech si będzie liczbą związaną z nawiasem wi.
+Wówczas <b>głębokością nawiasu wk w wyrażeniu W</b> nazywamy sumę:
+S<sub>k</sub> = s<sub>1</sub> + <sub>s2</sub> + … + <sub>k</sub>
+Głębokością wyrażenia W nazwiemy największą głębokość jego nawiasów, czyli maksimum
+z liczb S<sub>k</sub>.
+
+<br/><br/>
+
+### Zadanie 3   (0-3pkt.)
+
+Dane w pliku <i>dane2_3.txt</i> zapisano w oddzielnych wierszach. W każdym wierszu znajduje
+się poprawne wyrażenie nawiasowe złożone z nawiasów kwadratowych (nieoddzielonych
+żadnym znakiem).
+Napisz program, który dla zadanych wyrażeń nawiasowych w pliku <i>dane2_3.txt</i> obliczy
+ich głębokości.
+
+
+<br/>
+<br/>
+
+<Dropdown title="WSKAZÓWKI">
+    <p className={`dropdown_text`}>
+    </p>
+</Dropdown>
+
+<Dropdown title="ODPOWIEDŹ">
+<p className={`dropdown_text`}>
+Dla danych z pierwszych czterech wierszy w pliku dane2_3.txt:<br/></p>
+
+```
+[][][]
+[[[]]]
+[[][][]]
+[[[]]]
+```
+
+<p className={`dropdown_text`}>Odpowiedź</p>
+
+```
+1
+3
+2
+3
+```
+
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYTHON">
+
+```
+def glebokosc(s): #Funkcja badająca głębokość jednego wyrażenia
+    tmp = 0
+    res = 0
+    for i in s:
+        if i == '[':
+            tmp += 1
+            if tmp >= res: res = tmp
+        else:
+            tmp -= 1
+    return str(res)
+
+f = open('dane2_3.txt', 'r')
+x = f.readlines()
+x_new = [i.rstrip('\n') for i in x]
+f.close()
+
+f = open('zadanie2_3.txt', 'w')
+for i in x_new:
+    f.write(glebokosc(i))
+    f.write('\n')
+```
+
+<p className={`dropdown_text`}>
+Rozwiązanie z <a href="http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-2/">http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-2/</a><br/>   
+</p>
+
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
+
+```
+ifstream dane("dane2_3.txt");
+ofstream wynik("zadanie2_3.txt");
+
+string wiersz;
+while (dane >> wiersz) {
+    int suma = 0;
+    int max = 0;
+
+    for (string::size_type i = 0; i < wiersz.size(); i++) {
+        if (wiersz[i] == '[') {
+            suma++;
+            if (suma > max)
+                max = suma;
+        } else
+            suma--;
+    }
+    wynik << max << endl;
+}
+```
+<p className={`dropdown_text`}>
+Rozwiązanie z <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+</p>
+
+</Dropdown>
+
+
+
+
+
+

@@ -1,0 +1,145 @@
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+<div className="box_link"><a className="link" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka_pliki.zip" >pliki do zadania</a>
+<br/>
+</div>
+
+### TREŚĆ:
+
+Wyrażeniem nawiasowym nazywamy dowolny skończony ciąg nawiasów: „[” i „]”.<br/>
+
+#### Przykładowo: 
+[ [ ] [ ] ]
+
+<br/>
+<b>Wyrażenie nawiasowe jest poprawne</b>, jeśli:
+– jest wyrażeniem pustym (nie zawiera żadnych nawiasów)
+– jest postaci AB, gdzie A i B są poprawnymi wyrażeniami nawiasowymi
+– jest postaci [ A ], gdzie A jest poprawnym wyrażeniem nawiasowym
+<br/><br/>
+
+#### Przykład: 
+wyrażenia [ [ ] ] oraz [ [ ] [ ] ] są poprawne. Niepoprawne jest za to wyrażenie
+[ ] ] [ ] ].
+
+<br/>
+Niech w<sub>1</sub>, w<sub>2</sub>, …, w<sub>n</sub> będą kolejnymi nawiasami w pewnym wyrażeniu nawiasowym W.
+Przyjmijmy teraz, że z każdym nawiasem otwierającym „[” wiążemy liczbę +1, a z każdym
+nawiasem zamykającym „]” – liczbę -1. Niech si będzie liczbą związaną z nawiasem wi.
+Wówczas <b>głębokością nawiasu wk w wyrażeniu W</b> nazywamy sumę:
+S<sub>k</sub> = s<sub>1</sub> + <sub>s2</sub> + … + <sub>k</sub>
+Głębokością wyrażenia W nazwiemy największą głębokość jego nawiasów, czyli maksimum
+z liczb S<sub>k</sub>.
+
+<br/><br/>
+
+### Zadanie 4   (0-3pkt.)
+
+Napisz program, który dla wyrażeń nawiasowych zapisanych w pliku <i>dane2_4.txt</i>
+sprawdzi, czy są one poprawne. Dane w pliku zapisano po jednym wyrażeniu w wierszu,
+podobnie jak w pliku o nazwie <i>dane2_3.txt.</i>
+
+
+<br/>
+<br/>
+
+<Dropdown title="WSKAZÓWKI">
+    <p className={`dropdown_text`}>
+    </p>
+</Dropdown>
+
+<Dropdown title="ODPOWIEDŹ">
+<p className={`dropdown_text`}>
+Dla danych z pierwszych czterech wierszy w pliku <i>dane2_4.txt</i>:<br/></p>
+
+```
+[][][]
+[[[]]]
+[[][][]]
+[[[]]]]
+```
+
+<p className={`dropdown_text`}>Odpowiedź</p>
+
+```
+tak
+tak
+tak
+nie
+```
+
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYTHON">
+
+```
+def czy_poprawne(s): #Funkcja bilansująca nawiasy w wyrażeniu
+    bilans = 0
+    for i in s:
+        if i == '[':
+            bilans += 1
+        else:
+            bilans -= 1
+
+        if bilans &lt; 0:
+            return 'nie\n'
+    return 'tak\n'
+
+
+f = open('dane2_4.txt', 'r')
+x = f.readlines()
+x_new = [i.rstrip('\n') for i in x]
+f.close()
+
+f = open('zadanie2_4.txt', 'w')
+for i in x_new:
+    f.write(czy_poprawne(i))
+```
+
+<p className={`dropdown_text`}>
+Rozwiązanie z <a href="http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-2/">http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-2/</a><br/>   
+</p>
+
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
+
+```
+ifstream dane("dane2_4.txt");
+ofstream wynik("zadanie2_4.txt");
+
+string wiersz;
+while (dane >> wiersz) {
+    int balans = 0;
+    bool poprawne = true;
+    for (string::size_type i = 0; i < wiersz.size(); i++) {
+        if (wiersz[i] == '[')
+            balans++;
+        else { // wiersz[i] == ']'
+            balans--;
+            if (balans < 0) {
+                poprawne = false;
+                break;
+            }
+        }
+    }
+    if (poprawne && balans == 0)
+        wynik << "tak\n";
+    else
+        wynik << "nie\n";
+} 
+```
+<p className={`dropdown_text`}>
+Rozwiązanie z <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+</p>
+
+</Dropdown>
+
+
+
+
+
+

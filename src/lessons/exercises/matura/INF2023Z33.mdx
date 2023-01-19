@@ -1,0 +1,125 @@
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+<div className="box_link"><a className="link" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka_pliki.zip" >pliki do zadania</a>
+<br/>
+</div>
+
+
+### TREŚĆ:
+
+Rozważamy przedziały domknięte liczb całkowitych. Każdy taki przedział można opisać parą
+liczb całkowitych [a, b], a ≤ b, w której a oznacza początek przedziału, natomiast b jest jego
+końcem. <br/>
+Do przedziału [a, b] należą wszystkie liczby całkowite c spełniające nierówności a ≤ c ≤ b.
+Liczbę b – a + 1 nazywamy długością przedziału.<br/><br/>
+Dla dwóch przedziałów P i Q mówimy, że <b>P zawiera się w Q</b>, gdy każda liczba z należąca do
+przedziału P należy także do przedziału Q. O przedziale Q mówimy wtedy, że zawiera
+przedział P.<br/><br/>
+<b>Łańcuchem przedziałów</b> nazywamy każdy skończony ciąg przedziałów P1, P2, …, Pk,
+w którym każdy przedział o numerze większym od 1 zawiera przedział go poprzedzający w tym
+ciągu. Liczbę k nazywamy długością łańcucha.<br/><br/>
+
+#### Przykład 1:
+Rozważmy 6 przedziałów: A = [-2,4], B = [-4,3], C = [-3,6], D = [0,3], E = [1,1],
+F = [7,9].<br/>
+Przedział A ma długość 7. Przedział C zawiera przedział A, natomiast przedziały E, D, A, C
+tworzą łańcuch o długości 4.<br/><br/>
+W pliku <i>dane3.txt</i> zapisano 2023 par liczb całkowitych z przedziału [-2023, 2023], po jednej
+parze w wierszu. Para liczb a, b w wierszu opisuje przedział [a, b]. Liczby w wierszu są
+rozdzielone pojedynczym znakiem odstępu, a pierwsza z liczb w parze nigdy nie jest większa
+od drugiej. Wiadomo, że przedziały w pliku <i>dane3.txt</i> się nie powtarzają (w każdym wierszu
+znajduje się inna para liczb) i że nie wszystkie przedziały mają tę samą długość.<br/><br/>
+
+#### Przykład 2:
+Poniższe dane opisują przedziały z przykładu 1:<br/>
+-2 4<br/>
+-4 3<br/>
+-3 6<br/>
+0 3<br/>
+1 1<br/>
+7 9<br/><br/>
+Napisz <b>programy</b> dające odpowiedzi do poniższych zadań.
+
+
+<br/><br/>
+
+### Zadanie 3   (0-3pkt.)
+Oblicz długość najdłuższego łańcucha przedziałów, który można utworzyć z przedziałów
+zapisanych w pliku <i>dane3.txt</i>.
+
+<br/>
+<br/>
+
+<Dropdown title="ODPOWIEDŹ">
+
+```
+29
+```
+
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
+
+```
+struct Przedzial{ // informacja o przedziale
+    int pocz; // początek przedziału
+    int kon; // koniec przedziału
+    int dlugosc; // długość najdłuższego łańcucha, którego początkiem jest ten przedział
+    Przedzial (int pocz, int kon, int dlugosc): pocz (pocz), kon (kon), dlugosc (dlugosc) {}
+};
+
+bool zawierasie (Przedzial e1, Przedzial e2) { // czy e1 zawiera się w e2
+    return e2.pocz <= e1.pocz && e1.kon <= e2.kon;
+}
+bool krotszy (Przedzial e1, Przedzial e2) {
+    return (e1.kon - e1.pocz) < (e2.kon - e2.pocz);
+}
+
+int main () {
+    ifstream dane("dane3.txt");
+    ofstream wynik("zadanie3_3.txt");
+    
+    vector<Przedzial> przedzialy;
+    int pocz, kon;
+ 
+    // wczytujemy dane
+    while (dane >> pocz >> kon)
+        przedzialy.push_back (Przedzial (pocz, kon, 1));
+// początkowo najdłuższy znaleziony łańcuch zaczynający się w [pocz, kon]
+// składa się wyłącznie z tego przedziału, więc ma długość 1
+// sortujemy przedziały względem długości
+ sort(przedzialy.begin(), przedzialy.end(), krotszy);
+
+// dla przedziałów tej samej długości kolejność obojętna, bo nie zawierają się w sobie
+// dla i-tego przedziału liczymy maksymalną dł. łańcuchów o początku w tym przedziale
+for (vector<Przedzial>::size_type i = 1; i < przedzialy.size(); i++)
+// Maksymalne długości łańcuchów zaczynających się od przedziałów krótszych niż i-ty
+// zostały wyznaczone w poprzednich obrotach pętli
+for (vector<Przedzial>::size_type j = 0; j < i; j++)
+    // przeglądamy wszystkie przedziały nie dłuższe niż i-ty
+    if (zawierasie(przedzialy[j], przedzialy[i]))
+        // sprawdzamy, czy można i warto dodać łańcuch o początku w j-ty przedziale
+        //do łańcucha zaczynającego się od i-tego przedziału
+        if (przedzialy[i].dlugosc < przedzialy[j].dlugosc + 1)
+            przedzialy[i].dlugosc = przedzialy[j].dlugosc + 1;
+// Znajdujemy największą długość łańcucha
+
+int maks = 1;
+for (Przedzial& elt: przedzialy)
+    if (elt.dlugosc > maks)
+        maks = elt.dlugosc;
+        
+// Wypisujemy najlepszy
+wynik << maks << endl;
+}
+
+```
+<p className={`dropdown_text`}>
+Rozwiązanie z <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+</p>
+
+</Dropdown>
+

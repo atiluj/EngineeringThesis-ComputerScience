@@ -1,0 +1,181 @@
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+<div className="box_link"><a className="link" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/materialy_dodatkowe/pokazowe/Informatyka/MINP-R0-100-2203.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/materialy_dodatkowe/pokazowe/Informatyka/Dane_2203.zip" >pliki do zadania</a>
+<br/>
+</div>
+
+### TREŚĆ:
+
+<b>Uwaga:</b> do rozwiązania zadań 1.1.–1.3. nie jest potrzebna znajomość reguł gry w szachy.<br/>
+W pliku szachy.txt znajduje się zapis partii szachów, jaką w 2020 roku rozegrali polski
+arcymistrz Jan Krzysztof Duda oraz mistrz świata Magnus Carlssen. Zapis partii składa się
+z opisów 125 plansz przedstawiających stany gry (położenie bierek na szachownicy) po
+kolejnych posunięciach każdego z graczy. Opis każdej planszy składa się z:<br/>
+• 8 wierszy tekstu po 8 znaków w każdym wierszu<br/>
+• kolejne znaki w wierszach oznaczają:<br/>
+<pre>   − znak '.' − puste pole</pre>  
+<pre>   − wielkie litery − białe bierki (czyli białe figury i pionki)</pre>  
+<pre>   − małe litery − czarne bierki</pre>  
+<pre>   − oznaczenia bierek to:</pre> 
+<pre>        − K/k − król, </pre> 
+<pre>        − H/h − hetman,</pre> 
+<pre>        − W/w − wieża,</pre> 
+<pre>        − G/g − goniec,</pre> 
+<pre>        − S/s − skoczek, </pre> 
+<pre>        − P/p − pionek.</pre> 
+<br/>
+Dla zachowania czytelności, po każdym opisie następuje pojedynczy pusty wiersz. W dalszej
+części, zamiast „opis planszy”, będziemy pisać krótko „plansza”.<br/><br/>
+
+#### Przykład:<br/>
+
+```
+wsghkgsw
+pppppppp
+........
+........
+....P...
+........
+PPPP.PPP
+WSGHKGSW
+wsghkgsw
+pp.ppppp
+..p.....
+........
+....P...
+........
+PPPP.PPP
+WSGHKGSW
+wsghkgsw
+pppppppp
+........
+........
+....P...
+........
+PPPP.PPP
+WSGHKGSW
+wsghkgsw
+pp.ppppp
+..p.....
+........
+....P...
+........
+PPPP.PPP
+WSGHKGSW
+```
+<br/>
+
+Dwie podane wyżej przykładowe plansze odpowiadają następującym stanom gry:<br/>
+![](https://i.imgur.com/QDpW7Wf.png) ![](https://i.imgur.com/R1uNeAN.png)
+
+<br/>
+
+Napisz <b>program(-y)</b>, który(-e) znajdzie(-dą) odpowiedzi do poniższych zadań.
+Do Twojej dyspozycji jest plik 'szachy_przyklad.txt', który zawiera 9 plansz zapisanych
+w podanym wyżej formacie. Odpowiedzi dla pliku 'szachy_przyklad.txt' podano w treści
+poszczególnych zadań. Pamiętaj, że Twój(-e) program(-y) musi(-szą) działać dla 125 plansz.
+
+<br/><br/>
+
+### Zadanie 1   (0-3pkt.)
+
+Podaj, na ilu planszach znajduje się przynajmniej jedna pusta kolumna, czyli taka, na polach
+której nie stoi żadna bierka. Podaj także największą liczbę pustych kolumn na jednej z tych
+plansz. <br/>
+
+Odpowiedź dla pliku szachy_przyklad.txt:
+```
+7 5
+```
+
+(7 plansz z pustymi kolumnami, największa liczba pustych kolumn na planszy − 5). 
+<br/>
+
+
+![](https://i.imgur.com/oQma1un.png)
+
+
+<br/>
+<br/>
+
+<Dropdown title="WSKAZÓWKI">
+    <p className={`dropdown_text`}>
+    </p>
+</Dropdown>
+
+<Dropdown title="ODPOWIEDŹ">
+
+```python
+36 3
+```
+
+<p className={`dropdown_text`}>
+    36 plansz z pustymi kolumnami, największa liczba pustych kolumn – 3
+</p>
+
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYHTON">
+
+```python
+#Wczytujemy plik
+plik = open('szachy.txt', 'r')
+lista = plik.readlines()
+plik.close()
+#Usuwanie znaków niedrukowanych z listy
+lista_new = [i.rstrip('\n') for i in lista]
+
+#Funkcja sprawdzająca liczbę pustych kolumn na jednej planszy
+def pusteKolumny(lista):
+    count = 0
+    for i in range(8): #Chodzenie po wierszach
+        pusta = True
+        for j in range(8): #Chodzenie po kolumnach
+            if lista[j][i] != ".":
+                pusta = False
+                break
+        if pusta == True:
+            count += 1
+    return count
+
+#Tworzenie listy, której każdy element to plansza (8 list)
+plansze = []
+tmp = []
+k = 1
+for i in lista_new:
+    if i != "":
+        tmp.append(i)
+        k += 1
+    if k == 9:
+        plansze.append(tmp)
+        tmp = []
+        k = 1
+
+#Wyznaczanie liczby plansz z pustymi kolumnami (total)
+#oraz największej liczby pustych kolumn na planszy (max)
+
+max = 0
+total = 0
+for i in plansze:
+    if pusteKolumny(i) != 0: total += 1
+    if pusteKolumny(i) &gt; max: max = pusteKolumny(i)
+
+wynik = str(total) + " " + str(max)
+
+#Zapisywanie odpowiedzi do pliku
+plik = open('zadanie1_1.txt', 'w')
+plik.write(str(wynik))
+plik.close()
+```
+
+<p className={`dropdown_text`}>
+    rozwiązanie z <a href="http://pythonwszkole.pl/python-na-maturze/arkusz-pokazowy-2023-zadanie-1-szachy/">http://pythonwszkole.pl/python-na-maturze/arkusz-pokazowy-2023-zadanie-1-szachy/</a>
+</p>
+
+</Dropdown>
+
+
+

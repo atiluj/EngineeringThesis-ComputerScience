@@ -64,21 +64,22 @@ Dla pliku przyklad.txt długością napisu jest liczba 10.
 
 <Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
-    ```python
-    def zad_4_1(wejscie):
-    suma = 0
-    for linia in wejscie:
-        instrukcja = linia.split()[0]
-        if instrukcja == 'DOPISZ':
-            suma+=1
-        if instrukcja == 'USUN':
-            suma-=1
-        if instrukcja == 'ZMIEN':
-            pass
-        if instrukcja == 'PRZESUN':
-            pass
-    return suma
-    ```
+```python
+def zad_4_1(wejscie):
+suma = 0
+for linia in wejscie:
+    instrukcja = linia.split()[0]
+    if instrukcja == 'DOPISZ':
+        suma+=1
+    if instrukcja == 'USUN':
+        suma-=1
+    if instrukcja == 'ZMIEN':
+        pass
+    if instrukcja == 'PRZESUN':
+        pass
+return suma
+```
+
 <p className={`dropdown_text`}>
  Pętla for służy do przejścia po każdej lini pliku wejściowego.
  Natępnie z każdej lini wyłuskujemy pierwsze słowo, którem według instrukcji jest
@@ -90,16 +91,17 @@ Dla pliku przyklad.txt długością napisu jest liczba 10.
 Aby sprawdzić poprawność kodu możemy przeprowadzić test na podanym pliku tesktowym i sprawdzić zgodność odpowiedzi.
 </p>
 
-    ```python
-    dane = []
+```python
+dane = []
 
-    with open('DANE_2105/przyklad.txt') as plik:
-        for wiersz in plik:
-            wiersz = wiersz.strip()
-            dane.append(wiersz)
+with open('DANE_2105/przyklad.txt') as plik:
+    for wiersz in plik:
+        wiersz = wiersz.strip()
+        dane.append(wiersz)
 
-    zad_4_1(dane)
-    ```
+zad_4_1(dane)
+```
+
 <p className={`dropdown_text`}>
 Zmienna 'dane' to lista, która będzie składała się wierszy pliku. 
 Po przejściu przez plik i dodanie to tej zmiennej każdej lini, wywołamy napisaną
