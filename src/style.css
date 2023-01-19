@@ -246,3 +246,14 @@ img.section_logo {
   .dropdown_text {
     padding: 0.7rem 1rem;
 }
+
+
+/* do testów tabelki z quizem */
+
+.correct:hover{
+    background-color: green;
+}
+
+.incorrect:hover{
+    background-color: red;;
+}

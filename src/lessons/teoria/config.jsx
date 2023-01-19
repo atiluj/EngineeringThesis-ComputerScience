@@ -1,11 +1,24 @@
 import Wskazowki from './wskazowki.mdx';
 import KomputerIJegoCzesci from './komputer-i-jego-czesci.mdx';
+import ZadaniaKomputer from './zadaniaKomputer.mdx';
+
+
+import ZadaniaLiczby from './zadaniaLiczby.mdx';
 
 import Warstwy from './sieciWarstwy.mdx';
+import Protokoly from './protokoly.mdx';
+import ZadaniaSieci from './zadaniaSieci.mdx';
 
 import Barwy from './barwy.mdx';
 import FormatyGrafiki from './formatyGrafiki.mdx';
 import ZadaniaGrafika from './zadaniaGrafika.mdx';
+
+import ZadaniaPrawo from './zadaniaPrawo.mdx';
+
+import ZadaniaPseudokod from './zadaniaPseudokod.mdx';
+
+import ZadaniaAlgorytmy from './zadaniaAlgorytmy.mdx';
+import ZadaniaSzyfrowanie from './zadaniaSzyfrowanie.mdx';
 
 
 const TeoriaLessons = [
@@ -14,6 +27,7 @@ const TeoriaLessons = [
     {name: "Komputer", subchapters: [
         {name: "Komputer i jego części", content: <KomputerIJegoCzesci />},
         {name: "System operacyjny", content: null},
+        {name: "Zadania maturalne", content: <ZadaniaKomputer/>},
     ]},
 
     {name: "Systemy liczbowe", subchapters: [
@@ -26,15 +40,17 @@ const TeoriaLessons = [
         {name: "Dwójkowy - Ósemkowy", content: null},
         {name: "Dwójkowy - Szesnastkowy", content: null},
         {name: "Ósemkowy - Szesnastkowy", content: null},
+        {name: "Zadania maturalne", content: <ZadaniaLiczby/>},
     ]},
 
     {name: "Sieci komputerowe", subchapters: [
         {name: "Terminologia", content: null},
         {name: "Topologia sieci", content: <Warstwy/>},
-        {name: "Protokół IP", content: null},
+        {name: "Protokoły", content: <Protokoly/>},
         {name: "Adresy IP", content: null},
         {name: "Maski podsieci", content: null},
         {name: "Adresy sieci", content: null},
+        {name: "Zadania maturalne", content: <ZadaniaSieci/>},
     ]},
 
     {name: "Grafika komputerowa", subchapters: [
@@ -47,12 +63,14 @@ const TeoriaLessons = [
         {name: "Zagadnienia przestępczości komputerowej", content: null},
         {name: "Licencje", content: null},
         {name: "Normy prawe", content: null},
+        {name: "Zadania maturalne", content: <ZadaniaPrawo/>},
     ]},
 
     {name: "Pseudokod", subchapters: [
         {name: "Schematy blokowe", content: null},
         {name: "Lista kroków", content: null},
         {name: "Za pomocą Python", content: null},
+        {name: "Zadania maturalne", content: <ZadaniaPseudokod/>},
     ]},
 
     {name: "Złożoność", subchapters: [
@@ -68,6 +86,8 @@ const TeoriaLessons = [
 
     {name: "Algorytmy", subchapters: [
         {name: "Odwrotna notacja polska", content: null},
+        {name: "Zadania maturalne", content: <ZadaniaSzyfrowanie/>},
+        {name: "Zadania maturalne", content: <ZadaniaAlgorytmy/>},
     ]},
 ];
 

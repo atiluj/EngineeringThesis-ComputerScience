@@ -23,6 +23,9 @@ import Zapytania from './zapytania.mdx';
 
 import ZadaniaNowe from './zadaniaNowe.mdx';
 
+import ZadaniaBazy from './zadaniaBazy.mdx'; 
+import ZadaniaAccess from './zadaniaAccess.mdx'; 
+
 
 const AccessLessons = [
     {name: "Wskazówki", content: <Wskazowki />},
@@ -62,11 +65,12 @@ const AccessLessons = [
     ]},
 
     {name: "Zadania Access", subchapters: [
-        {name: "Zadania z nowej formuły (od 2023)", content: <ZadaniaNowe/>},
+        {name: "Zadania z nowej formuły (od 2023)", content: <ZadaniaAccess/>},
     ]},
 
-    {name: "Zadania SQL", subchapters: [
+    {name: "Zadania SQL i teoria baz", subchapters: [
         {name: "Zadania z nowej formuły (od 2023)", content: <ZadaniaNowe/>},
+        {name: "Zadania maturalne", content: <ZadaniaBazy/>},
     ]},
 ];
 
