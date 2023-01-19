@@ -51,7 +51,8 @@
     --main-accent: #692e8a;
     --accent: #A230ED;
     --slider: black;
-    --nav-button-hover: #1616172b;;
+    --nav-button-hover: #1616172b;
+    ;
     --exercise-secondary: #231366;
     --exercise-secondary2: #140452;
     --gradient: linear-gradient(to left, #9d3dd4, #6d13a8, #6609c4, #4609b9);
@@ -71,7 +72,7 @@
 }
 
 /* for dark mode */
-.main_content .second p img{
+.main_content .second p img {
     filter: var(--screen_filter);
 }
 
@@ -82,27 +83,28 @@
     filter: var(--screen_filter);
 }
 
-.logo_img{
+.logo_img {
     fill: var(--font);
 }
 
-ol, ul{
+ol,
+ul {
     margin-left: 1rem;
 }
 
-.main_content .second img.super_small_img{
+.main_content .second img.super_small_img {
     max-width: 30%;
 }
 
-.main_content .second img.small_img{
+.main_content .second img.small_img {
     max-width: 50%;
 }
 
-.main_content .second img.medium_img{
+.main_content .second img.medium_img {
     max-width: 60%;
 }
 
-.main_content .second img.big_img{
+.main_content .second img.big_img {
     max-width: 70%;
 }
 
@@ -110,10 +112,11 @@ ol, ul{
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*jeśli coś sie pierdoli to może by to to*/
+    box-sizing: border-box;
+    /*jeśli coś sie pierdoli to może by to to*/
 }
 
-body{
+body {
     overflow: overlay;
 }
 
@@ -123,7 +126,8 @@ html {
     line-height: 1.6;
 }
 
-ol, ul{
+ol,
+ul {
     margin-left: 1rem;
 }
 
@@ -144,7 +148,7 @@ img.section_logo {
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
     color: var(--primary);
-    
+
     margin-bottom: 3px;
     letter-spacing: 1px;
     text-decoration: none;
@@ -162,15 +166,15 @@ img.section_logo {
     background-color: var(--nav-button-hover);
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
 
-.box_link{
+.box_link {
     text-align: right;
 }
 
-.link{
+.link {
     color: var(--font);
     font-weight: 500;
     text-transform: uppercase;
@@ -178,7 +182,7 @@ img.section_logo {
     letter-spacing: .5px;
 }
 
-.link:hover{
+.link:hover {
     color: var(--link-hover);
 }
 
@@ -235,14 +239,20 @@ img.section_logo {
 .color_marked_text {
     color: var(--accent);
     font-weight: bold;
-  }
-  
-  .sql_table tr td,
-  .sql_table tr th {
+}
+
+.sql_table {
+    border-collapse: collapse;
+}
+
+.sql_table tr td,
+.sql_table tr th {
     padding: 5px;
     padding-right: 10px;
-  }
+    border: 1px solid black;
 
-  .dropdown_text {
+}
+
+.dropdown_text {
     padding: 0.7rem 1rem;
 }
