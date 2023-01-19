@@ -87,19 +87,19 @@ export default function TableQuiz(props) {
         <table border rules="all" frame="box">
             {props.questions.map((question, index) =>
                 <tr>
-                    <td>{question}</td>
-                        <td>
-                            <label className={styles.label}>
-                                <input type="radio" name={index} className={styles.input} value={1} onChange={handleRadioChange}/>
-                                <span>P</span>
-                            </label>
-                        </td>
-                        <td>
-                            <label className={styles.label}>
-                                <input type="radio" name={index} className={styles.input} value={0} onChange={handleRadioChange}/>
-                                <span>F</span>
-                            </label>
-                        </td>
+                    <td className={styles.question}>{question}</td>
+                    <td className={styles.answer}>
+                        <label className={styles.label}>
+                            <input type="radio" name={index} className={styles.input} value={1} onChange={handleRadioChange}/>
+                            <div>P</div>
+                        </label>
+                    </td>
+                    <td className={styles.answer}>
+                        <label className={styles.label}>
+                            <input type="radio" name={index} className={styles.input} value={0} onChange={handleRadioChange}/>
+                            <div>F</div>
+                        </label>
+                    </td>
                 </tr>
             )}
         </table>
