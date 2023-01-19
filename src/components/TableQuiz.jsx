@@ -1,14 +1,9 @@
 import * as React from 'react';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
-import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 import styles from "./TableQuiz.module.css";
 import "../style.css";
-import { style } from '@mui/system';
 
 export default function TableQuiz(props) {
   const [values, setValues] = React.useState(new Array(props.questions.length).fill(null));
@@ -46,44 +41,24 @@ export default function TableQuiz(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    event.target.className=styles.filled;
-    console.log(event.target);
-    
-    // if (values == props.answers) {
-    //     console.log("git");
-    // } else {
-    //     console.log("chujowo");
-    // }
-    // if (!value) {
-    //   setHelperText('Wybierz odpowiedź.');
-    //   setError(true);
-    // } else if (value === props.correct) {
-    //   setHelperText('Poprawna odpowiedź!');
-    //   setError(false);
-    // } else {
-    //   setHelperText('Błędna odpowiedź');
-    //   setError(true);
-    // }
+    if (values.includes(null)) {
+        setHelperText("Zaznacz wszystkie odpowiedzi");
+        setError(true);
+    } else {
+        event.target.className=styles.filled;
+        if (props.answers.toString() === values.toString()) {
+            setHelperText("1 punkt!");
+            setError(false);
+        } else {
+            setHelperText("0 punktów");
+            setError(true);
+        }
+    }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <FormControl sx={{ m: 3 }} variant="standard">
-        {/* <FormLabel>{props.question}</FormLabel>
-        <RadioGroup
-          name="quiz"
-          value={value}
-          onChange={handleRadioChange}
-        >
-            {props.answers.map((answer) =>
-                <FormControlLabel
-                    value={answer}
-                    control={<Radio/>}
-                    label={answer}
-                />
-            )}
-        </RadioGroup>
-        <FormHelperText error={error}>{helperText}</FormHelperText> */}
         <table border rules="all" frame="box">
             {props.questions.map((question, index) =>
                 <tr>
@@ -103,7 +78,7 @@ export default function TableQuiz(props) {
                 </tr>
             )}
         </table>
-
+        <FormHelperText error={error}>{helperText}</FormHelperText>
         <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
           Sprawdź odpowiedź
         </Button>
@@ -111,21 +86,3 @@ export default function TableQuiz(props) {
     </form>
   );
 }
-
-/* <table className="sql_table"  border rules="all" frame="box">
-<tr>
-    <td>czy nikola jest fajna</td>
-    <td><button className="correct">tak</button></td>
-    <td><button className="incorrect">nie</button></td>
-</tr>
-<tr>
-    <td>czy julita jest fajna</td>
-    <td><button className="correct">tak</button></td>
-    <td><button className="incorrect">nie</button></td>
-</tr>
-<tr>
-    <td>czy pawel karas zle wyglada w marynarce</td>
-    <td><button className="incorrect">tak</button></td>
-    <td><button className="correct">nie</button></td>
-</tr>
-</table> */
