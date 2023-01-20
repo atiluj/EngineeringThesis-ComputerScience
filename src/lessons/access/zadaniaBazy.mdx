@@ -112,6 +112,30 @@ oraz zapytanie SQL:
     answers={[0, 1, 1, 0]}
 />
 
+## Zadanie 7 (0-1pkt.)
+(maj 2021 część 1 zadanie 3.2)
+
+### TREŚĆ
+W bazie danych istnieje tabela `produkty(id_produktu, produkt, sztuk, cena)`, zawierająca
+następujące dane: 	
+<img src={new URL('https://i.imgur.com/QKo7ulX.png', import.meta.url)} alt="xyz" className={`medium_img left_img`} />
+oraz zapytanie SQL:
+<p>
+    SELECT * <br/>
+    FROM pracownicy <br/>
+    WHERE pensja  (mniejsze niż) 2000 <br/>
+    ORDER BY staz DESC; 
+</p>
+
+<TableQuiz 
+    questions={
+      [<p>Wynik powyższego zapytania to 3</p>, 
+      <img src={new URL('https://i.imgur.com/TDosuSg.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
+      <p>Wynikiem zapytania będą wiersze z tabeli ``pracownicy``, zawierające wszystkie dane z tej tabeli dotyczące pracowników, dla których wartość z kolumny ``pensja`` jest mniejsza niż 2000, posortowane nierosnąco według parametru ``staz``. </p>, 
+      <img src={new URL('https://i.imgur.com/Xf2xIf7.png', import.meta.url)} alt="xyz" className={`small_img`} />]} 
+    answers={[0, 1, 1, 0]}
+/>
+
 
 
 
