@@ -1,0 +1,128 @@
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+<div className="box_link"><a className="link" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka_pliki.zip" >pliki do zadania</a>
+<br/>
+</div>
+
+### TREŚĆ:
+W pliku dane6.txt zapisano 2023 napisy. W każdym wierszu jest jeden napis. Każdy napis
+ma długość 100 i składa się tylko z cyfr dziesiętnych 0,1, …, 9. Nie ma napisu składającego
+się tylko z zer.<br/>
+Dla liczby całkowitej p spełniającej warunek 2 ≤ p ≤ 10, powiemy, że złożony z samych cyfr
+napis jest p-minimalny, jeśli zawiera cyfrę p - 1 i nie zawiera cyfr większych od p - 1. Czyli
+będzie tak, gdy p jest najmniejszą podstawą systemu pozycyjnego, w którym taki napis da się
+zinterpretować jako pewną liczbę całkowitą.
+
+<br/><br/>
+
+#### Przykład:
+Oto plik złożony z 5 napisów, każdy o długości 10 i zbudowany z cyfr 0 .. 9:
+```
+2001030035
+0010100001
+7111190009
+5550001110
+0000000005
+```
+
+<br/><br/>
+
+### Zadanie 1   (0-pkt.)
+
+Dla każdego p = 2, 3, …, 10, napisz, ile liczb z pliku dane6.txt jest p-minimalnych.
+Przykład:
+Dla przykładowego pliku mamy:
+<br/>
+<table className="sql_table" border rulse="all" frame="box">
+    <tr>
+      <th>Podstawa p</th> 
+      <th>Liczba liczb p-minimalnych</th>
+    </tr>
+    <tr>
+      <td>2</td> 
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>3</td> 
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>4</td> 
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>5</td> 
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>6</td> 
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>7</td> 
+      <td>0</td>
+    </tr>    
+    <tr>
+      <td>8</td> 
+      <td>0</td>
+    </tr>    
+    <tr>
+      <td>9</td> 
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>10</td> 
+      <td>1</td>
+    </tr>
+</table>
+<br/>
+
+#### Odpowiedź:
+![](https://i.imgur.com/Jegx5TV.png)
+
+<br/>
+
+### Zadanie 2   (0-pkt.)
+
+
+<br/><br/>
+
+### Zadanie 3   (0-pkt.)
+
+
+<br/><br/>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE">
+    <p className={`dropdown_text`}>
+        BLA BLA ROZWIĄZANIE
+    </p>
+</Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE W C++">
+<img src={new URL('https://i.imgur.com/Lc1KQKk.png', import.meta.url)} alt="xyz" className={`big_img`} />
+<br/><br/>
+    ifstream plik('dane6.txt');
+    const int n = 2023;
+    const int dl = 100;
+
+    int c[10]= {0,0,0,0,0,0,0,0,0,0};
+    string s;
+    int max;
+    for (int i=0; i < n; i++){
+        plik >> s;
+        max = 0;
+        for (int j=0; j<dl; j++)
+        {
+            int t = s[j]-'0';
+            if (t > max)
+                max=t;
+        }
+        c[max]++;
+    }
+    for (int i=1; i < 10; i++)
+        cout << i+1 << " " << c[i] << endl; 
+</Dropdown>
+

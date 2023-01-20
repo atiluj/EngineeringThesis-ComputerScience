@@ -6,9 +6,14 @@ W Pythonie istnieje kilka podstawowych struktur danych, z którymi zapoznamy si�
 ## Lista (list)
 Wcześniej zdefiniowaliśmy pojęcie zmiennej jako pudełka. W takim razie, **listę** możemy możemy sobie wyobrazić jako zestaw takich pudełek, ułożonych obok siebie w ustalonej kolejności. Pozwala nam ona przechowywać wiele obiektów w jednym miejscu.
 
+<img src={new URL('../../img/python_pudelka.png', import.meta.url)} alt="lista jako zestaw pudełek" className={`big_img`}/>
+
 Listę tworzymy za pomocą nawiasów kwadratowych **[]**, w których umieszczamy kolejne elementy, poodzielane przecinkami. Co istotne, lista może przechowywać elementy o różnych typach. 
 
 ```python
+>>> lista = [3, 15, -5, 24, 3]
+>>> lista 
+[3, 15, -5, 24, 3]
 >>> lista = ['Ala', 10, 'Ola', True, 10]
 >>> lista 
 ['Ala', 10, 'Ola', True, 10]
@@ -16,9 +21,6 @@ Listę tworzymy za pomocą nawiasów kwadratowych **[]**, w których umieszczamy
 <class 'list'>
 ```
 <br/>
-:::info 
-TU WSTAW OBRAZEK Z PUDEŁKAMI
-::: <br/><br/>
 
 Każdy element w liście jest numerowany kolejno od 0. Ten numer przy każdym pudełku nazywamy **indeksem** - wskazuje on pozycję elementu w liście. 
 
@@ -48,38 +50,36 @@ Sama funkcja **list()** służy również do zmiany innej struktury danych, np. 
 ### Więcej o indeksowaniu
 Elementy w liście nie są numerowane tylko od przodu (od 0), ale również od tyłu .
 
-:::info 
-TU WRZUĆ OBRAZEK Z INDEKSAMI
-:::
+<img src={new URL('../../img/python_samochody.png', import.meta.url)} alt="lista jako zestaw pudełek" className={`big_img`}/>
 
 ```python
->>> lista = ['Ala', 10, 'Ola', True, 10]
->>> lista[-1]
-10
->>> lista[-5]
-'Ala'
+>>> samochody = ['pomarańczowy', 'fioletowy', 'pomarańczowy', 'czerwony', 'zielony']
+>>> samochody[-1]
+'zielony'
+>>> samochody[-5]
+'pomarańczowy'
 ```
 
 Musimy uważać na to, żeby przypadkiem nie odwołać się do nieistniejącego indeksu:
 
 ```python!
->>> lista[5]
+>>> samochody[5]
 IndexError: list index out of range
->>> lista[10]
+>>> samochody[-10]
 IndexError: list index out of range
 ```
 
 ### List slicing
 Poza tym, że za pomocą indeksów możemy dostać się do jednego wybranego elementu, to możemy również "wyciąć" jej kawałek, czyli wyciągnąć z niej dane z podanego zakresu:
 ```python!
->>> lista[0:2]
-['Ala', 10]
+>>> samochody[0:2]
+['pomarańczowy', 'fioletowy']
 ```
 
 W powyższym przykładzie wycięliśmy fragment listy zaczynający się od indeksu 0 (włącznie), a kończący na indeksie 2 (z wyłączeniem tego indeksu). 
 
 Składnia takiego wycinania wygląda następująco:
-**lista[ indeks_poczatkowy : indeks_końcowy : krok ]**
+**nazwa_listy [ indeks_poczatkowy : indeks_końcowy : krok ]**
 Jeżeli nie podamy indeksu początkowego, to domyślnie zakres będzie ustawiony na początek listy, a jeżeli końcowego, to na koniec listy. 
 Krok mówi nam o tym, co który element z listy wyciągamy.
 ```python
@@ -226,18 +226,14 @@ Aby zliczyć ile razy jakiś element wystąpił w liście używamy **count()**:
 0
 ```
 
-## Funkcje wbudowane!!!
-Teraz opowiemy o trzech przydatnych funkcjach wbudowanych, których można używać zarówno na listach, jak i na krotkach:
+## Funkcje wbudowane
+Teraz opowiemy o trzech przydatnych funkcjach wbudowanych, których można używać na listach:
 
 Funkcja **len()** zwraca długość podanej struktury
 ```python
 >>> liczby = [1, 2, 3, 4]
 >>> len(liczby)
 4
-
->>> dni_wolne = ('sobota', 'niedziela')
->>> len(dni_wolne)
-2
 ```
 **min()** zwraca najmniejszy element w strukturze
 ```python
@@ -247,13 +243,13 @@ Funkcja **len()** zwraca długość podanej struktury
 ```
 Z kolei funkcja **max()** zwraca największy element
 ```python
->>> liczby = (10, 2, 1, 15, 8)
+>>> liczby = [10, 2, 1, 15, 8]
 >>> max(liczby)
 15
 ```
 
 ## Listy dwuwymiarowe
-Powiedzieliśmy, że listy i krotki mogą zawierać dowolne obiekty. Skoro tak, to mogą zawierać także inne listy i krotki! 
+Powiedzieliśmy, że listy  mogą zawierać dowolne obiekty. Skoro tak, to mogą zawierać także inne listy! 
 ```python
 >>> lista = [1, [20, 30, 40], 5]
 >>> lista[1]
@@ -263,7 +259,7 @@ Powiedzieliśmy, że listy i krotki mogą zawierać dowolne obiekty. Skoro tak, 
 (1, 2)
 ```
 
-W takim razie w prosty sposób możemy utworzyć listę dwuwymiarową!
+W takim razie w prosty sposób możemy utworzyć listę dwuwymiarową:
 ```python
 >>> lista = [[11, 21, 31], [12, 22, 32], [13, 23, 33]]
 >>> lista[1]

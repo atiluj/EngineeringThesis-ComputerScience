@@ -1,0 +1,111 @@
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+<div className="box_link"><a className="link" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka_pliki.zip" >pliki do zadania</a>
+<br/>
+</div>
+
+### TREŚĆ:
+
+<b>Segmentem</b> nazwiemy spójny ciąg elementów tablicy składający się z <b>co najmniej</b> 1 elementu.
+
+#### Przykład: 
+dla tablicy A = [1, 8, 4, 2, 7, 9] segmentami są ciąg 1,8,4 oraz ciąg 8,4,2,7, natomiast
+nie jest segmentem ciąg 8,2,7,9 (bo w tablicy A pomiędzy liczbą 8 a liczbą 2 jest liczba 4).
+
+<br/><br/>
+
+### Zadanie 3   (0-3pkt.)
+
+Elementy pewnej 1000-elementowej tablicy A zapisano kolejno w pliku dane1_3.txt.
+Każda z liczb w pliku dane1_3.txt należy do przedziału od [-100, 100] i jest zapisana
+w oddzielnym wierszu. <br/>
+Napisz program wyznaczający największą sumę segmentu tablicy A.
+
+<br/>
+<br/>
+
+<Dropdown title="WSKAZÓWKI">
+    <p className={`dropdown_text`}>
+    </p>
+</Dropdown>
+
+<Dropdown title="ODPOWIEDŹ">
+
+```
+2265
+```
+
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYTHON">
+
+```
+plik = open('dane1_3.txt', 'r')
+lista = plik.readlines()
+plik.close()
+
+lista_new = [int(i.rstrip('\n')) for i in lista]
+print(lista_new)
+
+#-----Algorytm Kaden'a-----
+wynik = 0
+suma_chwilowa = 0
+
+for i in lista_new:
+    suma_chwilowa = max(0, suma_chwilowa + i)
+    wynik = max(suma_chwilowa, wynik)
+#--------------------------
+
+print(wynik)
+
+plik = open('zadanie1_3.txt', 'w')
+plik.write(str(wynik))
+plik.close()
+```
+<p className={`dropdown_text`}>
+Rozwiązanie z <a href="http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-1-segment/">http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-1-segment/</a><br/>   
+</p>
+
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
+
+```
+ifstream plik("dane1_3.txt");
+ofstream wynik("zadanie1_3.txt");
+const int n = 1000;
+int t[n];
+for (int i = 0; i < n; i++)
+    plik >> t[i];
+int max = -100;
+for (int dl = n; dl >= 1; dl--) {
+    for (int pocz = 0; pocz <= n - dl; pocz++) {
+        int suma = 0;
+        for (int k = 0; k < dl; k++)
+            suma += t[k + pocz];
+        if (suma > max)
+            max = suma;
+    }
+}
+wynik << max << endl;
+```
+<p className={`dropdown_text`}>
+Rozwiązanie z <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+
+Powyższy program przykładowy ma złożoność sześcienną. Można napisać programy
+o znacznie lepszej (kwadratowej, a nawet liniowej) złożoności, ale ten program jest bardzo
+prosty i wynika wprost z definicji problemu, a dla danych z pliku dane1_3.txt jest
+wystarczająco szybki.
+    
+</p>
+
+</Dropdown>
+
+
+
+
+
+

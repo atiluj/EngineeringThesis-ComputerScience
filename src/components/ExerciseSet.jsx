@@ -54,6 +54,12 @@ function ExerciseSet() {
                 <Link to="/exercise/14" className={`${styles.list_element}`}><pre>MATURA <b>2019</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/15" className={`${styles.list_element}`}><pre>MATURA <b>2019</b> ZAD. 3</pre></Link>
                 <Link to="/exercise/16" className={`${styles.list_element}`}><pre>MATURA <b>2020</b> ZAD. 1</pre></Link>
+                <Link to="/exercise/23" className={`${styles.list_element}`}><pre>MATURA <b>2022</b> ZAD. 1</pre></Link>
+                <Link to="/exercise/24" className={`${styles.list_element}`}><pre>MATURA <b>2022</b> ZAD. 2</pre></Link>
+                <Link to="/exercise/25" className={`${styles.list_element}`}><pre>MATURA <b>2022</b> ZAD. 3</pre></Link>
+                <Link to="/exercise/37" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 3.1</pre></Link>
+                <Link to="/exercise/38" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 3.2</pre></Link>
+                <Link to="/exercise/39" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 3.3</pre></Link>
             </div>
 
             <div className={styles.category}>DZIAŁANIA NA STRINGACH</div>
@@ -67,6 +73,10 @@ function ExerciseSet() {
                 <Link to="/exercise/20" className={`${styles.list_element}`}><pre>MATURA <b>2021</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/21" className={`${styles.list_element}`}><pre>MATURA <b>2021</b> ZAD. 3</pre></Link>
                 <Link to="/exercise/22" className={`${styles.list_element}`}><pre>MATURA <b>2021</b> ZAD. 4</pre></Link>
+                <Link to="/exercise/33" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 2.1</pre></Link>
+                <Link to="/exercise/34" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 2.2</pre></Link>
+                <Link to="/exercise/35" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 2.3</pre></Link>
+                <Link to="/exercise/36" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 2.4</pre></Link>
 
             </div>
             <div className={styles.category}>DZIAŁANIA NA LICZBACH BINARNYCH</div>
@@ -80,6 +90,20 @@ function ExerciseSet() {
                 <Link to="/exercise/3" className={`${styles.list_element}`}><pre>MATURA <b>2016</b> ZAD. 1</pre></Link>
                 <Link to="/exercise/4" className={`${styles.list_element}`}><pre>MATURA <b>2016</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/5" className={`${styles.list_element}`}><pre>MATURA <b>2016</b> ZAD. 3</pre></Link>
+            </div>
+            <div className={styles.category}>TABLICE</div>
+            <div className={styles.exercises_list}>
+                <Link to="/exercise/26" className={`${styles.list_element}`}><pre>ARKUSZ+ <b>2022</b> ZAD. 1</pre></Link>
+                <Link to="/exercise/27" className={`${styles.list_element}`}><pre>ARKUSZ+ <b>2022</b> ZAD. 2</pre></Link>
+                <Link to="/exercise/28" className={`${styles.list_element}`}><pre>ARKUSZ+ <b>2022</b> ZAD. 3</pre></Link>
+            </div>
+            <div className={styles.category}>CIĄGI</div>
+            <div className={styles.exercises_list}>
+                <Link to="/exercise/29" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 1.1</pre></Link>
+                <Link to="/exercise/30" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 1.2</pre></Link>
+                <Link to="/exercise/31" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 1.3</pre></Link>
+                <Link to="/exercise/32" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 1.4</pre></Link>
+
             </div>
 
         </main>

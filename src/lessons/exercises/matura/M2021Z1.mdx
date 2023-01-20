@@ -55,13 +55,61 @@ Dla pliku przyklad.txt długością napisu jest liczba 10.
 <br/><br/>
 
 <Dropdown title="WSKAZÓWKI">
-    <p>
-    BLA BLA WSKAZÓWKI
+    <p className={`dropdown_text`}>
+        instrukcje DOPISZ i USUŃ to jedyn instrukcje, które powodują zmianę długości napisu.
+        Pozostałe edytują napis nie zmieniając jego długości. Zatem policzmy ile razy w pliku pojawia się
+        wsytąpienie słowa 'DOPISZ' i 'USUŃ'.
     </p>
 </Dropdown>
 
-<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE">
-    <Code>
-    BLA BLA ROZWIĄZANIE
-    </Code>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def zad_4_1(wejscie):
+suma = 0
+for linia in wejscie:
+    instrukcja = linia.split()[0]
+    if instrukcja == 'DOPISZ':
+        suma+=1
+    if instrukcja == 'USUN':
+        suma-=1
+    if instrukcja == 'ZMIEN':
+        pass
+    if instrukcja == 'PRZESUN':
+        pass
+return suma
+```
+
+<p className={`dropdown_text`}>
+ Pętla for służy do przejścia po każdej lini pliku wejściowego.
+ Natępnie z każdej lini wyłuskujemy pierwsze słowo, którem według instrukcji jest
+ słowo "DOPISZ", "USUN", "ZMIEN" lub "PRZESUN". Sprawdzamy, z którym z nich mamy 
+ doczynienia i jeśli jest to "DOPISZ" lub "USUN" to dodajemy 1 do naszej zmiennej 'suma'.
+ Ważne jest aby przed pętlą for do zmiennej 'suma' przypiasać wartość 0.
+</p>
+<p className={'dropdown_text'}>
+Aby sprawdzić poprawność kodu możemy przeprowadzić test na podanym pliku tesktowym i sprawdzić zgodność odpowiedzi.
+</p>
+
+```python
+dane = []
+
+with open('DANE_2105/przyklad.txt') as plik:
+    for wiersz in plik:
+        wiersz = wiersz.strip()
+        dane.append(wiersz)
+
+zad_4_1(dane)
+```
+
+<p className={`dropdown_text`}>
+Zmienna 'dane' to lista, która będzie składała się wierszy pliku. 
+Po przejściu przez plik i dodanie to tej zmiennej każdej lini, wywołamy napisaną
+przez nas wcześniej funkcję wkładająć do niej argument, którym będzie zmienna 'dane'.
+Aby uruchomić program dla pliku docelowego, wystarczy podmienić 'DANE_2105/przyklad.txt' na 'DANE_2105/instrukcje.txt'.
+</p>
+<p className={`dropdown_text`}>
+<b>PAMIĘTAJ!</b> O tym jak wygląda ścieżka pliku zależy od tego gdzie w folderach został przez Ciebie umieszczony folder z plikami oraz gdzie
+jest twój plik o rozszerzeniu py.
+</p>
 </Dropdown>

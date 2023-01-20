@@ -1,0 +1,94 @@
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+<div className="box_link"><a className="link" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka_pliki.zip" >pliki do zadania</a>
+<br/>
+</div>
+
+
+### TREŚĆ:
+
+Rozważamy przedziały domknięte liczb całkowitych. Każdy taki przedział można opisać parą
+liczb całkowitych [a, b], a ≤ b, w której a oznacza początek przedziału, natomiast b jest jego
+końcem. <br/>
+Do przedziału [a, b] należą wszystkie liczby całkowite c spełniające nierówności a ≤ c ≤ b.
+Liczbę b – a + 1 nazywamy długością przedziału.<br/><br/>
+Dla dwóch przedziałów P i Q mówimy, że <b>P zawiera się w Q</b>, gdy każda liczba z należąca do
+przedziału P należy także do przedziału Q. O przedziale Q mówimy wtedy, że zawiera
+przedział P.<br/><br/>
+<b>Łańcuchem przedziałów</b> nazywamy każdy skończony ciąg przedziałów P1, P2, …, Pk,
+w którym każdy przedział o numerze większym od 1 zawiera przedział go poprzedzający w tym
+ciągu. Liczbę k nazywamy długością łańcucha.<br/><br/>
+
+#### Przykład 1:
+Rozważmy 6 przedziałów: A = [-2,4], B = [-4,3], C = [-3,6], D = [0,3], E = [1,1],
+F = [7,9].<br/>
+Przedział A ma długość 7. Przedział C zawiera przedział A, natomiast przedziały E, D, A, C
+tworzą łańcuch o długości 4.<br/><br/>
+W pliku <i>dane3.txt</i> zapisano 2023 par liczb całkowitych z przedziału [-2023, 2023], po jednej
+parze w wierszu. Para liczb a, b w wierszu opisuje przedział [a, b]. Liczby w wierszu są
+rozdzielone pojedynczym znakiem odstępu, a pierwsza z liczb w parze nigdy nie jest większa
+od drugiej. Wiadomo, że przedziały w pliku <i>dane3.txt</i> się nie powtarzają (w każdym wierszu
+znajduje się inna para liczb) i że nie wszystkie przedziały mają tę samą długość.<br/><br/>
+
+#### Przykład 2:
+Poniższe dane opisują przedziały z przykładu 1:<br/>
+-2 4<br/>
+-4 3<br/>
+-3 6<br/>
+0 3<br/>
+1 1<br/>
+7 9<br/><br/>
+Napisz <b>programy</b> dające odpowiedzi do poniższych zadań.
+
+
+<br/><br/>
+
+### Zadanie 1   (0-2pkt.)
+
+Podaj dwie najmniejsze (różne) liczby, które są długościami przedziałów zapisanych w pliku
+<i>dane3.txt</i>. 
+
+<br/>
+<br/>
+
+<Dropdown title="ODPOWIEDŹ">
+
+```
+3, 4
+```
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
+
+```
+const int n = 2023;
+int min=4047;
+int min2=min;
+
+ifstream dane ("dane3.txt");
+ofstream wynik("zadanie3_1.txt");
+
+for (int i = 0; i < n; i++) {
+    int pocz, kon;
+    dane >> pocz >> kon;
+    int dlug = kon - pocz + 1;
+    if (dlug < min) {
+        min2 = min;
+        min = dlug;
+    } else if (dlug < min2)
+        min2 = dlug;
+}
+
+wynik<< min<< " " <<min2;
+```
+<p className={`dropdown_text`}>
+Rozwiązanie z <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+</p>
+
+</Dropdown>
+
+
+

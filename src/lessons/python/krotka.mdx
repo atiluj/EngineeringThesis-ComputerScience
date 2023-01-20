@@ -1,7 +1,6 @@
-Najpierw zapoznaj się z poprzednim tematem!
-
 ## Krotka (Tuple)
-**Krotka** to lista, które są **niemutowalna**, czy inaczej niemodyfikowalna, niezmienna. Oznacza to, że nie możemy zmieniać jej elementów. 
+**Krotka** to lista, które są **niemutowalna**, czy inaczej niemodyfikowalna, niezmienna. Oznacza to, że nie możemy zmieniać jej elementów. <br/>
+**Jeśli nie wiesz czym jest lista w Pythonie - przed przerobieniem tego tematu zajrzyj do poprzedniej notatki!** <br/><br/>
 
 Krotki definiujemy je podobnie jak listy, z tą różnicą, że zamiast nawiasów kwadratowych używamy okrągłych **()** lub funkcji **tuple()**.
 
@@ -12,7 +11,6 @@ Krotki definiujemy je podobnie jak listy, z tą różnicą, że zamiast nawiasó
 
 >>> inna_krotka = tuple()
 ```
-
 
 Aby dostać się konkretnego elementu, używamy indeksów, identycznie jak w przypadku zwykłych list. 
 
@@ -67,22 +65,18 @@ Możemy również utworzyć nową krotkę, łącząc kilka krotek ze sobą:
 
 Nie możemy dodawać nowych elementów do istniejącej krotki, ani usuwać żadnych z nich. 
 
-## Funkcje wbudowane!!!
-Teraz opowiemy o trzech przydatnych funkcjach wbudowanych, których można używać zarówno na listach, jak i na krotkach:
+## Funkcje wbudowane
+Podobnie jak w przypadku list, przy krotkach również możemy skorzystać z funkcji wbudowanych **len()**, **min()** i **max()**.
 
 Funkcja **len()** zwraca długość podanej struktury
 ```python
->>> liczby = [1, 2, 3, 4]
->>> len(liczby)
-4
-
 >>> dni_wolne = ('sobota', 'niedziela')
 >>> len(dni_wolne)
 2
 ```
 **min()** zwraca najmniejszy element w strukturze
 ```python
->>> liczby = [1, 2, 3, 4]
+>>> liczby = (1, 2, 3, 4)
 >>> min(liczby)
 1
 ```
@@ -93,4 +87,15 @@ Z kolei funkcja **max()** zwraca największy element
 15
 ```
 
-## Krotki tez mogą być dwuwymiarowe
+## Wielowymiarowe krotki
+Powiedzieliśmy, że krotki mogą zawierać dowolne obiekty. Skoro tak, to mogą zawierać także inne krotki czy listy: 
+```python
+>>> krotka = ((1, (2, 3)), 7, 8, 9)
+>>> krotka[0]
+(1, (2, 3))
+>>> krotka[0][1]
+(2, 3)
+>>> krotka2 = (11, ["Ala ma kota", "Basia ma psa"])
+>>> krotka2[1]
+["Ala ma kota", "Basia ma psa"]
+```

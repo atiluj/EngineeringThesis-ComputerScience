@@ -1,0 +1,131 @@
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+<div className="box_link"><a className="link" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">link do arkusza</a>
+<br/>
+<a className="link" href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka_pliki.zip" >pliki do zadania</a>
+<br/>
+</div>
+
+### TREŚĆ:
+
+<b>Segmentem</b> nazwiemy spójny ciąg elementów tablicy składający się z <b>co najmniej</b> 1 elementu.
+
+#### Przykład: 
+dla tablicy A = [1, 8, 4, 2, 7, 9] segmentami są ciąg 1,8,4 oraz ciąg 8,4,2,7, natomiast
+nie jest segmentem ciąg 8,2,7,9 (bo w tablicy A pomiędzy liczbą 8 a liczbą 2 jest liczba 4).
+
+<br/><br/>
+
+### Zadanie 3   (0-4pkt.)
+
+Elementy pewnej tablicy A o 100 000 elementów zapisano kolejno w pliku 'dane1_4.txt'.
+Każda z liczb w pliku 'dane1_4.txt' należy do przedziału od [-100, 100] i jest zapisana
+w oddzielnym wierszu. <br/>
+Przyjmujemy, że pierwszy element tablicy ma indeks równy 1. Napisz program wypisujący
+indeks pierwszego i indeks ostatniego elementu segmentu o największej sumie. W tablicy A
+jest tylko jeden taki segment, <b>a suma jego elementów jest dodatnia</b>.
+
+<br/>
+<br/>
+
+<Dropdown title="WSKAZÓWKI">
+    <p className={`dropdown_text`}>
+    </p>
+</Dropdown>
+
+<Dropdown title="ODPOWIEDŹ">
+
+```
+63669 70769
+```
+
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYTHON">
+
+```
+plik = open('dane1_4.txt', 'r')
+lista = plik.readlines()
+plik.close()
+
+lista_new = [int(i.rstrip('\n')) for i in lista]
+print(lista_new)
+
+#-----Algorytm Kaden'a z uwzględnieniem miejsc-----
+wynik = 0
+suma_chwilowa = 0
+start = 0
+koniec = 0
+
+for i, j in enumerate(lista_new):
+    if suma_chwilowa &lt;= 0:
+        start_chwilowy = i
+        suma_chwilowa = j
+    else:
+        suma_chwilowa += j
+
+    if suma_chwilowa &gt; wynik:
+        wynik = suma_chwilowa
+        koniec = i + 1
+        start = start_chwilowy + 1
+#--------------------------
+
+zapis = str(start) + ' ' + str(koniec)
+
+plik = open('zadanie1_4.txt', 'w')
+plik.write(zapis)
+plik.close()
+```
+<p className={`dropdown_text`}>
+Rozwiązanie z <a href="http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-1-segment/">http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-1-segment/</a><br/>   
+</p>
+
+</Dropdown>
+
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
+
+```
+ifstream plik ("dane1_4.txt");
+ofstream wynik ("zadanie1_4.txt");
+const long n=100000;
+int t[n];
+for (long i=0; i<n; i++)
+    plik>>t[i];
+long maks; // największa suma niepustego segmentu
+long maks_pocz; // początek najlepszego niepustego segmentu
+long maks_kon; // koniec najlepszego niepustego segmentu
+long ost_suma; // najlepsza niepusta suma segmentu na końcu przejrzanej części tablicy
+long ost_pocz; // początek najlepszego niepustego segmentu na końcu przejrzanej części
+tablicy
+// pierwszy rozważany niepusty segment to t[0]:
+maks = ost_suma = t[0];
+maks_pocz = maks_kon = ost_pocz = 0;
+for (long i = 1; i < n; i++) {
+    if (ost_suma >= 0) // Czy ost_suma + t[i] >= t[i]?
+        ost_suma += t[i];
+    else {
+        ost_suma = t[i];
+        ost_pocz = i;
+    }
+    if (maks < ost_suma) {
+        maks = ost_suma;
+        maks_pocz = ost_pocz;
+        maks_kon = i;
+    }
+}
+
+wynik << maks_pocz + 1 << " " << maks_kon + 1 << endl;
+// Tablica, której wartości były w pliku wejściowym miała indeksy przesunięte o 1
+// musimy zatem uwzględnić poprawkę na przesuniecie indeksów względem tablicy t,
+// do której wczytano dane z pliku
+```
+<p className={`dropdown_text`}>
+Rozwiązanie z <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+</p>
+
+</Dropdown>
+
+
+
+
