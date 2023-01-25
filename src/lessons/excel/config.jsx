@@ -1,4 +1,9 @@
-import Wskazowki from './wskazowki.mdx';
+import Wskazowki from './wskazowkiExcel.mdx';
+
+import WlaczanieExcel from './wlaczanieExcel.mdx';
+import ImportExcel from './importExcel.mdx';
+
+import BledyExcel from './bledyExcel.mdx';
 
 import ZadaniaTeoriaExcel from './zadaniaTeoriaExcel.mdx';
 
@@ -6,15 +11,18 @@ const ExcelLessons = [
     {name: "Wskazówki", content: <Wskazowki />},
 
     {name: "Dane", subchapters: [
-        {name: "Importowanie danych", content: null},
+        {name: "Włączanie programu MS Excel", content: <WlaczanieExcel/>},
+        {name: "Importowanie danych", content: <ImportExcel/>},
     ]},
 
     {name: "Formuły", subchapters: [
+        {name: "Podstawy", content: null},
         {name: "Formuły wbudowane", content: null},
         {name: "Formuły warunkowych", content: null},
         {name: "Formuły zaawansowane", content: null},
         {name: "Tabel i wykresy przestawne", content: null},
         {name: "Wszykuja pionowo/poziomo", content: null},
+        {name: "Rodzaje błędów", content: <BledyExcel/>},
     ]},
 
     {name: "Zadania ", subchapters: [
