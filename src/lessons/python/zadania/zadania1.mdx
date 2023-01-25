@@ -1,0 +1,63 @@
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+## Zadanie 1
+Napisz program, który pobierze imię od użytkownika i wypisze na ekranie "Cześć, **imie**!". 
+<br/>
+
+<Dropdown title="Rozwiązanie">
+
+```python
+print('Podaj swoje imię: ')
+imie = input()
+print('Cześć, ' + imie + '!') 
+```
+
+</Dropdown>    
+
+## Zadanie 2
+Napisz prosty kalkulator. Pobierz dwie liczby od użytkownika, a następnie wypisz na ekranie wynik następujących operacji:
+* dodawania tych dwóch liczb
+* odejmowania pierwszej liczby od drugiej
+* mnożenia
+* dzielenia
+* dzielenia całkowitego
+* modulo
+* podniesienia pierwszej z tych liczb do kwadratu
+<br/><br/>
+
+<Dropdown title="Rozwiązanie">
+
+```python
+print('Podaj pierwszą liczbę:')
+a = int(input())
+print('Podaj drugą liczbę:')
+b = int(input())
+print("a + b =", a + b)
+print("a - b =", a - b)
+print("a * b =", a * b)
+print("a / b =", a / b)
+print("a // b =", a // b) 
+print("a % b =", a % b) 
+print("a ** 2 =", a ** 2) 
+```
+
+</Dropdown>  
+
+## Zadanie 3 
+Napisz kalkulator BMI. Pobierz wagę i wzrost użytkownika, a następnie skorzystaj z podanego wzoru:
+<img src={new URL('../../../img/python/python_bmi.png', import.meta.url)} alt="wzór BMI" className={`small_img`}/>
+Wzrost należy podać w metrach, a wagę w kilogramach.
+<br/><br/>
+
+<Dropdown title="Rozwiązanie">
+
+```python
+print('Podaj swoją wagę:') 
+waga = float(input()) 
+print('Podaj swój wzrost:') 
+wzrost = float(input()) 
+print("Twoje BMI wynosi", waga / (wzrost ** 2)) 
+```
+
+</Dropdown>

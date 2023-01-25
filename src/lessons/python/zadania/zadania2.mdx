@@ -1,0 +1,26 @@
+import Dropdown from "../../../components/Dropdown.jsx";
+import Code from "../../../components/Code.jsx";
+
+## Zadanie 1
+Dana jest lista [15, 10, 5, 1, 21, 12, 9]. Napisz program, który wypisze:
+* najmniejszy element tej listy
+* największy element tej listy
+* średnią liczb tej listy
+* listę posortowaną rosnąco 
+* listę posortowaną malejąco
+<br/><br/>
+
+<Dropdown title="Rozwiązanie">
+
+```python
+  lista = [15, 10, 5, 1, 21, 12, 9] 
+  print("min:", min(lista)) 
+  print("max:", max(lista)) 
+  print("średnia:", sum(lista) / len(lista)) 
+  lista.sort() 
+  print("posortowana rosnąco:", lista) 
+  lista.sort(reverse=True) 
+  print("posortowana malejąco:", lista) 
+```
+
+</Dropdown> 

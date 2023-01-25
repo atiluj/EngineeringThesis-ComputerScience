@@ -1,11 +1,11 @@
-import Quiz from "../../components/Quiz.jsx";
-import Code from "../../components/Code.jsx";
+import Quiz from "../../../components/Quiz.jsx";
+import Code from "../../../components/Code.jsx";
 
 <Quiz 
     question={
         <>
             <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
-            <Code>print(type(True))</Code>
+            <Code>print(type(True))</Code>    
         </>
     }
     answers={[
@@ -17,12 +17,12 @@ import Code from "../../components/Code.jsx";
 />
 
 <Quiz 
-    question={
-        <>
-            <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
-            <Code>print(type(3))</Code>
-        </>
-    }
+question={
+<>
+    <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
+    <Code>print(type(3))</Code>
+</>
+}
     answers={[
         "<class 'int'>",
         "<class 'bool'>",
@@ -50,10 +50,10 @@ import Code from "../../components/Code.jsx";
 
 <Quiz 
     question={
-        <>
+        <div>
             <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
             <Code>print(type("5"))</Code>
-        </>
+        </div>
     }
     answers={[
         "<class 'float'>",
@@ -66,10 +66,10 @@ import Code from "../../components/Code.jsx";
 
 <Quiz 
     question={
-        <>
+        <div>
             <p>Co wypisze wypisze w terminalu poniższy fragment kodu?</p>
             <Code>print(type(7 // 2))</Code>
-        </>
+        </div>
     }
     answers={[
         "<class 'int'>",

@@ -1,6 +1,39 @@
-Nauczyliśmy się już pisać proste programy, w których wszystkie instrukcje wykonują się po kolei. Czasem jednak chcemy, aby część programu wykonywała się tylko w określonych przypadkach. Dla przykładu powiedzmy, że napisać program, w którym ... 
-Do tego posłużą nam porównania, operatory logiczne oraz instrukcje warunkowe.
+<br/>
 
-## Operatory porównania
-Na codzień ciągle używamy porównań. Będąc w sklepie sprawdzamy czy **cena produktu X jest większa od ceny produktu Y**.  W języku matematycznym moglibyśmy zapisać to w taki sposób: **cena_X > cena_Y**. Podczas programowania w pythonie będziemy używać właśnie takich operatorów znanych nam z matematyki. 
+Nauczyliśmy się już pisać proste programy, w których wszystkie instrukcje wykonują się po kolei. Czasami jednak potrzebujemy, aby pewne instrukcje zostały wykonane tylko wtedy, gdy spełniony jest określony warunek. W takich sytuacjach użyjemy **instrukcji warunkowych**.
+<br/>
 
+Dla przykładu powiedzmy, że chcemy napisać program, który wypisze czy liczba jest parzysta czy nieparzysta. Możemy użyć w tym celu instrukcji warunkowej **if-else**. Program sprawdza czy liczba jest podzielna przez 2, i jeśli tak wypisuje na ekran "liczba jest parzysta", a jeśli nie, to wypisuje "liczba jest nieparzysta". Dzięki instrukcjom warunkowym program jest bardziej elastyczny i pozwala reagować na różne sytuacje. <br/><br/>
+
+<img src={new URL('../../img/python_schemat.png', import.meta.url)} alt="schemat blokowy" className={`big_img`}/>
+
+Warunek zapisujemy po słowie **if**, po czym następuje dwukropek. Wszystkie instrukcje, które mają być wykonane w przypadku spełnienia warunku, powinny być odpowiednio wcięte, aby jasno określić, że są one częścią instrukcji warunkowej. Aby zrobić wcięcie użyj przycisku **Tab**. <br/><br/>
+
+Jeśli warunek zostanie spełniony, zostanie wykonany kod znajdujący się między instrukcją **if** a **else**, natomiast jeśli warunek nie zostanie spełniony, wykonany zostanie kod znajdujący się pod instrukcją **else**
+
+```
+if liczba % 2 == 0:
+    print("liczba jest parzysta")
+else:
+    print("liczba jest nieparzysta")
+```
+
+
+Możemy używać również samego **if**, bez instrukcji else.
+
+```python
+if liczba < 0:
+    liczba = -liczba
+print(liczba)
+```
+
+Jeśli chcemy rozważyć więcej niż dwa możliwe przypadki, przydać może się nam instrukcja **elif**:
+
+```python
+if liczba > 0:
+    print("liczba jest dodatnia")
+elif liczba == 0:
+    print("liczba jest równa 0")
+else:
+    print("liczba jest ujemna")
+```

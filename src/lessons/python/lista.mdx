@@ -161,6 +161,37 @@ Możemy też usunąć element za pomocą **remove**. Tym razem nie będziemy pod
 
 Zwróć uwagę na to, że **remove** usuwa tylko pierwsze wystąpienie podanej wartości!
 
+### Kopiowanie listy
+Na lekcji *Zmienne* poznaliśmy sposób kopiowania zmiennych za pomocą operatora przypisania *=*. W przypadku złożonych struktur danych - takich jak listy - ten sposób się jednak nie sprawdzi.
+```python
+>>> lista1 = [1, 2, 3]
+>>> lista2 = lista1
+>>> lista2[1] = 5
+>>> lista1 
+[1, 5, 3]
+```
+Zauważ, że zmiana w liście drugiej powoduje także zmianę w pierwszej liście. <br/>
+Ale właściwie, dlaczego tak się stało? W przypadku złożonych struktur danych operator przypisania nie kopiuje obiektu, tylko adres pamięci. To oznacza, że *lista1* i *lista2* wskazują na ten sam adres pamięci, a tym samym w pamięci istnieje tylko jedna instacja tej listy. <br/> <br/>
+
+Aby poprawnie utworzyć kopię listy możemy użyć funkcji **copy()**. 
+```python
+>>> lista1 = [1, 2, 3]
+>>> lista2 = lista1.copy()
+>>> lista2[1] = 5
+>>> lista1 
+[1, 2, 3]
+```
+
+albo skorzystać z **list slicing-u**:
+```python
+>>> lista1 = [1, 2, 3]
+>>> lista2 = lista1[:]
+>>> lista2[1] = 5
+>>> lista1 
+[1, 2, 3]
+```
+Podczas wycinania kawałka listy w pamięci tworzona jest nowa lista. Właśnie dlatego korzystając z operatora **[:]** (który "wycina" całą listę) możemy w prosty sposób zrobić kopię.
+
 ### Sortowanie listy
 Możemy posortować listę za pomocą funkcji **sort()**
 

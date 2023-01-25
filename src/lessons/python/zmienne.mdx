@@ -56,8 +56,19 @@ Traceback (most recent call last):
   File "<pyshell#8>", line 1, in <module>
     a
 NameError: name 'a' is not defined
-
 ```
+
+Możemy utworzyć kopię zmiennej korzystając z operatora przypisania **=**:
+```python
+>>> a = 4
+>>> b = a 
+>>> b
+4
+>>> a = 3
+>>> b
+4
+```
+W powyższym przykładzie *b* stało się niezależną kopią zmiennej *a*. Zmiana wartości zmiennej *a* nie wpływa na zmienną *b*.
 
 ## Niepoprawne nazwy zmiennych
 Nazwa jaką nadajemy zmiennej, może być praktycznie dowolna - oprócz kilku wyjątków. 

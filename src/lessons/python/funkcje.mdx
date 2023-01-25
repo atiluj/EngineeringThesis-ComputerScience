@@ -1,0 +1,20 @@
+<br/>
+Funkcja to wydzielony fragment kodu, który może być wykonywany wielokrotnie w różnych miejscach programu. <br/><br/>Funkcje pomagają utrzymać kod w czystości i sprawiają, że jest on bardziej czytelny.<br/><br/> Funkcję definiujemy za pomocą słowa **def**, nastepnie piszemy **nazwę funkcji**, a potem nawiasy okrągłe **()** i dwukropek. Kod, który ma wykonać się w funkcji piszemy z wcięciem.
+
+```python
+def przywitanie():
+    print("Hello, world!")
+```
+Funkcję wywołujemy w następujący sposób:
+```python
+przywitanie() # Hello, world!
+```
+Funkcja może przyjmować argumenty i zwracać wartości. Dowolną liczbę argumentów zapisujemy wewnątrz nawiasów, z kolei wartość zwracamy za pomocą **return** wewnątrz funkcji.
+```python
+def dodaj(a, b):
+    return a+b
+
+wynik = dodaj(2, 3)
+print(wynik) # 5
+print(dodaj(10, 20)) # 30
+```

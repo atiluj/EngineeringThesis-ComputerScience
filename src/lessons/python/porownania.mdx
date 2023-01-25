@@ -1,0 +1,198 @@
+## Operatory porównania
+Na co dzień często korzystamy z porównań. Na przykład, kiedy jesteśmy w sklepie, sprawdzamy czy cena produktu X jest większa od ceny produktu Y. W języku matematycznym moglibyśmy to zapisać jako **cena_X > cena_Y**. Podczas programowania w Pythonie będziemy używać tych samych operatorów, które znamy z lekcji matematyki.<br/><br/>
+
+* **x < y** - x mniejsze od y
+* **x > y** - x większe od y
+* **x <= y** - x mniejsze równe y
+* **x >= y** - x większe równe y
+* **x == y** - x równe y
+* **x != y** - x różne od y <br/><br/>
+
+Wynik takiego wyrażenia będzie typu **bool** (True lub False), który poznaliśmy wcześniej. 
+
+```python
+>>> 5 < 10
+True
+>>> 5 > 10
+False
+>>> 5 <= 10
+True
+>>> 5 >= 10
+False
+>>> 5 == 10
+False
+>>> 5 != 10
+True
+```
+Warto zauważyć, że operator porównania dwóch wartości składa się z dwóch znaków równości **==**. Natomiast pojedynczy znak **=** jest używany do przypisania wartości do zmiennej. 
+
+## Operatory logiczne
+Operatory logiczne służą do połączenia kilku porównań w jeden bardziej skomplikowany warunek. Poznamy trzy operatory logiczne: **and** (i), **or** (lub) oraz **not** (nie). <br/><br/>
+
+Operator **and** - służy do połączenia dwóch (lub więcej) warunków, które **wszystkie muszą być spełnione**, aby całe wyrażenie było prawdziwe.
+
+```python
+>>> True and True
+True
+>>> True and False
+False
+>>> False and True
+False
+>>> False and False
+False
+```
+
+Operator **or** - służy do połączenia dwóch (lub więcej) warunków, w którym **przynajmniej jeden musi być spełniony**, aby całe wyrażenie było prawdziwe.
+
+```python
+>>> True or True
+True
+>>> True or False
+True
+>>> False or True
+True
+>>> False or False
+False
+```
+
+Operator **not** - zmienia wartość logiczną na przeciwną. Zwraca wartość **True** jeśli warunek jest fałszywy, a **False** jeśli warunek jest prawdziwy.
+
+```python
+>>> not True
+False
+>>> not False
+True
+```
+
+Operator **not** ma niższy priorytet niż operatory, które nie są operatorami logicznymi. Dlatego, aby poprawnie odczytać zapis **not x == y**, należy go rozumieć jako **not (x == y)**. Innymi słowy, najpierw wykonywane jest porównanie **x == y**, a następnie na jego wyniku jest wykonywana negacja.
+
+
+### Przykłady
+```python
+>>> x = 5
+>>> y = 10
+
+>>> x > 0 and y < 20
+True
+>>> x < 0 or x > 10
+False
+>>> not x < 0
+True
+```
+### Leniwa ewaluacja
+
+Zamiast używać operatora **and** do łączenia porównań, możemy również połączyć kilka warunków za pomocą operatorów porównania połączonych ze sobą w jednej linii:
+```python
+>>> x = 1
+>>> y = 2
+>>> z = 3
+>>> x <= y < z
+True
+```
+Powyższe porównanie jest równoważne **x <= y and y < z**. Jedyną różnicą jest to, że w połączonym wyrażeniu **y** będzie obliczone tylko raz, a w drugim dwukrotnie. <br/><br/> Jeśli **x <= y** okaże się fałszem, to wyrażenie **z** nie zostanie obliczone. Dzieje się tak, ponieważ Python wykonuje porównania w sposób "leniwy", czyli tylko wtedy, gdy jest to konieczne. <br/><br/> Aby lepiej zrozumieć to zjawisko, przeanalizujmy jeszcze jeden przykład. Wiemy z matematyki, że dzielenie przez 0 jest niedozwolone. Python również to wie, dlatego jeśli spróbujemy użyć takiego porównania, program zwróci odpowiedni błąd.
+```python
+>>> 3 / 0 and 1 == 2
+Traceback (most recent call last):
+  File "<pyshell#27>", line 1, in <module>
+    3 / 0 and 1 == 2
+ZeroDivisionError: division by zero
+```
+Co jednak kiedy zamienimy elementy takiego porównania miejscami?
+```python
+>>> 1 == 2 and 3 / 0
+False
+```
+W tym przypadku nie otrzymujemy błędu! <br/> Dzieje się tak dzięki **"leniwej"** ewaluacji wyrażeń. Python oblicza **1 == 2**, które zwraca wartość **False**. Po tym następuje operator **and**, który oznacza, że obie strony porównania muszą być prawdziwe. Skoro pierwsza część wyrażenia jest nieprawdziwa, Python już wie, że całość również będzie nieprawdziwa i nie ma więc potrzeby obliczania drugiego wyrażenia.
+
+### Priorytety operatorów
+
+W Pythonie najpierw wykonywane są porównania z najwyższym priorytetem, a następnie te o niższym. Poniższe zestawienie przedstawia priorytet operatorów (od najwyższego): <br/><br/>
+* porównania (<, <=, >, >=, !=, == - wszystkie mają ten sam priorytet)
+* not
+* and
+* or
+
+<br/>Jeśli mamy kilka porównań, które mają taki sam priorytet, to są one wykonywane od lewej do prawej. Możemy też używać nawiasów, aby zmienić kolejność wykonywania.
+
+```python
+>>> x = 5
+>>> y = 10
+
+>>> x > 0 or not x < y and x == y
+True
+>>> (x > 0 or not x < y) and x == y
+False
+```
+
+### Prawa Demorgana
+Podczas zapisywania wyrażeń logicznych w Pythonie może przydać nam się znajomość praw Demorgana. Są to ważne twierdzenia matematyczne, które pozwalają na zapisywanie wyrażeń w bardziej zwięzłej i czytelnej formie, w szczególności przy użyciu operatora **not**. <br/><br/>
+
+Pierwsze prawo Demorgana mówi nam, że wyrażenie **not (A and B)** jest tym samym co wyrażenie **(not A) or (not B)**. <br/><br/>
+
+Natomiast drugie prawo mówi, że **not (A or B)** jest równoważne **(not A) or (not B)**. <br/><br/>
+
+Weźmy następujący przykład. Chcemy sprawdzić, czy nieprawdą jest, że jest weekeend i jest deszczowa pogoda. 
+
+```python
+>>> pogoda = 'słoneczna'
+>>> czy_weekend = True
+
+# Bez użycia praw De Morgana
+>>> not (pogoda == 'deszczowa' and czy_weekend) 
+True
+
+# Z użyciem praw De Morgana
+>>> not pogoda == 'deszczowa' or not czy weekend
+True
+```
+W obu przypadkach otrzymamy ten sam wynik, ale użycie praw Demorgana umożliwia napisanie tego wyrażenia w bardziej czytelnej formie.
+
+
+### Operator is
+Operator **is** porównuje czy dwa obiekty są takie same, czyli czy dwie zmienne wskazują na to samo miejsce w pamięci. Jest to różne od operatora **==**, który porównuje jedynie wartości tych obiektów <br/><br/>
+
+Na przykład:
+```python
+>>> a = [1, 2, 3]
+>>> b = [1, 2, 3]
+>>> c = a
+
+>>> a is b
+False # bo a i b to różne obiekt
+>>> a is c
+True # bo a i c to ten sam obiekt
+```
+
+Używanie operatora **is** może być mylące, ponieważ dla niektórych obiektów, takich jak małe liczby całkowite (int), interpreter Pythona może używać cachowania, co oznacza,  że kilka różnych zmiennych może wskazywać na ten sam obiekt w pamięci.
+
+```python
+a = 10
+b = 10 
+
+a is b
+True
+
+a = 2000
+b = 2000
+
+a is b
+False
+```
+Dlatego przy porównywaniu wartości niezmiennych (np. liczb, stringów) lepiej używać operatora **==**, ponieważ on porównuje wartości obiektów, a nie referencje (adres pamięci). 
+
+### Operator in
+Operator **in** służy do sprawdzania czy dany element znajduje się w danej kolekcji (takich jak lista, krotka czy string). 
+
+```python
+>>> lista = [1, 2, 3]
+>>> 2 in lista
+True
+>>> 5 in lista
+False
+
+>>> napis = 'Ala ma kota'
+>>> 'ma' in napis
+True
+>>> 'b' in napis 
+False
+```

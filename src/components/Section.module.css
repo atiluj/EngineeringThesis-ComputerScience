@@ -132,7 +132,7 @@
 
 .main article pre {
   margin: 10px 0;
-  white-space: pre-line;
+  /* white-space: pre-line; */
 }
 
 .main_content .controls {
