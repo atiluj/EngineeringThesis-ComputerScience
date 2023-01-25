@@ -3,6 +3,7 @@ import Wskazowki from './wskazowkiExcel.mdx';
 import WlaczanieExcel from './wlaczanieExcel.mdx';
 import ImportExcel from './importExcel.mdx';
 
+import FormulyWbudowane from './formulyWbudowane.mdx';
 import BledyExcel from './bledyExcel.mdx';
 
 import ZadaniaTeoriaExcel from './zadaniaTeoriaExcel.mdx';
@@ -17,11 +18,11 @@ const ExcelLessons = [
 
     {name: "Formuły", subchapters: [
         {name: "Podstawy", content: null},
-        {name: "Formuły wbudowane", content: null},
-        {name: "Formuły warunkowych", content: null},
+        {name: "Formuły wbudowane", content: <FormulyWbudowane/>},
+        {name: "Formuły warunkowe", content: null},
         {name: "Formuły zaawansowane", content: null},
-        {name: "Tabel i wykresy przestawne", content: null},
-        {name: "Wszykuja pionowo/poziomo", content: null},
+        {name: "Tabele i wykresy przestawne", content: null},
+        {name: "Wyszukaj pionowo/poziomo", content: null},
         {name: "Rodzaje błędów", content: <BledyExcel/>},
     ]},
 
