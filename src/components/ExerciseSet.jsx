@@ -59,7 +59,7 @@ function ExerciseSet() {
                 <Link to="/exercise/25" className={`${styles.list_element}`}><pre>MATURA <b>2022</b> ZAD. 3</pre></Link>
                 <Link to="/exercise/37" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 3.1</pre></Link>
                 <Link to="/exercise/38" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 3.2</pre></Link>
-                <Link to="/exercise/39" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 3.3</pre></Link>
+                <Link to="/exercise/39" className={`${styles.list_element}`}><pre>INF+ <b>2023</b> ZAD. 3.</pre></Link>
             </div>
 
             <div className={styles.category}>DZIAŁANIA NA STRINGACH</div>
