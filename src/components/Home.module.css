@@ -103,7 +103,8 @@
 
 
 .statistic_img{
-    max-width: 1000px;
+    width: 1000px;
+    max-width: 100%;
     filter: var(--screen_filter);
 }
 

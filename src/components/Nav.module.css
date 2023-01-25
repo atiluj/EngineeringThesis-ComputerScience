@@ -1,9 +1,13 @@
-.navbar {
+.navbar{
+    min-height: 80px;
+}
+
+.navbar_sticky {
     font-size: 0;
     /* to likiwduje wbudowany margines w menu*/
     overflow: hidden;
     /* navbar moving while scrolling */
-    position: sticky;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 99;
@@ -53,10 +57,6 @@
 }
 
 @media (max-width: 1200px) {
-    .navbar {
-        overflow: hidden;
-    }
-
     .navbar .nav_wrapper_left {
         padding-left: 20px;
     }
@@ -86,7 +86,7 @@
     }
 }
 
-/* bylo 810 */
+
 @media (max-width:790px) {
     .header h1 {
         margin-top: 30px;
@@ -113,54 +113,52 @@
         float: right;
         display: block;
     }
-}
 
-@media (max-width: 790px) {
-    .navbar.responsive {
+    .navbar_sticky.responsive {
         position: relative;
         flex-direction: column;
         text-align: left;
         margin-bottom: 0px;
     }
 
-    .navbar.responsive .nav_wrapper_right .icon {
+    .navbar_sticky.responsive .nav_wrapper_right .icon {
         display: block;
         position: absolute;
         right: 25;
         top: 8;
     }
 
-    .navbar.responsive .nav_wrapper_left {
+    .navbar_sticky.responsive .nav_wrapper_left {
         /* display: flex; */
         flex-direction: column;
         padding-left: 0px;
         margin-left: 0px;
     }
 
-    .navbar.responsive .nav_wrapper_right {
+    .navbar_sticky.responsive .nav_wrapper_right {
         padding-left: 0px;
         margin-left: 0px;
     }
 
-    .navbar.responsive .nav_wrapper_left a {
+    .navbar_sticky.responsive .nav_wrapper_left a {
         border-bottom: solid 2px white;
         width: 100%;
     }
 
-    .navbar.responsive .nav_wrapper_left a:first-child {
+    .navbar_sticky.responsive .nav_wrapper_left a:first-child {
         border-bottom-width: 3px;
     }
 
-    .navbar.responsive .nav_wrapper_left a,
-    .navbar.responsive .nav_wrapper_right a {
+    .navbar_sticky.responsive .nav_wrapper_left a,
+    .navbar_sticky.responsive .nav_wrapper_right a {
         float: none;
         display: block;
         align-self: start;
         padding-left: 25px;
     }
 
-    .navbar.responsive .nav_wrapper_left a:hover,
-    .navbar.responsive .nav_wrapper_right a:hover {
+    .navbar_sticky.responsive .nav_wrapper_left a:hover,
+    .navbar_sticky.responsive .nav_wrapper_right a:hover {
         background-color: transparent;
     }
 
