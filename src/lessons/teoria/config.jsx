@@ -26,30 +26,30 @@ const TeoriaLessons = [
 
     {name: "Komputer", subchapters: [
         {name: "Komputer i jego części", content: <KomputerIJegoCzesci />},
-        {name: "System operacyjny", content: null},
+        // {name: "System operacyjny", content: null},
         {name: "Zadania maturalne", content: <ZadaniaKomputer/>},
     ]},
 
-    {name: "Systemy liczbowe", subchapters: [
-        {name: "System dwójkowy", content: null},
-        {name: "System ósemkowy", content: null},
-        {name: "System szesnastkowy", content: null},
-    ]},
+    // {name: "Systemy liczbowe", subchapters: [
+    //     {name: "System dwójkowy", content: null},
+    //     {name: "System ósemkowy", content: null},
+    //     {name: "System szesnastkowy", content: null},
+    // ]},
 
     {name: "Konwersja liczb", subchapters: [
-        {name: "Dwójkowy - Ósemkowy", content: null},
-        {name: "Dwójkowy - Szesnastkowy", content: null},
-        {name: "Ósemkowy - Szesnastkowy", content: null},
+        // {name: "Dwójkowy - Ósemkowy", content: null},
+        // {name: "Dwójkowy - Szesnastkowy", content: null},
+        // {name: "Ósemkowy - Szesnastkowy", content: null},
         {name: "Zadania maturalne", content: <ZadaniaLiczby/>},
     ]},
 
     {name: "Sieci komputerowe", subchapters: [
-        {name: "Terminologia", content: null},
+        // {name: "Terminologia", content: null},
         {name: "Topologia sieci", content: <Warstwy/>},
         {name: "Protokoły", content: <Protokoly/>},
-        {name: "Adresy IP", content: null},
-        {name: "Maski podsieci", content: null},
-        {name: "Adresy sieci", content: null},
+        // {name: "Adresy IP", content: null},
+        // {name: "Maski podsieci", content: null},
+        // {name: "Adresy sieci", content: null},
         {name: "Zadania maturalne", content: <ZadaniaSieci/>},
     ]},
 
@@ -60,32 +60,32 @@ const TeoriaLessons = [
     ]},
 
     {name: "Zagadnienia prawne", subchapters: [
-        {name: "Zagadnienia przestępczości komputerowej", content: null},
-        {name: "Licencje", content: null},
-        {name: "Normy prawe", content: null},
+        // {name: "Zagadnienia przestępczości komputerowej", content: null},
+        // {name: "Licencje", content: null},
+        // {name: "Normy prawe", content: null},
         {name: "Zadania maturalne", content: <ZadaniaPrawo/>},
     ]},
 
     {name: "Pseudokod", subchapters: [
-        {name: "Schematy blokowe", content: null},
-        {name: "Lista kroków", content: null},
-        {name: "Za pomocą Python", content: null},
+        // {name: "Schematy blokowe", content: null},
+        // {name: "Lista kroków", content: null},
+        // {name: "Za pomocą Python", content: null},
         {name: "Zadania maturalne", content: <ZadaniaPseudokod/>},
     ]},
 
-    {name: "Złożoność", subchapters: [
-        {name: "Złożoność obliczeniowa", content: null},
-        {name: "Złożoność pamięciowa", content: null},
-        {name: "Własnośći algorytmów", content: null},
-    ]},
+    // {name: "Złożoność", subchapters: [
+    //     {name: "Złożoność obliczeniowa", content: null},
+    //     {name: "Złożoność pamięciowa", content: null},
+    //     {name: "Własnośći algorytmów", content: null},
+    // ]},
 
-    {name: "Błędy", subchapters: [
-        {name: "Błędy numeryczne obliczeń", content: null},
-        {name: "Błąd względny i bezwzględny", content: null},
-    ]},
+    // {name: "Błędy", subchapters: [
+    //     {name: "Błędy numeryczne obliczeń", content: null},
+    //     {name: "Błąd względny i bezwzględny", content: null},
+    // ]},
 
     {name: "Algorytmy", subchapters: [
-        {name: "Odwrotna notacja polska", content: null},
+        // {name: "Odwrotna notacja polska", content: null},
         {name: "Zadania maturalne", content: <ZadaniaSzyfrowanie/>},
         {name: "Zadania maturalne", content: <ZadaniaAlgorytmy/>},
     ]},

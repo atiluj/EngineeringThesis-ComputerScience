@@ -17,24 +17,24 @@ const ExcelLessons = [
     ]},
 
     {name: "Formuły", subchapters: [
-        {name: "Podstawy", content: null},
+        // {name: "Podstawy", content: null},
         {name: "Formuły wbudowane", content: <FormulyWbudowane/>},
-        {name: "Formuły warunkowe", content: null},
-        {name: "Formuły zaawansowane", content: null},
-        {name: "Tabele i wykresy przestawne", content: null},
-        {name: "Wyszukaj pionowo/poziomo", content: null},
+        // {name: "Formuły warunkowe", content: null},
+        // {name: "Formuły zaawansowane", content: null},
+        // {name: "Tabele i wykresy przestawne", content: null},
+        // {name: "Wyszukaj pionowo/poziomo", content: null},
         {name: "Rodzaje błędów", content: <BledyExcel/>},
     ]},
 
-    {name: "Zadania ", subchapters: [
-        {name: "Przetwarzanie i analiza danych", content: null},
-        {name: "Odpowiadanie na zapytania", content: null},
-        {name: "Tworzenie symulacji", content: null},
-        {name: "Zapisywanie alagorytmów", content: null},
-        {name: "Tworzenie wykresów", content: null},
-        {name: "Obrazowanie zależności funkcyjnych", content: null},
-        {name: "Funkcje bazodanowe", content: null},
-    ]},
+    // {name: "Zadania ", subchapters: [
+        // {name: "Przetwarzanie i analiza danych", content: null},
+        // {name: "Odpowiadanie na zapytania", content: null},
+        // {name: "Tworzenie symulacji", content: null},
+        // {name: "Zapisywanie alagorytmów", content: null},
+        // {name: "Tworzenie wykresów", content: null},
+        // {name: "Obrazowanie zależności funkcyjnych", content: null},
+        // {name: "Funkcje bazodanowe", content: null},
+    // ]},
 
     {name: "Zadania maturalne", subchapters: [
         {name: "Część teoretyczna", content: <ZadaniaTeoriaExcel/>},
