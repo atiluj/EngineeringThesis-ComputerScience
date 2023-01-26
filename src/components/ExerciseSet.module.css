@@ -1,9 +1,9 @@
 .main {
     min-height: 100vh;
     text-align: left;
-    padding: 0px 2.5vw;
     font-family: 'Chakra Petch', sans-serif;
-    margin: 0 10%;
+    /* margin: 0 10%; */
+    width: 90%;
     max-width: 85em;
     margin: 0 auto;
 }
@@ -17,7 +17,7 @@
 }
 
 .main .exercises_title {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 

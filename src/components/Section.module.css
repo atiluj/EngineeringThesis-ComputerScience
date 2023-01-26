@@ -34,7 +34,7 @@
   display: grid;
   grid-template-columns: 18em 1fr;
   gap: 2.5vw;
-  padding: 10px 2.5vw;
+  width: 90%;
   max-width: 85em;
   margin: 0 auto;
 }
