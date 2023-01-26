@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "parcel public/*.html",
-    "build": "parcel build public/*.html",
+    "build": "rm -rf dist && parcel build public/*.html && cp src/.htaccess dist",
     "postinstall": "patch-package"
   },
   "dependencies": {

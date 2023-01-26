@@ -4,9 +4,11 @@
     padding: 0px 2.5vw;
     font-family: 'Chakra Petch', sans-serif;
     margin: 0 10%;
+    max-width: 85em;
+    margin: 0 auto;
 }
 
-.main .introduction{
+.main .introduction {
     margin-top: 10px;
     padding: 5px;
     background-color: white;
@@ -14,19 +16,21 @@
     border-radius: 10px;
 }
 
-.main .exercises_title{
+.main .exercises_title {
     margin-top: 50px;
     margin-bottom: 10px;
 }
 
-.main .exercises_list{
+.main .exercises_list {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-bottom: 10px;
     margin-bottom: 25px;
+    justify-content: center;
 }
-.main .exercises_list pre{
+
+.main .exercises_list pre {
     font-family: Chakra Petch, sans-serif;
 }
 
@@ -49,37 +53,39 @@
     padding-left: 10px;
 }
 
-.main .list_element{
+.main .list_element {
     display: flex;
     margin-bottom: 10px;
     margin-right: 7px;
     background-color: var(--exercise-secondary);
     border-radius: 15px;
-    height: 2rem;;
+    height: 2rem;
+    ;
     min-width: calc(11*1rem);
     justify-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    color: var(--font); 
+    color: var(--font);
 }
 
 
-.main .list_element:hover{
+.main .list_element:hover {
     background-color: var(--exercise-secondary2);
 }
 
 
-.main .list_element.number_element{
+.main .list_element.number_element {
     min-width: calc(3*1rem);
 }
 
-.main .category{
+.main .category {
     padding: 7px;
     /* margin: 0 40px; */
     letter-spacing: 2px;
     font-weight: bold;
-    border-top: solid var(--exercise-secondary) 3px ;
+    border-top: solid var(--exercise-secondary) 3px;
+    text-align: center;
 }
 
 @media (max-width:810px) {
