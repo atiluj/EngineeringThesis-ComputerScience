@@ -4,6 +4,7 @@ import WlaczanieExcel from './wlaczanieExcel.mdx';
 import ImportExcel from './importExcel.mdx';
 
 import FormulyWbudowane from './formulyWbudowane.mdx';
+import FormulyLogiczne from './formulyLogiczne.mdx';
 import BledyExcel from './bledyExcel.mdx';
 
 import ZadaniaTeoriaExcel from './zadaniaTeoriaExcel.mdx';

@@ -1,0 +1,174 @@
+import Table from "../../components/Table.jsx";
+
+<br/>
+
+W Excelu formuły warunkowe możemy towżyć poprzez ORAZ, LUB, NIE i JEŻELI.
+Poza funkcją "JEŻELI()" mamy róznież do dyspozycji "LICZ.JEŻELI()" i "SUMA.JEŻELI()". W tej lekcji omówimy tworzenie formuł warunkowych i wykorzystywanie funkcji JEŻELI, a następnie pokażemy przykłady ich użycia oraz zadania matualne, na sam koniec przejdziemy do zadań wybranych maturalnych, w ktorych są one przydatne.
+
+## ORAZ, LUB, NIE
+
+Są to odpowiedniki spójników logicznych. Większość z was zapewne miała podstwy logiki w szkole, ale dla przypomnienia (a wprowadzenia dla pozostałych) przypomnijmy, kiedy, która formuła będzie prawdziwa, a kiedy fałszywa.
+
+Dla zwiększenia przejrzystości zastosujemy zapis symboliczny PRAWDA jako 1, a FAŁSZ jako 0.
+
+
+ORAZ to odpowiednik logicznej koniunkcji (logicznego i). Funkcja na zwraca warość prawdziwą wtedy i tylko wtedy, gdy oba jej argumenty są prawdziwe.
+
+<Table
+    header = {["p", "q", "ORAZ"]}
+    data = {[
+                [1, 1, 1],
+                [1, 0, 0],
+                [0, 1, 0],
+                [0, 0, 0]
+            ]}
+/>
+
+<table>
+    <thead>
+        <tr>
+            <th>p</th>
+            <th>q</th>
+            <th>ORAZ(p; q)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+
+
+LUB to odpowednik logicznej alternatywy (logicznego lub). Funkcja ta zwraca wartość prawdziwą jeśli choć jeden z jej argumentów jest prawdziwy.
+
+<table>
+    <thead>
+        <tr>
+            <th>p</th>
+            <th>q</th>
+            <th>LUB(p; q)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+
+
+NIE to odpowiednik logicznej negacji (logicznego przeczenia). Zwraca on prawdę, jeśli argument był fałszywy.
+
+<table>
+    <thead>
+        <tr>
+            <th>p</th>
+            <th>NIE(p)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+
+## JEŻELI
+
+
+JEŻELI(tekst_logiczny; wartość_jeżeli_prawda; wartość_jeżeli_fałsz)
+
+* teskt_logiczny - to warunek, czyli wyrażenie, które powinno zwracać wartość prawdziwą lub fałszywą. W zależności od jego wyniku zwracana jest odpowiednio wartość drugiego lub trzeciego argumentu funkcji
+*  wartość_jeżeli_prawda - jest obliczana a następnie zwracana jako wynik całej formuły, jeśli tekst logiczny był prawdziwy
+*  wartość_jeżeli_fałsz - jest obliczana a następnie zwracana jako wynik całej formuły, jeśli tekst logiczny był fałszywy
+
+
+### JEŻELI
+
+![](https://i.imgur.com/i9aek79.png)
+
+<img src={new URL('../../img/excel/jezeli_excel.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+### JEŻELI + ORAZ
+
+![](https://i.imgur.com/NGwo5vp.png)
+
+<img src={new URL('../../img/excel/jezeli_oraz_excel.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+
+### JEŻELI + LUB
+
+![](https://i.imgur.com/RBuOaJq.png)
+
+
+<img src={new URL('../../img/excel/jezeli_lub_excel.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+
+### Formuły logiczne w zadaniach maturalnych
+
+#### maj 2018
+
+![](https://i.imgur.com/q9ifgAX.png)
+
+Rozplanujmy pracę, jaką należy wykonać, aby zrealizować ten podpunkt.
+1. Stwórzmy kolumnę pomocniczą, w której będziemy wstawiać 1, jeśli danego dnia dopływ wody do zbiornika retencyjnego z rzeki Wirki wynosił conajmniej 10 000 metrów sześciennych.
+("conajmniej", a więc >= 10 000)
+
+![](https://i.imgur.com/LEYy4Zn.png)
+
+2. Dodajmy kolejną kolumnę, w której będziemy obliczać długość okresu, w którym codziennie do zbiornika dopływało conajmniej 10 000 metrów sześciennych wody, czyli w kolumnie B była 1).
+
+(w pierwszej komórce (oznaczonej na czerwono) wpisujemy ręcznie wartość z tego samego wiersza z kolumny B, ponieważ jest to pierwszy dzień i nie mamy możliwości odwołania się do dnia poprzedniego, mogłoby to powodowac błędy)
+
+![](https://i.imgur.com/rxvfRbo.png)
+
+3. Znajdziemy najdłuższy okres spełniający powyższe warunki poprzez wykorzystanie funkcji MAX().
+Uwaga: Nie możemy wykorzystać tu sortowania, ponieważ dane w kolumnie C sa zalezne od wartości nie tylko w tym samym, ale również w wierszu poprzedzającym. Sortowanie zmienia kolejność wierszy, a więc wpływa na wynik formuły i "psuję ją".
+
+![](https://i.imgur.com/x3SfgH0.png)
+
+
+
+
+
+
