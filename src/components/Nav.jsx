@@ -135,8 +135,6 @@ function Nav() {
             </div>
 
         </nav>
-
-        <Outlet />
     </>;
 }
 
