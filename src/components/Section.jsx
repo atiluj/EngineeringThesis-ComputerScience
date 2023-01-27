@@ -155,10 +155,9 @@ function Section({lessons, title}) {
             <div className={`${styles.main_content} main_content`}>
                 <Contents lessons={lessons} />
                 <div className={styles.controls}>
-                    {/* <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div> */}
                     <div>
-                        <button onClick={prevLesson} style={{ visibility: prevLessonExists ? "visible" : "hidden" }}><ArrowBackIosNewIcon /></button>
-                        <button onClick={nextLesson} style={{ visibility: nextLessonExists ? "visible" : "hidden" }}><ArrowForwardIosIcon /></button>
+                        {prevLessonExists && <button onClick={prevLesson}><ArrowBackIosNewIcon /></button>}
+                        {nextLessonExists && <button onClick={nextLesson}><ArrowForwardIosIcon /></button>}
                     </div>
                 </div>
                 <Comments issue={`${title} ${curChapter}.${curSubchapter+1}`} />
