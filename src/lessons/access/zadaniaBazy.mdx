@@ -8,12 +8,14 @@ import TableQuiz from "../../components/TableQuiz.jsx";
 Filtrowanie tabeli w bazie danych
 
 <TableQuiz 
-    questions={
-      ["polega na wyborze wierszy spełniających określone kryterium.", 
-      "polega na wyborze niektórych kolumn z tabeli.", 
-      "zmienia jej zawartość.", 
-      "wymaga podania warunku dla jednej lub kilku kolumn tabeli."]} 
-    answers={[1, 0, 0, 1]}
+  questions={
+    [
+      {question: "polega na wyborze wierszy spełniających określone kryterium.", answer: 'P'},
+      {question: "polega na wyborze niektórych kolumn z tabeli.", answer: 'F'},
+      {question: "zmienia jej zawartość.", answer: 'F'},
+      {question: "wymaga podania warunku dla jednej lub kilku kolumn tabeli.", answer: 'P'}
+    ]
+  } 
 />
 
 ## Zadanie 2 (0-1pkt.)

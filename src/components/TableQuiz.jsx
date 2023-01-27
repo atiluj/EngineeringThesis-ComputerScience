@@ -5,48 +5,33 @@ import Button from '@mui/material/Button';
 import styles from "./TableQuiz.module.css";
 import "../style.css";
 
-export default function TableQuiz(props) {
-  const [values, setValues] = React.useState(new Array(props.questions.length).fill(null));
+export default function TableQuiz({questions}) {
+  const [values, setValues] = React.useState(questions);
   const [error, setError] = React.useState(false);
   const [helperText, setHelperText] = React.useState(' ');
+  const [submitted, setSubmitted] = React.useState(false);
+  console.log('q')
+  console.log(values)
 
-    const getSiblingElement = (currentNode) => {
-        const tdParent = currentNode.parentElement.parentElement;
-        let sibling;
-        if (currentNode.value === "0") {
-            sibling = tdParent.previousElementSibling;
-        } else {
-            sibling = tdParent.nextElementSibling;
-        }
-        return sibling.firstElementChild.lastElementChild;
-    }
-
-  const handleRadioChange = (event) => {
-    const input = event.target; 
-    const index = input.name;
-    const value = parseInt(input.value);
-    values[index] = value;
-
-    const siblingSpan = getSiblingElement(input);
-
-    if (props.answers[index] === value) {
-        input.nextElementSibling.classList.add(styles.correct);
-        siblingSpan.classList = [];
-    } else {
-        input.nextElementSibling.classList.add(styles.incorrect);
-        siblingSpan.classList = [];
-    }
+  const handleRadioChange = (index, value) => {
+    if (submitted) return;
+    setValues((prev) => prev.map((question, i) => 
+      i === index 
+        ? { ...question, checked: value, correct: value === question.answer }
+        : question
+    ))
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (values.includes(null)) {
+    if (values.some(({checked}) => !checked)) {
         setHelperText("Zaznacz wszystkie odpowiedzi");
         setError(true);
     } else {
         event.target.className=styles.filled;
-        if (props.answers.toString() === values.toString()) {
+        setSubmitted(true);
+        if (values.every(({correct}) => correct)) {
             setHelperText("1 punkt!");
             setError(false);
         } else {
@@ -60,22 +45,25 @@ export default function TableQuiz(props) {
     <form onSubmit={handleSubmit}>
       <FormControl sx={{ m: 3 }} variant="standard">
         <table border rules="all" frame="box">
-            {props.questions.map((question, index) =>
+            {values.map(({question, checked, correct}, index) => {
+              console.log(checked)
+              return (
                 <tr>
                     <td className={styles.question}>{question}</td>
                     <td className={styles.answer}>
                         <label className={styles.label}>
-                            <input type="radio" name={index} className={styles.input} value={1} onChange={handleRadioChange}/>
-                            <div>P</div>
+                            <input type="radio" value='P' className={styles.input} checked={checked === 'P'} onChange={() => handleRadioChange(index, 'P')}/>
+                            <div className={checked === 'P' && correct ? styles.correct : styles.incorrect}>P</div>
                         </label>
                     </td>
                     <td className={styles.answer}>
                         <label className={styles.label}>
-                            <input type="radio" name={index} className={styles.input} value={0} onChange={handleRadioChange}/>
-                            <div>F</div>
+                            <input type="radio" value='F' className={styles.input} checked={checked === 'F'} onChange={() => handleRadioChange(index, 'F')}/>
+                            <div className={checked === 'F' && correct ? styles.correct : styles.incorrect}>F</div>
                         </label>
                     </td>
                 </tr>
+            )}
             )}
         </table>
         <FormHelperText error={error}>{helperText}</FormHelperText>
