@@ -10,22 +10,12 @@ function Home() {
                     <h1>Cześć!</h1>
                 </div>
                 <article className={styles.first}>
-                    <p>Nasza strona powstała z myślą o wszystkich ludziach, którzy chcą podejść do matury z
+                    <p> Nasza strona powstała z myślą o wszystkich ludziach, którzy chcą podejść do matury z
                         informatyki, bezwzględu na to, czy uczyli się jej w szkole czy nie. Znajdujące sie na
                         niej materiały pomogą w osiągniećiu wyniku, który pozwoli Ci dostać się na dobre studia
                         informatyczne, bez względu na to na jakim są poziomie zaawansowania aktualnie jesteś. Aby
                         to osiągnąc po prostu poświęć regularnie troche czasu na przerobienie treści tego kursu.
-                        To na prawde takie proste. <br /><br />
-                        Twórczynie tej strony zdają sobie sprawę z tego, że poziom nauczania informatyki jest w
-                        wielu szkołach bardzo niski (czyt. tragiczny), a samodzielna nauka jest po prostu trudna.
-                        Na szczęście, każdego roku w internecie powstaje coraz więcej blogów czy filmów, które są
-                        bardzo pomocne. Wciąż jednak istnieje mało kompleksowych kursów, które zbierają całą
-                        potrzebną wiedzę w jednym miejscu i co najważniejsze są w 100% darmowe. Tworząc tę stronę
-                        kierowałyśmy własnymi doświadczeniami - same kilka lat temu przygotowywałyśmy się do tej
-                        matury i wiemy, czego nam wtedy brakowały. Chcemy oddać w Twoje ręce gotowe narzędzie, dzięki
-                        któremu oszczedzisz mnóstwo czasu i pieniędzy, a nauka będzie sprawna, przyjemna oraz
-                        przyniesie oczekiwane rezultaty. Przekazujemy Ci też mnóstwo wskazówek, które ułatwią Ci pracę
-                        i powiedza na co zwrócić uwagę, a czego nie warto się uczyć.
+                        To na prawde takie proste.
                     </p>
                 </article>
             </div>
@@ -47,6 +37,16 @@ function Home() {
                     <article>
                         <h1 id="first">DLA KOGO?</h1>
                         <p>
+                            Twórczynie tej strony zdają sobie sprawę z tego, że poziom nauczania informatyki jest w
+                            wielu szkołach bardzo niski (czyt. tragiczny), a samodzielna nauka jest po prostu trudna.
+                            Na szczęście, każdego roku w internecie powstaje coraz więcej blogów czy filmów, które są
+                            bardzo pomocne. Wciąż jednak istnieje mało kompleksowych kursów, które zbierają całą
+                            potrzebną wiedzę w jednym miejscu i co najważniejsze są w 100% darmowe. Tworząc tę stronę
+                            kierowałyśmy własnymi doświadczeniami - same kilka lat temu przygotowywałyśmy się do tej
+                            matury i wiemy, czego nam wtedy brakowały. Chcemy oddać w Twoje ręce gotowe narzędzie, dzięki
+                            któremu oszczedzisz mnóstwo czasu i pieniędzy, a nauka będzie sprawna, przyjemna oraz
+                            przyniesie oczekiwane rezultaty. Przekazujemy Ci też mnóstwo wskazówek, które ułatwią Ci pracę
+                            i powiedza na co zwrócić uwagę, a czego nie warto się uczyć.
                             Jeśli nie miałeś wcześniej styczności z informatyką - nie przejmuj się - nasz kurs
                             nie wymaga żadnej wcześniejszej wiedzy i powoli wprowadzi Cię w każdy temat. Poziom
                             trudności wykładów i zadań stopniowo wzrasta, a więc osoby bardziej zaawansowane na pewno

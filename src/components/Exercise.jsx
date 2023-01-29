@@ -20,7 +20,7 @@ function Exercise({lessons}) {
     return <>
         <main className={styles.main}>
             <div className={styles.exercise_title}>
-                <h1>{title}</h1>
+                <h2>{title}</h2>
             </div>
             <div className={`${styles.main_content} main_content`}>
                 <Contents chapter={chapter} />

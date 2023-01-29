@@ -33,6 +33,7 @@
     --tools2: #fcf8f8cc;
     --screen_filter: brightness(1);
     --logo_filter: brightness(0.2);
+    --link: rgb(77, 26, 61);
     --link-hover: #d08a9a;
     --dropdown: var(--card-background);
 }
@@ -63,9 +64,11 @@
     --tools2: #fcf8f8cc;
     --screen_filter: brightness(0.7);
     --logo_filter: brightness(1);
-    --link-hover: #7d217b;
+    --link: rgb(113, 44, 91);
+    --link-hover: #8a399e;
     --dropdown: #241C50;
 }
+
 
 .gradient {
     background-image: var(--gradient);
@@ -85,6 +88,10 @@
 
 .logo_img {
     fill: var(--font);
+}
+
+.radius{
+    border-radius: 40px;
 }
 
 ol,
@@ -175,11 +182,13 @@ img.section_logo {
 }
 
 .link {
-    color: var(--font);
+    color: var(--link);
     font-weight: 500;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+    font-size: 12px;
     transition-duration: .5s;
     letter-spacing: .5px;
+    word-break: break-all;
 }
 
 .link:hover {
@@ -259,17 +268,17 @@ img.section_logo {
 
 /* do testów tabelki z quizem */
 
-.correct:hover{
+.correct:hover {
     background-color: green;
 }
 
-.incorrect:hover{
+.incorrect:hover {
     background-color: red;
 }
 
 
- /* do obrazków w quizach, które trzeba wyrównać do lewej */
+/* do obrazków w quizach, które trzeba wyrównać do lewej */
 .main_content .second img.medium_img.left_img,
-.main_content .second img.super_small_img.left_img{
+.main_content .second img.super_small_img.left_img {
     margin-left: 20px;
 }

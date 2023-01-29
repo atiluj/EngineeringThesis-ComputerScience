@@ -5,7 +5,7 @@
 .editor {
     display: flex;
     flex-direction: column;
-    margin: 1rem 3rem;
+    margin: 0 3rem;
 }
 
 .editor_monaco {
@@ -20,6 +20,10 @@
     margin-bottom: 1rem;
 }
 
+/* .editor_wrapper .react-monaco-editor-container .margin{
+    width: 50px;
+} */
+
 .title_wrapper {
     display: flex;
     justify-content: space-between;
@@ -32,9 +36,17 @@
     font-family: 'Chakra Petch', sans-serif;
     font-size: 1.17em;
     color: #d4d4d4;
-    background: green;
+    background: rgb(0, 111, 0);
     padding: 0 2rem;
     margin-right: 0.5rem;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.editor_button:hover{
+    background: rgb(0, 135, 0);
+    color: #ffffff;
+    border: solid .5px white;
 }
 
 .editor_button:disabled {
@@ -50,17 +62,20 @@
     min-height: 20vh;
 }
 
-.editor_stdout, .editor_stderr {
+.editor_stdout,
+.editor_stderr {
     flex: 1;
     min-width: 0;
     flex-direction: row;
 }
 
-.editor_stdout p, .editor_stderr p {
+.editor_stdout p,
+.editor_stderr p {
     text-align: center;
 }
 
-.editor_stdout pre, .editor_stderr pre {
+.editor_stdout pre,
+.editor_stderr pre {
     flex: 1;
     overflow-y: auto;
     padding: 1rem;
@@ -86,8 +101,39 @@
     color: red;
 }
 
-@media (max-width: 810px) {
-    .editor_output {
-        flex-direction: column;
+@media (max-width: 700px) {
+    .editor {
+        margin: 0 1rem;
+    }
+
+    .editor_wrapper {
+        padding: .2rem;
+        margin-bottom: .4rem;
+    }
+
+    .title_wrapper {
+        padding: 0.1rem;
+    }
+
+    .title {
+        font-size: 1em;
+    }
+
+    .editor_button {
+        font-size: 1em;
+        padding: 0 1rem;
+        border-radius: 15px;
+        margin-right: 0.5rem;
+    }
+
+}
+
+@media (max-width: 350px) {
+    .editor {
+        margin: 0 .5rem;
+    }
+    
+    .title {
+        font-size: 0.9em;
     }
 }

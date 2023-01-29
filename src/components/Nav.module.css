@@ -87,7 +87,11 @@
 }
 
 
-@media (max-width:790px) {
+@media (max-width:790px) {  
+    .navbar{
+        min-height: 50px
+    }
+    
     .header h1 {
         margin-top: 30px;
         font-size: 50px;
