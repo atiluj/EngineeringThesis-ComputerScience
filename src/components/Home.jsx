@@ -1,5 +1,4 @@
 import styles from './Home.module.css';
-import '../style.css';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Home() {

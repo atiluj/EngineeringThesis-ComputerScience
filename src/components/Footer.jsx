@@ -1,5 +1,4 @@
 import styles from './Footer.module.css';
-import '../style.css';
 import CoffeeIcon from '@mui/icons-material/Coffee';
 import LogoFooter from "jsx:../img/logo_footer_black_01.svg";
 

@@ -3,7 +3,6 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import Button from '@mui/material/Button';
 import styles from "./TableQuiz.module.css";
-import "../style.css";
 
 export default function TableQuiz({questions}) {
   const [rowsData, setRowsData] = React.useState(questions);

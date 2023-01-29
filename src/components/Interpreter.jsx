@@ -1,5 +1,4 @@
 import styles from './Interpreter.module.css';
-import "../style.css";
 import * as React from 'react';
 import MonacoEditor from "react-monaco-editor";
 import usePython from "react-py/dist/hooks/usePython.js";

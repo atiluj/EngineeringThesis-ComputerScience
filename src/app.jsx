@@ -12,7 +12,6 @@ import ExerciseSet from './components/ExerciseSet'
 import Section from './components/Section'
 import Home from './components/Home'
 import Footer from './components/Footer';
-import './style.css';
 
 function Dashboard() {
     return (
