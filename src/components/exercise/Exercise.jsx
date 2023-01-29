@@ -4,7 +4,7 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/dark.css';
 import { useParams } from 'react-router-dom';
 
-import Comments from './Comments';
+import Comments from '../Comments';
 
 function Contents({chapter}) {
     React.useEffect(() => { hljs.highlightAll(); }, [chapter.content]);

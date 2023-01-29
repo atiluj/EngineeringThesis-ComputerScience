@@ -57,18 +57,18 @@ function Home() {
                         <h1 id="second">STATYSTYKI</h1>
                         <p>Na podstawie danych opublikowanych przez Centralną Komisję Egzaminacyjną na rok 2022 wiemy, że do egzaminu maturalnego z informatyki podeszło 9 248 osób z 268 257 maturzystów. Łatwo więc obliczyć, że jest to jedynie ok. 0.03% spośród wszystkich uczniów przystępujących do matury!<br /><br /></p>
                         <div className={styles.legenda}>
-                            <img className={styles.legenda_img} src={new URL('../img/home_legenda.png', import.meta.url)} alt="" /><p>– legenda</p>
+                            <img className={styles.legenda_img} src={new URL('../../img/home_legenda.png', import.meta.url)} alt="" /><p>– legenda</p>
                         </div>
-                        <p><img className={styles.statistic_img} src={new URL('../img/home_img02.png', import.meta.url)} alt="" />
+                        <p><img className={styles.statistic_img} src={new URL('../../img/home_img02.png', import.meta.url)} alt="" />
                             <br /><br />
 
                             Co więcej jeśli chodzi o kobiety to jest to zaledwie 0.003%. Możemy więc sobie wyobrazić, że nawet w przypadku dużej szkoły (liczącej ok. 1000 uczniów) w sporym mieście moglibyśmy wybierać zaledwie trzy uczennice i tylko one podeszłyby do tej matury. W trzyletnim liceum oznacząłoby to że, tak na prawde co roku do matury podchodzi tylko jedna dziewczyna! Dla porównania 11% maturzystów stanowią kobiety przystępujące do matury z matematyki na poziomie rozszerzonym. Jest to prawie 3667 razy więcej!<br /><br />
 
-                            <img className={styles.statistic_img} src={new URL('../img/home_img01.png', import.meta.url)} alt="" />
+                            <img className={styles.statistic_img} src={new URL('../../img/home_img01.png', import.meta.url)} alt="" />
                             <br /><br />
 
                             Co najbardziej szokujące jedynie 115 uczniów spośród ponad 268 tys. maturzystów to osoby ze szkół na wsi, które decydują się podejść do egzaminu z informatyki. W przeliczeniu jest to tylko 0.00043% czyli ok. 4 na 10 tys. To tak jakby wziąć 10 małych miast w Polsce i wybrać jedynie 4 spośród wszystkich ich mieszkańców.<br />
-                            {/* <img className={styles.statistic_img} src={new URL('../img/home_img03.png', import.meta.url)} alt="Aleksandra" /> */}
+                            {/* <img className={styles.statistic_img} src={new URL('../../img/home_img03.png', import.meta.url)} alt="Aleksandra" /> */}
 
                             Warto zauważyć, że operujemy paroma przybliżeniami i opieramy się tutaj jedynie na danych z 2022 roku. Niestety wyniki z innych lat nie różnią się od nich znacząco. Wszystkie dane są dostępne w raportach CKE, na oficjalnej stronie internetowej: https://cke.gov.pl/egzamin-maturalny/egzamin-maturalny-w-formule-2015/wyniki/
                             <br /><br />
@@ -161,7 +161,7 @@ function Home() {
             <div className={styles.authors_title}><p>AUTORZY STRONY</p></div>
             <div className={styles.authors_details_wrapper}>
                 <div className={styles.author}>
-                    <div className={styles.photo}><img src={new URL('../img/julita.jpg', import.meta.url)} alt="Julita" /></div>
+                    <div className={styles.photo}><img src={new URL('../../img/julita.jpg', import.meta.url)} alt="Julita" /></div>
                     <p className={styles.author_name}>JULITA OSMAN<a href="https://www.linkedin.com/in/julita-osman-167530225/" target="_blank"><LinkedInIcon /></a></p>
                     <p className={styles.introduction}>W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej. Przez wiele lat udzielałam korepetycji z
                         informatyki i matematyki. Studiuję informatykę i filologię chińską. Mam nadzieję, że uda mi się połączyć te twa kierunki w mojej przyszłej pracy zawodowej.
@@ -169,7 +169,7 @@ function Home() {
                 </div>
 
                 <div className={styles.author}>
-                    <div className={styles.photo}><img src={new URL('../img/ola.jpeg', import.meta.url)} alt="Aleksandra" /></div>
+                    <div className={styles.photo}><img src={new URL('../../img/ola.jpeg', import.meta.url)} alt="Aleksandra" /></div>
                     <p className={styles.author_name}>OLA STĘPNIEWSKA<a href="https://www.linkedin.com/in/aleksandrast%C4%99pniewska/" target="_blank"><LinkedInIcon /></a></p>
                     <p className={styles.introduction}>Interesuję się bazami danych i za to właśnie za nie oraz materiały z Excela byłam odpowiedzialna podczas tworzenia naszej platformy.
                         Przez wiele lat udzielałam korepetycji z informatyki, matematyki i fizyki. Zawodowo swoją przyszłość wiążę z zarządzaniem w firmach IT.
@@ -177,7 +177,7 @@ function Home() {
                 </div>
 
                 <div className={styles.author}>
-                    <div className={styles.photo}><img src={new URL('../img/nikola.jpg', import.meta.url)} alt="Nikola" /></div>
+                    <div className={styles.photo}><img src={new URL('../../img/nikola.jpg', import.meta.url)} alt="Nikola" /></div>
                     <p className={styles.author_name}>NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola-wrona-429a75211/" target="_blank"><LinkedInIcon /></a></p>
                     <p className={styles.introduction}>Od czasów liceum programowanie było dla mnie najbardziej interesującą dziedziną informatyki. Przy tworzeniu tej platformy
                         zajęłam się teoretyczną częścią oraz kursem programowania w Pythonie. Obecnie studiuję informatykę i pracuję jako software developer.

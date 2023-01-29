@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { ScrollToTop } from 'react-router-scroll-to-top';
-import Nav from './components/Nav';
+import Nav from './components/nav/Nav';
 import AccessLessons from './lessons/access/config.jsx';
 import ExcelLessons from './lessons/excel/config.jsx';
 import PythonLessons from './lessons/python/config.jsx';
 import TeoriaLessons from './lessons/teoria/config.jsx';
 import ExercisesPython from './lessons/exercises/matura/config.jsx';
-import Interpreter from './components/Interpreter'
-import Exercise from './components/Exercise'
-import ExerciseSet from './components/ExerciseSet'
-import Section from './components/Section'
-import Home from './components/Home'
-import Footer from './components/Footer';
+import Interpreter from './components/interpreter/Interpreter'
+import Exercise from './components/exercise/Exercise'
+import ExerciseSet from './components/exerciseSet/ExerciseSet'
+import Section from './components/section/Section'
+import Home from './components/home/Home'
+import Footer from './components/footer/Footer';
 
 function Dashboard() {
     return (
