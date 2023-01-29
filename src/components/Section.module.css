@@ -55,6 +55,7 @@
   font-family: "Chakra Petch", sans-serif;
   font-weight: lighter;
   text-transform: uppercase;
+
 }
 
 .main .contents .cont .topic {
@@ -254,6 +255,10 @@ img.section_logo {
     font-size: 13px;
   }
 
+  .main .contents .cont svg {
+    min-height: 40px;
+  }
+
   .main .contents .cont .subtopic {
     margin: 0.5px 0;
   }
@@ -306,6 +311,10 @@ img.section_logo {
   .main .contents .cont {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .main .contents .cont svg {
+    min-height: 45px;
   }
 
   .main article {

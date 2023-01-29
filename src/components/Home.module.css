@@ -148,8 +148,8 @@
 }
 
 .author {
-    min-width: 25vw;
-    max-width: 30vw;
+    /* min-width: 25vw; */
+    /* max-width: 30vw; */
     flex-direction: column;
     background-color: var(--card-background);
     color: var(--font);

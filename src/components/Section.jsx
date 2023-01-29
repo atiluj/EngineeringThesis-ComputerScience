@@ -35,7 +35,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
     return <div>
         <div className={`${styles.topic} menu_button`} onClick={() => setShow(show => !show)}>
             <a>{chapterId}. {chapter.name}</a>
-            <div>{show ? <ExpandLess /> : <ExpandMore />}</div>
+            {show ? <ExpandLess /> : <ExpandMore />}
         </div>
         <Collapse in={show}>
             {chapter.subchapters.map((subchapter, subchapterId) =>
@@ -51,7 +51,7 @@ function ChapterStandalone({ chapter, chapterId }) {
     return <div onClick={() => changeChapter(chapterId, 0)}>
         <div className={`${styles.topic} menu_button`}>
             <a>{chapterId}. {chapter.name}</a>
-            <div style={{ visibility: "hidden" }}><ExpandMore /></div>
+            <ExpandMore style={{ visibility: "hidden" }}/>
         </div>
     </div>;
 }

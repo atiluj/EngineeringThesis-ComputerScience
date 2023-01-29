@@ -155,8 +155,7 @@ img.section_logo {
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
     color: var(--primary);
-
-    margin-bottom: 3px;
+    margin-top: 3px;
     letter-spacing: 1px;
     text-decoration: none;
     transition: .7s;
