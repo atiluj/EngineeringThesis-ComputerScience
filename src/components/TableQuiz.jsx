@@ -6,32 +6,37 @@ import styles from "./TableQuiz.module.css";
 import "../style.css";
 
 export default function TableQuiz({questions}) {
-  const [values, setValues] = React.useState(questions);
+  const [rowsData, setRowsData] = React.useState(questions);
   const [error, setError] = React.useState(false);
   const [helperText, setHelperText] = React.useState(' ');
   const [submitted, setSubmitted] = React.useState(false);
-  console.log('q')
-  console.log(values)
 
   const handleRadioChange = (index, value) => {
     if (submitted) return;
-    setValues((prev) => prev.map((question, i) => 
-      i === index 
-        ? { ...question, checked: value, correct: value === question.answer }
-        : question
+
+    setRowsData((prev) => prev.map((question, i) => {
+      const correct = value === question.answer;
+
+      return i === index ? {
+        ...question,
+        correct,
+        checked: value,
+        trueClassName: value === 'P' && correct ? styles.correct : styles.incorrect,
+        falseClassName: value === 'F' && correct ? styles.correct : styles.incorrect 
+      } : question
+    }
     ))
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (values.some(({checked}) => !checked)) {
+    if (rowsData.some(({checked}) => !checked)) {
         setHelperText("Zaznacz wszystkie odpowiedzi");
         setError(true);
     } else {
-        event.target.className=styles.filled;
         setSubmitted(true);
-        if (values.every(({correct}) => correct)) {
+        if (rowsData.every(({correct}) => correct)) {
             setHelperText("1 punkt!");
             setError(false);
         } else {
@@ -42,32 +47,29 @@ export default function TableQuiz({questions}) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={submitted && styles.filled}>
       <FormControl sx={{ m: 3 }} variant="standard">
         <table border rules="all" frame="box">
-            {values.map(({question, checked, correct}, index) => {
-              console.log(checked)
-              return (
+            {rowsData.map(({question, checked, trueClassName, falseClassName}, index) => (
                 <tr>
                     <td className={styles.question}>{question}</td>
                     <td className={styles.answer}>
                         <label className={styles.label}>
-                            <input type="radio" value='P' className={styles.input} checked={checked === 'P'} onChange={() => handleRadioChange(index, 'P')}/>
-                            <div className={checked === 'P' && correct ? styles.correct : styles.incorrect}>P</div>
+                            <input type="radio" className={styles.input} checked={checked === 'P'} onChange={() => handleRadioChange(index, 'P')}/>
+                            <div className={trueClassName}>P</div>
                         </label>
                     </td>
                     <td className={styles.answer}>
                         <label className={styles.label}>
-                            <input type="radio" value='F' className={styles.input} checked={checked === 'F'} onChange={() => handleRadioChange(index, 'F')}/>
-                            <div className={checked === 'F' && correct ? styles.correct : styles.incorrect}>F</div>
+                            <input type="radio" className={styles.input} checked={checked === 'F'} onChange={() => handleRadioChange(index, 'F')}/>
+                            <div className={falseClassName}>F</div>
                         </label>
                     </td>
                 </tr>
-            )}
-            )}
+            ))}
         </table>
         <FormHelperText error={error}>{helperText}</FormHelperText>
-        <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
+        <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined" disabled={submitted}>
           Sprawdź odpowiedź
         </Button>
       </FormControl>
