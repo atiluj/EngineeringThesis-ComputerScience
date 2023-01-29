@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { ScrollToTop } from 'react-router-scroll-to-top';
-import { ThemeProvider } from '@mui/material';
-import { theme } from './themes/theme';
 import Nav from './components/Nav';
 import AccessLessons from './lessons/access/config.jsx';
 import ExcelLessons from './lessons/excel/config.jsx';
@@ -29,22 +27,20 @@ function Dashboard() {
 
 function App() {
     return (
-    // <ThemeProvider theme={theme}>
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Dashboard />}>
-                    <Route index element={<Home />}/>
-                    <Route path='interpreter' element={<Interpreter />} />
-                    <Route path='exercise' element={<ExerciseSet />} />
-                    <Route path='exercise/:id' element={<Exercise lessons={ExercisesPython} />}/>
-                    <Route path='access' element={<Section lessons={AccessLessons} title="access"/>} />
-                    <Route path='excel' element={<Section lessons={ExcelLessons} title="excel"/>} />
-                    <Route path='teoria' element={<Section lessons={TeoriaLessons} title="teoria"/>} />
-                    <Route path='python' element={<Section lessons={PythonLessons} title="python"/>} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    // </ThemeProvider>
+    <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Dashboard />}>
+                <Route index element={<Home />}/>
+                <Route path='interpreter' element={<Interpreter />} />
+                <Route path='exercise' element={<ExerciseSet />} />
+                <Route path='exercise/:id' element={<Exercise lessons={ExercisesPython} />}/>
+                <Route path='access' element={<Section lessons={AccessLessons} title="access"/>} />
+                <Route path='excel' element={<Section lessons={ExcelLessons} title="excel"/>} />
+                <Route path='teoria' element={<Section lessons={TeoriaLessons} title="teoria"/>} />
+                <Route path='python' element={<Section lessons={PythonLessons} title="python"/>} />
+            </Route>
+        </Routes>
+    </BrowserRouter>
     );
 }
 

@@ -48,7 +48,7 @@ export default function TableQuiz({questions}) {
 
   return (
     <form onSubmit={handleSubmit} className={submitted && styles.filled}>
-      <FormControl sx={{ m: 3 }} variant="standard">
+      <FormControl variant="standard">
         <table border rules="all" frame="box">
             {rowsData.map(({question, checked, trueClassName, falseClassName}, index) => (
                 <tr>
@@ -69,7 +69,7 @@ export default function TableQuiz({questions}) {
             ))}
         </table>
         <FormHelperText error={error}>{helperText}</FormHelperText>
-        <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined" disabled={submitted}>
+        <Button type="submit" variant="outlined" disabled={submitted}>
           Sprawdź odpowiedź
         </Button>
       </FormControl>

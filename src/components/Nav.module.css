@@ -18,15 +18,11 @@
 }
 
 .nav_wrapper_left {
-    display: flex;
-    flex-direction: row;
     align-items: center;
     margin-left: 20px;
 }
 
 .nav_wrapper_right {
-    display: flex;
-    flex-direction: row;
     align-items: center;
     margin-right: 20px;
 }
