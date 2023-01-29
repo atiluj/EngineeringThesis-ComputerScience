@@ -1,3 +1,7 @@
+.smooth_scroll {
+    scroll-behavior: smooth;
+}
+
 .main_page {
     max-width: 85em;
     margin: 0 auto;

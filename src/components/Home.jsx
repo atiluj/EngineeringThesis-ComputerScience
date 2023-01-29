@@ -4,7 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Home() {
     return <>
-        <div className={styles.main_page}>
+        <div className={`${styles.main_page} ${styles.smooth_scroll}`}>
             <div className={styles.section}>
                 <div className={styles.header}>
                     <h1>Cześć!</h1>
