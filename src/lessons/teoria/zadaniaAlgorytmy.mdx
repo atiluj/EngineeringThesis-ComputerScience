@@ -7,13 +7,15 @@ import TableQuiz from "../../components/tableQuiz/TableQuiz.jsx";
 ### TREŚĆ
 Dana jest funkcja f określona wzorem rekurencyjnym
 <img src={new URL('https://i.imgur.com/aSqBx3L.png', import.meta.url)} alt="xyz" className={`super_small_img left_img`} />
-<TableQuiz 
+<TableQuiz
     questions={
-      ["f(8) = 1/3", 
-      "f(9) = 3/4", 
-      "f(10) = 4",
-      "f(100) = -1/3"]} 
-    answers={[0, 1, 1, 0]}
+      [
+        {question: "f(8) = 1/3", answer: 'F'},
+        {question: "f(9) = 3/4", answer: 'P'},
+        {question: "f(10) = 4", answer: 'P'},
+        {question: "f(100) = -1/3", answer: 'F'},
+      ]
+    }
 />
 
 ## Zadanie 2 (0-1pkt.)
@@ -29,11 +31,13 @@ W poniższym algorytmie ``n`` jest nieujemną liczbą całkowitą, ``mod`` to op
 </pre>
 <TableQuiz 
     questions={
-      ["Po wykonaniu algorytmu dla n = 45778 zmienna w przyjmuje wartość 30. ", 
-      "Po wykonaniu algorytmu dla liczby n wartością zmiennej w jest suma cyfr liczby n w zapisie dziesiętnym. ", 
-      "Podczas wykonywania algorytmu dla n = 1234 w kolejnych iteracjach pętli dopóki, zmienna w przyjmuje wartości 1, 3, 6, 10.",
-      "Po wykonaniu algorytmu dla n = 11111 zmienna w przyjmuje wartość 5. "]} 
-    answers={[0, 1, 0, 1]}
+      [
+        {question: "Po wykonaniu algorytmu dla n = 45778 zmienna w przyjmuje wartość 30. ", answer: 'F'},
+        {question: "Po wykonaniu algorytmu dla liczby n wartością zmiennej w jest suma cyfr liczby n w zapisie dziesiętnym. ", answer: 'P'},
+        {question: "Podczas wykonywania algorytmu dla n = 1234 w kolejnych iteracjach pętli dopóki, zmienna w przyjmuje wartości 1, 3, 6, 10.", answer: 'F'},
+        {question: "Po wykonaniu algorytmu dla n = 11111 zmienna w przyjmuje wartość 5. ", answer: 'P'},
+      ]
+    }
 />
 
 ## Zadanie 3 (0-1pkt.)
@@ -48,13 +52,15 @@ Dana jest następująca funkcja:
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f(n – 2) <br/>
   &nbsp;&nbsp;&nbsp;&nbsp; wypisz n
 </pre>
-<TableQuiz 
+<TableQuiz
     questions={
-      ["W wyniku wywołania f(5) otrzymamy ciąg 5 5 5 5 5 5. ", 
-      "W wyniku wywołania f(6) otrzymamy ciąg 6 4 2 2 4 6.", 
-      "W wyniku wywołania f(7) otrzymamy ciąg 7 5 3 1 1 3 5 7.",
-      "W wyniku wywołania f(8) otrzymamy ciąg 8 6 4 2 0 0 2 4 6 8."]} 
-    answers={[0, 1, 1, 0]}
+      [
+        {question: "W wyniku wywołania f(5) otrzymamy ciąg 5 5 5 5 5 5. ", answer: 'F'},
+        {question: "W wyniku wywołania f(6) otrzymamy ciąg 6 4 2 2 4 6.", answer: 'P'},
+        {question: "W wyniku wywołania f(7) otrzymamy ciąg 7 5 3 1 1 3 5 7.", answer: 'P'},
+        {question: "W wyniku wywołania f(8) otrzymamy ciąg 8 6 4 2 0 0 2 4 6 8.", answer: 'F'},
+      ]
+    }
 />
 
 ## Zadanie 4 (0-1pkt.)
@@ -73,11 +79,13 @@ Złożoność obliczeniowa powyższego algorytmu oceniona liczbą wykonań instr
 
 <TableQuiz 
     questions={
-      ["liniowa.", 
-      "kwadratowa.", 
-      "n log n.",
-      "nie większa niż sześcienna."]} 
-    answers={[0, 1, 0, 1]}
+      [
+        {question: "liniowa.", answer: 'F'},
+        {question: "kwadratowa.", answer: 'P'},
+        {question: "n log n.", answer: 'F'},
+        {question: "nie większa niż sześcienna.", answer: 'P'},
+      ]
+    }
 />
 
 

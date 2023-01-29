@@ -27,11 +27,13 @@ uporządkowane niemalejąco według pola nazwa.
 
 <TableQuiz 
     questions={
-      [<pre> SELECT nazwa, wartosc FROM dane ORDER BY wartosc, nazwa </pre>, 
-      <pre> SELECT nazwa, wartosc FROM dane ORDER BY nazwa </pre>, 
-      <pre> SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa </pre>, 
-      <pre> SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa ORDER BY nazwa </pre>]} 
-    answers={[0, 1, 0, 1]}
+      [
+        {question: "SELECT nazwa, wartosc FROM dane ORDER BY wartosc, nazwa", answer: 'F'},
+        {question: "SELECT nazwa, wartosc FROM dane ORDER BY nazwa", answer: 'P'},
+        {question: "SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa", answer: 'F'},
+        {question: "SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa ORDER BY nazwa ", answer: 'P'}
+      ]
+    }
 />
 
 ## Zadanie 3 (0-1pkt.)
@@ -48,13 +50,15 @@ Rozważ następujące zapytanie SQL do pewnej bazy danych:
 
 Po wykonaniu tego zapytania w odpowiedzi
 
-<TableQuiz 
+<TableQuiz
     questions={
-      ["ten sam numer PESEL może pojawić więcej niż jeden raz. ", 
-      "nie pojawi się żaden numer PESEL, który jest zapisany w tabeli dokumenty_zastrzezone.", 
-      "otrzymasz tabelę o 2 kolumnach. ", 
-      "przy odpowiednich danych może pojawić się wiersz 82122302134, 1. "]} 
-    answers={[0, 1, 1, 0]}
+      [
+        {question: "ten sam numer PESEL może pojawić więcej niż jeden raz. ", answer: 'F'},
+        {question: "nie pojawi się żaden numer PESEL, który jest zapisany w tabeli dokumenty_zastrzezone.", answer: 'P'},
+        {question: "otrzymasz tabelę o 2 kolumnach.", answer: 'P'},
+        {question: "przy odpowiednich danych może pojawić się wiersz 82122302134, 1. ", answer: 'F'}
+      ]
+    }
 />
 
 **Uwaga:** kolumna pesel zawiera numery PESEL
@@ -67,11 +71,13 @@ Wskaż zdania prawdziwe dla języka SQL
 
 <TableQuiz 
     questions={
-      ["W wynikach zapytania postaci SELECT (...) ORDER BY (...) zawsze dostajemy rekordy uporządkowane ściśle rosnąco według wskazanego pola. ", 
-      "Zapytanie UPDATE może zmienić wartości pól w bazie danych.", 
-      "Zapytanie postaci SELECT * FROM tabela1 WHERE pole LIKE (...) może w pewnych warunkach dać wszystkie rekordy z tabeli tabela1.", 
-      "Wynik zapytania SELECT * FROM tabela1 JOIN tabela2 ON tabela1.pole = tabela2.pole może być pusty przy niepustych tabelach tabela1 oraz tabela2."]} 
-    answers={[0, 1, 1, 1]}
+      [
+        {question: "W wynikach zapytania postaci SELECT (...) ORDER BY (...) zawsze dostajemy rekordy uporządkowane ściśle rosnąco według wskazanego pola. ", answer: 'F'},
+        {question: "Zapytanie UPDATE może zmienić wartości pól w bazie danych.", answer: 'P'},
+        {question: "Zapytanie postaci SELECT * FROM tabela1 WHERE pole LIKE (...) może w pewnych warunkach dać wszystkie rekordy z tabeli tabela1.", answer: 'P'},
+        {question: "Wynik zapytania SELECT * FROM tabela1 JOIN tabela2 ON tabela1.pole = tabela2.pole może być pusty przy niepustych tabelach tabela1 oraz tabela2.", answer: 'P'}
+      ]
+    }
 />
 
 
@@ -84,11 +90,13 @@ Dana jest tabela PRACOWNICY.
 
 <TableQuiz 
     questions={
-      [<img src={new URL('https://i.imgur.com/DPLaTa4.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
-      <img src={new URL('https://i.imgur.com/8XR746A.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
-      <img src={new URL('https://i.imgur.com/kjkxEsz.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
-      <img src={new URL('https://i.imgur.com/5CnnY4h.png', import.meta.url)} alt="xyz" className={`small_img`} />]} 
-    answers={[0, 1, 1, 0]}
+      [
+        {question: <img src={new URL('https://i.imgur.com/DPLaTa4.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'F'},
+        {question: <img src={new URL('https://i.imgur.com/8XR746A.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'P'},
+        {question: <img src={new URL('https://i.imgur.com/kjkxEsz.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'P'},
+        {question: <img src={new URL('https://i.imgur.com/5CnnY4h.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'F'}
+      ]
+    }
 />
 
 ## Zadanie 6 (0-1pkt.)
@@ -105,13 +113,15 @@ oraz zapytanie SQL:
     ORDER BY staz DESC; 
 </p>
 
-<TableQuiz 
+<TableQuiz
     questions={
-      [<p>Wynik powyższego zapytania to 3</p>, 
-      <img src={new URL('https://i.imgur.com/TDosuSg.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
-      <p>Wynikiem zapytania będą wiersze z tabeli ``pracownicy``, zawierające wszystkie dane z tej tabeli dotyczące pracowników, dla których wartość z kolumny ``pensja`` jest mniejsza niż 2000, posortowane nierosnąco według parametru ``staz``. </p>, 
-      <img src={new URL('https://i.imgur.com/Xf2xIf7.png', import.meta.url)} alt="xyz" className={`small_img`} />]} 
-    answers={[0, 1, 1, 0]}
+      [
+        {question: <p>Wynik powyższego zapytania to 3</p>, answer: 'F'},
+        {question: <img src={new URL('https://i.imgur.com/TDosuSg.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'P'},
+        {question: <p>Wynikiem zapytania będą wiersze z tabeli ``pracownicy``, zawierające wszystkie dane z tej tabeli dotyczące pracowników, dla których wartość z kolumny ``pensja`` jest mniejsza niż 2000, posortowane nierosnąco według parametru ``staz``. </p>, answer: 'P'},
+        {question: <img src={new URL('https://i.imgur.com/Xf2xIf7.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'F'}
+      ]
+    }
 />
 
 ## Zadanie 7 (0-1pkt.)
@@ -124,11 +134,13 @@ następujące dane:
 
 <TableQuiz 
     questions={
-      [<img src={new URL('https://i.imgur.com/168P4ma.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
-      <img src={new URL('https://i.imgur.com/JOC0v30.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
-      <img src={new URL('https://i.imgur.com/MqiA8kx.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
-      <img src={new URL('https://i.imgur.com/kvkfiSZ.png', import.meta.url)} alt="xyz" className={`small_img`} />]} 
-    answers={[0, 1, 1, 0]}
+      [
+        {question: <img src={new URL('https://i.imgur.com/168P4ma.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'F'},
+        {question: <img src={new URL('https://i.imgur.com/JOC0v30.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'P'},
+        {question: <img src={new URL('https://i.imgur.com/MqiA8kx.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'P'},
+        {question: <img src={new URL('https://i.imgur.com/kvkfiSZ.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'F'},
+      ]
+    }
 />
 
 ## Zadanie 8 (0-1pkt.)
@@ -141,11 +153,13 @@ dane:
 
 <TableQuiz 
     questions={
-      [<img src={new URL('https://i.imgur.com/K220hxV.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
-      <img src={new URL('https://i.imgur.com/pvawnQq.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
-      <img src={new URL('https://i.imgur.com/9jqNByo.png', import.meta.url)} alt="xyz" className={`small_img`} />, 
-      <img src={new URL('https://i.imgur.com/rrLMv6q.png', import.meta.url)} alt="xyz" className={`small_img`} />]} 
-    answers={[0, 1, 0, 1]}
+      [
+        {question: <img src={new URL('https://i.imgur.com/K220hxV.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'F'},
+        {question: <img src={new URL('https://i.imgur.com/pvawnQq.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'P'},
+        {question: <img src={new URL('https://i.imgur.com/9jqNByo.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'F'},
+        {question: <img src={new URL('https://i.imgur.com/rrLMv6q.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'P'},
+      ]
+    }
 />
 
 

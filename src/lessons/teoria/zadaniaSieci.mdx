@@ -9,13 +9,15 @@ Po wpisaniu w pasku adresu przeglądarki http://81.219.47.83 otwiera się strona
 Komisji Egzaminacyjnej, ale po wpisaniu http://cke.edu.pl pojawia się błąd „Nie można
 odnaleźć podanej strony”. Możliwe przyczyny tego stanu rzeczy to: 
 
-<TableQuiz 
+<TableQuiz
     questions={
-      ["awaria serwera SMTP Centralnej Komisji Egzaminacyjnej, ", 
-      "awaria serwera poczty użytkownika, ", 
-      "awaria serwera DNS,", 
-      "brak prawidłowego klucza szyfrującego w przeglądarce."]} 
-    answers={[0, 0, 1, 0]}
+      [
+        {question: "awaria serwera SMTP Centralnej Komisji Egzaminacyjnej, ", answer: 'F'},
+        {question: "awaria serwera poczty użytkownika, ", answer: 'F'},
+        {question: "awaria serwera DNS,", answer: 'P'},
+        {question: "brak prawidłowego klucza szyfrującego w przeglądarce.", answer: 'F'},
+      ]
+    }
 />
 
 
@@ -29,11 +31,13 @@ Wiadomo, że:
 
 <TableQuiz 
     questions={
-      ["kod PHP jest wykonywany przez komputer – serwer. ", 
-      "kod JavaScript jest wykonywany przez komputer – klient. ", 
-      "podczas wykonywania kodu PHP zawsze pobierane są dane od klienta.", 
-      "podczas wykonywania kodu JavaScript mogą być pobierane dodatkowe dane zarówno od klienta, jak i od serwera."]} 
-    answers={[1, 1, 0, 1]}
+      [
+        {question: "kod PHP jest wykonywany przez komputer – serwer. ", answer: 'P'},
+        {question: "kod JavaScript jest wykonywany przez komputer – klient. ", answer: 'P'},
+        {question: "podczas wykonywania kodu PHP zawsze pobierane są dane od klienta.", answer: 'F'},
+        {question: "podczas wykonywania kodu JavaScript mogą być pobierane dodatkowe dane zarówno od klienta, jak i od serwera.", answer: 'P'},
+      ]
+    }
 />
 
 ## Zadanie 3 (0-1pkt.)
@@ -42,11 +46,13 @@ Wiadomo, że:
 ### TREŚĆ
 <TableQuiz 
     questions={
-      ["DNS to skrót od Domain Name System. ", 
-      "Do danego adresu IP może być przypisanych wiele różnych nazw. ", 
-      "Przy zmianie adresu IP komputera pełniącego funkcję serwera WWW jest konieczna zmiana nazwy domeny internetowej.", 
-      "System DNS ma jedną centralną bazę danych adresów IP i nazw."]} 
-    answers={[1, 1, 0, 0]}
+      [
+        {question: "DNS to skrót od Domain Name System. ", answer: 'P'},
+        {question: "Do danego adresu IP może być przypisanych wiele różnych nazw. ", answer: 'P'},
+        {question: "Przy zmianie adresu IP komputera pełniącego funkcję serwera WWW jest konieczna zmiana nazwy domeny internetowej.", answer: 'F'},
+        {question: "System DNS ma jedną centralną bazę danych adresów IP i nazw.", answer: 'F'},
+      ]
+    }
 />
 
 ## Zadanie 4 (0-1pkt.)
@@ -65,9 +71,11 @@ Maska sieci: 255.255.255.0 <br/>
 
 <TableQuiz 
     questions={
-      ["Komputer A i komputer B są w tej samej sieci. ", 
-      "Adresem sieci dla komputera A jest adres 192.168.10.0. ", 
-      "Dla maski 255.255.255.0 są dostępne 254 adresy hostów.", 
-      "Adres rozgłoszeniowy sieci, do której należy komputer B, to 192.168.255.255. "]} 
-    answers={[1, 1, 1, 0]}
+      [
+        {question: "Komputer A i komputer B są w tej samej sieci. ", answer: 'P'},
+        {question: "Adresem sieci dla komputera A jest adres 192.168.10.0. ", answer: 'P'},
+        {question: "Dla maski 255.255.255.0 są dostępne 254 adresy hostów.", answer: 'P'},
+        {question: "Adres rozgłoszeniowy sieci, do której należy komputer B, to 192.168.255.255. ", answer: 'F'},
+      ]
+    }
 />

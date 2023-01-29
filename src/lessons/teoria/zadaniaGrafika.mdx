@@ -8,11 +8,13 @@ import TableQuiz from "../../components/tableQuiz/TableQuiz.jsx";
 Kompresja stratna w grafice
 <TableQuiz 
     questions={
-      ["ma związek z plikami graficznymi w formacie BMP. ", 
-      "ma związek z plikami graficznymi w formacie JPG. ", 
-      "jest metodą zmniejszania rozmiaru pliku graficznego bez utraty szczegółów w obrazie.", 
-      "wykorzystuje algorytm szyfrowania RSA"]} 
-    answers={[0, 1, 0, 0]}
+      [
+        {question: "ma związek z plikami graficznymi w formacie BMP. ", answer: 'F'},
+        {question: "ma związek z plikami graficznymi w formacie JPG. ", answer: 'P'},
+        {question: "jest metodą zmniejszania rozmiaru pliku graficznego bez utraty szczegółów w obrazie.", answer: 'F'},
+        {question: "wykorzystuje algorytm szyfrowania RSA", answer: 'F'},
+      ]
+    }
 />
 
 
@@ -22,11 +24,13 @@ Kompresja stratna w grafice
 ### TREŚĆ
 <TableQuiz 
     questions={
-      ["Plakat do druku lepiej przygotować w modelu barw RGB niż CMYK. ", 
-      "Kolor żółty jest kolorem podstawowym w modelu RGB.", 
-      "W wyniku nałożenia się składowych Yellow i Magenta w modelu CMYK otrzymamy kolor czerwony.", 
-      "W modelu barw CMYK litera C pochodzi od angielskiego słowa contrast."]} 
-    answers={[0, 0, 1, 0]}
+      [
+        {question: "Plakat do druku lepiej przygotować w modelu barw RGB niż CMYK. ", answer: 'F'},
+        {question: "Kolor żółty jest kolorem podstawowym w modelu RGB.", answer: 'F'},
+        {question: "W wyniku nałożenia się składowych Yellow i Magenta w modelu CMYK otrzymamy kolor czerwony.", answer: 'P'},
+        {question: "W modelu barw CMYK litera C pochodzi od angielskiego słowa contrast.", answer: 'F'},
+      ]
+    }
 />
 
 ## Zadanie 3 (0-1pkt.)
