@@ -53,6 +53,72 @@
     border: 0px;
 }
 
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    margin-left: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch .checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--tools);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    background: white url('../../img/sun-icon.png');
+    background-position: center;
+    transform: scale(1);
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.checkbox:checked+.slider {
+    background-color: var(--slider);
+}
+
+.checkbox:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+    background: white url('../../img/moon-icon.png');
+    transform: scale(1);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
 @media (max-width: 1200px) {
     .navbar .nav_wrapper_left {
         padding-left: 20px;
@@ -67,6 +133,10 @@
         font-size: 60px;
         letter-spacing: 40px;
     }
+
+    .switch {
+        display: inline-block;
+    }
 }
 
 @media(max-width:1000px) {
@@ -80,6 +150,10 @@
 
     .navbar a {
         font-size: 15px;
+    }
+
+    .switch {
+        display: inline-block;
     }
 }
 
@@ -178,69 +252,8 @@
         font-size: 13px;
         text-transform: uppercase;
     }
-}
 
-/* The switch - the box around the slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 26px;
-    margin-left: 10px;
-}
-
-/* Hide default HTML checkbox */
-.switch .checkbox {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--tools);
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.slider::before {
-    position: absolute;
-    content: "";
-    background: white url('../../img/sun-icon.png');
-    background-position: center;
-    transform: scale(1);
-    height: 20px;
-    width: 20px;
-    left: 5px;
-    bottom: 3px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.checkbox:checked+.slider {
-    background-color: var(--slider);
-}
-
-.checkbox:checked+.slider:before {
-    -webkit-transform: translateX(20px);
-    -ms-transform: translateX(20px);
-    transform: translateX(20px);
-    background: white url('../../img/moon-icon.png');
-    transform: scale(1);
-}
-
-/* Rounded sliders */
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
+    .switch{
+        display: none;
+    }
 }
