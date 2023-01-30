@@ -75,7 +75,7 @@ function resizeNav() {
             padding = "13px 17px";
             fontSize = "16px";
         }
-    } else if (windowWidth > 810) {
+    } else {
         if (scrollY > 80) {
             padding = "12px 10px";
             fontSize = "14px";

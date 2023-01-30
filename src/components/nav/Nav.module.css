@@ -2,7 +2,7 @@
     min-height: 80px;
 }
 
-.navbar_sticky {
+.navbar .navbar_sticky {
     font-size: 0;
     /* to likiwduje wbudowany margines w menu*/
     overflow: hidden;
@@ -30,7 +30,7 @@
 .nav_wrapper_left a,
 .nav_wrapper_right a,
 .nav_wrapper_right .switch {
-    transition: .5s;
+    /* transition: .5s; */
 }
 
 .nav_wrapper_right .switch {
@@ -120,6 +120,11 @@
 
 
 @media (max-width: 1200px) {
+    .navbar .navbar_sticky {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .navbar .nav_wrapper_left {
         padding-left: 20px;
     }
@@ -160,7 +165,7 @@
 
 @media (max-width:810px) {  
     .navbar{
-        min-height: 48px
+        min-height: 50px
     }
     
     .header h1 {
@@ -174,9 +179,13 @@
     }
 
     .navbar .nav_wrapper_right {
-        padding-right: 0px;
+        padding-right: 5px;
     }
 
+    .navbar .nav_button {
+        padding-left: 25px;
+    }
+    
     .nav_wrapper_left {
         margin-left: 0px;
     }
@@ -222,7 +231,7 @@
     }
 
     .navbar_sticky.responsive .nav_wrapper_right {
-        padding-left: 0px;
+        padding-right: 0px;
         margin-left: 0px;
     }
 
