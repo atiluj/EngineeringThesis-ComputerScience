@@ -73,7 +73,7 @@ Dodajemy więc kolejną kolumnę, na przykład pesel i to ją ustanawiamy klucze
 * jest to kolumna lub grupa kolumn
 * skrót: FG(foreign key)
 
-<img src={new URL('../../img/access/klucz_obcy.png', import.meta.url)} alt="xyz" className={`small_img`} />
+<img src={new URL('../../img/access/klucz_obcy.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 
 Klucz obcy w jednej tabeli jest kluczem głównym w innej. W naszym przykładzie pesel, który jest kluczem głównym,
 dzięki któremu dwie Anny Abackie są rozróżniane, będzie kluczem obcym w tabeli ze spisem nieruchomości. Zauważmy, że
@@ -92,14 +92,14 @@ Mamy dwie tabele KOBIETY i MĘŻCZYŹNI. Interesuje nas związek między tymi ta
 Oznacza to, że zakładamy, że kobieta może mieć jednego męża, a mężczyzna jedną żonę (nie zajmujemy się tu relacjami nieformalnymi).
 Związek między tymi tabelami to tak zwany związek 1-1 (czyt. jeden do jednego).
 
-<img src={new URL('../../img/access/1do1.png', import.meta.url)} alt="xyz" className={`small_img`} />
+<img src={new URL('../../img/access/1do1.png', import.meta.url)} alt="xyz" className={`medium_img`} />
 
 ### Przykład 2:
 Mamy dwie tabele KOBIETY i DZIECI. Interesuje nas związek między tymi tabelami, który ma odzwierciedlać relacje rodzicielstwa (a dokładniej bycia czyjąś matką).
 Oznacza to, że zakładamy, że kobieta może mieć wiele dzieci, ale dane dziecko ma zawsze tylko jedną matkę (to spore uproszczenie życia, ale na potrzeby przykładu tak załóżmy).
 Związek między tymi tabelami to tak zwany związek 1-∞ (czyt. jeden do wielu).
 
-<img src={new URL('../../img/access/1don.png', import.meta.url)} alt="xyz" className={`small_img`} />
+<img src={new URL('../../img/access/1don.png', import.meta.url)} alt="xyz" className={`big_img`} />
 
 ### Przykład 3:
 Mamy dwie tabele LUDZIE i DOMY. Interesuje nas związek między tymi tabelami, który ma odzwierciedlać relacje posiadania (bycia właścicielem) domu.
@@ -107,7 +107,7 @@ Naturalnie, jeden człowiek może posiadać kilka domów, ale i jeden dom może 
 Związek między tymi tabelami to tak zwany związek ∞-∞ (czyt. wiele do wielu).
 Zazwyczaj tego typu związki nie są pożądane. Jeśli widzimy, że między dwoma tabelami występuje związek ∞-∞, to zazwyczaj będziemy chcieli wprowadzić tabele pomocniczą, która będzie łącznikiem między dwoma pozostałymi. Dzięki temu związek ∞-∞ rozbijemy na dwa typu 1-∞.
 
-<img src={new URL('../../img/access/ndon.png', import.meta.url)} alt="xyz" className={`small_img`} />
+<img src={new URL('../../img/access/ndon.png', import.meta.url)} alt="xyz" className={`big_img`} />
 
 ### Możliwe sposoby zapisu związków między tabelami:
 * 1-1, 1:1 -- jeden do jednego
@@ -118,12 +118,12 @@ Zazwyczaj tego typu związki nie są pożądane. Jeśli widzimy, że między dwo
 
 ## 8. Możliwe błędy w modelu relacyjnym
 (We wszystkich przykładach będziemy opierać się na bazie danych uczniów w pewnej szkole)
-    * **redundancja -- powtarzanie się danych**
+* **redundancja -- powtarzanie się danych**
 Przykład: Wyobraźmy sobie, że w wyniku pewnego błędu w tabeli "Uczniowie" mamy dwa wiersze z tymi samymi wartościami, przedstawiające tą samą osobę - Anna Kowalska 3a nr_dziennika 16 jest w tej bazie wpisana dwukrotnie. Teraz może się okazać, że część ocen Ani jest łączona z jednym a część z drugim rekordem w bazie danych. Może to skutkować poważnymi problemami, na przykład średnia Ani może być obliczona niewłaściwie.
-    * **anomalie:**
-        * **modyfikacji** -- wartość występująca w wielu miejscach może ulec zmianie w jednym miejscu, a w innym nie, co powoduje niespójność w bazie danych.
-        * **usunięć** -- usunięcie jednej wartości może spowodować utratę innych danych umieszczonych z nią w jednym wierszu.
-        * **wstawień** -- konieczność równoczesnego wprowadzania niezależnych danych.
+* **anomalie:**
+    * **modyfikacji** -- wartość występująca w wielu miejscach może ulec zmianie w jednym miejscu, a w innym nie, co powoduje niespójność w bazie danych.
+    * **usunięć** -- usunięcie jednej wartości może spowodować utratę innych danych umieszczonych z nią w jednym wierszu.
+    * **wstawień** -- konieczność równoczesnego wprowadzania niezależnych danych.
 
 ## 9. Postaci normalne
 
@@ -231,5 +231,6 @@ Wyobraźmy sobie teraz, że ignorujemy zalecenia związane z postaciami normalny
 
 **Przykład:**
 ![](https://i.imgur.com/RzlYXaJ.png)
-To bardzo uproszczony przykład, zawierający jedyne plan lekcji z jednego dnia, dla jednej klasy, która w dodatku zawiera jedynie dwóch uczniów! Widzimy więc, że stosowanie rozbicia danych na tabele i dbania o prawidłowe relacje między nimi jest niesamowicie istotne.
-Możemy teraz wyobrazić sobie, że nauczycielka "Joanna Popowicka" rozwiodła się i wróciła do panieńskiego nazwiska "Morowska". Musimy więc zmienić jej personalia w każdym wierszu bazy danych, w jakim występowała. Co, jeśli przez pomyłkę zapomnimy o jednym z nich? Wówczas wystąpi "anomalia modyfikacji". Widzimy więc, że utrzymywanie tabeli w stanie, jaki przedstawiliśmy powyżej, jest tragicznym pomysłem. Wyobraźmy sobie jak skrajnie niepraktyczne i uciążliwe w utrzymywaniu byłyby tego rodzaju bazy danych. Dzięki zastosowaniu normalizacji, nazwisko nauczycielki wystarczyłoby zmienić tylko w jednym miejscu!
+To bardzo uproszczony przykład, zawierający jedyne plan lekcji z jednego dnia, dla jednej klasy, która w dodatku zawiera jedynie dwóch uczniów! Widzimy więc, że stosowanie rozbicia danych na tabele i dbania o prawidłowe relacje między nimi jest niesamowicie istotne. 
+Możemy teraz wyobrazić sobię, że nauczycielka "Joanna Popowicka" rozwiodła się i wróciła do panieńskiego nazwiska "Morowska". Musimy więc zmienić jej personalia w każdym wierszu bazy danych, w jakim występowała. Co jeśli przez pomyłkę zapomnimy o jednym z nich? Wówczas wystąpi "anomalia modyfikacji". Widzimy więc, że utrzymywanie tabeli w stanie, jaki przedstawiliśmy powyżej jest tragicznym pomysłem. Wyobraźmy sobie jak skrajnie nie praktyczne i uciążliwe w utrzymywaniu byłyby tego rodzaju bazy danych. Dzięki zastosowaniu normalizacji, nazwisko nauczycielki wystarczyłoby zmienić tylko w jednym miejscu!
+

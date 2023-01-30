@@ -74,9 +74,11 @@
     background-image: var(--gradient);
 }
 
-/* for dark mode */
 .main_content .second p img {
     filter: var(--screen_filter);
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
 }
 
 .main_content .second img.super_small_img,
