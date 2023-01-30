@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 import Toolbar from '@mui/material/Toolbar';
 import { Link } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
+import { padding } from '@mui/system';
 
 const DARK_MODE_KEY = 'dark-mode';
 
@@ -54,19 +55,9 @@ function useScrollY() {
     return scrollY;
 }
 
-function Nav() {
-    let padding, fontSize;
+function resizeNav() {
     const windowWidth = useWindowWidth();
     const scrollY = useScrollY();
-    const [darkMode, setDarkMode] = useDarkMode();
-    const tabs = [
-        {name: "Cześć!", link: "/"},
-        {name: "Teoria", link: "/teoria"},
-        {name: "Excel", link: "/excel"},
-        {name: "Access", link: "/access"},
-        {name: "Python", link: "/python"},
-        {name: "Zadania", link: "/exercise"},
-    ];
 
     if (windowWidth > 1200) {
         if (scrollY > 80) {
@@ -93,7 +84,21 @@ function Nav() {
             fontSize = "16px";
         }
     }
+    return padding, fontSize;
+}
 
+function Nav() {
+    const [darkMode, setDarkMode] = useDarkMode();
+    const tabs = [
+        {name: "Cześć!", link: "/"},
+        {name: "Teoria", link: "/teoria"},
+        {name: "Excel", link: "/excel"},
+        {name: "Access", link: "/access"},
+        {name: "Python", link: "/python"},
+        {name: "Zadania", link: "/exercise"},
+    ];
+
+    let padding, fontSize = resizeNav();
     const aStyle = { padding, fontSize };
 
     function navBurger() {
