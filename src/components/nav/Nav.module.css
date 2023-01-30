@@ -85,7 +85,7 @@
 
 @media (max-width:810px) {  
     .navbar{
-        min-height: 50px
+        min-height: 48px
     }
     
     .header h1 {

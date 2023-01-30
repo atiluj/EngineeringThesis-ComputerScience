@@ -84,7 +84,7 @@ function Nav() {
             padding = "13px 17px";
             fontSize = "16px";
         }
-    } else if (windowWidth > 790) {
+    } else if (windowWidth > 810) {
         if (scrollY > 80) {
             padding = "11px 10px";
             fontSize = "14px";
