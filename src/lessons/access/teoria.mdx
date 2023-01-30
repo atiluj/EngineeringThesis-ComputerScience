@@ -1,13 +1,27 @@
-## 0. Język matematyki vs informatyki
+import Table from "../../components/Table.jsx";
 
-| matematyka | informatyka |
-| ---------- | ----------- |
-| relacja | tabela |
-| krotka | wiersz |
-| dziedzina | kolumna |
-| atrybut | nazwa kolumny |
-| stopień relacji | liczba kolumn tabeli |
-| składowa krotki | pole |
+<br/>
+
+**Słowo wstępu:** Nie przejmujcie się natłokiem wiedzy w tym dziale. Chcemy, aby była to swego rodzaju "ściąga" 
+i pomoc dla Was. Na typ etapie nikt nie wymaga od Was, żebyście pamiętali całą tę teorię. 
+Musicie wiedzieć, czym są klucze główny i obcy i to w zasadzie jedyna część tego tematu, którą musicie zapamiętać.
+
+## 0. Język matematyki vs informatyki
+Szukając źródeł wiedzy oraz przeglądając dostępne materiały, możemy spotkać się z różnym nazewnictwem. 
+Może to być często niezmiernie mylące, dlatego w poniższej tabelce znajdziecie zestawienie nomenklatury matematycznej i informatycznej.
+Niestety ludzie często używają ich równolegle, a ponadto w Accessie "relacja" to związek między tabelami, ale o tym przypomnimy jeszcze w stosownym temacie.
+
+<Table
+    header = {["matematyka", "informatyka"]}
+    data = {[
+                ["relacja", "tabela"],
+                ["krotka", "wiersz"],
+                ["dziedzina", "kolumna"],
+                ["atrybut", "nazwa kolumn"],
+                ["stopień relacji", "liczba kolumn tabeli"],
+                ["składowa krotki", "pole"]
+            ]}
+/>
 <br/>
 
 ## 1. Składniki systemu baz danych
@@ -16,10 +30,19 @@
 3. Reguły integralności - zestaw zasad określających poprawności wykonania każdej operacji na danych.
 
 ## 2. Modele baz danych
+Istnieje kilka różnych podejść do przechowywania, reprezentowania i operowania na danych.
+Coraz większą popularnością cieszą się grafowe bazy danych, jednak niezmiennie to właśnie relacyjne bazy danych są najbardziej popularne i najczęściej używane.
+Ich przewaga nad innymi modelami jest tak duża, że na wszystkie bazy nierelacyjne, a więc nieopierające się na języku
+zapytań SQL, mówimy "NoSQL database". <br/>
+Główną ideą modelu relacyjnego jest to, że dane przechowywane są w tabelach, które połączone są różnego rodzaju związkami (w Accessie mówimy relacjami). <br/>
+<br/>
+
 1. hierarchiczny
 2. sieciowy
 3. **relacyjny** (obowiązujący na maturze)
 4. obiektowy
+5. grafowy
+
 
 ## 3. Podstawową jednostką organizacji danych w relacyjnej bazy danych jest tabela.
 
@@ -28,119 +51,185 @@
 * Wszystkie wartości w kolumnie muszą być tego samego typu.
 * Żaden wiersz w tabeli nie może się powtórzyć.
 * Kolejności wierszy w tabeli nie ma znaczenia.
-* Musi być zapewniona identyfukacja każdego wiersza.
+* Musi być zapewniona identyfikacja każdego wiersza.
 
-## 5.
-* Klucz główny:
-    * jednoznacznie identyfikuje wiersz w tabeli
-    * jego wartość musi być unikalna
-    * jest to kolumna lub grupa kolumn
-    * skróty: KG(klucz główny) lub PK(primary key)
-* Klucz obcy:
-    * jest kluczem głownym w innej tabeli
-    * jest podstawą do budowania związków między tabelami
-    * jest to kolumna lub grupa kolumn
-    * skrót: FG(foreign key)
+## 5. Klucz główny:
+* jednoznacznie identyfikuje wiersz w tabeli
+* jego wartość musi być unikalna
+* jest to kolumna lub grupa kolumn
+* skróty: KG(klucz główny) lub PK(primary key)
 
-## 6. Związki między tabelami (możliwe sposoby zapisu)
+<img src={new URL('../../img/access/klucz_glowny.png', import.meta.url)} alt="xyz" className={`super_small_img`} />
+
+Najważniejszym zadaniem klucza głównego jest więc zagwarantowanie, że każdy wiersz w tabeli będzie możliwy do rozpoznania.
+Możemy wyobrazić sobie, że mamy bazę osób, w której każdego identyfikujemy na podstawie imienia i nazwiska.
+Niestety, choć kluczem głównym może być grupa kolumn, to w tym przypadku nie jest to dobry wybór.
+Często zdarza się bowiem, że w naszej bazie pojawią się dwie osoby o tym samym imieniu i nazwisku, ale bynajmniej nie będą one tym samym człowiekiem.
+Dodajemy więc kolejną kolumnę, na przykład pesel i to ją ustanawiamy kluczem głównym.
+
+## 6. Klucz obcy:
+* jest kluczem głownym w innej tabeli
+* jest podstawą do budowania związków między tabelami
+* jest to kolumna lub grupa kolumn
+* skrót: FG(foreign key)
+
+<img src={new URL('../../img/access/klucz_obcy.png', import.meta.url)} alt="xyz" className={`small_img`} />
+
+Klucz obcy w jednej tabeli jest kluczem głównym w innej. W naszym przykładzie pesel, który jest kluczem głównym,
+dzięki któremu dwie Anny Abackie są rozróżniane, będzie kluczem obcym w tabeli ze spisem nieruchomości. Zauważmy, że
+klucz obcy może występować w jednej tabeli kilkukrotmie np. jedna osoba ma dwa domy
+(Anna Abacka z peselem 00321707842 posiada "Apart House" i "Casual House").
+Jednak musi on jednoznacznie wskazywać na jakiś rekord w tabeli z osobami. Gdybyśmy chcieli aby kluczem obcym było imię
+i nazwisko właściciela, zamiast peselu, to mielibyśmy problem, ponieważ nie są to wartości unikatowe. Spowodowałoby to bardzo
+niepożądaną sytuację, w której nie wiemy, która z Pań posiada który z domów.
+
+## 7. Związki między tabelami
+Tabele i wartości, jakie przechowują, mogą być ze sobą powiązane na różne sposób. Poniżej przedstawimy trzy przykłady
+związków między dwoma tabelami i zastanowimy się jaki rodzaj relacji to jest.
+
+### Przykład 1:
+Mamy dwie tabele KOBIETY i MĘŻCZYŹNI. Interesuje nas związek między tymi tabelami, który ma odzwierciedlać relacje małżeńskie.
+Oznacza to, że zakładamy, że kobieta może mieć jednego męża, a mężczyzna jedną żonę (nie zajmujemy się tu relacjami nieformalnymi).
+Związek między tymi tabelami to tak zwany związek 1-1 (czyt. jeden do jednego).
+
+<img src={new URL('../../img/access/1do1.png', import.meta.url)} alt="xyz" className={`small_img`} />
+
+### Przykład 2:
+Mamy dwie tabele KOBIETY i DZIECI. Interesuje nas związek między tymi tabelami, który ma odzwierciedlać relacje rodzicielstwa (a dokładniej bycia czyjąś matką).
+Oznacza to, że zakładamy, że kobieta może mieć wiele dzieci, ale dane dziecko ma zawsze tylko jedną matkę (to spore uproszczenie życia, ale na potrzeby przykładu tak załóżmy).
+Związek między tymi tabelami to tak zwany związek 1-∞ (czyt. jeden do wielu).
+
+<img src={new URL('../../img/access/1don.png', import.meta.url)} alt="xyz" className={`small_img`} />
+
+### Przykład 3:
+Mamy dwie tabele LUDZIE i DOMY. Interesuje nas związek między tymi tabelami, który ma odzwierciedlać relacje posiadania (bycia właścicielem) domu.
+Naturalnie, jeden człowiek może posiadać kilka domów, ale i jeden dom może mieć kilku właścicieli.
+Związek między tymi tabelami to tak zwany związek ∞-∞ (czyt. wiele do wielu).
+Zazwyczaj tego typu związki nie są pożądane. Jeśli widzimy, że między dwoma tabelami występuje związek ∞-∞, to zazwyczaj będziemy chcieli wprowadzić tabele pomocniczą, która będzie łącznikiem między dwoma pozostałymi. Dzięki temu związek ∞-∞ rozbijemy na dwa typu 1-∞.
+
+<img src={new URL('../../img/access/ndon.png', import.meta.url)} alt="xyz" className={`small_img`} />
+
+### Możliwe sposoby zapisu związków między tabelami:
 * 1-1, 1:1 -- jeden do jednego
 * 1-∞, 1:∞, 1-n, 1:n -- jeden do wielu
 * ∞-∞, m:n, m-n -- wiele do wielu
 
 (uwaga: raczej unikamy połączen typu wiele do wielu, rozbijamy je na dwa połączenia jeden do wielu poprzez wprowadzenie tabeli pomocniczej)
 
-## 7. Możliwe błędy w modelu relacyjnym
+## 8. Możliwe błędy w modelu relacyjnym
 (We wszystkich przykładach będziemy opierać się na bazie danych uczniów w pewnej szkole)
-* **redundancja -- powtarzanie się danych**
-     Przykład: Wyobrażmy sobie, że w wyniku pewnego błedu w tabeli "Uczniowie" mamy dwa wiersze z tymi samymi wartościami, przedstawiające tą samą osobę - Anna Kowalska 3a nr_dziennika 16 jest w tej bazie wpisana dwukrotnie. Teraz może się okazać, że część ocen Ani jest łączona z jednym a część z drugim rekordem w bazie danych. Może to skutkowac poważnymi problrmami, na przykład średnia Ani może być obliczona niewłaściwie.
-* **anomalie:**
-    * **modyfikacji** -- wartość występująca w wielu miejscach może ulec zmianie w jednym miejscu, a w innym nie, co powoduje niespójność w bazie danych.
-    * **usunięć** -- usunięcie jednej wartości może spowodować utratę innych danych umieszczonych z nią w jednym wierszu.
-    * **wstawień** -- konieczność równoczesnego wprowadzania niezależnych danych.
+    * **redundancja -- powtarzanie się danych**
+Przykład: Wyobraźmy sobie, że w wyniku pewnego błędu w tabeli "Uczniowie" mamy dwa wiersze z tymi samymi wartościami, przedstawiające tą samą osobę - Anna Kowalska 3a nr_dziennika 16 jest w tej bazie wpisana dwukrotnie. Teraz może się okazać, że część ocen Ani jest łączona z jednym a część z drugim rekordem w bazie danych. Może to skutkować poważnymi problemami, na przykład średnia Ani może być obliczona niewłaściwie.
+    * **anomalie:**
+        * **modyfikacji** -- wartość występująca w wielu miejscach może ulec zmianie w jednym miejscu, a w innym nie, co powoduje niespójność w bazie danych.
+        * **usunięć** -- usunięcie jednej wartości może spowodować utratę innych danych umieszczonych z nią w jednym wierszu.
+        * **wstawień** -- konieczność równoczesnego wprowadzania niezależnych danych.
+
+## 9. Postaci normalne
+
+### Pierwsza postać normalna (1NF)
+Zachodzi wtedy, gdy każda komórka zawiera wartości atomowe. Jej niepodzielność wiąże się z zadeklarowanym typem.
+
+#### przed normalizacja
+<Table
+header = {["Płeć", "Imię"]}
+data = {[
+            ["Męska", "Adam", "Jan", "Piotr"],
+            ["Żeńska", "Ola", "Asia", "Magda"]
+        ]}
+/>
+
+#### po normalizacji
+<Table
+header = {["Płeć", "Imię"]}
+data = {[
+            ["Męska", "Adam"],
+            ["Męska", "Jan"],
+            ["Męska", "Piotr"],
+            ["Żeńska", "Ola"],
+            ["Żeńska", "Asia"],
+            ["Żeńska", "Magda"]
+        ]}
+/>
 
 
-## 8. Postaci normalne
-* **Pierwsza postać normalna (1NF)** -- zachodzi wtedy, gdy każda komórka zawiera wartości atomowe. Jej niepodzielność wiąże się z zadeklarowanym typem.
+### Druga postać normalna (2NF)
+Występuje wtedy, gdy posiada własności 1NF oraz każda kolumna niewchodząca w skład klucza głównego zależy od całego klucza głównego.
 
-    przykład:
+#### przed normalizacją
+<Table
+header = {["Imię", "Nazwisko", "Płeć", "Ulubiony sok", "Cena za 250ml soku"]}
+data = {[
+            ["Antonii", "Kowalski", "Męska", "jabłkowy", "7zł"],
+            ["Natalia", "Janikowska", "Żeńska", "pomarańczowy", "9zł"],
+            ["Julia", "Kwiatkowska", "Żeńska", "jabłkowy", "7zł"]
+        ]}
+/>
 
-    (przed normalizacja)
-    | Płeć | Imię |
-    | -- | -- |
-    | Męska | Adam, Jan, Piotr |
-    | Żeńska | Ola, Asia, Magda |
-
-    (po normalizacji)
-    | Płeć | Imię |
-    | -- | -- |
-    | Męska | Adam |
-    | Męska | Jan |
-    | Męska | Piotr |
-    | Żeńska | Ola |
-    | Żeńska | Asia |
-    | Żeńska | Magda |
-
-
-* **Druga postać normalna (2NF)** -- występuje wtedy, gdy posiada własności 1NF oraz każda kolumna niewchodząca w skład klucza głównego zależy od całego klucza głownego.
-    przykład:
-
-    (przed normalizacją)
-    | Imię | Nazwisko | Płeć | Ulubiony sok | Cena za 250ml soku |
-    | -- | -- | -- | -- | -- |
-    | Antonii | Kowalski | Męska | jabłkowy | 7zł |
-    | Natalia | Janikowska | Żeńska | pomarańczowy | 9zł |
-    | Julia | Kwiatkowska | Żeńska | jabłkowy | 7zł |
-
-    (po normalizacji)
-    | Imię | Nazwisko | Ulubiony sok | Cena za 250ml soku |
-    | -- | -- | -- | -- |
-    | Antonii | Kowalski | jabłkowy | 7zł |
-    | Natalia | Janikowska | pomarańczowy | 9zł |
-    | Julia | Kwiatkowska | jabłkowy | 7zł |
-
-    | Imię | Płeć |
-    | -- | -- |
-    | Antonii | Męska |
-    | Natalia | Żeńska |
-    | Julia | Żeńska |
+#### po normalizacji
+<Table
+header = {["Imię", "Nazwisko", "Płeć", "Ulubiony sok", "Cena za 250ml soku"]}
+data = {[
+            ["Antonii", "Kowalski", "jabłkowy", "7zł"],
+            ["Natalia", "Janikowska", "pomarańczowy", "9zł"],
+            ["Julia", "Kwiatkowska", "jabłkowy", "7zł"]
+        ]}
+/>
+ 
+<Table
+header = {["Imię", "Płeć"]}
+data = {[
+            ["Antonii", "Męska"],
+            ["Natalia", "Żeńska"],
+            ["Julia", "Żeńska"]
+        ]}
+/>
 
 
-* **Trzecia postać normalna (3NF)** -- występuje, gdy tabela jest w 2NF oraz żadna z kolumn, która nie jest kluczem, nie zależy od innej komórki niekluczowej.
-przykład:
+### Trzecia postać normalna (3NF)
+Występuje, gdy tabela jest w 2NF oraz żadna z kolumn, która nie jest kluczem, nie zależy od innej komórki niekluczowej.
 
-(przed normalizacja)
-| Imię | Nazwisko | Ulubiony sok | Cena za 250ml soku |
-| -- | -- | -- | -- |
-| Antonii | Kowalski | jabłkowy | 7zł |
-| Natalia | Janikowska | pomarańczowy | 9zł |
-| Julia | Kwiatkowska | jabłkowy | 7zł |
+#### przed normalizacja
+<Table
+header = {["Imię", "Płeć", "Ulubiony sok", "Cena za 250ml soku"]}
+data = {[
+            ["Antonii", "Męska", "jabłkowy", "7zł"],
+            ["Natalia", "Żeńska", "pomarańczowy", "9zł"],
+            ["Julia", "Żeńska", "jabłkowy", "7zł"]
+        ]}
+/>
 
-(po normalizacji)
-| Imię | Nazwisko | Ulubiony sok |
-| -- | -- | -- | 
-| Antonii | Kowalski | jabłkowy |
-| Natalia | Janikowska | pomarańczowy |
-| Julia | Kwiatkowska | jabłkowy |
 
-|  Ulubiony sok | Cena za 250ml soku |
-| -- | -- |
-| jabłkowy | 7zł |
-| pomarańczowy | 9zł |
+#### po normalizacji
+<Table
+header = {["Imię", "Płeć", "Ulubiony sok"]}
+data = {[
+            ["Antonii", "Męska", "jabłkowy"],
+            ["Natalia", "Żeńska", "pomarańczowy"],
+            ["Julia", "Żeńska", "jabłkowy"]
+        ]}
+/>
+
+<Table
+header = {["Ulubiony sok", "Cena za 250ml soku"]}
+data = {[
+            ["jabłkowy", "7zł"],
+            ["pomarańczowy", "9zł"],
+        ]}
+/>
 
 
 
 (uwaga: istnieją również 4NF, 5NF i 6NF, ale nie są używane.) 
 
-## 9. Dlaczego warto zrozumieć postaci normalne?
-Jest conajmniej kilka powodów, dla których warto poznać i zrozumieć postawy teorii baz danych, w tym postaci normalne.
+## 10. Dlaczego warto zrozumieć postaci normalne?
+Jest co najmniej kilka powodów, dla których warto poznać i zrozumieć postawy teorii baz danych, w tym postaci normalne.
 
-W punkcie 8. przykładowe tabele były bardzo małe, ale doskonale wiemy, że w codziennym życiu się to raczej nie zdarza. Przechowujmey zazwyczaj ogromne ilości danych. Weźmy na przykład bazę danych, jaką posiada wasza szkoła. Powiedzmy, że w całej placówce mamy około 900 uczniów. Każdy z nich ma **imie, nazwisko, pesel, miejsce zamieszkania, numer legitymacji** dodatkowo każdy uczeń ma conajmniej jednego opiekuna prawnego (zawzyczaj są to rodzice), ich dane takie jak **imię, nazwisko, pesel, numer dowodu**, które szkoła również musi mieć odnotowane. Idąc dalej, każdy uczeń jest przypisany do pewnej **klasy**, ma swój **plan lekcji, wychowawcę** itd. 
+W punkcie 8. przykładowe tabele były bardzo małe, ale doskonale wiemy, że w codziennym życiu się to raczej nie zdarza. Przechowujemy zazwyczaj ogromne ilości danych. Weźmy na przykład bazę danych, jaką posiada wasza szkoła. Powiedzmy, że w całej placówce mamy około 900 uczniów. Każdy z nich ma **imię, nazwisko, pesel, miejsce zamieszkania, numer legitymacji** dodatkowo każdy uczeń ma co najmniej jednego opiekuna prawnego (zazwyczaj są to rodzice), ich dane takie jak **imię, nazwisko, pesel, numer dowodu**, które szkoła również musi mieć odnotowane. Idąc dalej, każdy uczeń jest przypisany do pewnej **klasy**, ma swój **plan lekcji, wychowawcę** itd.
 
-Wyobraźmy sobie teraz, że ignorujemy zalecenia związane z postaciami normalnymi i wszystkie powyższe dane trzymamy w jednej tabeli. Będzie to powodowało wielokrotne dupliowanie tych samych informacji, co poza oczwystym marnowaniem miejsca w pamięci może prowadzić również do błędów modelu relacyjnego, o któych mowa w punckie 7.
-
+Wyobraźmy sobie teraz, że ignorujemy zalecenia związane z postaciami normalnymi i wszystkie powyższe dane trzymamy w jednej tabeli. Będzie to powodowało wielokrotne duplikowanie tych samych informacji, co poza oczywistym marnowaniem miejsca w pamięci może prowadzić również do błędów modelu relacyjnego, o których mowa w punkcie 7.
 
 **Przykład:**
 ![](https://i.imgur.com/RzlYXaJ.png)
-To bardzo uproszczony przykład, zawierający jedyne plan lekcji z jednego dnia, dla jednej klasy, która w dodatku zawiera jedynie dwóch uczniów! Widzimy więc, że stosowanie rozbicia danych na tabele i dbania o prawidłowe relacje między nimi jest niesamowicie istotne. 
-Możemy teraz wyobrazić sobię, że nauczycielka "Joanna Popowicka" rozwiodła się i wróciła do panieńskiego nazwiska "Morowska". Musimy więc zmienić jej personalia w każdym wierszu bazy danych, w jakim występowała. Co jeśli przez pomyłkę zapomnimy o jednym z nich? Wówczas wystąpi "anomalia modyfikacji". Widzimy więc, że utrzymywanie tabeli w stanie, jaki przedstawiliśmy powyżej jest tragicznym pomysłem. Wyobraźmy sobie jak skrajnie nie praktyczne i uciążliwe w utrzymywaniu byłyby tego rodzaju bazy danych. Dzięki zastosowaniu normalizacji, nazwisko nauczycielki wystarczyłoby zmienić tylko w jednym miejscu!
-
+To bardzo uproszczony przykład, zawierający jedyne plan lekcji z jednego dnia, dla jednej klasy, która w dodatku zawiera jedynie dwóch uczniów! Widzimy więc, że stosowanie rozbicia danych na tabele i dbania o prawidłowe relacje między nimi jest niesamowicie istotne.
+Możemy teraz wyobrazić sobie, że nauczycielka "Joanna Popowicka" rozwiodła się i wróciła do panieńskiego nazwiska "Morowska". Musimy więc zmienić jej personalia w każdym wierszu bazy danych, w jakim występowała. Co, jeśli przez pomyłkę zapomnimy o jednym z nich? Wówczas wystąpi "anomalia modyfikacji". Widzimy więc, że utrzymywanie tabeli w stanie, jaki przedstawiliśmy powyżej, jest tragicznym pomysłem. Wyobraźmy sobie jak skrajnie niepraktyczne i uciążliwe w utrzymywaniu byłyby tego rodzaju bazy danych. Dzięki zastosowaniu normalizacji, nazwisko nauczycielki wystarczyłoby zmienić tylko w jednym miejscu!

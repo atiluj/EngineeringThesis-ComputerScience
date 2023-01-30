@@ -1,85 +1,83 @@
 #### 1. Uruchom program MS Access.
 #### 2. Na stronie głównej wybierz opcję "Pusta baza danych".
 ![](https://i.imgur.com/8jJ18km.png)
-#### 3. Oto widok jaki powinieneś zobaczyć.
+#### 3. Oto widok, jaki powinieneś zobaczyć.
 ![](https://i.imgur.com/JYzhPny.png)
 
-
 ## Import danych
-**Słowo wstępu:** na maturze wszystkie pliki, jakie będzie trzeba zaimportować będą w formacie tekstowym (rozszerzenie .txt). 
-W tym punkcie omówimy import danych od strony technicznej, warto przeczytać też temat "Jak czytać i analizować treść zadania - Access".
+**Słowo wstępu:** na maturze wszystkie pliki, jakie będzie trzeba zaimportować, będą w formacie tekstowym (rozszerzenie .txt).
+W tym punkcie omówimy import danych od strony technicznej, warto przeczytać też temat "Jak czytać i analizować treść zadania — Access".
 
 #### Wybierz zakładkę "Dane zewnętrzne"
 ![](https://i.imgur.com/NYdFPM0.png)
 #### 2. Następnie wybierz "Nowe źródło danych" -> "Z pliku" -> "Plik tekstowy"
 ![](https://i.imgur.com/WFxNCQz.png)
-#### 3.Wybieramy plik, który chcemy zaimportować.
-(W naszym zadaniu, potrzebne będa pliki o nazwach "komputery.txt", "awarie.txt" oraz "naprawy.txt". 
+#### 3. Wybieramy plik, który chcemy zaimportować.
+(W naszym zadaniu, potrzebne będą pliki o nazwach "komputery.txt", "awarie.txt" oraz "naprawy.txt".
 Dalsze kroki pokażemy na przykładnie pliku "awarie.txt".)
 ![](https://i.imgur.com/yrJ5iI1.png)
-#### 4. Gdy wybraliśmy już odpowiedni plik, wybieramy pierwszą opcję importu tj."Importuj dane źródłowe do nowej tabeli w bieżacej bazie danych". i Klikamy "OK".
+#### 4. Gdy wybraliśmy już odpowiedni plik, wybieramy pierwszą opcję importu tj."Importuj dane źródłowe do nowej tabeli w bieżącej bazie danych". i Klikamy "OK".
 ![](https://i.imgur.com/rgnX4S6.png)
-#### 5. Wybieramy domyślną opcję "Ograniczony - znaki takie jak przcinek lubtabulator rodzielają pola" i klikamy "Dalej"
+#### 5. Wybieramy domyślną opcję "Ograniczony - znaki takie jak przecinek lub tabulator rozdzielają pola" i klikamy "Dalej"
 ![](https://i.imgur.com/tVLwYtU.png)
-#### 6.Jako ogranicznik rodzielający pola wybieramy "Tabulator" oraz zaznaczamy opcję "Pierwszy wiersz zawiera nazwy pól" i klikamy "Dalej".
+#### 6.Jako ogranicznik rozdzielający pola wybieramy "Tabulator" oraz zaznaczamy opcję "Pierwszy wiersz zawiera nazwy pól" i klikamy "Dalej".
 Pamiętajmy jednak, że w zależności od zadania ogranicznikiem może być też średnik czy inny znak. Pola mogą również nie mieć odgórnie zapisanej w pliku nazwy, należy przede wszystkim uważnie przeanalizować treść zadania.
 ![](https://i.imgur.com/opThVuv.png)
-#### 7.Sprawdzamy czy typy danych w kolumnach zdefiniowane są poprawnie.
-Klikając na każdą z kolumn sprawdzamy czy typ danych jest taki jakiego oczekujemy. Tutaj warto zwrócić uwagę na to, że wartości takie jak PESEL zazwyczaj wolimy przechowywać jako napisy, a nie liczby (zob. Jak czytać i analizować treść zadania - Access).
-Problematyczne mogą okazać się również daty, zawsze, gdy mamy z nimi do czynienia wchodzimy w opcje zaawansowane i upewniamy się, że wszytstkie opcje formatowania ustawione są poprawnie lub w razie potrzeby je edytujemy.
+#### 7. Sprawdzamy, czy typy danych w kolumnach zdefiniowane są poprawnie.
+Klikając na każdą z kolumn, sprawdzamy, czy typ danych jest taki, jakiego oczekujemy. Tutaj warto zwrócić uwagę na to, że wartości takie jak PESEL zazwyczaj wolimy przechowywać jako napisy, a nie liczby (zob. Jak czytać i analizować treść zadania — Access).
+Problematyczne mogą okazać się również daty, zawsze, gdy mamy z nimi do czynienia wchodzimy w opcje zaawansowane i upewniamy się, że wszystkie opcje formatowania ustawione są poprawnie lub w razie potrzeby je edytujemy.
 ![](https://i.imgur.com/Zp50yNG.png)
 
-
-**W naszym przykładzie** z treści zadania wiemy, że data zapisane jest w kolejności rok miesiąc dzień, a rok powinien być czterocyfrowy. Ogranicznikiem daty jest znak `-` natomiast godziny `:`. Należy sprawdzić, czy wszystkie dane ustawione są poprawnie. 
+**W naszym przykładzie** z treści zadania wiemy, że data zapisane jest w kolejności rok miesiąc dzień, a rok powinien być czterocyfrowy. Ogranicznikiem daty jest znak '-' natomiast godziny ':'. Należy sprawdzić, czy wszystkie dane ustawione są poprawnie.
 :::info
 ![](https://i.imgur.com/ZnQ638b.png)
 :::
 ![](https://i.imgur.com/wDwQZ5n.png)
 
-#### 8. W kolejnym kroku wybieramy klucz podstawowy naszej tabeli. 
-Może być to jedna z kolumn w tabeli, jeśli jendnak żadna z kolumn nie spełnia własności klucza podstawowego, to możemy pozwolić Accessowi na dodanie klucza podstawowego.
+#### 8. W kolejnym kroku wybieramy klucz podstawowy naszej tabeli.
+Może być to jedna z kolumn w tabeli, jeśli jednak żadna z kolumn nie spełnia własności klucza podstawowego, to możemy pozwolić Accessowi na dodanie klucza podstawowego.
 
-Dla przypomnienia - klucz podstawowy to kolumna lub grupa kolumn, której wartość jest unikatowa, czyli dla każdego wiersza inna. Pozwala nam on na jednoznaczne zidentyfikwoanie danego wiersza (rekordu) w tablicy. (zob. "Teroia baz danych")
+Dla przypomnienia - klucz podstawowy to kolumna lub grupa kolumn, której wartość jest unikatowa, czyli dla każdego wiersza inna. Pozwala nam on na jednoznaczne zidentyfikowanie danego wiersza (rekordu) w tablicy. (zob. "Teoria baz danych")
 
-**W naszym przykładzie** kluczem podstawowym jest to kolumna `numer zgłoszenia`. Wiemy to z treści zadania. 
+**W naszym przykładzie** kluczem podstawowym jest to kolumna 'numer zgłoszenia'. Wiemy to z treści zadania.
 :::info
 ![](https://i.imgur.com/QOs0H6a.png)
 :::
 ![](https://i.imgur.com/Lb3qtks.png)
 
-**Uwaga:** Przy importowaniu pliku `Naprawy`, musimy pzowolić Accessowi na dodanie klucza podstawowego, ponieważ z treści zadania wiemy, że żadna z kolum nie zawiera wartości unikatowych.
+**Uwaga:** Przy importowaniu pliku 'Naprawy', musimy pozwolić Accessowi na dodanie klucza podstawowego, ponieważ z treści zadania wiemy, że żadna z kolumn nie zawiera wartości unikatowych.
 :::info
 ![](https://i.imgur.com/ISCIHtP.png)
 :::
 
-#### 9. W ostatnim kroku ustalamy tylko nazwę tabeli, którą właśnie tworzymy. 
-Zazwyczaj na maturze, nie chemy wprowadzać tu rzadnych zmian. Klikamy więc po prosru "Zakończ".
+#### 9. W ostatnim kroku ustalamy tylko nazwę tabeli, którą właśnie tworzymy.
+Zazwyczaj na maturze, nie chcemy wprowadzać tu żadnych zmian. Klikamy więc po prostu "Zakończ".
 ![](https://i.imgur.com/KrQCZOz.png)
 #### 10. Klikamy "Zamknij".
-Access zapyta nas, czy chcemy zapamiętać kroki importowania. NIE chcemy, więc nie zaznaczamytutaj nic i klikamy po prostu "Zamknij".
+Access zapyta nas, czy chcemy zapamiętać kroki importowania. NIE chcemy, więc nie zaznaczamy tutaj nic i klikamy po prostu "Zamknij".
 (Nie chcemy zapisywać kroków importowania, ponieważ dane w każdej tabeli mogą być sformatowane w inny sposób i my chcemy za każdym razem przejść wszystkie kroki i upewnić się, że wszystko jest ustawione poprawnie.)
 ![](https://i.imgur.com/33mDdVv.png)
 #### 11. Gotowe!
-Nasz plik został zaimpotowany jako nowa tabela do naszej bazy danych. Możemy podjerzeć jej zawartość klikając na nią. ![](https://i.imgur.com/s2UyBDO.png)
-Jeśli w którymś miejscu wyświetlają się "########" zamiast treści, nie martwcie się, wszystko jest w porządku. Po prosru szerokość kolumny jest mniejsza niż długość zawartości danej kolumny. Wsytarczy rozszerzyć szerokość tej kolumny. Wpływa to tylko na sposób wyświwtlania jej w edytorze, w szczególności nie wpływa to na zawartość tabeli.
+Nasz plik został zaimportowany jako nowa tabela do naszej bazy danych. Możemy podjerzeć jej zawartość klikając na nią. ![](https://i.imgur.com/s2UyBDO.png)
+Jeśli w którymś miejscu wyświetlają się "########" zamiast treści, nie martwcie się, wszystko jest w porządku. Po prostu szerokość kolumny jest mniejsza niż długość zawartości danej kolumny. Wystarczy rozszerzyć szerokość tej kolumny. Wpływa to tylko na sposób wyświetlania jej w edytorze, w szczególności nie wpływa to na zawartość tabeli.
 ![](https://i.imgur.com/6OLPPrF.png)
 
 ## Ustalanie związków między tabelami
-#### 1. Wybieramy zakładkę "Narzedzia baz danych", a następnie klikamy opcję "Relacje".
-Tutaj chciałabym wyjaśnić kilka nieścisłości jeśli chodzi o terminolologię. W relacyjnych bazach danych pojęcie "Relacja" oznacza w zasadzie "Tabelę", jednak w Accessie oznacza to związki między tabelami, a więc sposób w jaki sa one ze sobą połączone - co jest kluczem obcym dla której tabeli i jaki jest rodzaj tejże relacji $1:1, 1:\infty, \infty:\infty$
+#### 1. Wybieramy zakładkę "Narzędzia baz danych", a następnie klikamy opcję "Relacje".
+Tutaj chciałabym wyjaśnić kilka nieścisłości, jeśli chodzi o terminologię. W relacyjnych bazach danych pojęcie "Relacja" oznacza w zasadzie "Tabelę", jednak w Accessie oznacza to związki między tabelami, a więc sposób, w jaki są one ze sobą połączone - co jest kluczem obcym, dla której tabeli i jaki jest rodzaj tejże relacji $1:1, 1:\infty, \infty:\infty$
 ![](https://i.imgur.com/vXGH86n.png)
 
 #### 2. Przeciągamy wszystkie nasze tabele do pola z relacjami (1.) lub zaznaczamy je w okienku po prawej (2.) i klikamy "Dodaj zaznaczone tabele".
 ![](https://i.imgur.com/wAPv8V0.png)
 
-#### 3. Zaznaczamy i przeciągamy klucz głowny jednej tabeli dopasowując go do kluczaobcego drugiej.
+#### 3. Zaznaczamy i przeciągamy klucz główny jednej tabeli, dopasowując go do klucza obcego drugiej.
 :::danger
 tu powinno być video "więzy"
 :::
-Tutaj musimy zastanowić się, które tabele będą ze sobą bezpośrednio połączone oraz co jest kluczem głównym, a co obcym w danej tabeli. Klucz głowny mam już wybrany, a rozpoznać możemy go łatwo dzięki ikonce kluczyka, która wyświetla się przy odpowiedniej kolumnie. Jak natomiast zidentyfikować klucz obcy? Musimy zastanowić się nad sensem naszej bazy danych, tutaj znów pomocne może być odpowiednie nazewnictwo oraz przeczytanie ze zrozumieniem polecenia. 
-**W naszym przykładzie** Tabela `Komputery` oraz `Awarie` powinny być ze sobą połączone. `Numer_komputera` jest kluczem głowym w tabeli `Komputery`, możemy zauważyć, że w tabeli `Awarie` również występuje analogiczne pole - będzie to klucz obcy w tej tabeli.
+Tutaj musimy zastanowić się, które tabele będą ze sobą bezpośrednio połączone oraz co jest kluczem głównym, a co obcym w danej tabeli. Klucz główny mam już wybrany, a rozpoznać możemy go łatwo dzięki ikonce kluczyka, która wyświetla się przy odpowiedniej kolumnie. Jak natomiast zidentyfikować klucz obcy? Musimy zastanowić się nad sensem naszej bazy danych, tutaj znów pomocne może być odpowiednie nazewnictwo oraz przeczytanie ze zrozumieniem polecenia.
+**W naszym przykładzie** Tabela 'Komputery' oraz 'Awarie' powinny być ze sobą połączone. 'Numer_komputera' jest kluczem głównym w tabeli 'Komputery', możemy zauważyć, że w tabeli 'Awarie' również występuje analogiczne pole - będzie to klucz obcy w tej tabeli.
 ![](https://i.imgur.com/TRZDyID.png)
-Widzimy, że Access pokazuje nam, że mamy tu dwie relacje typu $1:inf$. Zauważmy, że zgadza się to z treścia naszego polecenia. Po pierwsze jeden komputer mógł ulec różnym awariom, oraz jedna awaria mogła wymagać wielu napraw.
+Widzimy, że Access pokazuje nam, że mamy tu dwie relacje typu $1:inf$. Zauważmy, że zgadza się to z treścią naszego polecenia. Po pierwsze jeden komputer mógł ulec różnym awariom, oraz jedna awaria mogła wymagać wielu napraw.
 #### 4. Klikamy "Zamknij" i zapisujemy zmiany (klikamy "Tak").
 ![](https://i.imgur.com/ReqeQCU.png)
 
@@ -87,48 +85,48 @@ Widzimy, że Access pokazuje nam, że mamy tu dwie relacje typu $1:inf$. Zauważ
 #### 1. Klikamy "Tworzenie" a następnie wybieramy opcję "Projekt kwerendy"
 ![](https://i.imgur.com/NqBpuiM.png)
 
-#### 2. Wybieramy tabelę (lub kilka tabel), których potrzebujemy, przeciągamy a następnie wybieramy potrzebne nam pola, aby dodac je do zapytania. 
-Łatwiej jest to zarówno wytłumaczyć jak i zrozumieć na konkretnych danych. Weźmy więc pod lupę nasz **przykład**.
+#### 2. Wybieramy tabelę (lub kilka tabel), których potrzebujemy, przeciągamy, a następnie wybieramy potrzebne nam pola, aby dodać je do zapytania.
+Łatwiej jest to zarówno wytłumaczyć, jak i zrozumieć na konkretnych danych. Weźmy więc pod lupę nasz **przykład**.
 :::info
 ![](https://i.imgur.com/JMcc5YL.png)
 :::
-Będziemy potrzebować `Pojemność_dysku`, a zatem tabeli `Komputery`.
+Będziemy potrzebować 'Pojemność_dysku', a zatem tabeli 'Komputery'.
 ![](https://i.imgur.com/rZPiz77.png)
-Zobaczmy co zwróci powyższa kwerenda? 
+Zobaczmy, co zwróci powyższa kwerenda?
 #### 3. Jak uruchomić kwerendę?
 Po prostu klikamy "Uruchom".
 ![](https://i.imgur.com/hVU6Q9P.png)
-Widzimy, że nie jest to odpowiedź jakiej oczekujemy, mamy powiem po prostu spis pojemności dysków wszytskich komputerów. 
+Widzimy, że nie jest to odpowiedź, jakiej oczekujemy, mamy powiem po prostu spis pojemności dysków wszystkich komputerów.
 #### 4. Jak edytować uruchomioną kwerendę?
 Możemy kliknąć opcję "Widok", a następnie wybrać "Widok projektu" (1.) lub przełączyć widok za pomocą skrótu (2.)
 ![](https://i.imgur.com/9McFZlf.png)
 
 #### 5. Funkcja "Sumy"
-Czego zatem jeszcze potrzebujemy? 
-Po pierwsze chcemy wiedzieć jakiej jest 10 najczęsciej wsytępujących rodzajów (pojemności) dysków. Musimy zatem pogrupować dyski względem wielkości oraz policzyć ile dysków danej pojemności występuje w naszej bazie danych. Przydatna do tego będzie funkcja "Sumy".
+Czego zatem jeszcze potrzebujemy?
+Po pierwsze chcemy wiedzieć, jakiej jest 10 najczęściej występujących rodzajów (pojemności) dysków. Musimy zatem pogrupować dyski względem wielkości oraz policzyć ile dysków danej pojemności występuje w naszej bazie danych. Przydatna do tego będzie funkcja "Sumy".
 ![](https://i.imgur.com/c0RiMjv.png)
 Widzimy, że pojawiło się nowe pole, którego domyślna wartość to "Grupuj według". Mamy dostępne też inne opcje.
 ![](https://i.imgur.com/nm6QFxh.png)
 
 #### 6. Opcje "Sumy":
 ![](https://i.imgur.com/DeehW9R.png)
-Większość opcji jest na tyle prosrych, że tłumaczy się poprzez nazwę, na przykład "Suma" sumuje wartości z danej kolumny dla wszystkich rekordów będacych w danej grupe. 
-Ważne, a byc może nie tak intuicyjne są następujące opcje:
-* Wyrażenie - wybieramy je, gdy w wierszu "Pole" zamiast standardowej nazyw jednej kolumny używamy całego wyrażenia. Co to oznacza opiszę w punkcie "Wyrażenia".
-* Gdzie - działa podobnie do "Grupuj według", jednak nie wyświetla danej kolumny w wyniku działania kwerendy. Zazwyczaj używamy go, gdy chcemy dodać jakiś warunek do wiersza "Kryteria".
+Większość opcji jest na tyle prostych, że tłumaczy się poprzez nazwę, na przykład "Suma" sumuje wartości z danej kolumny dla wszystkich rekordów będących w danej grupie.
+Ważne, a być może nie tak intuicyjne są następujące opcje:
+* Wyrażenie — wybieramy je, gdy w wierszu "Pole" zamiast standardowej nazwy jednej kolumny używamy całego wyrażenia. Co to oznacza, omówimy w punkcie "Wyrażenia".
+* Gdzie — działa podobnie do "Grupuj według", jednak nie wyświetla danej kolumny w wyniku działania kwerendy. Zazwyczaj używamy go, gdy chcemy dodać jakiś warunek do wiersza "Kryteria".
 Jeśli użycie powyższych opcji wciąż nie jest jasne, nie martw się. Najlepiej i najłatwiej jest zrozumieć je na konkretnych zadaniach.
 
-**W naszym przykładzie**, tak jak już powiedzieliśmy, potzrebujemy informacji o 10 najczęsciej wsytępujących pojemnościach dysku. Chcemy zatem pogrupować komputery według kolumny `Pojemność_dysku`, a następnie policzyć ile komputerów mamy w każdej z tych grup. Jednak w jaki sposób mamy to zrobić? Przydatne okaże się pole `Numer_komputera`. Wiemy, że jest to klucz głowny w tabeli `Komputery`, a więc każdy z numerów będzie występował w niej co najwyżej jeden raz. 
-Podsumowując chcemy pogrupować komputery według kolumny `Pojemność_dysku`, a następnie policzyć `Numer_komputera`.
+**W naszym przykładzie**, tak jak już powiedzieliśmy, potrzebujemy informacji o 10 najczęściej występujących pojemnościach dysku. Chcemy zatem pogrupować komputery według kolumny 'Pojemność_dysku', a następnie policzyć ile komputerów mamy w każdej z tych grup. Jednak w jaki sposób mamy to zrobić? Przydatne okaże się pole 'Numer_komputera'. Wiemy, że jest to klucz główny w tabeli 'Komputery', a więc każdy z numerów będzie występował w niej co najwyżej jeden raz.
+Podsumowując, chcemy pogrupować komputery według kolumny 'Pojemność_dysku', a następnie policzyć 'Numer_komputera'.
 ![](https://i.imgur.com/yLI2O7M.png)
-Teraz mamy już informację o liczbie komputerów z daną pojemnością dysku. 
+Teraz mamy już informację o liczbie komputerów z daną pojemnością dysku.
 ![](https://i.imgur.com/Lg73rRv.png)
-Nas interesuje jednak 10 najczęsciej występujących pojemności. Możemy wyszukać je ręcznie, ale oczywiście nie jest to dobre rozwiązanie, szczególnie przy dużej ilości danych. Co zatem zrobimy? Wystarczy posortować wyniki malejąco.
+Nas interesuje jednak 10 najczęściej występujących pojemności. Możemy wyszukać je ręcznie, ale oczywiście nie jest to dobre rozwiązanie, szczególnie przy dużej ilości danych. Co zatem zrobimy? Wystarczy posortować wyniki malejąco.
 
 #### 7. Sortowanie
 ![](https://i.imgur.com/0gkcX7I.png)
 Wynik: ![](https://i.imgur.com/YhyoW73.png)
-Na tym moglibyśmy poprzestać i skopiować do pliku z odpowiedziami pierwsze 10 rekordów. Jest jednak lepsze rozwiązanie. Możemy ograniczyć liczbę rekordów w wyniku jeszcze na poziomie kwerendy. 
+Na tym moglibyśmy poprzestać i skopiować do pliku z odpowiedziami pierwsze 10 rekordów. Jest jednak lepsze rozwiązanie. Możemy ograniczyć liczbę rekordów w wyniku jeszcze na poziomie kwerendy.
 
 #### 8. Limit
 ![](https://i.imgur.com/RNg8Nts.png)
@@ -137,98 +135,97 @@ Wystarczy, że wybierzemy, żeby nasza kwerenda zwracała 10 rekordów zamiast w
 Nasza kwerenda zwraca wynik zgody z naszymi oczekiwaniami, możemy więc już zapisać jej wynik.
 
 #### 9. Zapisujemy kwerendę
-Możemy to zrobić za pomocą skrótu klawiszowego "Ctrl+S". Warto pamiętać o dobrym nazwenictwie kwerend. Teoretycznie niejest to wymóg formalny, ale nie chcemy przecież denerwować egzaminatora sprawdzającego naszą pracę. 
+Możemy to zrobić za pomocą skrótu klawiszowego "Ctrl+S". Warto pamiętać o dobrym nazewnictwie kwerend. Teoretycznie nie jest to wymóg formalny, ale nie chcemy przecież denerwować egzaminatora sprawdzającego naszą pracę.
 
 #### 10. Zapisz odpowiedź w pliku tekstowym!!!
 :::info
 ![](https://i.imgur.com/vbmsmge.png)
 :::
-Jeśli rozwiązanie będzie w pełni poprawne, ale nie zapiszesz odpowiedzi w pliku (w naszym przykładzie "wyniki6.txt") to nie dostaniesz za nie punktów. 
+Jeśli rozwiązanie będzie w pełni poprawne, ale nie zapiszesz odpowiedzi w pliku (w naszym przykładzie "wyniki6.txt") to nie dostaniesz za nie punktów.
 :::info
 ![](https://i.imgur.com/rlR2EcS.png)
 :::
 **Cała instrukcja jest bardzo ważna**, ale w tym miejscu zwróćmy szczególną uwagę na zaznaczony fragment.
 
 ## Tworzenie kwerend wykorzystujących kilka tabel
-Dalej będziemy bazować na naszym przykładzie, tym razem rozwiążemy podpunkt 2. 
+Dalej będziemy bazować na naszym przykładzie, tym razem rozwiążemy podpunkt 2.
 :::info
 ![](https://i.imgur.com/5LHeQWa.png)
 :::
-Potzrbyjemy więc informacji o sekcji, w jakiej znajduje się komputer oraz o ilości napraw polegających na wymianie jakiegoś podzespołu.
-Zajrzyjmy więc ponownie do treści zadania, widzimy, że informacja o `Sekcji` znajduje się w tabeli `Komputery`.
+Potrzebujemy więc informacji o sekcji, w jakiej znajduje się komputer oraz o ilości napraw polegających na wymianie jakiegoś podzespołu.
+Zajrzyjmy więc ponownie do treści zadania, widzimy, że informacja o 'Sekcji' znajduje się w tabeli 'Komputery'.
 :::info
 ![](https://i.imgur.com/qSbCtJf.png)
 :::
-Natomiast informację o tym, czy wymagana była naprawa jakiegoś podzespołu możemy wyczytać z kolumny `Rodzaj` w tabeli `Naprawy`
+Natomiast informację o tym, czy wymagana była naprawa jakiegoś podzespołu, możemy wyczytać z kolumny 'Rodzaj' w tabeli 'Naprawy'
 :::info
 ![](https://i.imgur.com/3ip6hpW.png)
 :::
-Tworzymy więc nowy projekt kwerendy i wybieramy table `Komputery` oraz `Naprawy`.
+Tworzymy więc nowy projekt kwerendy i wybieramy table 'Komputery' oraz 'Naprawy'.
 ![](https://i.imgur.com/bPKlIiJ.png)
-Zauważmy jednak, że teraz nasze tabele nie są w żaden sposób połączone. Powinien to być dla nas sygnał, że potzrebujemy jeszcze jakiejś tabeli, która pozwoloi nam na zidentyfikwoanie, który z komputerów wymagał danej naprawy. Jest to tabela `Awarie`. Dodajmy ją więc do naszego projektu.
+Zauważmy jednak, że teraz nasze tabele nie są w żaden sposób połączone. Powinien to być dla nas sygnał, że potrzebujemy jeszcze jakiejś tabeli, która pozwoli nam na zidentyfikowanie, który z komputerów wymagał danej naprawy. Jest to tabela 'Awarie'. Dodajmy ją więc do naszego projektu.
 ![](https://i.imgur.com/cWPtOV7.png)
-Mamy już wszystkie potrzebne nam dane. Czas zastanowić się, których pól będziemy potzrebować oraz w jaki sposób chcemy skonstruować nasze zapytanie.
+Mamy już wszystkie potrzebne nam dane. Czas zastanowić się, których pól będziemy potrzebować oraz w jaki sposób chcemy skonstruować nasze zapytanie.
 ![](https://i.imgur.com/GvD4VNL.png)
 Mamy już wszystkie naprawy komputerów z sekcji "A", które polegały na wymianie podzespołów.
 ![](https://i.imgur.com/kkGJC99.png)
-Wynik jednak nie jest jeszcze do końca odpowiedzią na pytanie z zadania. Chcemy mieć bowiem tylko te komputery, które wymagały conajmniej 10 takich napraw. Przydatna okaże się znów funkcjia "Sumy". Potrzebna nam będzie kolumna, na podstawie której będziemy mogli policzyć liczbę napraw. Idealna jest do tego celu kolumna `Identyfikator` będąca kluczem głównym tabeli `Nsprawy`.
+Wynik jednak nie jest jeszcze do końca odpowiedzią na pytanie z zadania. Chcemy mieć bowiem tylko te komputery, które wymagały co najmniej 10 takich napraw. Przydatna okaże się znów funkcja "Sumy". Potrzebna nam będzie kolumna, na podstawie której będziemy mogli policzyć liczbę napraw. Idealna jest do tego celu kolumna 'Identyfikator' będąca kluczem głównym tabeli 'Naprawy'.
 ![](https://i.imgur.com/q90aBSj.png)
-W funkcji sumy dla `Numer_komputera` wybieramy opcję "Grupuj według", ponieważ chcemy policzyć ile napraw było dla danego komputera, a więc zgrupować naprawy według dla danego komputera. `Sekcja` oraz `Rodzaj` są nam tutaj potrzebne jedynie dla przefiltrowania danych, tak aby brać pod uwagę jedynie te rekordy, które spełniają kryteria zadania. W ziązku z tym wybieramy opcę sumy "Gdzie". Tak jak mówiliśmy zliczać naprawy będziemy, za pomoca liczenia `Identyfikatorów` napraw, stąd funkcja sumy dla tej kolumny to oczywiście "Policz". Dodajemy dodatkowe kryterium >=10, ponieważ z treści zadania interesują nas jedynie te komputery, które wymagały conajmniej 10 wymian podzespołów.
-Uwaga, to bardzo istotne, aby dokładnie stawiać znaki nierówności. Tutaj chcemy mieć conajmniej 10, a więc >=10.
-
+W funkcji sumy dla 'Numer_komputera' wybieramy opcję "Grupuj według", ponieważ chcemy policzyć, ile napraw było dla danego komputera, a więc zgrupować naprawy według dla danego komputera. 'Sekcja' oraz 'Rodzaj' są nam tutaj potrzebne jedynie dla przefiltrowania danych, tak aby brać pod uwagę jedynie te rekordy, które spełniają kryteria zadania. W związku z tym wybieramy opcję sumy "Gdzie". Tak jak mówiliśmy zliczać naprawy będziemy, za pomocą liczenia 'Identyfikatorów' napraw, stąd funkcja sumy dla tej kolumny to oczywiście "Policz". Dodajemy dodatkowe kryterium >=10, ponieważ z treści zadania interesują nas jedynie te komputery, które wymagały co najmniej 10 wymian podzespołów.
+Uwaga, to bardzo istotne, aby dokładnie stawiać znaki nierówności. Tutaj chcemy mieć co najmniej 10, a więc >=10.
 
 ## Wyrażenia
 Zajmijmy się teraz podpunktem 3.
 :::info
 ![](https://i.imgur.com/C8p3UYH.png)
 :::
-Jego rozwiązywanie podzielimy na trzy części. W pierwszej chcemy się dowiedzieć ile komputerów z danej sekcji uległo awarii którego dnia. 
-Znów zagłębiamy się w treść zadania i dowiadujemy się, że będziemy potzrebować wszytskich tabel, a konkretnie kolumny `Sekcja` z tabeli `Komputery`, kolumny `Czas_awarii` z tabeli `Awarie`, według których będziemy grupować wyniki oraz kolumny `Identyfikator` z tabeli `Naprawy` przy pomocy której będziemy je zliczać.
+Jego rozwiązywanie podzielimy na trzy części. W pierwszej chcemy się dowiedzieć, ile komputerów z danej sekcji uległo awarii, którego dnia.
+Znów zagłębiamy się w treść zadania i dowiadujemy się, że będziemy potrzebować wszystkich tabel, a konkretnie kolumny 'Sekcja' z tabeli 'Komputery', kolumny 'Czas_awarii' z tabeli 'Awarie', według których będziemy grupować wyniki oraz kolumny 'Identyfikator' z tabeli 'Naprawy' przy pomocy której będziemy je zliczać.
 ![](https://i.imgur.com/UKzsny1.png)
-Zauważmy jednak, że znów wynik nie jest tym czego oczekujemy. Dlaczego?
+Zauważmy jednak, że znów wynik nie jest tym, czego oczekujemy. Dlaczego?
 ![](https://i.imgur.com/eZIDhTV.png)
-`Czas_awarii` to dokładny czas, włącznie z godziną i minutą, nas natomiast interesuje jedynie data. 
-Skonstruuujemy więc wyrażenie, które pozwoloi nam wyłuskać datę z naszego `Czasu_awarii`.
+'Czas_awarii' to dokładny czas, włącznie z godziną i minutą, nas natomiast interesuje jedynie data.
+Skonstruujemy więc wyrażenie, które pozwoli nam wyłuskać datę z naszego 'Czasu_awarii'.
 
-#### 1. Kliknij prawym klawiszem myszy w puste pole i wybierz opcję "Koonstruuj".
+#### 1. Kliknij prawym klawiszem myszy w puste pole i wybierz opcję "Konstruuj".
 ![](https://i.imgur.com/RQ1mE9I.png)
 
-#### 2. Najłatwiej jest po prostu rozwijać opcje i wyszukiwać "Funkcji wbudowanych" i odpowiednich kolumn w tabelach czy kwerendach w nmaszej bazie danych.
+#### 2. Najłatwiej jest po prostu rozwijać opcje i wyszukiwać "Funkcji wbudowanych" i odpowiednich kolumn w tabelach czy kwerendach w naszej bazie danych.
 ![](https://i.imgur.com/jyUQodq.png)
 
 #### 3. Wybieramy "Funkcję wbudowane" -> "Data/godzina" i klikamy dwukrotnie na "Day"
 ![](https://i.imgur.com/RGmeeb1.png)
-Widzimy, że w białym polu na górze pojawił nam się szablon użycia funkcji, która wyłuskuje dzień z daty. 
+Widzimy, że w białym polu na górze pojawił nam się szablon użycia funkcji, która wyłuskuje dzień z daty.
 
-#### 4. Uzupełniamy argument funkcji
-Teraz chcemy w  miejsce data wstawić datę awarii. W tym celu zaznaczamy data, kilakmy tabele `Naprawy` i wybieramy kolumnę `Czas awarii`.
+#### 4. Uzupełniamy argument funkcji.
+Teraz chcemy w miejsce data wstawić datę awarii. W tym celu zaznaczamy data, klikamy tabele 'Naprawy' i wybieramy kolumnę 'Czas awarii'.
 ![](https://i.imgur.com/75qMXAv.png)
-    
-#### 5. Wciskamy "OK" i ustawiamy odpowiednią opcję funkcji sumy. 
+
+#### 5. Wciskamy "OK" i ustawiamy odpowiednią opcję funkcji sumy.
 W naszym przykładzie chcemy grupować wyniki według dnia, więc domyślna opcja "Grupuj według" będzie odpowiednia.
 
 #### 6. Analogicznie używamy funkcji "Month" do wyłuskania miesiąca z daty.
-    
+
 Z treści zadania wiemy, że baza danych obejmuje tylko jeden rok, więc nie musimy wyłuskiwać roku.
-    
-Zauważmy, że wyniki wciąż nie są takie jak byśmy oczekiwali. Dlaczego? Bo wciąż mamy grupowanie według pełnych dat z kolumny `Czas_awarii`. Wystarczy więc usuną tę kolumnę  
-    
+
+Zauważmy, że wyniki wciąż nie są takie, jak byśmy oczekiwali. Dlaczego? Bo wciąż mamy grupowanie według pełnych dat z kolumny 'Czas_awarii'. Wystarczy więc usunąć tę kolumnę.
+
 #### 7. Usuwanie niepotrzebnej części zapytania.
-    Możemy zrobić to na dwa sposoby, albo zaznaczyć daną kolumnę w zapytaniu i nacisnąc kalwisz "Delete",
+Możemy zrobić to na dwa sposoby, albo zaznaczyć daną kolumnę w zapytaniu i nacisnąć klawisz "Delete",
 ![](https://i.imgur.com/J8kiDHs.png)
-albo usunąc nazwę kolumny i kliknąc eneter
+albo usunąć nazwę kolumny i kliknąć Enter
 ![](https://i.imgur.com/qUacLpj.png)
 Efekt będzie taki sam - usunięmy niepotrzebną część zapytania.
 ![](https://i.imgur.com/PAyKaoL.png)
-Możemy jednak zauważyć, że wynik jest mało czytelny, ze względu na to, że dni i miesiące reprezentowane są poprzez liczby a nazwy kolumn nie odzwierciedlają ich zawartości.
-    
-#### 8. Nazewnictwo wyrażeń
-Aby nadać wyrażeniu nazwę wystarczy zamienić autormatycznie wstawianą nazwę "Wyr1" na naszą nazwę. Możemy to zrobić w widoku projektu, po proostu poprzez usunięcie starego tekstu i wpisanie nowego.
+Możemy jednak zauważyć, że wynik jest mało czytelny, ze względu na to, że dni i miesiące reprezentowane są poprzez liczby, a nazwy kolumn nie odzwierciedlają ich zawartości.
+
+#### 8. Nazewnictwo wyrażeń.
+Aby nadać wyrażeniu nazwę, wystarczy zamienić automatycznie wstawianą nazwę "Wyr1" na naszą nazwę. Możemy to zrobić w widoku projektu, po prostu poprzez usunięcie starego tekstu i wpisanie nowego.
 ![](https://i.imgur.com/pN81glB.png)
 
-Teraz mamy już dobrze wyglądające zestawienie sekcji danego dnia. Naszym zadaniej jest jednak wstakazanie sekcji i dnia w którym w tejże sekcji awarii uległy wszytskie komputery. Jak to zrobić? Tu przejdziemy do drugiej części rozwiązaywania tego zadania.
+Teraz mamy już dobrze wyglądające zestawienie sekcji danego dnia. Naszym zadaniem jest jednak wskazanie sekcji i dnia, w którym w tejże sekcji awarii uległy wszystkie komputery. Jak to zrobić? Tu przejdziemy do drugiej części rozwiązywania tego zadania.
 
-## Kwerdendy pomocnicze - jak używać
+## Kwerendy pomocnicze — jak używać
 
 ## Tworzenie zaawansowanych kwerend
 

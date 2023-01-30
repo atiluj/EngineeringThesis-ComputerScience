@@ -9,12 +9,12 @@ import Paper from '@mui/material/Paper';
 
 export default function Table({header, data}) {
   return (
-    <TableContainer style={{width: 'fit-content', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}} component={Paper}>
+    <TableContainer sx={{width: 'fit-content', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', marginTop: '1rem'}} component={Paper}>
       <Table sx={{width: 'auto'}} aria-label="simple table">
         <TableHead>
-          <TableRow>
+          <TableRow sx={{borderBottom: '3px solid black'}}>
           {header.map((header_cell) => (
-            <TableCell>{header_cell}</TableCell>
+            <TableCell sx={{fontWeight: 'bold'}}>{header_cell}</TableCell>
           ))}
           </TableRow>
         </TableHead>

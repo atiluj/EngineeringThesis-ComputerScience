@@ -1,37 +1,31 @@
 ### 1. Tworzymy jeszcze jedną kwerendę pomocniczą, zawierającą liczbę komputerów w każdej sekcji.
 Wiemy już jak konstruować proste kwerendy, ale dla przypomnienia przejdźmy przez ten proces jeszcze raz, krok po kroku.
-Z treści zadania wiemy, że każdy komputer z tabeli `Komputery` ma swój unikatowy `Numer_komputera`. Informacja o tym w jakiej sekcji znajduje się nasz sprzęt możemy odczytać z kolumny `Sekcja` w tabeli `Komputery`. Zatem pogrupujmy dane według `Sekcji` i policzmy ich `Numer_komputera`.
-<img src={new URL('https://i.imgur.com/tglKpg1.png', import.meta.url)} alt="xyz" className={`small_img`} />
+Z treści zadania wiemy, że każdy komputer z tabeli 'Komputery' ma swój unikatowy 'Numer_komputera'. Informacja o tym, w jakiej sekcji znajduje się nasz sprzęt, możemy odczytać z kolumny 'Sekcja' w tabeli 'Komputery'. Zatem pogrupujmy dane według 'Sekcji' i policzmy ich 'Numer_komputera'.
+<img src={new URL('https://i.imgur.com/tglKpg1.png', import.meta.url)} alt="xyz" className={'small_img'} />
 Wynik zapiszemy jako "zad 3 pom2".
 ![](https://i.imgur.com/pdCNVFj.png)
 
-### 2. Teraz korzystając z dwóch kwerend pomocniczych konstuujemy kwerendę, która będzie odpowiadała na pytanie z zadania.
-Wiemy już ile komputerów jest w każdej z sekcji. Wiemy też ile komputerow z danej sekcji uległo awarii w poszczególne dni. Wystarczy więc, że połączymy te dane i znajdziemy dzień i sekcję, w której awarii uległy wszytskie komputery na raz.
+### 2. Teraz korzystając z dwóch kwerend pomocniczych, konstruujemy kwerendę, która będzie odpowiadała na pytanie z zadania.
+Wiemy już, ile komputerów jest w każdej z sekcji. Wiemy też, ile komputerów z danej sekcji uległo awarii w poszczególne dni. Wystarczy więc, że połączymy te dane i znajdziemy dzień i sekcję, w której awarii uległy wszystkie komputery naraz.
 
-### 3. Otwieramy nowy projekt kwerendy i dodajemy nasze kwerendy (dokładnie tak samo jak wcześniej przeciągaliśmy lub dodawaliśmy tabele).
+### 3. Otwieramy nowy projekt kwerendy i dodajemy nasze kwerendy (dokładnie tak samo, jak wcześniej przeciągaliśmy lub dodawaliśmy tabele).
 ![](https://i.imgur.com/RGvoqso.png)
 Jest jedna maleńka różnica - jeśli chcemy korzystać ze sposobu drugiego, to z paska menu musimy wybrać opcję "Kwerendy". Poza tą drobną zmianą, z kwerendy pomocniczej korzystamy identycznie jak z tabeli.
 
-### 4. Ralacje między kwerendami
-Tutaj mamy kilka możliwych scenariuszy. Access sam może domyślić się jak powinien połaczyć nasze kwerendy. 
+### 4. Relacje między kwerendami
+Tutaj mamy kilka możliwych scenariuszy. Access sam może domyślić się, jak powinien połączyć nasze kwerendy.
 Możemy też ręcznie przeciągnąć odpowiadające sobie pola w projekcie kwerendy.
 ![](https://i.imgur.com/5Mm8Ypk.png)
-Możemy również ustawić ich relację podobnie jak wcześniej robiliśmy to dla tabel. 
-Jeśli zdecydujemy się na ten sposób powinniśmy zrobić to przed tworzeniem kwerendy z wykorzystaniem kwerend pomocniczych, których relację ustawiamy (czyli przed wykonaniem punktu 3.)
+Możemy również ustawić ich relację, podobnie jak wcześniej robiliśmy to dla tabel.
+Jeśli zdecydujemy się na ten sposób, powinniśmy zrobić to przed tworzeniem kwerendy z wykorzystaniem kwerend pomocniczych, których relację ustawiamy (czyli przed wykonaniem punktu 3.)
 ![](https://i.imgur.com/c9ZAvwc.png)
 
 ### 5. Kwerenda korzystająca z dwóch kwerend pomocniczych i wyrażenia.
-Nie pozostaje nam nic więcej jak zaprojektować naszą ostateczną kwerendę. Zastanówmy się, jakich informacji potrzebujemy. Z pewnością jest to `Sekcja` oraz `Dzien` i `Miesiac`. Ponadto musimy skonstruować wyrażenie, które będzie obliczało różnicę pomiędzy liczbą komputerów w danej sekcji, a liczbą komputerów, które uległy w niej awarii. Jeśli różnica ta wyniesie zero, to znaczy, że wszystkie komputery z tej sekcji uległy awarii tego dnia. Uzyskamy więc odpowiedź na pytanie z zadania.
-<img src={new URL('https://i.imgur.com/wWXIJuE.png', import.meta.url)} alt="xyz" className={`medium_img`} />
-(Operator odejmowania (minus) najłatwiej jest wpisać ręcznie, choć możemy też znależć odpowiednią funkcję wbudowaną.)
-<img src={new URL('https://i.imgur.com/PjwttNm.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+Nie pozostaje nam nic więcej jak zaprojektować naszą ostateczną kwerendę. Zastanówmy się, jakich informacji potrzebujemy. Z pewnością jest to 'Sekcja' oraz 'Dzien' i 'Miesiac'. Ponadto musimy skonstruować wyrażenie, które będzie obliczało różnicę pomiędzy liczbą komputerów w danej sekcji a liczbą komputerów, które uległy w niej awarii. Jeśli różnica ta wyniesie zero, to znaczy, że wszystkie komputery z tej sekcji uległy awarii tego dnia. Uzyskamy więc odpowiedź na pytanie z zadania.
+<img src={new URL('https://i.imgur.com/wWXIJuE.png', import.meta.url)} alt="xyz" className={'medium_img'} />
+(Operator odejmowania (minus) najłatwiej jest wpisać ręcznie, choć możemy też znaleźć odpowiednią funkcję wbudowaną.)
+<img src={new URL('https://i.imgur.com/PjwttNm.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ### 6. Gotowe!
 ![](https://i.imgur.com/FCInL5V.png)
-Wystarczy zapisać wynik. Pamiętajmy, aby w odpowiedzi podać pełną datę, czyli dospiać również rok! 
-
-
-
-
-
-
+Wystarczy zapisać wynik. Pamiętajmy, aby w odpowiedzi podać pełną datę, czyli dopisać również rok!

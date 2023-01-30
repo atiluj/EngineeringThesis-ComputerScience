@@ -1,108 +1,94 @@
-Raporty są wykorzystywane przede wszystkim do podsumowania danych i przejrzystego ich zaprezentowania. 
-Jeśli chcemy wydrukowac tabelę, wynik kwerendy czy zestawinie zawierające kilka tabel w przejrzysty sposób, 
-to idealne do tego celu będzie wsparcie się właśnie użyciem raportu. Czasami używa się ich również w celu stworzenia 
+Raporty są wykorzystywane przede wszystkim do podsumowania danych i przejrzystego ich zaprezentowania.
+Jeśli chcemy wydrukować tabelę, wynik kwerendy czy zestawienie zawierające kilka tabel w przejrzysty sposób,
+to idealne do tego celu będzie wsparcie się właśnie użyciem raportu. Czasami używa się ich również w celu stworzenia
 listy telefonów, listy mailingowej itp.
 
 ## Tworzenie raportu
-Ponownie będziemy bazować na danych z matury z maja 2018 roku. Tak jak już wspominaliśmy we wstępie, tworzenie raportów to 
-nie jest umiejętność przydatna na maturze, więc i zadanie będzie typowo życiowe, a nie maturlane. <br/><br/>
+Ponownie będziemy bazować na danych z matury z maja 2018 roku. Tak jak już wspominaliśmy we wstępie, tworzenie raportów to
+nie jest umiejętność przydatna na maturze, więc i zadanie będzie typowo życiowe, a nie maturalne. <br/><br/>
 **Zadanie:** "Wydrukuj tabelę zawierającą dane na temat komputerów." <br/>
 
 ### 0. Drukowanie tabeli bez użycia raportu (niepolecane).
-Na początku możemy spróbować wykonać to polecenie bez użycia raportów, przecież musi być taka możliwość. 
-Owszem, jest, sprawdźmy więc jak będzie wyglądała nasza tabela, jeśli po prostu wyfukujemy ją wporst.
-Możemy to zrobić poprzez wybranie zakładni "Dane zewnętrzne" -> "PDF lub XPS" 
+Na początku możemy spróbować wykonać to polecenie bez użycia raportów, przecież musi być taka możliwość.
+Owszem, jest, sprawdźmy więc, jak będzie wyglądała nasza tabela, jeśli po prostu wyłuskujemy ją wprost.
+Możemy to zrobić poprzez wybranie zakładki "Dane zewnętrzne" -> "PDF lub XPS"
 ![](https://i.imgur.com/aysQXCh.png)
-<img src={new URL('https://i.imgur.com/7rQyyoI.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+<img src={new URL('https://i.imgur.com/7rQyyoI.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 lub poprzez użycie skrótu klawiszowego "Ctrl + P"
-<img src={new URL('https://i.imgur.com/BRK6iSL.png', import.meta.url)} alt="xyz" className={`small_img`} />
+<img src={new URL('https://i.imgur.com/BRK6iSL.png', import.meta.url)} alt="xyz" className={'small_img'} />
 
-Zauważmy jednak, że efekt nie jest zadowalaujący.
-<img src={new URL('https://i.imgur.com/7rQyyoI.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+Zauważmy jednak, że efekt nie jest zadowalający.
+<img src={new URL('https://i.imgur.com/7rQyyoI.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 ![](https://i.imgur.com/je8NA5j.png)
-Oczywiście możemy stworzyć kwerendę, która posegreguje dane według `Sekcji`, a następnie `Pojemności`, 
+Oczywiście możemy stworzyć kwerendę, która posegreguje dane według 'Sekcji', a następnie 'Pojemności',
 ale sposób prezentacji danych wciąż nie będzie estetyczny, więc warto zrobić to lepiej.
 
 ### 1. Wybieramy "Tworzenie" -> "Kreator raportów".
 ![](https://i.imgur.com/ncV4FKF.png)
 
-### 2. Wybieramy tabelę, na podstwie której będziemy towrzyć raport oraz wszystkie jej pola, które mają się w nim znaleźć
-(Wyboru dokonujemy dokłądnie tak samo, jak przy towrzeniu kwerent, poprzez podwójne kliknięcie lub użycie ">".)
-Nas interesuje wydrukowanie wszystkich danych o`Kompyterach`, wybieramy więc odpowiednia tabelę oraz wszystkie jej pola.
-<img src={new URL('https://i.imgur.com/sitjspt.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+### 2. Wybieramy tabelę, na podstawie której będziemy tworzyć raport oraz wszystkie jej pola, które mają się w nim znaleźć
+(Wyboru dokonujemy dokładnie tak samo, jak przy tworzeniu kwerend, poprzez podwójne kliknięcie lub użycie ">".)
+Nas interesuje wydrukowanie wszystkich danych o'Komputerach', wybieramy więc odpowiednią tabelę oraz wszystkie jej pola.
+<img src={new URL('https://i.imgur.com/sitjspt.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
-### 3. Wybieramy główne pole według którego będziemy grupować rekordy.
-<img src={new URL('https://i.imgur.com/vxUGhXF.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+### 3. Wybieramy główne pole, według którego będziemy grupować rekordy.
+<img src={new URL('https://i.imgur.com/vxUGhXF.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ### 4. Wybieramy dodatkowe opcje sortowania i podsumowania.
-W tym kroku możemy dodać kolejne pola, według których posortujemy dane, poprzez wybranie ich z listy rozwijanej. 
-Podobnie do sortowania wielopoziomowego w Excelu, najpierw wszytskie dane będą posegregowane według pola, 
-które wybraliśmy w poprzednim kroku, a następnie według kolejnych pól wybranych w tym kroku, zgodnie z kolejnością wyboru. 
-Domyślenie porządek jest ustawiony rosnąco, ale można zmienić go na malejący poprzez kliknięcie na tę opcję.
-**W naszym przykładzie** zestawienie będzie więc w pierwszej kolejności posortowane według pola `Sekcja`, 
-a następnie według `Pojemności_dysku` oraz `Numeru_komputera`.
-<img src={new URL('https://i.imgur.com/wipflJF.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+W tym kroku możemy dodać kolejne pola, według których posortujemy dane, poprzez wybranie ich z listy rozwijanej.
+Podobnie do sortowania wielopoziomowego w Excelu, najpierw wszystkie dane będą posegregowane według pola,
+które wybraliśmy w poprzednim kroku, a następnie według kolejnych pól wybranych w tym kroku, zgodnie z kolejnością wyboru.
+Domyślenie porządek jest ustawiony rosnąco, ale można zmienić go na malejący poprzez kliknięcie wybranej opcji.
+**W naszym przykładzie** zestawienie będzie więc w pierwszej kolejności posortowane według pola 'Sekcja',
+a następnie według 'Pojemności_dysku' oraz 'Numeru_komputera'.
+<img src={new URL('https://i.imgur.com/wipflJF.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
-Mamy także opcję podsumowania, dzięki której możemy rozrzerzyć raport o sumę czy średnia. 
-**Na przykład** dodamy informację o łącznej poejmność wszystkich dysków w sprzętach z tablicy `Komputery`.
-<img src={new URL('https://i.imgur.com/90GnySq.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+Mamy także opcję podsumowania, dzięki której możemy rozszerzyć raport o sumę czy średnia.
+**Na przykład** dodamy informację o łącznej pojemność wszystkich dysków w sprzętach z tablicy 'Komputery'.
+<img src={new URL('https://i.imgur.com/90GnySq.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ### 5. Wybieramy układ raportu.
-Dostepne są trzy równe układy. Klikając na każdy z nich możemy sprawdzić na podglądzie po lewej stronie, 
-jak będzie wyklądał nasz raport. Jeśli raport okaże się zbyt szeroki, bo uwzględniliśmy w nim wiele danych 
-i poziomów sortowania to warto rozważyć również wybranie orientacji "poziomej".
-<img src={new URL('https://i.imgur.com/8BL5VEB.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+Dostępne są trzy równe układy. Klikając na każdy z nich, możemy sprawdzić na podglądzie po lewej stronie,
+jak będzie wyglądał nasz raport. Jeśli raport okaże się zbyt szeroki, bo uwzględniliśmy w nim wiele danych
+i poziomów sortowania, to warto rozważyć również wybranie orientacji "poziomej".
+<img src={new URL('https://i.imgur.com/8BL5VEB.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ### 6. Wybieramy nazwę raportu.
-<img src={new URL('https://i.imgur.com/F3yLlzy.png', import.meta.url)} alt="xyz" className={`medium_img`} />
-
+<img src={new URL('https://i.imgur.com/F3yLlzy.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ### 7. Widok raportu.
-Zobaczmy jak wygląda gotowy raport.
-<img src={new URL('https://i.imgur.com/Hg6FOtw.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+Zobaczmy, jak wygląda gotowy raport.
+<img src={new URL('https://i.imgur.com/Hg6FOtw.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ### 8. Widok projektu.
-Klikamy w opcję "Widok". Widzimy tu kilka różych trybów, w jakich możemy oglądać nasz raport (podobnie jak w przypadku kwerend). 
+Klikamy w opcję "Widok". Widzimy tu kilka różnych trybów, w jakich możemy oglądać nasz raport (podobnie jak w przypadku kwerend).
 Wybieramy "Widok projektu", aby przejść do edycji raportu.
 ![](https://i.imgur.com/HPZ7QKC.png)
-<img src={new URL('https://i.imgur.com/ILZ4YzB.png', import.meta.url)} alt="xyz" className={`medium_img`} />
-
-
+<img src={new URL('https://i.imgur.com/ILZ4YzB.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ### 9. Dla jeszcze lepszej czytelności raportu możemy dodać zakolorowywanie lub zmienić kolor czcionki wybranych pól.
-Na przykład wybierzemy błękitne tło do nazwy Sekcji, a wiec głównego kryterium, według którego sortujemy dane.
-Zaznaczamy "Sekcja - nagłówek" i wybieramy zakładkę "Formatowanie", a następnie ustawiamy wybrany "Kolor tła".
+Na przykład wybierzemy błękitne tło do nazwy Sekcji, a więc głównego kryterium, według którego sortujemy dane.
+Zaznaczamy "Sekcja — nagłówek" i wybieramy zakładkę "Formatowanie", a następnie ustawiamy wybrany "Kolor tła".
 ![](https://i.imgur.com/tElJruM.png)
 
-
 ### 10. Podgląd wydruku.
-W celu sprawdzenia, jak nasz dokument będzie wyglądał po wydruku przechodzimy ponownie do zakładki 
-"Projekt raportu" -> "Widok" -> "Pidgląd wydruku".
+W celu sprawdzenia, jak nasz dokument będzie wyglądał po wydruku, przechodzimy ponownie do zakładki
+"Projekt raportu" -> "Widok" -> "Podgląd wydruku".
 ![](https://i.imgur.com/W70O0c2.png)
 
 ### 11. Gotowe!
-<img src={new URL('https://i.imgur.com/FMVVvyW.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+<img src={new URL('https://i.imgur.com/FMVVvyW.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ## Nazewnictwo
 
 **Części raportu:**
 * Nagłówek raportu
-* Nagłówek strony 
+* Nagłówek strony
 * Nagłówek grupy
 * Szczegóły
 * Stopka grupy
 * Stopka strony
-* Stopka raportu 
+* Stopka raportu
 
 Opis i szczegóły każdej z części znajdziemy w dokumentacji Microsoft Access: https://support.microsoft.com/pl-pl/office/wprowadzenie-do-raport%C3%B3w-w-programie-access-e0869f59-7536-4d19-8e05-7158dcd3681c
-
-
-
-
-
-
-
-
-
-
