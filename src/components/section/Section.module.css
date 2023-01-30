@@ -313,13 +313,9 @@ img.section_logo {
     grid-template-columns: 1fr 1fr;
   }
 
-  .main .contents .cont svg {
-    min-height: 45px;
-  }
-
   .main article {
     padding: 10px 0px;
-    font-size: 12px;
+    font-size: 13px;
     border: 0px;
   }
 
@@ -335,8 +331,12 @@ img.section_logo {
     grid-template-columns: 1fr;
   }
 
+  .main .contents .cont svg {
+    min-height: 20px;
+  }
+
   .main article {
-    font-size: 12px;
+    font-size: 13px;
     text-align: left;
   }
 

@@ -153,10 +153,8 @@ function Home() {
                     </article>
                 </div>
             </main>
-
-            <div className={`separator`}></div>
         </div>
-
+        <div className={`separator`}></div>
         <div className={styles.authors} id="sixth">
             <div className={styles.authors_title}><p>AUTORZY STRONY</p></div>
             <div className={styles.authors_details_wrapper}>

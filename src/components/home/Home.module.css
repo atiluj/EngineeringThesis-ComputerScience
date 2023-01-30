@@ -70,7 +70,7 @@
 .main article {
     /* font-family: 'IBM Plex Serif', serif; */
     font-family: 'Roboto', serif;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 300;
     background-color: var(--primary3);
     color: var(--font);
@@ -125,8 +125,14 @@
 }
 
 .authors {
-    padding: 30px 0 40px;
+    /* padding-top: 40px; */
     line-height: normal;
+    margin: 0 auto;
+    padding-bottom: 45px;
+    padding-top: 70px;
+    margin-top: -70px;
+    max-width: 85em;
+    width: 85%;
 }
 
 .authors_title {
@@ -137,23 +143,19 @@
     text-transform: uppercase;
     color: var(--title);
     text-align: center;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+    padding: 25px 0;
 }
 
 .authors_details_wrapper {
     display: grid;
     grid-template-columns: repeat(3, minmax(auto, 1fr));
-    grid-gap: 10px;
+    grid-gap: 20px;
     justify-content: space-between;
     justify-items: center;
     align-content: center;
-    margin: 3%;
 }
 
 .author {
-    /* min-width: 25vw; */
-    /* max-width: 30vw; */
     flex-direction: column;
     background-color: var(--card-background);
     color: var(--font);
@@ -161,7 +163,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: var(--card-shadow) 0px 2px 8px 0px;
-    padding: 10%
+    padding: 1.5em;
 }
 
 .author_name {
@@ -179,7 +181,9 @@
 
 .introduction {
     text-align: justify;
-    font-size: 20px;
+    font-size: 15px;
+    font-family: "Roboto", serif;
+    font-weight: 300;
     height: 50%;
 }
 
@@ -229,7 +233,7 @@
     }
 
     .main article {
-        font-size: 14px;
+        font-size: 15px;
         padding: 15px 25px;
         margin-bottom: 2vw;
         line-height: 18px;
@@ -237,7 +241,15 @@
     }
 
     .introduction {
-        text-align: center;
+        text-align: left;
+    }
+
+    .authors{
+        width: 90%;
+    }
+
+    .author{
+        padding: 1em;
     }
 }
 
@@ -266,13 +278,21 @@
     }
 
     .author {
-        min-width: 60vw;
-        padding: 7% 10% 7% 10%;
+        width: 70%;
+        padding: 1em;
     }
 
     .authors_title {
         letter-spacing: 20px;
         font-size: 30px;
+    }
+
+    .authors_details_wrapper div:first-child{
+        margin-top: 1em;
+    }
+
+    .authors_details_wrapper div:last-child{
+        margin-bottom: 2em;
     }
 
     .author_name {
@@ -282,6 +302,7 @@
 
     .introduction {
         font-size: 15px;
+        word-break: break-word;
     }
 }
 
@@ -310,12 +331,24 @@
         line-height: 15px;
     }
 
-    .authors_details_wrapper {
-        grid-gap: 5%;
-    }
-
     .author {
         box-sizing: content-box;
+    }
+
+    .authors_title {
+        padding: .6em 0;
+    }
+
+    .authors_details_wrapper {
+        grid-gap: 1.5em;
+    }
+
+    .authors_details_wrapper div:first-child{
+        margin-top: .5em;
+    }
+
+    .authors_details_wrapper div:last-child{
+        margin-bottom: .5em;
     }
 }
 
@@ -353,9 +386,33 @@
         text-align: center;
     }
 
+    .author{
+        width: 95%;
+    }
+
     .authors_title {
         letter-spacing: 8px;
         font-size: 25px;
+    }
+
+    .authors_title {
+        padding: .5em 0;
+    }
+
+    .authors_details_wrapper {
+        grid-gap: 1em;
+    }
+
+    .author_name{
+        padding: .1em;
+    }
+
+    .author .photo{
+        margin-top: 0;
+    }
+
+    .introduction{
+        font-size: 14px;
     }
 }
 
