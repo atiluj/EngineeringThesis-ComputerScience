@@ -70,7 +70,7 @@ function Nav() {
 
     if (windowWidth > 1200) {
         if (scrollY > 80) {
-            padding = "7px 17px";
+            padding = "10px 17px";
             fontSize = "16px";
         } else {
             padding = "15px 23px";
@@ -78,7 +78,7 @@ function Nav() {
         }
     } else if (windowWidth > 1000) {
         if (scrollY > 80) {
-            padding = "9px 17px";
+            padding = "12px 17px";
             fontSize = "14px";
         } else {
             padding = "13px 17px";
@@ -86,7 +86,7 @@ function Nav() {
         }
     } else if (windowWidth > 810) {
         if (scrollY > 80) {
-            padding = "11px 10px";
+            padding = "12px 10px";
             fontSize = "14px";
         } else {
             padding = "14px 10px";
