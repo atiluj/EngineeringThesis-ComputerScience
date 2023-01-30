@@ -5,7 +5,6 @@ import MUIAccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { styled } from "@mui/material/styles";
 import styles from "./Dropdown.module.css";
-import "../style.css";
 
 const AccordionDetails = styled(MUIAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(0),

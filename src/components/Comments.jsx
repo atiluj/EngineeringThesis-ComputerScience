@@ -34,9 +34,11 @@ function Comments({issue}) {
     };
     const iframe = `https://utteranc.es/utterances.html?${new URLSearchParams(params)}`;
 
-    return <div className="utterances" style={{height: `${height}px`}}>
-        <iframe className="utterances-frame" title="Comments" scrolling="no" src={iframe} loading="lazy"></iframe>
-    </div>
+    return (
+        <div className="utterances" style={{height: `${height}px`}}>
+            <iframe className="utterances-frame" title="Comments" scrolling="no" src={iframe} loading="lazy"></iframe>
+        </div>
+    );
 }
 
 export default Comments;

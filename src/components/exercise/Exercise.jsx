@@ -4,7 +4,7 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/dark.css';
 import { useParams } from 'react-router-dom';
 
-import Comments from './Comments';
+import Comments from '../Comments';
 
 function Contents({chapter}) {
     React.useEffect(() => { hljs.highlightAll(); }, [chapter.content]);
@@ -20,7 +20,7 @@ function Exercise({lessons}) {
     return <>
         <main className={styles.main}>
             <div className={styles.exercise_title}>
-                <h1>{title}</h1>
+                <h2>{title}</h2>
             </div>
             <div className={`${styles.main_content} main_content`}>
                 <Contents chapter={chapter} />

@@ -2,8 +2,7 @@
     min-height: 100vh;
     text-align: left;
     font-family: 'Chakra Petch', sans-serif;
-    /* margin: 0 10%; */
-    width: 80%;
+    width: 70%;
     max-width: 85em;
     margin: 0 auto;
 }
@@ -16,18 +15,18 @@
     border-radius: 10px;
 }
 
-.main .exercises_title {
-    margin-top: 20px;
-    margin-bottom: 10px;
+.main .exercises_title{
+        padding-top: 30px;
 }
 
 .main .exercises_list {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     justify-content: center;
+    text-align: center;
+    line-height: 2rem;
 }
 
 .main .exercises_list pre {
@@ -40,28 +39,32 @@
 
 .main .list_element_wrapper {
     display: flex;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.wrap{
+    display: flex;
+    flex: row;
+    padding-left: 15px;
 }
 
 .subject {
-    display: flex;
+    margin-bottom: -3px;
     text-align: left;
     align-items: center;
     text-transform: uppercase;
-    width: 15rem;
+    width: 14rem;
     border-left: 5px var(--exercise-secondary2) solid;
     padding-left: 10px;
 }
 
 .main .list_element {
-    display: flex;
-    margin-bottom: 10px;
-    margin-right: 7px;
+    margin: 0 2px;
     background-color: var(--exercise-secondary);
     border-radius: 15px;
     height: 2rem;
-    ;
-    min-width: calc(11*1rem);
+    min-width: 11rem;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -70,13 +73,17 @@
 }
 
 
+.main .exam_exercise{
+    margin-bottom: 8px;
+}
+
 .main .list_element:hover {
     background-color: var(--exercise-secondary2);
 }
 
 
-.main .list_element.number_element {
-    min-width: calc(3*1rem);
+.main .list_element.list_element.python_exercise {
+    min-width: 3rem;
 }
 
 .main .category {
@@ -88,8 +95,65 @@
     text-align: center;
 }
 
+@media(max-width:1200px){
+    .main{
+        width: 80%;
+        max-width: 95em;
+    }
+}
+
+
+@media(max-width:900px){
+    .main{
+        width: 85%;
+        max-width: 95em;
+    }   
+}
+
 @media (max-width:810px) {
     .main {
         padding: 0;
+    }
+
+    .exercises_title{
+        padding-top: 20px;
+    }
+}
+
+@media(max-width:600px){
+    .exercises_title h2{
+        font-size: 18px;
+    }
+
+    .category{
+        font-size: 15px;
+    }
+
+    .list_element{
+        font-size: 14px;
+        height: 1.5rem;
+    }
+    
+    .subject{
+        font-size: 15px;
+    }
+
+    .main .list_element.list_element.python_exercise{
+        min-width: 2rem;
+    }
+
+    .main .exercises_list {
+        /* line-height: 2rem; */
+    }
+}
+
+@media(max-width:400px){
+    .main{
+        width: 90%;
+        max-width: 95em;
+    }
+
+    .subject{
+        width: 100%;
     }
 }

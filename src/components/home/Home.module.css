@@ -1,7 +1,11 @@
-.main_page{
+.smooth_scroll {
+    scroll-behavior: smooth;
+}
+
+.main_page {
     max-width: 85em;
     margin: 0 auto;
-    width: 80%;
+    width: 75%;
 }
 
 .section {
@@ -9,17 +13,17 @@
 }
 
 .section .header {
-    padding-top: 50px;
+    padding-top: 45px;
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 55px;
-    letter-spacing: 50px;
+    font-size: 50px;
+    letter-spacing: 45px;
     text-transform: uppercase;
     line-height: 0px;
     color: var(--main-accent);
     text-align: center;
 
     /* letter-spacing robi spacje za ostatnim znakiem - rozwiązanie problemu */
-    text-indent: 50px;
+    text-indent: 45px;
 }
 
 .section .header h1 {
@@ -27,10 +31,11 @@
 }
 
 .section article {
-    font-family: 'IBM Plex Serif', serif;
-    font-size: 18px;
+    /* font-family: 'IBM Plex Serif', serif; */
+    font-family: 'Roboto', serif;
+    font-size: 16px;
     line-height: 20px;
-    font-weight: 400;
+    /* font-weight: 00; */
     background-color: var(--primary3);
     color: var(--font);
     padding: 60px 30px 20px;
@@ -48,17 +53,12 @@
     display: grid;
     grid-template-columns: 16vw 1fr;
     gap: 4vw;
-    /* padding: 2vw 5vw 4vw; */
-    padding: 2vw 0 4vw;
+    padding: 35px 25px 4vw;
 }
 
 
 
 /* SIDEBAR */
-
-.main .contents {
-    margin-top: calc(2vw - 1px);
-}
 
 .main .contents .cont {
     display: flex;
@@ -68,17 +68,19 @@
 }
 
 .main article {
-    font-family: 'IBM Plex Serif', serif;
-    font-size: 17px;
-    font-weight: 400;
+    /* font-family: 'IBM Plex Serif', serif; */
+    font-family: 'Roboto', serif;
+    font-size: 15px;
+    font-weight: 300;
     background-color: var(--primary3);
     color: var(--font);
     padding: 20px 30px;
-    /* padding: 20px 0; */
     margin-bottom: 2vw;
     border-width: 2px;
     border-style: solid;
-    text-align: justify;
+    /* text-align: justify; */
+    text-align: left;
+    line-height: 20px;
 }
 
 .main article:last-child {
@@ -90,31 +92,31 @@
     text-transform: uppercase;
     color: var(--main-accent);
     padding-bottom: 6px;
-    padding-top: 76px;
-    margin-top: -76px;
+    padding-top: 80px;
+    margin-top: -80px;
 }
 
 .main article {
     text-justify: inter-word;
-    margin: 2vw 0;
+    /* margin: 2vw 0; */
     border-width: 2px;
     border-color: var(--article-border);
     border-radius: 1px;
 }
 
-.legenda{
+.legenda {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.legenda_img{
+.legenda_img {
     max-width: 80px;
     filter: var(--screen_filter);
 }
 
 
-.statistic_img{
+.statistic_img {
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
@@ -150,8 +152,8 @@
 }
 
 .author {
-    min-width: 25vw;
-    max-width: 30vw;
+    /* min-width: 25vw; */
+    /* max-width: 30vw; */
     flex-direction: column;
     background-color: var(--card-background);
     color: var(--font);
@@ -194,8 +196,13 @@
 }
 
 @media (max-width: 1200px) {
+
+    .main_page {
+        width: 75%;
+    }
+
     .section {
-        padding-top: 60px;
+        padding-top: 40px;
     }
 
     .section .header {
@@ -208,24 +215,25 @@
     .section article {
         font-size: 15px;
         padding: 50px 30px 20px;
-        margin: 0 4vw;
+        /* margin: 0 4vw; */
         line-height: 17px;
-    }
-
-    .main {
-        padding: 1vw 4vw;
-        grid-template-columns: 18vw 1fr;
-        gap: 3vw;
     }
 
     .main .contents .cont a {
         font-size: 15px;
     }
 
+    .main {
+        grid-template-columns: 18vw 1fr;
+        gap: 2vw;
+    }
+
     .main article {
-        font-size: 15px;
+        font-size: 14px;
         padding: 15px 25px;
         margin-bottom: 2vw;
+        line-height: 18px;
+
     }
 
     .introduction {
@@ -234,10 +242,6 @@
 }
 
 @media(max-width:1000px) {
-    .section {
-        padding-top: 70px;
-    }
-
     .section .header {
         padding-top: 5px;
         font-size: 45px;
@@ -246,6 +250,7 @@
     }
 
     .main {
+        padding-top: 20px;
         display: block;
     }
 
@@ -281,17 +286,28 @@
 }
 
 @media (max-width:810px) {
+    .main_page{
+        width: 85%;
+    }
+
+    .main article {
+        font-size: 13px;
+    }
+
     .section .header {
-        font-size: 40px;
+        font-size: 30px;
         letter-spacing: 25px;
         text-indent: 25px;
     }
 
     .section article {
-        font-size: 15px;
-        padding: 50px 30px 20px;
-        margin: 0 4vw;
-        line-height: 17px;
+        font-size: 13px;
+        padding: 30px 30px 20px;
+        line-height: 16px;
+    }
+
+    .main_content article{
+        line-height: 15px;
     }
 
     .authors_details_wrapper {
@@ -304,6 +320,10 @@
 }
 
 @media (max-width: 600px) {
+    .main_page{
+        width: 95%;
+    }
+
     .section .header {
         padding-top: 0px;
         font-size: 25px;
@@ -312,11 +332,14 @@
     }
 
     .section article {
-        font-size: 14px;
         padding: 25px 20px 15px;
-        margin: 0 4vw;
         line-height: 17px;
-        text-align: justify;
+        text-align: left;
+    }
+
+    .main{
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .main article {

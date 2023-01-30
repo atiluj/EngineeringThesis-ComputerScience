@@ -1,0 +1,72 @@
+.main {
+    min-height: 100vh;
+    padding: 20px 0;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 15px;
+    width: 55%;
+    max-width: 85em;
+    margin: 0 auto;
+}
+
+.exercise_title {
+    border-bottom: solid 3px black;
+}
+
+.main_content {
+    padding: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+@media(max-width: 1400px) {
+    .main {
+        width: 65%;
+    }
+}
+
+@media(max-width: 950px) {
+    .main {
+        width: 75%;
+        font-size: 14px;
+
+    }
+
+}
+
+@media(max-width: 700px) {
+    .main {
+        width: 90%;
+    }
+
+    .exercise_title h2 {
+        font-size: 19px;
+    }
+}
+
+@media(max-width: 550px) {
+    .exercise_title h2 {
+        font-size: 17px;
+    }
+
+    .main {
+        font-size: 13px;
+    }
+
+    .main_content {
+        padding: 14px 0;
+    }
+}
+
+@media(max-width: 450px) {
+    .main{
+        font-size: 12px;
+    }
+
+    .exercise_title h2 {
+        font-size: 15px;
+    }
+
+    h3{
+        font-size: 13px;
+    }
+}

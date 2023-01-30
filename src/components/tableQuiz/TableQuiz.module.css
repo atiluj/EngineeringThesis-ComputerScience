@@ -1,0 +1,65 @@
+.input {
+    display: none;
+}
+
+.question{
+    padding: 0 0.3rem;
+    vertical-align: middle;
+}
+
+.answer{
+    vertical-align: middle;
+    min-width: 3rem;
+    height: 100%;
+}
+
+.label {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+  
+.label div {
+    padding-bottom: 5%;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.label div:before,
+.label div:after {
+    content: '';
+}
+  
+.label div:before {
+    display: inline-block;
+    vertical-align: top;
+}
+  
+.label div:after {
+    background: var(--secondary3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 300ms;
+    opacity: 0;
+}
+
+.label input:checked+div:after {
+opacity: 0.3;
+}
+
+.filled .correct:after {
+background-color: green;
+}
+
+.filled .incorrect:after {
+background-color: red;
+}

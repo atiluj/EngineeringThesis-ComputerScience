@@ -1,10 +1,11 @@
 import styles from './Nav.module.css';
-import '../style.css';
-
 import React, { useState, useEffect } from 'react';
-import { Outlet, Link } from "react-router-dom";
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Toolbar from '@mui/material/Toolbar';
+import { Link } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
-import { style } from '@mui/system';
 
 const DARK_MODE_KEY = 'dark-mode';
 
@@ -58,6 +59,14 @@ function Nav() {
     const windowWidth = useWindowWidth();
     const scrollY = useScrollY();
     const [darkMode, setDarkMode] = useDarkMode();
+    const tabs = [
+        {name: "Cześć!", link: "/"},
+        {name: "Teoria", link: "/teoria"},
+        {name: "Excel", link: "/excel"},
+        {name: "Access", link: "/access"},
+        {name: "Python", link: "/python"},
+        {name: "Zadania", link: "/exercise"},
+    ];
 
     if (windowWidth > 1200) {
         if (scrollY > 80) {
@@ -88,7 +97,6 @@ function Nav() {
     const aStyle = { padding, fontSize };
 
     function navBurger() {
-        // TODO: refactor
         const x = document.getElementById("top_navbar");
         if (x.className === `gradient ${styles.navbar_sticky}`) {
             x.className += ` ${styles.responsive}`;
@@ -101,43 +109,31 @@ function Nav() {
         setDarkMode((prev) => !prev);
     }
 
-    return <>
-        <nav className={styles.navbar}>
-            <div id="top_navbar" className={`gradient ${styles.navbar_sticky}`}>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-                <div id="nav_wrapper_left" className={styles.nav_wrapper_left}>
-
-                    <Link to="/" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Cześć!</Link>
-
-                    <Link to="/teoria" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Teoria</Link>
-
-                    <Link to="/excel" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Excel</Link>
-
-                    <Link to="/access" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Access</Link>
-
-                    <Link to="/python" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Python</Link>
-
-                    <Link to="/exercise" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Zadania</Link>
-                </div>
-                <div id="nav_wrapper_right" className={styles.nav_wrapper_right}>
-                    <Link to="/interpreter" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>Interpreter python</Link>
-
-                    <label className={styles.switch} >
-                        <input id="checkbox" type="checkbox" checked={darkMode} className={styles.checkbox} onChange={toggleMode} />
-                        <span className={`${styles.slider} ${styles.round}`}></span>
-                    </label>
-
-                    <button className={styles.icon} onClick={navBurger}>
-                        <MenuIcon className={styles.nav_burger} />
-                    </button>
-                </div>
-            </div>
-
-        </nav>
-
-        <Outlet />
-    </>;
+    return (
+        <Box className={styles.navbar}>
+            <AppBar sx={{boxShadow: 'none'}}>
+                <Toolbar variant="dense" id="top_navbar" className={`gradient ${styles.navbar_sticky}`}>
+                    <Stack direction="row" id="nav_wrapper_left" className={styles.nav_wrapper_left}>
+                        {tabs.map((tab) => (
+                            <Link to={tab.link} style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>{tab.name}</Link>
+                        ))}
+                    </Stack>                  
+                    <Stack direction="row" id="nav_wrapper_right" className={styles.nav_wrapper_right}>
+                        <Link to="/interpreter" style={aStyle} className={`menu_button nav_button ${styles.nav_button}`}>
+                            Interpreter python
+                        </Link>
+                        <label className={styles.switch} >
+                            <input id="checkbox" type="checkbox" checked={darkMode} className={styles.checkbox} onChange={toggleMode} />
+                            <span className={`${styles.slider} ${styles.round}`}></span>
+                        </label>
+                        <button className={styles.icon} onClick={navBurger}>
+                            <MenuIcon className={styles.nav_burger} />
+                        </button>
+                    </Stack>
+                </Toolbar>
+            </AppBar>
+        </Box>
+    );
 }
 
 export default Nav;

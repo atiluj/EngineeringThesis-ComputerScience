@@ -9,7 +9,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
 import { useSearchParams } from 'react-router-dom';
 
-import Comments from './Comments';
+import Comments from '../Comments';
 
 const NavContext = React.createContext({
     curChapter: 0,
@@ -35,7 +35,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
     return <div>
         <div className={`${styles.topic} menu_button`} onClick={() => setShow(show => !show)}>
             <a>{chapterId}. {chapter.name}</a>
-            <div>{show ? <ExpandLess /> : <ExpandMore />}</div>
+            {show ? <ExpandLess /> : <ExpandMore />}
         </div>
         <Collapse in={show}>
             {chapter.subchapters.map((subchapter, subchapterId) =>
@@ -51,7 +51,7 @@ function ChapterStandalone({ chapter, chapterId }) {
     return <div onClick={() => changeChapter(chapterId, 0)}>
         <div className={`${styles.topic} menu_button`}>
             <a>{chapterId}. {chapter.name}</a>
-            <div style={{ visibility: "hidden" }}><ExpandMore /></div>
+            <ExpandMore style={{ visibility: "hidden" }}/>
         </div>
     </div>;
 }
@@ -137,10 +137,10 @@ function Section({lessons, title}) {
                 </div> */}
                 <div className={`${styles.cont_title} ${styles.title}`}>
                     <a>{title}</a>
-                    {title === 'access' ? <img src={new URL('../img/access_logo.png', import.meta.url)} alt="Logo access" className={styles.section_logo}/> : null}
-                    {title === 'excel' ? <img src={new URL('../img/excel_logo.png', import.meta.url)} alt="Logo excel" className={styles.section_logo}/> : null}
-                    {title === 'teoria' ? <img src={new URL('../img/teoria_logo.png', import.meta.url)} alt="Logo teoria" className={styles.section_logo}/> : null}
-                    {title === 'python' ? <img src={new URL('../img/python_logo.png', import.meta.url)} alt="Logo python" className={styles.section_logo}/> : null}
+                    {title === 'access' ? <img src={new URL('../../img/access_logo.png', import.meta.url)} alt="Logo access" className={styles.section_logo}/> : null}
+                    {title === 'excel' ? <img src={new URL('../../img/excel_logo.png', import.meta.url)} alt="Logo excel" className={styles.section_logo}/> : null}
+                    {title === 'teoria' ? <img src={new URL('../../img/teoria_logo.png', import.meta.url)} alt="Logo teoria" className={styles.section_logo}/> : null}
+                    {title === 'python' ? <img src={new URL('../../img/python_logo.png', import.meta.url)} alt="Logo python" className={styles.section_logo}/> : null}
                 </div>
 
                 <div className={styles.cont}>
@@ -155,10 +155,9 @@ function Section({lessons, title}) {
             <div className={`${styles.main_content} main_content`}>
                 <Contents lessons={lessons} />
                 <div className={styles.controls}>
-                    {/* <div><label><input type="checkbox" />OZNACZ JAKO PRZEROBIONĄ</label></div> */}
                     <div>
-                        <button onClick={prevLesson} style={{ visibility: prevLessonExists ? "visible" : "hidden" }}><ArrowBackIosNewIcon /></button>
-                        <button onClick={nextLesson} style={{ visibility: nextLessonExists ? "visible" : "hidden" }}><ArrowForwardIosIcon /></button>
+                        {prevLessonExists && <button onClick={prevLesson}><ArrowBackIosNewIcon /></button>}
+                        {nextLessonExists && <button onClick={nextLesson}><ArrowForwardIosIcon /></button>}
                     </div>
                 </div>
                 <Comments issue={`${title} ${curChapter}.${curSubchapter+1}`} />
