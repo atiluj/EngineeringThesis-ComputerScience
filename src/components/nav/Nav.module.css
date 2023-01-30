@@ -94,6 +94,17 @@
         letter-spacing: 30px;
     }
 
+    .navbar .nav_wrapper_left {
+        padding-left: 0px;
+    }
+
+    .navbar .nav_wrapper_right {
+        padding-right: 0px;
+    }
+
+    .nav_wrapper_left {
+        margin-left: 0px;
+    }
 
     .navbar .nav_wrapper_left a:not(:first-child) {
         display: none;
@@ -163,7 +174,8 @@
     }
 
     .navbar a {
-        font-size: 12px;
+        font-size: 13px;
+        text-transform: uppercase;
     }
 }
 

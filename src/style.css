@@ -185,7 +185,6 @@ img.section_logo {
 .link {
     color: var(--link);
     font-weight: 500;
-    /* text-transform: uppercase; */
     font-size: 12px;
     transition-duration: .5s;
     letter-spacing: .5px;
@@ -241,9 +240,9 @@ img.section_logo {
 
 .separator {
     width: 94%;
-    height: 2px;
+    height: 1.5px;
     background-color: var(--font);
-    margin-left: 3%;
+    margin: 0 auto;
 }
 
 .color_marked_text {

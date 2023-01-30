@@ -1,7 +1,8 @@
-
 .footer {
+    font-size: 15px;
     font-family: 'Chakra Petch', sans-serif;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     color: var(--font);
     text-align: center;
     padding: 30px 0 0;
@@ -9,7 +10,7 @@
 
 .footer .logo_footer svg {
     margin: 2vw;
-    width: 8vw;
+    width: 130px;
     height: auto;
 }
 
@@ -20,7 +21,9 @@
 }
 
 .footer .coffee_link {
-    padding-top: 30px;
+    padding-top: 10px;
+    width: 130px;
+    margin: 0 auto;
 }
 
 .footer a svg {
@@ -29,4 +32,31 @@
 
 .footer a:hover {
     letter-spacing: 2px;
+}
+
+@media(max-width: 1000px) {
+    .footer {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 800px) {
+
+    .footer {
+        font-size: 13px;
+    }
+
+    .footer .logo_footer svg {
+        width: 110px;
+    }
+}
+
+@media(max-width: 600px) {
+    .footer .coffee_link {
+        width: 110px;
+    }
+
+    .footer .logo_footer svg {
+        width: 100px;
+    }
 }
