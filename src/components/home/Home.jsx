@@ -23,10 +23,10 @@ function Home() {
                 <div className={styles.contents}>
                     <div className={styles.cont}>
                         <a href="#first" className="menu_button">DLA KOGO?</a>
-                        <a href="#second" className="menu_button">STATYSTYKI</a>
-                        <a href="#third" className="menu_button">CO ZAWIERA KURS</a>
-                        <a href="#fourth" className="menu_button">INSTRUKCJA</a>
-                        <a href="#fifth" className="menu_button">WSKAZÓWKI</a>
+                        <a href="#second" className="menu_button">CO ZAWIERA KURS</a>
+                        <a href="#third" className="menu_button">INSTRUKCJA</a>
+                        <a href="#fourth" className="menu_button">WSKAZÓWKI</a>
+                        <a href="#fifth" className="menu_button">STATYSTYKI</a>
                         <a href="#sixth" className="menu_button">AUTORZY</a>
                     </div>
                     {/* TODO: REKLAMA */}
@@ -54,28 +54,7 @@ function Home() {
                         </p>
                     </article>
                     <article>
-                        <h1 id="second">STATYSTYKI</h1>
-                        <p>Na podstawie danych opublikowanych przez Centralną Komisję Egzaminacyjną na rok 2022 wiemy, że do egzaminu maturalnego z informatyki podeszło 9 248 osób z 268 257 maturzystów. Łatwo więc obliczyć, że jest to jedynie ok. 0.03% spośród wszystkich uczniów przystępujących do matury!<br /><br /></p>
-                        <div className={styles.legenda}>
-                            <img className={styles.legenda_img} src={new URL('../../img/home_legenda.png', import.meta.url)} alt="" /><p>– legenda</p>
-                        </div>
-                        <p><img className={styles.statistic_img} src={new URL('../../img/home_img02.png', import.meta.url)} alt="" />
-                            <br /><br />
-
-                            Co więcej jeśli chodzi o kobiety to jest to zaledwie 0.003%. Możemy więc sobie wyobrazić, że nawet w przypadku dużej szkoły (liczącej ok. 1000 uczniów) w sporym mieście moglibyśmy wybierać zaledwie trzy uczennice i tylko one podeszłyby do tej matury. W trzyletnim liceum oznacząłoby to że, tak na prawde co roku do matury podchodzi tylko jedna dziewczyna! Dla porównania 11% maturzystów stanowią kobiety przystępujące do matury z matematyki na poziomie rozszerzonym. Jest to prawie 3667 razy więcej!<br /><br />
-
-                            <img className={styles.statistic_img} src={new URL('../../img/home_img01.png', import.meta.url)} alt="" />
-                            <br /><br />
-
-                            Co najbardziej szokujące jedynie 115 uczniów spośród ponad 268 tys. maturzystów to osoby ze szkół na wsi, które decydują się podejść do egzaminu z informatyki. W przeliczeniu jest to tylko 0.00043% czyli ok. 4 na 10 tys. To tak jakby wziąć 10 małych miast w Polsce i wybrać jedynie 4 spośród wszystkich ich mieszkańców.<br />
-                            {/* <img className={styles.statistic_img} src={new URL('../../img/home_img03.png', import.meta.url)} alt="Aleksandra" /> */}
-
-                            Warto zauważyć, że operujemy paroma przybliżeniami i opieramy się tutaj jedynie na danych z 2022 roku. Niestety wyniki z innych lat nie różnią się od nich znacząco. Wszystkie dane są dostępne w raportach CKE, na oficjalnej stronie internetowej: https://cke.gov.pl/egzamin-maturalny/egzamin-maturalny-w-formule-2015/wyniki/
-                            <br /><br />
-                        </p>
-                    </article>
-                    <article>
-                        <h1 id="third">CO ZAWIERA KURS</h1>
+                        <h1 id="second">CO ZAWIERA KURS</h1>
                         <p>
                             Kurs składa się z wykładów, w których omówione zostały najważniejsze zagadnienia z informatyki, takie jak:</p>
                         <ul>
@@ -91,7 +70,7 @@ function Home() {
 
                     </article>
                     <article>
-                        <h1 id="fourth">INSTRUKCJA</h1>
+                        <h1 id="third">INSTRUKCJA</h1>
                         <p>
                             WYBIERZ SWÓJ POZIOM:<br /><br />
 
@@ -116,7 +95,7 @@ function Home() {
                             Pamiętaj, że ten kurs jest dla Ciebie i to Ty decydujesz jak z niego korzystasz. Dla nas ważne jest, aby pomóc Ci w wyzwaniu jakie przed Tobą stoi najlepiej jak to możliwe.</p>
                     </article>
                     <article>
-                        <h1 id="fifth">WSKAZÓWKI</h1>
+                        <h1 id="fourth">WSKAZÓWKI</h1>
                         Co roku wraz z opublikowaniem wyników matur, Centralna Komisja Egzaminacyjna tworzy raport zawierający statystyki oraz wnioski, jakie z nich płyną.
                         Chcemy zwrócić Ci szczególną uwagę na (naszym zdaniem) najważniejsze punkty i dać Ci kilka rad z nimi związanych. <br /><br />
                         Po pierwsze wciąż duża grupa maturzystów zapomina zapisać realizacje komputerowe swoich zadań (np. plik Excel). W szczególności brak zapisania
@@ -149,7 +128,27 @@ function Home() {
                         <b>SZYBKA INSTRUKCJA PISANIA KOMENTARZY</b><br />
                         Komentowanie za pośrdenictwem wspomnianej wyżej platformy umożliwia pisanie komentarzy w składni Markdown.
                         Jeśli
+                    </article>
+                    <article>
+                        <h1 id="fifth">STATYSTYKI</h1>
+                        <p>Na podstawie danych opublikowanych przez Centralną Komisję Egzaminacyjną na rok 2022 wiemy, że do egzaminu maturalnego z informatyki podeszło 9 248 osób z 268 257 maturzystów. Łatwo więc obliczyć, że jest to jedynie ok. 0.03% spośród wszystkich uczniów przystępujących do matury!<br /><br /></p>
+                        <div className={styles.legenda}>
+                            <img className={styles.legenda_img} src={new URL('../../img/home_legenda.png', import.meta.url)} alt="" /><p>– legenda</p>
+                        </div>
+                        <p><img className={styles.statistic_img} src={new URL('../../img/home_img02.png', import.meta.url)} alt="" />
+                            <br /><br />
 
+                            Co więcej jeśli chodzi o kobiety to jest to zaledwie 0.003%. Możemy więc sobie wyobrazić, że nawet w przypadku dużej szkoły (liczącej ok. 1000 uczniów) w sporym mieście moglibyśmy wybierać zaledwie trzy uczennice i tylko one podeszłyby do tej matury. W trzyletnim liceum oznacząłoby to że, tak na prawde co roku do matury podchodzi tylko jedna dziewczyna! Dla porównania 11% maturzystów stanowią kobiety przystępujące do matury z matematyki na poziomie rozszerzonym. Jest to prawie 3667 razy więcej!<br /><br />
+
+                            <img className={styles.statistic_img} src={new URL('../../img/home_img01.png', import.meta.url)} alt="" />
+                            <br /><br />
+
+                            Co najbardziej szokujące jedynie 115 uczniów spośród ponad 268 tys. maturzystów to osoby ze szkół na wsi, które decydują się podejść do egzaminu z informatyki. W przeliczeniu jest to tylko 0.00043% czyli ok. 4 na 10 tys. To tak jakby wziąć 10 małych miast w Polsce i wybrać jedynie 4 spośród wszystkich ich mieszkańców.<br />
+                            {/* <img className={styles.statistic_img} src={new URL('../../img/home_img03.png', import.meta.url)} alt="Aleksandra" /> */}
+
+                            Warto zauważyć, że operujemy paroma przybliżeniami i opieramy się tutaj jedynie na danych z 2022 roku. Niestety wyniki z innych lat nie różnią się od nich znacząco. Wszystkie dane są dostępne w raportach CKE, na oficjalnej stronie internetowej: https://cke.gov.pl/egzamin-maturalny/egzamin-maturalny-w-formule-2015/wyniki/
+                            <br /><br />
+                        </p>
                     </article>
                 </div>
             </main>
