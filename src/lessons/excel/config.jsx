@@ -27,7 +27,7 @@ const ExcelLessons = [
         {name: "Formuły warunkowe", content: <FormulyLogiczne/>},
         // {name: "Formuły zaawansowane", content: null},
         {name: "Tabele i wykresy przestawne", content: <Przestawne/>},
-        {name: "Wyszukaj pionowo/poziomo", content: <Wyszukaj/>},
+        {name: "Wyszukiwanie", content: <Wyszukaj/>},
         {name: "Rodzaje błędów", content: <BledyExcel/>},
     ]},
 

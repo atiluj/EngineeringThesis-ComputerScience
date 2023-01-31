@@ -1,38 +1,34 @@
 ## #DZIEL/0!
-Błąd ten oznacza, że Excel wykrył próbę dzielenia przez zero. Poza oczywistym błędem, w którym wprost napisaliśmy formułę z dzieleniem przez zero, błąd ten możemy również zobaczyć przy próbie obliczenia reszty z dzielenia przez zero, a więc jako wynik funkcji MOD(). Ponadto jeśli odwołujemy się w dzieleniu lub MOD() do jakiejś komórki, kótrej wartość to zero, to również będzie o to skutkować pokazaniem się błędu #DZIEL/0!
-<img src={new URL('https://i.imgur.com/bLKXJEa.png', import.meta.url)} alt="xyz" className={`small_img`} />
-<img src={new URL('https://i.imgur.com/vubAQ2u.png', import.meta.url)} alt="xyz" className={`small_img`} />
-
+Błąd ten oznacza, że Excel wykrył próbę dzielenia przez zero. Poza oczywistym błędem, w którym wprost napisaliśmy formułę z dzieleniem przez zero, błąd ten możemy również zobaczyć przy próbie obliczenia reszty z dzielenia przez zero, a więc jako wynik funkcji MOD(). Ponadto, jeśli odwołujemy się w dzieleniu lub MOD() do jakiejś komórki, której wartość to zero, to również będzie o to skutkować pokazaniem się błędu #DZIEL/0!
+<img src={new URL('https://i.imgur.com/bLKXJEa.png', import.meta.url)} alt="xyz" className={'small_img'} />
+<img src={new URL('https://i.imgur.com/vubAQ2u.png', import.meta.url)} alt="xyz" className={'small_img'} />
 
 ## #N/D!
-N/D to skrót od niedostępne. Błąd ten pojawia się zazwyczaj, gdy funkcja nie jest w stanie znaleźć żądanej wartości, np. funckcja x.wyszukaj (jeśli nie podamy wartości w wypadku braku znalezienia dopasowania).
-<img src={new URL('https://i.imgur.com/wEzngqe.png)', import.meta.url)} alt="xyz" className={`small_img`} />
+N/D to skrót od niedostępne. Błąd ten pojawia się zazwyczaj, gdy funkcja nie jest w stanie znaleźć żądanej wartości, np. funkcja X.WYSZUKAJ (jeśli nie podamy wartości w wypadku braku znalezienia dopasowania).
+<img src={new URL('https://i.imgur.com/wEzngqe.png)', import.meta.url)} alt="xyz" className={'small_img'} />
 
 ## #NAZWA?
-Pojawia się, gdy Excel nie zna nazwy funkcji, którą chemy użyć. Jest to jeden z najczęściej pojawiających się błędów. Oznacza on zazwyczaj, że zrobiliśmy literówkę lub użyliśmy polskiej nazwy funkcji wbudowanej w angielskojęzycznej wersji programu (bądź na odwrót angielskiej nazwy w polskim Excelu).
-<img src={new URL('https://i.imgur.com/74JTYit.png', import.meta.url)} alt="xyz" className={`small_img`} />
-
+Pojawia się, gdy Excel nie zna nazwy funkcji, którą chcemy użyć. Jest to jeden z najczęściej pojawiających się błędów. Oznacza on zazwyczaj, że zrobiliśmy literówkę lub użyliśmy polskiej nazwy funkcji wbudowanej w angielskojęzycznej wersji programu (bądź na odwrót angielskiej nazwy w polskim Excelu).
+<img src={new URL('https://i.imgur.com/74JTYit.png', import.meta.url)} alt="xyz" className={'small_img'} />
 
 ## #ZERO!
 Pojawia się, gdy w formule brakuje operatora, najczęściej średnika.
-<img src={new URL('https://i.imgur.com/5W5M60u.png', import.meta.url)} alt="xyz" className={`small_img`} />
+<img src={new URL('https://i.imgur.com/5W5M60u.png', import.meta.url)} alt="xyz" className={'small_img'} />
 
 ## #LICZBA!
-Pojawia się, gdy argument funckji matematycznej jest niepoprawny. 
-<img src={new URL('https://i.imgur.com/OJoZ0LQ.png', import.meta.url)} alt="xyz" className={`small_img`} />
+Pojawia się, gdy argument funckji matematycznej jest niepoprawny.
+<img src={new URL('https://i.imgur.com/OJoZ0LQ.png', import.meta.url)} alt="xyz" className={'small_img'} />
 
 ## #ADR!
-Pojawia się, gdy odwołujemy się do nieitniejącej komórki lub arkusza, czyli w skrócie popełnimy błąd w adresie, do którego chcemy się odwołać.
+Pojawia się, gdy odwołujemy się do nieistniejącej komórki lub arkusza, czyli w skrócie popełnimy błąd w adresie, do którego chcemy się odwołać.
 ![](https://i.imgur.com/5102Fd1.png)
 (W przykładzie próbujemy odwołać się do "Arkusz3", a widzimy, że taki nie istnieje).
 
 ## #ARG!
 Pojawia się, gdy użyjemy argumentu niepoprawnego typu, na przykład będziemy próbować policzyć sumę napisu.
-<img src={new URL('https://i.imgur.com/3jnCly9.png', import.meta.url)} alt="xyz" className={`small_img`} />
-
+<img src={new URL('https://i.imgur.com/3jnCly9.png', import.meta.url)} alt="xyz" className={'small_img'} />
 
 Opracowane na podstawie:
 https://support.microsoft.com/pl-pl/excel
 https://kemsoft.pl/artykul-wartosci-bledow-w-excelu
 https://expose.pl/bledy-w-excelu/
-
