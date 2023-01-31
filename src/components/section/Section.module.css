@@ -340,6 +340,10 @@ img.section_logo {
     text-align: left;
   }
 
+  .subject {
+    width: 100%;
+  }
+
 }
 
 /* nie da się zmniejszyć poniżej 336px przeszakadza kod (pre) */
