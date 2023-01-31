@@ -1,0 +1,151 @@
+import Dropdown from "../../components/dropdown/Dropdown.jsx";
+import Code from "../../components/code/Code.jsx";
+
+<br/> 
+
+Często dany problem możemy rozwiązać przy pomocy Excela na kilka różnych sposobów. Okazuje się, że do wielu zadań, które na pozór wymagają starannego przemyślenia i rozbicia na mniejsze podzadania można znacząco uprościć dzięki zastosowaniu tabeli lub wykresu przestawnego.
+
+## Tabele przestawne
+
+Zagadnienie to będziemy tłumaczyć oraz ćwiczyć na podstawie zadania 91 "Wiązka zadań Numery PESEL" ze zbioru zadań CKE.
+
+<a className={`link`} target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf">LINK DO ZBIORU ZADAŃ</a>
+<br/>
+<a className={`link`} target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip">LINK DO PLIKU Z DANYMI</a>
+<br/><br/>
+
+<img src={new URL('https://i.imgur.com/sK2KAAD.png', import.meta.url)} alt="xyz" className={`big_img`} />
+
+<Dropdown title="Importowanie danych krok po kroku">
+<p className="dropdown_text">
+
+### 1. Wybieramy zakładkę "Dane" -> "Dane z pliku tekstowego/ CSV", wybieramy odpowiedni plik i klikamy "Importuj".
+
+![](https://i.imgur.com/WvFSaqI.png)
+
+### 2. W kolejnym kroku wybieramy opcję "Przekształć dane".
+
+![](https://i.imgur.com/6TI6m4w.png)
+
+### 3. Usuwamy automatyczną zmianę typu danych.
+Musimy być uważni podczas importu danych. Błąd na tym etapie spowoduje, że nasze starania będą daremne, a wyniki błędne.
+Zauważmy, że w naszym pliku Excel dokonał automatycznej zmiany typu danych na liczbowy co spowodowało usunięcie zer z przodu peselu! Aby to zauważyć wystarczy spojrzeć na pierwszy wiersz danych, widzimy tu pesel 8242501475 podczas, gdy w przykładzie z zadania mamy **0**8242501475!
+![](https://i.imgur.com/wwaMeBi.png)
+Po usunięciu automatycznego formatowania, dane są już poprawne. 
+![](https://i.imgur.com/vpPloZT.png)
+Klikamy "Zamknij i załaduj do".
+
+<img src={new URL('https://i.imgur.com/doj9cAM.png', import.meta.url)} alt="xyz" className={`super_small_img`} />
+
+Wybieramy opcje, która nam pasuje.
+<img src={new URL('https://i.imgur.com/2nhS5rE.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+Powinniśmy zobaczyć tabelę z zaimportowanym danymi.
+![](https://i.imgur.com/yKSV8c7.png)
+</p>
+</Dropdown>
+
+### Polecenie
+
+<img src={new URL('https://i.imgur.com/RCQ3gl1.png', import.meta.url)} alt="xyz" className={`big_img`} />
+
+Na podstawie danych z instrukcji rozbijamy pesel, w taki sposób, aby uzyskać informację o roku, miesiącu i dniu urodzenia danej osoby.
+
+
+<Dropdown title="Przygotowanie danych krok po kroku">
+<p className="dropdown_text">
+
+### 1. Rok
+Rok jest reprezentowany przez dwie pierwsze cyfry numeru 
+
+![](https://i.imgur.com/wmT9MvP.png)
+
+### 2. Miesiąc
+Miesiąc jest reprezentowany przez trzecią i czwartą cyfrę numeru pesel. 
+![](https://i.imgur.com/UatVGae.png)
+
+Musimy wziąć pod uwagę, że wszyscy urodzeni w roku 2000 i później do numeru miesiąca mają dodaną liczbą 20, a więc, aby w naszej tabeli uzyskać jednorodne dane, użyjemy formuły warunkowej. 
+(Wiemy, że istnieje tylko 12 miesięcy, a więc jeśli w tabeli "Miesiac pom" widnieje wartość >12, a w szczególności >20, to jest to miesiac z nowego peselu, czyli taki od którego należy odjąć sztucznie dodane 20).
+Aby móc wykonać taką operację musimy najpierw zamienić nasz tekst na odpowiadającą mu wartość liczobową. Do tego celu służy funkcja wbudowana "WARTOSC()".
+![](https://i.imgur.com/2ajpbOF.png)
+
+![](https://i.imgur.com/XPY5JZ0.png)
+
+### 3. Dzień
+![](https://i.imgur.com/AZgil3y.png)
+</p>
+</Dropdown>
+
+
+### 1. Wybieramy zakładkę "Wstawianie" -> "Tabela przestawna" -> "Z tabeli/ zakresu".
+
+![](https://i.imgur.com/WYu0JEa.png)
+
+### 2. Określamy zakres dla tabeli przestawnej.
+Możemy wybrać pożądany zakres zaznaczając odpowiednie kolumny. Należy też wybrać, czy chcemy, aby tabele przestawna została wstawiona do tego samego arkusza czy nowego (polecam zawsze wybierać nowy, aby zachować porządek w danych, ale wybór należy do Was).
+
+
+![](https://i.imgur.com/ShCAk7Y.png)
+
+### 3. Przeciągamy pole "Miesiąc" do obszaru "Wiersze".
+
+![](https://i.imgur.com/DsKOR0K.png)
+
+### 4. Analogicznie przeciągamy pole "PESEL" do obszaru "Wartości".
+
+Tym razem domyślna opcja "Liczba" nam odpowiada, bo chcemy policzyć liczbę osób urodzonych w danym miesiącu, a więc policzyć liczbę pseseli. Czasami będziemy jednak chceli zsumować wartości lub obliczyć ich średnią. Wówczas należy kliknąć prawym klawiszem myszy na pole wartości i wybrać opcję "Ustawienia pola wartości ...". 
+
+<img src={new URL('https://i.imgur.com/EiJOUZT.png', import.meta.url)} alt="xyz" className={`small_img`} />
+
+<img src={new URL('https://i.imgur.com/Zkt8jjE.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+### 5. Nadajemy nazwy kolumnom.
+
+Zmieniamy nazwę z "Etykiety wierszy" na "Miesiac".
+
+### 6. Dopasowujemy miesiące do ich nazw
+Wystarczy wpisać "styczeń", a następnie przeciągnąć formułę, pozostałe nazwy wygenerują się automatycznie.
+
+<img src={new URL('https://i.imgur.com/z3CTc8s.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+<img src={new URL('https://i.imgur.com/3m2lngU.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+
+## Wykresy przestawne
+
+Załóżmy, że w treści zadania mieliśmy "Stwórzy wykres kolumnowy ilustrujący liczbę osób urodzonych w poszczególnych miesiącach", 
+zamiast "Utwórz zestawienie ...". Możemy postępowac dokładnie tak jak wyżej, a wykres wygenerować na podstawie danych z 
+uzyskanej tabeli przestawnej. Istnieje jednak inny, nieco lepszy sposób. Możemy wykorzystać wykres przestawny.
+Wszystkie kroki przygotowujące (Importowanie i Przygotowywanie danych krok po kroku) są niezmienne. Dalsza procedura wygląda bardzo podobnie do tej,
+jaką opisywaliśmy dla tabeli przestawnej, mimo to poniżej szczegółowo ją omówimy.
+
+### 1. Wybieramy zakładkę "Wstawianie" -> "Wykres przestawny".
+
+![](https://i.imgur.com/dsKxWIe.png)
+
+
+### 2. Określamy zakres dla wykresu przestawnego.
+
+![](https://i.imgur.com/jCXcBTo.png)
+
+### 3. Przeciągamy odpowiednie pola do danych obszarów.
+Naszym celem jest stworzenie wykresu ilustrującego liczbę osób urodzonych w danym miesiącu. Zatem jako etykiętę osi wybierzemy pole "Miesiac", jako wartości natomiast "Liczba z PESEL". (Dla przypomnienia funkcja ta zachowuje się podobnie jak opcja sumy "Policz" w Accessie, czyli po prosru zwraca liczbę rekordów w danej kategorii.)
+
+![](https://i.imgur.com/LsglWfq.png)
+
+### 4. Gotowe! 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
