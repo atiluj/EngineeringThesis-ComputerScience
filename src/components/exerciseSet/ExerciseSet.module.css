@@ -141,10 +141,6 @@
     .main .list_element.list_element.python_exercise{
         min-width: 2rem;
     }
-
-    .main .exercises_list {
-        /* line-height: 2rem; */
-    }
 }
 
 @media(max-width:400px){
@@ -154,6 +150,10 @@
     }
 
     .subject{
+        width: 100%;
+    }
+
+    .main .exam_exercise{
         width: 100%;
     }
 }
