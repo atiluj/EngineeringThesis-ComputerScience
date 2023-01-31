@@ -1,0 +1,175 @@
+import Dropdown from "../../../components/dropdown/Dropdown.jsx";
+import Code from "../../../components/code/Code.jsx";
+
+<div className="box_link"><a className="link  link_materials" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2009/informatyka/PR_2.pdf">LINK DO ARKUSZA</a>
+<br/>
+<a className="link  link_materials" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2009/informatyka/Dane_pr.rar"> PLIKI DO ZADANIA</a>
+
+<br/>
+</div>
+
+### TREŚĆ: (0-17pkt.)
+Mając daną parę słów A i B, można znaleźć najkrótsze słowo C, które będzie zawierać
+w sobie oba dane słowa A i B. Przyjmijmy, że słowa zawierają wyłącznie znaki ‘0’ i ‘1’.
+
+<b>Przykłady:</b>
+
+![](https://i.imgur.com/vfziuVr.png)
+
+W pliku tekstowym o nazwie dane.txt, znajdują się pary słów utworzonych ze znaków „0”
+i „1”. Każda para słów umieszczona jest w osobnym wierszu pliku, słowa oddzielone są
+od siebie pojedynczym znakiem odstępu.<br/>
+Liczba znaków w pierwszym słowie każdej pary słów jest <b>nie mniejsza</b> niż liczba znaków
+w drugim słowie.<br/><br/>
+Korzystając z danych zapisanych w pliku o nazwie dane.txt, wykonaj poniższe polecenia.
+Odpowiedzi do podpunktów: a, b, c umieść w pliku o nazwie zad_5.txt, wyniki
+z podpunktu d w pliku o nazwie slowa.txt. Odpowiedzi poprzedź literą oznaczającą dany
+podpunkt. 
+<br/><br/>
+
+<b>SŁOWNICZEK<br/></b>
+<b><i>sufiks</i></b> – w znaczeniu: przyrostek, ciąg znaków zamykających słowo z prawej strony <br/>
+<b><i>prefiks</i></b> – w znaczeniu: przedrostek, ciąg znaków zamykających słowo z lewej strony <br/>
+<b><i>palindrom</i></b> – słowo, które czytane od przodu i od tyłu jest takie same.
+
+<br/><br/>
+
+### Podpunkt A
+Podaj, <b>ile słów</b> spośród wszystkich słów umieszczonych w pliku o nazwie
+dane.txt, to <b>palindromy</b>. Odpowiedź zapisz w pliku tekstowym o nazwie
+zad_5.txt. 
+
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+46
+</Code>
+</Dropdown>
+
+<br/><br/>
+
+### Podpunkt B
+Podaj, <b>ile par słów</b> (A, B) zapisanych w pojedynczych wierszach pliku o nazwie
+dane.txt, ma tę właściwość, że <b>słowo B jest zawarte wewnątrz słowa A</b>.
+Odpowiedź zapisz w pliku tekstowym o nazwie zad_5.txt. 
+
+<br/>
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+35
+</Code>
+</Dropdown>
+<br/><br/>
+
+### Podpunkt C
+Podaj, <b>ile par słów</b> (A, B) zapisanych w pojedynczych wierszach pliku o nazwie
+dane.txt, ma tę właściwość, że jedyną możliwością utworzenia słowa C jest
+sklejenie słów A i B. Odpowiedź zapisz w pliku tekstowym o nazwie zad_5.txt. 
+
+<br/>
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+13
+</Code>
+</Dropdown>
+<br/><br/>
+
+### Podpunkt C
+Dla każdej z par słów (A, B) umieszczonych w kolejnych wierszach pliku o nazwie
+dane.txt:
+- utwórz <b>najkrótsze</b> słowo C <b>zawierające w sobie</b> oba słowa z danej pary;
+- zapisz skonstruowane przez Ciebie słowa wynikowe C w pliku tekstowym
+o nazwie slowa.txt, każde słowo w osobnym wierszu, w kolejności
+odpowiadającej parom (A, B) z pliku o nazwie dane.txt.
+
+<br/>
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+Za poprawną konstrukcję słowa C=A w przypadku gdy A
+zawiera B – <b>1 punkt</b><br/>
+Za poprawną konstrukcję słowa C=A+B lub C=B+A
+w przypadku, gdy A i B nie mają wspólnych sufiksów ani
+prefiksów – <b>2 punkty</b><br/>
+Za poprawny wynik, gdy pref-suf B#A jest większy niż pref-suf
+A#B – <b>2 punkty</b><br/>
+Za poprawny wynik gdy pref-suf A#B jest większy niż pref-suf
+B#A – <b>2 punkty</b><br/>
+Za poprawny wynik gdy pref-suf B#A > 0 i jednocześnie jest
+równy pref-suf A#B – <b>2 punkty</b><br/>
+Za poprawne rozwiązanie problemu inną metodą – <b>9 punktów</b>
+</Code>
+</Dropdown>
+
+<br/><br/>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+
+```
+def wczytaj_dane_jako_pary_slow():
+  with open("dane.txt") as plik:
+    return [x.rstrip().split(" ") for x in plik.readlines()]
+
+def czy_palindrom(x):
+  return x == x[::-1]
+
+def czy_b_jest_wewnatrz_a(a, b):
+  for start in range(len(a)):  # startowa pozycja
+    ile_liter_sie_zgadza = 0 # na razie nic sie nie zgadza
+    for poz in range(len(b)): # ide do przodu
+      if start+poz < len(a) and a[start+poz] == b[poz]: # pozycje sie zgadzaja
+        ile_liter_sie_zgadza += 1 # aktualizuje licznik
+      else:
+        break # nie ma sensu isc dalej
+    if ile_liter_sie_zgadza == len(b): return True # udalo sie!
+  return False
+
+def dlg_najdluzszego_sufiksu_w_a_ktory_jest_prefiksem_b(a,b):
+  for dlg in range(len(a), 0, -1):
+    if a[-dlg:] == b[:dlg]: return dlg
+  return 0
+
+def czy_jest_sufiks_a_ktory_jest_prefiksem_b(a,b):
+  return dlg_najdluzszego_sufiksu_w_a_ktory_jest_prefiksem_b(a,b) != 0
+
+def czy_jedyna_mozliwosc_utworzenia_c_to_sklejenie(a, b):
+  return a != b and not czy_b_jest_wewnatrz_a(a,b) and not czy_b_jest_wewnatrz_a(b,a) and not czy_jest_sufiks_a_ktory_jest_prefiksem_b(a,b) and not czy_jest_sufiks_a_ktory_jest_prefiksem_b(b,a)
+
+def najkrotsze_c(a,b):
+  if a in b: return b
+  elif b in a: return a
+  elif czy_jedyna_mozliwosc_utworzenia_c_to_sklejenie(a,b): return a+b
+  else: # nachodzace
+    # przypadek 1 bierzemy troche_z(a) b
+    najd = dlg_najdluzszego_sufiksu_w_a_ktory_jest_prefiksem_b(a,b)
+    pref_a = a[:(len(a)-najd)]
+    c1 = pref_a + b
+
+    # przypadek 2 bierzemy troche_z(b) a
+    najd = dlg_najdluzszego_sufiksu_w_a_ktory_jest_prefiksem_b(b,a)
+    pref_b = b[:(len(b)-najd)]
+    c2 = pref_b + a
+
+    # wez ten krotszy
+    if len(c1) < len(c2): return c1
+    else: return c2
+ 
+dane = wczytaj_dane_jako_pary_slow()
+dane_razem = [] 
+for (x,y) in dane:
+  dane_razem += [x,y]
+
+print("A)", len([x for x in dane_razem if czy_palindrom(x)]))
+print("B)", len([(x,y) for (x,y) in dane if czy_b_jest_wewnatrz_a(x,y)]))
+print("C)", len([(x,y) for (x,y) in dane if czy_jedyna_mozliwosc_utworzenia_c_to_sklejenie(x,y)]))
+
+with open("slowa.txt", "w") as plik:
+  for (x,y) in dane:
+    print(najkrotsze_c(x,y), file=plik)
+```
+
+</Dropdown>
+
+
+

@@ -341,6 +341,10 @@
         line-height: 15px;
     }
 
+    .legenda_img {
+        max-width: 60px;
+    }
+
     .author {
         box-sizing: content-box;
     }
@@ -360,6 +364,7 @@
     .authors_details_wrapper div:last-child{
         margin-bottom: .5em;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -394,6 +399,10 @@
 
     .main article h1 {
         text-align: center;
+    }
+
+    .legenda_img {
+        max-width: 45px;
     }
 
     .author{
@@ -447,6 +456,10 @@
 
     .main article h1 {
         font-size: 16px;
+    }
+
+    .legenda_img {
+        max-width: 35px;
     }
 
     .author_name {

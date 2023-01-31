@@ -1,3 +1,9 @@
+import M2009_P from './M2009-podstawowa.mdx'; 
+import M2009_R from './M2009-rozszerzona.mdx';
+
+import M2010_P from './M2010-podstawowa.mdx'; 
+import M2010_R from './M2010-rozszerzona.mdx';
+
 import M2011_P from './M2011-podstawowa.mdx'; 
 import M2011_R from './M2011-rozszerzona.mdx';
 
@@ -132,6 +138,10 @@ const ExercisesPython = [
     {name: "Matura rozszerzona 2012 cz.2 - SZYFROWANIE", content: <M2012_R/>}, //44
     {name: "Matura podstawowa 2011 cz.2 - SZYFROWANIE", content: <M2011_P/>}, //45
     {name: "Matura rozszerzona 2011 cz.2 - DZIAŁANIA NA LICZBACH BINARNYCH", content: <M2011_R/>}, //46
+    {name: "Matura podstawowa 2010 cz.2 - PALINDROMY", content: <M2010_P/>}, //47
+    {name: "Matura rozszerzona 2010 cz.2 - ANAGRAM", content: <M2010_R/>}, //48
+    {name: "Matura podstawowa 2009 cz.2 - LICZBY PIERWSZE", content: <M2009_P/>}, //49
+    {name: "Matura rozszerzona 2009 cz.2 - PARA SŁÓW", content: <M2009_R/>}, //50
 
 
     //{name: "Matura 2023 zadanie 3 - DZIAŁANIA NA LICZBACH", content: <M2023Z1/>}, //26

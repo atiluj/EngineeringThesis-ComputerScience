@@ -1,0 +1,143 @@
+import Dropdown from "../../../components/dropdown/Dropdown.jsx";
+import Code from "../../../components/code/Code.jsx";
+
+<div className="box_link"><a className="link  link_materials" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2010/Informatyka/pr_ii.pdf">LINK DO ARKUSZA</a>
+<br/>
+<a className="link  link_materials" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2010/Informatyka/Dane_PR.rar"> PLIKI DO ZADANIA</a>
+
+<br/>
+</div>
+
+### TREŚĆ: (0-10pkt.)
+Anagram to słowo powstałe z innego słowa przez przestawienie liter. Przez słowo rozumiemy
+w tym zadaniu dowolny ciąg liter alfabetu łacińskiego.<br/><br/>
+<b>Przykłady anagramów:<br/></b>
+dla słowa: barok – korba, robak, arobk, rokab, orkab …<br/>
+dla słowa: ranty – tyran, narty, ntyra, natyr, ytnar …<br/>
+W pliku tekstowym anagram.txt znajduje się 200 wierszy zawierających po 5 słów
+w każdym wierszu. Słowa oddzielone są znakiem odstępu. Długość każdego ze słów wynosi
+od 1 do 20 znaków.<br/><br/>
+<b>Przykład:<br/></b> 
+
+```
+abcd cdba dbac cbad dcba
+barbakan xle ala foto otof
+smok ayszkm lampa ayszkm bakara
+skok arabanta oko agnieba dyskietka
+```
+
+<br/>
+
+Napisz program w wybranym przez siebie języku programowania, za pomocą którego
+wykonasz poniższe polecenia: 
+
+<br/><br/>
+
+### Podpunkt A
+Wyszukaj w pliku anagram.txt te wiersze, w których wszystkie słowa znajdujące się
+w danym wierszu mają taką samą liczbę znaków. Zapisz te wiersze w pliku
+odp_4a.txt.
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+abcd cdba dbac cbad dcba<br/>
+wrona rossa slowo gwert rezas<br/>
+grant hello zakon lloeh hello<br/>
+kabaret kabanos kabaret gertyfu kabaret<br/>
+ola ala aga oal ola<br/>
+rezas rossa zaser sarez rezas<br/>
+foto foto tofo tofo foto<br/>
+romans romans normag masrom ansrom<br/>
+ekran ranek lampa zakon ekran<br/>
+korba orkan delpu pudel udelp<br/>
+czek azer reza zare rzea<br/>
+cebula romans romans mansro romans<br/>
+kruk kruk buka zuka nuka<br/>
+agent rossa serce cerse sdfrt<br/>
+qwerty wertyq wertyu magnor normag<br/>
+glob lobg bogl glbo gblo<br/>
+triada dariat aadrit iatdar adatri<br/>
+kotek tekok teokk kokte otekk<br/>
+obrus bruso soubo seawo rusob<br/>
+rower werro werro owerr erwor<br/>
+ipfon ipfon fonip ipfon zakop<br/>
+nerka drewn korba korba korba<br/>
+patyk wrona wrona wrona wrona<br/>
+foto tofo foot ftoo ootf<br/>
+spiker kerspi erspik erspki kiersp<br/>
+burza orkan lukde pudeh lerfy 
+</Code>
+</Dropdown>
+
+<br/><br/>
+
+### Podpunkt B
+Wyszukaj w pliku anagram.txt wszystkie wiersze tekstu, w których wszystkie słowa
+są anagramami pierwszego słowa w danym wierszu. Zapisz te wiersze w pliku
+odp_4b.txt.
+<br/>
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+abcd cdba dbac cbad dcba<br/>
+foto foto tofo tofo foto<br/>
+glob lobg bogl glbo gblo<br/>
+triada dariat aadrit iatdar adatri<br/>
+kotek tekok teokk kokte otekk<br/>
+rower werro werro owerr erwor<br/>
+foto tofo foot ftoo ootf<br/>
+spiker kerspi erspik erspki kiersp 
+</Code>
+</Dropdown>
+<br/><br/>
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA - PYTHON">
+
+```
+# Podpunkt A
+
+def czy_wszystkie_elementy_o_rownej_dlg(lista_slow):
+    dlg = len(lista_slow[0])
+    for slowo in lista_slow:
+        if len(slowo) != dlg:
+            return False
+    return True
+
+def linie_o_wszystkich_elementach_rownej_dlg(lista_linii):
+    return list(filter(czy_wszystkie_elementy_o_rownej_dlg, lista_linii))
+
+# Podpunkt B
+
+def czy_anagram(s, w):
+    return sorted(s) == sorted(w)
+
+def czy_wszystkie_slowa_sa_anagramami_pierwszego(lista_slow):
+    s = lista_slow[0]
+    for slowo in lista_slow:
+        if not czy_anagram(s, slowo):
+            return False
+    return True
+
+def linie_ze_wszystkie_slowa_sa_swoimi_anagramami(lista_linii):
+    return list(filter(czy_wszystkie_slowa_sa_anagramami_pierwszego, lista_linii))
+
+# Main
+
+with open('anagram.txt', 'r') as plik:
+    dane = [ a.strip().split(" ") for a in plik.readlines()]
+
+odp_A = linie_o_wszystkich_elementach_rownej_dlg(dane)
+print("A)")
+for s in odp_A: print(s)
+print("\n")
+#
+print("B)")
+odp_B = linie_ze_wszystkie_slowa_sa_swoimi_anagramami(dane)
+for s in odp_B: print(s)
+```
+
+</Dropdown>
+
+
+

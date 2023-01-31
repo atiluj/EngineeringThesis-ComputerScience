@@ -32,7 +32,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
     React.useEffect(() => {
         if (curChapter == chapterId) setShow(true);
     }, [curChapter]);
-    return <div>
+    return <div className={`left_menu`}>
         <div className={`${styles.topic} menu_button`} onClick={() => setShow(show => !show)}>
             <a>{chapterId}. {chapter.name}</a>
             {show ? <ExpandLess /> : <ExpandMore />}

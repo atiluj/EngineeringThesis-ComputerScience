@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     min-height: 80px;
 }
 
@@ -163,11 +163,11 @@
 }
 
 
-@media (max-width:810px) {  
-    .navbar{
-        min-height: 50px
+@media (max-width:810px) {
+    .navbar {
+        min-height: 60px
     }
-    
+
     .header h1 {
         margin-top: 30px;
         font-size: 50px;
@@ -185,7 +185,7 @@
     .navbar .nav_button {
         padding-left: 25px;
     }
-    
+
     .nav_wrapper_left {
         margin-left: 0px;
     }
@@ -220,7 +220,7 @@
         display: block;
         position: absolute;
         right: 25;
-        top: 9.5; 
+        top: 9.5;
     }
 
     .navbar_sticky.responsive .nav_wrapper_left {
@@ -262,7 +262,7 @@
         text-transform: uppercase;
     }
 
-    .switch{
+    .switch {
         display: none;
     }
 }

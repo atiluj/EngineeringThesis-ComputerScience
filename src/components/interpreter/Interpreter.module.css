@@ -102,6 +102,10 @@
 }
 
 @media (max-width: 700px) {
+    .main {
+        margin: 10px 0;
+    }
+
     .editor {
         margin: 0 1rem;
     }
@@ -129,6 +133,10 @@
 }
 
 @media (max-width: 350px) {
+    .main {
+        margin: 5px 0;
+    }
+    
     .editor {
         margin: 0 .5rem;
     }

@@ -50,9 +50,9 @@
 }
 
 @media(max-width: 800px) {
-
     .footer {
         font-size: 13px;
+        padding-top: 20px;
     }
 
     .footer .logo_footer svg {
