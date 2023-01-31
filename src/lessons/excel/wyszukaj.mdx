@@ -1,0 +1,92 @@
+<br/>
+
+Przez długi czas najpopularniejszą funkcją w Excelu było WYSZUKAJ.PIONOWO(). Od paru lat dostępna jest jednak potężniejsza funkcja - X.WYSZUKAJ(). Należy jednak pamiętać, że ilekroć używamy funkcjonalności wprowadzonej stosunkowo niedawno, musimy liczyć się z potencjalnymi niebezpieczeństwami wynikającymi z błędami pojawiącymi się podczas otwierania takiego arkusza za pomoca starszej wersji programu.
+
+## WYSZUKAJ.PIONOWO (ang. VLOOKUP)
+
+### Składnia
+WYSZUKAJ.PIONOWO(szukana_wartość; tabela_tablica; numer_indeksu_kolumny; [przeszukiwany_zakres])
+
+* **szukana_wartość** - to po jak nazwa wskazuje, wartość, którą chcemy wyszukać. 
+* **tabela_tablica** - to odowłanie to tabeli (może ona przechowywać wartości tekstowe, liczbowe lub logiczne), w którą chcemy przeszukać pod kątem znalezienia szukanej wartości. Ważne, aby pamiętać, że szukana_wartość musi znajdowac się w pierwszej kolumnie tego zakresu.
+* **numer_indeksu_kolumny** - to numer kolumny, z której wartość chcemy zwrócić, przy czym kolumny numerujemy od jednego, zaczynając od pierwszej wybranej w zakresie tabela_tablica. 
+* **przeszukiwany_zakres** - ma wartość PRAWDA lub FAŁSZ i oznacza odpowiednio dopasowanie przybliżone lub dokładne. Jeśli nie podamy tego argumentu wprost, to przyjmie on wartość domyślną PRAWDA (czyli dopasowanie przybliżone). Gdy przesukiwany_zakres ma wartość PRAWDA, to pierwsza kolumna tabeli (czyli ta, w której wyszukujemy wartość) musi być posortowana alfabetycznie lub liczbowo. W przeciwnym przypadku zapytanie może zwracać nieoczekiwane wyniki.
+
+### Przykłady
+Wyobraźmy sobie, że mamy tabelę pracowników, a w niej kolumny: Imie, Nazwisko, Pesel, Stanowisko, Stawka godzinowa. 
+W kolejnych przykładach będziemy chcieli wyszukać informację o Stanowisku Pana Bartosza Kominarskiego, za pomocą funkcji WYSZUKAJ.PIONOWO.
+
+#### Przykład 1
+W pierwszym przykładzie zrobimy to odowłując się do jego imienia i wyszukując je w tabeli w sposób domyślny (tzn. nie ustawiając żadnych argumentów opcjonalnych).
+
+Zauważmy, że musimy podać również ostatni argument, który jest opcjonalny i ustawić go na FAŁSZ. Domyślnie bowiem, przyjmuje onwartość PRAWDA, co oznacza dopasowanie niedokładne, a nasza tabela nie jest posortowana alfabetycznie, więc wyniki jakie zwróciłaby formuła byłyby błędne.
+
+![](https://i.imgur.com/K34J5yl.png)
+<img src={new URL('https://i.imgur.com/mDr7VQc.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+
+#### Przykład 2
+W drugim przykładzie odwołamy się do nazwiska Pana Bartosza. 
+
+W tym celu, będziey musieli zaznaczyć fragment tabeliod kolumny z nazwiskiem, pomijając kolumnę z imieniem. Spowodowane jest to faktem, że funkcja WYSZUKAJ.PIONOWO wymaga, aby szukana wartość znajdowała się w pierwszej kolumnie przeszukiwanego zakresu.
+
+![](https://i.imgur.com/Cq1Wn0p.png)
+<img src={new URL('https://i.imgur.com/nZjKXew.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+#### Przykład 3
+W poprzednim przykładzie udało nam się "obejść" ograniczenia,  jakie narzuca nam funkcja WYSZUKAJ.PIONOWO, poprzez zmianę zakresu wyszukiwania. Poważniejszy problem pojawiłby się, gdyby kolumna, w której chcemy wyszukiwać wartość znajdowała się na lewo od tej, którą chcemy zwrócić.
+W tym przykładzie chcemy zwrócić nazwisko pracownika, który jest operatorem dźwigu.
+
+Możemy próbować znów obejść problem, jednak bez zmianykolejności kolumn, nie możemy poprawnie użyć funkcji WYSZUKAJ.PIONOWO. 
+(Poniżejprezentujemy próbę "obejścia" problemu, jest ona jednak niepoprawna)
+
+![](https://i.imgur.com/zZkJAjl.png)
+<img src={new URL('https://i.imgur.com/IzGlekO.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+
+## X.WYSZUKAJ (ang. XLOOKUP)
+
+### Składnia
+
+X.WYSZUKAJ(szukana_wartość; szukana_tablica; zwracana_tablica; [jeżeli_nie_znaleziono];[tryb_dopasowywania]; [tryb_wyszukiwania]) 
+
+* **szukana_wartość** - to po jak nazwa wskazuje, wartość, którą chcemy wyszukać.
+* **szukana_tablica** - to odowłanie to zakresu lub tabeli (może ona przechowywać wartości tekstowe, liczbowe lub logiczne), w którą chcemy przeszukać pod kątem znalezienia szukanej wartości. W przeciwieństwie do funkcji WYSZUKAJ.POZIOMO w X.WYSZUKAJ szukana_wartość nie musi znajdować się w pierwszej kolumnie tego zakresu.
+* **zwracana_tablica** - to zakres lub tabela, której wartość chcemy zwrócić. Po znalezieniu dopasowania w określonej kolumnie zwrócona zostanie wartość z wybranej w tym argumencie kolumny dla tego samego wiersza.
+* **jeżeli_nie_znaleziono** - tekst podany w tym argumencie wyświetli się w przypadku braku znalezienia dopasowania. Jeśli argument ten pozostawimy pusty, to w w przypadku braku znalezienia odpowiedniej wartości zwrócony zostanie błąd #N/A
+* **tryb_dopasowywania** - możliwe są tu cztery opcje -1, 0 ,1 ,2. Opcja 0 to ustawienie domyślne i w przypadku braku znalezienia szukanej wartości zwróci błąd #N/D! Opcja 1 jeśli nie znaleziono żadnego elementu, zwróć następny mniejszy element, natomiast opcja -1 zwróci następny większy element. Ostatną możliwą opcją jest 2, które wybieramy, jeśli chcemy używać symboli wieloznacznych.
+* **tryb_wyszukiwania** - możliwe są tutaj cztery opcje -2, -1, 1, 2. Opcja 1 to ustawienie domyślne i oznacza rozpoczęcie wyszukiwania od pierwszego elementu. Opcja -1 to natomiast rozpoczęcie wyszukiwania od ostatniego elementu. Opcje 2 oraz -2 opierają się na sortowaniu tablicy szukana_tablica (odpowiednio rosnąco lub malejąco), zatem jeśli sortowanie nie powiedzie się, to cała funkcja zwróci nieprawidłowe wyniki.
+
+### Przykłady
+
+Wyobraźmy sobie, że mamy tę samą tabelę pracowników, którą w przykładach z funkcją WYSZUKAJ.PIONOWO. Ma ona kolumny: Imie, Nazwisko, Pesel, Stanowisko, Stawka godzinowa. 
+W kolejnych przykładach będziemy chcieli wyszukać informację o Stanowisku Pana Bartosza Kominarskiego, ale tym razem za pomocą funkcji X.WYSZUKAJ.
+
+#### Przykład 1.1
+W pierwszym przykładzie zrobimy to odowłując się do jego imienia i wyszukując je w tabeli w sposób domyślny (tzn. nie ustawiając żadnych argumentów opcjonalnych).
+
+![](https://i.imgur.com/c8YI63G.png)
+<img src={new URL('https://i.imgur.com/jvIsBWE.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+
+#### Przykład 1.2
+W drugim przykładzie znów będziemy wyszukiwać Pana Bartosza, ale tym razem tabelę przeszukiwać będziemy od końca.
+Zauważmy, że wynik jest inny. Dzieje się tak, ponieważ w naszej firmie pracuje dwóch mężczyzn o imieniu Bartosz, a przeszukując zakres od tyłu najpierw trafiamy na Bartosza Doniewskiego i to jego stanowisko zostaje zwrócone.
+
+![](https://i.imgur.com/knziMym.png)
+<img src={new URL('https://i.imgur.com/hrwBB1N.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+
+#### Przykład 2
+W trzecim przykładzie odwołamy się do nazwiska Pana Bartosza Kominarskiego, a argumenty opcjonalne pozostawimy puste. Zauważmy, że korzystając z funkcji WYSZUKAJ.PIONOWO nie bylibyśmy w stanie wykonać tej operacji w tak prosty sposób, ponieważ wymaga ona, aby szukana wartość zanjdowała się w pierwszej kolumnie tabeli (a nazwisko znajduje się w drugiej kolumnie).
+![](https://i.imgur.com/qIcGMmd.png)
+<img src={new URL('https://i.imgur.com/RNN98Vv.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+#### Przykład 3
+W trzecim przykładzie chcemy zwrócić nazwisko pracownika, który jest operatorem dźwigu. Było to niemożliwe (przynajmniej bez modyfikacji tabeli) przy użyciu funkcji WYSZUKAJ.PIONOWO. Sprawdźmy, jak możemy podejść do tego zadania wykorzystując funkcję X.WYSZUKAJ.
+
+![](https://i.imgur.com/g0DixFf.png)
+<img src={new URL('https://i.imgur.com/HrCgQof.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+
+
