@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 // import { padding } from '@mui/system';
 
+
+
 const DARK_MODE_KEY = 'dark-mode';
 
 const useDarkMode = () => {
@@ -56,6 +58,7 @@ function useScrollY() {
 }
 
 function resizeNav() {
+    let padding, fontSize;
     const windowWidth = useWindowWidth();
     const scrollY = useScrollY();
 

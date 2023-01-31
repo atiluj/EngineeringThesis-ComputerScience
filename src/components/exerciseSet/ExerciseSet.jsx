@@ -52,9 +52,9 @@ function ExerciseSet() {
 
             <div className={styles.category}>DZIAŁANIA NA LICZBACH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/49" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA POD. <b>2009</b></pre></Link>
-                <Link to="/exercise/43" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA POD. <b>2012</b></pre></Link>
-                <Link to="/exercise/42" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA ROZ. <b>2013</b></pre></Link>
+                <Link to="/exercise/49" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2009</b> POD.</pre></Link>
+                <Link to="/exercise/43" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2012</b> POD.</pre></Link>
+                <Link to="/exercise/42" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2013</b> ROZ.</pre></Link>
                 <Link to="/exercise/6" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2017</b> ZAD. 1</pre></Link>
                 <Link to="/exercise/7" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2017</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/8" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2017</b> ZAD. 3</pre></Link>
@@ -73,10 +73,10 @@ function ExerciseSet() {
 
             <div className={styles.category}>DZIAŁANIA NA STRINGACH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/50" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA ROZ. <b>2009</b></pre></Link>
-                <Link to="/exercise/47" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA POD. <b>2010</b></pre></Link>
-                <Link to="/exercise/48" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA ROZ. <b>2010</b></pre></Link>
-                <Link to="/exercise/41" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA POD. <b>2013</b></pre></Link>
+                <Link to="/exercise/50" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2009</b> ROZ.</pre></Link>
+                <Link to="/exercise/47" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2010</b> POD.</pre></Link>
+                <Link to="/exercise/48" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2010</b> ROZ.</pre></Link>
+                <Link to="/exercise/41" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2013</b> POD.</pre></Link>
                 <Link to="/exercise/40" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2014</b> A,B,C</pre></Link>
                 <Link to="/exercise/10" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2018</b> ZAD. 1</pre></Link>
                 <Link to="/exercise/11" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2018</b> ZAD. 2</pre></Link>
@@ -95,15 +95,15 @@ function ExerciseSet() {
             </div>
             <div className={styles.category}>DZIAŁANIA NA LICZBACH BINARNYCH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/46" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA ROZ. <b>2011</b></pre></Link>
+                <Link to="/exercise/46" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2011</b> ROZ.</pre></Link>
                 <Link to="/exercise/0" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2015</b> ZAD. 1</pre></Link>
                 <Link to="/exercise/1" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2015</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/2" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2015</b> ZAD. 3</pre></Link>
             </div>
             <div className={styles.category}>SZYFROWANIE</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/45" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA POD. <b>2011</b></pre></Link>
-                <Link to="/exercise/44" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA ROZ. <b>2012</b></pre></Link>
+                <Link to="/exercise/45" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2011</b> POD.</pre></Link>
+                <Link to="/exercise/44" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2012</b> ROZ.</pre></Link>
                 <Link to="/exercise/3" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2016</b> ZAD. 1</pre></Link>
                 <Link to="/exercise/4" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2016</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/5" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2016</b> ZAD. 3</pre></Link>
