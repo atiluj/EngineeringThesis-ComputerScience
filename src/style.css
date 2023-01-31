@@ -195,6 +195,10 @@ img.section_logo {
     color: var(--link-hover);
 }
 
+.link_materials{
+    font-size: 15px;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -281,4 +285,16 @@ img.section_logo {
 .main_content .second img.medium_img.left_img,
 .main_content .second img.super_small_img.left_img {
     margin-left: 20px;
+}
+
+@media(max-width: 600px){
+    .link_materials{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 400px){
+    .link_materials{
+        font-size: 13px;
+    }
 }

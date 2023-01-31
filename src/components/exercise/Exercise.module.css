@@ -1,6 +1,6 @@
 .main {
     min-height: 100vh;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     font-family: 'Chakra Petch', sans-serif;
     font-size: 15px;
     width: 55%;
@@ -28,9 +28,13 @@
     .main {
         width: 75%;
         font-size: 14px;
-
     }
+}
 
+@media(max-width: 810px){
+    .main{
+        padding-top: 25px;
+    }
 }
 
 @media(max-width: 700px) {
