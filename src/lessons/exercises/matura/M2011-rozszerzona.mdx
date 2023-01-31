@@ -1,0 +1,93 @@
+import Dropdown from "../../../components/dropdown/Dropdown.jsx";
+import Code from "../../../components/code/Code.jsx";
+
+<div className="box_link"><a className="link  link_materials" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2011/R/inf_pr_ii.pdf">LINK DO ARKUSZA</a>
+<br/>
+<a className="link  link_materials" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2011/Dane_PR.rar"> PLIKI DO ZADANIA</a>
+
+<br/>
+</div>
+
+### TREŚĆ: (0-10pkt.)
+W pliku liczby.txt, w oddzielnych wierszach, znajduje się 1000 liczb zapisanych
+w systemie dwójkowym o długościach zapisów od 2 do 16 cyfr (0 lub 1).
+<b>Napisz program</b>, którego wykonanie da odpowiedzi do poniższych podpunktów.
+Odpowiedzi zapisz w pliku zadanie6.txt, a każdą odpowiedź poprzedź literą
+oznaczającą ten podpunkt.
+
+
+<br/><br/><br/>
+
+### Podpunkt A
+Ile jest liczb parzystych w całym pliku?
+
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+    W całym pliku jest 497 liczb parzystych.
+</Code>
+</Dropdown>
+
+<br/><br/>
+
+### Podpunkt B
+Jaka jest największa liczba w tym pliku? Podaj jej wartość w dwóch systemach:
+dwójkowym i dziesiętnym.
+
+<br/>
+<br/>
+
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+1111101111110110 (zapisana w systemie dwójkowym), <br/>
+64502 (zapisana w systemie dziesiętnym)
+</Code>
+</Dropdown>
+
+<br/><br/>
+
+### Podpunkt C
+Ile liczb w całym pliku ma dokładnie 9 cyfr? Podaj sumę tych liczb w systemie
+dwójkowym. 
+
+<br/>
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+W całym pliku dokładnie 9 cyfr ma 101 liczb. <br/>
+Ich suma w systemie dwójkowym jest równa
+1001100111110111.
+</Code>
+</Dropdown>
+
+<br/><br/>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+
+```
+def podpunkt_a(dane):
+    return len([x for x in dane if x[-1] == '0'])
+
+def podpunkt_b(dane):
+    dane_w_10 = [int(x,2) for x in dane]
+    najw = max(dane_w_10)
+    return (najw, bin(najw)[2:])
+
+# tu jest niejednoznaczna tresc zakladam ze chodzi 
+# tu o liczby, ktore w systemie 2 maja 9 cyfr
+
+def podpunkt_c(dane):
+    liczby_o_9_cyfrach = [int(x,2) for x in dane if len(x) == 9]
+    return (len(liczby_o_9_cyfrach), bin(sum(liczby_o_9_cyfrach))[2:])
+
+with open('liczby.txt', 'r') as plik:
+    dane = [ a.strip() for a in plik.readlines()]
+
+print("a)", podpunkt_a(dane))
+print("b)", podpunkt_b(dane))
+print("c)", podpunkt_c(dane))
+```
+
+</Dropdown>
+
+
+

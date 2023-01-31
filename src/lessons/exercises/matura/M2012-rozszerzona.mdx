@@ -1,0 +1,380 @@
+import Dropdown from "../../../components/dropdown/Dropdown.jsx";
+import Code from "../../../components/code/Code.jsx";
+
+<div className="box_link"><a className="link  link_materials" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2012/maj/infor/a2_pr.pdf">LINK DO ARKUSZA</a>
+<br/>
+<a className="link  link_materials" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2012/maj/infor/Dane_PR.rar"> PLIKI DO ZADANIA</a>
+
+<br/>
+</div>
+
+### TREŚĆ: (0-10pkt.)
+Rozważmy szyfr podstawieniowy działający zgodnie z następującymi zasadami:<br/>
+- Tekst jawny, szyfrogram oraz klucz składają się wyłącznie z wielkich liter alfabetu
+angielskiego.<br/>
+- Litery ponumerowano i przyporządkowano im kody ASCII (liczby z zakresu 65–90): <br/>
+
+![](https://i.imgur.com/Y8XJaVB.png)
+
+- Kolejne litery tekstu jawnego są szyfrowane za pomocą kolejnych liter słowa będącego
+kluczem, być może powtórzonego wiele razy.<br/>
+- W procesie szyfrowania tekst jawny przekształcany jest na szyfrogram przy pomocy
+klucza poprzez dodanie do <b>kodu</b> litery tekstu jawnego <b>numeru</b> odpowiadającej jej litery
+klucza. Jeżeli tak uzyskana wartość liczbowa będzie większa od 90, należy ją zmniejszyć
+o 26. Szyfrem danej litery jest litera o tak uzyskanym kodzie. Poniższy przykład precyzuje
+zasady szyfrowania.<br/>
+<b>Przykład:</b>
+Tekst jawny: LATO, klucz: WODA<br/>
+L+W = 76+23 = 99. Ponieważ przekroczono zakres 90, należy od 99 odjąć 26, czyli
+99–26 = 73. Zatem zaszyfrowanym znakiem jest litera I.<br/>
+A+O = 65+15 = 80, czyli zaszyfrowanym znakiem jest litera P.<br/>
+T+D = 84+4 = 88, czyli zaszyfrowanym znakiem jest litera X.<br/>
+O+A = 79+1 = 80, czyli zaszyfrowanym znakiem jest litera P.<br/>
+Szyfrogram: IPXP<br/>
+- Jeżeli użyte słowo kluczowe jest zbyt krótkie, by wystarczyło do zaszyfrowania całego
+tekstu, należy użyć jego powtórzeń. <br/>
+<b>Przykład:</b> 
+Tekst jawny: MARTA, klucz: TOR<br/>
+M+T = 77+20 = 97, 97-26=71, G<br/>
+A+O = 65+15 =80, P<br/>
+R+R = 82+18= 100, 100-26 = 74, J<br/>
+T+T = 84+20 = 104, 104-26=78, N<br/>
+A+O = 65+15 =80, P<br/>
+Szyfrogram: GPJNP<br/>
+- W procesie deszyfrowania szyfrogram przekształcany jest na tekst jawny przy pomocy
+klucza poprzez odjęcie od kodu litery szyfrogramu numeru odpowiadającej jej litery
+klucza (jeżeli tak uzyskana wartość liczbowa będzie mniejsza od 65, należy ją powiększyć
+o 26) i odczytanie litery o otrzymanym kodzie.<br/>
+
+Korzystając z dostępnych narzędzi informatycznych, wykonaj poniższe polecenia.
+
+<br/><br/>
+
+### Podpunkt A   
+W pliku tj.txt znajdują się niezaszyfrowane słowa, a w pliku klucze1.txt –
+klucze szyfrujące. W obu plikach wyrazy umieszczone są w osobnych wierszach.
+Zaszyfruj słowa zawarte w pliku tj.txt, wynik zapisz w pliku wynik4a.txt. Wyraz
+zapisany w N-tym wierszu w pliku z wynikami powinien stanowić szyfrogram tekstu
+jawnego znajdującego się w N-tym wierszu w pliku z tekstem jawnym uzyskany
+za pomocą klucza znajdującego się w N-tym wierszu pliku z kluczami.
+<br/>
+<Dropdown title="ODPOWIEDŹ"> 
+<Code>
+CNA<br/>
+UUU<br/>
+WNS<br/>
+TRX<br/>
+WCCG<br/>
+YOYG<br/>
+XEUUAU<br/>
+WVBY<br/>
+QIE<br/>
+FYDBZ<br/>
+YQRQXDMHHAOS<br/>
+RKXETREBHGFBW<br/>
+WYAUKDWWGTI<br/>
+LWTZMEPL<br/>
+MLWGODX<br/>
+GEWPZWCR<br/>
+XGZMRSAD<br/>
+GZCPVLHDUF<br/>
+GDDULBERQA<br/>
+APEUDKNPMO<br/>
+GMFCJJFYTMH<br/>
+PPPKMWIRAU<br/>
+LFXXPRJZL<br/>
+OYYZCKVUY<br/>
+XKMQNSG<br/>
+NZSTFEGHVCE<br/>
+ONRVWOVW<br/>
+MMMICLXVQ<br/>
+MRTCGISKFY<br/>
+SNYNSHBP<br/>
+EHDABER<br/>
+KYPGTMDUF<br/>
+NIYBOQGJ<br/>
+EQQRIDJL<br/>
+ADWPDRQZL<br/>
+QAYMTFYSM<br/>
+QJJUCQO<br/>
+OPPICXNLP<br/>
+XJFHQBKBSX<br/>
+KHZVSSXRD<br/>
+SFNBNAQSKV<br/>
+MPEYAOA<br/>
+MWLPBGPF<br/>
+LNPFSMBNPPDOR<br/>
+APPSHCYCU<br/>
+TUNMIVNB<br/>
+PFRNMUYDHOY<br/>
+WKNLJPTWNHURN<br/>
+QDYLEQFMTUHNN<br/>
+GYIGEBTKTDVD<br/>
+VHARCCKPDFYLQ<br/>
+WSQILBTJJD<br/>
+TDLKXPEGAN<br/>
+GZIHOZMQTAXI<br/>
+EZJTBGIQ<br/>
+XJZSJSVXPM<br/>
+AWNJXLOMVNNX<br/>
+WFDCGBEAGSRGL<br/>
+ZKJSFPSRNYGJ<br/>
+YEVHEITYIZOU<br/>
+ELZBZOYOL<br/>
+CSQRXMORC<br/>
+SKFOMNFAHLEQXD<br/>
+NQJFXSUAGEZ<br/>
+WBVYTBVU<br/>
+SFDKNNMPJIBAOB<br/>
+AFOJNJXXEL<br/>
+DUHSRGIHLPJHG<br/>
+DRLIPMGSV<br/>
+OYYSFWYSHZ<br/>
+NKYCOKJDG<br/>
+FAVAJFNXEZB<br/>
+BUUFZWJQJORHSK<br/>
+GTGPMTYPMBZN<br/>
+IAYGSDHKFNP<br/>
+TAIUQSODRLIE<br/>
+GOWCZFXJFENJQ<br/>
+VPIDTXAOCCOB<br/>
+CPJPTGEBMZ<br/>
+JHUYVFCEASE<br/>
+OHCOZZWENH<br/>
+PEOEGGZLBYJPNVT<br/>
+JJJOUTTRCCXPVJ<br/>
+IFPIGOAAXE<br/>
+MFRAMXPFEJY<br/>
+ARJHVBEJUJL<br/>
+SIDIAXMPVS<br/>
+IPGBQRUJU<br/>
+XRTXMFKSFBOT<br/>
+LNBUIAPOB<br/>
+MPKRROJMCUMXFLVYN<br/>
+PCVWLKZPUIP<br/>
+GFOQXCWFMKB<br/>
+TVJZKBVO<br/>
+MWWCLSCIE<br/>
+TPJZIKVSBZEDPRCZC<br/>
+EDNXUYBVYNKNN<br/>
+WVZSFSUHBNN<br/>
+YYFUHXAIZL<br/>
+DHHABOENDL<br/>
+TBLHVADDPHC<br/>
+WJYSAEUAYCG<br/>
+DKMXUKTNAQRC<br/>
+BVKIQVFSHETL<br/>
+SHSMRDFUGD<br/>
+COVYNVPDX<br/>
+FTKOHQIFNNU<br/>
+XQMBOHIPYDAMO<br/>
+IRGRCVPIBFUEWZYQR<br/>
+YSQWBXFQZRCB<br/>
+DLEDES<br/>
+GYEAF<br/>
+IELOZ<br/>
+VJKYTW<br/>
+NKQ<br/>
+OXP<br/>
+ALX<br/>
+ZQHR<br/>
+NSOZ<br/>
+MDO
+</Code>
+</Dropdown>
+
+<br/><br/>
+
+### Podpunkt B
+W pliku sz.txt znajdują się zaszyfrowane słowa, a w pliku klucze2.txt znajdują
+się klucze deszyfrujące. W obu plikach wyrazy umieszczone są w osobnych wierszach.
+Odszyfruj słowa zawarte w pliku sz.txt, wynik zapisz do pliku wynik4b.txt.
+Wyraz zapisany w N-tym wierszu w pliku z wynikami powinien stanowić tekst jawny
+szyfrogramu znajdującego się w N-tym wierszu w pliku z szyfrogramami uzyskany
+za pomocą klucza zapisanego w N-tym wierszu pliku z kluczami. 
+
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+KOT<br/>
+PIES<br/>
+COS<br/>
+NIC<br/>
+NUTA<br/>
+BUT<br/>
+LUPA<br/>
+ZUPA<br/>
+KWIAT<br/>
+CEL<br/>
+KONWERTEREM<br/>
+ZAAKCEPTOWANIA<br/>
+KOLOROWANIE<br/>
+PIERWOTNE<br/>
+KLASYCZNY<br/>
+STOPOWYCH<br/>
+PNEUMATYCZNE<br/>
+PODSTAWOWYCH<br/>
+ROZPOZNAJE<br/>
+POCHODZENIA<br/>
+WYSZUKIWANIE<br/>
+PRZEKAZYWANY<br/>
+PRZYDATNE<br/>
+AUTOMATYCZNE<br/>
+PRZYGOTOWYWANIU<br/>
+PRZERZUTKA<br/>
+ROZPOZNAWANIE<br/>
+PROGRAMU<br/>
+ZAPISYWANE<br/>
+DOPASOWYWANIE<br/>
+REJESTRACJI<br/>
+TURBULENCJE<br/>
+KODOWANIA<br/>
+ZINTEGROWANE<br/>
+NAJPOPULARNIEJSZE<br/>
+MECHANICZNE<br/>
+HYDRAULICZNE<br/>
+PRZEDNIEGO<br/>
+ZASTOSOWANIE<br/>
+TEKSTOWYCH<br/>
+NATURALNEJ<br/>
+WYSZUKIWANIU<br/>
+KOMPUTERACH<br/>
+JEDNOCZESNYM<br/>
+KONFIGUROWALNY<br/>
+KOMENTARZACH<br/>
+ZACHOWANIEM<br/>
+ZAOPATRZONY<br/>
+ROZPISANEGO<br/>
+SAMOCHODU<br/>
+RZECZYWISTY<br/>
+ELEKTRYCZNY<br/>
+OBUDOWIE<br/>
+GUBERNATOR<br/>
+KONWERTUJE<br/>
+ZAAWANSOWANYCH<br/>
+KONSTRUKTORA<br/>
+POWIERZCHNIOWYCH<br/>
+ZLIKWIDOWANIE<br/>
+HAMOWANIA<br/>
+PUNKTOWYM<br/>
+SZKIELETEM<br/>
+SAMOLOTU<br/>
+POPULARNYCH<br/>
+CESARZOWI<br/>
+PROGRAMOWANIA<br/>
+UDZIELANIE<br/>
+TABULACJI<br/>
+POMOCNICZYCH<br/>
+KOMPONENTY<br/>
+STANDARDY<br/>
+REGULARNYCH<br/>
+KLAWISZOWY<br/>
+UPRAWNIENIAMI<br/>
+DOWOLNYCH<br/>
+WSTAWIANIA<br/>
+USTAWIENIA<br/>
+NAZWISKU<br/>
+NIEZNACZNIE<br/>
+ORGANIZACJI<br/>
+POZOSTAJE<br/>
+DODATKOWYCH<br/>
+ZAPEWNIENIE<br/>
+ZAKTUALIZOWANO<br/>
+ZAZWYCZAJ<br/>
+LECZNICZEJ<br/>
+STOSOWANIA<br/>
+TOWARZYSZY<br/>
+PODOBNYM<br/>
+ZAJMOWANEJ<br/>
+ZASTOSOWANIA<br/>
+POKRYWANIA<br/>
+SYSTEMOWEGO<br/>
+BIODROWYM<br/>
+WSZYSTKICH<br/>
+POWIERZCHNI<br/>
+DEKORACYJNEGO<br/>
+ORGANIZACJA<br/>
+POTRANATEM<br/>
+ZAMIENNIKIEM<br/>
+WIZYJNE<br/>
+NAJLEPIEJ<br/>
+DOCELOWYM<br/>
+KONFRONTACJI<br/>
+ORGANIZOWANE<br/>
+OCHRONNEGO<br/>
+INSTALACJI<br/>
+DOSTOSOWANIE<br/>
+NINIEJSZEJ<br/>
+WSZYSTKIE<br/>
+KREM<br/>
+KTOS<br/>
+ZNAC<br/>
+ALBO<br/>
+RYBA<br/>
+LUB<br/>
+MUS<br/>
+PLUS<br/>
+KROWA<br/>
+OWCA
+</Code>
+</Dropdown>
+
+<br/><br/>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+
+```
+def kod_litery(litera):
+    return ord(litera) - ord('A') + 1
+
+def zaszyfruj(slowo, klucz):
+    zaszyfrowane = ""
+    for i in range(len(slowo)):
+        kod = ord(slowo[i]) + kod_litery(klucz[i % len(klucz)])
+        if kod > 90:
+            kod -= 26
+        zaszyfrowane += chr(kod)
+    return zaszyfrowane
+
+def podpunkt_a(tj, klucze1):
+    with open('wynik4a.txt', 'w') as f:
+        for (slowo, klucz) in zip(tj, klucze1):
+            print(zaszyfruj(slowo, klucz), file=f)
+
+def odszyfruj(slowo, klucz):
+    odszyfrowane = ""
+    for i in range(len(slowo)):
+        kod = ord(slowo[i]) - kod_litery(klucz[i % len(klucz)])
+        if kod < 65:
+            kod += 26
+        odszyfrowane += chr(kod)
+    return odszyfrowane
+
+def podpunkt_b(sz, klucze2):
+    with open('wynik4b.txt', 'w') as f:
+        for (slowo, klucz) in zip(tj, klucze1):
+            print(odszyfruj(slowo, klucz), file=f)
+
+def wczytaj_dane():
+    with open('tj.txt', 'r') as plik:
+        tj = [ a.strip() for a in plik.readlines()]
+
+    with open('klucze1.txt', 'r') as plik:
+        klucze1 = [ a.strip() for a in plik.readlines()]
+
+    with open('sz.txt', 'r') as plik:
+        sz = [ a.strip() for a in plik.readlines()]
+
+    with open('klucze2.txt', 'r') as plik:
+        klucze2 = [ a.strip() for a in plik.readlines()]
+
+    return (tj, klucze1, sz, klucze2)
+
+tj, klucze1, sz, klucze2 = wczytaj_dane()
+podpunkt_a(tj, klucze1)
+podpunkt_b(sz, klucze2)
+```
+
+</Dropdown>
+
+
+

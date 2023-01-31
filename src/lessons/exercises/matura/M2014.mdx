@@ -1,0 +1,125 @@
+import Dropdown from "../../../components/dropdown/Dropdown.jsx";
+import Code from "../../../components/code/Code.jsx";
+
+<div className="box_link"><a className="link  link_materials" target="_blank" href="https://arkusze.pl/maturalne/informatyka-2014-maj-matura-rozszerzona-2.pdf">LINK DO ARKUSZA</a>
+<br/>
+<a className="link  link_materials" href="https://arkusze.pl/maturalne/informatyka-2014-maj-matura-rozszerzona-zalaczniki.zip"> PLIKI DO ZADANIA</a>
+
+<br/>
+</div>
+
+### TREŚĆ: (0-10pkt.)
+W pliku NAPIS.TXT, w oddzielnych wierszach, znajduje się <b>1 000</b> napisów o długościach
+od <b>2</b> do <b>25</b> znaków. Każdy napis składa się z wielkich liter alfabetu łacińskiego.
+Wykorzystując dostępne narzędzia informatyczne, daj odpowiedzi do poniższych
+podpunktów. Odpowiedzi zapisz w kolejnych wierszach pliku ZADANIE5.TXT, a każdą
+poprzedź literą oznaczającą ten podpunkt. 
+
+<br/><br/>
+
+### Podpunkt A   
+Napis pierwszy to taki napis, w którym suma kodów ASCII jest liczbą pierwszą.
+Przykładowo, suma kodów ASCII w napisie ABB wynosi 197 i jest liczbą pierwszą,
+co oznacza, że napis ABB jest napisem pierwszym. Podaj, ile jest napisów pierwszych
+w pliku NAPIS.TXT.
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+    
+<Code>
+122
+</Code>
+
+</Dropdown>
+
+<br/><br/>
+
+### Podpunkt B
+Napis rosnący to taki napis, w którym kod ASCII każdej kolejnej litery jest większy
+od kodu poprzedniej. Podaj wszystkie napisy rosnące występujące w pliku NAPIS.TXT.
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+    FHJLMU<br/>
+    BEJNOSY<br/>
+    MNS<br/>
+    AEIOUY<br/>
+    BDL<br/>
+    JT<br/>
+    BJQR<br/>
+    AHJS<br/>
+    FHJLMU<br/>
+    DIT<br/>
+    CEGKZ<br/>
+    BCV<br/>
+    CEGIKOT<br/>
+    CEGKZ
+</Code>
+</Dropdown>
+<br/><br/>
+
+### Podpunkt C
+Wypisz napisy z pliku NAPIS.TXT, które występują w nim więcej niż jeden raz (każdy
+taki napis wypisz tylko raz).  
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+    FHJLMU<br/>
+    GC<br/>
+    QULA<br/>
+    CEGKZ<br/>
+    BZYFFLOICLUNWLTH<br/>
+    SWIFT 
+</Code>
+</Dropdown>
+
+<br/><br/>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+
+```
+def czy_pierwsza(n):
+    if n < 2:
+        return False
+    elif n == 2:
+        return True
+    elif n % 2 == 0:
+        return False
+    else:
+        for i in range(3, int(n**0.5)+1, 2):
+            if n % i == 0:
+                return False
+        return True
+
+def czy_napis_pierwszy(s):
+    return czy_pierwsza(sum([ord(x) for x in s]))
+
+def podpunkt_a(dane):
+    return len([x for x in dane if czy_napis_pierwszy(x)])
+
+def czy_napis_rosnacy(s):
+    for i in range(1, len(s)):
+        if s[i-1] >= s[i]:
+            return False 
+    return True
+
+def podpunkt_b(dane):
+    return [x for x in dane if czy_napis_rosnacy(x)]
+
+def podpunkt_c(dane):
+    powtarzajace_sie = []
+    for x in dane:
+        if dane.count(x) > 1 and x not in powtarzajace_sie:
+            powtarzajace_sie.append(x)
+    return powtarzajace_sie
+
+with open('NAPIS.TXT', 'r') as plik:
+    dane = [x.rstrip() for x in plik.readlines()]
+
+print("a)", podpunkt_a(dane))
+print("b)", podpunkt_b(dane))
+print("c)", podpunkt_c(dane))
+```
+
+</Dropdown>
+
+
+

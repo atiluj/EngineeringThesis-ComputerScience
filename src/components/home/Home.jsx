@@ -190,7 +190,7 @@ function Home() {
 
                 <div className={styles.author}>
                     <div className={styles.photo}><img src={new URL('../../img/nikola.jpg', import.meta.url)} alt="Nikola" /></div>
-                    <p className={styles.author_name}>NIKOLA WRONA<a href="https://www.linkedin.com/in/nikola-wrona-429a75211/" target="_blank"><LinkedInIcon /></a></p>
+                    <div className={styles.author_name}><p>NIKOLA WRONA</p><a href="https://www.linkedin.com/in/nikola-wrona-429a75211/" target="_blank"><LinkedInIcon /></a></div>
                     <p className={styles.introduction}>Od czasów liceum programowanie było dla mnie najbardziej interesującą dziedziną informatyki. Przy tworzeniu tej platformy
                         zajęłam się teoretyczną częścią oraz kursem programowania w Pythonie. Obecnie studiuję informatykę i pracuję jako software developer.
                     </p>

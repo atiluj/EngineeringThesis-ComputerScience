@@ -1,3 +1,14 @@
+import M2011_P from './M2011-podstawowa.mdx'; 
+import M2011_R from './M2011-rozszerzona.mdx';
+
+import M2012_P from './M2012-podstawowa.mdx'; 
+import M2012_R from './M2012-rozszerzona.mdx'; 
+
+import M2013_P from './M2013-podstawowa.mdx'; 
+import M2013_R from './M2013-rozszerzona.mdx'; 
+
+import M2014 from './M2014.mdx';
+
 import M2015Z1 from './M2015Z1.mdx';
 import M2015Z2 from './M2015Z2.mdx';
 import M2015Z3 from './M2015Z3.mdx';
@@ -112,6 +123,16 @@ const ExercisesPython = [
     {name: "Informator 2023 zadanie 3.1 - DZIAŁANIA NA LICZBACH", content: <INF2023Z31/>}, //37
     {name: "Informator 2023 zadanie 3.2 - DZIAŁANIA NA LICZBACH", content: <INF2023Z32/>}, //38
     {name: "Informator 2023 zadanie 3.3 - DZIAŁANIA NA LICZBACH", content: <INF2023Z33/>}, //39
+
+    //MATURY W STAREJ FORMULE
+    {name: "Matura 2014 - DZIAŁANIA NA STRINGACH", content: <M2014/>}, //40
+    {name: "Matura podstawowa 2013 cz.2 - DZIAŁANIA NA STRINGACH", content: <M2013_P/>}, //41
+    {name: "Matura rozszerzona 2013 cz.2 - DZIAŁANIA NA LICZBACH", content: <M2013_R/>}, //42
+    {name: "Matura podstawowa 2012 cz.2 - DZIAŁANIA NA LICZBACH", content: <M2012_P/>}, //43
+    {name: "Matura rozszerzona 2012 cz.2 - SZYFROWANIE", content: <M2012_R/>}, //44
+    {name: "Matura podstawowa 2011 cz.2 - SZYFROWANIE", content: <M2011_P/>}, //45
+    {name: "Matura rozszerzona 2011 cz.2 - DZIAŁANIA NA LICZBACH BINARNYCH", content: <M2011_R/>}, //46
+
 
     //{name: "Matura 2023 zadanie 3 - DZIAŁANIA NA LICZBACH", content: <M2023Z1/>}, //26
     

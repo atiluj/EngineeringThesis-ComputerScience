@@ -1,0 +1,118 @@
+import Dropdown from "../../../components/dropdown/Dropdown.jsx";
+import Code from "../../../components/code/Code.jsx";
+
+<div className="box_link"><a className="link  link_materials" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2013/informatyka_PR_2.pdf">LINK DO ARKUSZA</a>
+<br/>
+<a className="link  link_materials" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2013/Dane_PR.rar"> PLIKI DO ZADANIA</a>
+
+<br/>
+</div>
+
+### TREŚĆ: (0-10pkt.)
+W pliku dane.txt znajduje się 5 000 liczb całkowitych z przedziału od 108 do 20000008,
+zapisanych w systemie ósemkowym, po jednej liczbie w wierszu. W wybranym przez siebie
+języku programowania <b>napisz program</b>, za pomocą którego uzyskasz odpowiedzi
+na poniższe polecenia. Odpowiedzi zapisz w pliku wyniki6.txt, a odpowiedź do każdego
+podpunktu poprzedź literą oznaczającą ten podpunkt.
+<br/><br/>
+
+### Podpunkt A  
+Ile spośród liczb zapisanych w pliku dane.txt spełnia taki warunek, że pierwsza cyfra
+tej liczby jest równa ostatniej cyfrze tej samej liczby? 
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+447
+</Code>
+</Dropdown>
+
+<br/><br/>
+
+### Podpunkt B
+Podaj, ile liczb w pliku dane.txt, po ich zapisaniu w systemie dziesiętnym, spełnia
+warunek podany w podpunkcie a), tzn. pierwsza cyfra liczby jest równa ostatniej cyfrze
+tej samej liczby.
+<b>Przykład:</b> Liczba 2038 = 13110 spełnia podany warunek, natomiast 71238 = 366710 nie
+spełnia żądanego warunku.
+
+<br/><br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+324
+</Code>
+</Dropdown>
+<br/><br/>
+
+### Podpunkt C
+Ile spośród liczb zapisanych w pliku dane.txt spełnia warunek, że rozpoczynając od
+najbardziej znaczącej cyfry w zapisie ósemkowym, każda kolejna cyfra tej liczby nie jest
+mniejsza od cyfry poprzedzającej? Podaj największą i najmniejszą liczbę z pliku
+dane.txt, które spełniają ten warunek.
+<b>Przykład:</b> Liczba 123357 spełnia podany warunek, ponieważ 1≤2≤3≤3≤5≤7. 
+<br/><br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+liczba – 49<br/>
+najmniejsza liczba – 24<sub>8</sub> lub 20<sub>10</sub><br/>
+największa liczba – 1133357<sub>8</sub> lub 308975<sub>10</sub>
+</Code>
+</Dropdown>
+
+<br/><br/>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+
+```
+def z_10_na_8(n):
+    return oct(n)[2:]
+
+def z_8_na_10(s):
+    return int(s,8)
+
+# Podpunkt a
+
+def czy_pierw_cyfra_rowna_ost_w_8(liczba_w_8):
+    return liczba_w_8[-1] == liczba_w_8[0]
+
+def ile_liczb_o_rownej_pierw_i_ost_cyfrze_w_8(lista_liczb_w_8):
+    return len(list(filter(czy_pierw_cyfra_rowna_ost_w_8, lista_liczb_w_8)))
+
+# Podpunkt b
+
+def czy_pierw_cyfra_rowna_ost_w_10(n):
+    return str(n)[-1] == str(n)[0]
+
+def ile_liczb_o_rownej_pierw_i_ost_cyfrze_w_10(lista_liczb_w_10):
+    return len(list(filter(czy_pierw_cyfra_rowna_ost_w_10, lista_liczb_w_10)))
+
+# Podpunkt c
+
+def czy_cyfry_niemalejace(liczba_w_8):
+    for i in range(1,len(liczba_w_8)):
+        if liczba_w_8[i] < liczba_w_8[i-1]: return False
+    return True
+
+def liczby_o_niemalejacych_cyfrach(lista_liczb_w_8):
+    return list(filter(czy_cyfry_niemalejace, lista_liczb_w_8))
+
+# Main:
+
+with open('dane.txt', 'r') as plik:
+    dane = plik.readlines()
+
+dane_w_8 = [str(a.strip()) for a in dane]
+dane_w_10 = list(map(z_8_na_10, dane_w_8))
+
+print("A) ", ile_liczb_o_rownej_pierw_i_ost_cyfrze_w_8(dane_w_8))
+print("B) ", ile_liczb_o_rownej_pierw_i_ost_cyfrze_w_10(dane_w_10))
+
+pom = liczby_o_niemalejacych_cyfrach(liczby_o_niemalejacych_cyfrach(dane_w_8))
+pom_w_10 = list(map(z_8_na_10, pom))
+print("C) ile = ", len(pom))
+print("C) max w 8:", z_10_na_8(max(pom_w_10)), "max w 10:", max(pom_w_10))
+print("C) min w 8:", z_10_na_8(min(pom_w_10)), "min w 10:", min(pom_w_10))
+```
+
+</Dropdown>
+
+
+

@@ -1,11 +1,10 @@
 .main {
     min-height: 100vh;
-    /* padding: 20px 0; */
     font-family: 'Chakra Petch', sans-serif;
     font-size: 15px;
     width: 55%;
     max-width: 85em;
-    margin: 0 auto;
+    margin: 0 auto 25px;
 }
 
 .exercise_title {
@@ -13,7 +12,7 @@
 }
 
 .main_content {
-    padding: 14px;
+    padding: 14px 14px 40px;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
 }
@@ -57,7 +56,7 @@
     }
 
     .main_content {
-        padding: 14px 0;
+        padding: 14px 0 20px;
     }
 }
 

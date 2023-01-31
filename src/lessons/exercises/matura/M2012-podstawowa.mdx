@@ -1,0 +1,96 @@
+import Dropdown from "../../../components/dropdown/Dropdown.jsx";
+import Code from "../../../components/code/Code.jsx";
+
+<div className="box_link"><a className="link  link_materials" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2012/maj/infor/a2_pp.pdf">LINK DO ARKUSZA</a>
+<br/>
+<a className="link  link_materials" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2012/maj/infor/Dane_PP.rar"> PLIKI DO ZADANIA</a>
+
+<br/>
+</div>
+
+### TREŚĆ: (0-10pkt.)
+W kolejnych wierszach pliku cyfry.txt znajduje się 1000 liczb naturalnych, mniejszych
+niż 109 (jeden miliard), po jednej liczbie w każdym wierszu.
+<b>Napisz program</b>, który da odpowiedzi do poniższych podpunktów. Każdą odpowiedź zapisz
+w pliku zadanie4.txt, poprzedzając ją oznaczeniem odpowiedniego podpunktu.
+
+<br/><br/><br/>
+
+### Podpunkt A
+Ile liczb parzystych jest w pliku cyfry.txt?  
+
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+    
+<Code>
+495
+</Code>
+
+</Dropdown>
+
+<br/><br/>
+
+### Podpunkt B
+Podaj liczbę z pliku cyfry.txt, której suma cyfr jest <b>największa</b> oraz liczbę z tego
+pliku, której suma cyfr jest <b>najmniejsza</b>. W obu przypadkach jest tylko jedna taka liczba.
+<b>Przykład:</b>
+Dla danego zbioru liczb:<br/>
+121324<br/>
+66562<br/>
+675100<br/>
+1187010<br/>
+<b>odpowiedzią są liczby: </b>
+<b>66562</b> oraz <b>121324</b>, ponieważ suma cyfr liczby 66562 jest
+równa 25 (6+6+5+6+2) i jest największą taką sumą, zaś suma cyfr liczby 121324
+(1+2+1+3+2+4) jest równa 13 i jest najmniejszą taką sumą.
+<br/>
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+Liczba o największej sumie cyfr to 187869866.
+Liczba o najmniejszej sumie cyfr to 10010. 
+</Code>
+</Dropdown>
+<br/><br/>
+
+### Podpunkt C
+Wypisz wszystkie liczby z pliku cyfry.txt, których cyfry tworzą ciąg rosnący.<br/>
+<b>Przykład:</b>
+Cyfry liczby 123579 tworzą ciąg rosnący, ponieważ 1 &lt 2 &h60 3 &h60 5 &h60 7 &h60 9. <br/>
+Cyfry liczby 1232 nie tworzą ciągu rosnącego, ponieważ ostatnia cyfra (2) nie jest
+większa od przedostatniej (3).<br/>
+Cyfry liczby 34556 nie tworzą ciągu rosnącego, ponieważ cyfra trzecia (5) i cyfra
+czwarta (5) są sobie równe.
+<br/>
+<br/>
+<Dropdown title="ODPOWIEDŹ">
+<Code>
+2389, 23567, 123456789, 3468 
+</Code>
+</Dropdown>
+
+<br/><br/>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+
+```
+with open("cyfry.txt") as file:
+    data = [int(x) for x in file.readlines()]
+
+def sum_of_digits(x):
+    return sum(map(int,list(str(x))))
+
+def increasing_digits(n):
+    s = str(n)
+    for i in range(len(s)-1):
+        if int(s[i]) >= int(s[i+1]): return False
+    return True 
+
+print("a)", len([x for x in data if x % 2 == 0]))
+print("b) najw", max(data, key=sum_of_digits), "najm", min(data, key=sum_of_digits))
+print("c)", [x for x in data if increasing_digits(x)])
+```
+
+</Dropdown>
+
+
+
