@@ -220,7 +220,7 @@
         display: block;
         position: absolute;
         right: 25;
-        top: 8;
+        top: 9.5; 
     }
 
     .navbar_sticky.responsive .nav_wrapper_left {
