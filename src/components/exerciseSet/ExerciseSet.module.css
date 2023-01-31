@@ -16,7 +16,8 @@
 }
 
 .main .exercises_title{
-        padding-top: 30px;
+        padding-top: 10px;
+        text-align: center;
 }
 
 .main .exercises_list {

@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 function ExerciseSet() {
     return <>
         <main className={styles.main}>
-            <div className={styles.exercises_title}>
+            {/* <div className={styles.exercises_title}>
                 <h2>ZADANIA Z KURSU PYTHON</h2>
                 {/* <p>W tym dziale są zdania, które znajdziesz również w kursie. Posiadają one rozwiązania wzrocowe, które mają
-                    za zadanie wprowadzić Cię w programowanie.</p> */}
-            </div>
+                    za zadanie wprowadzić Cię w programowanie.</p> 
+            </div> */}
 
-            <div className={`${styles.exercises_list} ${styles.python_list}`}>
+            {/* <div className={`${styles.exercises_list} ${styles.python_list}`}>
                 <div className={styles.list_element_wrapper}>
                     <div className={styles.subject}>Zmienne</div>
                     <div className={styles.wrap}>
@@ -42,9 +42,9 @@ function ExerciseSet() {
                         <div className={`${styles.list_element} ${styles.python_exercise}`}>2</div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className={styles.exercises_title}>
-                <h2>POZOSTAŁE ZADANIA</h2>
+                <h2>ZADANIA PROGRAMISTYCZNE Z DOTYCHCZASOWYCH MATUR</h2>
                 {/* <p>Przerobienie ponizszych zadań jest gwarantem opanowania Pythona oraz uzyskania dobrego wyniku na maturze.
                     na podstawie matur coś tam blabla bla.
                 </p> */}
