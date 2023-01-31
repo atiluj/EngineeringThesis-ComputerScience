@@ -5,7 +5,9 @@ Jego rozwiązywanie podzielimy na trzy części. W pierwszej chcemy się dowiedz
 Znów zagłębiamy się w treść zadania i dowiadujemy się, że będziemy potrzebować wszystkich tabel, a konkretnie kolumny 'Sekcja' z tabeli 'Komputery', kolumny 'Czas_awarii' z tabeli 'Awarie', według których będziemy grupować wyniki oraz kolumny 'Identyfikator' z tabeli 'Naprawy', przy pomocy której będziemy je zliczać.
 <img src={new URL('https://i.imgur.com/UKzsny1.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 Zauważmy jednak, że znów wynik nie jest tym, czego oczekujemy. Dlaczego?
+
 ![](https://i.imgur.com/eZIDhTV.png)
+
 'Czas_awarii' to dokładny czas, włącznie z godziną i minutą. Nas interesuje jedynie data.
 Skonstruujemy więc wyrażenie, które pozwoli nam wyłuskać datę z naszego 'Czasu_awarii'.
 
@@ -20,7 +22,7 @@ Skonstruujemy więc wyrażenie, które pozwoli nam wyłuskać datę z naszego 'C
 Widzimy, że w białym polu na górze pojawił nam się szablon użycia funkcji, która wyłuskuje dzień z daty.
 
 ### 4. Uzupełniamy argument funkcji.
-Teraz chcemy w miejsce #&60#&60data#&62#&62 wstawić datę awarii. W tym celu zaznaczamy #&60#&60data#&62#&62, klikamy tabele 'Naprawy' i wybieramy kolumnę 'Czas_awarii'.
+Teraz chcemy w miejsce <<data\>\> wstawić datę awarii. W tym celu zaznaczamy <<data\>\>, klikamy tabele 'Naprawy' i wybieramy kolumnę 'Czas_awarii'.
 <img src={new URL('https://i.imgur.com/75qMXAv.png', import.meta.url)} alt="xyz" className={'small_img'} />
 
 ### 5. Wciskamy "OK" i ustawiamy odpowiednią opcję funkcji sumy.
@@ -38,7 +40,9 @@ Możemy zrobić to na dwa sposoby albo zaznaczyć daną kolumnę w zapytaniu i n
 albo usunąć nazwę kolumny i kliknąć enter.
 <img src={new URL('https://i.imgur.com/qUacLpj.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 Efekt będzie taki sam - usuniemy niepotrzebną część zapytania.
+
 ![](https://i.imgur.com/PAyKaoL.png)
+
 Możemy jednak zauważyć, że wynik jest mało czytelny, ze względu na to, że dni i miesiące reprezentowane są poprzez liczby, a nazwy kolumn nie odzwierciedlają ich zawartości.
 
 ### 8. Nazewnictwo wyrażeń.

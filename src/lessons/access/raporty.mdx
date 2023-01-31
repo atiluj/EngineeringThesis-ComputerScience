@@ -20,7 +20,9 @@ lub poprzez użycie skrótu klawiszowego "Ctrl + P"
 
 Zauważmy jednak, że efekt nie jest zadowalający.
 <img src={new URL('https://i.imgur.com/7rQyyoI.png', import.meta.url)} alt="xyz" className={'medium_img'} />
+
 ![](https://i.imgur.com/je8NA5j.png)
+
 Oczywiście możemy stworzyć kwerendę, która posegreguje dane według 'Sekcji', a następnie 'Pojemności',
 ale sposób prezentacji danych wciąż nie będzie estetyczny, więc warto zrobić to lepiej.
 
@@ -29,7 +31,7 @@ ale sposób prezentacji danych wciąż nie będzie estetyczny, więc warto zrobi
 
 ### 2. Wybieramy tabelę, na podstawie której będziemy tworzyć raport oraz wszystkie jej pola, które mają się w nim znaleźć
 (Wyboru dokonujemy dokładnie tak samo, jak przy tworzeniu kwerend, poprzez podwójne kliknięcie lub użycie ">".)
-Nas interesuje wydrukowanie wszystkich danych o'Komputerach', wybieramy więc odpowiednią tabelę oraz wszystkie jej pola.
+Nas interesuje wydrukowanie wszystkich danych o 'Komputerach', wybieramy więc odpowiednią tabelę oraz wszystkie jej pola.
 <img src={new URL('https://i.imgur.com/sitjspt.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ### 3. Wybieramy główne pole, według którego będziemy grupować rekordy.
@@ -39,13 +41,13 @@ Nas interesuje wydrukowanie wszystkich danych o'Komputerach', wybieramy więc od
 W tym kroku możemy dodać kolejne pola, według których posortujemy dane, poprzez wybranie ich z listy rozwijanej.
 Podobnie do sortowania wielopoziomowego w Excelu, najpierw wszystkie dane będą posegregowane według pola,
 które wybraliśmy w poprzednim kroku, a następnie według kolejnych pól wybranych w tym kroku, zgodnie z kolejnością wyboru.
-Domyślenie porządek jest ustawiony rosnąco, ale można zmienić go na malejący poprzez kliknięcie wybranej opcji.
+Domyślnie porządek jest ustawiony rosnąco, ale można zmienić go na malejący poprzez kliknięcie wybranej opcji.
 **W naszym przykładzie** zestawienie będzie więc w pierwszej kolejności posortowane według pola 'Sekcja',
 a następnie według 'Pojemności_dysku' oraz 'Numeru_komputera'.
 <img src={new URL('https://i.imgur.com/wipflJF.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 Mamy także opcję podsumowania, dzięki której możemy rozszerzyć raport o sumę czy średnia.
-**Na przykład** dodamy informację o łącznej pojemność wszystkich dysków w sprzętach z tablicy 'Komputery'.
+Na przykład dodamy informację o łącznej pojemność wszystkich dysków w sprzętach z tablicy 'Komputery'.
 <img src={new URL('https://i.imgur.com/90GnySq.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ### 5. Wybieramy układ raportu.
@@ -92,4 +94,4 @@ W celu sprawdzenia, jak nasz dokument będzie wyglądał po wydruku, przechodzim
 * Stopka raportu
 
 Opis i szczegóły każdej z części znajdziemy w dokumentacji Microsoft Access: 
-<a className={link} target="_blank" href="https://support.microsoft.com/pl-pl/office/wprowadzenie-do-raport%C3%B3w-w-programie-access-e0869f59-7536-4d19-8e05-7158dcd3681c"> https://support.microsoft.com/pl-pl/office/wprowadzenie-do-raport%C3%B3w-w-programie-access-e0869f59-7536-4d19-8e05-7158dcd3681c</a>
+<a className={`link`} target="_blank" href="https://support.microsoft.com/pl-pl/office/wprowadzenie-do-raport%C3%B3w-w-programie-access-e0869f59-7536-4d19-8e05-7158dcd3681c"> https://support.microsoft.com/pl-pl/office/wprowadzenie-do-raport%C3%B3w-w-programie-access-e0869f59-7536-4d19-8e05-7158dcd3681c</a>

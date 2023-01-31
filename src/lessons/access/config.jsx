@@ -34,8 +34,8 @@ const AccessLessons = [
     ]},
 
     {name: "Modelowanie", subchapters: [
-        {name: "Włącznie programu MS Access", content: <Wlaczanie/>},
-        {name: "Importowanie danych", content: <Importowanie/>},
+        {name: "Włączanie programu MS Access", content: <Wlaczanie/>},
+        {name: "Wczytywanie danych", content: <Importowanie/>},
         {name: "Relacje", content: <Relacje/>},
         {name: "Tworzenie tabel", content: <Tabele/>},
     ]},
@@ -50,7 +50,7 @@ const AccessLessons = [
     ]},
 
     {name: "Zaawansowane funkcje", subchapters: [
-        {name: "Wyszukiwanie danych po przez odwórcenie problemów + wyjątki", content: <Niedopasowane/>},
+        {name: "Wyszukiwanie danych poprzez odwrócenie problemów + wyjątki", content: <Niedopasowane/>},
         {name: "Wyszukiwanie duplikatów", content: <Duplikaty/>},
         {name: "Zestawienia - kwerendy krzyżowe", content: <Krzyzowe/>},
         // {name: "Agregowanie danych", content: null},

@@ -32,8 +32,11 @@ Widzimy, że pojawiło się nowe pole, którego domyślna wartość to "Grupuj w
 <img src={new URL('https://i.imgur.com/DeehW9R.png', import.meta.url)} alt="xyz" className={'super_small_img'} />
 Większość opcji jest na tyle prostych, że tłumaczy się poprzez nazwę, na przykład "Suma" sumuje wartości z danej kolumny dla wszystkich rekordów będących w danej grupie.
 Ważne, a być może nie tak intuicyjne są następujące opcje:
+
 * Wyrażenie — wybieramy je, gdy w wierszu "Pole" zamiast standardowej nazwy jednej kolumny używamy całego wyrażenia. Co to dokładnie oznacza, opiszę w dziale "3.3. Konstruowanie wyrażeń".
+
 * Gdzie — działa podobnie do "Grupuj według", jednak nie wyświetla danej kolumny w wyniku działania kwerendy. Zazwyczaj używamy go, gdy chcemy dodać jakiś warunek do wiersza "Kryteria".
+
 Jeśli użycie powyższych opcji wciąż nie jest jasne, nie martw się. Najlepiej i najłatwiej jest zrozumieć je na konkretnych zadaniach.
 
 **W naszym przykładzie**, tak jak już powiedzieliśmy, potrzebujemy informacji o 10 najczęściej występujących pojemnościach dysku.
@@ -47,7 +50,7 @@ Nas interesuje jednak 10 najczęściej występujących pojemności. Możemy wysz
 ale oczywiście nie jest to dobre rozwiązanie, szczególnie przy dużej ilości danych.
 Co zatem zrobimy? Wystarczy posortować wyniki malejąco.
 
-#### 7. Sortowanie.
+### 7. Sortowanie.
 ![](https://i.imgur.com/YhyoW73.png)
 Na tym moglibyśmy poprzestać i skopiować do pliku z odpowiedziami pierwsze 10 rekordów.
 Jest jednak lepsze rozwiązanie. Możemy ograniczyć liczbę rekordów w wyniku jeszcze na poziomie kwerendy.
@@ -67,4 +70,5 @@ Teoretycznie nie jest to wymóg formalny, ale nie chcemy przecież denerwować e
 
 Jeśli rozwiązanie będzie w pełni poprawne, ale nie zapiszesz odpowiedzi w pliku (w naszym przykładzie "wyniki6.txt") to nie dostaniesz za nie punktów.
 <img src={new URL('https://i.imgur.com/rlR2EcS.png', import.meta.url)} alt="xyz" className={'small_img'} />
+
 **Cała instrukcja jest bardzo ważna**, ale w tym miejscu zwróćmy szczególną uwagę na zaznaczony fragment.

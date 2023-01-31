@@ -9,7 +9,7 @@ W tym punkcie omówimy import danych od strony technicznej, warto przeczytać te
 
 ### 3. Wybieramy plik, który chcemy zaimportować.
 (W naszym zadaniu, potrzebne będą pliki o nazwach "komputery.txt", "awarie.txt" oraz "naprawy.txt".
-Dalsze kroki pokażemy na przykładnie pliku "awarie.txt".)
+Dalsze kroki pokażemy na przykładzie pliku "awarie.txt".)
 ![](https://i.imgur.com/yrJ5iI1.png)
 
 ### 4. Gdy wybraliśmy już odpowiedni plik, wybieramy pierwszą opcję importu tj."Importuj dane źródłowe do nowej tabeli w bieżącej bazie danych" i klikamy "OK".
@@ -27,7 +27,7 @@ Klikając na każdą z kolumn, sprawdzamy, czy typ danych jest taki, jakiego ocz
 Problematyczne mogą okazać się również daty, zawsze, gdy mamy z nimi do czynienia wchodzimy w opcje zaawansowane i upewniamy się, że wszystkie opcje formatowania ustawione są poprawnie lub w razie potrzeby je edytujemy.
 <img src={new URL('https://i.imgur.com/Zp50yNG.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
-**W naszym przykładzie** z treści zadania wiemy, że data zapisana jest w kolejności rok miesiąc dzień, a rok powinien być czterocyfrowy. Ogranicznikiem daty jest znak '-' natomiast godziny ':'. Należy sprawdzić, czy wszystkie dane ustawione są poprawnie.
+**W naszym przykładzie** z treści zadania wiemy, że data zapisana jest w kolejności rok, miesiąc, dzień, a rok powinien być czterocyfrowy. Ogranicznikiem daty jest znak '-' natomiast godziny ':'. Należy sprawdzić, czy wszystkie dane ustawione są poprawnie.
 <img src={new URL('https://i.imgur.com/ZnQ638b.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 <img src={new URL('https://i.imgur.com/wDwQZ5n.png', import.meta.url)} alt="xyz" className={'medium_img'} />
@@ -36,12 +36,12 @@ Problematyczne mogą okazać się również daty, zawsze, gdy mamy z nimi do czy
 Może być to jedna z kolumn w tabeli. Czasami jednak żadna z kolumn nie spełnia własności klucza podstawowego, wówczas możemy pozwolić Accessowi na dodanie klucza podstawowego.
 Dla przypomnienia — klucz podstawowy (inaczej klucz główny) to kolumna lub grupa kolumn, której wartość jest unikatowa, czyli dla każdego wiersza inna. Pozwala nam on na jednoznaczne zidentyfikowanie danego wiersza (rekordu) w tablicy. (zob. "Teoria baz danych")
 
-**W naszym przykładzie** kluczem podstawowym jest kolumna 'Numer_zgłoszenia'. Wiemy to z treści zadania.
+**W naszym przykładzie** kluczem podstawowym jest kolumna `Numer_zgłoszenia`. Wiemy to z treści zadania.
 <img src={new URL('https://i.imgur.com/QOs0H6a.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 <img src={new URL('https://i.imgur.com/Lb3qtks.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
-**Uwaga:** Przy importowaniu pliku 'Naprawy', musimy pozwolić Accessowi na dodanie klucza podstawowego, ponieważ z treści zadania wiemy, że żadna z kolumn nie zawiera wartości unikatowych.
+**Uwaga:** Przy importowaniu pliku `Naprawy`, musimy pozwolić Accessowi na dodanie klucza podstawowego, ponieważ z treści zadania wiemy, że żadna z kolumn nie zawiera wartości unikatowych.
 <img src={new URL('https://i.imgur.com/ISCIHtP.png', import.meta.url)} alt="xyz" className={'medium_img'} />
 
 ### 9. W ostatnim kroku ustalamy tylko nazwę tabeli, którą właśnie tworzymy.

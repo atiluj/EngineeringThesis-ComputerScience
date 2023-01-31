@@ -5,7 +5,7 @@ Skąd w ogóle wiemy, że przydatna będzie kwerenda wyszukująca niedopasowane 
 Zastanówmy się, jak moglibyśmy podejść do tego problemu. Możemy próbować wyszukać komputery, które uległy tylko awarii o priorytecie niższym niż 8. W zadaniu mamy jednak podpowiedź "wliczamy też komputery, które NIE uległy żadnej awarii". W tabelach mamy natomiast informację o awariach. Możemy więc przypuszczać, że naszym celem będzie odnalezienie danych, które NIE występują w jakiejś tabeli. W tym konkretnym przypadku będą nas interesować komputery (dane o nich weźmiemy z tabeli 'Komputery'), które NIE występują w tabeli 'Awarie'.
 
 Jak zatem podejść do tego zadania. Wykorzystamy tu sporo wiedzy zdobytej wcześniej. Najpierw stworzymy kwerendę pomocniczą, zawierającą dane o wszystkich komputerach, które uległy awarii o priorytecie >= 8.
-Następnie skorzystamy z kwerendy wyszukującej niedopasowane dane, aby zidentyfikować te komputery z tabeli 'Komputery', które nie występują w wyniku naszej kwerendy pomocniczej. W ten sposób otrzymamy zestawienie zawierające te komputery, które uległy awarii o priorytecie Zastosujemy więc tzw. odwrócenie problemu.
+Następnie skorzystamy z kwerendy wyszukującej niedopasowane dane, aby zidentyfikować te komputery z tabeli 'Komputery', które nie występują w wyniku naszej kwerendy pomocniczej. W ten sposób otrzymamy zestawienie zawierające te komputery, które nie uległy awarii.lub uległy awarii o priorytecie niższym niż osiem. Zastosujemy więc tzw. odwrócenie problemu.
 
 ### 0. Przygotowujemy kwerendę pomocniczą.
 <img src={new URL('https://i.imgur.com/XHXfdm0.png', import.meta.url)} alt="xyz" className={'small_img'} />
@@ -46,5 +46,5 @@ Możemy zmienić jej automatyczną nazwę na bardziej przystępną. W tym przyk�
 Mamy co najmniej dwa sposoby na policzenie rekordów.
 Liczbę rekordów możemy odczytać bezpośrednio z widoku wyniku.
 ![](https://i.imgur.com/n1PUos9.png)
-Lub stworzyć nową kwerendę, która policzy ilość rekordów w poprzedniej. (Wtedy warto zmienić nazwę "zad 5" na "zad 5 pom2", a dopiero ostateczny wynik nazwać "zad 5". Oczywiście możemy też przyjąć inną konwencję nazewniczą. Tak długo, jak jest ona czytelna i przejrzysta, wszystko powinno być w porządku.)
+Lub możemy stworzyć nową kwerendę, która policzy ilość rekordów w poprzedniej. (Wtedy warto zmienić nazwę "zad 5" na "zad 5 pom2", a dopiero ostateczny wynik nazwać "zad 5". Oczywiście możemy też przyjąć inną konwencję nazewniczą. Tak długo, jak jest ona czytelna i przejrzysta, wszystko powinno być w porządku.)
 ![](https://i.imgur.com/3ZfhSEG.png)

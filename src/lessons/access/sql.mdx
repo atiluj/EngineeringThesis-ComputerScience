@@ -4,16 +4,16 @@ Zacznijmy od formalnego zdefiniowania, czym jest język SQL? Czy jest to język 
 
 ## Podział SQL (dodatkowe)
 * DML (data manipulation language)
-* DELETE (usuń)
-* INSERT (wstaw)
-* UPDATE (aktualizuj/zmień)
+    * DELETE (usuń)
+    * INSERT (wstaw)
+    * UPDATE (aktualizuj/zmień)
 * DDL (data definition language)
-* CREATE
-* DROP
-* ALTER
+    * CREATE
+    * DROP
+    * ALTER
 
 ## Dlaczego warto nauczyć się SQL-a?
-1. Na części teoretycznej matury z informatyki mogą pojawić się pytania wymagające jego znajomości i są to bardzo łatwe do zdobycia punkty (W dalszej części tej lekcji omówimy przykładowe zadania tego typu ***link***).
+1. Na części teoretycznej matury z informatyki mogą pojawić się pytania wymagające jego znajomości i są to bardzo łatwe do zdobycia punkty (zob. "Zadania z baz danych").
 
 2. Zrozumienie SQL pomoże Ci w udoskonaleniu twojej pracy z MS Access, a także umożliwi poprawienie zapytań, które nie działają zgodnie z twoimi oczekiwaniami.
 
@@ -40,8 +40,13 @@ Zaletą języka SQL jest łatwość jego zrozumienia. Zadania w SQL możemy czyt
 ### Zadawanie zapytań (potocznie: kwerendy)   
 
 #### Szablon składni
-<span className="color_marked_text">SELECT</span> co <span className="color_marked_text">[F.AGREGUJĄCE] <br/>
-FROM </span> tabele <br/>
-<span className="color_marked_text"> WHERE </span> warunki <br/>
+<br/>
+(Kolorem fioletowym wyróżniamy funkcje SQL-a, natomiast te zapisane w nawiasach [] to funkcje opcjonalne, możemy, ale nie musimy ich dodawać.)
+<br/><br/>
+
+
+<span className="color_marked_text">SELECT</span> tutaj_nazwa_kolumny <span className="color_marked_text">[F.AGREGUJĄCE] <br/>
+FROM </span> tutaj_nazwa_tabeli <br/>
+<span className="color_marked_text"> WHERE </span> tutaj_warunki <br/>
 <span className="color_marked_text"> [DODATKOWE KLAUZULE] </span> <br/>
 
