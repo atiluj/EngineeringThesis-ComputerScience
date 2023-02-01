@@ -12,6 +12,17 @@ import ExerciseSet from './components/exerciseSet/ExerciseSet'
 import Section from './components/section/Section'
 import Home from './components/home/Home'
 import Footer from './components/footer/Footer';
+import accessLogo from './img/access_logo.png';
+import excelLogo from './img/excel_logo.png';
+import pythonLogo from './img/python_logo.png';
+import teoriaLogo from './img/teoria_logo.png';
+
+const sections = [
+    {path: 'excel', lessons: ExcelLessons, logo: excelLogo},
+    {path: 'teoria', lessons: TeoriaLessons, logo: teoriaLogo},
+    {path: 'access', lessons: AccessLessons, logo: accessLogo},
+    {path: 'python', lessons: PythonLessons, logo: pythonLogo}
+];
 
 function Dashboard() {
     return (
@@ -33,10 +44,10 @@ function App() {
                 <Route path='interpreter' element={<Interpreter />} />
                 <Route path='exercise' element={<ExerciseSet />} />
                 <Route path='exercise/:id' element={<Exercise lessons={ExercisesPython} />}/>
-                <Route path='access' element={<Section lessons={AccessLessons} title="access"/>} />
-                <Route path='excel' element={<Section lessons={ExcelLessons} title="excel"/>} />
-                <Route path='teoria' element={<Section lessons={TeoriaLessons} title="teoria"/>} />
-                <Route path='python' element={<Section lessons={PythonLessons} title="python"/>} />
+                {sections.map((section) => (
+                    <Route path={section.path} element={<Section lessons={section.lessons} title={section.path} logo={section.logo}/>}>
+                    </Route>
+                ))}
             </Route>
         </Routes>
     </BrowserRouter>

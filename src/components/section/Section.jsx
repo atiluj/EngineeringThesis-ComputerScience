@@ -1,85 +1,16 @@
-import styles from './Section.module.css';
 import * as React from 'react';
-import hljs from 'highlight.js';
+import styles from './Section.module.css';
+import { useSearchParams } from 'react-router-dom';
 import 'highlight.js/styles/dark.css';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import Collapse from '@mui/material/Collapse';
-import { useSearchParams } from 'react-router-dom';
 
+import NavContext from './NavContext';
+import Chapter from './components/Chapter';
+import Contents from './components/Contents';
 import Comments from '../Comments';
 
-const NavContext = React.createContext({
-    curChapter: 0,
-    curSubchapter: 0,
-    changeChapter: (chapter, subchapter) => { },
-});
-
-function Subchapter({ chapterId, subchapterId, subchapter }) {
-    const { changeChapter, curChapter, curSubchapter } = React.useContext(NavContext);
-    const isCurrent = chapterId == curChapter && subchapterId == curSubchapter;
-    return <a href="#" className={`${styles.subtopic} menu_button` + (isCurrent ? ` ${styles.subtopic_current}` : ``)}
-        onClick={() => changeChapter(chapterId, subchapterId)}>
-        {chapterId}.{subchapterId + 1}. {subchapter.name}
-    </a>;
-}
-
-function ChapterWithSubchapters({ chapter, chapterId }) {
-    const { curChapter } = React.useContext(NavContext);
-    const [show, setShow] = React.useState(false); //domyślnie schowane
-    React.useEffect(() => {
-        if (curChapter == chapterId) setShow(true);
-    }, [curChapter]);
-    return <div className={`left_menu`}>
-        <div className={`${styles.topic} menu_button`} onClick={() => setShow(show => !show)}>
-            <a>{chapterId}. {chapter.name}</a>
-            {show ? <ExpandLess /> : <ExpandMore />}
-        </div>
-        <Collapse in={show}>
-            {chapter.subchapters.map((subchapter, subchapterId) =>
-                <Subchapter key={subchapterId}
-                    chapterId={chapterId} subchapterId={subchapterId} subchapter={subchapter} />
-            )}
-        </Collapse>
-    </div>;
-}
-
-function ChapterStandalone({ chapter, chapterId }) {
-    const { changeChapter } = React.useContext(NavContext);
-    return <div className={'left_menu'} onClick={() => changeChapter(chapterId, 0)}>
-        <div className={`${styles.topic} menu_button`}>
-            <a>{chapterId}. {chapter.name}</a>
-            <ExpandMore style={{ visibility: "hidden" }}/>
-        </div>
-    </div>;
-}
-
-function Chapter({ chapter, chapterId }) {
-    return (
-        chapter.subchapters ?
-            <ChapterWithSubchapters chapter={chapter} chapterId={chapterId} /> :
-            <ChapterStandalone chapter={chapter} chapterId={chapterId} />
-    );
-}
-
-function Contents({lessons}) {
-    const { curChapter, curSubchapter } = React.useContext(NavContext);
-    const chapter = lessons[curChapter];
-    const subchapter = chapter.subchapters ? chapter.subchapters[curSubchapter] : chapter;
-    let title = `${curChapter}.`;
-    if (chapter.subchapters)
-        title += `${curSubchapter + 1}.`;
-    title += ` ${subchapter.name}`;
-    React.useEffect(() => { hljs.highlightAll(); }, [subchapter.content]); //śmieszna funkcja do skanownaia stronki i kolorowania kodu
-    return <article className={`second`}>
-        <h1>{title}</h1>
-        {subchapter.content}
-    </article>;
-}
-
-function Section({lessons, title}) {
+function Section({lessons, title, logo}) {
     const [curChapter, setCurChapter] = React.useState(0);
     const [curSubchapter, setCurSubchapter] = React.useState(0);
     const [searchParams, setSearchParams] = useSearchParams();
@@ -132,15 +63,9 @@ function Section({lessons, title}) {
     return <NavContext.Provider value={{ curChapter, curSubchapter, changeChapter }}>
         <main className={styles.main}>
             <div className={styles.contents}>
-                {/* <div className={`${styles.title} ${styles.ft}`}>
-                    <a>{title}</a>
-                </div> */}
                 <div className={`${styles.cont_title} ${styles.title}`}>
                     <a>{title}</a>
-                    {title === 'access' ? <img src={new URL('../../img/access_logo.png', import.meta.url)} alt="Logo access" className={styles.section_logo}/> : null}
-                    {title === 'excel' ? <img src={new URL('../../img/excel_logo.png', import.meta.url)} alt="Logo excel" className={styles.section_logo}/> : null}
-                    {title === 'teoria' ? <img src={new URL('../../img/teoria_logo.png', import.meta.url)} alt="Logo teoria" className={styles.section_logo}/> : null}
-                    {title === 'python' ? <img src={new URL('../../img/python_logo.png', import.meta.url)} alt="Logo python" className={styles.section_logo}/> : null}
+                    <img src={logo} alt="Logo" className={styles.section_logo}/>
                 </div>
 
                 <div className={styles.cont}>
