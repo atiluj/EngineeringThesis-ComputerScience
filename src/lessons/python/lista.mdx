@@ -1,14 +1,14 @@
 ## Struktura danych
-**Struktura danych** to taki pojemnik na dane, który sprawia, że są one przechowywane w uporządkowany sposób. Dzięki temu możemy bardzo łatwo je odnajdować i manipulować. Wybór odpowiedniej struktury zależy od rodzaju danych jake chcemy przechowywać oraz od tego, jakie operacje chcemy na nich wykonywać.
+**Struktura danych** to taki pojemnik na dane, który sprawia, że są one przechowywane w uporządkowany sposób. Dzięki temu możemy bardzo łatwo je odnajdować i manipulować. Wybór odpowiedniej struktury zależy od rodzaju danych, jakie chcemy przechowywać oraz od tego, jakie operacje chcemy na nich wykonywać.
 
-W Pythonie istnieje kilka podstawowych struktur danych, z którymi zapoznamy się w tym temacie. 
+W Pythonie istnieje kilka podstawowych struktur danych, z którymi zapoznamy się w tej lekcji. 
 
 ## Lista (list)
-Wcześniej zdefiniowaliśmy pojęcie zmiennej jako pudełka. W takim razie, **listę** możemy możemy sobie wyobrazić jako zestaw takich pudełek, ułożonych obok siebie w ustalonej kolejności. Pozwala nam ona przechowywać wiele obiektów w jednym miejscu.
+Wcześniej zdefiniowaliśmy pojęcie zmiennej jako pudełka. W takim razie **listę** możemy sobie wyobrazić jako zestaw takich pudełek, ułożonych obok siebie w ustalonej kolejności. Pozwala nam ona przechowywać wiele obiektów w jednym miejscu.
 
 <img src={new URL('../../img/python_pudelka.png', import.meta.url)} alt="lista jako zestaw pudełek" className={`big_img`}/>
 
-Listę tworzymy za pomocą nawiasów kwadratowych **[]**, w których umieszczamy kolejne elementy, poodzielane przecinkami. Co istotne, lista może przechowywać elementy o różnych typach. 
+Listę tworzymy za pomocą nawiasów kwadratowych **[]**, w których umieszczamy kolejne elementy, pooddzielane przecinkami. Co istotne, lista może przechowywać elementy o różnych typach. 
 
 ```python
 >>> lista = [3, 15, -5, 24, 3]
@@ -39,7 +39,7 @@ Możemy również zmodyfikować element listy:
 [2023, 'Ala', 'Ola', True, 10]
 ```
 
-Możemy również utworzyć pustą listę. W tym caly używamy pustych nawiasów kwadratowych **[]** lub funkcji **list()**.
+Możemy również utworzyć pustą listę. W tym celu używamy pustych nawiasów kwadratowych **[]** lub funkcji **list()**.
 
 ```python
 pusta_lista = []
@@ -48,7 +48,7 @@ inna_lista = list()
 Sama funkcja **list()** służy również do zmiany innej struktury danych, np. słownika czy krotki na listę. Działa więc w analogiczny sposób jak **int()** czy **str()**.
 
 ### Więcej o indeksowaniu
-Elementy w liście nie są numerowane tylko od przodu (od 0), ale również od tyłu .
+Elementy w liście nie są numerowane tylko od przodu (od 0), ale również od tyłu.
 
 <img src={new URL('../../img/python_samochody.png', import.meta.url)} alt="lista jako zestaw pudełek" className={`big_img`}/>
 
@@ -162,7 +162,7 @@ Możemy też usunąć element za pomocą **remove**. Tym razem nie będziemy pod
 Zwróć uwagę na to, że **remove** usuwa tylko pierwsze wystąpienie podanej wartości!
 
 ### Kopiowanie listy
-Na lekcji *Zmienne* poznaliśmy sposób kopiowania zmiennych za pomocą operatora przypisania *=*. W przypadku złożonych struktur danych - takich jak listy - ten sposób się jednak nie sprawdzi.
+Na lekcji *Zmienne* poznaliśmy sposób kopiowania zmiennych za pomocą operatora przypisania *=*. W przypadku złożonych struktur danych — takich jak listy — ten sposób się jednak nie sprawdzi.
 ```python
 >>> lista1 = [1, 2, 3]
 >>> lista2 = lista1
@@ -171,9 +171,9 @@ Na lekcji *Zmienne* poznaliśmy sposób kopiowania zmiennych za pomocą operator
 [1, 5, 3]
 ```
 Zauważ, że zmiana w liście drugiej powoduje także zmianę w pierwszej liście. <br/>
-Ale właściwie, dlaczego tak się stało? W przypadku złożonych struktur danych operator przypisania nie kopiuje obiektu, tylko adres pamięci. To oznacza, że *lista1* i *lista2* wskazują na ten sam adres pamięci, a tym samym w pamięci istnieje tylko jedna instacja tej listy. <br/> <br/>
+Ale właściwie, dlaczego tak się stało? W przypadku złożonych struktur danych operator przypisania nie kopiuje obiektu, tylko adres pamięci. To oznacza, że *lista1* i *lista2* wskazują na ten sam adres pamięci, a tym samym w pamięci istnieje tylko jedna instancja tej listy. <br/> <br/>
 
-Aby poprawnie utworzyć kopię listy możemy użyć funkcji **copy()**. 
+Aby poprawnie utworzyć kopię listy, możemy użyć funkcji **copy()**. 
 ```python
 >>> lista1 = [1, 2, 3]
 >>> lista2 = lista1.copy()
@@ -202,7 +202,7 @@ Możemy posortować listę za pomocą funkcji **sort()**
 [1, 2, 5, 10, 14]
 ```
 
-Jeżeli chcemy posortować listę malejąco dodajemy do funkcji sort argument **reverse=True**. 
+Jeżeli chcemy posortować listę malejąco, dodajemy do funkcji sort argument **reverse=True**. 
 
 ```python
 >>> liczby = [10, 2, 14, 5, 1]
@@ -231,7 +231,7 @@ Albo zamiast powyższej funkcji możemy użyć **slicing'u**:
 ```
 
 ### Wyszukiwanie elementu w liście
-Aby sprawdzić czy dany element występuje lekcji używamy operatora **in**.
+Aby sprawdzić, czy dany element występuje w liście, używamy operatora **in**.
 ```python
 >>> liczby = [10, 2, 14, 5, 1]
 >>> 2 in liczby
@@ -248,7 +248,7 @@ Nie dostajemy jednak informacji o tym, w którym miejscu listy znajduje się ten
 Jeżeli w liście istnieje więcej niż jeden element, który wyszukujemy, to powyższa funkcja zawsze zwróci nam indeks jego pierwszego wystąpienia.
 
 ### Zliczanie wystąpień elementu w liście
-Aby zliczyć ile razy jakiś element wystąpił w liście używamy **count()**:
+Aby zliczyć ile razy jakiś element wystąpił w liście, używamy **count()**:
 ```python
 >>> liczby = [10, 1, 2, 10, 10]
 >>> liczby.count(10)

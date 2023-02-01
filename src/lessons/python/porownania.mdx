@@ -1,5 +1,5 @@
 ## Operatory porównania
-Na co dzień często korzystamy z porównań. Na przykład, kiedy jesteśmy w sklepie, sprawdzamy czy cena produktu X jest większa od ceny produktu Y. W języku matematycznym moglibyśmy to zapisać jako **cena_X > cena_Y**. Podczas programowania w Pythonie będziemy używać tych samych operatorów, które znamy z lekcji matematyki.<br/><br/>
+Na co dzień często korzystamy z porównań. Na przykład, kiedy jesteśmy w sklepie, sprawdzamy, czy cena produktu X jest większa od ceny produktu Y. W języku matematycznym moglibyśmy to zapisać jako **cena_X > cena_Y**. Podczas programowania w Pythonie będziemy używać tych samych operatorów, które znamy z lekcji matematyki.<br/><br/>
 
 * **x < y** - x mniejsze od y
 * **x > y** - x większe od y
@@ -89,7 +89,7 @@ Zamiast używać operatora **and** do łączenia porównań, możemy również p
 >>> x <= y < z
 True
 ```
-Powyższe porównanie jest równoważne **x <= y and y < z**. Jedyną różnicą jest to, że w połączonym wyrażeniu **y** będzie obliczone tylko raz, a w drugim dwukrotnie. <br/><br/> Jeśli **x <= y** okaże się fałszem, to wyrażenie **z** nie zostanie obliczone. Dzieje się tak, ponieważ Python wykonuje porównania w sposób "leniwy", czyli tylko wtedy, gdy jest to konieczne. <br/><br/> Aby lepiej zrozumieć to zjawisko, przeanalizujmy jeszcze jeden przykład. Wiemy z matematyki, że dzielenie przez 0 jest niedozwolone. Python również to wie, dlatego jeśli spróbujemy użyć takiego porównania, program zwróci odpowiedni błąd.
+Powyższe porównanie jest równoważne **x <= y and y < z**. Jedyną różnicą jest to, że w połączonym wyrażeniu **y** będzie obliczone tylko raz, a w drugim dwukrotnie. <br/><br/> Jeśli **x <= y** okaże się fałszem, to wyrażenie **z** nie zostanie obliczone. Dzieje się tak, ponieważ Python wykonuje porównania w sposób "leniwy", czyli tylko wtedy, gdy jest to konieczne. <br/><br/> Aby lepiej zrozumieć to zjawisko, przeanalizujmy jeszcze jeden przykład. Wiemy z matematyki, że dzielenie przez 0 jest niedozwolone. Python również to wie, dlatego, jeśli spróbujemy użyć takiego porównania, program zwróci odpowiedni błąd.
 ```python
 >>> 3 / 0 and 1 == 2
 Traceback (most recent call last):
@@ -181,7 +181,7 @@ False
 Dlatego przy porównywaniu wartości niezmiennych (np. liczb, stringów) lepiej używać operatora **==**, ponieważ on porównuje wartości obiektów, a nie referencje (adres pamięci). 
 
 ### Operator in
-Operator **in** służy do sprawdzania czy dany element znajduje się w danej kolekcji (takich jak lista, krotka czy string). 
+Operator **in** służy do sprawdzania, czy dany element znajduje się w danej kolekcji (takich jak lista, krotka czy string). 
 
 ```python
 >>> lista = [1, 2, 3]

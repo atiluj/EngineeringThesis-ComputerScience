@@ -1,4 +1,4 @@
-<br/>Czasem chcemy, aby pewna instrukcja wykonała się kilka razy. W przypadku ręcznego powtarzania tych samych instrukcji mogłoby być nużące i czasochłonne. Całe szczęście z pomocą przychodzą nam pętle. Pozwalają one na automatyczne powtarzanie określonej instrukcji (lub sekwencji instrukcji). Dzięki pętlom, kod jest bardziej zoptymalizowany i łatwiejszy do utrzymania.
+<br/>Czasem chcemy, aby pewna instrukcja wykonała się kilka razy. W przypadku ręcznego powtarzania tych samych instrukcji mogłoby być nużące i czasochłonne. Całe szczęście z pomocą przychodzą nam pętle. Pozwalają one na automatyczne powtarzanie określonej instrukcji (lub sekwencji instrukcji). Dzięki pętlom kod jest bardziej zoptymalizowany i łatwiejszy do utrzymania.
 
 ## Pętla for
 
@@ -31,11 +31,11 @@ for zmienna in zakres:
 
 ### Range
 **range(start, stop, krok)** to taka funkcja w Pythonie, która umożliwia nam generowanie sekwencji liczb. 
-* **start** - to liczba od której zaczyna się sekwencja (jest to opcjonalny argument, domyślnie jest to 0)
+* **start** - to liczba, od której zaczyna się sekwencja (jest to opcjonalny argument, domyślnie jest to 0)
 * **stop** - to liczba, na której sekwencja się kończy (nie włącznie)
 * **krok** - liczba, o jaką każda kolejna wygenerowana liczba ma się zwiększyć (argument opcjonalny, domyślnie jest to 1)
 
-Poniższy kod wypisze na ekranie liczby od 0 do 4. Podaliśmy tutaj jedynie argument **stop**, więc domyślnie **start=0**, a **krok=1**. 
+Poniższy kod wypisze na ekranie liczby od 0 do 4. Podaliśmy tutaj jedynie argument **stop**, więc domyślnie **start=0** a **krok=1**. 
 ```python
 for i in range(5):
     print(i)
@@ -46,7 +46,7 @@ Inny przykład:
 for i in range(4, 10, 2):
     print(i)
 ```
-Powyższy kod wypisze na ekranie liczby parzyste od 4 do 8 (bo 10 nie jest włączne, a krok ustawiliśmy na 2).
+Powyższy kod wypisze na ekranie liczby parzyste od 4 do 8 (bo 10 nie jest włącznie, a krok ustawiliśmy na 2).
 
 ### Pętla for i listy
 Aby odczytać elementy z listy, możemy użyć pętli for na dwa sposoby:
@@ -57,7 +57,7 @@ studenci = ["Ola", "Adam", "Julita", "Marcin", "Karol"]
 for i in range(len(studenci)):
     print("Dzień dobry " + studenci[i])
 ```
-W powyższym przykładzie przechodzimy po elementach listy odwołując się do jej indeks. **range(len(studenci))** generuje indeksy od 0 aż do długości tablicy - 1 (włącznie).<br/>
+W powyższym przykładzie przechodzimy po elementach listy, odwołując się do jej indeksów. **range(len(studenci))** generuje indeksy od 0 aż do długości tablicy - 1 (włącznie).<br/>
 Istnieje jednak ładniejszy i bardziej czytelny sposób odwoływania się do kolejnych elementów w liście:
 ```python
 for student in studenci:
@@ -73,14 +73,14 @@ for i in range(len(liczby)):
     liczby[i] += 1
 print(liczby) # [2, 3, 4, 5, 6]
 ```
-W powyższym przykładzie wszystko zadziałało tak jak się tego spodziewaliśmy. Co jednak jeśli użyjemy pętli for na drugi poznany już sposób:
+W powyższym przykładzie wszystko zadziałało tak, jak się tego spodziewaliśmy. A co, jeśli użyjemy pętli for na drugi poznany już sposób:
 ```python
 for liczba in liczby:
     liczba += 1
     
 print(liczby) # [1, 2, 3, 4, 5]  
 ```
-Chwila, otrzymujemy niezmodyfikowaną tablicę. Ale dlaczego? 
+Chwila, otrzymujemy niezmodyfikowaną tablicę. Dlaczego? 
 Konstrukcja **for liczba in liczby** działa mniej więcej w taki sposób:
 ```python
 for i in range(len(liczby)):
@@ -90,7 +90,7 @@ for i in range(len(liczby)):
 **for liczba in liczby** tworzy kopię zmiennej znajdującej się w liście i modyfikuje ją, co nie ma wpływu na oryginalną listę. Dlatego ważne jest, aby pamiętać o tym podczas pracy z listami i używać odpowiedniej metody modyfikowania elementów.
 
 ### Pętla w pętli
-Zagnieżdzanie pętli polega na umieszczeniu jednej pętli wewnątrz drugiej. W Pythonie jest to często przydatne, szczególnie przy pracy z danymi posiadającymi wiele poziomów zagnieżdżenia. <br/><br/> Przykładem może być pętla zewnętrzna poruszająca się po wierszach, a wewnętrzna po kolumnach listy dwuwymiarowej.
+Zagnieżdżanie pętli polega na umieszczeniu jednej pętli wewnątrz drugiej. W Pythonie jest to często przydatne, szczególnie przy pracy z danymi posiadającymi wiele poziomów zagnieżdżenia. <br/><br/> Przykładem może być pętla zewnętrzna poruszająca się po wierszach, a wewnętrzna po kolumnach listy dwuwymiarowej.
 ```python
 lista = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 for wiersz in lista:

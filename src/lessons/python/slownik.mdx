@@ -13,7 +13,7 @@ True
 ```
 Aby dostać się do jakiegoś elementu (wartości), musimy użyć konkretnego klucza. Zarówno klucze, jak i wartości mogą być różnego rodzaju obiektami (np. liczbami, napisami czy nawet złożonymi typami). 
 
-Możemy w prosty sposób powiększyć nasz słownik dopisując do nieistniejącego klucza nową wartość. 
+Możemy w prosty sposób powiększyć nasz słownik, dopisując do nieistniejącego klucza nową wartość. 
 
 ```python
 >>> slownik = {0: 'zero', 1: 'jeden'}
@@ -31,7 +31,7 @@ Możemy w prosty sposób powiększyć nasz słownik dopisując do nieistniejące
 >>> slownik.keys() 
 dict_keys(['klucz', 'ala', 1])
 ```
-Zauważmy, że obiekt który jest zwracany przez tę funkcję jest typu **dict_keys**. Aby więc wygodnie operować na kluczach, należy przekształcić je w listę za pomocą list **list()**
+Zauważmy, że obiekt, który jest zwracany przez tę funkcję, jest typu **dict_keys**. Aby więc wygodnie operować na kluczach, należy przekształcić je w listę za pomocą list **list()**
 
 ```python
 >>> slownik = {'klucz' : 'wartosc', 'ala' : 'ma kota', 1 : True}
