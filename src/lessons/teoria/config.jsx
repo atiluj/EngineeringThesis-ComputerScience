@@ -25,7 +25,7 @@ const TeoriaLessons = [
     {name: "Wskazówki", content: <Wskazowki />},
 
     {name: "Komputer", subchapters: [
-        {name: "Komputer i jego części", content: <KomputerIJegoCzesci />},
+        // {name: "Komputer i jego części", content: <KomputerIJegoCzesci />},
         // {name: "System operacyjny", content: null},
         {name: "Zadania maturalne", content: <ZadaniaKomputer/>},
     ]},
