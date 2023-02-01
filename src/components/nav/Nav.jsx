@@ -6,9 +6,6 @@ import Stack from '@mui/material/Stack';
 import Toolbar from '@mui/material/Toolbar';
 import { Link } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
-// import { padding } from '@mui/system';
-
-
 
 const DARK_MODE_KEY = 'dark-mode';
 

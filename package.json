@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "start": "parcel public/*.html",
+    "upload": "rsync -aP --delete --rsh=ssh dist/ wwwserver:~/websites/nuwis",
     "build": "rm -rf dist && parcel build public/*.html && cp src/.htaccess dist",
     "postinstall": "patch-package"
   },

@@ -1,11 +1,11 @@
 RewriteEngine On
 
-# RewriteCond %{HTTPS} off
-# RewriteCond %{HTTP:X-Forwarded-Proto} !https
-# RewriteRule (.*) https://wpmii.pl/$1 [L,R=301,NE]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule (.*) https://nuwis.pl/$1 [L,R=301,NE]
 
-# RewriteCond %{HTTP_HOST} ^www\. [NC]
-# RewriteRule (.*) https://wpmii.pl/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule (.*) https://nuwis.pl/$1 [L,R=301]
 
 # dla każdego pliku jeśli on nie istnieje to index.html
 RewriteCond %{REQUEST_FILENAME} !-f
