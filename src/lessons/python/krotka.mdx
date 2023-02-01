@@ -12,6 +12,13 @@ Krotki definiujemy je podobnie jak listy, z tą różnicą, że zamiast nawiasó
 >>> inna_krotka = tuple()
 ```
 
+Tak naprawdę, do jej utworzenia, nie musimy używać nawiasów:
+```python
+>>> krotka = 1, 2, 3
+>>> krotka
+(1, 2, 3)
+```
+
 Aby dostać się konkretnego elementu, używamy indeksów, identycznie jak w przypadku zwykłych list. 
 
 ```python
@@ -105,4 +112,17 @@ Powiedzieliśmy, że krotki mogą zawierać dowolne obiekty. Skoro tak, to mogą
 >>> krotka2 = (11, ["Ala ma kota", "Basia ma psa"])
 >>> krotka2[1]
 ["Ala ma kota", "Basia ma psa"]
+```
+
+## Zamiana wartości zmiennych
+Ciekawym trikiem z użyciem krotki jest zamiana wartości zmiennych miejscami:
+```python=
+>>> jeden = 1
+>>> dwa = 2
+
+>>> jeden, dwa = dwa, jeden
+>>> jeden
+2
+>>> dwa
+1
 ```

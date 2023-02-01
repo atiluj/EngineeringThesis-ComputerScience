@@ -18,3 +18,20 @@ wynik = dodaj(2, 3)
 print(wynik) # 5
 print(dodaj(10, 20)) # 30
 ```
+
+Możemy zwrócić więcej niż jedną wartość z funkcji, zapisując je po przecinku przy `return`. Odczytujemy zapisując oddzielone przecinkami nazwy zmiennych, do których je przypisujemy:
+```python=
+def wiele_wartosci():
+    return 1, 2, 3
+
+a, b, c = wiele_wartosci()
+print(a) # => 1
+print(b) # => 2
+print(c) # => 3
+```
+
+Wynik tej funkcji możemy również przypisać do jednej zmiennej. Otrzymamy wtedy krotkę:
+```python=
+wszystko = wiele_wartosci()
+print(wszystko) # => (1, 2, 3)
+```
