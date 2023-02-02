@@ -66,6 +66,10 @@
     top: 60px;
     flex-direction: column;
 }
+/* 
+.main .contents .cont .menu_button:first-child{
+    margin-top: 0px;
+} */
 
 .main article {
     /* font-family: 'IBM Plex Serif', serif; */

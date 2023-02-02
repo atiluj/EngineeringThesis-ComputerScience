@@ -183,6 +183,10 @@ img.section_logo {
   filter: var(--screen_filter);
 }
 
+.cont .left_menu .menu_button{
+  margin-top: 3px;
+}
+
 @media (max-width: 1400px) {
   .main {
     grid-template-columns: 22vw 1fr;
