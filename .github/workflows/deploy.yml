@@ -11,6 +11,7 @@ jobs:
     steps:
     - name: ssh config
       run: |
+          mkdir ~/.ssh
           echo "Host wwwserver" > ~/.ssh/config
           echo "Hostname $HOSTING_HOSTNAME" >> ~/.ssh/config
           echo "Port $HOSTING_PORT" >> ~/.ssh/config
