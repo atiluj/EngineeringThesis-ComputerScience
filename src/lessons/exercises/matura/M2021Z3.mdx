@@ -7,7 +7,7 @@ import Code from "../../../components/code/Code.jsx";
 <br/>
 </div>
 
-### TREŚĆ:
+### TREŚĆ
 Pewna firma przygotowuje wyświetlanie napisów złożonych z wielkich liter alfabetu
 angielskiego. Na początku napis jest pusty (nie zawiera liter). W pliku instrukcje.txt
 podanych jest 2000 instrukcji, które wykonuje automat do generowania napisu. Każda
@@ -54,14 +54,77 @@ Dla pliku przyklad.txt odpowiedzią jest litera U, dopisywana 3 razy.
 
 <br/><br/>
 
-<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE">
-    <p className={`dropdown_text`}>
-        BLA BLA ROZWIĄZANIE
-    </p>
+<Dropdown title="ODPOWIEDŹ">
+
+```
+# Z 37
+```
+</Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```
+import collections
+
+# Pomocnicze funkcje
+
+def wczytaj_dane():
+  with open("instrukcje.txt") as plik:
+    return [x.rstrip().split(" ") for x in plik.readlines()]
+
+def nastepna_litera(litera):
+  if litera == "Z": return "A"
+  else: return chr(ord(litera)+1)
+
+def zmien(napis, litera):
+  return napis.replace(litera, nastepna_litera(litera), 1)
+
+# Podpunt 4.1) i 4.4)
+
+def wykonaj(dotychczasowy_wynik, polecenie):
+  rodzaj, argument = polecenie
+  if rodzaj == "DOPISZ":
+    return dotychczasowy_wynik + argument
+  elif rodzaj == "ZMIEN":
+    return dotychczasowy_wynik[:-1] + argument
+  elif rodzaj == "USUN":
+    return dotychczasowy_wynik[:-1]
+  else:
+    return zmien(dotychczasowy_wynik, argument)
+
+def wykonaj_wszystko(polecenia):
+  wynik = ""
+  for p in polecenia: 
+    wynik = wykonaj(wynik, p)
+  return wynik
+
+# Podpinkt 4.2)
+
+def najczestsze_operacje_po_sobie(polecenia):
+  najcz, najcz_wyst, akt, akt_wyst = "", 0, "", 0 
+  for (tresc, arg) in polecenia:
+    if akt == tresc: akt_wyst += 1
+    else: akt, akt_wyst = tresc, 1
+    if akt_wyst > najcz_wyst:
+      najcz, najcz_wyst = akt, akt_wyst
+  return (najcz, najcz_wyst)
+
+# Podpunkt 4.3)
+
+def najczestsza_litera(polecenia):
+  litery = [y for (x,y) in polecenia if x == "DOPISZ"]
+  return collections.Counter(litery).most_common(1)[0]
+
+polecenia = wczytaj_dane()
+po_wykonaniu = wykonaj_wszystko(polecenia)
+print("4.1)", len(po_wykonaniu))
+print("4.2)", najczestsze_operacje_po_sobie(polecenia))
+print("4.3)", najczestsza_litera(polecenia))
+print("4.4)", po_wykonaniu)
+
+```
+
 </Dropdown>
 
 <Dropdown title="PRZYKŁADOWE ROZWIĄZANIE">
-    <Code>
-    BLA BLA ROZWIĄZANIE
-    </Code>
 </Dropdown>

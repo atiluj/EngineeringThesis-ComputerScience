@@ -7,7 +7,7 @@ import Code from "../../../components/code/Code.jsx";
 <br/>
 </div>
 
-### TREŚĆ:
+### TREŚĆ
 W pliku liczby.txt zapisano 500 liczb całkowitych dodatnich po jednej w każdym wierszu.
 Każda liczba jest z zakresu od 1 do 100 000. Napisz program(-y) dający(-e) odpowiedzi do
 poniższych zadań. Zapisz uzyskane odpowiedzi w pliku wyniki4.txt, poprzedzając każdą
@@ -37,14 +37,171 @@ wspólny dzielnik 10.
 
 <br/><br/>
 
-<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE">
-    <p className={`dropdown_text`}>
-        BLA BLA ROZWIĄZANIE
-    </p>
+<Dropdown title="ODPOWIEDŹ">
+
+```
+# pierwsza liczba: 31968,
+# długość ciągu: 150,
+# dzielnik: 74 
+```
+
 </Dropdown>
 
 <Dropdown title="PRZYKŁADOWE ROZWIĄZANIE">
-    <Code>
-    BLA BLA ROZWIĄZANIE
-    </Code>
+</Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - C++">
+
+```
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+#include <numeric>
+#include <string>
+#include <functional>
+using namespace std;
+
+//---------------------------- POMOCNICZE FUNKCJE ------------------------------
+
+vector<int> dane_z_pliku() {
+	vector<int> dane;
+	fstream plik;
+	plik.open("liczby.txt");
+
+	int x;
+	while(plik >> x) {
+		dane.push_back(x);
+	}
+
+	plik.close();
+	return dane;
+}
+
+void wypisz_wektor(vector<int> dane) {
+	cout << "[";
+	for(int i = 0; i < dane.size(); i++) {
+		cout << dane[i];
+		if(i != (dane.size()-1)) cout << ", ";
+	}
+	cout << "]" << endl;
+}
+
+//---------------------------- PODPUNKT A --------------------------------------
+
+bool potega_3(int x) {
+	if(x == 1) return true;
+	else if(x % 3 != 0) return false;
+	else return potega_3(x / 3);
+}
+
+void podpunkt_a(vector<int> dane) {
+	cout << "5.1) " << count_if(dane.begin(), dane.end(), potega_3) << endl;
+}
+
+//---------------------------- PODPUNKT B --------------------------------------
+
+int silnia(int n) {
+	if(n == 0) return 1;
+	else return n * silnia(n-1);
+}
+
+vector<int> cyfry(int n) {
+	vector<int> c;
+
+	if(n == 0) {
+		c.push_back(0);
+	}
+	else {
+		while(n != 0) {
+			int ostatnia_cyfra = n % 10;
+			c.push_back(ostatnia_cyfra);
+			n /= 10;
+		}
+	}
+
+	return c;
+}
+
+int suma_silnii_cyfr(int n) {
+	vector<int> c = cyfry(n);
+	vector<int> s;
+	// oblicz sinia na kazdym elemencie c i wstaw wynik do s
+	transform(c.begin(), c.end(), back_inserter(s), silnia);
+	int suma = accumulate(s.begin(), s.end(), 0);
+	return suma;
+}
+
+bool rowna_silnii_swoich_cyfr(int n) {
+	return suma_silnii_cyfr(n) == n;
+}
+
+vector<int> liczby_rowne_sumie_silnii_swoich_cyfr(vector<int> d) {
+	vector<int> w;
+	copy_if(d.begin(), d.end(), back_inserter(w), rowna_silnii_swoich_cyfr);
+	return w;
+}
+
+void podpunkt_b(vector<int> dane) {
+	vector<int> wynik = liczby_rowne_sumie_silnii_swoich_cyfr(dane);
+	cout << "5.2) ";
+	wypisz_wektor(wynik);
+}
+
+//---------------------------- PODPUNKT C --------------------------------------
+
+// algorytm euklidesa, mozna zrobic prosciej
+int nwd(int a, int b) {
+	while(b != 0) {
+		int c = a % b;
+		a = b;
+		b = c;
+	}
+	return a;
+}
+
+int nwd_ciagu(vector<int> c) {
+	return accumulate(c.begin(), c.end(), c[0], nwd);
+}
+
+vector<int> podciag(vector<int> &dane, int start, int dlg) {
+	vector<int> w(dane.begin() + start, dane.begin() + start + dlg);
+	return w;
+}
+
+vector<int> najdluzszy_ciag_o_wspolnym_dzielniku(vector<int> dane) {
+	vector<int> najdluzszy;
+
+	for(int start = 0; start < dane.size(); start++) {
+		for(int dlg = 1; start + dlg < dane.size(); dlg++) {
+			vector<int> p = podciag(dane, start, dlg);
+			if(p.size() > najdluzszy.size() && nwd_ciagu(p) > 1) najdluzszy = p;
+		}
+	}
+
+	return najdluzszy;
+}
+
+void podpunkt_c(vector<int> dane) {
+	vector<int> najdluzszy = najdluzszy_ciag_o_wspolnym_dzielniku(dane);
+	cout << "5.3) " << endl;
+	cout << "Pierwsza liczba ciagu to: " << najdluzszy[0] << endl;
+	cout << "Dlugosc ciagu to: " << najdluzszy.size() << endl;
+	cout << "NWD ciagu to: " << nwd_ciagu(najdluzszy) << endl;
+}
+
+//---------------------------- MAIN --------------------------------------------
+
+
+int main()
+{
+	vector<int> dane = dane_z_pliku();
+	podpunkt_a(dane);
+	podpunkt_b(dane);
+	podpunkt_c(dane);
+	return 0;
+}
+
+```
+
 </Dropdown>

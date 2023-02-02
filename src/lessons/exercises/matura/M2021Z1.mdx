@@ -7,7 +7,7 @@ import Code from "../../../components/code/Code.jsx";
 <br/>
 </div>
 
-### TREŚĆ:
+### TREŚĆ
 Pewna firma przygotowuje wyświetlanie napisów złożonych z wielkich liter alfabetu
 angielskiego. Na początku napis jest pusty (nie zawiera liter). W pliku instrukcje.txt
 podanych jest 2000 instrukcji, które wykonuje automat do generowania napisu. Każda
@@ -62,54 +62,75 @@ Dla pliku przyklad.txt długością napisu jest liczba 10.
     </p>
 </Dropdown>
 
+<Dropdown title="ODPOWIEDŹ">
+
+```
+# 517
+```
+</Dropdown>
+
+
 <Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
-```python
-def zad_4_1(wejscie):
-suma = 0
-for linia in wejscie:
-    instrukcja = linia.split()[0]
-    if instrukcja == 'DOPISZ':
-        suma+=1
-    if instrukcja == 'USUN':
-        suma-=1
-    if instrukcja == 'ZMIEN':
-        pass
-    if instrukcja == 'PRZESUN':
-        pass
-return suma
+```
+import collections
+
+# Pomocnicze funkcje
+
+def wczytaj_dane():
+  with open("instrukcje.txt") as plik:
+    return [x.rstrip().split(" ") for x in plik.readlines()]
+
+def nastepna_litera(litera):
+  if litera == "Z": return "A"
+  else: return chr(ord(litera)+1)
+
+def zmien(napis, litera):
+  return napis.replace(litera, nastepna_litera(litera), 1)
+
+# Podpunt 4.1) i 4.4)
+
+def wykonaj(dotychczasowy_wynik, polecenie):
+  rodzaj, argument = polecenie
+  if rodzaj == "DOPISZ":
+    return dotychczasowy_wynik + argument
+  elif rodzaj == "ZMIEN":
+    return dotychczasowy_wynik[:-1] + argument
+  elif rodzaj == "USUN":
+    return dotychczasowy_wynik[:-1]
+  else:
+    return zmien(dotychczasowy_wynik, argument)
+
+def wykonaj_wszystko(polecenia):
+  wynik = ""
+  for p in polecenia: 
+    wynik = wykonaj(wynik, p)
+  return wynik
+
+# Podpinkt 4.2)
+
+def najczestsze_operacje_po_sobie(polecenia):
+  najcz, najcz_wyst, akt, akt_wyst = "", 0, "", 0 
+  for (tresc, arg) in polecenia:
+    if akt == tresc: akt_wyst += 1
+    else: akt, akt_wyst = tresc, 1
+    if akt_wyst > najcz_wyst:
+      najcz, najcz_wyst = akt, akt_wyst
+  return (najcz, najcz_wyst)
+
+# Podpunkt 4.3)
+
+def najczestsza_litera(polecenia):
+  litery = [y for (x,y) in polecenia if x == "DOPISZ"]
+  return collections.Counter(litery).most_common(1)[0]
+
+polecenia = wczytaj_dane()
+po_wykonaniu = wykonaj_wszystko(polecenia)
+print("4.1)", len(po_wykonaniu))
+print("4.2)", najczestsze_operacje_po_sobie(polecenia))
+print("4.3)", najczestsza_litera(polecenia))
+print("4.4)", po_wykonaniu)
+
 ```
 
-<p className={`dropdown_text`}>
- Pętla for służy do przejścia po każdej lini pliku wejściowego.
- Natępnie z każdej lini wyłuskujemy pierwsze słowo, którem według instrukcji jest
- słowo "DOPISZ", "USUN", "ZMIEN" lub "PRZESUN". Sprawdzamy, z którym z nich mamy 
- doczynienia i jeśli jest to "DOPISZ" lub "USUN" to dodajemy 1 do naszej zmiennej 'suma'.
- Ważne jest aby przed pętlą for do zmiennej 'suma' przypiasać wartość 0.
-</p>
-<p className={'dropdown_text'}>
-Aby sprawdzić poprawność kodu możemy przeprowadzić test na podanym pliku tesktowym i sprawdzić zgodność odpowiedzi.
-</p>
-
-```python
-dane = []
-
-with open('DANE_2105/przyklad.txt') as plik:
-    for wiersz in plik:
-        wiersz = wiersz.strip()
-        dane.append(wiersz)
-
-zad_4_1(dane)
-```
-
-<p className={`dropdown_text`}>
-Zmienna 'dane' to lista, która będzie składała się wierszy pliku. 
-Po przejściu przez plik i dodanie to tej zmiennej każdej lini, wywołamy napisaną
-przez nas wcześniej funkcję wkładająć do niej argument, którym będzie zmienna 'dane'.
-Aby uruchomić program dla pliku docelowego, wystarczy podmienić 'DANE_2105/przyklad.txt' na 'DANE_2105/instrukcje.txt'.
-</p>
-<p className={`dropdown_text`}>
-<b>PAMIĘTAJ!</b> O tym jak wygląda ścieżka pliku zależy od tego gdzie w folderach został przez Ciebie umieszczony folder z plikami oraz gdzie
-jest twój plik o rozszerzeniu py.
-</p>
 </Dropdown>

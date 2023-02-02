@@ -52,9 +52,9 @@ function ExerciseSet() {
 
             <div className={styles.category}>DZIAŁANIA NA LICZBACH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/49" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2009</b> POD.</pre></Link>
-                <Link to="/exercise/43" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2012</b> POD.</pre></Link>
-                <Link to="/exercise/42" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2013</b> ROZ.</pre></Link>
+                <Link to="/exercise/47" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2009</b> POD.</pre></Link>
+                <Link to="/exercise/41" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2012</b> POD.</pre></Link>
+                <Link to="/exercise/40" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2013</b> ROZ.</pre></Link>
                 <Link to="/exercise/6" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2017</b> ZAD. 1</pre></Link>
                 <Link to="/exercise/7" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2017</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/8" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2017</b> ZAD. 3</pre></Link>
@@ -66,18 +66,18 @@ function ExerciseSet() {
                 <Link to="/exercise/23" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2022</b> ZAD. 1</pre></Link>
                 <Link to="/exercise/24" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2022</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/25" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2022</b> ZAD. 3</pre></Link>
-                <Link to="/exercise/37" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 3.1</pre></Link>
-                <Link to="/exercise/38" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 3.2</pre></Link>
-                <Link to="/exercise/39" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 3.</pre></Link>
+                <Link to="/exercise/35" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 3.1</pre></Link>
+                <Link to="/exercise/36" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 3.2</pre></Link>
+                <Link to="/exercise/37" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 3.</pre></Link>
             </div>
 
             <div className={styles.category}>DZIAŁANIA NA STRINGACH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/50" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2009</b> ROZ.</pre></Link>
-                <Link to="/exercise/47" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2010</b> POD.</pre></Link>
-                <Link to="/exercise/48" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2010</b> ROZ.</pre></Link>
-                <Link to="/exercise/41" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2013</b> POD.</pre></Link>
-                <Link to="/exercise/40" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2014</b> A,B,C</pre></Link>
+                <Link to="/exercise/48" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2009</b> ROZ.</pre></Link>
+                <Link to="/exercise/45" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2010</b> POD.</pre></Link>
+                <Link to="/exercise/46" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2010</b> ROZ.</pre></Link>
+                <Link to="/exercise/39" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2013</b> POD.</pre></Link>
+                <Link to="/exercise/38" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2014</b> A,B,C</pre></Link>
                 <Link to="/exercise/10" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2018</b> ZAD. 1</pre></Link>
                 <Link to="/exercise/11" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2018</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/12" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2018</b> ZAD. 3</pre></Link>
@@ -87,23 +87,21 @@ function ExerciseSet() {
                 <Link to="/exercise/20" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2021</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/21" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2021</b> ZAD. 3</pre></Link>
                 <Link to="/exercise/22" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2021</b> ZAD. 4</pre></Link>
-                <Link to="/exercise/33" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 2.1</pre></Link>
-                <Link to="/exercise/34" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 2.2</pre></Link>
-                <Link to="/exercise/35" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 2.3</pre></Link>
-                <Link to="/exercise/36" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 2.4</pre></Link>
+                <Link to="/exercise/33" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 2.3</pre></Link>
+                <Link to="/exercise/34" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>INF+ <b>2023</b> ZAD. 2.4</pre></Link>
 
             </div>
             <div className={styles.category}>DZIAŁANIA NA LICZBACH BINARNYCH</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/46" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2011</b> ROZ.</pre></Link>
+                <Link to="/exercise/44" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2011</b> ROZ.</pre></Link>
                 <Link to="/exercise/0" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2015</b> ZAD. 1</pre></Link>
                 <Link to="/exercise/1" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2015</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/2" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2015</b> ZAD. 3</pre></Link>
             </div>
             <div className={styles.category}>SZYFROWANIE</div>
             <div className={styles.exercises_list}>
-                <Link to="/exercise/45" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2011</b> POD.</pre></Link>
-                <Link to="/exercise/44" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2012</b> ROZ.</pre></Link>
+                <Link to="/exercise/43" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2011</b> POD.</pre></Link>
+                <Link to="/exercise/42" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2012</b> ROZ.</pre></Link>
                 <Link to="/exercise/3" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2016</b> ZAD. 1</pre></Link>
                 <Link to="/exercise/4" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2016</b> ZAD. 2</pre></Link>
                 <Link to="/exercise/5" className={`${styles.list_element} ${styles.exam_exercise}`}><pre>MATURA <b>2016</b> ZAD. 3</pre></Link>

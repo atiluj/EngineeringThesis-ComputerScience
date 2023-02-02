@@ -198,7 +198,6 @@ function Home() {
                 </div>
             </div>
         </div>
-        <div className={`separator`}></div>       
         <div className={styles.acknowledgements}>
             <article>
                 <h1 id="seventh">PODZIĘKOWANIA</h1>

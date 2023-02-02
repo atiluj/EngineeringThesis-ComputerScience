@@ -7,7 +7,7 @@ import Code from "../../../components/code/Code.jsx";
 <br/>
 </div>
 
-### TREŚĆ:
+### TREŚĆ
 Pewna firma przygotowuje wyświetlanie napisów złożonych z wielkich liter alfabetu
 angielskiego. Na początku napis jest pusty (nie zawiera liter). W pliku instrukcje.txt
 podanych jest 2000 instrukcji, które wykonuje automat do generowania napisu. Każda
@@ -61,61 +61,74 @@ Dla pliku przyklad.txt odpowiedzią jest: rodzaj instrukcji – DOPISZ, długoś
     </p>
 </Dropdown>
 
+<Dropdown title="ODPOWIEDŹ">
+
+```
+# ZMIEN 7
+```
+</Dropdown>
+
 <Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
-```python
-def zad_4_2(wejscie):
-    najdluzszy = ['',0]
-    poprzedni = ''
-    dlugosc = 0
-    for idx,item in enumerate(wejscie):
-        krok = item.split()[0]
-        if krok == poprzedni:
-            dlugosc+=1
-        else:
-            if dlugosc > najdłuższy[1]:
-                najdłuższy[0] = wejscie[idx-1].split()[0]
-                najdłuższy[1] = dlugosc
-            poprzedni = krok
-            dlugosc = 1
-    return najdłuższy
 ```
+import collections
 
-<p className={`dropdown_text`}>
-Na początku ustawiamy zmienną 'najdluzszy' jako liste dwuelemetnową, która
-na pierwszej pozycji zawiera pustego stringa. String ten będzie zmieniał się na rodzaj instrukcji
-za każdym razem, gdy uda nam się znaleźć nowy dłuższy podciąg składający się z tej samej instrukcji.
-Na drugiej pozycji listy znajuduje się liczba syblizującą długość najdłuzszego ciągu, który został znaleziony do tej pory.
-Potrzbujemy też zmiennej 'poprzedni', która będzie przechowywała infomracje która z instukcji była wpisana w poprzedniej lini,
-tak aby móc porównać ją do instrukcji z lini którą ropzatrujemy w danej chwili. Na tej postawie jesteśmy w stanie stwierdzic czy ciąg jest kontynowanay czy został zerwany.
-Zmienna 'długość' przechowuje liczbe symbolizującą długość obecnie rozpatrywanego ciągu.
-Jeśli obecny instukcja jest taka sama jak w lini poprzedniej, to zwiększamy długość o jeden. W momencie w którym
-obecnie rozpatrywana instrukcja będzie się różnić od tej zawartej w zmiennej 'poprzedni' musimy sprawdzić jedną rzecz.
-Mianowicie czy wartość 'długość' nie jest teraz większa od dotychczasowego najdłuższego znalezionego podciągu. Jeśli jest większa
-to znaczy że znaleźliśmy nowy najdłuższy ciąg i musimy dane ze zmiennych 'poprzedni' i 'długosc' wpisać do listy 'najdłuzszy'. Natepnie jesli plik się nie skończył
-to ustawiamy 'długość' na 1 i szukamy dalej. Jeśli zaś 'długość' Less Than Sign 'najdluszy[1]' to nic nie zmienia się w liscie 'najdlusze'. Długoś ustawiamy na 1 i szukamy dalej szkamy dalej.
-</p>
+# Pomocnicze funkcje
 
-<p className={`dropdown_text`}>
-Aby sprawdzić wyniki wystarczy wywołać funckje dla odpowiedniech danych.
-</p>
+def wczytaj_dane():
+  with open("instrukcje.txt") as plik:
+    return [x.rstrip().split(" ") for x in plik.readlines()]
 
-```python
-dane = []
+def nastepna_litera(litera):
+  if litera == "Z": return "A"
+  else: return chr(ord(litera)+1)
 
-with open('DANE_2105/plik.txt') as plik:
-    for wiersz in plik:
-        wiersz = wiersz.strip()
-        dane.append(wiersz)
+def zmien(napis, litera):
+  return napis.replace(litera, nastepna_litera(litera), 1)
 
-zad_4_2(dane)
+# Podpunt 4.1) i 4.4)
+
+def wykonaj(dotychczasowy_wynik, polecenie):
+  rodzaj, argument = polecenie
+  if rodzaj == "DOPISZ":
+    return dotychczasowy_wynik + argument
+  elif rodzaj == "ZMIEN":
+    return dotychczasowy_wynik[:-1] + argument
+  elif rodzaj == "USUN":
+    return dotychczasowy_wynik[:-1]
+  else:
+    return zmien(dotychczasowy_wynik, argument)
+
+def wykonaj_wszystko(polecenia):
+  wynik = ""
+  for p in polecenia: 
+    wynik = wykonaj(wynik, p)
+  return wynik
+
+# Podpinkt 4.2)
+
+def najczestsze_operacje_po_sobie(polecenia):
+  najcz, najcz_wyst, akt, akt_wyst = "", 0, "", 0 
+  for (tresc, arg) in polecenia:
+    if akt == tresc: akt_wyst += 1
+    else: akt, akt_wyst = tresc, 1
+    if akt_wyst > najcz_wyst:
+      najcz, najcz_wyst = akt, akt_wyst
+  return (najcz, najcz_wyst)
+
+# Podpunkt 4.3)
+
+def najczestsza_litera(polecenia):
+  litery = [y for (x,y) in polecenia if x == "DOPISZ"]
+  return collections.Counter(litery).most_common(1)[0]
+
+polecenia = wczytaj_dane()
+po_wykonaniu = wykonaj_wszystko(polecenia)
+print("4.1)", len(po_wykonaniu))
+print("4.2)", najczestsze_operacje_po_sobie(polecenia))
+print("4.3)", najczestsza_litera(polecenia))
+print("4.4)", po_wykonaniu)
+
 ```
-
-<p className={`dropdown_text`}>
-Wynik dla danych przykładowych to [DOPISZ, 5].
-</p>
-<p className={`dropdown_text`}>
-Wynik dla danych egzaminacyjnych to [ZMIEN, 7].
-</p>
 
 </Dropdown>

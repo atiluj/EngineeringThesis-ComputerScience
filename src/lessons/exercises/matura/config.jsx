@@ -60,8 +60,6 @@ import INF2023Z12 from './INF2023Z12.mdx';
 import INF2023Z13 from './INF2023Z13.mdx';
 import INF2023Z14 from './INF2023Z14.mdx';
 
-import INF2023Z21 from './INF2023Z21.mdx';
-import INF2023Z22 from './INF2023Z22.mdx';
 import INF2023Z23 from './INF2023Z23.mdx';
 import INF2023Z24 from './INF2023Z24.mdx';
 
@@ -121,27 +119,25 @@ const ExercisesPython = [
     {name: "Informator 2023 zadanie 1.3 - CIĄGI", content: <INF2023Z13/>}, //31
     {name: "Informator 2023 zadanie 1.4 - CIĄGI", content: <INF2023Z14/>}, //32
 
-    {name: "Informator 2023 zadanie 2.1 - DZIAŁANIA NA STRINGACH", content: <INF2023Z21/>}, //33
-    {name: "Informator 2023 zadanie 2.2 - DZIAŁANIA NA STRINGACH", content: <INF2023Z22/>}, //34
-    {name: "Informator 2023 zadanie 2.3 - DZIAŁANIA NA STRINGACH", content: <INF2023Z23/>}, //35
-    {name: "Informator 2023 zadanie 2.4 - DZIAŁANIA NA STRINGACH", content: <INF2023Z24/>}, //36
+    {name: "Informator 2023 zadanie 2.3 - DZIAŁANIA NA STRINGACH", content: <INF2023Z23/>}, //33
+    {name: "Informator 2023 zadanie 2.4 - DZIAŁANIA NA STRINGACH", content: <INF2023Z24/>}, //34
 
-    {name: "Informator 2023 zadanie 3.1 - DZIAŁANIA NA LICZBACH", content: <INF2023Z31/>}, //37
-    {name: "Informator 2023 zadanie 3.2 - DZIAŁANIA NA LICZBACH", content: <INF2023Z32/>}, //38
-    {name: "Informator 2023 zadanie 3.3 - DZIAŁANIA NA LICZBACH", content: <INF2023Z33/>}, //39
+    {name: "Informator 2023 zadanie 3.1 - DZIAŁANIA NA LICZBACH", content: <INF2023Z31/>}, //35
+    {name: "Informator 2023 zadanie 3.2 - DZIAŁANIA NA LICZBACH", content: <INF2023Z32/>}, //36
+    {name: "Informator 2023 zadanie 3.3 - DZIAŁANIA NA LICZBACH", content: <INF2023Z33/>}, //37
 
     //MATURY W STAREJ FORMULE
-    {name: "Matura 2014 - DZIAŁANIA NA STRINGACH", content: <M2014/>}, //40
-    {name: "Matura podstawowa 2013 cz.2 - DZIAŁANIA NA STRINGACH", content: <M2013_P/>}, //41
-    {name: "Matura rozszerzona 2013 cz.2 - DZIAŁANIA NA LICZBACH", content: <M2013_R/>}, //42
-    {name: "Matura podstawowa 2012 cz.2 - DZIAŁANIA NA LICZBACH", content: <M2012_P/>}, //43
-    {name: "Matura rozszerzona 2012 cz.2 - SZYFROWANIE", content: <M2012_R/>}, //44
-    {name: "Matura podstawowa 2011 cz.2 - SZYFROWANIE", content: <M2011_P/>}, //45
-    {name: "Matura rozszerzona 2011 cz.2 - DZIAŁANIA NA LICZBACH BINARNYCH", content: <M2011_R/>}, //46
-    {name: "Matura podstawowa 2010 cz.2 - PALINDROMY", content: <M2010_P/>}, //47
-    {name: "Matura rozszerzona 2010 cz.2 - ANAGRAM", content: <M2010_R/>}, //48
-    {name: "Matura podstawowa 2009 cz.2 - LICZBY PIERWSZE", content: <M2009_P/>}, //49
-    {name: "Matura rozszerzona 2009 cz.2 - PARA SŁÓW", content: <M2009_R/>}, //50
+    {name: "Matura 2014 - DZIAŁANIA NA STRINGACH", content: <M2014/>}, //38
+    {name: "Matura podstawowa 2013 cz.2 - DZIAŁANIA NA STRINGACH", content: <M2013_P/>}, //39
+    {name: "Matura rozszerzona 2013 cz.2 - DZIAŁANIA NA LICZBACH", content: <M2013_R/>}, //40
+    {name: "Matura podstawowa 2012 cz.2 - DZIAŁANIA NA LICZBACH", content: <M2012_P/>}, //41
+    {name: "Matura rozszerzona 2012 cz.2 - SZYFROWANIE", content: <M2012_R/>}, //42
+    {name: "Matura podstawowa 2011 cz.2 - SZYFROWANIE", content: <M2011_P/>}, //43
+    {name: "Matura rozszerzona 2011 cz.2 - DZIAŁANIA NA LICZBACH BINARNYCH", content: <M2011_R/>}, //44
+    {name: "Matura podstawowa 2010 cz.2 - PALINDROMY", content: <M2010_P/>}, //45
+    {name: "Matura rozszerzona 2010 cz.2 - ANAGRAM", content: <M2010_R/>}, //46
+    {name: "Matura podstawowa 2009 cz.2 - LICZBY PIERWSZE", content: <M2009_P/>}, //47
+    {name: "Matura rozszerzona 2009 cz.2 - PARA SŁÓW", content: <M2009_R/>}, //48
 
 
     //{name: "Matura 2023 zadanie 3 - DZIAŁANIA NA LICZBACH", content: <M2023Z1/>}, //26

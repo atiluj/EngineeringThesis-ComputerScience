@@ -7,7 +7,7 @@ import Code from "../../../components/code/Code.jsx";
 <br/>
 </div>
 
-### TREŚĆ:
+### TREŚĆ
 W pliku liczby.txt znajduje się 1000 liczb naturalnych zapisanych binarnie. Każda
 liczba zapisana jest w osobnym wierszu. Pierwsze pięć wierszy zawiera następujące liczby:<br/>
 
@@ -43,15 +43,77 @@ wynikiem jest liczba 3 (3 podkreślone liczby mają w swoim zapisie więcej
  zer niż jedynek). 
 <br/><br/>
 
-<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE">
-    <p className={`dropdown_text`}>
-        BLA BLA ROZWIĄZANIE
-    </p>
+<Dropdown title="ODPOWIEDŹ">
+
+```
+422 
+```
 </Dropdown>
 
 <Dropdown title="PRZYKŁADOWE ROZWIĄZANIE">
-    <Code>
-    BLA BLA ROZWIĄZANIE
-    </Code>
+</Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - C++">
+
+```
+#include <iostream>
+#include <fstream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+vector<string> dane_z_pliku() {
+    vector<string> dane; string s;
+    ifstream plik; plik.open("liczby.txt");
+    while(plik >> s) {
+        dane.push_back(s);
+    }
+    plik.close();
+    return dane;
+}
+
+bool wiecej_0_niz_1(string l) {
+    int l0 = count(l.begin(), l.end(), '0');
+    int l1 = count(l.begin(), l.end(), '1');
+    return (l0 > l1);
+}
+
+bool podzielna_przez_2(string l) {
+    return l.size() > 0 && l[l.size()-1] == '0';
+}
+
+bool podzielna_przez_8(string l) {
+    int n = l.size();
+    return ((n > 3) && (l[n-1] == '0') && (l[n-2] == '0') && (l[n-3] == '0'));
+}
+
+bool mniejsza(string a, string b) {
+    int n = max(a.size(), b.size());
+
+    if(a.size() != b.size()) {
+        a = string(n-a.size(), '0') + a;
+        b = string(n-b.size(), '0') + b;
+    }
+
+    if(a == b) return false;
+
+    for(int i = 0; i < n; i++) {
+        if(b[i] == '1' && a[i] == '0') return true;
+        else if(a[i] == '1' && b[i] == '0') return false;
+    }
+    return false;
+}
+
+int main()
+{
+    vector<string> dane = dane_z_pliku();
+    cout << "4.1) " << count_if(dane.begin(), dane.end(), wiecej_0_niz_1) << endl;
+    cout << "4.2) podzielne przez 2 = " << count_if(dane.begin(), dane.end(), podzielna_przez_2) << endl;
+    cout << "4.2) podzielne przez 8 = " << count_if(dane.begin(), dane.end(), podzielna_przez_8) << endl;
+    cout << "4.3) najwieksza jest w indeksie " << 1+distance(dane.begin(), max_element(dane.begin(), dane.end(), mniejsza)) << endl;
+    cout << "4.3) najmniejsza jest w indeksie " << 1+distance(dane.begin(), min_element(dane.begin(), dane.end(), mniejsza)) << endl;
+    return 0;
+}
+```
 </Dropdown>
 
