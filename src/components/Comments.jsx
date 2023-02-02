@@ -26,9 +26,10 @@ function Comments({issue}) {
     const params = {
         repo: "atiluj/uni-project-jan",
         "issue-term": issue,
+        title: "Comment thread",
         crossorigin: "anonymous",
         theme: darkMode ? "dark-blue" : "github-light",
-        url: window.location.href,
+        url: window.location.origin + window.location.pathname,
         origin: window.location.origin,
         session: session || localStorage.getItem("utterances-session"),
     };
