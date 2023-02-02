@@ -15,7 +15,7 @@ jobs:
           echo "Host wwwserver" > ~/.ssh/config
           echo "Hostname $HOSTING_HOSTNAME" >> ~/.ssh/config
           echo "Port $HOSTING_PORT" >> ~/.ssh/config
-          echo "Username $HOSTING_USERNAME" >> ~/.ssh/config
+          echo "User $HOSTING_USERNAME" >> ~/.ssh/config
           echo "$HOSTING_KEY" > ~/.ssh/id_$HOSTING_KEY_TYPE
       shell: bash
       env:
