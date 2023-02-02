@@ -59,7 +59,7 @@ const TeoriaLessons = [
         {name: "Zadania maturalne", content: <ZadaniaGrafika/>},
     ]},
 
-    {name: "Zagadnienia prawne", subchapters: [
+    {name: "Zagadnienia prawne i cyberbezpieczeństwo", subchapters: [
         // {name: "Zagadnienia przestępczości komputerowej", content: null},
         // {name: "Licencje", content: null},
         // {name: "Normy prawe", content: null},

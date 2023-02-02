@@ -1,5 +1,8 @@
 import Dropdown from "../../components/dropdown/Dropdown.jsx";
 import TableQuiz from "../../components/tableQuiz/TableQuiz.jsx";
+import Quiz from "../../components/Quiz.jsx";
+import FillGapsQuiz from "../../components/fillGapsQuiz/FillGapsQuiz.jsx";
+
 
 ## Zadanie 1 (0-1pkt.)
 (maj 2015 część 1 zadanie 2.4)
@@ -16,5 +19,45 @@ Na licencji ADWARE jest rozpowszechniane oprogramowanie, które
         {question: "może być używane tylko przez z góry ustalony czas.", answer: 'F'},
       ]
     }
+/>
+
+## Zadanie 2 (0-1pkt.)
+(maj 2017 stara matura, poziom podstawowy, część 1 zadanie 3.2)
+
+<Quiz 
+    question={
+        <p>
+          Wskaż licencję, która pozwala na bezpłatne wykorzystanie kodu źródłowego programu
+          w dowolnym celu niekomercyjnym. 
+        </p>
+    }
+    answers={[
+        "Freeware",
+        "Shareware",
+        "GPL",
+        "MOLP"]}
+    correct={"GPL"}
+/>
+
+## Zadanie 2 (0-1pkt.)
+(maj 2017 stara matura, poziom podstawowy, część 1 zadanie 3.2)
+
+<FillGapsQuiz
+    task={
+        <p>
+          Wskaż licencję, która pozwala na bezpłatne wykorzystanie kodu źródłowego programu
+          w dowolnym celu niekomercyjnym. 
+        </p>
+    }
+    questions={[
+        "pyt1",
+        "pyt2",
+        "pyt3",
+        "pyt4"]}
+    correct={[
+        "1",
+        "2",
+        "3",
+        "4"]}
 />
 

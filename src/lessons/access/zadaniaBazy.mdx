@@ -1,5 +1,6 @@
 import Dropdown from "../../components/dropdown/Dropdown.jsx";
 import TableQuiz from "../../components/tableQuiz/TableQuiz.jsx";
+import Quiz from "../../components/Quiz.jsx";
 
 ## Zadanie 1 (0-1pkt.)
 (maj 2015 część 1 zadanie 2.3)
@@ -160,6 +161,28 @@ dane:
         {question: <img src={new URL('https://i.imgur.com/rrLMv6q.png', import.meta.url)} alt="xyz" className={`small_img`} />, answer: 'P'},
       ]
     }
+/>
+
+
+## Zadanie 9 (0-1pkt.)
+(maj 2017 stara matura, poziom podstawowy, część 1 zadanie 3.5)
+
+<Quiz 
+    question={
+      <div>
+        <p>
+          Dane zapisane w tabeli 1 rozdzielono pomiędzy trzy tabele – tabela 2, tabela 3, tabela 4  
+        </p>
+        <img src={new URL('https://i.imgur.com/22wxtF3.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+        <p>Taka zamiana</p>
+      </div>
+    }
+    answers={[
+        "pozwala usunąć nadmiarowe dane.",
+        "powoduje utratę części danych.",
+        "nie wymaga połączenia tabel relacjami.",
+        "wywołuje redundancję bazy danych."]}
+    correct={"pozwala usunąć nadmiarowe dane."}
 />
 
 
