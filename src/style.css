@@ -92,7 +92,7 @@
     fill: var(--font);
 }
 
-.radius{
+.radius {
     border-radius: 40px;
 }
 
@@ -150,6 +150,10 @@ img.section_logo {
     filter: var(--screen_filter);
 }
 
+.left_menu {
+    margin-top: 3px;
+}
+
 .menu_button {
     display: block;
     padding: 12px;
@@ -199,7 +203,7 @@ img.section_logo {
     color: var(--link-hover);
 }
 
-.link_materials{
+.link_materials {
     font-size: 15px;
 }
 
@@ -291,14 +295,14 @@ img.section_logo {
     margin-left: 20px;
 }
 
-@media(max-width: 600px){
-    .link_materials{
+@media(max-width: 600px) {
+    .link_materials {
         font-size: 14px;
     }
 }
 
-@media(max-width: 400px){
-    .link_materials{
+@media(max-width: 400px) {
+    .link_materials {
         font-size: 13px;
     }
 }

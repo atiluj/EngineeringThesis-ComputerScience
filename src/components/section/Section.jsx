@@ -48,7 +48,7 @@ function ChapterWithSubchapters({ chapter, chapterId }) {
 
 function ChapterStandalone({ chapter, chapterId }) {
     const { changeChapter } = React.useContext(NavContext);
-    return <div onClick={() => changeChapter(chapterId, 0)}>
+    return <div className={'left_menu'} onClick={() => changeChapter(chapterId, 0)}>
         <div className={`${styles.topic} menu_button`}>
             <a>{chapterId}. {chapter.name}</a>
             <ExpandMore style={{ visibility: "hidden" }}/>

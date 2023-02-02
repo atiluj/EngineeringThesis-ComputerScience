@@ -71,8 +71,12 @@
     margin-top: 0px;
 } */
 
+/* 
+.main .contents .cont .menu_button:first-child{
+    margin-top: 0px;
+} */
+
 .main article {
-    /* font-family: 'IBM Plex Serif', serif; */
     font-family: 'Roboto', serif;
     font-size: 16px;
     font-weight: 300;
@@ -82,7 +86,25 @@
     margin-bottom: 2vw;
     border-width: 2px;
     border-style: solid;
-    /* text-align: justify; */
+    text-align: left;
+    line-height: 20px;
+}
+
+.acknowledgements{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.acknowledgements article {
+    font-family: 'Roboto', serif;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: var(--primary3);
+    color: var(--font);
+    padding: 20px 30px;
+    margin: 2vw 0;
+    border-width: 2px;
+    border-style: solid;
     text-align: left;
     line-height: 20px;
 }
@@ -91,7 +113,11 @@
     margin-bottom: 0;
 }
 
-.main article h1 {
+.acknowledgements article h1{
+    text-align: center;
+}
+
+.main article h1, .acknowledgements article h1 {
     font-family: 'Chakra Petch', sans-serif;
     text-transform: uppercase;
     color: var(--main-accent);
@@ -246,18 +272,24 @@
         padding: 15px 25px;
         margin-bottom: 2vw;
         line-height: 18px;
-
     }
+
+    .acknowledgements article {
+        font-size: 15px;
+        padding: 15px 25px;
+        line-height: 18px;
+    }
+
 
     .introduction {
         text-align: left;
     }
 
-    .authors{
+    .authors {
         width: 90%;
     }
 
-    .author{
+    .author {
         padding: 1em;
     }
 }
@@ -296,11 +328,11 @@
         font-size: 30px;
     }
 
-    .authors_details_wrapper div:first-child{
+    .authors_details_wrapper div:first-child {
         margin-top: 1em;
     }
 
-    .authors_details_wrapper div:last-child{
+    .authors_details_wrapper div:last-child {
         margin-bottom: 2em;
     }
 
@@ -321,11 +353,11 @@
 }
 
 @media (max-width:810px) {
-    .main_page{
+    .main_page {
         width: 85%;
     }
 
-    .main article {
+    .main article, .acknowledgements article {
         font-size: 13px;
     }
 
@@ -341,7 +373,7 @@
         line-height: 16px;
     }
 
-    .main_content article{
+    .main_content article {
         line-height: 15px;
     }
 
@@ -361,18 +393,18 @@
         grid-gap: 1.5em;
     }
 
-    .authors_details_wrapper div:first-child{
+    .authors_details_wrapper div:first-child {
         margin-top: .5em;
     }
 
-    .authors_details_wrapper div:last-child{
+    .authors_details_wrapper div:last-child {
         margin-bottom: .5em;
     }
 
 }
 
 @media (max-width: 600px) {
-    .main_page{
+    .main_page {
         width: 95%;
     }
 
@@ -389,16 +421,15 @@
         text-align: left;
     }
 
-    .main{
+    .main {
         padding-left: 0px;
         padding-right: 0px;
     }
 
-    .main article {
+    .main article, .acknowledgements article {
         font-size: 14px;
         padding: 10px 15px;
-        border-width: 2.5px;
-
+        border-width: 2px;
     }
 
     .main article h1 {
@@ -409,7 +440,7 @@
         max-width: 45px;
     }
 
-    .author{
+    .author {
         width: 95%;
     }
 
@@ -426,15 +457,15 @@
         grid-gap: 1em;
     }
 
-    .author_name{
+    .author_name {
         padding: .1em;
     }
 
-    .author .photo{
+    .author .photo {
         margin-top: 0;
     }
 
-    .introduction{
+    .introduction {
         font-size: 14px;
     }
 }
@@ -450,7 +481,7 @@
         padding: 20px 20px 15px;
     }
 
-    .main article {
+    .main article, .acknowledgements article {
         font-size: 11px;
         line-height: 14px;
         padding: 8px 10px;
@@ -458,7 +489,7 @@
         text-align: left;
     }
 
-    .main article h1 {
+    .main article h1, .acknowledgements article h1 {
         font-size: 16px;
     }
 

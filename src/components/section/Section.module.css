@@ -183,7 +183,8 @@ img.section_logo {
   filter: var(--screen_filter);
 }
 
-.cont .left_menu .menu_button{
+/* ??? */
+.left_menu{
   margin-top: 3px;
 }
 
