@@ -1,5 +1,6 @@
 import Dropdown from "../../components/dropdown/Dropdown.jsx";
 import TableQuiz from "../../components/tableQuiz/TableQuiz.jsx";
+import Quiz from "../../components/Quiz.jsx";
 
 ## Zadanie 1 (0-1pkt.)
 (maj 2016 część 1 zadanie 3.2)
@@ -88,6 +89,173 @@ Złożoność obliczeniowa powyższego algorytmu oceniona liczbą wykonań instr
     }
 />
 
+## Zadanie 5 (0-1pkt.)
+(maj 2016 stara matura, poziom podstawowy, część 1 zadanie 3.3)
+
+### TREŚĆ
+Programowanie polegające na określeniu i wykorzystaniu klas nazywamy programowaniem 
+
+<Quiz 
+    question={''}
+    answers={[
+        "liniowym",
+        "obiektowym",
+        "strukturalnym",
+        "mikroprocesorów"]}
+    correct={"obiektowym"}
+/>
+
+## Zadanie 6 (0-1pkt.)
+(maj 2016 stara matura, poziom podstawowy, część 1 zadanie 3.4)
+
+### TREŚĆ
+Ciąg deklaracji i instrukcji zapisany w języku programowania wysokiego poziomu nazywamy kodem
+
+<Quiz 
+    question={''}
+    answers={[
+        "wynikowym",
+        "pośrednim",
+        "źródłowym",
+        "maszynowym"]}
+    correct={"źródłowym"}
+/>
+
+## Zadanie 7 (0-1pkt.)
+(maj 2011 stara matura, poziom podstawowy, część 1 zadanie 3b)
+
+### TREŚĆ
+Dane są dwie liczby całkowite a, b takie, że b \> a  oraz schemat algorytmu: 
+<img src={new URL('https://i.imgur.com/gRmZ1UR.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+Wynikiem działania tego algorytmu jest wypisanie 
+
+<Quiz 
+    question={''}
+    answers={[
+        "wyłącznie liczb parzystych z przedziału domkniętego <a,b/>",
+        "wyłącznie liczb nieparzystych z przedziału domkniętego <a,b/>",
+        "wszystkich liczb z przedziału domkniętego <a,b/>"]}
+    correct={"wszystkich liczb z przedziału domkniętego <a,b/>"}
+/>
+
+## Zadanie 8 (0-1pkt.)
+(maj 2009 stara matura, poziom podstawowy, część 1 zadanie 3f)
+
+### TREŚĆ 
+Minimum ciągu n-elementowego (dla dowolnego całkowitego n ≥ 1)
+
+<TableQuiz 
+    questions={
+      [
+        {question: "można zawsze znaleźć, wykonując nie więcej niż n porównań pomiędzy elementami ciągu", answer: 'P'},
+        {question: "można zawsze znaleźć, wykonując nie więcej niż n/2 porównań pomiędzy elementami ciągu", answer: 'F'},
+        {question: "można znaleźć za pomocą strategii przeszukiwania liniowego", answer: 'P'}
+      ]
+    }
+/>
+
+## Zadanie 9 (0-1pkt.)
+(maj 2009 stara matura, poziom podstawowy, część 1 zadanie 3g)
+
+### TREŚĆ 
+Rozważ poniższy algorytm. 
+<img src={new URL('https://i.imgur.com/u9J7c61.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+Wynikiem działania tego algorytmu dla liczby całkowitej n > 0 jest wypisanie wartości
+wyrażenia 
+
+<TableQuiz 
+    questions={
+      [
+        {question: "1+ 2 + 3 + ... + n", answer: 'F'},
+        {question: "1+1/ 2 +1/ 3 + ... +1/ n", answer: 'P'},
+        {question: "1*1/ 2 *1/ 3*...*1/ n", answer: 'F'}
+      ]
+    }
+/>
+
+## Zadanie 10 (0-3pkt.)
+(maj 2014 stara matura, poziom rozszerzony, część 1 zadanie 3a)
+
+### TREŚĆ 
+Przeanalizuj poniższy algorytm dla dodatniej liczby całkowitej n: 
+<pre>
+jeżeli n = 1, to suma ← 1 <br/>
+w przeciwnym przypadku <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; suma ← 1 + n <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; i ← n – 1 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; dopóki i > 1 wykonuj <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; suma ← 1 + i * suma <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i ← i – 1 
+</pre>
+
+#### podpunkt a (0-2pkt.)
+Podaj wartość zmiennej suma po zakończeniu działania algorytmu dla następujących
+wartości argumentu n: 
+<img src={new URL('https://i.imgur.com/GSWEK9m.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+<Dropdown title="Rozwiązanie">
+
+<img src={new URL('https://i.imgur.com/9kHWp4H.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+<p className={`dropdown_text`}>
+2 p. – za podanie poprawnych odpowiedzi <br/>
+1 p. – za podanie jednej poprawnej odpowiedzi <br/>
+0 p. – za podanie niepoprawnej odpowiedzi lub jej brak 
+</p>
+</Dropdown>
+
+#### podpunkt b (0-1pkt.)
+Wynikiem działania algorytmu przedstawionego na początku zadania jest 
+
+<TableQuiz 
+    questions={
+      [
+        {question: "1 + 2 · (1 + 3 · (1 + … (n – 2) · (1 + (n – 1) · (1 + n)) … ))", answer: 'P'},
+        {question: "1 + 2<sup>2</sup> + 3<sup>3</sup> + ... + n<sup>n</sup>", answer: 'F'},
+        {question: "1! + 2! + 3! + … + n!", answer: 'P'},
+        {question: "1 + 2 + 3 + … + n", answer: 'F'}
+      ]
+    }
+/>
+
+
+## Zadanie 11 (0-1pkt.)
+(maj 2013 stara matura, poziom rozszerzony, część 1 zadanie 3b)
+
+### TREŚĆ 
+Dla x będących liczbami całkowitymi dodatnimi, funkcja określona wzorem 
+<img src={new URL('https://i.imgur.com/qfU6iJv.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+
+<TableQuiz 
+    questions={
+      [
+        {question: "jest przykładem funkcji rekurencyjnej.", answer: 'P'},
+        {question: "dla x = 3 przyjmuje wartość t(x) = 9 .", answer: 'F'},
+        {question: "dla liczby całkowitej dodatniej x przyjmuje wartość x!.", answer: 'P'},
+        {question: "w rozwinięciu zawiera x - 1 operatorów mnożenia „*”.", answer: 'P'}
+      ]
+    }
+/>
+
+## Zadanie 12 (0-1pkt.)
+(maj 2013 stara matura, poziom rozszerzony, część 1 zadanie 3f)
+
+### TREŚĆ 
+Przeanalizuj działanie poniższego algorytmu dla n = 3. 
+<img src={new URL('https://i.imgur.com/q1u9owE.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+
+<TableQuiz 
+    questions={
+      [
+        {question: "Podczas wykonywania algorytmu k dwukrotnie przyjmuje wartość 3.", answer: 'F'},
+        {question: "Podczas wykonywania algorytmu i dwukrotnie przyjmuje wartość 2.", answer: 'P'},
+        {question: "Po wykonaniu powyższego algorytmu s = 7 .", answer: 'P'},
+        {question: "Po wykonaniu powyższego algorytmu p = 108 .", answer: 'P'}
+      ]
+    }
+/>
 
 
 

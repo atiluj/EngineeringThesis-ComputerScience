@@ -185,6 +185,106 @@ dane:
     correct={"pozwala usunąć nadmiarowe dane."}
 />
 
+## Zadanie 10 (0-1pkt.)
+(maj 2015 stara matura, poziom podstawowy, część 1 zadanie 3.3)
+
+### TREŚĆ
+Klucz podstawowy w tabeli bazy danych 
+
+<Quiz 
+    question={''}
+    answers={[
+        "zawiera wartości wyłącznie numeryczne.",
+        "umożliwia jednoznaczną identyfikację wiersza.",
+        "umożliwia jednoznaczną identyfikację kolumny.",
+        "nie może służyć do łączenia z inną tabelą."]}
+    correct={"umożliwia jednoznaczną identyfikację wiersza."}
+/>
+
+## Zadanie 11 (0-1pkt.)
+(maj 2013 stara matura, poziom podstawowy, część 1 zadanie 3a)
+
+### TREŚĆ
+Kolumna w tabeli bazy danych
+
+<Quiz 
+    question={''}
+    answers={[
+        "zawiera dane różnych typów.",
+        "zawiera dane tego samego typu.",
+        "może mieć taką samą nazwę, jak inna kolumna w tej samej tabeli."]}
+    correct={"zawiera dane tego samego typu."}
+/>
+
+## Zadanie 12 (0-1pkt.)
+(maj 2011 stara matura, poziom podstawowy, część 1 zadanie 3f)
+
+### TREŚĆ
+W relacyjnym modelu bazy danych 
+
+<Quiz 
+    question={''}
+    answers={[
+      "wyróżniamy trzy rodzaje relacji.",
+      "podstawową formą organizacji danych są kwerendy.",
+      "kluczem podstawowym nie może być kolumna zawierająca tylko i wyłącznie teksty."]}
+    correct={"wyróżniamy trzy rodzaje relacji."}
+/>
+
+
+## Zadanie 13 (0-1pkt.)
+(maj 2009 stara matura, poziom podstawowy, część 1 zadanie 3a)
+
+### TREŚĆ
+Tabela bazy danych spełnia warunki:
+
+<TableQuiz 
+    questions={
+      [
+        {question: "jest podstawową jednostką organizacji danych w relacyjnych bazach danych", answer: 'P'},
+        {question: "każdy jej wiersz składa się tylko z danych tego samego typu", answer: 'F'},
+        {question: "wszystkie dane w kolumnie są tego samego typu", answer: 'P'}
+      ]
+    }
+/>
+
+## Zadanie 14 (0-1pkt.)
+(maj 2009 stara matura, poziom podstawowy, część 1 zadanie 3h)
+
+### TREŚĆ
+W bazie danych
+
+<TableQuiz 
+    questions={
+      [
+        {question: "sortowanie tabeli oznacza uporządkowanie wierszy według zawartości wybranych kolumn", answer: 'P'},
+        {question: "sortowanie tabeli oznacza uporządkowanie kolumn według zawartości wybranych wierszy.", answer: 'F'},
+        {question: "filtrowanie tabeli to wybór wierszy spełniających określone kryteria", answer: 'P'}
+      ]
+    }
+/>
+
+## Zadanie 14 (0-1pkt.)
+(maj 2012 stara matura, poziom rozszerzony, część 1 zadanie 3a)
+
+### TREŚĆ
+Poniżej przedstawiono fragment bazy danych zawierającej informacje o książkach,
+czytelnikach i wypożyczeniach. Pole *id_Cz* w tabeli *Czytelnicy* jest połączone relacją
+„jeden do wielu” z polem *id_Cz* w tabeli *Wypożyczenia*, podobnie pole *id_Ks* w tabeli
+*Książki* z polem *id_Ks* w tabeli *Wypożyczenia*. 
+<img src={new URL('https://i.imgur.com/on36BTj.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+<TableQuiz 
+    questions={
+      [
+        {question: "Jowita Kolska wypożyczyła „Misję Ambasadora”.", answer: 'P'},
+        {question: "Bajki Robotów” były wypożyczane dwa razy.", answer: 'P'},
+        {question: "Z podanych klas (I, II, III) najwięcej książek wypożyczyli uczniowie klasy II.", answer: 'F'},
+        {question: "Jacek Doniec nie wypożyczył jeszcze żadnej książki", answer: 'P'}
+      ]
+    }
+/>
+
 
 
 

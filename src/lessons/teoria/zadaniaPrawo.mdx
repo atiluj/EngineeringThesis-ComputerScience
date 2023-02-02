@@ -1,7 +1,7 @@
 import Dropdown from "../../components/dropdown/Dropdown.jsx";
 import TableQuiz from "../../components/tableQuiz/TableQuiz.jsx";
 import Quiz from "../../components/Quiz.jsx";
-import FillGapsQuiz from "../../components/fillGapsQuiz/FillGapsQuiz.jsx";
+import FillGapsQuiz from "../../components/FillGapsQuiz.jsx";
 
 
 ## Zadanie 1 (0-1pkt.)
@@ -24,13 +24,11 @@ Na licencji ADWARE jest rozpowszechniane oprogramowanie, które
 ## Zadanie 2 (0-1pkt.)
 (maj 2017 stara matura, poziom podstawowy, część 1 zadanie 3.2)
 
+### TREŚĆ 
+Wskaż licencję, która pozwala na bezpłatne wykorzystanie kodu źródłowego programu
+w dowolnym celu niekomercyjnym. 
 <Quiz 
-    question={
-        <p>
-          Wskaż licencję, która pozwala na bezpłatne wykorzystanie kodu źródłowego programu
-          w dowolnym celu niekomercyjnym. 
-        </p>
-    }
+    question={''}
     answers={[
         "Freeware",
         "Shareware",
@@ -39,25 +37,55 @@ Na licencji ADWARE jest rozpowszechniane oprogramowanie, które
     correct={"GPL"}
 />
 
-## Zadanie 2 (0-1pkt.)
-(maj 2017 stara matura, poziom podstawowy, część 1 zadanie 3.2)
+## Zadanie 3 (0-1pkt.)
+(maj 2013 stara matura, poziom podstawowy, część 1 zadanie 3g)
 
-<FillGapsQuiz
-    task={
-        <p>
-          Wskaż licencję, która pozwala na bezpłatne wykorzystanie kodu źródłowego programu
-          w dowolnym celu niekomercyjnym. 
-        </p>
-    }
-    questions={[
-        "pyt1",
-        "pyt2",
-        "pyt3",
-        "pyt4"]}
-    correct={[
-        "1",
-        "2",
-        "3",
-        "4"]}
+### TREŚĆ 
+Programy komputerowe rozpowszechniane bez opłat do wypróbowania przez
+użytkowników, mające często ograniczenia czasowe, limit uruchomień lub blokadę
+dostępu do niektórych funkcji, mają licencję
+
+<Quiz 
+    question={''}
+    answers={[
+        "freeware",
+        "komercyjną",
+        "shareware"]}
+    correct={"shareware"}
 />
+
+## Zadanie 4 (0-1pkt.)
+(maj 2013 stara matura, poziom rozszerzony, część 1 zadanie 3d)
+
+### TREŚĆ 
+Licencja adware 
+
+<TableQuiz 
+    questions={
+      [
+        {question: "umożliwia korzystanie z aplikacji po uiszczeniu opłaty", answer: 'F'},
+        {question: "zawiera żądanie zgody na wyświetlanie reklamy zwykle w postaci banerów", answer: 'P'},
+        {question: "nie gwarantuje dostępu do kodu źródłowego aplikacji", answer: 'P'},
+        {question: "dotyczy wyłącznie oprogramowania systemowego", answer: 'F'}
+      ]
+    }
+/>
+
+## Zadanie 5 (0-1pkt.)
+(maj 2012 stara matura, poziom podstawowy, część 1 zadanie 3e)
+
+### TREŚĆ 
+Licencja GNU GPL zezwala na
+
+<TableQuiz 
+    questions={
+      [
+        {question: "uruchamianie programu do użytku domowego", answer: 'P'},
+        {question: "rozpowszechnianie niezmodyfikowanej kopii programu", answer: 'P'},
+        {question: "analizowanie, jak program działa i dostosowywanie go do swoich potrzeb", answer: 'P'},
+        {question: "udoskonalanie programu i publiczne rozpowszechnianie własnych ulepszeń", answer: 'P'}
+      ]
+    }
+/>
+
 

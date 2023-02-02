@@ -1,5 +1,6 @@
 import Dropdown from "../../components/dropdown/Dropdown.jsx";
 import TableQuiz from "../../components/tableQuiz/TableQuiz.jsx";
+import Quiz from "../../components/Quiz.jsx";
 
 ## Zadanie 1 (0-1pkt.)
 (maj 2015 część 1 zadanie 2.5)
@@ -21,4 +22,91 @@ B4,…, B10. Ustal, które z poniższych stwierdzeń są poprawne.
         {question: "Wartość w komórce C2 wyniesie 4.", answer: 'F'},
       ]
     }
+/>
+
+
+## Zadanie 2 (0-1pkt.)
+(maj 2015 stara matura, poziom podstawowy, część 1 zadanie 3.4)
+
+### TREŚĆ
+W komórce C2 wpisano formułę taką, jak poniżej, a następnie przekopiowano ją do komórki C6. W rezultacie uzyskano w komórce C6 następującą wartość:
+<img src={new URL('https://i.imgur.com/tb8c7Da.png', import.meta.url)} alt="xyz" className={`big_img left_img`} />
+
+
+<Quiz 
+    question={''}
+    answers={[
+        "36",
+        "27",
+        "22",
+        "5"]}
+    correct={"27"}
+/>
+
+## Zadanie 3 (0-1pkt.)
+(maj 2015 stara matura, poziom podstawowy, część 1 zadanie 3.5)
+
+### TREŚĆ
+W komórce C2 wpisano formułę taką, jak poniżej, a następnie przekopiowano ją do komórki C4. W rezultacie uzyskano w komórce C4 następującą wartość: 
+<img src={new URL('https://i.imgur.com/ViXmQXn.png', import.meta.url)} alt="xyz" className={`big_img left_img`} />
+
+
+<Quiz 
+    question={''}
+    answers={[
+        "3",
+        "zdał",
+        "nie zdał",
+        "PRAWDA"]}
+    correct={"nie zdał"}
+/>
+
+## Zadanie 4 (0-1pkt.)
+(maj 2014 stara matura, poziom podstawowy, część 1 zadanie 3e)
+
+### TREŚĆ
+W arkuszu kalkulacyjnym **adres bezwzględny** oznacza adres komórki zapisany
+w formule, który nie zmienia się przy kopiowaniu komórki zawierającej tę formułę.
+Przykładem takiego adresu jest 
+
+<Quiz 
+    question={''}
+    answers={[
+        "B$12$",
+        "B12",
+        "$B$12"]}
+    correct={"$B$12"}
+/>
+
+## Zadanie 5 (0-1pkt.)
+(maj 2014 stara matura, poziom podstawowy, część 1 zadanie 3g)
+
+### TREŚĆ
+W arkuszu kalkulacyjnym komórka **B3** zawiera liczbę **7**, a komórka **B4** zawiera
+liczbę **9**. Jeśli formułę **=JEŻELI(B3<7;B3/2;JEŻELI(B4<\>9;3;MOD(B4;B3)))**
+wpiszemy do komórki **C3**, to pojawi się tam 
+
+<Quiz 
+    question={''}
+    answers={[
+        "4",
+        "3",
+        "2"]}
+    correct={"2"}
+/>
+
+## Zadanie 6 (0-1pkt.)
+(maj 2013 stara matura, poziom podstawowy, część 1 zadanie 3d)
+
+### TREŚĆ
+Jeśli w arkuszu kalkulacyjnym w komórce C1 umieścimy formułę =A1*$B$1, to po
+skopiowaniu jej do komórki C2 uzyskamy formułę
+
+<Quiz 
+    question={''}
+    answers={[
+        "=A1*$B$1.",
+        "=A2*$B$2.",
+        "=A2*$B$1."]}
+    correct={"=A2*$B$1."}
 />

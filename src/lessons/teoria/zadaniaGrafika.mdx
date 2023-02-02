@@ -1,5 +1,7 @@
 import Dropdown from "../../components/dropdown/Dropdown.jsx";
 import TableQuiz from "../../components/tableQuiz/TableQuiz.jsx";
+import Quiz from "../../components/Quiz.jsx";
+import FillGapsQuiz from "../../components/FillGapsQuiz.jsx";
 
 ## Zadanie 1 (0-1pkt.)
 (maj 2015 część 1 zadanie 2.2)
@@ -36,18 +38,28 @@ Kompresja stratna w grafice
 ## Zadanie 3 (0-1pkt.)
 (informator o egzaminie maturalnym z informatyki od roku szkolnego 2022/2023 zadanie 19)
 
-### TREŚĆ
-
-Wskaż, gdzie stosowany jest model barw CMYK oraz zapisz, jaki kolor oznacza każda z liter
-w tym modelu. <br/>
-…………………………………………………………………………………………… <br/>
-Kolory: <br/>
-C ………………………………………… <br/>
-M ………………………………………… <br/>
-Y ………………………………………… <br/>
-K ………………………………………… <br/>
-
-
+<FillGapsQuiz
+    task={
+        <p>
+          Wskaż, gdzie stosowany jest model barw CMYK oraz zapisz, jaki kolor oznacza każda z liter w tym modelu. 
+          <br/>
+          .................................................................         
+          <br/>
+          Kolory:
+        </p>
+    }
+    questions={[
+        "C",
+        "M",
+        "Y",
+        "K"]}
+    correct={[
+        "yan",
+        "agenta",
+        "ellow",
+        "lack"]}
+/>
+<br/>
 <Dropdown title="Rozwiązanie">
   <p className={`dropdown_text`}>
     Model CMYK wykorzystujemy w druku wielobarwnym, poligrafii, a także 
@@ -58,3 +70,35 @@ K ………………………………………… <br/>
     K - black (czarny) <br/>
   </p>
 </Dropdown>
+
+
+## Zadanie 4 (0-1pkt.)
+(maj 2014 stara matura, poziom podstawowy, część 1 zadanie 3f)
+
+### TREŚĆ
+Formatami plików graficznych przechowujących **grafikę rastrową** są
+
+<Quiz 
+    question={''}
+    answers={[
+        "JPEG, GIF, BMP",
+        "SVG, CDR, SWF",
+        "PAS, CPP, COM"]}
+    correct={"JPEG, GIF, BMP"}
+/>
+
+## Zadanie 5 (0-1pkt.)
+(maj 2013 stara matura, poziom podstawowy, część 1 zadanie 3e)
+
+### TREŚĆ
+Grafika wektorowa to sposób tworzenia i przechowywania w komputerze obrazów, które
+są reprezentowane w postaci
+
+<Quiz 
+    question={''}
+    answers={[
+        "zbiorów punktów jednokolorowych.",
+        "opisów figur geometrycznych (odcinków, łuków, okręgów, elips ...).",
+        "siatki niezależnie traktowanych pikseli."]}
+    correct={"opisów figur geometrycznych (odcinków, łuków, okręgów, elips ...)."}
+/>
