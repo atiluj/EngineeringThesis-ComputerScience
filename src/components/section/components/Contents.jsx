@@ -1,16 +1,18 @@
 import * as React from 'react';
-import NavContext from '../NavContext';
+import { useOutletContext, useParams } from 'react-router-dom';
 import hljs from 'highlight.js';
 
-function Contents({lessons}) {
-    const { curChapter, curSubchapter } = React.useContext(NavContext);
-    const chapter = lessons[curChapter];
-    const subchapter = chapter.subchapters ? chapter.subchapters[curSubchapter] : chapter;
-    let title = `${curChapter}.`;
+function Contents() {
+    const { chapterId = 0, subchapterId = 1 } = useParams();
+    const [ lessons ] = useOutletContext();
+    const chapter = lessons[chapterId];
+    const subchapter = chapter.subchapters ? chapter.subchapters[subchapterId-1] : chapter;
+    
+    let title = `${chapterId}.`;
     if (chapter.subchapters)
-        title += `${curSubchapter + 1}.`;
+        title += `${subchapterId}.`;
     title += ` ${subchapter.name}`;
-    React.useEffect(() => { hljs.highlightAll(); }, [subchapter.content]); //śmieszna funkcja do skanownaia stronki i kolorowania kodu
+    React.useEffect(() => { hljs.highlightAll(); }, [subchapter.content]);
     
     return <article className={`second`}>
         <h1>{title}</h1>

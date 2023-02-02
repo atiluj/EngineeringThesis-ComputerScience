@@ -9,6 +9,7 @@ import ExercisesPython from './lessons/exercises/matura/config.jsx';
 import Interpreter from './components/interpreter/Interpreter'
 import Exercise from './components/exercise/Exercise'
 import ExerciseSet from './components/exerciseSet/ExerciseSet'
+import Contents from './components/section/components/Contents';
 import Section from './components/section/Section'
 import Home from './components/home/Home'
 import Footer from './components/footer/Footer';
@@ -16,13 +17,6 @@ import accessLogo from './img/access_logo.png';
 import excelLogo from './img/excel_logo.png';
 import pythonLogo from './img/python_logo.png';
 import teoriaLogo from './img/teoria_logo.png';
-
-const sections = [
-    {path: 'excel', lessons: ExcelLessons, logo: excelLogo},
-    {path: 'teoria', lessons: TeoriaLessons, logo: teoriaLogo},
-    {path: 'access', lessons: AccessLessons, logo: accessLogo},
-    {path: 'python', lessons: PythonLessons, logo: pythonLogo}
-];
 
 function Dashboard() {
     return (
@@ -36,6 +30,13 @@ function Dashboard() {
 }
 
 function App() {
+    const sections = [
+        {path: 'excel', lessons: ExcelLessons, logo: excelLogo},
+        {path: 'teoria', lessons: TeoriaLessons, logo: teoriaLogo},
+        {path: 'access', lessons: AccessLessons, logo: accessLogo},
+        {path: 'python', lessons: PythonLessons, logo: pythonLogo}
+    ];
+
     return (
     <BrowserRouter>
         <Routes>
@@ -44,8 +45,12 @@ function App() {
                 <Route path='interpreter' element={<Interpreter />} />
                 <Route path='exercise' element={<ExerciseSet />} />
                 <Route path='exercise/:id' element={<Exercise lessons={ExercisesPython} />}/>
-                {sections.map((section) => (
-                    <Route path={section.path} element={<Section lessons={section.lessons} title={section.path} logo={section.logo}/>}>
+                {sections.map((section, index) => (
+                    <Route key={index} path={section.path} element={<Section lessons={section.lessons} title={section.path} logo={section.logo}/>}>
+                        <Route index element={<Contents/>}/>
+                        <Route path={':chapterId'}>
+                            <Route path={':subchapterId'} element={<Contents/>} />
+                        </Route>
                     </Route>
                 ))}
             </Route>
@@ -53,6 +58,5 @@ function App() {
     </BrowserRouter>
     );
 }
-
 
 export default App;

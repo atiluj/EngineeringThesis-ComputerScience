@@ -1,66 +1,55 @@
 import * as React from 'react';
 import styles from './Section.module.css';
-import { useSearchParams } from 'react-router-dom';
-import 'highlight.js/styles/dark.css';
+import { Outlet, useParams, useNavigate } from 'react-router-dom';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
-import NavContext from './NavContext';
 import Chapter from './components/Chapter';
-import Contents from './components/Contents';
 import Comments from '../Comments';
+import 'highlight.js/styles/dark.css';
 
 function Section({lessons, title, logo}) {
+    let navigate = useNavigate();
+    const { chapterId, subchapterId } = useParams();
     const [curChapter, setCurChapter] = React.useState(0);
-    const [curSubchapter, setCurSubchapter] = React.useState(0);
-    const [searchParams, setSearchParams] = useSearchParams();
-    function changeChapter(ch, subch) {
-        setCurChapter(ch);
-        setCurSubchapter(subch);
-        setSearchParams({chapter: `${ch}`, subchapter: `${subch + 1}`});
-        window.scrollTo({top:0, behavior:"smooth"});
-    }
+    const [curSubchapter, setCurSubchapter] = React.useState(1);
 
     React.useEffect(() => {
-        if (curChapter != 0 || curSubchapter != 0) changeChapter(0, 0);
-    }, [lessons, title]);
+        if (chapterId && subchapterId) {
+            setCurChapter(parseInt(chapterId));
+            setCurSubchapter(parseInt(subchapterId));
+        }
+    }, [chapterId, subchapterId]);
 
     const maxChapter = lessons.length - 1;
-    const maxSubchapter = chapter => lessons[chapter].subchapters ? lessons[chapter].subchapters.length - 1 : 0;
-    const prevLessonExists = curChapter > 0 || curSubchapter > 0;
+    const maxSubchapter = chapter => lessons[chapter].subchapters ? lessons[chapter].subchapters.length : 1;
+    const prevLessonExists = curChapter > 0 || curSubchapter > 1;
     const nextLessonExists = curChapter != maxChapter || curSubchapter != maxSubchapter(curChapter);
-    const lessonExists = (chapter, subchapter) => chapter >= 0 && chapter <= maxChapter && subchapter >= 0 && subchapter <= maxSubchapter(chapter);
-
-    React.useEffect(() => {
-        if (searchParams.get("chapter") && searchParams.get("subchapter")) {
-            const chapter = Number(searchParams.get("chapter"));
-            const subchapter = Number(searchParams.get("subchapter")) - 1;
-            if (lessonExists(chapter, subchapter)) {
-                changeChapter(chapter, subchapter);
-            }
-        }
-    }, []);
 
     function prevLesson() {
-        if (curSubchapter == 0) {
-            const prevChapter = curChapter - 1;
-            changeChapter(prevChapter, maxSubchapter(prevChapter));
+        let chapter, subchapter;
+        if (curSubchapter == 1) {
+            chapter = curChapter - 1;
+            subchapter = maxSubchapter(chapter);
         } else {
-            changeChapter(curChapter, curSubchapter - 1);
+            chapter = curChapter;
+            subchapter = curSubchapter - 1;
         }
+        navigate(`/${title}/${chapter}/${subchapter}`);
     }
 
     function nextLesson() {
+        let chapter, subchapter;
         if (curSubchapter == maxSubchapter(curChapter)) {
-            changeChapter(curChapter + 1, 0);
+            chapter = curChapter + 1;
+            subchapter = 1;
         } else {
-            changeChapter(curChapter, curSubchapter + 1);
+            chapter = curChapter;
+            subchapter = curSubchapter + 1;
         }
+        navigate(`/${title}/${chapter}/${subchapter}`);
     }
 
-    if (!lessonExists(curChapter, curSubchapter)) return null;
-
-    return <NavContext.Provider value={{ curChapter, curSubchapter, changeChapter }}>
+    return (
         <main className={styles.main}>
             <div className={styles.contents}>
                 <div className={`${styles.cont_title} ${styles.title}`}>
@@ -70,15 +59,17 @@ function Section({lessons, title, logo}) {
 
                 <div className={styles.cont}>
                     {lessons.map((chapter, chapterId) =>
-                        <Chapter key={chapterId}
+                        <Chapter 
+                            key={chapterId}
                             chapter={chapter}
-                            chapterId={chapterId} />
+                            chapterId={chapterId} 
+                        />
                     )}
                 </div>
             </div>
 
             <div className={`${styles.main_content} main_content`}>
-                <Contents lessons={lessons} />
+                <Outlet context={[lessons]}/>
                 <div className={styles.controls}>
                     <div>
                         {prevLessonExists && <button onClick={prevLesson}><ArrowBackIosNewIcon /></button>}
@@ -88,7 +79,7 @@ function Section({lessons, title, logo}) {
                 <Comments issue={`${title} ${curChapter}.${curSubchapter+1}`} />
             </div>
         </main>
-    </NavContext.Provider>;
+    );
 }
 
 export default Section;

@@ -124,8 +124,8 @@ function Nav() {
             <AppBar sx={{boxShadow: 'none'}}>
                 <Toolbar variant="dense" id="top_navbar" className={`gradient ${styles.navbar_sticky}`}>
                     <Stack direction="row" id="nav_wrapper_left" className={styles.nav_wrapper_left}>
-                        {tabs.map((tab) => (
-                            <Link to={tab.link} style={aStyle} className={`menu_button nav_button ${styles.nav_button}`} onClick={buttonClick}>{tab.name}</Link>
+                        {tabs.map((tab, index) => (
+                            <Link key={index} to={tab.link} style={aStyle} className={`menu_button nav_button ${styles.nav_button}`} onClick={buttonClick}>{tab.name}</Link>
                         ))}
                     </Stack>                  
                     <Stack direction="row" id="nav_wrapper_right" className={styles.nav_wrapper_right}>
