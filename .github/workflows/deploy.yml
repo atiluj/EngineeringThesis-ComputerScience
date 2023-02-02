@@ -18,6 +18,7 @@ jobs:
           echo "User $HOSTING_USERNAME" >> ~/.ssh/config
           echo "StrictHostKeyChecking no" >> ~/.ssh/config
           echo "$HOSTING_KEY" > ~/.ssh/id_$HOSTING_KEY_TYPE
+          chmod 600 ~/.ssh/id_$HOSTING_KEY_TYPE
       shell: bash
       env:
         HOSTING_HOSTNAME: ${{secrets.HOSTING_HOSTNAME}}
