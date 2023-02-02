@@ -86,8 +86,8 @@ const TeoriaLessons = [
 
     {name: "Algorytmy", subchapters: [
         // {name: "Odwrotna notacja polska", content: null},
-        {name: "Zadania maturalne", content: <ZadaniaSzyfrowanie/>},
-        {name: "Zadania maturalne", content: <ZadaniaAlgorytmy/>},
+        {name: "Zadania maturalne - szyfrowanie", content: <ZadaniaSzyfrowanie/>},
+        {name: "Zadania maturalne - pozostałe", content: <ZadaniaAlgorytmy/>},
     ]},
 ];
 
