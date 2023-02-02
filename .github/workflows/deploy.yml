@@ -16,6 +16,7 @@ jobs:
           echo "Hostname $HOSTING_HOSTNAME" >> ~/.ssh/config
           echo "Port $HOSTING_PORT" >> ~/.ssh/config
           echo "User $HOSTING_USERNAME" >> ~/.ssh/config
+          echo "StrictHostKeyChecking no" >> ~/.ssh/config
           echo "$HOSTING_KEY" > ~/.ssh/id_$HOSTING_KEY_TYPE
       shell: bash
       env:
