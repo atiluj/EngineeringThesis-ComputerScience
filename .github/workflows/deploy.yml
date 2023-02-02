@@ -16,14 +16,13 @@ jobs:
           echo "Hostname $HOSTING_HOSTNAME" >> ~/.ssh/config
           echo "Port $HOSTING_PORT" >> ~/.ssh/config
           echo "Username $HOSTING_USERNAME" >> ~/.ssh/config
-          echo "$HOSTING_KEY" > "~/.ssh/id_$HOSTING_KEY_TYPE"
+          echo "$HOSTING_KEY" > "~/.ssh/id_ed25519"
       shell: bash
       env:
         HOSTING_HOSTNAME: ${{secrets.HOSTING_HOSTNAME}}
         HOSTING_PORT: ${{secrets.HOSTING_PORT}}
         HOSTING_USERNAME: ${{secrets.HOSTING_USERNAME}}
         HOSTING_KEY: ${{secrets.HOSTING_KEY}}
-        HOSTING_KEY_TYPE: ${{secrets.HOSTING_KEY_TYPE}}
 
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v2
