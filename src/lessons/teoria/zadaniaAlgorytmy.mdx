@@ -1,6 +1,7 @@
 import Dropdown from "../../components/dropdown/Dropdown.jsx";
 import TableQuiz from "../../components/tableQuiz/TableQuiz.jsx";
 import Quiz from "../../components/Quiz.jsx";
+import FillGapsQuiz from "../../components/FillGapsQuiz.jsx";
 
 ## Zadanie 1 (0-1pkt.)
 (maj 2016 część 1 zadanie 3.2)
@@ -257,8 +258,154 @@ Przeanalizuj działanie poniższego algorytmu dla n = 3.
     }
 />
 
+## Zadanie 13 (0-1pkt.)
+(maj 2011 stara matura, poziom rozszerzony, część 1 zadanie 3f)
 
+### TREŚĆ 
+Rozważalgorytm, który dla zadanego naturalnego n \> 0 oblicza następującą sumę: <br/>
+suma = 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> + 4<sup>4</sup> + ... + n<sup>n</sup>
+<img src={new URL('https://i.imgur.com/GoBoX13.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+Oceń prawdziwość stwierdzeń
 
+<TableQuiz 
+    questions={
+      [
+        {question: "Liczba instrukcji wykonana przez ten algorytm n e za i leży od wielkości n.", answer: 'F'},
+        {question: "Liczba instrukcji wykonana przez ten algorytm jest funkcją kwadratową ze względu na n. ", answer: 'P'},
+        {question: "Instrukcja w kroku 2. jest instrukcją iteracji.", answer: 'P'},
+        {question: "Wartość zmiennej j w kroku 2.b. zmienia się kolejno od 1 do i, przy n \> 1.", answer: 'F'}
+      ]
+    }
+/>
 
+## Zadanie 14 (0-1pkt.)
+(maj 2010 stara matura, poziom rozszerzony, część 1 zadanie 3b)
 
+### TREŚĆ 
+Algorytm
+<img src={new URL('https://i.imgur.com/P89fnHX.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+znajduje
+
+<TableQuiz 
+    questions={
+      [
+        {question: "NWW (a,b)", answer: 'F'},
+        {question: "NWD (a,b)", answer: 'P'},
+        {question: "liczbę pierwszą większą od a i mniejszą od b. ", answer: 'F'}
+      ]
+    }
+/>
+
+## Zadanie 15 (0-2pkt.)
+(maj 2009 stara matura, poziom rozszerzony, część 1 zadanie 3a)
+(2pkt. za w pełni poprawnąodpowiedź, 0pkt. w przeciwnym przypadku)
+
+### TREŚĆ 
+Przeanalizuj poniższy algorytm (:= oznacza instrukcję przypisania) 
+<img src={new URL('https://i.imgur.com/mEq5IWl.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+<TableQuiz 
+    questions={
+      [
+        {question: "Wykonywanie algorytmu zakończy się po wypisaniu liczb od 1 do 7", answer: 'P'},
+        {question: "Po pierwszym sprawdzeniu warunku w kroku 3. nie zostaną wykonane kroki: 4., 5., 6. i wykonywanie algorytmu zakończy się. ", answer: 'F'},
+        {question: "Wykonywanie algorytmu zakończy się po wypisaniu liczb od 0 do 6.", answer: 'F'},
+        {question: "Sprawdzenie warunku m n > wykonane zostanie dokładnie 8 razy", answer: 'P'}
+      ]
+    }
+/>
+
+## Zadanie 16 (0-1pkt.)
+(maj 2009 stara matura, poziom rozszerzony, część 1 zadanie 3a)
+
+### TREŚĆ 
+Schemat Hornera znajduje zastosowanie przy
+
+<TableQuiz 
+    questions={
+      [
+        {question: "obliczaniu pola powierzchni figur płaskich", answer: 'F'},
+        {question: "obliczaniu wartości wielomianu przy minimalnej liczbie operacji mnożenia", answer: 'P'},
+        {question: "szybkim sortowaniu dużych zbiorów danych", answer: 'F'},
+        {question: "znajdowaniu najmniejszego elementu w zbiorze", answer: 'F'}
+      ]
+    }
+/>
+
+## Zadanie 17 (0-1pkt.)
+(maj 2008 stara matura, poziom rozszerzony, część 1 zadanie 3a)
+
+### TREŚĆ 
+Dla poniższego algorytmu dane stanowi skończony ciąg liczbowy zawierający
+co najmniej jedną liczbę:
+<img src={new URL('https://i.imgur.com/9i6MljH.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+Uwaga: „:=” oznacza instrukcję przypisania <br/>
+Wynikiem działania tego algorytmu jest 
+
+<TableQuiz 
+    questions={
+      [
+        {question: "suma podanych liczb.", answer: 'F'},
+        {question: "średnia arytmetyczna podanych liczb.", answer: 'P'},
+        {question: "średnia geometryczna podanych liczb.", answer: 'F'}
+      ]
+    }
+/>
+
+## Zadanie 18 (0-1pkt.)
+(maj 2008 stara matura, poziom rozszerzony, część 1 zadanie 3b)
+
+### TREŚĆ 
+Poszukując numeru telefonu w książce telefonicznej wiele osób korzysta z następującego
+algorytmu: otwieramy książkę mniej więcej w połowie. Jeśli szukane nazwisko
+w kolejności alfabetycznej jest wcześniej niż nazwisko, na które trafiliśmy, otwieramy
+książkę w połowie, licząc od początku do miejsca, w którym się znajdujemy.
+W przeciwnym przypadku bierzemy pod uwagę drugą połowę książki. Postępujemy
+podobnie dla tej części książki, którą wybraliśmy, aż do momentu, kiedy jesteśmy blisko
+szukanego nazwiska. Wtedy wystarczy już przejrzeć kilka stron. Ten sposób
+postępowania jest zastosowaniem w praktyce strategii 
+
+<TableQuiz 
+    questions={
+      [
+        {question: "dziel i zwyciężaj", answer: 'P'},
+        {question: "zachłannej", answer: 'F'},
+        {question: "porządkowania ciągu elementów", answer: 'F'}
+      ]
+    }
+/>
+
+## Zadanie 19 (0-1pkt.)
+(maj 2008 stara matura, poziom rozszerzony, część 1 zadanie 3f)
+
+### TREŚĆ 
+Poniższy schemat blokowy opisuje instrukcję powtarzania, w której 
+<img src={new URL('https://i.imgur.com/EXX8CYr.png', import.meta.url)} alt="xyz" className={`medium_img`} />
+
+<TableQuiz 
+    questions={
+      [
+        {question: <p>liczba powtórzeń instrukcji <b>I</b> nie zależy od warunku warunek</p>, answer: 'F'},
+        {question: <p>instrukcja <b>I</b> jest wykonywana co najmniej raz</p>, answer: 'P'},
+        {question: <p>jeśli warunek <b>nie jest spełniony</b>, to następuje zakończenie powtarzania</p>, answer: 'F'}
+      ]
+    }
+/>
+
+## Zadanie 20 (0-1pkt.)
+(maj 2007 stara matura, poziom rozszerzony, część 1 zadanie 1.8.)
+
+### TREŚĆ
+Spośród czterech algorytmów, o podanych niżej złożonościach, najbardziej wydajny
+jest algorytm o złożoności 
+
+<Quiz 
+    question={''}
+    answers={[
+        "liniowej",
+        "wykładniczej",
+        "kwadratowej",
+        "logarytmicznej"]}
+    correct={"logarytmicznej"}
+/>
 

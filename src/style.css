@@ -291,6 +291,7 @@ img.section_logo {
 /* do obrazków w quizach, które trzeba wyrównać do lewej */
 .main_content .second img.big_img.left_img,
 .main_content .second img.medium_img.left_img,
+.main_content .second img.small_img.left_img,
 .main_content .second img.super_small_img.left_img {
     margin-left: 20px;
 }
