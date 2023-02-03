@@ -74,35 +74,6 @@ nie
 </Dropdown>
 
 <Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYTHON">
-
-```
-def czy_poprawne(s): #Funkcja bilansująca nawiasy w wyrażeniu
-    bilans = 0
-    for i in s:
-        if i == '[':
-            bilans += 1
-        else:
-            bilans -= 1
-
-        if bilans &lt; 0:
-            return 'nie\n'
-    return 'tak\n'
-
-
-f = open('dane2_4.txt', 'r')
-x = f.readlines()
-x_new = [i.rstrip('\n') for i in x]
-f.close()
-
-f = open('zadanie2_4.txt', 'w')
-for i in x_new:
-    f.write(czy_poprawne(i))
-```
-
-<p className={`dropdown_text`}>
-Rozwiązanie z <a href="http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-2/">http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-2/</a><br/>   
-</p>
-
 </Dropdown>
 
 <Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
@@ -133,7 +104,7 @@ while (dane >> wiersz) {
 } 
 ```
 <p className={`dropdown_text`}>
-Rozwiązanie z <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+Rozwiązanie z <a className="link" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
 </p>
 
 </Dropdown>

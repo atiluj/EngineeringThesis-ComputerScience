@@ -69,7 +69,11 @@ WSGHKGSW
 <br/>
 
 Dwie podane wyżej przykładowe plansze odpowiadają następującym stanom gry:<br/>
-![](https://i.imgur.com/QDpW7Wf.png) ![](https://i.imgur.com/R1uNeAN.png)
+
+![](https://i.imgur.com/QDpW7Wf.png)
+<br/>
+
+![](https://i.imgur.com/R1uNeAN.png)
 
 <br/>
 
@@ -92,11 +96,6 @@ Odpowiedź dla pliku szachy_przyklad.txt:
 ```
 
 (7 plansz z pustymi kolumnami, największa liczba pustych kolumn na planszy − 5). 
-<br/>
-
-
-![](https://i.imgur.com/oQma1un.png)
-
 
 <br/>
 <br/>
@@ -119,62 +118,6 @@ Odpowiedź dla pliku szachy_przyklad.txt:
 </Dropdown>
 
 <Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYHTON">
-
-```python
-#Wczytujemy plik
-plik = open('szachy.txt', 'r')
-lista = plik.readlines()
-plik.close()
-#Usuwanie znaków niedrukowanych z listy
-lista_new = [i.rstrip('\n') for i in lista]
-
-#Funkcja sprawdzająca liczbę pustych kolumn na jednej planszy
-def pusteKolumny(lista):
-    count = 0
-    for i in range(8): #Chodzenie po wierszach
-        pusta = True
-        for j in range(8): #Chodzenie po kolumnach
-            if lista[j][i] != ".":
-                pusta = False
-                break
-        if pusta == True:
-            count += 1
-    return count
-
-#Tworzenie listy, której każdy element to plansza (8 list)
-plansze = []
-tmp = []
-k = 1
-for i in lista_new:
-    if i != "":
-        tmp.append(i)
-        k += 1
-    if k == 9:
-        plansze.append(tmp)
-        tmp = []
-        k = 1
-
-#Wyznaczanie liczby plansz z pustymi kolumnami (total)
-#oraz największej liczby pustych kolumn na planszy (max)
-
-max = 0
-total = 0
-for i in plansze:
-    if pusteKolumny(i) != 0: total += 1
-    if pusteKolumny(i) &gt; max: max = pusteKolumny(i)
-
-wynik = str(total) + " " + str(max)
-
-#Zapisywanie odpowiedzi do pliku
-plik = open('zadanie1_1.txt', 'w')
-plik.write(str(wynik))
-plik.close()
-```
-
-<p className={`dropdown_text`}>
-    rozwiązanie z <a href="http://pythonwszkole.pl/python-na-maturze/arkusz-pokazowy-2023-zadanie-1-szachy/">http://pythonwszkole.pl/python-na-maturze/arkusz-pokazowy-2023-zadanie-1-szachy/</a>
-</p>
-
 </Dropdown>
 
 

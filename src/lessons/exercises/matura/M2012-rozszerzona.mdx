@@ -13,8 +13,11 @@ Rozważmy szyfr podstawieniowy działający zgodnie z następującymi zasadami:<
 - Tekst jawny, szyfrogram oraz klucz składają się wyłącznie z wielkich liter alfabetu
 angielskiego.<br/>
 - Litery ponumerowano i przyporządkowano im kody ASCII (liczby z zakresu 65–90): <br/>
+<br/>
 
 ![](https://i.imgur.com/Y8XJaVB.png)
+
+<br/>
 
 - Kolejne litery tekstu jawnego są szyfrowane za pomocą kolejnych liter słowa będącego
 kluczem, być może powtórzonego wiele razy.<br/>
@@ -23,7 +26,7 @@ klucza poprzez dodanie do <b>kodu</b> litery tekstu jawnego <b>numeru</b> odpowi
 klucza. Jeżeli tak uzyskana wartość liczbowa będzie większa od 90, należy ją zmniejszyć
 o 26. Szyfrem danej litery jest litera o tak uzyskanym kodzie. Poniższy przykład precyzuje
 zasady szyfrowania.<br/>
-<b>Przykład:</b>
+<b>Przykład: </b>
 Tekst jawny: LATO, klucz: WODA<br/>
 L+W = 76+23 = 99. Ponieważ przekroczono zakres 90, należy od 99 odjąć 26, czyli
 99–26 = 73. Zatem zaszyfrowanym znakiem jest litera I.<br/>
@@ -33,7 +36,7 @@ O+A = 79+1 = 80, czyli zaszyfrowanym znakiem jest litera P.<br/>
 Szyfrogram: IPXP<br/>
 - Jeżeli użyte słowo kluczowe jest zbyt krótkie, by wystarczyło do zaszyfrowania całego
 tekstu, należy użyć jego powtórzeń. <br/>
-<b>Przykład:</b> 
+<b>Przykład: </b> 
 Tekst jawny: MARTA, klucz: TOR<br/>
 M+T = 77+20 = 97, 97-26=71, G<br/>
 A+O = 65+15 =80, P<br/>
@@ -319,8 +322,7 @@ OWCA
 </Code>
 </Dropdown>
 
-<br/><br/>
-<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
 ```
 def kod_litery(litera):

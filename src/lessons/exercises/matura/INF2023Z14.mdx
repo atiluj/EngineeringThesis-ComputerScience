@@ -43,44 +43,6 @@ jest tylko jeden taki segment, <b>a suma jego elementów jest dodatnia</b>.
 </Dropdown>
 
 <Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYTHON">
-
-```
-plik = open('dane1_4.txt', 'r')
-lista = plik.readlines()
-plik.close()
-
-lista_new = [int(i.rstrip('\n')) for i in lista]
-print(lista_new)
-
-#-----Algorytm Kaden'a z uwzględnieniem miejsc-----
-wynik = 0
-suma_chwilowa = 0
-start = 0
-koniec = 0
-
-for i, j in enumerate(lista_new):
-    if suma_chwilowa &lt;= 0:
-        start_chwilowy = i
-        suma_chwilowa = j
-    else:
-        suma_chwilowa += j
-
-    if suma_chwilowa &gt; wynik:
-        wynik = suma_chwilowa
-        koniec = i + 1
-        start = start_chwilowy + 1
-#--------------------------
-
-zapis = str(start) + ' ' + str(koniec)
-
-plik = open('zadanie1_4.txt', 'w')
-plik.write(zapis)
-plik.close()
-```
-<p className={`dropdown_text`}>
-Rozwiązanie z <a href="http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-1-segment/">http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-1-segment/</a><br/>   
-</p>
-
 </Dropdown>
 
 <Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
@@ -121,7 +83,7 @@ wynik << maks_pocz + 1 << " " << maks_kon + 1 << endl;
 // do której wczytano dane z pliku
 ```
 <p className={`dropdown_text`}>
-Rozwiązanie z <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+Rozwiązanie z <a className="link" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
 </p>
 
 </Dropdown>

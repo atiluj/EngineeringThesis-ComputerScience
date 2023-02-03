@@ -41,35 +41,6 @@ Napisz program wyznaczający największą sumę segmentu tablicy A.
 </Dropdown>
 
 <Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYTHON">
-
-```
-plik = open('dane1_3.txt', 'r')
-lista = plik.readlines()
-plik.close()
-
-lista_new = [int(i.rstrip('\n')) for i in lista]
-print(lista_new)
-
-#-----Algorytm Kaden'a-----
-wynik = 0
-suma_chwilowa = 0
-
-for i in lista_new:
-    suma_chwilowa = max(0, suma_chwilowa + i)
-    wynik = max(suma_chwilowa, wynik)
-#--------------------------
-
-print(wynik)
-
-plik = open('zadanie1_3.txt', 'w')
-plik.write(str(wynik))
-plik.close()
-```
-
-<p className={`dropdown_text`}>
-Rozwiązanie z <a href="http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-1-segment/">http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-1-segment/</a><br/>   
-</p>
-
 </Dropdown>
 
 <Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
@@ -95,7 +66,7 @@ wynik << max << endl;
 ```
 
 <p className={`dropdown_text`}>
-Rozwiązanie z <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+Rozwiązanie z <a className="link" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
 
 Powyższy program przykładowy ma złożoność sześcienną. Można napisać programy
 o znacznie lepszej (kwadratowej, a nawet liniowej) złożoności, ale ten program jest bardzo

@@ -76,34 +76,6 @@ Dla danych z pierwszych czterech wierszy w pliku dane2_3.txt:<br/></p>
 </Dropdown>
 
 <Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYTHON">
-
-```
-def glebokosc(s): #Funkcja badająca głębokość jednego wyrażenia
-    tmp = 0
-    res = 0
-    for i in s:
-        if i == '[':
-            tmp += 1
-            if tmp >= res: res = tmp
-        else:
-            tmp -= 1
-    return str(res)
-
-f = open('dane2_3.txt', 'r')
-x = f.readlines()
-x_new = [i.rstrip('\n') for i in x]
-f.close()
-
-f = open('zadanie2_3.txt', 'w')
-for i in x_new:
-    f.write(glebokosc(i))
-    f.write('\n')
-```
-
-<p className={`dropdown_text`}>
-Rozwiązanie z <a href="http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-2/">http://pythonwszkole.pl/python-na-maturze/informator-maturalny-2023-zadanie-2/</a><br/>   
-</p>
-
 </Dropdown>
 
 <Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
@@ -129,7 +101,7 @@ while (dane >> wiersz) {
 }
 ```
 <p className={`dropdown_text`}>
-Rozwiązanie z <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+Rozwiązanie z <a className='link' href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
 </p>
 
 </Dropdown>
