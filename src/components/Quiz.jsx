@@ -43,11 +43,12 @@ export default function Quiz(props) {
           value={value}
           onChange={handleRadioChange}
         >
-            {props.answers.map((answer) =>
+            {props.answers.map((answer, index) =>
                 <FormControlLabel
                     value={answer}
                     control={<Radio/>}
                     label={answer}
+                    key={index}
                 />
             )}
         </RadioGroup>
