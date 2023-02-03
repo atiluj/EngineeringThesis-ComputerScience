@@ -1,0 +1,82 @@
+import Dropdown from "../../../components/dropdown/Dropdown.jsx";
+import Code from "../../../components/code/Code.jsx";
+
+<div className="box_link"><a className="link  link_materials" target="_blank" href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-2.pdf">LINK DO ARKUSZA</a>
+<br/>
+<a className="link  link_materials" href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-zalaczniki.zip"> PLIKI DO ZADANIA</a>
+
+<br/>
+</div>
+
+### TREŚĆ
+
+Firma Igloo planuje w wybranych miastach Europy wybudować galerie handlowe. W każdej
+z planowanych galerii może znajdować się różna liczba lokali handlowych. Wszystkie lokale
+handlowe będą miały kształt prostokąta.<br/>
+W pliku <i>galerie.txt</i> zapisanych jest 50 wierszy z informacjami dotyczącymi planowanych
+galerii. Każdy wiersz w pliku to informacja o jednej galerii. Dane oddzielone są spacją
+i zawierają odpowiednio:
+- kod kraju;
+- nazwę miasta (nazwy miast nie powtarzają się);
+- 70 par liczb (140 liczb) określających wymiary (długość i szerokość w metrach) lokali
+handlowych, które znajdować się będą w danej galerii. Jeżeli liczba lokali w galerii jest
+mniejsza niż 70, to wiersz uzupełniony jest zerami.<br/><br/>
+<b>Przykład:<br/></b>
+NL Amsterdam 8 4 5 12 7 5 5 11 9 4 7 6 … 0 0 0 0 0 0
+Do Twojej dyspozycji jest pomocniczy plik galerie_przyklad.txt, zawierający
+10 wierszy, który możesz wykorzystać, aby sprawdzić poprawność działania swojego(-ich)
+programu(-ów).<br/><br/>
+<b>Napisz program(-y)</b>, w wyniku działania którego(-ych) otrzymasz odpowiedzi do podanych
+zadań. Pliki źródłowe z rozwiązaniem zapisz pod nazwą zgodną z numerem zadania,
+z rozszerzeniem odpowiadającym użytemu narzędziu informatycznemu.
+
+<br/><br/>
+
+### Zadanie 1 (4pkt)  
+Dla każdego kraju z pliku <i>galerie.txt</i> wyznacz liczbę miast, w których powstaną galerie.
+Wynik zapisz w pliku <i>wynik4_1.txt</i>. W każdym wierszu pliku powinny znajdować się: kod
+państwa oraz informacja o liczbie miast.<br/><br/>
+Dla danych z pliku galerie_przyklad.txt prawidłowa odpowiedź to:<br/>
+
+```
+H 1
+I 2
+F 1
+GB 1
+D 3
+NL 1
+DK 1
+```
+
+<br/><br/>
+<Dropdown title="ODPOWIEDŹ">
+
+```
+GB 5
+D 15
+E 6
+I 6
+F 2
+RO 1
+A 1
+H 1
+BG 1
+CZ 1
+B 1
+S 1
+HR 1
+NL 2
+LV 1
+GR 1
+LT 1
+FIN 1
+DK 1
+IRL 1
+```
+</Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+</Dropdown>
+
+
+

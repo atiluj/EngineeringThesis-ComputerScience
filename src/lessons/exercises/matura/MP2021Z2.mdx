@@ -1,0 +1,142 @@
+import Dropdown from "../../../components/dropdown/Dropdown.jsx";
+import Code from "../../../components/code/Code.jsx";
+
+<div className="box_link"><a className="link  link_materials" target="_blank" href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-2.pdf">LINK DO ARKUSZA</a>
+<br/>
+<a className="link  link_materials" href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-zalaczniki.zip"> PLIKI DO ZADANIA</a>
+
+<br/>
+</div>
+
+### TREŚĆ
+
+Firma Igloo planuje w wybranych miastach Europy wybudować galerie handlowe. W każdej
+z planowanych galerii może znajdować się różna liczba lokali handlowych. Wszystkie lokale
+handlowe będą miały kształt prostokąta.<br/>
+W pliku <i>galerie.txt</i> zapisanych jest 50 wierszy z informacjami dotyczącymi planowanych
+galerii. Każdy wiersz w pliku to informacja o jednej galerii. Dane oddzielone są spacją
+i zawierają odpowiednio:
+- kod kraju;
+- nazwę miasta (nazwy miast nie powtarzają się);
+- 70 par liczb (140 liczb) określających wymiary (długość i szerokość w metrach) lokali
+handlowych, które znajdować się będą w danej galerii. Jeżeli liczba lokali w galerii jest
+mniejsza niż 70, to wiersz uzupełniony jest zerami.<br/><br/>
+<b>Przykład:<br/></b>
+NL Amsterdam 8 4 5 12 7 5 5 11 9 4 7 6 … 0 0 0 0 0 0
+Do Twojej dyspozycji jest pomocniczy plik galerie_przyklad.txt, zawierający
+10 wierszy, który możesz wykorzystać, aby sprawdzić poprawność działania swojego(-ich)
+programu(-ów).<br/><br/>
+<b>Napisz program(-y)</b>, w wyniku działania którego(-ych) otrzymasz odpowiedzi do podanych
+zadań. Pliki źródłowe z rozwiązaniem zapisz pod nazwą zgodną z numerem zadania,
+z rozszerzeniem odpowiadającym użytemu narzędziu informatycznemu.
+
+<br/><br/>
+
+### Zadanie 2 (4pkt)  
+<b>a)<br/></b> Oblicz całkowitą powierzchnię handlową każdej galerii (jako sumę powierzchni wszystkich
+lokali w danej galerii) oraz liczbę lokali.<br/>
+Wyniki zapisz w pliku <i>wynik4_2a.txt</i>. W każdym wierszu pliku wynikowego powinny
+się znaleźć: nazwa miasta, powierzchnia galerii znajdującej się w danym mieście oraz
+liczba lokali, rozdzielone znakiem spacji. <br/><br/>
+
+Dla danych z pliku galerie_przyklad.txt prawidłowa odpowiedź to:<br/>
+
+```
+Budapeszt 3598 64
+Neapol 3352 48
+Marsylia 3444 56
+Leeds 2952 44
+Frankfurt 3515 57
+Genua 3386 56
+Dortmund 3697 57
+Rotterdam 3184 49
+Dusseldorf 3737 63
+Kopenhaga 3765 60
+```
+<br/>
+<b>b)<br/></b> Podaj nazwę miasta z galerią o największej powierzchni całkowitej oraz nazwę miasta
+z galerią o najmniejszej powierzchni całkowitej. Jest dokładnie jedno miasto z galerią
+o największej powierzchni i jedno z galerią o najmniejszej powierzchni.
+Wyniki zapisz w pliku <i>wynik4_2b.txt</i>. W pliku wynikowym powinny znaleźć się nazwy
+miast wraz z powierzchniami galerii.
+
+Prawidłowa odpowiedź dla danych pliku <i>galerie_przyklad.txt</i>:<br/>
+
+```
+Kopenhaga 3765
+Leeds 2952
+```
+
+<br/><br/>
+<Dropdown title="ODPOWIEDŹ">
+
+```
+a)
+Londyn 3628 58
+Berlin 3777 59
+Madryt 2217 34
+Rzym 3678 51
+Paryz 3889 62
+Bukareszt 1957 33
+Wieden 2694 42
+Hamburg 3518 52
+Budapeszt 3598 64
+Barcelona 4059 60
+Monachium 1734 31
+Mediolan 1958 35
+Sofia 3631 59
+Praga 2622 40
+Bruksela 4316 64
+Birmingham 1826 25
+Kolonia 2104 31
+Neapol 3352 48
+Turyn 2646 39
+Marsylia 3444 56
+Sztokholm 2133 33
+Walencja 3981 68
+Zagrzeb 2177 31
+Leeds 2952 44
+Amsterdam 3371 60
+Sewilla 4305 70
+Ryga 1745 30
+Frankfurt 3515 57
+Palermo 2733 43
+Ateny 4435 65
+Saragossa 3480 50
+Genua 3386 56
+Stuttgart 1718 32
+Dortmund 3697 57
+Rotterdam 3184 49
+Essen 4760 67
+Glasgow 3731 68
+Dusseldorf 3737 63
+Wilno 1620 28
+Helsinki 3597 56
+Malaga 3757 57
+Brema 2948 44
+Sheffield 2324 36
+Hanower 3532 53
+Lipsk 1871 29
+Kopenhaga 3765 60
+Drezno 1900 26
+Dublin 1986 31
+Norymberga 4178 69
+Duisburg 3948 61
+```
+
+
+```
+b)
+Essen 4760
+Wilno 1620
+```
+<Code>
+</Code>
+</Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+
+</Dropdown>
+
+
+
