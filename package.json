@@ -4,8 +4,7 @@
   "scripts": {
     "start": "parcel public/*.html",
     "upload": "rsync -aP --delete --rsh=ssh dist/ wwwserver:~/websites/nuwis",
-    "build": "rm -rf dist && parcel build public/*.html && cp src/.htaccess dist",
-    "postinstall": "patch-package"
+    "build": "rm -rf dist && parcel build public/*.html && cp src/.htaccess dist"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -20,10 +19,9 @@
     "highlight.js": "^11.6.0",
     "lmdb": "^2.7.3",
     "monaco-editor": "^0.34.1",
-    "patch-package": "^6.5.1",
     "react": "^18.2.0",
     "react-monaco-editor": "^0.51.0",
-    "react-py": "^1.8.3",
+    "react-py": "=1.0.8",
     "react-router-dom": "^6.6.2",
     "react-router-scroll-to-top": "^1.2.0",
     "react-scripts": "^5.0.1"

@@ -1,7 +1,7 @@
 import styles from './Interpreter.module.css';
 import * as React from 'react';
 import MonacoEditor from "react-monaco-editor";
-import usePython from "react-py/dist/hooks/usePython.js";
+import { usePython } from "react-py";
 import { useEffect, useState } from "react";
 
 function Editor() {
