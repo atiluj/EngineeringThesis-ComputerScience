@@ -26,3 +26,8 @@ https://nuwis.pl
 - React-py
 - Monaco editor
 - highlight.js
+
+### LICENCJA
+Kod do użytku prywatnego. 
+
+Kontak: platforma-nuwis@gmail.com 
