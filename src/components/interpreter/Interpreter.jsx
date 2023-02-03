@@ -11,9 +11,8 @@ function Editor() {
 
     useEffect(() => {
         const listener = () => {
-            if (editor && editor.layout) {
-                editor.layout({});
-                editor.layout();
+            if (editor) {
+                editor.editor.getEditors()[0].layout();
             }
         };
         window.addEventListener("resize", listener);
@@ -46,7 +45,7 @@ function Editor() {
                     onChange={changeCode}
                 />
             </div>
-            
+
             <div className={styles.editor_wrapper}>
                 <div className={styles.editor_output}>
                     <div className={styles.title}>Output</div>
