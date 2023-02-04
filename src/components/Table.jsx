@@ -13,19 +13,19 @@ export default function Table({header, data}) {
       <Table sx={{width: 'auto'}} aria-label="simple table">
         <TableHead>
           <TableRow sx={{borderBottom: '3px solid black'}}>
-          {header.map((header_cell) => (
-            <TableCell sx={{fontWeight: 'bold'}}>{header_cell}</TableCell>
+          {header.map((header_cell, index) => (
+            <TableCell key={index} sx={{fontWeight: 'bold'}}>{header_cell}</TableCell>
           ))}
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((data_row) => (
+          {data.map((data_row, index) => (
             <TableRow
-              key={data_row[0]}
+              key={index}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-                {data_row.map((data_cell) => (
-                <TableCell>{data_cell}</TableCell>
+                {data_row.map((data_cell, index) => (
+                <TableCell key={index}>{data_cell}</TableCell>
                 ))}
             </TableRow>
           ))}
