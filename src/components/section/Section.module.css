@@ -1,7 +1,3 @@
-/* main a{
-  word-break: break-all;
-} */
-
 .title {
   display: flex;
   justify-content: center;
@@ -106,7 +102,7 @@
   font-size: 14px;
   font-weight: 300;
   padding: 20px 0;
-  margin-bottom: 2vw;
+  margin-bottom: 1vw;
   text-align: justify;
   border-radius: 1px;
   text-justify: inter-word;
@@ -144,8 +140,10 @@
 
 .main_content .controls {
   display: flex;
-  justify-content: end;
-  margin: 0 30px;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30px;
+  margin-bottom: 1vw;
 }
 
 .controls button {
@@ -218,7 +216,7 @@ img.section_logo {
   .main article {
     font-size: 15px;
     padding: 15px 0px;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
   }
 }
 

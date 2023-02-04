@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import styles from '../Section.module.css';
 
 function Subchapter({ chapterId, subchapterId, subchapter }) {

@@ -3,6 +3,9 @@ import styles from './Section.module.css';
 import { Outlet, useParams, useNavigate } from 'react-router-dom';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import FiberManualRecordOutlinedIcon from '@mui/icons-material/FiberManualRecordOutlined';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import Checkbox from '@mui/material/Checkbox';
 import Chapter from './components/Chapter';
 import Comments from '../Comments';
 import 'highlight.js/styles/dark.css';
@@ -12,11 +15,17 @@ function Section({lessons, title, logo}) {
     const { chapterId, subchapterId } = useParams();
     const [curChapter, setCurChapter] = React.useState(0);
     const [curSubchapter, setCurSubchapter] = React.useState(1);
+    const [isRedone, setIsRedone] = React.useState(false);
+    
+    React.useEffect(() => {
+        setIsRedone(isSetAsRedoneInLocalStorage(0, 1));
+    }, [])
 
     React.useEffect(() => {
         if (chapterId && subchapterId) {
             setCurChapter(parseInt(chapterId));
             setCurSubchapter(parseInt(subchapterId));
+            setIsRedone(isSetAsRedoneInLocalStorage(chapterId, subchapterId));
         }
     }, [chapterId, subchapterId]);
 
@@ -48,6 +57,27 @@ function Section({lessons, title, logo}) {
         }
         navigate(`/${title}/${chapter}/${subchapter}`);
     }
+    
+    function toggleChecked() {
+        setIsRedone(!isRedone);
+        setIsRedoneInLocalStorage(!isRedone);
+    }
+
+    function isSetAsRedoneInLocalStorage(chapterId, subchapterId) {
+        return localStorage.getItem(`${title}-${chapterId}-${subchapterId}`) === "true";
+    }
+    
+    function setIsRedoneInLocalStorage(isRedone) {
+        localStorage.setItem(`${title}-${curChapter}-${curSubchapter}`, isRedone ? "true" : "false");
+    }
+
+    function renderIcon(chapterId, subchapterId) {
+        console.log(chapterId, subchapterId)
+        return isSetAsRedoneInLocalStorage(chapterId, subchapterId)
+            ? <FiberManualRecordIcon/>
+            : <FiberManualRecordOutlinedIcon/>;
+    }
+
 
     return (
         <main className={styles.main}>
@@ -62,7 +92,8 @@ function Section({lessons, title, logo}) {
                         <Chapter 
                             key={chapterId}
                             chapter={chapter}
-                            chapterId={chapterId} 
+                            chapterId={chapterId}
+                            icon={renderIcon(chapterId, 1)}
                         />
                     )}
                 </div>
@@ -71,6 +102,17 @@ function Section({lessons, title, logo}) {
             <div className={`${styles.main_content} main_content`}>
                 <Outlet context={[lessons]}/>
                 <div className={styles.controls}>
+                    <div>
+                        <label>
+                        <Checkbox 
+                            className={styles.checkbox}
+                            onChange={toggleChecked}
+                            checked={isRedone}
+                            sx={{color: `var(--secondary3)`, '&.Mui-checked': {color: `var(--secondary3)`}}}
+                        />
+                        Oznacz lekcję jako przerobioną
+                        </label>
+                    </div>
                     <div>
                         {prevLessonExists && <button onClick={prevLesson}><ArrowBackIosNewIcon /></button>}
                         {nextLessonExists && <button onClick={nextLesson}><ArrowForwardIosIcon /></button>}
