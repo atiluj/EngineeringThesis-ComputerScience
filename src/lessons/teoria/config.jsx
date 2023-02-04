@@ -5,8 +5,10 @@ import ZadaniaKomputer from './zadaniaKomputer.mdx';
 
 import ZadaniaLiczby from './zadaniaLiczby.mdx';
 
+import Terminologia from './terminologia.mdx';
 import Warstwy from './sieciWarstwy.mdx';
 import Protokoly from './protokoly.mdx';
+import Maski from './maski.mdx';
 import ZadaniaSieci from './zadaniaSieci.mdx';
 
 import Barwy from './barwy.mdx';
@@ -44,12 +46,10 @@ const TeoriaLessons = [
     ]},
 
     {name: "Sieci komputerowe", subchapters: [
-        // {name: "Terminologia", content: null},
+        {name: "Podstawy i terminologia", content: <Terminologia/>},
         {name: "Topologia sieci", content: <Warstwy/>},
         {name: "Protokoły", content: <Protokoly/>},
-        // {name: "Adresy IP", content: null},
-        // {name: "Maski podsieci", content: null},
-        // {name: "Adresy sieci", content: null},
+        {name: "Maski podsieci", content: <Maski/>},
         {name: "Zadania maturalne", content: <ZadaniaSieci/>},
     ]},
 

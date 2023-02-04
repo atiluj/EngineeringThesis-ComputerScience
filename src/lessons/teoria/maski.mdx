@@ -1,0 +1,66 @@
+import Dropdown from "../../components/dropdown/Dropdown.jsx";
+// import Table from "../../components/Table.jsx";
+import Table from "../../components/Table.jsx";
+
+## Maska podsieci
+Internet to zbiór wielu sieci dzielących się na coraz mneijsze podsieci. Maska podsieci pełni ważną rolę 
+w określaniu, w jakiej sieci znajduje się dany komputer. 
+
+## Obliczanie adresu sieci
+**Bity maski ustawione na 1 określają adres podsieci, a bity ustawione na 0 adres urządzenia.** <br/>
+Dzięki temu, aby ustalić adres sieci, w jakiej znjaduje się komputer wystarczy wykonać operację logicznego AND na 
+adresie IP (adres sieciowy) urządzenia z jego maską podsieci. 
+<br/>
+Ponieważ logiczne AND wykonujemy na adresie IP  oraz masce podsieci zapisanych w postaci binarnej (systemie dwójkowym), 
+to najpierw musimy dane zapisane w systemie dziesiętnycm zapisać w systemie binarnym.
+<br/> 
+<pre>adres IP:  192.168.32.64<sub>(10)</sub> = 11000000.10101000.00100000.01000000<sub>(2)</sub></pre>
+<pre>maska podsieci  255.255.124.0<sub>(10)</sub> = 11111111.11111111.01111100.00000000<sub>(2)</sub></pre>
+<br/>
+Następnie wykonujemy operację logicznego AND adresu IP i maski podsieci.
+
+<pre>
+adres IP:        11000000.10101000.00100000.01000000 <br/>
+maska podsieci:  11111111.11111111.01111100.00000000 <br/>
+adres sieci:     11000000.10101000.00100000.00000000 <br/>
+</pre>
+
+Teraz zostało nam już tylko zapisać adres sieci znów w postaci dziesiętnej.
+<pre>adres sieci  11000000.10101000.00100000.00000000<sub>(2)</sub> = 192.168.32.0<sub>(10)</sub></pre>
+
+<br/>
+Najmniejszy i największy adres każdej podsieci są zawsze zarezerwowane i mają specjalną rolę.
+
+## Adres rozgłoszeniowy (ang. broadcast)
+to największy możliwy adres podsieci. Jest to adres transmisji do wszystkich hostów w podsieci. Oznacza to, że 
+każda informacja wysłana na adres rozgłoszenowy będzie widoczna dla wszystkich urządzeń w tej podsieci.
+
+## Adres podsieci
+to najmniejszy możliwy adres podsieci
+
+## Wskazówki
+
+<Dropdown title="Logiczne AND">
+<p className="dropdown_text">
+<Table
+header = {["p", "q", "p AND q"]}
+data = {[
+            [1, 1, 1],
+            [1, 0, 0],
+            [0, 1, 0],
+            [0, 0, 0]
+        ]}
+/>
+</p>
+</Dropdown>
+<Dropdown title="Konwersja liczb binarnych na dziesiętne">
+<p className="dropdown_text">
+
+</p>
+</Dropdown>
+<Dropdown title="Konwersja liczb dziesiętnych na binarne">
+<p className="dropdown_text">
+
+</p>
+</Dropdown>
+

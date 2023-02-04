@@ -84,7 +84,8 @@
 .main_content .second img.super_small_img,
 .main_content .second img.small_img,
 .main_content .second img.medium_img,
-.main_content .second img.big_img {
+.main_content .second img.big_img,
+.main_content .second img.oryginal_img {
     filter: var(--screen_filter);
 }
 
@@ -115,6 +116,11 @@ ul {
 
 .main_content .second img.big_img {
     max-width: 70%;
+}
+
+
+.main_content .second img.oryginal_img {
+    max-width: 100%;
 }
 
 

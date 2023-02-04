@@ -46,9 +46,9 @@ export default function BasicTextFields(props) {
             {props.task}
         </p>
         {props.questions.map((question, i) =>
-            <div style={{display: "flex", flexDirection:"space-between", margin: "0.5rem 0", maxWidth: "90%"}}>
+            <div style={{display: "flex", justifyContent: "space-between", margin: "0.5rem 0", maxWidth: "90%"}}>
                 <span style={{margin: "0 1rem"}}>{question}</span>
-                <TextField 
+                <TextField
                     error = {error[i]}
                     value={value[i]}
                     onChange={(e)=>{
