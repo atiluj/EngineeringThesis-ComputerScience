@@ -2,7 +2,7 @@ import Wskazowki from './wskazowki.mdx';
 import KomputerIJegoCzesci from './komputer-i-jego-czesci.mdx';
 import ZadaniaKomputer from './zadaniaKomputer.mdx';
 
-
+import SystemyLiczbowe from './systemyLiczbowe.mdx';
 import ZadaniaLiczby from './zadaniaLiczby.mdx';
 
 import Terminologia from './terminologia.mdx';
@@ -39,6 +39,7 @@ const TeoriaLessons = [
     // ]},
 
     {name: "Konwersja liczb", subchapters: [
+        {name: "Systemy liczbowe", content: <SystemyLiczbowe/>},
         // {name: "Dwójkowy - Ósemkowy", content: null},
         // {name: "Dwójkowy - Szesnastkowy", content: null},
         // {name: "Ósemkowy - Szesnastkowy", content: null},

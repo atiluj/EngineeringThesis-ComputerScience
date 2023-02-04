@@ -5,7 +5,86 @@ import Table from "../../components/Table.jsx";
 Poniższy schemat zawiera najważniejsze protokoły sieciowe z podziałem na warstwy. Te, które należy znać bardziej szczegółowo opiszemy poniżej. Jeśli ten temat Cię interesuje możesz i chcesz doczytać więcej na ten temat to polecamy stronę https://pasja-informatyki.pl/sieci-komputerowe/.
 
 
+<<<<<<< HEAD
 <img src={new URL('../../img/teoria/sieci_komputerowe_protokoly.png', import.meta.url)} alt="xyz" className={`big_img`} />
+=======
+<img src={new URL('../../img/teoria/sieci_komputerowe_protokoly.png', import.meta.url)} alt="xyz" className={`oryginal_img`} />
+
+## DHCP (ang. Dynamic Host Configuration Protocol)
+DHCP to protokuł warstwy aplikacji, który zajmuje się przydzielaniem adresów IP urządzeniom w sieci.
+<br/>
+Większość użytkowników sieci to "zwykli ludzie" i nie mają oni wystarczającej wiedzy, aby samodzielnie poprawnie ustalić adres IP swojego urządzenia.
+Aby globalne sieci mogły działać niezbędna jest więc tu automatyzacja. Rolę tę spełnia właśnie protokuł DHCP. 
+<br/>
+Protokuł DHCP zajmuje się nie tylko nadawaniem hostom poprawnych adresów IP, ale także określaniem bramy domyślnej oraz serwera DNS.
+Aby skorzystać z protokołu DHCP trzeba wybrać conajmniej jedno urządzenie, które będzie pełnić rolę serwera DHCP. Zazwyczaj do tego celu używa się 
+routera, gdyż serwer DHCP jest zwykle elementem jego oprogramowania.
+<br/>
+<b>Brama domyślna</b> (ang. default gateway) - to interfejs routera lub serwera, do którego pozostałe komputery w sieci wysyłają pakiety, jeśli docelowo chcą 
+przesłać je poza sieć lokalną np. do Internetu.
+
+### Schemat komunikacji z serwerem DHCP (dodatkowe)
+<img src={new URL('../../img/teoria/dhcp.png', import.meta.url)} alt="xyz" className={`oryginal_img`} />
+
+
+## DNS (ang. Domain Name System)
+DNS to protokół warstwy aplikacji, który zapewnia więc tłumaczenie nazw domenowych na adresy IP oraz adresów IP na nazwy domenowe.
+<br/>
+Do korzystania z sieci, w tym Internetu niezbędne są adresy IP. Są one optymalne dla pracy komputera, niestety nie są one wygodne dla ludzi. 
+Aby usprawnić pracę z siecią wprowadzono protokół DNS, który umożliwia tworzenie łatwych do zapamiętania nazw hostów czyli tak zwanych <b>adresów domenowych</b>.
+
+<img src={new URL('../../img/teoria/dns.png', import.meta.url)} alt="xyz" className={`small_img`} />
+adres IP: 185.255.40.28 <br/>
+adres domenowy: www.nuwis.pl<br/><br/>
+
+Możemy łatwo sprawdzić adres IP hosta o danym adresie domenowym. Do tego celu służy polecenie `nslookup <adres_domenowy>`. <br/>
+Zobaczmy wynik działania tego polecenia na przykładzie adresu domenowego nuwis.pl.
+<img src={new URL('https://i.imgur.com/JX115mJ.png', import.meta.url)} alt="xyz" className={`oryginal_img`} />
+
+## TCP i UDP
+<b>TCP (ang. Transport Control Protocol) i UDP (ang. User Datagrams Protocol)</b> <br/><br/>
+Są to protokoły działające w warstwie transportowej. Ich zadaniem jest dbanie o poprawność przesyłania danych. Dbają one o to, aby
+wszystkie dane dotarły do hosta, a ponadto, aby dotarły one we właściwej kolejności. W razie niepowodzenia przesyłu, protokołu te dokonują 
+retransmisji pakietu.
+Często wiele procesów (np. przeglądarka internetowa i klient poczty elektronicznej) działa na jednym hoście. 
+Chcą one prowadzić swoją komunikację tj. wysyłać i odbierać swoje pakiety równolegle. Jest to możliwe dzięki portom.
+<br/>
+<b>Port</b> - liczba używana do identyfikacji procesu odbierającego lub nadającego dane. NAjczęściej wykorzystywane usługi mają przypisane na
+stałe numery portów. Przykłady:
+
+* 25 - SMTP
+* 53 - DNS
+* 80 - HTTP
+
+<br/>
+Możemy sprawdzić listę połączeń TCP i UDP na naszym komputerze za pomocą polecenia `netstat`.
+<img src={new URL('https://i.imgur.com/1XildYF.png', import.meta.url)} alt="xyz" className={`oryginal_img`} />
+
+### TCP vs UDP (dodatkowe)
+<Table
+    header = {[" ", "TCP", "UDP"]}
+    data = {[
+                ["nazewnictwo", "segment", "datagram"],
+                ["szybkość", "wolniejsze", "szybkie"],
+                ["niezawodność", "'best effort'", "brak gwarancji"],
+                ["zastosowania", "FTP*, wyszukiwarka internetowa, mail", "streaming, gry"],
+            ]}
+/>
+
+<b>Warto przeczytać - dla ciekawskich:</b> https://pasja-informatyki.pl/pliki/pdf/materialy-uzupelniajace-sieci-odc-4.pdf
+
+
+## Podsumowanie
+
+* **IP** (ang. Internet Protocol) - realizuje warstwę sieciową
+* **TCP** (ang. Transport Control Protocol) - realizuje warstwę transportu
+* **UDP** (ang. User Datagrams Protocol) - realizuje warstwę transportu
+* **DNS** (ang. Domain Name System) - zapewnia tłumaczenie nazw domenowych na adresy IP i odwrotnie (adresów IP na nazwy domenowe).
+* **ICMP** (ang. Internet Protocol Message Protocol) - wykorzystywany jest do diagnostyki połączeń
+* **ARP** (ang. Address Resolution Protocol) - służy do zmiany adresów logicznych na adresy fizyczne
+* **DHCP** (ang. Dynamic Host Configuration Protocol) - służy do automatycznego konfigurowania hostów w sieci
+
+>>>>>>> adding all 'teoria - sieci komputerowe' lessons
 
 ## DHCP (ang. Dynamic Host Configuration Protocol)
 DHCP to protokuł warstwy aplikacji, który zajmuje się przydzielaniem adresów IP urządzeniom w sieci.
