@@ -2,26 +2,58 @@ import Table from '../../components/Table.jsx';
 
 <br/>
 Najbardziej naturlanym dla nas systemem liczbowym jest system dziesiętny. Jesta tak, ponieważ cały otaczający nas na codzień świat
-posługuje się właśnie nim, historycznie natomiast wynika to z fakty, że człowiek ma dsiecięć palców.
-
+posługuje się właśnie nim, historycznie natomiast wynika to z fakty, że człowiek ma dziesięć palców.
+<br/><br/>
 Jeśli chodzi o komputery to sprawa wygląda nieco inaczej. Ponieważ jest to sprzęt elektroniczny, to najlepszym i najprostszym systemem 
 jest system dwójkowy. Prąd płynie - bit zapalowny - 1, brak przepływu prądu - bit zagszony - 0.
-
+<br/><br/>
 Nazwa systemu zawsze mówi nam ile róznych wartości ( możemy je kojarzyć z "cyframi") mamy możliwych do zapisania 
 na jednym miejscu. System dziesiętny ma dziesięć takich możliwości (0, 1, 2, 3, 4, 5, 6, 7, 8, 9), dwójkowy dwie (0, 1). 
 Zauważmy więc, że maksymalna wartość ("cyfra") jest zawsze o jeden mniejsza niż podstawa systemu.
-
+<br/><br/>
 Przypomniejmy sobie czasy szkoły podstawowej i naukę liczb, definicję cyfry jedności, dziesiątek, setek, tysięcy itd. W jaki sposób 
-obliczaliśmy wartość liczby? Cyfra jedności + 10 * cyfa dziesiątek + 100 * cyfra setek + ... To co robiliśmy w naturalnym dla nas 
+obliczaliśmy wartość liczby? Cyfra jedności + 10 \* cyfa dziesiątek + 100 \* cyfra setek + ... To co robiliśmy w naturalnym dla nas 
 systemie dziesiętnym będziemy teraz odwtarzać dla innych systemów liczbowych, aby obliczyć ich wartość w systemie dziesiętnym.
 
 ## System dwójkowy
 Tak jak w systemie dziesiętnym kolejne cyfry należało przemnożyć przez coraz większe potęgi 10, tak w systemie dwójkowym będą to 
-analogicznie coraz większe potęgi 2. Zauważmy, że potęga ta odpowiada numerze pozycji, na której znajduje się liczba. 
+analogicznie coraz większe potęgi 2. Zauważmy, że potęga ta odpowiada numerze pozycji, na której znajduje się liczba.
 (Dla przypomnienia dowolona liczba podniesiona do potęgi 0 jest równa 1.)
-
-
+<br/>
+Przykład:
+<pre>
+100010110<sub>(2)</sub> = 1*2<sup>8</sup> + 0*2<sup>7</sup> + 0*2<sup>6</sup> + 0*2<sup>5</sup> + 1*2<sup>4</sup> + 0*2<sup>3</sup> + 1*2<sup>2</sup> + 1*2<sup>1</sup> + 0*2<sup>0</sup> = <br/>
+256 + 0 + 0 + 0 + 16 + 0 + 4 + 2 + 0 = 178<sub>(10)</sub>
+</pre>
+<img src={new URL('https://i.imgur.com/keKPlM7.png', import.meta.url)} alt="xyz" className={`medium_img`}/>
 
 ## System ósemkowy
+W systemie ósemkowym działa to podobnie. Jedyna różnica polega na tym, że podnosimy ósemki, a nie dwójki do kolejnych potęg.
+<br/>
+Przykład:
+<pre>
+2137<sub>(8)</sub> = 2*8<sup>3</sup> + 1*8<sup>2</sup> + 3*8<sup>1</sup> + 7*2<sup>0</sup> = <br/>
+2*512 + 1*64 + 3*8 + 7*1 = 1024 + 64 + 24 + 7 = 1119<sub>(10)</sub>
+</pre>
+<img src={new URL('https://i.imgur.com/lnVxVr6.png', import.meta.url)} alt="xyz" className={`medium_img`}/>
 
 ## System szesnastkowy
+W systemie szesnastkowym znów system działania jest taki sam. Mamy tu jednak jedną dodatkową trudność. Podstawa tego systemu wykracza poza liczbę 
+cyfr w systemie dziesiętny, którym posługujemy się na codzień. Aby zachować jednoznakowy zapis "cyfr" w liczbach wartości od 10 do 16 reprezentujemy 
+za pomocą liter od A do F. 
+<pre>
+    10<sub>(10)</sub> = A<sub>(16)</sub><br/>
+    11<sub>(10)</sub> = B<sub>(16)</sub><br/>
+    12<sub>(10)</sub> = C<sub>(16)</sub><br/>
+    13<sub>(10)</sub> = D<sub>(16)</sub><br/>
+    14<sub>(10)</sub> = E<sub>(16)</sub><br/>
+    15<sub>(10)</sub> = F<sub>(16)</sub><br/>
+</pre>
+
+<br/>
+Przykład:
+<pre>
+4F0B<sub>(16)</sub> = 4*16<sup>3</sup> + 15*16<sup>2</sup> + 0*16<sup>1</sup> + 11*16<sup>0</sup> = <br/>
+4*4096 + 15*256 + 0*16 + 11*1 = 16384 + 3840 + 0 + 11 = 20235<sub>(10)</sub>
+</pre>
+<img src={new URL('https://i.imgur.com/g7rcjo5.png', import.meta.url)} alt="xyz" className={`medium_img`}/>
