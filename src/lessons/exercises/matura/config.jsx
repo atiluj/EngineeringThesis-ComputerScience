@@ -87,6 +87,16 @@ import MD2020Z1 from './MD2020Z1.mdx';
 import MD2020Z2 from './MD2020Z2.mdx';
 import MD2020Z3 from './MD2020Z3.mdx';
 
+import MD2021Z1 from './MD2021Z1.mdx';
+import MD2021Z2 from './MD2021Z2.mdx';
+import MD2021Z3 from './MD2021Z3.mdx';
+import MD2021Z4 from './MD2021Z4.mdx';
+
+import MD2022Z1 from './MD2022Z1.mdx';
+import MD2022Z2 from './MD2022Z2.mdx';
+import MD2022Z3 from './MD2022Z3.mdx';
+import MD2022Z4 from './MD2022Z4.mdx';
+
 
 
 // import M2023Z1 from './M2023Z1.mdx';
@@ -175,6 +185,14 @@ const ExercisesPython = [
     {name: "Matura dodatkowa 2020 - DOKUMENTY", content: <MD2020Z1/>}, //59
     {name: "Matura dodatkowa 2020 - DOKUMENTY", content: <MD2020Z2/>}, //60
     {name: "Matura dodatkowa 2020 - DOKUMENTY", content: <MD2020Z3/>}, //61
+    {name: "Matura dodatkowa 2021 - SCHOWANE NAPISY", content: <MD2021Z1/>}, //62 - STRING
+    {name: "Matura dodatkowa 2021 - SCHOWANE NAPISY", content: <MD2021Z2/>}, //63 - SZYFROWANIE
+    {name: "Matura dodatkowa 2021 - SCHOWANE NAPISY", content: <MD2021Z3/>}, //64 - STRING
+    {name: "Matura dodatkowa 2021 - SCHOWANE NAPISY", content: <MD2021Z4/>}, //65 - SZYFROWANIE
+    {name: "Matura dodatkowa 2022 - LICZBY I ICH ODBICIA", content: <MD2022Z1/>}, //66 - LICZBY
+    {name: "Matura dodatkowa 2022 - LICZBY I ICH ODBICIA", content: <MD2022Z2/>}, //67 - LICZBY
+    {name: "Matura dodatkowa 2022 - LICZBY I ICH ODBICIA", content: <MD2022Z3/>}, //68 - LICZBY
+    {name: "Matura dodatkowa 2022 - LICZBY I ICH ODBICIA", content: <MD2022Z4/>}, //69 - LICZBY
 
 
 
