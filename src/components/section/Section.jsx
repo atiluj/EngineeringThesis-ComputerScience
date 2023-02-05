@@ -1,14 +1,16 @@
 import * as React from 'react';
+import { createContext } from 'react';
 import styles from './Section.module.css';
 import { Outlet, useParams, useNavigate } from 'react-router-dom';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import FiberManualRecordOutlinedIcon from '@mui/icons-material/FiberManualRecordOutlined';
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import Checkbox from '@mui/material/Checkbox';
 import Chapter from './components/Chapter';
 import Comments from '../Comments';
+import {isSetAsRedoneInLocalStorage, setAsRedoneInLocalStorage} from './SectionHelperFunctions';
 import 'highlight.js/styles/dark.css';
+
+export const SectionContext = createContext(null);
 
 function Section({lessons, title, logo}) {
     let navigate = useNavigate();
@@ -18,14 +20,14 @@ function Section({lessons, title, logo}) {
     const [isRedone, setIsRedone] = React.useState(false);
     
     React.useEffect(() => {
-        setIsRedone(isSetAsRedoneInLocalStorage(0, 1));
+        setIsRedone(isSetAsRedoneInLocalStorage(title, 0, 1));
     }, [])
 
     React.useEffect(() => {
         if (chapterId && subchapterId) {
             setCurChapter(parseInt(chapterId));
             setCurSubchapter(parseInt(subchapterId));
-            setIsRedone(isSetAsRedoneInLocalStorage(chapterId, subchapterId));
+            setIsRedone(isSetAsRedoneInLocalStorage(title, chapterId, subchapterId));
         }
     }, [chapterId, subchapterId]);
 
@@ -60,24 +62,8 @@ function Section({lessons, title, logo}) {
     
     function toggleChecked() {
         setIsRedone(!isRedone);
-        setIsRedoneInLocalStorage(!isRedone);
+        setAsRedoneInLocalStorage(title, curChapter, curSubchapter, !isRedone);
     }
-
-    function isSetAsRedoneInLocalStorage(chapterId, subchapterId) {
-        return localStorage.getItem(`${title}-${chapterId}-${subchapterId}`) === "true";
-    }
-    
-    function setIsRedoneInLocalStorage(isRedone) {
-        localStorage.setItem(`${title}-${curChapter}-${curSubchapter}`, isRedone ? "true" : "false");
-    }
-
-    function renderIcon(chapterId, subchapterId) {
-        console.log(chapterId, subchapterId)
-        return isSetAsRedoneInLocalStorage(chapterId, subchapterId)
-            ? <FiberManualRecordIcon/>
-            : <FiberManualRecordOutlinedIcon/>;
-    }
-
 
     return (
         <main className={styles.main}>
@@ -87,31 +73,33 @@ function Section({lessons, title, logo}) {
                     <img src={logo} alt="Logo" className={styles.section_logo}/>
                 </div>
 
-                <div className={styles.cont}>
-                    {lessons.map((chapter, chapterId) =>
-                        <Chapter 
-                            key={chapterId}
-                            chapter={chapter}
-                            chapterId={chapterId}
-                            icon={renderIcon(chapterId, 1)}
-                        />
-                    )}
-                </div>
+                <SectionContext.Provider value={title}>
+                    <div className={styles.cont}>
+                        {lessons.map((chapter, chapterId) =>
+                            <Chapter 
+                                key={chapterId}
+                                chapter={chapter}
+                                chapterId={chapterId}
+                            />
+                        )}
+                    </div>
+                </SectionContext.Provider>
             </div>
 
             <div className={`${styles.main_content} main_content`}>
                 <Outlet context={[lessons]}/>
                 <div className={styles.controls}>
                     <div>
-                        <label>
-                        <Checkbox 
-                            className={styles.checkbox}
+                        <label className={styles.checkbox_label}>
+                        <Checkbox  
                             onChange={toggleChecked}
                             checked={isRedone}
-                            sx={{color: `var(--secondary3)`, '&.Mui-checked': {color: `var(--secondary3)`}}}
+                            sx={{color: `var(--font)`, '&.Mui-checked': {color: `#94d3a2`}}}
                         />
-                        Oznacz lekcję jako przerobioną
+                        OZNACZ LEKCJĘ JAKO PRZEROBIONĄ
                         </label>
+                        {/* TO DO: display none dla mobilek */}
+                        {/* przy kliknieciu na zakladce na navie powinno przeniesc na gore strony */}
                     </div>
                     <div>
                         {prevLessonExists && <button onClick={prevLesson}><ArrowBackIosNewIcon /></button>}

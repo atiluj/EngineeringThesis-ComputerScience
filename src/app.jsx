@@ -48,7 +48,7 @@ function App() {
                         <Route path='exercise' element={<ExerciseSet />} />
                         <Route path='exercise/:id' element={<Exercise lessons={ExercisesPython} />} />
                         {sections.map((section, index) => (
-                            <Route key={index} path={section.path} element={<Section lessons={section.lessons} title={section.path} logo={section.logo} />}>
+                            <Route key={index} path={section.path} element={<Section key={index} lessons={section.lessons} title={section.path} logo={section.logo} />}>
                                 <Route index element={<Contents />} />
                                 <Route path={':chapterId'}>
                                     <Route path={':subchapterId'} element={<Contents />} />

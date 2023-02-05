@@ -1,18 +1,24 @@
 import * as React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useContext } from 'react';
+import { renderIcon } from '../SectionHelperFunctions';
 import { NavLink } from "react-router-dom";
 import styles from '../Section.module.css';
+import { SectionContext } from '../Section'; 
 
 function Subchapter({ chapterId, subchapterId, subchapter }) {
-    const { chapterId: curChapter, subchapterId: curSubchapter } = useParams();
-    const isCurrent = chapterId == curChapter && subchapterId + 1 == curSubchapter;
+    const title = useContext(SectionContext);
 
     return (
-    <Link to={chapterId + '/' + (subchapterId+1)} style={{textDecoration: 'none'}}>
-        <div className={`${styles.subtopic} menu_button` + (isCurrent ? ` ${styles.subtopic_current}` : '')}>
-            {chapterId}.{subchapterId + 1}. {subchapter.name}
+    <NavLink to={chapterId + '/' + (subchapterId+1)} style={{textDecoration: 'none'}} className={({isActive}) => isActive ? styles.subtopic_current : null}>
+        <div className={`${styles.subtopic} menu_button`}>
+            <div className={styles.icon_wrapper}>
+                {renderIcon(title, chapterId, subchapterId+1)}
+            </div>
+            <div>
+                {chapterId}.{subchapterId + 1}. {subchapter.name}
+            </div>
         </div>
-    </Link>
+    </NavLink>
     );
 }
 
