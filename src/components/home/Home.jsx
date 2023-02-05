@@ -137,13 +137,13 @@ function Home() {
                         platformę Githuba. Jeśli jeszcze nie masz tam konta, zachęcamy do jego założenia - na pewno przyda Ci się ono w przyszłości. GitHub to platforma
                         internetowa, która umożliwia zarządzanie projektami opartymi na systemie kontroli wersji Git. Pozwala ona na tworzenie i przechowywanie kopii kodu
                         źródłowego, a także śledzenie zmian i współpracę z innymi programistami. Jeśli już miałeś do czynienia z tą stroną, super! Jeśli nie, nie martw się -
-                        na razie nie musisz rozumieć Github-a. Wystarczy, że założysz tam konto, aby móc zadać nam pytanie w momencie, gdy coś jest dla Ciebie niejasne.
-                        <a href="https://github.com/" target="_blank">GitHub</a>
+                        na razie nie musisz rozumieć Github-a. Wystarczy, że założysz tam konto, aby móc zadać nam pytanie w momencie, gdy coś jest dla Ciebie niejasne.&#8594;
+                        <a className="link" href="https://github.com/" target="_blank">GitHub</a>
 
                         <br /><br />
                         <b>SZYBKA INSTRUKCJA PISANIA KOMENTARZY</b><br />
                         Komentowanie za pośrdenictwem wspomnianej wyżej platformy umożliwia pisanie komentarzy w składni Markdown.
-                        Jeśli
+                        Jeśli TODO!!!
                     </article>
                     <article>
                         <h1 id="fifth">STATYSTYKI</h1>
@@ -201,7 +201,7 @@ function Home() {
         <div className={styles.acknowledgements}>
             <article>
                 <h1 id="seventh">PODZIĘKOWANIA</h1>
-                <p>Na podstawie danych opublikowanych przez Centralną Komisję Egzaminacyjną na rok 2022 wiemy, że do egzaminu maturalnego z informatyki podeszło 9 248 osób z 268 257 maturzystów. Łatwo więc obliczyć, że jest to jedeeeleeellllynie ok. 0.03% spośród wszystkich uczniów prz<br /><br /></p>
+                <p>TODO!!!<br /><br /></p>
             </article>
         </div>
     </>;
