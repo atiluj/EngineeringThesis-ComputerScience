@@ -139,11 +139,6 @@ function Home() {
                         źródłowego, a także śledzenie zmian i współpracę z innymi programistami. Jeśli już miałeś do czynienia z tą stroną, super! Jeśli nie, nie martw się -
                         na razie nie musisz rozumieć Github-a. Wystarczy, że założysz tam konto, aby móc zadać nam pytanie w momencie, gdy coś jest dla Ciebie niejasne.&#8594;
                         <a className="link" href="https://github.com/" target="_blank">GitHub</a>
-
-                        <br /><br />
-                        <b>SZYBKA INSTRUKCJA PISANIA KOMENTARZY</b><br />
-                        Komentowanie za pośrdenictwem wspomnianej wyżej platformy umożliwia pisanie komentarzy w składni Markdown.
-                        Jeśli TODO!!!
                     </article>
                     <article>
                         <h1 id="fifth">STATYSTYKI</h1>
@@ -160,7 +155,6 @@ function Home() {
                             <br /><br />
 
                             Co najbardziej szokujące jedynie 115 uczniów spośród ponad 268 tys. maturzystów to osoby ze szkół na wsi, które decydują się podejść do egzaminu z informatyki. W przeliczeniu jest to tylko 0.043% czyli ok. 4 na 10 tys. To tak jakby wziąć 10 małych miast w Polsce i wybrać jedynie 4 spośród wszystkich ich mieszkańców.<br />
-                            {/* <img className={styles.statistic_img} src={new URL('../../img/home_img03.png', import.meta.url)} alt="Aleksandra" /> */}
 
                             Warto zauważyć, że operujemy paroma przybliżeniami i opieramy się tutaj jedynie na danych z 2022 roku. Niestety wyniki z innych lat nie różnią się od nich znacząco. Wszystkie dane są dostępne w raportach CKE, na oficjalnej stronie internetowej: <a className={`link`} target="_blank" href="https://cke.gov.pl/egzamin-maturalny/egzamin-maturalny-w-formule-2015/wyniki/">https://cke.gov.pl/egzamin-maturalny/egzamin-maturalny-w-formule-2015/wyniki/</a>
                             <br /><br />
