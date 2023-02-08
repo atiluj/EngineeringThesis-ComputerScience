@@ -34,7 +34,19 @@
     align-items: center;
     justify-content: center;
 }
-  
+
+.label div:hover{
+    background-color: var(--secondary3);
+    opacity: 0.3;
+} 
+
+
+.filled .label div:hover{
+    background-color: transparent;
+    opacity: 1;
+} 
+
+
 .label div:before,
 .label div:after {
     content: '';
@@ -65,4 +77,12 @@ background-color: green;
 
 .filled .incorrect:after {
 background-color: red;
+}
+
+.label:hover .correct {
+background-color: none;
+}
+
+.label:hover .incorrect {
+background-color: none;
 }
