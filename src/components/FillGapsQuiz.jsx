@@ -59,6 +59,7 @@ export default function BasicTextFields(props) {
                         })}}
                     variant="outlined" 
                     size="small"
+                    sx={{border: "1px solid var(--font)", borderRadius: 1}}
                 />
             </div>
         )}
