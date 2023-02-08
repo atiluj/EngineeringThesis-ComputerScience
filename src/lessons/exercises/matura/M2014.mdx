@@ -9,70 +9,71 @@ import Code from "../../../components/code/Code.jsx";
 </div>
 
 ### TREŚĆ (0-10pkt.)
-W pliku NAPIS.TXT, w oddzielnych wierszach, znajduje się <b>1 000</b> napisów o długościach
+W pliku <i>napis.txt</i>, w oddzielnych wierszach, znajduje się <b>1 000</b> napisów o długościach
 od <b>2</b> do <b>25</b> znaków. Każdy napis składa się z wielkich liter alfabetu łacińskiego.
 Wykorzystując dostępne narzędzia informatyczne, daj odpowiedzi do poniższych
-podpunktów. Odpowiedzi zapisz w kolejnych wierszach pliku ZADANIE5.TXT, a każdą
+podpunktów. Odpowiedzi zapisz w kolejnych wierszach pliku <i>zadanie5.txt</i>, a każdą
 poprzedź literą oznaczającą ten podpunkt. 
 
 <br/><br/>
 
-### Podpunkt A   
+### <u>Podpunkt A</u>   
 Napis pierwszy to taki napis, w którym suma kodów ASCII jest liczbą pierwszą.
 Przykładowo, suma kodów ASCII w napisie ABB wynosi 197 i jest liczbą pierwszą,
 co oznacza, że napis ABB jest napisem pierwszym. Podaj, ile jest napisów pierwszych
-w pliku NAPIS.TXT.
+w pliku <i>napis.txt</i>.
 <br/>
 <Dropdown title="ODPOWIEDŹ">
-    
-<Code>
+
+```text
 122
-</Code>
-
+```
 </Dropdown>
 
 <br/><br/>
 
-### Podpunkt B
+### <u>Podpunkt B</u>
 Napis rosnący to taki napis, w którym kod ASCII każdej kolejnej litery jest większy
-od kodu poprzedniej. Podaj wszystkie napisy rosnące występujące w pliku NAPIS.TXT.
+od kodu poprzedniej. Podaj wszystkie napisy rosnące występujące w pliku <i>napis.txt</i>.
 <br/>
 <Dropdown title="ODPOWIEDŹ">
-<Code>
-    FHJLMU<br/>
-    BEJNOSY<br/>
-    MNS<br/>
-    AEIOUY<br/>
-    BDL<br/>
-    JT<br/>
-    BJQR<br/>
-    AHJS<br/>
-    FHJLMU<br/>
-    DIT<br/>
-    CEGKZ<br/>
-    BCV<br/>
-    CEGIKOT<br/>
-    CEGKZ
-</Code>
+
+```text
+FHJLMU
+BEJNOSY
+MNS
+AEIOUY
+BDL
+JT
+BJQR
+AHJS
+FHJLMU
+DIT
+CEGKZ
+BCV
+CEGIKOT
+CEGKZ
+```
 </Dropdown>
 <br/><br/>
 
-### Podpunkt C
+### <u>Podpunkt C</u>
 Wypisz napisy z pliku NAPIS.TXT, które występują w nim więcej niż jeden raz (każdy
 taki napis wypisz tylko raz).  
 <br/>
 <Dropdown title="ODPOWIEDŹ">
-<Code>
-    FHJLMU<br/>
-    GC<br/>
-    QULA<br/>
-    CEGKZ<br/>
-    BZYFFLOICLUNWLTH<br/>
-    SWIFT 
-</Code>
+
+```text
+FHJLMU
+GC
+QULA
+CEGKZ
+BZYFFLOICLUNWLTH
+SWIFT 
+```
 </Dropdown>
 
-<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
 ```
 def czy_pierwsza(n):

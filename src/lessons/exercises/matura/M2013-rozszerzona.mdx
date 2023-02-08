@@ -9,27 +9,28 @@ import Code from "../../../components/code/Code.jsx";
 </div>
 
 ### TREŚĆ (0-10pkt.)
-W pliku dane.txt znajduje się 5 000 liczb całkowitych z przedziału od 108 do 20000008,
+W pliku <i>dane.txt</i> znajduje się 5 000 liczb całkowitych z przedziału od 108 do 20000008,
 zapisanych w systemie ósemkowym, po jednej liczbie w wierszu. W wybranym przez siebie
 języku programowania <b>napisz program</b>, za pomocą którego uzyskasz odpowiedzi
-na poniższe polecenia. Odpowiedzi zapisz w pliku wyniki6.txt, a odpowiedź do każdego
+na poniższe polecenia. Odpowiedzi zapisz w pliku <i>wyniki6.txt</i>, a odpowiedź do każdego
 podpunktu poprzedź literą oznaczającą ten podpunkt.
 <br/><br/>
 
-### Podpunkt A  
-Ile spośród liczb zapisanych w pliku dane.txt spełnia taki warunek, że pierwsza cyfra
+### <u>Podpunkt A</u>
+Ile spośród liczb zapisanych w pliku <i>dane.txt</i> spełnia taki warunek, że pierwsza cyfra
 tej liczby jest równa ostatniej cyfrze tej samej liczby? 
 <br/>
 <Dropdown title="ODPOWIEDŹ">
-<Code>
+
+```text
 447
-</Code>
+```
 </Dropdown>
 
 <br/><br/>
 
-### Podpunkt B
-Podaj, ile liczb w pliku dane.txt, po ich zapisaniu w systemie dziesiętnym, spełnia
+### <u>Podpunkt B</u>
+Podaj, ile liczb w pliku <i>dane.txt</i>, po ich zapisaniu w systemie dziesiętnym, spełnia
 warunek podany w podpunkcie a), tzn. pierwsza cyfra liczby jest równa ostatniej cyfrze
 tej samej liczby.
 <b>Przykład:</b> Liczba 2038 = 13110 spełnia podany warunek, natomiast 71238 = 366710 nie
@@ -37,28 +38,29 @@ spełnia żądanego warunku.
 
 <br/><br/>
 <Dropdown title="ODPOWIEDŹ">
-<Code>
+
+```text
 324
-</Code>
+```
 </Dropdown>
 <br/><br/>
 
-### Podpunkt C
-Ile spośród liczb zapisanych w pliku dane.txt spełnia warunek, że rozpoczynając od
+### <u>Podpunkt C</u>
+Ile spośród liczb zapisanych w pliku <i>dane.txt</i> spełnia warunek, że rozpoczynając od
 najbardziej znaczącej cyfry w zapisie ósemkowym, każda kolejna cyfra tej liczby nie jest
-mniejsza od cyfry poprzedzającej? Podaj największą i najmniejszą liczbę z pliku
-dane.txt, które spełniają ten warunek.
+mniejsza od cyfry poprzedzającej? Podaj największą i najmniejszą liczbę z pliku <i>dane.txt</i>, które spełniają ten warunek.<br/>
 <b>Przykład:</b> Liczba 123357 spełnia podany warunek, ponieważ 1≤2≤3≤3≤5≤7. 
 <br/><br/>
 <Dropdown title="ODPOWIEDŹ">
-<Code>
-liczba – 49<br/>
+
+<p className="dropdown_text">
+liczba – 49 <br/>
 najmniejsza liczba – 24<sub>8</sub> lub 20<sub>10</sub><br/>
 największa liczba – 1133357<sub>8</sub> lub 308975<sub>10</sub>
-</Code>
+</p>
 </Dropdown>
 
-<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE CAŁEGO ZADANIA">
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
 ```
 def z_10_na_8(n):

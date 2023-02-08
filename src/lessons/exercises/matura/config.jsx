@@ -58,8 +58,8 @@ import AP2022Z3 from './AP2022Z3.mdx';
 import INF2023Z13 from './INF2023Z13.mdx';
 import INF2023Z14 from './INF2023Z14.mdx';
 
-import INF2023Z23 from './INF2023Z23.mdx';
-import INF2023Z24 from './INF2023Z24.mdx';
+import INF2023Z21 from './INF2023Z21.mdx';
+import INF2023Z22 from './INF2023Z22.mdx';
 
 import INF2023Z31 from './INF2023Z31.mdx';
 import INF2023Z32 from './INF2023Z32.mdx';
@@ -105,8 +105,8 @@ import MD2022Z4 from './MD2022Z4.mdx';
 const ExercisesPython = [
     // Arkusze matur
     {name: "Matura 2015 zadanie 1 - LICZBY BINARNE", content: <M2015Z1/>}, //0
-    {name: "Matura 2015 zadanie 2- LICZBY BINARNE", content: <M2015Z2/>}, //1
-    {name: "Matura 2015 zadanie 3- LICZBY BINARNE", content: <M2015Z3/>}, //2
+    {name: "Matura 2015 zadanie 2 - LICZBY BINARNE", content: <M2015Z2/>}, //1
+    {name: "Matura 2015 zadanie 3 - LICZBY BINARNE", content: <M2015Z3/>}, //2
 
     {name: "Matura 2016 zadanie 1 - SZYFROWANIE", content: <M2016Z1/>}, //3
     {name: "Matura 2016 zadanie 2 - SZYFROWANIE", content: <M2016Z2/>}, //4
@@ -147,8 +147,8 @@ const ExercisesPython = [
     {name: "Informator 2023 zadanie 1.3 - CIĄGI", content: <INF2023Z13/>}, //29
     {name: "Informator 2023 zadanie 1.4 - CIĄGI", content: <INF2023Z14/>}, //30
 
-    {name: "Informator 2023 zadanie 2.3 - DZIAŁANIA NA STRINGACH", content: <INF2023Z23/>}, //31
-    {name: "Informator 2023 zadanie 2.4 - DZIAŁANIA NA STRINGACH", content: <INF2023Z24/>}, //32
+    {name: "Informator 2023 zadanie 2.3 - DZIAŁANIA NA STRINGACH", content: <INF2023Z21/>}, //31
+    {name: "Informator 2023 zadanie 2.4 - DZIAŁANIA NA STRINGACH", content: <INF2023Z22/>}, //32
 
     {name: "Informator 2023 zadanie 3.1 - DZIAŁANIA NA LICZBACH", content: <INF2023Z31/>}, //33
     {name: "Informator 2023 zadanie 3.2 - DZIAŁANIA NA LICZBACH", content: <INF2023Z32/>}, //34

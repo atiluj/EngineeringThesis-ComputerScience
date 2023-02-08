@@ -36,75 +36,60 @@ z liczb S<sub>k</sub>.
 
 <br/><br/>
 
-### Zadanie 4   (0-3pkt.)
+### <u>Zadanie 3</u>   (0-3pkt.)
 
-Napisz program, który dla wyrażeń nawiasowych zapisanych w pliku <i>dane2_4.txt</i>
-sprawdzi, czy są one poprawne. Dane w pliku zapisano po jednym wyrażeniu w wierszu,
-podobnie jak w pliku o nazwie <i>dane2_3.txt.</i>
+Dane w pliku <i>dane2_3.txt</i> zapisano w oddzielnych wierszach. W każdym wierszu znajduje
+się poprawne wyrażenie nawiasowe złożone z nawiasów kwadratowych (nieoddzielonych
+żadnym znakiem).
+Napisz program, który dla zadanych wyrażeń nawiasowych w pliku <i>dane2_3.txt</i> obliczy
+ich głębokości.<br/><br/>
 
+Dla danych z pierwszych czterech wierszy w pliku <i>dane2_3.txt</i>:
 
-<br/>
-<br/>
-
-<Dropdown title="WSKAZÓWKI">
-    <p className={`dropdown_text`}>
-    </p>
-</Dropdown>
-
-<Dropdown title="ODPOWIEDŹ">
-<p className={`dropdown_text`}>
-Dla danych z pierwszych czterech wierszy w pliku <i>dane2_4.txt</i>:<br/></p>
-
-```
+```text
 [][][]
 [[[]]]
 [[][][]]
-[[[]]]]
+[[[]]]
+```
+<br/>
+<br/>
+
+<Dropdown title="ODPOWIEDŹ">
+
+```text
+1
+3
+2
+3
 ```
 
-<p className={`dropdown_text`}>Odpowiedź</p>
-
-```
-tak
-tak
-tak
-nie
-```
-
-</Dropdown>
-
-<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYTHON">
 </Dropdown>
 
 <Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - C++">
 
 ```
-ifstream dane("dane2_4.txt");
-ofstream wynik("zadanie2_4.txt");
+ifstream dane("dane2_3.txt");
+ofstream wynik("zadanie2_3.txt");
 
 string wiersz;
 while (dane >> wiersz) {
-    int balans = 0;
-    bool poprawne = true;
+    int suma = 0;
+    int max = 0;
+
     for (string::size_type i = 0; i < wiersz.size(); i++) {
-        if (wiersz[i] == '[')
-            balans++;
-        else { // wiersz[i] == ']'
-            balans--;
-            if (balans < 0) {
-                poprawne = false;
-                break;
-            }
-        }
+        if (wiersz[i] == '[') {
+            suma++;
+            if (suma > max)
+                max = suma;
+        } else
+            suma--;
     }
-    if (poprawne && balans == 0)
-        wynik << "tak\n";
-    else
-        wynik << "nie\n";
-} 
+    wynik << max << endl;
+}
 ```
 <p className={`dropdown_text`}>
-Rozwiązanie z <a className="link" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
+Rozwiązanie z <a className="link" target="_blank" href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf">https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/Informator_EM2023_informatyka.pdf</a><br/>
 </p>
 
 </Dropdown>

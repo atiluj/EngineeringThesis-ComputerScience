@@ -9,29 +9,29 @@ import Code from "../../../components/code/Code.jsx";
 </div>
 
 ### TREŚĆ (0-10pkt.)
-W kolejnych wierszach pliku cyfry.txt znajduje się 1000 liczb naturalnych, mniejszych
+W kolejnych wierszach pliku <i>cyfry.txt</i> znajduje się 1000 liczb naturalnych, mniejszych
 niż 109 (jeden miliard), po jednej liczbie w każdym wierszu.
 <b>Napisz program</b>, który da odpowiedzi do poniższych podpunktów. Każdą odpowiedź zapisz
-w pliku zadanie4.txt, poprzedzając ją oznaczeniem odpowiedniego podpunktu.
+w pliku <i>zadanie4.txt</i>, poprzedzając ją oznaczeniem odpowiedniego podpunktu.
 
-<br/><br/><br/>
+<br/><br/>
 
-### Podpunkt A
-Ile liczb parzystych jest w pliku cyfry.txt?  
+### <u>Podpunkt A</u>
+Ile liczb parzystych jest w pliku <i>cyfry.txt</i>?  
 
 <br/>
 <Dropdown title="ODPOWIEDŹ">
-    
-<Code>
+
+```text
 495
-</Code>
+```
 
 </Dropdown>
 
 <br/><br/>
 
-### Podpunkt B
-Podaj liczbę z pliku cyfry.txt, której suma cyfr jest <b>największa</b> oraz liczbę z tego
+### <u>Podpunkt B</u>
+Podaj liczbę z pliku <i>cyfry.txt</i>, której suma cyfr jest <b>największa</b> oraz liczbę z tego
 pliku, której suma cyfr jest <b>najmniejsza</b>. W obu przypadkach jest tylko jedna taka liczba.
 <b>Przykład:<br/></b>
 <b>Dla danego zbioru liczb:<br/></b>
@@ -46,15 +46,16 @@ równa 25 (6+6+5+6+2) i jest największą taką sumą, zaś suma cyfr liczby 121
 <br/>
 <br/>
 <Dropdown title="ODPOWIEDŹ">
-<Code>
+
+```text
 Liczba o największej sumie cyfr to 187869866.
 Liczba o najmniejszej sumie cyfr to 10010. 
-</Code>
+```
 </Dropdown>
 <br/><br/>
 
-### Podpunkt C
-Wypisz wszystkie liczby z pliku cyfry.txt, których cyfry tworzą ciąg rosnący.<br/>
+### <u>Podpunkt C</u>
+Wypisz wszystkie liczby z pliku <i>cyfry.txt</i>, których cyfry tworzą ciąg rosnący.<br/>
 <b>Przykład:</b>
 Cyfry liczby 123579 tworzą ciąg rosnący, ponieważ 1 &lt 2 &h60 3 &h60 5 &h60 7 &h60 9. <br/>
 Cyfry liczby 1232 nie tworzą ciągu rosnącego, ponieważ ostatnia cyfra (2) nie jest
@@ -64,14 +65,15 @@ czwarta (5) są sobie równe.
 <br/>
 <br/>
 <Dropdown title="ODPOWIEDŹ">
-<Code>
+
+```text
 2389, 23567, 123456789, 3468 
-</Code>
+```
 </Dropdown>
 
 <Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
-```
+```python
 with open("cyfry.txt") as file:
     data = [int(x) for x in file.readlines()]
 
