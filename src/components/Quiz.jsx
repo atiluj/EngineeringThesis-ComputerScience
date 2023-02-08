@@ -37,7 +37,7 @@ export default function Quiz(props) {
   return (
     <form onSubmit={handleSubmit}>
       <FormControl sx={{ m: 3 }} variant="standard">
-        <FormLabel>{props.question}</FormLabel>
+        <FormLabel sx={{color: `var(--font)`}}>{props.question}</FormLabel>
         <RadioGroup
           name="quiz"
           value={value}
@@ -46,7 +46,7 @@ export default function Quiz(props) {
             {props.answers.map((answer, index) =>
                 <FormControlLabel
                     value={answer}
-                    control={<Radio/>}
+                    control={<Radio sx={{color: `var(--font)`}}/>}
                     label={answer}
                     key={index}
                 />
