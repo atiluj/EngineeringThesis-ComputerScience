@@ -1,0 +1,79 @@
+import Dropdown from '../../components/dropdown/Dropdown.jsx';
+
+<br/>
+W komputerze wszystkie dane są przechowywane jako ciągi bitów, a więc jako ciągi zer i jedynek.
+Wyjątkiem nie są tu znaki alfanumeryczn, litery i znaki takiej jak kropka, czy myślnik.
+
+## Kod ASCII
+Najpopularniejszy sposobem kodowania znaków jest kod ASCII (ang. American Standard Code for Information Interchange)
+<br/>
+<Dropdown title="Kody ASCII wybranych znaków">
+<pre className="dropdown_text">
+    0 --> 48 <br/>
+    1 --> 49 <br/>
+    2 --> 50 <br/>
+    3 --> 51 <br/>
+    4 --> 52 <br/>
+    5 --> 53 <br/>
+    6 --> 54 <br/>
+    7 --> 55 <br/>
+    8 --> 56 <br/>
+    9 --> 57 <br/>
+    <br/><br/>
+    A --> 65 <br/>
+    B --> 66 <br/>
+    C --> 67 <br/>
+    D --> 68 <br/>
+    E --> 69 <br/>
+    ... <br/>
+    Y --> 89 <br/>
+    Z --> 90 <br/>
+    <br/><br/>
+    a --> 97 <br/>
+    b --> 98 <br/>
+    c --> 99 <br/>
+    ... <br/>
+    y --> 121 <br/>
+    z --> 122 <br/>
+    <br/><br/>
+    spacja --> 32 <br/>
+    ! --> 33 <br/>
+    . --> 46 <br/>
+</pre>
+</Dropdown>
+
+## ISO/IEC 10646
+Możemy zauważyć, że w kodach ASCII nie ma znaków charakterystycznych dla danego języka, a więc między innymi
+liter takich jak "ą" czy "ę". W celu reprezentacji znaków narodowych wprowadzony został standard ISO 10646. 
+ISO 10646 opisuje około 100 000 abstrakcyjnych znaków.
+<br/>
+<Dropdown title="Polskie litery w ISO">
+<pre className="dropdown_text">
+ Ą --> &#260 <br/>
+ Ć --> &#262 <br/>
+ Ę --> &#280 <br/>
+ Ł --> &#321 <br/>
+ Ń --> &#323 <br/>
+ Ó --> &#211 <br/>
+ Ś --> &#346 <br/>
+ Ź --> &#377 <br/>
+ Ż --> &#379 <br/>
+ ą --> &#261 <br/>
+ ć --> &#263 <br/>
+ ę --> &#281 <br/>
+ ł --> &#322 <br/>
+ ń --> &#324 <br/>
+ ó --> &#243 <br/>
+ ś --> &#347 <br/>
+ ź --> &#378 <br/>
+ ż --> &#380 <br/>
+</pre>
+</Dropdown>
+
+## Unicode
+To również standard, który tak jak ISO pozwala na zaimplementowanie znaków specyficznych dla różnych języków narodowych, 
+ale w odróżnieniu od ISO posiada dodatkowe informacje takie jak chociażby dwukierunkowa kolejności wyświetlania dla tekstów wielojęzycznych.
+
+Możemy sprawdzić jaki kod ma dany znak bezpośrednio w naszym komputerze. W systemie Windows wystarczy wyszukać "Tablicę znaków", a w niej 
+znajdziemy odpowiednie kody.
+<img src={new URL('https://i.imgur.com/ZBMTvc0.png', import.meta.url)} alt="xyz" className={`small_img`} />

@@ -1,0 +1,126 @@
+import Dropdown from '../../components/dropdown/Dropdown.jsx'
+
+## Wstęp
+W temacie "Systemy liczbowe" omówiliśmy już, w jaki sposób liczbę w dowolnym systemie możemy zamienić na liczbę w systemie dziesiętnym.
+Teraz zajmiemy się konwersją liczb w drugą stronę to znaczy z systemu o podstawie n* na dziesiętny. Pokażemy dwa różne sposoby 
+na to, jak można podejść do tego problemu.
+Następnie przejdziemy do konwersji liczb między systemami o różnych podstawach na przykład z binarnego na szesnastkowy.
+<br/>
+(*Jeśli za n weźmiemy 2 to będzie system binarny, jeśli 8 to ósemkowy, a jeśli 16 to szesnastkowy, ale możemy wybrać w zasadzie dowolną podstawę n będącą liczbą naturalną.)
+
+## Konwersja liczb z systemu o podstawie n na dziesiętny (sposób 1)
+Znów przenieśmy się na moment do czasów szkoły podstawowej i uczenia się o liczbach w systemie dziesiętnym. 
+Aby obliczyć kolejno jedności, dziesiątki, setki itd. danej liczby patrzyliśmy na którym miejscu znajduje się dana cyfra. 
+Możemy zauważmyć, że nasze działanie było równoważne obliczaniu reszty z dzielenia naszej liczby przez 10, a następnie dzielenia całkowitego tej liczby przez 10 
+i powtarzaniu tych czynności, aż do otrzymania zerwa w wyniku. 
+<img src={new URL('https://i.imgur.com/h7NF4dd.png', import.meta.url)} alt="xyz" className={`super_small_img`}/>
+Zauważmy też, że jeśli cyfry z kolumny po prawej stronie odczytamy od dołu do góry to otrzymamy orygnialną liczbę.
+
+<br/><br/>
+Tą samą taktykę możemy wykorzystać, aby zmienić liczbę w systemie dziesiętnym na dowolny inny system. Wystarczy, że zamiast obliczać resztę z 
+dzielenia i dzielić przez 10 będziemy wykonywać te operacje z n (mod n i /n). 
+
+### binarny -> dziesiętny
+W pierwszej kolejności pokażemy to na na przykładzie systemu binarnego.
+<img src={new URL('https://i.imgur.com/R94iQ5R.png', import.meta.url)} alt="xyz" className={`super_small_img`}/>
+<Dropdown title="Obliczenia pomocnicze">
+<pre className="dropdown_text">
+    mod - reszta z dzielenia <br/>
+    / - dzielenie całkowite <br/><br/>
+    
+237 mod 2 = 1 <br/>
+237 / 2 = 118 <br/>
+<br/>
+118 mod 2 = 0 <br/>
+118 / 2 = 59 <br/>
+<br/>
+59 mod 2 = 1 <br/>
+59 / 2 = 29 <br/>
+<br/>
+29 mod 2 = 1 <br/>
+29 / 2 = 14 <br/>
+<br/>
+14 mod 2 = 0 <br/>
+14 / 2 = 7 <br/>
+<br/>
+7 mod 2 = 1 <br/>
+7 / 2 = 7 <br/>
+<br/>
+7 mod 2 = 1 <br/>
+7 / 2 = 3 <br/>
+<br/>
+3 mod 2 = 1 <br/>
+3 / 2 = 1 <br/>
+<br/>
+1 mod 2 = 1 <br/>
+1 / 2 = 0 <br/>
+</pre>
+</Dropdown>
+Analogicznie do systemu dziesiętnego, tutaj też odczytujemy wynik od dołu do góry, ale ponieważ tym razem dzieliliśmy przez 2,
+to wynikiem będzie liczba w systemie binarnym.
+<pre>
+    273<sub>(10)</sub> = 11101101<sub>(2)</sub>
+</pre>
+
+
+### dziesiętny -> ósemkowy
+<img src={new URL('https://i.imgur.com/EKfCQoq.png', import.meta.url)} alt="xyz" className={`super_small_img`}/>
+Znów odczytujemy wynik od dołu do góry, ale ponieważ tym razem dzieliliśmy przez 8,
+to wynikiem będzie liczba w systemie ósemkowym.
+<pre>
+    273<sub>(10)</sub> = 355<sub>(8)</sub>
+</pre>
+
+### dziesiętny -> szesnastkowy
+Dla przypomnienia z działu "Systemy liczbowe".
+<pre>
+    10<sub>(10)</sub> = A<sub>(16)</sub><br/>
+    11<sub>(10)</sub> = B<sub>(16)</sub><br/>
+    12<sub>(10)</sub> = C<sub>(16)</sub><br/>
+    13<sub>(10)</sub> = D<sub>(16)</sub><br/>
+    14<sub>(10)</sub> = E<sub>(16)</sub><br/>
+    15<sub>(10)</sub> = F<sub>(16)</sub><br/>
+</pre>
+<img src={new URL('https://i.imgur.com/oPXBInl.png', import.meta.url)} alt="xyz" className={`super_small_img`}/>
+Znów odczytujemy wynik od dołu do góry, ale ponieważ tym razem dzieliliśmy przez 8,
+to wynikiem będzie liczba w systemie ósemkowym.
+<pre>
+    273<sub>(10)</sub> = ED<sub>(16)</sub>
+</pre>
+
+## Konwersja liczb z systemu o podstawie n na dziesiętny (sposób 2)
+Do tego zaganienia możemy podejść również w inny sposób. Wystarczy bowiem wypisać sobie wszystkie potęgi liczby, 
+która jest podstawą naszego systemu (n) mniejsze od liczby, którą chcemy przekonwertować na system dziesiętny.
+Następnie jeśli jakaś liczba mieści się w naszej liczbie to piszemy ile razy się ona zmieści, a jeśli nie to wpisujemy 0 i sprawdzamy
+mniejsze potęgi n.
+
+### dziesiętny ->  binarny
+W przykładzie znów przekonwertujemy liczbe <b>237</b> na system dwójkowy.
+<img src={new URL('https://i.imgur.com/0exnT2C.png', import.meta.url)} alt="xyz" className={`small_img`}/>
+<Dropdown title="Obliczenia pomocnicze">
+<pre className="dropdown_text">
+2<sup>7</sup> --> 1, bo 237 – 128 = 109 <br/>
+2<sup>6</sup> --> 1, bo 109 – 64 = 45 <br/>
+2<sup>5</sup> --> 1, bo 45 – 32 = 13 <br/>
+2<sup>4</sup> --> 0, bo 13 jest mniejsze niż 16 <br/>
+2<sup>3</sup> --> 1, bo 13 – 8 = 5 <br/>
+2<sup>2</sup> --> 1, bo 5 – 4 = 3 <br/>
+2<sup>1</sup> --> 1, bo 3 – 2 = 1 <br/>
+2<sup>0</sup> --> 1, bo 1 – 1 = 0 <br/>
+</pre>
+</Dropdown>
+W tej metodzie odczytujemy wynik od lewej do prawej.
+<pre>
+    273<sub>(10)</sub> = 11101101<sub>(2)</sub>
+</pre>
+
+## Konwersja liczb z systemu o podstawie n na system o podstawie m
+Aby przekonwertować liczbę z systemu o podstawie n na liczbę w systemie o podstawie m wystarczy wykonać dwa kroki.
+1. przekonwertować liczbę z systemu o podstawie n na system dziesiętny.
+2. przekonwertowac liczbę z systemu dziesiętnego na system o podstawie m.
+
+
+
+
+
+

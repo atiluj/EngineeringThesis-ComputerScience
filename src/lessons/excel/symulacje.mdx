@@ -1,0 +1,136 @@
+import Dropdown from '../../components/dropdown/Dropdown.jsx';
+
+<br/> 
+<b>Słowo wstępu</b>: W tej lekcji zajmiemy się rozwiązaniem typowego zadania typu "symulacja" w Excelu. 
+Będziemy zabować na maturze rozszerzonej z 2013 roku (Zadanie 4. Rezerwat przyrody – żubry (0-10 pkt.))
+<br/>
+<a className={`link link_materials`} target="_blank" href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona-2.pdf">ARKUSZ</a>
+<br/>
+<a className={`link link_materials`} target="_blank" href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona-odpowiedzi.pdf">DANE DO ZADANIA</a>
+<br/>
+<a className={`link link_materials`} target="_blank" href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona-odpowiedzi.pdf">WZÓR OCENIANIA</a>
+<br/>
+
+### 1. Czytamy polecenie i staramy się znaleźć w nim wszelkie zmienne
+
+* jest **90 żubrów**
+* żubry są dokarmiane raz dziennie (rano)
+* jeśli w magazynie mamy conajmniej **50 ton siana** to żubry jedzą **40kg siana** każdy
+* w przeciwmym przypadku żubry jedzą **20kg żołędzi** każdy
+* dostawy do magazyny są zawsze wieczorem po posiłku żubrów
+* **w piątki** do magazynu dowożone jest **15 ton siana**
+* **we wtorki** do magazynu dowożone są **4 tony żołędzi**
+* interesuje nas okres  **1.12.2012 do 28.02.2013**
+
+
+## 2. Tworzymy kolumnę z datami z okresu 1.12.2012 do 28.02.2013
+
+![](https://i.imgur.com/eWh6M35.png)
+
+
+## 3. Obliczamy dzień tygodnia
+Wybieramy opcję 2, ponieważ numerowanie dni tygodnia od 1 (1-poniedziałek, 2-wtorek, ..., 7-niedziela).
+![](https://i.imgur.com/i5loIjV.png)
+<br/>
+Aby automatycznie uzupełnić tą formułą całą kolumnę wystarczy dwukrotnie nacisnąć zielony kwadracik w prawym dolnym roku komórki, 
+w której wpisaliśmy formułę.
+![](https://i.imgur.com/0VzwnJH.png)
+
+## 4. Tworzymy komórki, ze zmiennymi
+
+![](https://i.imgur.com/kL5v1Tu.png)
+
+## 5. Tworzymy kolumny, w których będziemy przeprowadzać główną symulację
+(1 tona = 1000 kg)
+
+### 5.1. Dodajemy dodatkowy wiersz, uzupełniony początkowym stanem magazynowym, pierwszą kolumnę uzupełnioną początkowym stanem magazynowym. Jest to konieczne, ponieważ dane z zadania są podane przed posiłkiem żubrów.
+Klikamy wiersz drugi, klikamy prawy klawisz myszy i wybieramy "Wstaw" -> "Nowy wiersz"
+![](https://i.imgur.com/kL5v1Tu.png)
+
+### 5.2. Dodajemy kolumnę, w której będziemy przechowywać dane dotyczące tego, czy w dym dniu żubry będa jadły siano czy żołędzie.
+W zadaniu mamy informację o tym, że jeśli stan magazynowy wynosi conajmniej 50ton to żubry jedzą siano, oznacza to, że jeśli stan siana jest **>=**. 
+Musimy być zawsze ostrożni przy nierównościach i przemyśleć czy powinna to być nierówność ostra (>) czy nieostra (>=).
+![](https://i.imgur.com/bwd0MHO.png)
+
+Klikając w kwadracik w prawym dolnym rogu uzupelniamy formuła pozostałe wiersze.
+
+### 5.3. Uzupełniamy kolumny z ilością siana i żołędzi formułą uwzględniającą karmienie żubrów.
+
+![](https://i.imgur.com/HEWBv3R.png)
+
+![](https://i.imgur.com/TjaUgo3.png)
+
+### 5.4. Dodajemy kolumny, w której będziemy przechowywać informację o stanie magazynowym siana i żołędzi wieczorem.
+Dotychczas mieliśmy informację o stanie magazynowym siana codziennie po posiłku żubrów. Nie uwzględniamy jednak nigdzie dostaw do magazynu. Dodajmy więc
+kolumny, które nam w tym pomogą.
+
+![](https://i.imgur.com/FVCGIYA.png)
+![](https://i.imgur.com/5JZGwJq.png)
+
+### 5.5. Aktualizujemy formuły do obliczania czy żubry jedzą siano czy żołędzie oraz obliczające stany magazynowe po posiłku, tak aby uwzględniały one nowo dodane kolumny i dostawy jedzenia.
+
+Najpierw musimy uzupełnić puste komórki wartościami startowymi.
+
+![](https://i.imgur.com/UAO5P8T.png)
+![](https://i.imgur.com/3EqLCsY.png)
+
+Następnie korygujemy odpowiednie formuły. Pamiętajmy o przeciągnięciu formuły na pozostałe komórki, żeby zaktualizowac ja wszedzie, 
+a nie tylko w pierwszym wierszu.
+
+![](https://i.imgur.com/CpEN2Q8.png)
+![](https://i.imgur.com/6Jsa11T.png)
+![](https://i.imgur.com/5va9PbK.png)
+
+### 5.6. Symulacja zakończona
+![](https://i.imgur.com/ZdX0qVs.png)
+
+## 6. Rozwiązujemy podpunkt a
+![](https://i.imgur.com/WXObrC6.png)
+
+### 6.1. Tworzymy komórkę, w której zliczamy liczbę wtorków w okresie od 1.12.2012 do 28.02.2013 roku. Co jest równoważne ilości dostaw żołędzie w tym okresie.
+![](https://i.imgur.com/Lx5XMeS.png)
+
+### 6.2. Analogicznie zliczamy piątki, aby uzyskać informację o liczbie dostaw siana.
+![](https://i.imgur.com/ruNyb3h.png)
+
+### 6.3. Zapisujemy odpowiedź
+Po pierwsze pamiętajmy, aby zapisać odpowiedź w odpowiednim pliku tekstowym oraz o tym, że musimy mieć ją zachowaną w arkuszu 
+obliczeniowym wraz z formuła, ktora pozwoliła na jej obliczenie.
+
+**Odpowiedź**: Było 12 dostaw siana i 13 dostaw żołędzi.
+
+## 7. Rozwiązujemy podpunkt b
+![](https://i.imgur.com/OVY3ges.png)
+
+### 7.1. Wystarczy wyszukać w kolumnie "siano(0) czy żołędzie(1)" pierwszy od góry wiersz, w którym występuje wartość 0. Data w tym wierszu będzie odpowiadać pierwszemu dniu, w którym żubry jadły tylko żołędzie.
+Zakolorujmy odpowiedni komórki, aby wskazać egzaminatorowi w jaki sposób uzyskalismy odpowiedź na to pytanie.
+![](https://i.imgur.com/GJuyHEN.png)
+
+### 7.2.* Używamy opcji sortowania.
+Czasami danych może być za dużo i trudno będzie nam znaleźć ręcznie pierwsze wystąpienie 0, wówczas warto wykorzystać opcję sortowania. <br/>
+![](https://i.imgur.com/OaDwtaP.png)
+
+Ponieważ nasze dane są zależne od poprzednich wierszy to sortowanie może zepsuć wyniki. Dlatego skopiujemy cały arkusz i wklejimy do nowo utworzonego 
+arkusza korzystając z opcji wklej wartości. Dopiero na tak przygotowanych danych przeprowadzimy sortowanie.
+![](https://i.imgur.com/HElW6x7.png)
+
+Zauważmy, że data jest źle sformatowana. Na szczęście możemy ją łątwo odtworzyć poprzez zastosowanie tej samej metody co w punkcie 2.
+Zaznacz cały zakres symulacji (poza nagłowkami, bo do sortowania wszystkie komórki muszą mieć ten sam rozmiar, a nagłowki maj wielkość dwóch połączonych komórek),
+następnie wybieramy "Sortuj i filtruj" -> "Sortowanie niestandardowe".
+![](https://i.imgur.com/wvHrx3e.png)
+
+Następnie wybieramy "siano(1) czy żołędzie(0)" -> "Wartości komórek" -> "Od najmniejszych do największych". <br/>
+![](https://i.imgur.com/uvaqrS3.png)
+
+Wystarczy teraz odczytać pierwszą datę od góry i mamy odpowiedź.
+![](https://i.imgur.com/LEpsBe0.png)
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,11 @@
 import Wskazowki from './wskazowki.mdx';
 import KomputerIJegoCzesci from './komputer-i-jego-czesci.mdx';
+import Systemy from './systemy.mdx';
+import Znaki from './znaki.mdx';
 import ZadaniaKomputer from './zadaniaKomputer.mdx';
 
 import SystemyLiczbowe from './systemyLiczbowe.mdx';
+import KonwersjaSystemow from './konwersjaSystemow.mdx';
 import ZadaniaLiczby from './zadaniaLiczby.mdx';
 
 import Terminologia from './terminologia.mdx';
@@ -15,6 +18,8 @@ import Barwy from './barwy.mdx';
 import FormatyGrafiki from './formatyGrafiki.mdx';
 import ZadaniaGrafika from './zadaniaGrafika.mdx';
 
+import NormyPrawne from './normyPrawne.mdx';
+import Licencje from './licencje.mdx';
 import ZadaniaPrawo from './zadaniaPrawo.mdx';
 
 import ZadaniaPseudokod from './zadaniaPseudokod.mdx';
@@ -26,24 +31,17 @@ import ZadaniaSzyfrowanie from './zadaniaSzyfrowanie.mdx';
 const TeoriaLessons = [
     {name: "Wskazówki", content: <Wskazowki />},
 
-    {name: "Komputer", subchapters: [
-        // {name: "Komputer i jego części", content: <KomputerIJegoCzesci />},
-        // {name: "System operacyjny", content: null},
-        {name: "Zadania maturalne", content: <ZadaniaKomputer/>},
-    ]},
-
-    // {name: "Systemy liczbowe", subchapters: [
-    //     {name: "System dwójkowy", content: null},
-    //     {name: "System ósemkowy", content: null},
-    //     {name: "System szesnastkowy", content: null},
-    // ]},
-
     {name: "Konwersja liczb", subchapters: [
         {name: "Systemy liczbowe", content: <SystemyLiczbowe/>},
-        // {name: "Dwójkowy - Ósemkowy", content: null},
-        // {name: "Dwójkowy - Szesnastkowy", content: null},
-        // {name: "Ósemkowy - Szesnastkowy", content: null},
+        {name: "Konwersja między systemami", content: <KonwersjaSystemow/>},
         {name: "Zadania maturalne", content: <ZadaniaLiczby/>},
+    ]},
+
+    {name: "Komputer", subchapters: [
+        {name: "Komputer i jego części", content: <KomputerIJegoCzesci />},
+        {name: "System operacyjny", content: <Systemy/>},
+        {name: "Reprezentacja znaków w komputerze", content: <Znaki/>},
+        {name: "Zadania maturalne", content: <ZadaniaKomputer/>},
     ]},
 
     {name: "Sieci komputerowe", subchapters: [
@@ -62,8 +60,8 @@ const TeoriaLessons = [
 
     {name: "Zagadnienia prawne i cyberbezpieczeństwo", subchapters: [
         // {name: "Zagadnienia przestępczości komputerowej", content: null},
-        // {name: "Licencje", content: null},
-        // {name: "Normy prawe", content: null},
+        {name: "Licencje", content: <Licencje/>},
+        {name: "Normy prawe", content: <NormyPrawne/>},
         {name: "Zadania maturalne", content: <ZadaniaPrawo/>},
     ]},
 
