@@ -65,12 +65,12 @@ const TeoriaLessons = [
         {name: "Zadania maturalne", content: <ZadaniaPrawo/>},
     ]},
 
-    {name: "Pseudokod", subchapters: [
-        // {name: "Schematy blokowe", content: null},
-        // {name: "Lista kroków", content: null},
-        // {name: "Za pomocą Python", content: null},
-        {name: "Zadania maturalne", content: <ZadaniaPseudokod/>},
-    ]},
+    // {name: "Pseudokod", subchapters: [
+    // {name: "Schematy blokowe", content: null},
+    // {name: "Lista kroków", content: null},
+    // {name: "Za pomocą Python", content: null},
+    //     {name: "Zadania maturalne", content: <ZadaniaPseudokod/>},
+    // ]},
 
     // {name: "Złożoność", subchapters: [
     //     {name: "Złożoność obliczeniowa", content: null},
