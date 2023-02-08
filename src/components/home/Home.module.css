@@ -93,6 +93,7 @@
 
 .acknowledgements {
     width: 85%;
+    max-width: 85em;
     margin: 0 auto;
 }
 
