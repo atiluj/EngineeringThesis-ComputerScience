@@ -47,5 +47,25 @@ słowo LQWHUSUHWRZDQLH.
 ![](https://i.imgur.com/lolHrMC.png)
 
 </Dropdown>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
+```python
+with open("dane_6_1.txt", "r") as f:
+    lines = f.readlines()
 
+k = 107
+k %= 26 # 26 liter w alfabecie, wszystko co ponad to będzie cyklicznym przejściem
+
+def cipher(letter, k):
+    new_ord = ord(letter)+k
+    if new_ord > 90:
+        new_ord = new_ord - 90 + 65 -1
+    return chr(new_ord)
+
+for line in lines:
+    line = line.strip()
+    letters = [*line]
+    ciphered = list(map(lambda x: cipher(x, k), letters))
+    print(line, "".join(ciphered))
+```
+</Dropdown>

@@ -29,6 +29,18 @@ W pliku <i>wynik4a.txt</i> podaj, ile haseł ma parzystą, a ile nieparzystą li
 105 haseł ma parzystą liczbę znaków, a 95 – nieparzystą. 
 ```
 </Dropdown>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+with open("dane.txt", "r") as f:
+    lines = f.readlines()
+
+for line in lines:
+    line = line.strip()
+    if line[::-1] == line:
+        print(line)
+```
+</Dropdown>
 
 <br/><br/>
 

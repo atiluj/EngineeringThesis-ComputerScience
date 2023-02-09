@@ -70,7 +70,40 @@ ABCGCBA
 GABAG
 
 ```
+</Dropdown>
 
+<Dropdown title="ROZWIĄZANIE PRZYKŁADOWE - PYTHON">
+
+```python
+import math
+prime_numbers = []
+
+def is_prime(number):
+    for i in range(2, int(math.sqrt(number))+1):
+        if number % i == 0:
+            return False
+    return True
+
+
+with open("liczby.txt", "r") as f:
+    lines = f.readlines()
+
+numbers = list(map(lambda x: int(x.strip()), lines))
+max_num = max(numbers)
+
+# tworzymy tablice wszystkich liczb pierwszych od 2 do pierwiastka z najwiekszej liczby w pliku
+for i in range(2, int(math.sqrt(max_num))):
+    if is_prime(i):
+        prime_numbers.append(i)
+
+for number in numbers:
+    sqrt = int(math.sqrt(number))
+    
+    # sprawdzamy czy pierwiastek z liczby w pliku jest w naszej tablicy liczb pierwszych
+    # oraz czy liczba jest w ogole kwadratem liczby naturalnej
+    if sqrt in prime_numbers and sqrt**2 == number:
+        print(number)
+```
 </Dropdown>
 
 

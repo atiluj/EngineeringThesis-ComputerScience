@@ -27,6 +27,18 @@ Podaj, ile jest napisów o parzystej długości.
 504
 ```
 </Dropdown>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+with open("napisy.txt", "r") as f:
+    lines = f.readlines()
+
+lines = list(map(lambda x: x.strip(), lines))
+
+even_length = list(filter(lambda x: len(x) % 2 == 0, lines))
+print(len(even_length))
+```
+</Dropdown>
 
 <br/><br/>
 
@@ -37,6 +49,18 @@ Podaj, ile jest napisów, które zawierają taką samą liczbę zer i jedynek.
 
 ```text
 110
+```
+</Dropdown>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+with open("napisy.txt", "r") as f:
+    lines = f.readlines()
+
+lines = list(map(lambda x: x.strip(), lines))
+
+equal_01 = list(filter(lambda x: x.count("0") == x.count("1"), lines))
+print(len(equal_01))
 ```
 </Dropdown>
 <br/><br/>
@@ -52,6 +76,22 @@ liczba napisów zawierających same zera – 32
 liczba napisów zawierających same jedynki – 50 
 ```
 </Dropdown>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+with open("napisy.txt", "r") as f:
+    lines = f.readlines()
+
+lines = list(map(lambda x: x.strip(), lines))
+
+only_0 = list(filter(lambda x: len(x) == x.count("0"), lines))
+print(f"liczba napisów zawierających same zera – {len(only_0)}")
+
+only_1 = list(filter(lambda x: len(x) == x.count("1"), lines))
+print(f"liczba napisów zawierających same jedynki – {len(only_1)}")
+```
+</Dropdown>
+
 <br/><br/>
 
 ### Podpunkt D
@@ -79,7 +119,23 @@ w pliku <i>napisy.txt</i>, tzn. podaj, ile jest napisów 2-znakowych, ile jest n
 16-znaków: 56 
 ```
 </Dropdown>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
+```python
+with open("napisy.txt", "r") as f:
+    lines = f.readlines()
+
+lines = list(map(lambda x: x.strip(), lines))
+
+lengths = list(map(lambda x: len(x), lines))
+
+for i in range(2, 17):
+    if i < 5:
+        print(f"{i}-znaki: {lengths.count(i)}")
+    else:
+        print(f"{i}-znaków: {lengths.count(i)}")
+```
+</Dropdown>
 
 
 

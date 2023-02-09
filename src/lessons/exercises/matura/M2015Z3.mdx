@@ -52,7 +52,41 @@ Prawidłowa odpowiedź dla powyższego przykładu to: 5, 1.
 925 – numer wiersza zawierającego maksymalną liczbę 
 ```
 </Dropdown>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
+```python
+from functools import cmp_to_key
+with open("liczby.txt", "r") as f:
+    lines = f.readlines()
+
+def comparer(num1, num2):   
+    n = max(len(num1), len(num2))
+
+    a = "0"*(n-len(num1))+num1
+    b = "0"*(n-len(num2))+num2
+
+    for i in range(n):
+        if a[i] == "0" and b[i] == "1":
+            return -1
+        elif a[i] == "1" and b[i] == "0":
+            return 1
+        
+    if len(num1) < len(num2):
+        return -1
+    elif len(num1) > len(num2):
+        return 1
+    else:
+        return 0
+
+lines = list(map(lambda x: x.strip(), lines))
+
+sorted_lines = sorted(lines, key=cmp_to_key(comparer))
+minimum, maximum = sorted_lines[0], sorted_lines[-1]
+
+print(f"{lines.index(minimum)+1} – numer wiersza zawierającego minimalną liczbę")
+print(f"{lines.index(maximum)+1} – numer wiersza zawierającego maksymalną liczbę")
+```
+</Dropdown>
 
 <Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - C++">
 

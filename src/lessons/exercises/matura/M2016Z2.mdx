@@ -52,4 +52,35 @@ ZAWISLAK.
 ![](https://i.imgur.com/AbRV55V.png)
 
 </Dropdown>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+with open("dane_6_2.txt", "r") as f:
+    lines = f.readlines()
+
+
+def decipher(letter, key):
+    new_ord = ord(letter) - key
+    if new_ord < 65:
+        new_ord = 91 - (65 - new_ord)
+    
+    return chr(new_ord)
+
+for line in lines:
+    line = line.strip()
+
+    # ten try execpt potrzebny jako że dane do tego zadania zawieraja błąd - jedna linia ma słowo bez klucza
+    try:
+        (word, key) = line.split()
+    except ValueError as e:
+        print("Błąd danych")
+        continue
+    key = int(key)%26
+
+    letters = [*word]
+    deciphered = list(map(lambda x: decipher(x, key), letters))
+
+    print("".join(deciphered))
+```
+</Dropdown>
 

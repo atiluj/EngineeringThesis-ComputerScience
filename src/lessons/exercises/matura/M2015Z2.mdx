@@ -50,7 +50,25 @@ trzy liczby są podzielne przez 2 (*) i dwie liczby są podzielne przez 8 (**).
 123 – liczba liczb podzielnych przez 8
 ```
 </Dropdown>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
 
+```python
+with open("liczby.txt", "r") as f:
+    lines = f.readlines()
+    
+by_8 = 0
+by_2 = 0
+for line in lines:
+    line = line.strip()
+    if line[-3:] == "000":
+        by_8 += 1
+    
+    if line[-1] == "0":
+        by_2 += 1
+print(f"{by_2} – liczba liczb podzielnych przez 2")
+print(f"{by_8} – liczba liczb podzielnych przez 8")
+```
+</Dropdown>
 
 <Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - C++">
 

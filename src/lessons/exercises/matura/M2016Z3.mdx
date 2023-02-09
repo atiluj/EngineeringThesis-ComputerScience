@@ -59,3 +59,35 @@ SZCZESNIAK
 CIESLINSKI 
 ```
 </Dropdown>
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+with open("dane_6_3.txt", "r") as f:
+    lines = f.readlines()
+
+def decipher(letter, key):
+    new_ord = ord(letter) - key
+    if new_ord < 65:
+        new_ord = 91 - (65 - new_ord)
+    
+    return chr(new_ord)
+
+def get_key(text_letter, cipher_letter):
+    if ord(cipher_letter) > ord(text_letter):
+        return ord(cipher_letter) - ord(text_letter)
+    else:
+        return (ord(cipher_letter) - 65) + (90 - ord(text_letter)) + 1
+
+for line in lines:
+    line = line.strip()
+
+    (word, cipher) = line.split()
+
+    key = get_key(word[0], cipher[0])
+
+    letters = [*cipher]
+    deciphered = list(map(lambda x: decipher(x, key), letters))
+    if word != "".join(deciphered):
+        print(word)
+```
+</Dropdown>

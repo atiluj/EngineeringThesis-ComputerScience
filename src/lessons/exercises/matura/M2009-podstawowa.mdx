@@ -51,5 +51,16 @@ dodatnich, o co najwyżej 6 cyfrach, każda liczba w osobnym wierszu.
 ```
 </Dropdown>
 
+<Dropdown title ="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+with open("mecz.txt", "r") as f:
+    line = f.readline()
+    # jezeli rozgrywke wygrala inna druzyna niz poprzednio to mamy dwie rozne literki po sobie
+    # jako ze w grze braly udzial tylko dwie druzyny wystarczy policzyc ile razy wystapil ciag "AB" a ile razy "BA"
+    print(line.count("AB") + line.count("BA"))
+```
+</Dropdown>
+
 
 
