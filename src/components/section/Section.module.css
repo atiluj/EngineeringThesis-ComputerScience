@@ -63,6 +63,7 @@
 
 .main .contents .cont .topic.standalone {
   justify-content: left;
+  min-height: 100%;
 }
 
 .topic a {
