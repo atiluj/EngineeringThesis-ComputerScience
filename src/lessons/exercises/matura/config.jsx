@@ -108,40 +108,40 @@ const ExercisesPython = [
     {name: "Matura 2015 zadanie 2 - LICZBY BINARNE", content: <M2015Z2/>}, //1
     {name: "Matura 2015 zadanie 3 - LICZBY BINARNE", content: <M2015Z3/>}, //2
 
-    {name: "Matura 2016 zadanie 1 - SZYFROWANIE", content: <M2016Z1/>}, //3
-    {name: "Matura 2016 zadanie 2 - SZYFROWANIE", content: <M2016Z2/>}, //4
-    {name: "Matura 2016 zadanie 3 - SZYFROWANIE", content: <M2016Z3/>}, //5
+    {name: "Matura 2016 zadanie 1 - SZYFR CEZARA", content: <M2016Z1/>}, //3
+    {name: "Matura 2016 zadanie 2 - SZYFR CEZARA", content: <M2016Z2/>}, //4
+    {name: "Matura 2016 zadanie 3 - SZYFR CEZARA", content: <M2016Z3/>}, //5
 
-    {name: "Matura 2017 zadanie 1 - DZIAŁANIA NA LICZBACH", content: <M2017Z1/>}, //6
-    {name: "Matura 2017 zadanie 2 - DZIAŁANIA NA LICZBACH", content: <M2017Z2/>}, //7
-    {name: "Matura 2017 zadanie 3 - DZIAŁANIA NA LICZBACH", content: <M2017Z3/>}, //8
-    {name: "Matura 2017 zadanie 4 - DZIAŁANIA NA LICZBACH", content: <M2017Z4/>}, //9
+    {name: "Matura 2017 zadanie 1 - PIKSELE", content: <M2017Z1/>}, //6
+    {name: "Matura 2017 zadanie 2 - PIKSELE", content: <M2017Z2/>}, //7
+    {name: "Matura 2017 zadanie 3 - PIKSELE", content: <M2017Z3/>}, //8
+    {name: "Matura 2017 zadanie 4 - PIKSELE", content: <M2017Z4/>}, //9
 
-    {name: "Matura 2018 zadanie 1 - DZIAŁANIA NA STRINGACH", content: <M2018Z1/>}, //10
-    {name: "Matura 2018 zadanie 2 - DZIAŁANIA NA STRINGACH", content: <M2018Z2/>}, //11
-    {name: "Matura 2018 zadanie 3 - DZIAŁANIA NA STRINGACH", content: <M2018Z3/>}, //12
+    {name: "Matura 2018 zadanie 1 - WEGA", content: <M2018Z1/>}, //10
+    {name: "Matura 2018 zadanie 2 - WEGA", content: <M2018Z2/>}, //11
+    {name: "Matura 2018 zadanie 3 - WEGA", content: <M2018Z3/>}, //12
 
-    {name: "Matura 2019 zadanie 1 - POTĘGI", content: <M2019Z1/>}, //13
-    {name: "Matura 2019 zadanie 2 - SILNIA", content: <M2019Z2/>}, //14
-    {name: "Matura 2019 zadanie 3 - DZIAŁANIA NA LICZBACH", content: <M2019Z3/>}, //15
+    {name: "Matura 2019 zadanie 1 - LICZBY", content: <M2019Z1/>}, //13
+    {name: "Matura 2019 zadanie 2 - LICZBY", content: <M2019Z2/>}, //14
+    {name: "Matura 2019 zadanie 3 - LICZBY", content: <M2019Z3/>}, //15
 
-    {name: "Matura 2020 zadanie 1 - DZIAŁANIA NA LICZBACH", content: <M2020Z1/>}, //16
-    {name: "Matura 2020 zadanie 2 - DZIAŁANIA NA STRINGACH", content: <M2020Z2/>}, //17
-    {name: "Matura 2020 zadanie 3 - DZIAŁANIA NA STRINGACH", content: <M2020Z3/>}, //18
+    {name: "Matura 2020 zadanie 1 - PARY", content: <M2020Z1/>}, //16
+    {name: "Matura 2020 zadanie 2 - PARY", content: <M2020Z2/>}, //17
+    {name: "Matura 2020 zadanie 3 - PARY", content: <M2020Z3/>}, //18
 
-    {name: "Matura 2021 zadanie 1 - DZIAŁANIA NA STRINGACH", content: <M2021Z1/>}, //19
-    {name: "Matura 2021 zadanie 2 - DZIAŁANIA NA STRINGACH", content: <M2021Z2/>}, //20
-    {name: "Matura 2021 zadanie 3 - DZIAŁANIA NA STRINGACH", content: <M2021Z3/>}, //21
-    {name: "Matura 2021 zadanie 4 - DZIAŁANIA NA STRINGACH", content: <M2021Z4/>}, //22
+    {name: "Matura 2021 zadanie 1 - NEON CYFROWY", content: <M2021Z1/>}, //19
+    {name: "Matura 2021 zadanie 2 - NEON CYFROWY", content: <M2021Z2/>}, //20
+    {name: "Matura 2021 zadanie 3 - NEON CYFROWY", content: <M2021Z3/>}, //21
+    {name: "Matura 2021 zadanie 4 - NEON CYFROWY", content: <M2021Z4/>}, //22
 
-    {name: "Matura 2022 zadanie 1 - DZIAŁANIA NA LICZBACH", content: <M2022Z1/>}, //23
-    {name: "Matura 2022 zadanie 2 - DZIAŁANIA NA LICZBACH", content: <M2022Z2/>}, //24
-    {name: "Matura 2022 zadanie 3 - DZIAŁANIA NA LICZBACH", content: <M2022Z3/>}, //25
+    {name: "Matura 2022 zadanie 1 - LICZBY", content: <M2022Z1/>}, //23
+    {name: "Matura 2022 zadanie 2 - LICZBY", content: <M2022Z2/>}, //24
+    {name: "Matura 2022 zadanie 3 - LICZBY", content: <M2022Z3/>}, //25
 
     //Arkusze pokazowe
-    {name: "Arkusz pokazowy 2022 zadanie 1 - TABLICE", content: <AP2022Z1/>}, //26
-    {name: "Arkusz pokazowy 2022 zadanie 2 - TABLICE", content: <AP2022Z2/>}, //27
-    {name: "Arkusz pokazowy 2022 zadanie 3 - TABLICE", content: <AP2022Z3/>}, //28
+    {name: "Arkusz pokazowy 2022 zadanie 1 - SZACHY", content: <AP2022Z1/>}, //26
+    {name: "Arkusz pokazowy 2022 zadanie 2 - SZACHY", content: <AP2022Z2/>}, //27
+    {name: "Arkusz pokazowy 2022 zadanie 3 - SZACHY", content: <AP2022Z3/>}, //28
 
     //Informatory
     {name: "Informator 2023 zadanie 1.3 - CIĄGI", content: <INF2023Z13/>}, //29
@@ -155,13 +155,13 @@ const ExercisesPython = [
     {name: "Informator 2023 zadanie 3.3 - DZIAŁANIA NA LICZBACH", content: <INF2023Z33/>}, //35
 
     //MATURY W STAREJ FORMULE
-    {name: "Matura 2014 - DZIAŁANIA NA STRINGACH", content: <M2014/>}, //36
-    {name: "Matura podstawowa 2013 cz.2 - DZIAŁANIA NA STRINGACH", content: <M2013_P/>}, //37
-    {name: "Matura rozszerzona 2013 cz.2 - DZIAŁANIA NA LICZBACH", content: <M2013_R/>}, //38
-    {name: "Matura podstawowa 2012 cz.2 - DZIAŁANIA NA LICZBACH", content: <M2012_P/>}, //39
-    {name: "Matura rozszerzona 2012 cz.2 - SZYFROWANIE", content: <M2012_R/>}, //40
-    {name: "Matura podstawowa 2011 cz.2 - SZYFROWANIE", content: <M2011_P/>}, //41
-    {name: "Matura rozszerzona 2011 cz.2 - DZIAŁANIA NA LICZBACH BINARNYCH", content: <M2011_R/>}, //42
+    {name: "Matura 2014 - CIEKAWE NAPISY", content: <M2014/>}, //36
+    {name: "Matura podstawowa 2013 cz.2 - NAPISY", content: <M2013_P/>}, //37
+    {name: "Matura rozszerzona 2013 cz.2 - LICZBY", content: <M2013_R/>}, //38
+    {name: "Matura podstawowa 2012 cz.2 - CYFRY", content: <M2012_P/>}, //39
+    {name: "Matura rozszerzona 2012 cz.2 - SZYFR", content: <M2012_R/>}, //40
+    {name: "Matura podstawowa 2011 cz.2 - HASŁA", content: <M2011_P/>}, //41
+    {name: "Matura rozszerzona 2011 cz.2 - LICZBY INACZEJ", content: <M2011_R/>}, //42
     {name: "Matura podstawowa 2010 cz.2 - PALINDROMY", content: <M2010_P/>}, //43
     {name: "Matura rozszerzona 2010 cz.2 - ANAGRAM", content: <M2010_R/>}, //44
     {name: "Matura podstawowa 2009 cz.2 - LICZBY PIERWSZE", content: <M2009_P/>}, //45
@@ -193,18 +193,6 @@ const ExercisesPython = [
     {name: "Matura dodatkowa 2022 - LICZBY I ICH ODBICIA", content: <MD2022Z2/>}, //67 - LICZBY
     {name: "Matura dodatkowa 2022 - LICZBY I ICH ODBICIA", content: <MD2022Z3/>}, //68 - LICZBY
     {name: "Matura dodatkowa 2022 - LICZBY I ICH ODBICIA", content: <MD2022Z4/>}, //69 - LICZBY
-
-
-
-
-    //{name: "Matura 2023 zadanie 3 - DZIAŁANIA NA LICZBACH", content: <M2023Z1/>}, //26
-    
-    // zadania Python - kurs
-    {name: "Wskazówki", content: null},
-    {name: "Wskazówki", content: null},
-    // zadania Python - kurs
-    {name: "Wskazówki", content: null},
-    {name: "Wskazówki", content: null},
 ];
 
 export default ExercisesPython;
