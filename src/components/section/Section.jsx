@@ -106,7 +106,7 @@ function Section({lessons, title, logo}) {
                         {nextLessonExists && <button onClick={nextLesson}><ArrowForwardIosIcon /></button>}
                     </div>
                 </div>
-                <Comments issue={`${title} ${curChapter}.${curSubchapter+1}`} />
+                <Comments issue={`${title} ${curChapter}.${curSubchapter}`} />
             </div>
         </main>
     );
