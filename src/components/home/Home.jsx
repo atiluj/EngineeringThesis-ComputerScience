@@ -195,8 +195,8 @@ function Home() {
         <div className={styles.acknowledgements}>
             <article>
                 <h1 id="seventh">PODZIĘKOWANIA</h1>
-                <p>Platforma nuwis powstała w ramach projektu inżynierskiego. Szczególne podziękowania należą się więc naszej promotorce dr. Małgorzacie Biernackiej, promotorowi
-                    pomocniczemu Bartoszowi Bednarczykowi oraz naszemu recenzentowi dr. inż. Leszkowi Grocholskiemu, oraz wszystkim przyjaciołom, którzy nas wspierali.</p>
+                <p>Platforma Nuwis powstała w ramach projektu inżynierskiego. Szczególne podziękowania należą się więc naszej promotorce dr. Małgorzacie Biernackiej, promotorowi
+                    pomocniczemu Bartoszowi Bednarczykowi, naszemu recenzentowi dr. inż. Leszkowi Grocholskiemu oraz wszystkim przyjaciołom, którzy nas wspierali.</p>
             </article>
         </div>
     </>;
