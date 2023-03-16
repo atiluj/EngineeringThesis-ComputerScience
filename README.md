@@ -30,4 +30,4 @@ https://nuwis.pl
 ### LICENCJA
 Kod do użytku prywatnego. 
 
-Kontak: platforma-nuwis@gmail.com 
+Kontakt: platforma-nuwis@gmail.com 
