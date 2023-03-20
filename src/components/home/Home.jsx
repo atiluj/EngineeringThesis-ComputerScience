@@ -38,7 +38,7 @@ function Home() {
                         <h1 id="first">DLA KOGO?</h1>
                         <p>
                             Twórczynie tej strony zdają sobie sprawę z tego, że poziom nauczania informatyki jest w
-                            wielu szkołach bardzo niski (czyt. tragiczny), a samodzielna nauka jest po prostu trudna.
+                            niektórych szkołach niski, a samodzielna nauka jest po prostu trudna.
                             Na szczęście, każdego roku w internecie powstaje coraz więcej blogów czy filmów, które są
                             bardzo pomocne. Wciąż jednak istnieje mało kompleksowych kursów, które zbierają całą
                             potrzebną wiedzę w jednym miejscu i co najważniejsze są w 100% darmowe. Tworząc tę stronę
