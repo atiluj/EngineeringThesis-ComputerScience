@@ -36,3 +36,70 @@ Dla danych z pliku <i>przyklad.txt</i> wynikiem jest 5.
 753
 ```
 </Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+DIRECTIONS = [
+    [0, 1],
+    [0, -1],
+    [-1, 0],
+    [1, 0]
+]
+
+
+def get_image() -> list[list[int]]:
+    with open("dane.txt") as image:
+        lines = image.read().strip().split("\n")
+
+    matrix = [[int(pixel) for pixel in line.split(" ")] for line in lines]
+
+    return matrix
+
+
+def has_contrasting_pixels(image: list[list[int]], row_index: int, column_index: int) -> bool:
+
+    pixel_value = image[row_index][column_index]
+
+    for direction in DIRECTIONS:
+
+        new_point_row = row_index + direction[0]
+        new_point_column = column_index + direction[1]
+
+        if new_point_column not in range(len(image[0])):
+            continue
+
+        if new_point_row not in range(len(image)):
+            continue
+
+        if abs(image[new_point_row][new_point_column] - pixel_value) > 128:
+            return True
+
+    return False
+
+
+def get_contrasting_pixels_count(image: list[list[int]]) -> int:
+    count = 0
+    for row_index in range(len(image)):
+        for column_index in range(len(image[0])):
+            if not has_contrasting_pixels(image, row_index, column_index):
+                continue
+
+            count += 1
+
+    return count
+
+
+def main():
+    image = get_image()
+
+    cont = get_contrasting_pixels_count(image)
+
+    print(cont)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

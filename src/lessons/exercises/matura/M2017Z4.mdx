@@ -34,3 +34,69 @@ Dla danych z pliku <i>przyklad.txt</i> wynikiem jest 198.
 5
 ```
 </Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def rotate_matrix(matrix_old: list[list]) -> list[list]:
+    new_matrix = [[]]
+
+    for column_index in range(len(matrix_old[0])):
+        for row_index in range(len(matrix_old)):
+            new_matrix[-1].append(matrix_old[row_index][column_index])
+
+        new_matrix.append([])
+
+    return new_matrix[:-1]
+
+
+def get_image() -> list[list[int]]:
+    with open("dane.txt") as image:
+        lines = image.read().strip().split("\n")
+
+    matrix = [[int(pixel) for pixel in line.split(" ")] for line in lines]
+
+    return matrix
+
+
+def get_longest_repeating(row: list[int]) -> int:
+    if not row:
+        return 0
+
+    current_count = 1
+    max_count = 1
+
+    for index in range(1, len(row)):
+
+        if row[index - 1] != row[index]:
+            max_count = max(max_count, current_count)
+            current_count = 1
+            continue
+
+        current_count += 1
+
+    max_count = max(max_count, current_count)
+
+    return max_count
+
+
+def main():
+    image = get_image()
+
+    image_rotated = rotate_matrix(image)
+
+    get_longest_repeating(image_rotated[0])
+
+    max_repeating = 0
+
+    for column in image_rotated:
+        max_repeating = max(max_repeating, get_longest_repeating(column))
+
+    print(max_repeating)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
