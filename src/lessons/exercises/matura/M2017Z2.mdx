@@ -35,3 +35,35 @@ Dla danych z pliku <i>przyklad.txt</i> wynikiem jest 3.
 149
 ```
 </Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_image() -> list[list[int]]:
+    with open("dane.txt") as image:
+        lines = image.read().strip().split("\n")
+
+    matrix = [[int(pixel) for pixel in line.split(" ")] for line in lines]
+
+    return matrix
+
+
+def main():
+    image = get_image()
+
+    to_remove = 0
+
+    for row in image:
+        if row == row[::-1]:
+            continue
+
+        to_remove += 1
+
+    print(to_remove)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

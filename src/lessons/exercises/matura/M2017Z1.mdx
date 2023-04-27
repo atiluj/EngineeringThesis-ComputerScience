@@ -36,3 +36,29 @@ Wartość najciemniejszego piksela 7
 ```
 
 </Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_image() -> list[list[int]]:
+    with open("dane.txt") as image:
+        lines = image.read().strip().split("\n")
+
+    matrix = [[int(pixel) for pixel in line.split(" ")] for line in lines]
+
+    return matrix
+
+
+def main():
+    image = get_image()
+
+    pixels = [x for line in image for x in line]
+
+    print("Wartość najjaśniejszego piksela:", max(pixels), "Wartość najciemniejszego piksela", min(pixels))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
