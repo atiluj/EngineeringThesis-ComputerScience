@@ -43,3 +43,25 @@ SZYBKOROZWIAZUJEPROGRAMISTYCZNEZADANIAZINFORMATYKI
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def main():
+    with open(r"napisy.txt") as text_file:
+        content = text_file.read().strip().split("\n")
+
+    message = ""
+
+    for iteration, index in enumerate(range(19, 1000, 20), start=0):
+        message += content[index][iteration]
+
+    print(message)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

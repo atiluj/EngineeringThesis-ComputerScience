@@ -41,3 +41,32 @@ ZADANIEMATURALNE
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def can_be_palindromed(string: str):
+    if string[1:] == string[1:][::-1]:
+        return string + string[0]
+
+    if string[:-1] == string[:-1][::-1]:
+        return string[-1] + string
+
+
+def main():
+    with open(r"napisy.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    lines = list(map(can_be_palindromed, lines))
+
+    lines = list(filter(lambda x: x is not None, lines))
+
+    print("".join([line[25] for line in lines]))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

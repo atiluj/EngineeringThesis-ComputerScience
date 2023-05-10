@@ -38,3 +38,28 @@ Dla danych z pliku <i>przyklad.txt</i> wynikiem jest:
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def main():
+    with open(r"napisy.txt") as text_file:
+        content = text_file.read().strip()
+
+    counter = 0
+
+    for character in content:
+        if not character.isdigit():
+            continue
+
+        counter += 1
+
+    print("ilosc liczb w pliku:", counter)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
