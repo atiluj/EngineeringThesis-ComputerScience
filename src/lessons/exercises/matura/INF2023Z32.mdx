@@ -96,3 +96,34 @@ Rozwiązanie z <a className="link" target="_blank" href="https://cke.gov.pl/imag
 
 </Dropdown>
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+from collections import Counter
+
+
+def get_lines() -> list[int]:
+
+    with open(r"dane3.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    return [[int(number) for number in line.split()] for line in lines]
+
+
+def main():
+    lines = get_lines()
+
+    lengths = sorted(list(map(lambda x: x[1] - x[0] + 1, lines)))
+
+    most_common = Counter(lengths)
+
+    print(*most_common.most_common(1))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

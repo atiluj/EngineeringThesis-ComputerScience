@@ -99,3 +99,44 @@ Rozwiązanie z <a className="link" target="_blank" href="https://cke.gov.pl/imag
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_lines() -> list[int]:
+
+    with open(r"dane2_3.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    return lines
+
+
+def get_max_depth(string: str) -> int:
+    current_depth = 0
+    max_depth = 0
+
+    values = {"[": 1, "]": -1}
+
+    for character in string:
+        if character not in values:
+            print(character)
+        current_depth += values.get(character)
+
+        max_depth = max(max_depth, current_depth)
+
+    return max_depth
+
+
+def main():
+    liens = get_lines()
+
+    for line in liens:
+        print(get_max_depth(line))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

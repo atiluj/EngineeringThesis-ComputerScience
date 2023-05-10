@@ -75,3 +75,39 @@ wystarczająco szybki.
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_numbers() -> list[int]:
+
+    with open(r"dane1_3.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    return [int(number) for number in lines]
+
+
+def main():
+    numbers = get_numbers()
+
+    max_sum = 0
+    current_sum = numbers[0]
+
+    for index in range(1, len(numbers)):
+        if current_sum > 0:
+            current_sum += numbers[index]
+
+        else:
+            current_sum = numbers[index]
+
+        if max_sum < current_sum:
+            max_sum = current_sum
+    print(max_sum)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
