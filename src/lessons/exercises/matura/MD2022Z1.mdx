@@ -48,3 +48,22 @@ Dla pliku <i>przyklad.txt</i> odpowiedzią jest 51.
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def main():
+    with open(r"liczby.txt") as text_file:
+        numbers = text_file.read().strip().split()
+
+    numbers = list(filter(lambda x: not x % 17, list(map(lambda x: int(x[::-1]), numbers))))
+
+    print(*numbers, sep="\n")
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

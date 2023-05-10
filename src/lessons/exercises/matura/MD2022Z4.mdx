@@ -47,3 +47,29 @@ Dla pliku <i>przyklad.txt</i> odpowiedzią jest 10 1 0.
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+from collections import Counter
+
+
+def main():
+    with open(r"liczby.txt") as text_file:
+        numbers = text_file.read().strip().split()
+
+    counter = Counter(numbers)
+
+    print("roznych liczby: {}, liczb powtarzajace sie 2 razy: {}, liczby powtarzajace się 3 razy: {}".format(
+        len(set(numbers)),
+        len(list(filter(lambda x: x[1] == 2, counter.items()))),
+        len(list(filter(lambda x: x[1] == 3, counter.items())))
+    ))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

@@ -47,3 +47,26 @@ Dla pliku <i>przyklad.txt</i> odpowiedzią jest 741 594.
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_value(number: str) -> int:
+    return abs(int(number) - int(number[::-1]))
+
+
+def main():
+    with open(r"liczby.txt") as text_file:
+        numbers = text_file.read().strip().split()
+
+    maximal_number = max(numbers, key=get_value)
+
+    print(maximal_number, get_value(maximal_number))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
