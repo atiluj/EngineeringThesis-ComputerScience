@@ -93,3 +93,74 @@ Dobre trójki:
 ```
 
 </Dropdown>
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+PATH = r"liczby.txt"
+
+
+def get_numbers() -> list[str]:
+
+    with open(PATH) as text_file:
+        numbers = text_file.read().strip().split("\n")
+
+    return list(map(int, numbers))
+
+
+def find_matching(numbers_so_far: int, desired_length: int, numbers_all: int, found: list) -> None:
+    if len(numbers_so_far) == desired_length:
+        found.append(numbers_so_far)
+        return
+
+    for proposed_number in numbers_all:
+
+        if proposed_number % numbers_so_far[-1]:
+            continue
+
+        if proposed_number == numbers_so_far[-1]:
+            continue
+
+        find_matching(numbers_so_far + [proposed_number], desired_length, numbers_all, found)
+
+
+def append_starting_from_number(number: int, numbers_all: list[int], searched_length: int, found: list[list[int]]) -> None:
+    numbers_so_far = [number]
+
+    find_matching(numbers_so_far, searched_length, numbers_all, found)
+
+
+def _save_to_file(numbers: list[list[int]], filename: str) -> None:
+
+    output = ""
+
+    for group in numbers:
+        output += "{}\n".format(" ".join([str(x) for x in group]))
+
+    with open(filename, "w", encoding="utf-8") as text_file:
+        text_file.write(output)
+
+
+def main():
+    numbers_all = get_numbers()
+    found_for_3 = []
+
+    for starting_number in numbers_all:
+        append_starting_from_number(starting_number, numbers_all, 3, found_for_3)
+
+    found_for_5 = []
+
+    for starting_number in numbers_all:
+        append_starting_from_number(starting_number, numbers_all, 5, found_for_5)
+
+    print("ilosc trójek:", len(found_for_3))
+    _save_to_file(found_for_3, "trojki.txt")
+    print("ilosc piatek", len(found_for_5))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
