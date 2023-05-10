@@ -41,3 +41,30 @@ Natomiast dla pliku <i>mecz_przyklad.txt</i> odpowiedzią jest 1798
 </Dropdown>
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_game() -> str:
+    with open(r"mecz.txt") as text_file:
+        return text_file.read().strip("\n")
+
+
+def main():
+    game = get_game()
+
+    counter = 0
+
+    for index in range(1, len(game)):
+        if game[index] != game[index - 1]:
+            counter += 1
+
+    print(counter)
+
+
+if __name__ == '__main__':
+    main()
+
+```
+</Dropdown>

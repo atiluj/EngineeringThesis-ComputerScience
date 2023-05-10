@@ -48,3 +48,52 @@ B 1001:1004
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_game() -> str:
+    with open(r"mecz.txt") as text_file:
+        return text_file.read().strip("\n")
+
+
+def there_is_winner(score: dict) -> bool:
+    better_score = max(score.values())
+    worse_score = min(score.values())
+
+    if better_score < 1000:
+        return False
+
+    if better_score - worse_score >= 3:
+        return True
+
+    return False
+
+
+def get_first_set_winner(game: str):
+
+    team_scores = {"A": 0, "B": 0}
+
+    for character in game:
+        team_scores[character] += 1
+
+        if there_is_winner(team_scores):
+            # print(team_scores)
+
+            winner = max(team_scores.items(), key=lambda x: x[1])
+
+            print(winner[0], "{}:{}".format(*team_scores.values()))
+
+            return
+
+
+def main():
+    get_first_set_winner(get_game())
+
+
+if __name__ == '__main__':
+    main()
+
+```
+</Dropdown>
