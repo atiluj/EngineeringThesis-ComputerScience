@@ -47,3 +47,35 @@ Dla danych z pliku <i>przyklad.txt</i> odpowiedzią jest:
 ```
 
 </Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_words() -> list[int]:
+
+    with open(r"pary.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    numbers = []
+
+    for line in lines:
+        numbers.append([int(line.split()[0]), line.split()[1]])
+
+    return numbers
+
+
+def main():
+    pairs = get_words()
+
+    pars = list(filter(lambda x: x[0] == len(x[1]), pairs))
+
+    result = min(pars, key=lambda x: (x[0], x[1]))
+
+    print(*result)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
