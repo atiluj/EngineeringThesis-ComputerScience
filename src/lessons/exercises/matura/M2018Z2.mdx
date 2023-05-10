@@ -41,3 +41,22 @@ SUOLDQWISCDRFLRWHZBNTMIAPHALMNCWHVGMXOZSQNXWXSFELZVTUTI
 LXWKCTYBQYSUAKNYJKRXDJQYHXAQGWN
 ```
 </Dropdown>
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def main():
+    with open("sygnaly.txt") as text_file:
+        lines = text_file.read().strip().split()
+
+    most_unique_letters = max(lines, key=lambda x: len(set(x)))
+
+    print(most_unique_letters, len(set(most_unique_letters)))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
