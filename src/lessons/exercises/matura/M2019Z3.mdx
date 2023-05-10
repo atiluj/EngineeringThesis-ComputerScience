@@ -203,3 +203,40 @@ int main()
 ```
 
 </Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+from math import gcd
+
+
+def main():
+    with open("liczby.txt") as text_file:
+        numbers = list(map(int, text_file.read().strip().split("\n")))
+
+    max_length = 0
+    max_starting_index = 0
+    max_greatest_common = 0
+
+    for starting_index in range(len(numbers)):
+        for finishing_index in range(starting_index + 1, len(numbers)):
+
+            common_divisor = gcd(*numbers[starting_index:finishing_index])
+
+            if common_divisor == 1:
+                length = finishing_index - starting_index - 1
+                if length > max_length:
+                    max_length = length
+                    max_starting_index = starting_index
+                    max_greatest_common = gcd(*numbers[starting_index:finishing_index - 1])
+
+                break
+
+    print(numbers[max_starting_index], max_length, max_greatest_common)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

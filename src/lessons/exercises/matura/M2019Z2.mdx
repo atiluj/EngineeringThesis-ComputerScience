@@ -208,3 +208,46 @@ int main()
 }
 ```
 </Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def _silnia(number) -> int:
+    silnia = 1
+
+    for n in range(1, number + 1):
+        silnia *= n
+
+    return silnia
+
+
+def valid(number: int) -> bool:
+    digits = [int(digit_s) for digit_s in str(number)]
+
+    sum_of_silnia = 0
+
+    for digit in digits:
+        sum_of_silnia += _silnia(digit)
+
+        if sum_of_silnia > number:
+            return False
+
+    return sum_of_silnia == number
+
+
+def main():
+    with open("liczby.txt") as text_file:
+        numbers = list(map(int, text_file.read().strip().split("\n")))
+
+    for number in numbers:
+        if not valid(number):
+            continue
+
+        print(number)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
