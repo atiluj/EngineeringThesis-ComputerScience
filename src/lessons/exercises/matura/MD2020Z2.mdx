@@ -51,3 +51,32 @@ LOL695279
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def _is_palindrome(string: str) -> bool:
+    return string[::-1] == string
+
+
+def main():
+    with open("identyfikator.txt") as text_file:
+        codes = text_file.read().strip().split("\n")
+
+    for code in codes:
+        serie = code[:3]
+
+        number = code[3:]
+
+        if not (_is_palindrome(number) or _is_palindrome(serie)):
+            continue
+
+        print(code)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

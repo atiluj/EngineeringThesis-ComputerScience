@@ -75,3 +75,41 @@ RTS278686
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+from string import ascii_uppercase
+
+
+def is_valid_code(code: str) -> bool:
+
+    multipliers = [7, 3, 1, 7, 3, 1, 7, 3]
+
+    values = [ascii_uppercase.index(character) + 10 for character in code[:3]]
+
+    values += [int(code[index]) for index in range(4, 9)]
+
+    great_sum = 0
+
+    for multiplier, number in zip(multipliers, values):
+        great_sum += number * multiplier
+
+    return (great_sum % 10) == int(code[3])
+
+
+def main():
+    with open(r"identyfikator.txt") as text_file:
+        identifiers = text_file.read().strip().split()
+
+    invalid = list(filter(lambda x: not is_valid_code(x), identifiers))
+
+    print(*invalid, sep="\n")
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
