@@ -113,3 +113,69 @@ Odpowiedź dla pliku <i>szachy_przyklad.txt</i>:<br/>
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_boards() -> list[list[str]]:
+    with open(r"szachy.txt") as text_file:
+        boards_strs = text_file.read().strip("\n ").split("\n\n")
+
+    boards = []
+
+    for board_string in boards_strs:
+
+        board_lines = [list(line) for line in board_string.split("\n")]
+
+        boards.append(board_lines)
+
+    return boards
+
+
+def rotate_matrix(matrix: list[list]) -> list[list]:
+
+    new_matrix = []
+
+    for column_index in range(len(matrix[0])):
+        new_matrix.append([])
+        for row_index in range(len(matrix)):
+            new_matrix[-1].append(matrix[row_index][column_index])
+
+    return new_matrix
+
+
+def join_rows_and_remove_dots(rows: list[list]) -> list["str"]:
+    return ["".join(row).replace(".", "") for row in rows]
+
+
+def check_board_for_mate(board_oryginal: list[list[str]], mate_type: str = "") -> bool:
+    for board in [board_oryginal, rotate_matrix(board_oryginal)]:
+        board = join_rows_and_remove_dots(board)
+
+        for row in board:
+            if mate_type in row or mate_type[::-1] in row:
+                return True
+
+    return False
+
+
+def main():
+    boards = get_boards()
+
+    white_wins = 0
+    black_wins = 0
+
+    for board in boards:
+
+        black_wins += 1 if check_board_for_mate(board, "wK") else 0
+        white_wins += 1 if check_board_for_mate(board, "Wk") else 0
+
+    print(white_wins, black_wins)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

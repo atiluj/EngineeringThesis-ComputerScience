@@ -114,3 +114,70 @@ Odpowiedź dla pliku <i>szachy_przyklad.txt</i>:
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_boards() -> list[list[str]]:
+    with open(r"szachy.txt") as text_file:
+        boards_strs = text_file.read().strip("\n ").split("\n\n")
+
+    boards = []
+
+    for board_string in boards_strs:
+
+        board_lines = [list(line) for line in board_string.split("\n")]
+
+        boards.append(board_lines)
+
+    return boards
+
+
+def rotate_matrix(matrix: list[list]) -> list[list]:
+
+    new_matrix = []
+
+    for column_index in range(len(matrix[0])):
+        new_matrix.append([])
+        for row_index in range(len(matrix)):
+            new_matrix[-1].append(matrix[row_index][column_index])
+
+    return new_matrix
+
+
+def get_empty_col_count(board: list[list[str]]) -> int:
+    empty_count = 0
+
+    for column in rotate_matrix(board):
+        if "".join(column) != "........":
+            continue
+
+        empty_count += 1
+
+    return empty_count
+
+
+def main():
+    boards = get_boards()
+    empty_board_count = 0
+    max_empty_boards = 0
+
+    for board in boards:
+        empty_current = get_empty_col_count(board)
+
+        if not empty_current:
+            continue
+
+        empty_board_count += 1
+
+        max_empty_boards = max(max_empty_boards, empty_current)
+
+    print(empty_board_count, max_empty_boards)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

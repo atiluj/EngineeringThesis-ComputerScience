@@ -127,3 +127,52 @@ Odpowiedź dla pliku <i>szachy_przyklad.txt</i>:
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_boards() -> list[list[str]]:
+    with open(r"szachy.txt") as text_file:
+        boards_strs = text_file.read().strip("\n ").split("\n\n")
+
+    return boards_strs
+
+
+def is_balance(board: str) -> bool:
+    uppercase_count = ""
+    lowercase_count = ""
+
+    for character in list(board):
+        if character.lower() == character:
+            lowercase_count += character
+
+        else:
+            uppercase_count += character
+
+    return sorted(list(uppercase_count.lower())) == sorted(list(lowercase_count))
+
+
+def main():
+    boards = get_boards()
+
+    boards = [board.replace("\n", "").replace(".", "") for board in boards]
+
+    smallest_count = 8 * 8
+    balanced_count = 0
+
+    for board in boards:
+        if not is_balance(board):
+            continue
+
+        balanced_count += 1
+        smallest_count = min(smallest_count, len(board))
+
+    print(balanced_count, smallest_count)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
