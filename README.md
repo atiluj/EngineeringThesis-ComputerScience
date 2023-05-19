@@ -11,8 +11,8 @@ Motywacją była chęć pomocy w nauce uczniom szkół średnich oraz umożliwie
 
 ### DEVELOPMENT
 ```
-git clone https://github.com/atiluj/uni-project-jan
-cd uni-project-jan
+git clone https://github.com/atiluj/EngineeringThesis-ComputerScience
+cd EngineeringThesis-ComputerScience
 npm install --force
 npm start
 ```

@@ -24,7 +24,7 @@ function Comments({issue}) {
     }, []);
 
     const params = {
-        repo: "atiluj/uni-project-jan",
+        repo: "atiluj/EngineeringThesis-ComputerScience",
         "issue-term": issue,
         title: "Comment thread",
         crossorigin: "anonymous",
