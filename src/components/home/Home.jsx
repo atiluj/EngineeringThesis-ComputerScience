@@ -94,7 +94,7 @@ function Home() {
                             specyfika tych zadań pozwoli Ci nie wpaść w monotonię i zwiększy wydajność procesu nauki. Oczywiście ważnym aspektem jest
                             dostępność pakietów Microsoft, wskazówki na ten temat znajdziesz w zakładkach "Excel — wskazówki" oraz "Access — wskazówki".
                             <br /><br />
-                            <b>NIBY MAM INFORMATYKĘ W SZKOLE, ALE TA SZKOŁA JEST W POLSCE</b><br />
+                            <b>NIBY MAM INFORMATYKĘ W SZKOLE, ALE...</b><br />
                             Jeśli potrzebujesz nauczyć się danego zagadnienia od podstaw lub chcesz solidnie utrwalić wiedzę, to możesz przerabiać tematy po kolei.
                             Jeśli jednak czujesz, że dany temat nie sprawia Ci trudności, śmiało pomiń niektóre fragmenty lub podtematy.
                             <br /><br />
