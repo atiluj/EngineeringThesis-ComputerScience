@@ -9,12 +9,12 @@ function Home() {
                     <h1>Cześć!</h1>
                 </div>
                 <article className={styles.first}>
-                    <p> Nasza strona powstała z myślą o wszystkich ludziach, którzy chcą podejść do matury z
-                        informatyki, bezwzględu na to, czy uczyli się jej w szkole czy nie. Znajdujące sie na
-                        niej materiały pomogą w osiągniećiu wyniku, który pozwoli Ci dostać się na dobre studia
-                        informatyczne, bez względu na to na jakim są poziomie zaawansowania aktualnie jesteś. Aby
-                        to osiągnąc po prostu poświęć regularnie troche czasu na przerobienie treści tego kursu.
-                        To na prawde takie proste.
+                    <p> Nasza strona powstała z myślą o wszystkich osobach, które chcą podejść do matury z
+                        informatyki, bezwzględu na to, czy uczyli się jej w szkole, czy nie. Znajdujące się na
+                        niej materiały pomogą w osiągnieciu wyniku, który pozwoli Ci dostać się na dobre studia
+                        informatyczne, bez względu na to, na jakim poziomie zaawansowania aktualnie jesteś. Aby
+                        to osiągnąć po prostu poświęć regularnie trochę czasu na przerobienie treści tego kursu.
+                        To na prawdę takie proste.
                     </p>
                 </article>
             </div>
@@ -41,7 +41,7 @@ function Home() {
                             niektórych szkołach niski, a samodzielna nauka jest po prostu trudna.
                             Na szczęście, każdego roku w internecie powstaje coraz więcej blogów czy filmów, które są
                             bardzo pomocne. Wciąż jednak istnieje mało kompleksowych kursów, które zbierają całą
-                            potrzebną wiedzę w jednym miejscu i co najważniejsze są w 100% darmowe. Tworząc tę stronę
+                            potrzebną wiedzę w jednym miejscu i co najważniejsze są w 100% darmowe. Tworząc tę stronę,
                             kierowałyśmy własnymi doświadczeniami — same kilka lat temu przygotowywałyśmy się do tej
                             matury i wiemy, czego nam wtedy brakowało. Chcemy oddać w Twoje ręce gotowe narzędzie, dzięki
                             któremu oszczędzisz mnóstwo czasu i pieniędzy, a nauka będzie sprawna, przyjemna oraz
@@ -170,8 +170,9 @@ function Home() {
                 <div className={styles.author}>
                     <div className={styles.photo}><img src={new URL('../../img/julita.jpg', import.meta.url)} alt="Julita" /></div>
                     <p className={styles.author_name}>JULITA OSMAN<a href="https://www.linkedin.com/in/julita-osman-167530225/" target="_blank"><LinkedInIcon /></a></p>
-                    <p className={styles.introduction}>W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej. Przez wiele lat udzielałam korepetycji z
-                        informatyki i matematyki. Studiuję informatykę i filologię chińską. Mam nadzieję, że uda mi się połączyć te twa kierunki w mojej przyszłej pracy zawodowej.
+                    <p className={styles.introduction}>W tej pracy byłam odpowiedzialna za stworzenie struktury strony internetowej, przygotowanie 
+                        zadań programistycznych oraz niektórych materiałów dydaktycznych. Przez wiele lat udzielałam korepetycji z
+                        przedmiotów ścisłych. Aktualnie studiuję informatykę oraz filologię chińską, i mam nadzieję, że uda mi się połączyć te dwa obszary w mojej przyszłej pracy.
                     </p>
                 </div>
 
