@@ -84,3 +84,46 @@ Rozwiązanie z <a className="link" target="_blank" href="https://cke.gov.pl/imag
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_numbers() -> list[int]:
+
+    with open(r"dane1_4.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    return [int(number) for number in lines]
+
+
+def main():
+    numbers = get_numbers()
+
+    max_sum = 0
+    current_sum = numbers[0]
+    starting_index = 0
+    max_startin_index = 0
+    max_ending_index = 0
+
+    for index in range(1, len(numbers)):
+        if current_sum > 0:
+            current_sum += numbers[index]
+
+        else:
+            current_sum = numbers[index]
+            starting_index = index
+
+        if max_sum < current_sum:
+            max_sum = current_sum
+            max_startin_index = starting_index
+            max_ending_index = index
+
+    print(max_startin_index + 1, max_ending_index + 1)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

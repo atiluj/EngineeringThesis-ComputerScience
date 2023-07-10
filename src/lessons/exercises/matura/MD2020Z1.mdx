@@ -41,3 +41,28 @@ JOK786969
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def get_codes_digit_sum(code: str) -> int:
+    return sum([int(x) for x in code[3:]])
+
+
+def main():
+    with open(r"identyfikator.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    max_numbers = max(lines, key=get_codes_digit_sum)
+
+    max_digit_sum = get_codes_digit_sum(max_numbers)
+
+    print(*list(filter(lambda x: get_codes_digit_sum(x) == max_digit_sum, lines)))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

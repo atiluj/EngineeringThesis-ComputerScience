@@ -186,3 +186,37 @@ int main()
 }
 ```
 </Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def is_power_of_3(number: int) -> bool:
+
+    while number != 1:
+
+        if number % 3:
+            return False
+
+        number = number // 3
+
+    return True
+
+
+def main():
+    with open("liczby.txt") as text_file:
+        numbers = list(map(int, text_file.read().strip().split("\n")))
+
+    counter = 0
+
+    for number in numbers:
+        if is_power_of_3(number):
+            counter += 1
+
+    print(counter)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

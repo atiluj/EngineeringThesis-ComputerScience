@@ -136,3 +136,63 @@ Wilno 1620
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+from dataclasses import dataclass, field
+
+
+@dataclass()
+class Galery:
+    contry_code: str
+    city: str
+    shops: list[list[int]] = field(repr=False)
+
+    def get_shop_count(self) -> int:
+        return len(self.shops)
+
+    def get_total_area(self) -> int:
+        return sum([sh[0] * sh[1] for sh in self.shops])
+
+
+def load_galery(string: str) -> Galery:
+    tokens = string.split()
+    code = tokens[0]
+    city = tokens[1]
+
+    shops = []
+
+    for index in range(2, len(tokens), 2):
+        if tokens[index] == "0":
+            continue
+
+        shop = [int(tokens[index]), int(tokens[index + 1])]
+
+        shops.append(shop)
+
+    return Galery(code, city, shops)
+
+
+def main():
+    with open(r"galerie.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    galeries = [load_galery(line) for line in lines]
+
+    for galery in galeries:
+        print(galery.city, galery.get_total_area(), galery.get_shop_count())
+
+    smallest_area = min(galeries, key=lambda galery: galery.get_total_area())
+    biggest_are = max(galeries, key=lambda galery: galery.get_total_area())
+
+    print(f"\nsmallest area: {smallest_area.get_total_area()} {smallest_area.city}")
+    print(f"biggest area: {biggest_are.get_total_area()} {biggest_are.city}")
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

@@ -52,3 +52,38 @@ Dla pliku <i>przyklad.txt</i> odpowiedź to:
 </Dropdown>
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def is_prime(number: str) -> bool:
+    number = int(number)
+
+    for divider in range(2, number):
+        if number % divider:
+            continue
+
+        return False
+
+    return True
+
+
+def is_valid(number: str) -> bool:
+    return is_prime(number) and is_prime(number[::-1])
+
+
+def main():
+    with open(r"liczby.txt") as text_file:
+        numbers = text_file.read().strip().split()
+
+    numbers = list(filter(is_valid, numbers))
+
+    print(*numbers, sep="\n")
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

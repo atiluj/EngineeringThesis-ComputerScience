@@ -49,3 +49,59 @@ Najwięcej różnych: 6 dla 62790
 ```
 
 </Dropdown>
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+PATH = r"liczby.txt"
+
+
+def get_prime_factors(number: int) -> int:
+    divider = 1
+    factors = []
+
+    while number != 1:
+        divider += 1
+
+        while not number % divider:
+            number = number // divider
+            factors.append(divider)
+
+    return factors
+
+
+def get_numbers() -> list[str]:
+
+    with open(PATH) as text_file:
+        numbers = text_file.read().strip().split("\n")
+
+    return list(map(int, numbers))
+
+
+def main():
+    numbers = list(map(lambda x: [x, get_prime_factors(x)], get_numbers()))
+
+    res1 = len(max(numbers, key=lambda x: len(x[1]))[1])
+    res2 = len(max(numbers, key=lambda x: len(set(x[1])))[1])
+
+    res_1_matching = list(filter(lambda x: len(x[1]) == res1, numbers))
+
+    for match in res_1_matching:
+        print(match[0], end=" ")
+
+    print("- najwiecej czynnikow", res1)
+
+    res_2_matching = list(filter(lambda x: len(set(x[1])) == res2, numbers))
+
+    for match in res_2_matching:
+        print(match[0], end=" ")
+
+    print("- najwiecej roznych czynnikow", res2)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

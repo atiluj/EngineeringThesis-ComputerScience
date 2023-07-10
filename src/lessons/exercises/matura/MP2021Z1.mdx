@@ -75,3 +75,59 @@ IRL 1
 ```
 </Dropdown>
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+from collections import Counter
+from dataclasses import dataclass, field
+
+
+@dataclass()
+class Galery:
+    contry_code: str
+    city: str
+    shops: list[list[int]] = field(repr=False)
+
+    def get_shop_count(self) -> int:
+        return len(self.shops)
+
+    def get_total_area(self) -> int:
+        return sum([sh[0] * sh[1] for sh in self.shops])
+
+
+def load_galery(string: str) -> Galery:
+    tokens = string.split()
+    code = tokens[0]
+    city = tokens[1]
+
+    shops = []
+
+    for index in range(2, len(tokens), 2):
+        if tokens[index] == "0":
+            continue
+
+        shop = [int(tokens[index]), int(tokens[index + 1])]
+
+        shops.append(shop)
+
+    return Galery(code, city, shops)
+
+
+def main():
+    with open(r"galerie.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    galeries = [load_galery(line) for line in lines]
+
+    country_codes = [gal.contry_code for gal in galeries]
+
+    print(*Counter(country_codes).items(), sep="\n")
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

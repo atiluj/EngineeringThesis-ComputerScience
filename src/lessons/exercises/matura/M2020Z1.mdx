@@ -74,3 +74,97 @@ wypisać 20 3 17.<br/><br/>
 ```
 
 </Dropdown>
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+from math import sqrt, ceil
+
+
+def primes_smaller_than(number: int) -> list[int]:
+
+    primes_small = []
+
+    for maybe_prime in range(2, ceil(sqrt(number))):
+
+        for divider in range(2, maybe_prime):
+
+            if divider == maybe_prime:
+                continue
+
+            if maybe_prime % divider:
+                continue
+
+            break
+
+        else:
+            primes_small.append(maybe_prime)
+
+    is_prime = [True for _ in range(number)]
+
+    for prime_number in primes_small:
+
+        for not_prime in range(prime_number * 2, number, prime_number):
+            is_prime[not_prime] = False
+
+    primes = []
+
+    for index in range(2, number):
+        if is_prime[index]:
+            primes.append(index)
+
+    return primes
+
+
+def get_numbers() -> list[int]:
+
+    with open(r"pary.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    numbers = []
+
+    for line in lines:
+        numbers.append(int(line.split()[0]))
+
+    return numbers
+
+
+def get_prime_sum(number: int, primes: list[int]) -> None:
+
+    prime_pairs = []
+    primes_used = set()
+
+    for prime_number in primes:
+        if prime_number > number:
+            break
+
+        if prime_number in primes_used:
+            continue
+
+        rest_from_prime = number - prime_number
+
+        if rest_from_prime in primes:
+            prime_pairs.append(sorted([rest_from_prime, prime_number]))
+            primes_used.add(rest_from_prime)
+
+    return sorted(prime_pairs, key=lambda pair: abs(pair[0] - pair[1]), reverse=1)[0]
+
+
+def main():
+    numbers = get_numbers()
+
+    primes = primes_smaller_than(100)
+
+    for number in numbers:
+        if number <= 4 or number % 2:
+            continue
+
+        print(number, *get_prime_sum(number, primes))
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

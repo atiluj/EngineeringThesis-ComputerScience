@@ -47,3 +47,33 @@ Najdłuższą dobrą passę, o długości 11, osiągnęła drużyna A
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+import re
+
+
+def get_game() -> str:
+    with open(r"mecz.txt") as text_file:
+        return text_file.read().strip("\n")
+
+
+def main():
+    game = get_game()
+    streaks_a = re.findall("A{10,}", game)
+    streaks_b = re.findall("B{10,}", game)
+
+    print("dobrych pass w sumie:", len(streaks_a) + len(streaks_b))
+
+    best = max(streaks_b + streaks_a, key=len)
+
+    print("najlepszą passe miała drużyn {}, o długości {}".format(best[0], len(best)))
+
+
+if __name__ == '__main__':
+    main()
+
+```
+</Dropdown>

@@ -38,3 +38,30 @@ Pierwsza taka liczba: 93639
 ```
 
 </Dropdown>
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+PATH = r"liczby.txt"
+
+
+def get_numbers() -> list[str]:
+
+    with open(PATH) as text_file:
+        numbers = text_file.read().strip().split("\n")
+
+    return numbers
+
+
+def main():
+    numbers = list(filter(lambda x: x[0] == x[-1], get_numbers()))
+
+    print(len(numbers), numbers[0])
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

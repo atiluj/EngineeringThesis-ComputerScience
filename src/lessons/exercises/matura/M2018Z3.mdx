@@ -153,3 +153,36 @@ UVVUXVUXWWXVXUWXXYWYWUVYYXYVXXVYXWUUXWWWYWVVWUYVUWXXYXUXYY
 WWWYUUXYUVWXYYUYXUUUVXXYXWUXXXUUWVUVWWYU 
 ```
 </Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def max_space_between_letters(word: str) -> int:
+
+    letter_values = [ord(letter) for letter in word]
+
+    return abs(max(letter_values) - min(letter_values))
+
+
+def main():
+    with open("sygnaly.txt") as text_file:
+        lines = text_file.read().strip().split()
+
+    output = ""
+
+    for word in lines:
+        distance = max_space_between_letters(word)
+
+        if distance > 10:
+            continue
+
+        output += word + "\n"
+
+    print(output)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

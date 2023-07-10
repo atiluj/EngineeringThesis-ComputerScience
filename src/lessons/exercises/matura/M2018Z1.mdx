@@ -39,3 +39,21 @@ NIECHCIMATURAPROSTABEDZIE
 ZAPISZODPOWIEDZIWPLIKUTXT 
 ```
 </Dropdown>
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+def main():
+    with open("sygnaly.txt") as text_file:
+        lines = text_file.read().strip().split()
+
+    word = "".join([w[9] for w in lines[39::40]])
+
+    print(word)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>

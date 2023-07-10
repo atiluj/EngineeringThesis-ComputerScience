@@ -44,3 +44,58 @@ BAWOLIDLUGICENTKOWANYKRETYJAKWAZBOAXXX
 
 
 
+
+
+<Dropdown title="PRZYKŁADOWE ROZWIĄZANIE - PYTHON">
+
+```python
+import re
+import typing
+
+
+def pairs_of_digits_from_line(line: str) -> typing.Union[None, list[int]]:
+    digits = re.findall(r"\d{1}", line)
+
+    if len(digits) < 2:
+        return None
+
+    if len(digits) % 2:
+        digits = digits[:-1]
+
+    pairs: list[int] = []
+
+    for index in range(0, len(digits), 2):
+        pairs.append(int(digits[index] + digits[index + 1]))
+
+    return pairs
+
+
+def main():
+    with open(r"napisy.txt") as text_file:
+        lines = text_file.read().strip().split("\n")
+
+    message = ""
+
+    for line in lines:
+        pairs = pairs_of_digits_from_line(line)
+
+        if pairs is None:
+            continue
+
+        for number in pairs:
+            if number not in range(65, 91):
+                continue
+
+            message += chr(number)
+
+        if message.endswith("XXX"):
+            break
+
+    print(message)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+</Dropdown>
